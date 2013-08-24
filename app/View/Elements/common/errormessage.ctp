@@ -1,0 +1,1 @@
+<div class="err_msg"><?php echo ERR_NO_RECORD; ?></div>

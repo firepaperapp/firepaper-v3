@@ -1,0 +1,50 @@
+/* TextboxList sample CSS */
+ul.holder { margin: 0; /*border: 1px solid #999;*/ overflow: hidden; height: auto !important; height: 1%; }
+*:first-child+html ul.holder { padding-bottom: 2px; } * html ul.holder { padding-bottom: 2px; } /* ie7 and below */
+ul.holder li { float: left; list-style-type: none;  white-space:nowrap;}
+ul.holder li.bit-box, ul.holder li.bit-input input {  }
+
+ul.holder li.bit-box {color:white; background: #cbcbcb; padding: 3px 7px 3px; text-transform: uppercase; font-size: 12px; font-weight: bold; }
+
+ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
+ul.holder li.bit-input {width:100%;} /* no left/right padding here please */
+ul.holder li.bit-input input {width:100%; overflow:visible; margin: 0; border: 0px; outline: 0;  font-size: 14px; color: #d3d3d3;}
+ul.holder li.bit-input input.smallinput {  }
+li#usersGroups_annoninput {  border-bottom: 1px dotted #cbcbcb; }
+li#usersGroups_annoninput input { background: url('../images/sprite.png') left -86px no-repeat; padding:2px; padding: 5px 5px 5px 25px;}
+li#otherUsers_annoninput {  border-bottom: 1px dotted #cbcbcb; margin-top: 10px; }
+li#otherUsers_annoninput input { background: url('../images/sprite.png') left -63px no-repeat; padding:2px; padding: 5px 5px 5px 25px;}
+
+
+/* Facebook demo CSS */      
+#add { border: 1px solid #999; width: 550px; margin: 50px; padding: 20px 30px 10px; }
+form ol li { list-style-type: none; }
+form ol {  margin: 0; padding: 0; }
+form ol li.input-text { margin-bottom: 10px; list-style-type: none; padding-bottom: 10px; }
+form ol li.input-text label { font-weight: bold; cursor: pointer; display: block; font-size: 13px; margin-bottom: 10px; }
+form ol li.input-text input {  padding: 5px 5px 6px; }
+form ul.holder {  }
+form ul { margin: 0 !important }
+ul.holder li.bit-box, #apple-list ul.holder li.bit-box { padding-right:23px; position: relative; z-index:1000; float: right;border-radius: 2px;-webkit-border-radius: 2px; margin-left:4px;text-shadow: 0px -1px 0px ##b2b2b2; filter: dropshadow(color=##b2b2b2, offx=0, offy=-1);}
+#apple-list ul.holder li.bit-input { margin: 0; }
+#apple-list ul.holder li.bit-input input.smallinput { width: 5px; }
+ul.holder li.bit-hover { background: #BBCEF1; border: 1px solid #6D95E0; }
+ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
+ul.holder li.bit-box a.closebutton { position: absolute; right:6px; top: 5px; display: block; width:10px; height:10px; font-size: 1px; background: url('../images/close.png'); }
+ul.holder li.bit-box a.closebutton:hover { }
+ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutton:hover { background-position: bottom; }
+
+/* Autocompleter */
+
+.facebook-auto { display: none; position: absolute; width: 180px; background: white; margin-left:0px;}
+.facebook-auto .default { padding:7px; border: 1px solid #ccc; border-width:0px 1px 1px 1px; font-size:12px; color: #bfbfbf;}
+.facebook-auto ul { display: none; margin: 0; padding: 0; overflow: auto; position:absolute; z-index:9999}
+.facebook-auto ul li { padding: 5px 12px; z-index: 1000; cursor: pointer; margin: 0; list-style-type: none; border: 1px solid white; border-width: 0 1px 1px; background: #EEF7F7;}
+.facebook-auto ul li em { font-weight: bold; font-style: normal; background: #98D3D3; }
+.facebook-auto ul li.auto-focus { background: #98D3D3; color: #fff; }
+.facebook-auto ul li.auto-focus em { background: #98D3D3; }
+.deleted { background-color:#98D3D3 !important; color:#ffffff !important;}
+.hidden { display:none;}
+#otherGroups_feed{width:180px;}
+#demo ul.holder li.bit-input input { padding: 2px 0 1px; border: 1px solid #999; }
+.ie6fix {height:1px;width:1px; position:absolute;top:0px;left:0px;z-index:1;}

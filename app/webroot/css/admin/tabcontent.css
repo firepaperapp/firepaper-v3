@@ -1,0 +1,170 @@
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+
+.shadetabs{
+	margin-left: 0px;
+	font: bold 15px arial;
+	list-style-type: none;
+	text-align: left; /*set to left, center, or right to align the menu as desired*/
+}
+
+.shadetabs li{
+	float:left;
+	margin: 0 2px 0 0;
+}
+
+.shadetabs li a{
+	background:url(../images/bg_tab.jpg) 0 top no-repeat;
+	display:block;
+	height:31px;
+	float:left;
+	padding:0 0 0 25px;
+	font:15px/31px 'Arial, Helvetica, sans-serif';
+	color:#dfdede;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.shadetabs li a span{
+	background:url(../images/bg_tab.jpg) right top no-repeat;
+	display:block;
+	height:31px;
+	padding:0 25px 0 0px;
+	font-size:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#3477ba;
+	cursor:pointer;
+	}
+
+
+.shadetabs li a:hover{
+	background:url(../images/bg_tab.jpg) 0 bottom no-repeat;
+	color:#fff;
+}
+
+.shadetabs li a:hover span{
+	background:url(../images/bg_tab.jpg) right bottom no-repeat;
+	color:#fff;
+	}
+
+.shadetabs li a.selected{
+	background:url(../images/bg_tab.jpg) 0 bottom no-repeat;
+}
+
+.shadetabs li a.selected span{
+	background:url(../images/bg_tab.jpg) right bottom no-repeat;
+	color:#fff;
+	}
+
+
+.tabcontent{
+display:none;
+}
+
+#Bodycontainer .tabcontent table{
+	border-left:#d6e7eb solid 1px;
+	border-top:#d6e7eb solid 1px;
+	}
+
+/*#Bodycontainer .tabcontent table th{
+	border-right:#ccc solid 1px;
+	border-bottom:#ccc solid 1px;
+	padding:0 5px;
+	height:36px;
+	text-align:left;
+	background:#f6f6f6 url(../images/bg_table.gif) 0 0 repeat-x;
+	color:#666;
+	}*/
+
+#Bodycontainer .tabcontent table td{
+	border-right:#d6e7eb solid 1px;
+	border-bottom:#d6e7eb solid 1px;
+	padding:5px;
+	background:#e4f2fd;
+	}
+
+#Bodycontainer .tabcontent table td span{
+	float:left;
+	display:block;
+	padding:1px 5px 0 0;
+	}
+
+#Bodycontainer .tabcontent table td label{
+	float:left;
+	}
+
+@media print {
+.tabcontent {
+	display:block !important;
+}
+}
+
+
+
+
+.shadetabs2{
+	margin-left: 0px;
+	font: normal 14px arial;
+	list-style-type: none;
+	text-align: left; /*set to left, center, or right to align the menu as desired*/
+}
+
+.shadetabs2 li{
+	float:left;
+	margin: 0 0px 0 0;
+}
+
+.shadetabs2 li b{
+	background:url(../images/table_heading.gif) 0 top no-repeat;
+	display:block;
+	height:28px;
+	float:left;
+	padding:0 0 0 25px;
+	font:14px/28px 'Arial, Helvetica, sans-serif';
+	color:#4a4a4a;
+	text-decoration:none;
+	font-weight:normal;
+ }
+
+.shadetabs2 li b span{
+	background:url(../images/table_heading.gif) right top no-repeat;
+	display:block;
+	height:28px;
+	padding:0 25px 0 0px;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#4a4a4a;
+	font-weight:normal;
+ 	}
+
+.shadetabs li a.last-tab{
+	background:url(../images/overdue.jpg) 0 top no-repeat;
+	color:#CE3233;
+	font-family:arial;
+	}
+
+.shadetabs li a.last-tab span{
+	background:url(../images/overdue.jpg) right top no-repeat;
+	color:#CE3233;
+	font-family:arial;
+	}
+
+.shadetabs li a.last-tab:hover{
+	background:url(../images/overdue.jpg) left bottom no-repeat;
+	color:#fff;
+	}
+
+.shadetabs li a.last-tab span:hover{
+	background:url(../images/overdue.jpg) right bottom no-repeat;
+	color:#fff;
+	}
+
+.shadetabs li a.last_tab_active{
+	background:url(../images/overdue.jpg) left bottom no-repeat;
+	color:#fff;
+	}
+
+.shadetabs li a.last_tab_active span{
+	background:url(../images/overdue.jpg) right bottom no-repeat;
+	color:#fff;
+	}
+

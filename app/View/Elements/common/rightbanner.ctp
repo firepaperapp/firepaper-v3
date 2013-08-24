@@ -1,0 +1,1 @@
+<div class="rightbannerborder"><img src="<?php echo COMMON_URL ?>/img/banner_right.jpg" height="696" width="240" alt="Right banner" /></div>

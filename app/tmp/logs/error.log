@@ -1,0 +1,571 @@
+2013-03-29 08:49:31 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:08:48 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:08:54 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:09:03 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:16:48 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:57:13 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:57:38 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 10:58:31 Error: Fatal Error (4): syntax error, unexpected '--' (T_DEC) in [/Applications/MAMP/htdocs/firepaper-v1/app/View/Projects/current_projects.ctp, line 38]
+2013-03-29 10:58:31 Error: [InternalErrorException] Internal Server Error
+Request URL: /firepaper-v1/dashboard?url=dashboard
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-29 10:59:36 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/MAMP/htdocs/firepaper-v1/app/View/Projects/current_projects.ctp, line 52]
+2013-03-29 10:59:36 Error: [InternalErrorException] Internal Server Error
+Request URL: /firepaper-v1/dashboard?url=dashboard
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-29 10:59:38 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/MAMP/htdocs/firepaper-v1/app/View/Projects/current_projects.ctp, line 52]
+2013-03-29 10:59:38 Error: [InternalErrorException] Internal Server Error
+Request URL: /firepaper-v1/dashboard?url=dashboard
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-29 11:00:08 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 11:04:43 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1364551483.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-03-29 11:04:43 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1364551483.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-03-29 11:10:43 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1364551843.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-03-29 11:10:43 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1364551843.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-03-29 11:14:33 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1364552073.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-03-29 11:14:33 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1364552073.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-03-29 11:25:20 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 11:28:01 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 11:28:06 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 11:30:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /firepaper-v1/dashboard?url=dashboard
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Departm...', Array)
+#2 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Departm...', Array, Array)
+#3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Departm...', false)
+#4 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Model/Model.php(2688): DboSource->read(Object(Department), Array)
+#5 /Applications/MAMP/htdocs/firepaper-v1/app/Controller/DashboardController.php(89): Model->find('list', Array)
+#6 [internal function]: DashboardController->index()
+#7 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#8 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-03-29 12:13:34 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 12:13:44 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 21:51:03 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-29 21:55:25 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-02 19:40:37 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-06 12:17:24 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-06 12:20:49 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365243649.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 12:20:49 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365243649.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 12:29:33 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365244173.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 12:29:33 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365244173.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 18:25:29 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-06 18:25:40 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365265540.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 18:25:40 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365265540.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 19:25:59 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365269159.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 19:25:59 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365269159.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 22:52:01 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-06 22:52:16 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365281536.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-06 22:52:16 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365281536.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-07 08:12:02 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-07 08:12:14 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365315134.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-07 08:12:14 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365315134.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-08 16:45:14 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-08 16:45:37 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1365432337.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-08 16:45:37 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1365432337.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-16 19:33:18 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper-v1/app/webroot/images/tabs.png?url=images%2Ftabs.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper-v1/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-16 19:33:37 Warning: Warning (2): fopen(/app/webroot/files/user_image/100X100/user_img_1366133617.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 841
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-04-16 19:33:37 Warning: Warning (2): fopen(/app/webroot/files/user_image/32X29/user_img_1366133617.jpg) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/ImageComponent.php, line 43]
+Trace:
+fopen - [internal], line ??
+ImageComponent::SaveImageAs() - APP/Controller/Component/ImageComponent.php, line 43
+AppController::uploadimgdef() - APP/Controller/AppController.php, line 277
+UsersController::updateImage() - APP/Controller/UsersController.php, line 842
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-05-05 10:06:00 Error: Fatal Error (1): Class 'Debugger' not found in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/PaypalComponent.php, line 0]
+2013-05-05 10:06:00 Error: [InternalErrorException] Internal Server Error
+Request URL: /firepaper-v1/login?url=login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Debugger...', '/Applications/M...', 0)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Debugger...', '/Applications/M...', 0, Array)
+#2 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'Debugger...', '/Applications/M...', 0, Array)
+#3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-05 10:06:11 Error: Fatal Error (1): Class 'Debugger' not found in [/Applications/MAMP/htdocs/firepaper-v1/app/Controller/Component/PaypalComponent.php, line 0]
+2013-05-05 10:06:11 Error: [InternalErrorException] Internal Server Error
+Request URL: /firepaper-v1/login?url=login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Debugger...', '/Applications/M...', 0)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Debugger...', '/Applications/M...', 0, Array)
+#2 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'Debugger...', '/Applications/M...', 0, Array)
+#3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

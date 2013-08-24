@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<cats xmlns="http://cats.tfinforma.com/PTS/dtds/tffileload_5_0.xsd">
+<manuscripts>
+	<manuscript manuscriptid="468016">
+		<doi>10.1080/00063651003674946</doi>
+		<journal>TBIS</journal>
+		<issuenum></issuenum>
+		<volumenum></volumenum>
+	<onlineContent>true</onlineContent>
+	<printContent>true</printContent>
+		<authors>Sanchez-Zapata,Eguia,Blazquez,MOLEÓN,Botella</authors>
+		<title>Unexpected role of ungulate carcasses in the diet of the Golden Eagle Aquila chrysaetos in Mediterranean mountains</title>
+		<nummspages>20</nummspages>
+		<numtables>2</numtables>
+		<numhalftones></numhalftones>
+		<numfigures>1</numfigures>
+		<firstpage>1</firstpage>
+		<lastpage>9</lastpage>
+		<hascolorart>false</hascolorart>
+		<ondisk>true</ondisk>
+		<filename timestamp="25 Feb 2010 16:08">TBIS_A_468016.zip</filename>
+		<correspondingauthor>
+			<name>MARCOS MOLEÓN</name>
+			<emailaddress>mmoleonpaiz@hotmail.com</emailaddress>
+		</correspondingauthor>
+		<numtypesetpages>9</numtypesetpages>
+		<sequence></sequence>
+		<receiveddate>09 Jul 2009</receiveddate>
+		<reviseddate>18 Jan 2010</reviseddate>
+		<accepteddate>03 Feb 2010</accepteddate>
+		<firstpublicationdate></firstpublicationdate>
+		<secondaryid>BS-2009-062.R1</secondaryid>
+		<articletype>Article</articletype>
+		<copyeditedbytypesetter>false</copyeditedbytypesetter>
+		<supplementalfiles>
+		</supplementalfiles>
+	</manuscript>
+</manuscripts>
+<generalcontents>
+</generalcontents>
+<adverts>
+</adverts>
+<inserts>
+</inserts>
+<transmittal transmittalid="302928">
+	<transmittaltype>initial</transmittaltype>
+	<todate>25 Feb 2010</todate>
+	<duedate>11 Mar 2010</duedate>
+	<allIssueDataSent>false</allIssueDataSent>
+	<specialinstructions></specialinstructions>
+<productioneditor>
+	<name>Angela Nowell</name>
+	<emailaddress>angela.nowell@informa.com</emailaddress>
+	<telephone>+44 207 017 6451</telephone>
+</productioneditor>
+<productionmanager>
+	<name>Angela Nowell</name>
+	<emailaddress>angela.nowell@informa.com</emailaddress>
+	<telephone>+44 207 017 6451</telephone>
+</productionmanager>
+<typesetter>
+	<name>Genesis</name>
+	<emailaddress>genesis.type@btconnect.com</emailaddress>
+</typesetter>
+<proofreader>
+</proofreader>
+	<earlyxmlFileRequested>false</earlyxmlFileRequested>
+<previewFile>
+	<requested>false</requested>
+	<duedate></duedate>
+</previewFile>
+<printFinalFile>
+	<requested>false</requested>
+	<duedate></duedate>
+</printFinalFile>
+<onlineFinalFile>
+	<requested>false</requested>
+	<duedate></duedate>
+</onlineFinalFile>
+	<journalonSAM>false</journalonSAM>
+</transmittal>
+</cats>

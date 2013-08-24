@@ -1,0 +1,199 @@
+.mainnav{
+	background:#D0E2E9;
+	height: 33px;
+	width:100% !important;
+	}
+.text
+{  
+	font-family:Verdana,Georgia,Times,serif;
+	font-size:12px;
+	color:#444444;
+}
+
+
+/* Admin CSS */
+
+
+.suckertreemenu {
+	z-index:1;
+	float:left;	
+	width:100% !important ;/*scroller*/	
+	
+	background-color:#D0E2E9;	
+	padding-top:10px;	
+}
+.suckertreemenu ul {
+	margin:0;
+	padding:0;	
+	list-style-type:none;
+	z-index:999;
+}
+/*Top level list items*/
+.suckertreemenu ul li{
+	position:relative;
+	display:inline;
+	float:left;
+	background-color:#D0E2E9; /*overall menu background color*/	
+	padding:0 10px 0 10px;
+	white-space:nowrap;
+	border-right:#26647D solid 1px;
+}
+
+/*Top level menu link items style*/
+.suckertreemenu ul li a{
+	display:block;
+	font:bold 13px/25px arial;
+	padding:0px 0 0px 0;
+	color:#26647D;
+	width:auto!important; /*Width of top level menu link items*/
+	width:10px;
+}
+.suckertreemenu ul li a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
+.suckertreemenu ul li a.active {
+	color: #CC0000;
+	text-decoration: underline;
+}
+
+ 
+/*1st sub level menu*/
+.suckertreemenu ul li ul{
+	left:0px;
+	position:absolute;
+	top:1em; /* no need to change, as true value set by script */
+	display:block;
+	visibility:hidden;
+	width:150px;
+}
+
+
+.suckertreemenu ul li ul li{
+	display:block !important;
+	/*clear:right;*/
+	width:150px;
+}
+
+/*1st sub level menu*/
+.suckertreemenu ul li ul li ul{
+	left:0px;
+	position:absolute;
+	top:0em; /* no need to change, as true value set by script */
+	display:block;
+	visibility:hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.suckertreemenu ul li ul li, .suckertreemenu ul li ul li ul li{
+	display:list-item;
+	font-size:12px;
+	width:178px;
+	padding:1px;
+
+}
+
+/* Sub level menu links style */
+.suckertreemenu ul li ul li a{
+	display:block;
+	width:178px; /*width of sub menu levels*/
+	color:#000000;
+	text-decoration:none;
+	padding:5px 5px;
+	background-color:#FFFFEA;
+	border-bottom:1px solid #ffffff;
+}
+
+.suckertreemenu ul li ul li a:hover{
+	color:#000000;
+	text-decoration:underline;
+}
+
+ 
+* html p#iepara{ /*For a paragraph (if any) that immediately follows suckertree menu, add 1em top spacing between the two in IE*/
+	padding-top:1em;
+}
+ 
+/* Holly Hack for IE \*/
+* html .suckertreemenu ul li{ 
+	float:left;
+	height:1%; 
+}
+* html .suckertreemenu ul li a{ 
+	height:1%; 
+}
+ /**** added by kriti ****/
+ #nav {
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}	
+	
+		/* make the LI display inline */
+		/* it's position relative so that position absolute */
+		/* can be used in submenu */
+		#nav li {
+			float:left; 
+			display:block; 
+			width:112px; 
+			background:#9DCECE; 
+			position:relative;
+			z-index:500; 
+			margin:0 1px;
+		}
+		
+		/* this is the parent menu */
+		#nav li a {
+			display:block; 
+			padding:8px 5px 0 5px; 
+			font-weight:700;  
+			height:23px; 
+			text-decoration:none; 
+			color:#fff; 
+			text-align:center; 
+			color:#333;
+		}
+
+		#nav li a:hover {
+			color:#fff;
+		}
+	
+		/* you can make a different style for default selected value */
+		#nav a.selected {
+			color:#f00;
+		}
+	
+		/* submenu, it's hidden by default */
+		#nav ul {
+			position:absolute; 
+			left:0; 
+			display:none; 
+			margin:0 0 0 -1px; 
+			padding:0; 
+			list-style:none;
+		}
+		
+		#nav ul li {
+		<!--	width:100px; -->
+			float:left; 
+			border-top:1px solid #fff;
+		}
+		
+		/* display block will make the link fill the whole area of LI */
+		#nav ul a {
+			display:block;  
+			height:15px;
+			padding: 8px 5px; 
+			color:#666;
+		}
+		
+		#nav ul a:hover {
+			text-decoration:underline;	
+		}
+
+		/* fix ie6 small issue */
+		/* we should always avoid using hack like this */
+		/* should put it into separate file : ) */
+		*html #nav ul {
+			margin:0 0 0 -2px;
+		}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.col-right .spacer-form{height:94px;width:220px;  float:right;}
+.col-right input{height:22px;width:208px; margin-bottom:0px;padding:4px 4px 1px 4px;font-size:14px;color:#666;margin-left:16px; }
+.col-left input{height:22px;width:208px; margin-bottom:0px;padding:4px 4px 1px 4px;font-size:14px;color:#666;}
+.col-right .tip{ background:url("../images/tip.gif") no-repeat; width:224px; height:23px; padding-top:8px; margin-left:8px; margin-bottom:20px;}
+.col-right .clr-spacer-form{height:34px; clear:both;}
+.col-left #DropDownTimezone{line-height:36px;}
+
+

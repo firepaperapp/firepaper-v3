@@ -1,0 +1,7 @@
+<div class="rightbanner">
+	<div class="contactdet width100per">Sponsored Links</div>
+	<div class="width100per" id="sponsored">
+		<ol><li><a href="#" id="an1">Looking for a new <b>Mobile</b>?</a><br/>Try new BlackBerry Curve 8520<br/>exclusively on Airtel at Rs. 15,999<br/><cite>Airtel.in/BlackBerry8520</cite></li><li><a href="#?" id="an2">Good Luck Ka Daily Dose</a><br/>Buy Any Sony Ericsson Phone &amp; Get<br>Lucky Many Times. Participate Now!<br><cite>Sonyericsson.com/in/dailydose</cite></li><li><a href="#" id="an3">LG <b>Mobile</b> Phone</a><br/>3D S-Class UI, 8MP Camera, Dolby<br>Surround Sound, 3G phone &amp; More.<br><cite>www.in.lge.com/Viewty_<b>mobile</b></cite></li><li><a href="#" id="an4">Cheap <b>Mobiles</b></a><br/>Contact Suppliers &amp; Manufacturers,<br>Easy Sourcing on B2B Marketplace!<br><cite>www.Alibaba.com</cite></li><li><a href="#" id="an5"><b>Mobile</b> Phone Price India</a><br/>Compare Prices across merchants in<br>India and find the best deals<br><cite>www.pricesbolo.com</cite></li><li><a href="#" id="an6">Great deals on <b>Mobiles</b></a><br/>Over 3 Lakh safe, easy Deals<br>Register Now - Free, fast &amp; simple<br><cite>www.eBay.in</cite></li></ol>
+	</div>						
+	<?php echo $this->element('common/rightbanner'); ?>
+</div>
