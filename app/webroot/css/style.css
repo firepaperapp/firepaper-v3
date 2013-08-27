@@ -199,9 +199,7 @@ select {
 	border: 1px solid black;
  }
 .index { 
-	position: absolute; 
-	left:218px; 
-	top:120px;
+	margin-left:120px; 
 }
 .page {
 	padding:15px; 
