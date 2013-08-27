@@ -10,7 +10,7 @@ body {
 	background:#f5f5f5; 
 	text-align:left; 
 	font-family:"Helvetica Neue", Helvetica, arial, sans-serif; 
-	background: url('../images/sidebar-bg.gif') top left repeat-y;
+	background:#f5f5f5 url('../images/sidebar-bg.gif') top left repeat-y;
 }
 * { 
 	margin:0;
