@@ -103,17 +103,17 @@
 			}
 			else 
 			{
-				echo "<p class='marginT10'>".NO_RECENT_PROJECTS_FOUND;
+				echo "<div class='no-projects'><h2>".NO_RECENT_PROJECTS_FOUND;
 				if(in_array($this->Session->read('user_type'), array(1,3,7)))
            	 	{
-           	 		echo '<a class="edit" href="'.SITE_HTTP_URL.'projects/addEditProject">Click Here</a> to add a new project.';
+           	 		echo '</h2><a class="edit" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
            	 	}
-				echo "</p>";
+				echo "</div>";
 			}
 			?> 
 <!-- end Project bars --->
 		
-		<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="readmore-btn marginT10">View all projects</a>
+		<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="add-projects button">View all projects</a>
 	<div class="clr"></div>
  
  </div>
