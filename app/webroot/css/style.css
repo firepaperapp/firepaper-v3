@@ -113,6 +113,7 @@ textarea, input {
 }
 .right { 
 	float:right; 
+	width: 23%;
 }
 .red { 
 	color:#e06161; 
@@ -202,7 +203,7 @@ select {
 	margin-left: 150px;
 	float: left;
 	margin-top: 50px;
-	width: 100%;
+	width: 68%;
 }
 .page {
 	padding:15px; 
@@ -597,7 +598,6 @@ a.std-btn:hover {
 
 .activity-panel-wrapper { 
 
-	margin-right: 34px;  
 }
 .activity-panel {
 	padding:0px 0px 26px 0px; 
