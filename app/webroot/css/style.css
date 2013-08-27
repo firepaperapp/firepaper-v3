@@ -3,33 +3,131 @@
 
 
 
-body { font-size:12px; color:black; margin:0; background:#f5f5f5 ; text-align:left; font-family:"Helvetica Neue", Helvetica, arial, sans-serif; }
-* { margin:0; padding:0; }
-h1, .title-field {  border-bottom:1px dotted #cbcbcb; border-left: 0px; border-right: 0px; border-top:0px; color: #b9b9b9; font-size:24px; padding:3px; margin-top:10px; margin-bottom:10px; width: 100%;font-style: italic; font-weight: normal; }
-h1 span.title {color:#cecece;}
-h2 { font-size:18px; font-weight:normal; color:#408fb2; }
-h3 {  margin-bottom:14px; color:#abaaaa; font-size: 13px; text-transform: uppercase; }
-h3 a { color:#1c556e; }
-h4 {font-size: 13px;  margin-bottom: 14px; }
-h4 a:hover { text-decoration:underline; }
-p { font-size:12px; color:#313131; }
-a { color:black; text-decoration:none; }
-a:hover { text-decoration:none; }
-.underline-link { text-decoration:underline; }
-ul { list-style:none; }
-hr { border:1px dotted #CCC; }
-.error {padding: 5px; border:1px solid #cd96a0; background: #f5e3e3; padding: 8px;}
-.account-settings-wrapper hr { margin-top:15px; margin-bottom:15px; border:1px dotted #CCC; }
-.clr { clear:both; }
-.clr-dotted { clear:both; width:100%; height:1px; border-bottom:1px dotted #eef7f7; margin-bottom:8px; margin-top:8px; }
-textarea, input { color:#333; font-family:Helvetica, Arial, sans-serif; font-size:12px; }
-.clr-spacer { height:0px; clear:both; }
-.col {float:left;}
-.left { float:left; }
-.right { float:right; }
-.red { color:#e06161; }
-.fl-left { float:left !important; clear:both; margin-top:12px; margin-bottom:6px; }
-.logo {background: url(../images/fp-logo.png) no-repeat; width:127px; height: 134px; margin: 90px auto;
+body { 
+	font-size:12px; 
+	color:black; 
+	margin:0; 
+	background:#f5f5f5; 
+	text-align:left; 
+	font-family:"Helvetica Neue", Helvetica, arial, sans-serif; 
+	background: url('../images/sidebar-bg.gif') top left repeat-y;
+}
+* { 
+	margin:0;
+	padding:0; 
+}
+h1, .title-field {  
+	border-bottom:1px dotted #cbcbcb; 
+	border-left: 0px; 
+	border-right: 0px; 
+	border-top:0px; 
+	color: #b9b9b9; 
+	font-size:24px; 
+	padding:3px; 
+	margin-top:10px; 
+	margin-bottom:10px; 
+	width: 100%;
+	font-style: italic; 
+	font-weight: normal; 
+}
+h1 span.title {
+	color:#cecece;
+}
+h2 { 
+	font-size:18px; 
+	font-weight:normal; 
+	color:#408fb2; 
+}
+h3 {  
+	margin-bottom:14px; 
+	color:#abaaaa; 
+	font-size: 13px; 
+	text-transform: uppercase; 
+}
+h3 a { 
+	color:#1c556e; 
+}
+h4 {
+	font-size: 13px;  
+	margin-bottom: 14px; 
+}
+h4 a:hover { 
+	text-decoration:underline; 
+}
+p { 
+	font-size:12px; 
+	color:#313131; 
+}
+a { 
+	color:black; 
+	text-decoration:none; 
+}
+a:hover { 
+	text-decoration:none; 
+}
+.underline-link { 
+	text-decoration:underline; 
+}
+ul { 
+	list-style:none; 
+}
+hr { 
+	border:1px dotted #CCC; 
+}
+.error {
+	padding: 5px; 
+	border:1px solid #cd96a0; 
+	background: #f5e3e3; 
+	padding: 8px;
+}
+.account-settings-wrapper hr { 
+	margin-top:15px; 
+	margin-bottom:15px; 
+	border:1px dotted #CCC; 
+}
+.clr { 
+	clear:both; 
+}
+.clr-dotted { 
+	clear:both; 
+	width:100%; 
+	height:1px; 
+	border-bottom:1px dotted #eef7f7; 
+	margin-bottom:8px; 
+	margin-top:8px; 
+}
+textarea, input { 
+	color:#333; 
+	font-family:Helvetica, Arial, sans-serif; 
+	font-size:12px; 
+}
+.clr-spacer { 
+	height:0px; 
+	clear:both; 
+}
+.col {
+	float:left;
+}
+.left { 
+	float:left;
+}
+.right { 
+	float:right; 
+}
+.red { 
+	color:#e06161; 
+}
+.fl-left { 
+	float:left !important; 
+	clear:both; 
+	margin-top:12px; 
+	margin-bottom:6px;
+}
+.logo {
+	background: url(../images/fp-logo.png) no-repeat; 
+	width:127px; 
+	height: 134px; 
+	margin: 90px auto;
 }
 select {	
 	width: 220px;
@@ -132,7 +230,7 @@ select {
 	width:120px; 
 	margin-left:0; 
 	margin-right: 46px; 
-	top:86px; 
+	top:69px; 
 }
 .nav .inner {
 	-webkit-box-shadow: inset 0px 1px 0px 0px #67686a;
@@ -220,20 +318,83 @@ p.task-tickbox a { margin-bottom:4px; font-weight:bold; }
 	-webkit-border-radius: 5px;
     border-radius: 5px;
 }
-.header { height: 52px; margin:0 auto 22px;position: fixed;top: 0; z-index:400; width: 100%; background: url(../images/nav-rpt.jpg) repeat-x }
-.header-signup { height:200px; width:495px; margin:0 auto; }
-.header-signin { height:200px; width:280px; margin:0 auto; }
-.header h1 { color:#fff; font-weight:normal; text-shadow:0 1px #135885; float: left; margin-top:0px; position: absolute; left; top:16px;}
-.header-signup h1, .header-signin h1 { color:#333333; font-weight:normal; padding-top:42px; margin-left:10px; text-shadow:0 1px white; }
-.header h1 span, .header-signup h1 span, .header-signin h1 span { font-weight:bold; }
+.header { 
+	height: 52px; 
+	margin:0 auto 22px;
+	position: fixed;
+	top: 0; 
+	z-index:400; 
+	width: 100%; 
+	background: url(../images/nav-rpt.jpg) repeat-x; 
+}
+.header-signup { 
+	height:200px; 
+	width:495px; 
+	margin:0 auto; 
+}
+.header-signin { 
+	height:200px; 
+	width:280px; 
+	margin:0 auto; 
+}
+.header h1 { 
+	color:#fff; 
+	font-weight:normal; 
+	text-shadow:0 1px #135885; 
+	float: left; 
+	margin-top:0px; 
+	position: absolute;
+	top:16px;
+}
+.header-signup h1, .header-signin h1 { 
+	color:#333333; 
+	font-weight:normal; 
+	padding-top:42px; 
+	margin-left:10px; 
+	text-shadow:0 1px white; 
+}
+.header h1 span, .header-signup h1 span, .header-signin h1 span { 
+	font-weight:bold;
+}
 
-#top-link  { display:none; position:fixed; right:5px; bottom:5px; color:green; font-weight:bold; text-decoration:none; border:1px solid green; background:Lightgreen; padding:10px; }
+#top-link  { 
+	display:none; 
+	position:fixed; 
+	right:5px; 
+	bottom:5px; 
+	color:green; 
+	font-weight:bold; 
+	text-decoration:none; 
+	border:1px solid green; 
+	background:Lightgreen; 
+	padding:10px; 
+}
 
-.grey { color:#999; }
-a.std-btn { padding:4px 6px 4px 6px; font-weight:normal; -webkit-border-radius:3px; -moz-border-radius:3px; font-size:11px; background:#ABD8D8; color:white; float:left; }
-a.std-btn:hover { background:#7CC2C2; }
-.edit { color:#e06161; font-weight:normal; font-size:12px; }
-.edit:hover { text-decoration:underline; cursor:pointer; }
+.grey { 
+	color:#999; 
+}
+a.std-btn { 
+	padding:4px 6px 4px 6px; 
+	font-weight:normal; 
+	-webkit-border-radius:3px; 
+	-moz-border-radius:3px; 
+	font-size:11px; 
+	background:#ABD8D8; 
+	color:white; 
+	float:left; 
+}
+a.std-btn:hover { 
+	background:#7CC2C2; 
+}
+.edit { 
+	color:#e06161; 
+	font-weight:normal; 
+	font-size:12px; 
+}
+.edit:hover { 
+	text-decoration:underline; 
+	cursor:pointer; 
+}
 /* Left Col */
 
 
