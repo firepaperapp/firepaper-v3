@@ -543,6 +543,7 @@ a.std-btn:hover {
 
 
 .activity-panel-wrapper { 
+	display: none;
 	float: right; 
 	margin-right: 34px;  
 }
