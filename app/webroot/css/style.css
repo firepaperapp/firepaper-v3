@@ -117,7 +117,17 @@ p.task-title a.edit {font-weight: normal; color: #e06161; text-decoration: under
 p.task-tickbox { font-size:12px; color:black; }
 p.task-tickbox input { margin-right:6px; }
 p.task-tickbox a { margin-bottom:4px; font-weight:bold; }
-.main-signin { margin:0 auto 10px; width:220px; border: 1px solid #a87d49; padding:20px; -webkit-box-shadow: 0px 0px 0px 3px #cfad83; -moz-box-shadow: 0px 0px 0px 3px #cfad83; box-shadow: 0px 0px 0px 3px #cfad83; background: white; }
+.main-signin { 
+	margin:0 auto 10px;
+	width:220px; 
+	border: 1px solid #a87d49; 
+	padding:20px; 
+	-webkit-box-shadow:  0px 1px 3px 3px #cccccc;
+    box-shadow:  0px 1px 3px 3px #cccccc;
+	background: white; 
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+}
 .header { height: 52px; margin:0 auto 22px;position: fixed;top: 0; z-index:400; width: 100%; background: url(../images/nav-rpt.jpg) repeat-x }
 .header-signup { height:200px; width:495px; margin:0 auto; }
 .header-signin { height:200px; width:280px; margin:0 auto; }
