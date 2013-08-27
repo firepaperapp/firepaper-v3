@@ -106,7 +106,7 @@
 				echo "<div class='no-projects'><h2>".NO_RECENT_PROJECTS_FOUND;
 				if(in_array($this->Session->read('user_type'), array(1,3,7)))
            	 	{
-           	 		echo '</h2><a class="edit" href="'.SITE_HTTP_URL.'projects/add-projects button">Add a new project</a>';
+           	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/">Add a new project</a>';
            	 	}
 				echo "</div>";
 			}
