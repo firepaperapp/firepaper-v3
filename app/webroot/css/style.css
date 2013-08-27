@@ -232,11 +232,6 @@ select {
 	top:69px; 
 }
 .nav .inner {
-	-webkit-box-shadow: inset 0px 1px 0px 0px #67686a;
-	box-shadow: inset 0px 1px 0px 0px #67686a;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	margin-top: -16px;
 }
 .nav .inner div {    
 	display: block; 
