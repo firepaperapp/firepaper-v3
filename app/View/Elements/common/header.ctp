@@ -56,6 +56,6 @@ $(document).ready(function() {
 
     
 </div><!-- end nav -->
-<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="new-project-btn">Create a new Project</a>
+<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
 </div><!-- end header -->
 </div>
