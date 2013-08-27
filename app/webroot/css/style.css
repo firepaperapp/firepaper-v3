@@ -46,10 +46,23 @@ select {
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(170, 170, 170, 0.1);
 	box-shadow: 0px 2px 3px 0px rgba(170, 170, 170, 0.1);	
 }
-.navigation {  width:100%;background: white; position: absolute; top:0; left:0; z-index:16;height: 68px;-webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.3); }
-.navigation .profile {margin-left: 54px; float: left;}
-.navigation .profile img {float: left; margin-top: 10px;}
+.navigation {  
+	width:100%;
+	background: white; 
+	position: absolute; 
+	top:0; 
+	left:0; 
+	z-index:16;
+	height: 68px;
+}
+.navigation .profile {
+	margin-left: 54px; 
+	float: left;
+}
+.navigation .profile img {
+	float: left;
+	margin-top: 10px;
+}
 .navigation .profile .name { 
 	color:#7a7a7a; 
 	text-shadow:0 1px white; 
@@ -145,25 +158,25 @@ box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.3); }
 	margin-top: 10px;}
 
 .nav .inner div.dashboard-icon {
-	background: url(../images/nav-icons.png) no-repeat -68px  14px;
+	background: url(../images/nav-icons.png) no-repeat -75px 14px;
 }
 .nav .inner div.dashboard-icon a {
 	padding:90px 0px 0px 0px;
 }
 .nav .inner div.projects-icon {
-	background: url(../images/nav-icons.png) no-repeat -68px  -102px;
+	background: url(../images/nav-icons.png) no-repeat -75px -102px;
 }
 .nav .inner div.files-icon {
-	background: url(../images/nav-icons.png) no-repeat -68px  -102px;
+	background: url(../images/nav-icons.png) no-repeat -75px -102px;
 }
 .nav .inner div.subjects-icon{
-	background: url(../images/nav-icons.png) no-repeat -68px  -214px;
+	background: url(../images/nav-icons.png) no-repeat -75px -214px;
 }
 .nav .inner div.subjects-icon a {
 	padding:70px 0px 0px 0px;
 }
 .nav .inner div.user-icon, .nav .inner div.departments-icon {
-	background: url(../images/nav-icons.png) no-repeat -68px -323px;
+	background: url(../images/nav-icons.png) no-repeat -75px -323px;
 }
 .nav .inner div.user-icon a, .nav .inner div.departments-icon a{
 	padding:60px 0px 0px 0px;
