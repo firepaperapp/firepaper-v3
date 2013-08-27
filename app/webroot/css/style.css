@@ -521,7 +521,35 @@ a.std-btn:hover {
 }
 
 
+/* no project screen */
 
+.no-projects {
+	background: #f5f7f8;
+	padding: 50px;
+	text-align: center;	
+}
+.no-projects h2 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #363f48;
+	margin-bottom: 15px;
+}
+.add-projects {
+	
+}
+.button {
+	display: inline-block;
+	background: #7cc576;
+	font-size: 14px;
+	font-weight: bold;
+	height: 36px;
+	line-height: 36px;
+	color: #fff !important;
+	padding: 0 15px;
+	border: 0;
+	box-shadow: none;
+	border-radius: 3px;
+}
 /* Nav 1 icons */
 
 
@@ -529,28 +557,52 @@ a.std-btn:hover {
 
 
 .right-col-categories { }
-.right-col-categories .files-title { padding-bottom:5px; margin-bottom:0px; margin-top:15px;  color: #4a9cd1; font-size: 14px; font-family:"lucida sans", arial; }
-.right-col-categories .files-categories-box {padding:14px; width:158px;border:1px solid #c3c6c7;-webkit-box-shadow: 0px 2px 0px 0px #dbdbdb; -moz-box-shadow: 0px 2px 0px 0px #dbdbdb; box-shadow: 0px 2px 0px 0px #dbdbdb;}
-.right-col-categories ul { list-style-type: none; padding:0px; margin:0px; line-height: 20px;}
-.right-col-categories ul li { color:#595959;}
-.right-col-categories ul li #addCategory { color:#e06161;}
+.right-col-categories .files-title { 
+	padding-bottom:5px; 
+	margin-bottom:0px; 
+	margin-top:15px;  
+	color: #4a9cd1; 
+	font-size: 14px; 
+	font-family:"lucida sans", arial; 
+}
+.right-col-categories .files-categories-box {
+	padding:14px; 
+	width:158px;
+	border:1px solid #c3c6c7;
+	-webkit-box-shadow: 0px 2px 0px 0px #dbdbdb; 
+	-moz-box-shadow: 0px 2px 0px 0px #dbdbdb; 
+	box-shadow: 0px 2px 0px 0px #dbdbdb;
+}
+.right-col-categories ul { 
+	list-style-type: none; 
+	padding:0px; 
+	margin:0px; 
+	line-height: 20px;
+}
+.right-col-categories ul li { 
+	color:#595959;
+}
+.right-col-categories ul li #addCategory { 
+	color:#e06161;
+}
 .right-col-categories .files-categories-box ul li a { 
 	text-decoration: underline; 
-	color:#595959;}
+	color:#595959;
+}
 
 /* Listed Activity */
 
 
 
 .activity-panel-wrapper { 
-	display: none;
+
 	float: right; 
 	margin-right: 34px;  
 }
 .activity-panel {
 	padding:0px 0px 26px 0px; 
 	background:#fff url("../images/project-bg.png"); 
-	}
+}
 .activity-panel .marginT10 { 
 	width:100%; 
 	margin:0px; 
