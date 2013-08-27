@@ -120,10 +120,11 @@ p.task-tickbox a { margin-bottom:4px; font-weight:bold; }
 .main-signin { 
 	margin:0 auto 10px;
 	width:220px; 
-	border: 1px solid #a87d49; 
 	padding:20px; 
-	-webkit-box-shadow:  0px 1px 3px 3px #cccccc;
-    box-shadow:  0px 1px 3px 3px #cccccc;
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	border: solid 1px #d2d2d2;
 	background: white; 
 	-webkit-border-radius: 5px;
     border-radius: 5px;
