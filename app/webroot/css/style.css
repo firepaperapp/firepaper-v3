@@ -158,6 +158,10 @@ select {
 	margin-left: 54px; 
 	float: left;
 }
+.navigation .profile .button {
+	margin-left: 20px;
+	margin-top: 20px;
+}
 .navigation .profile img {
 	float: left;
 	margin-top: 10px;
