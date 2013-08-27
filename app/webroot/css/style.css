@@ -250,25 +250,25 @@ select {
 	margin-top: 10px;}
 
 .nav .inner div.dashboard-icon {
-	background: url(../images/nav-icons.png) no-repeat -75px 14px;
+	background: url(../images/nav-icons.png) no-repeat -70px 14px;
 }
 .nav .inner div.dashboard-icon a {
 	padding:90px 0px 0px 0px;
 }
 .nav .inner div.projects-icon {
-	background: url(../images/nav-icons.png) no-repeat -75px -102px;
+	background: url(../images/nav-icons.png) no-repeat -70px -102px;
 }
 .nav .inner div.files-icon {
-	background: url(../images/nav-icons.png) no-repeat -75px -102px;
+	background: url(../images/nav-icons.png) no-repeat -70px -102px;
 }
 .nav .inner div.subjects-icon{
-	background: url(../images/nav-icons.png) no-repeat -75px -214px;
+	background: url(../images/nav-icons.png) no-repeat -70px -214px;
 }
 .nav .inner div.subjects-icon a {
 	padding:70px 0px 0px 0px;
 }
 .nav .inner div.user-icon, .nav .inner div.departments-icon {
-	background: url(../images/nav-icons.png) no-repeat -75px -323px;
+	background: url(../images/nav-icons.png) no-repeat -70px -323px;
 }
 .nav .inner div.user-icon a, .nav .inner div.departments-icon a{
 	padding:60px 0px 0px 0px;
@@ -1656,7 +1656,16 @@ ul.tabs li#activity-tab.active { background-position:-78px -30px; margin-bottom:
 
 html ul.tabs li.active a {  }
 html ul.tabs li.active, html ul.tabs li.active a:hover { }
-.tab_container { width:315px; background:url("../images/activity-bg.png"); padding-bottom:20px;clear: both;float: left;margin-left: 0;position:relative;min-height: 50px;}
+.tab_container { 
+	width:315px;
+	background:url("../images/activity-bg.png"); 
+	padding-bottom:20px;
+	clear: both;
+	float: left;
+	margin-left: 0;
+	position:relative;
+	min-height: 50px;
+}
 .tab_container .loader {left:120px; top: 20px;}
 .tab_content { padding:0px; font-size:11px; background: #fff;  }
 .tab-wrapper .side-container .file { float:left; padding:7px 7px 5px 26px; cursor:move; }
