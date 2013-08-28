@@ -304,7 +304,7 @@ select {
 
 
 
-.main-signin { 
+.main-signin, .main-signup { 
 	margin:0 auto 10px;
 	width:220px; 
 	padding:20px; 
