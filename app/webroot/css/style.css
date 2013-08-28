@@ -219,6 +219,7 @@ select {
 	margin-top: 69px;
 	width: 100%;
 }
+
 .page {
 	padding:15px; 
 }
@@ -560,6 +561,9 @@ p.task-tickbox a {
 	box-shadow: none;
 	border-radius: 3px;
 }
+#content_projects {
+	padding: 50px;
+}
 /* Nav 1 icons */
 
 
@@ -770,11 +774,6 @@ ul.list-activity li span {
     width: 520px;
 }
 
-.activity .index {
-    width: 520px;
-    float: left;
-}
-
 .right h3 {
     margin-bottom: 14px;
     margin-left: 0 !important;
@@ -806,13 +805,16 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .project-bar-wrapper {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background: #f9f9f9;
+
     margin-bottom: 10px;
     padding: 0;
-    -webkit-box-shadow: 0 0 16px 4px rgba(0,0,0,0.3);
-    box-shadow: 0 0 16px 4px rgba(0,0,0,0.3);
+-webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	border: solid 1px #d2d2d2;
+	background: white; 
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
     float: left;
     margin-right: 36px;
     width: 272px;
