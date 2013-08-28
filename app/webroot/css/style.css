@@ -836,6 +836,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .project-brief-box .details {
+	padding: 16px;
 	background-color: #fdf9d7;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
@@ -886,12 +887,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     padding: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-}
-
-
-
-.project-brief-box-wrapper .left {
-    width: 480px;
 }
 
 .project-brief-box-wrapper .completed-bubble {
@@ -1031,10 +1026,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
 /* Project */
 
-.project-brief-box-wrapper {
-    position: relative;
-    padding: 50px;
-}
 
 /* Left Col end*/
 
