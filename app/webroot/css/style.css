@@ -2285,19 +2285,15 @@ p.task {
     display: block;
     color: #e06161;
 }
-
+.deadline-details {
+	margin-left: 20px;
+}
 .project-brief-box .details .right p.title {
     color: #666;
     font-weight: 700;
     font-size: 12px;
 }
 
-.project-brief-box .details .right h3.deadline-details {
-    padding: 0 0 10px;
-    margin-bottom: 12px;
-    border-bottom: 1px dotted #BCD0DA;
-    width: 100%;
-}
 
 .project-brief-box .details .right .due-in {
     color: #EB0000;
