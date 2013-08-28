@@ -85,7 +85,7 @@ function addComment(f)
 				<p class="title">Project brief:</p>
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			</div>
-			<div class="right">
+			<div class="right deadline-details">
 				<p class="title">Due:</p>
 				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
 				<p class="title">Project leader:</p>
