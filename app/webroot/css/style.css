@@ -2152,7 +2152,7 @@ p.field-title {
     width: 220px;
 }
 
-.col-left p,.col-right p {
+.col-left p, .col-right p {
     font-style: italic;
     margin-bottom: 8px;
 }
@@ -2659,7 +2659,7 @@ p.marginT10:after {
     float: right;
 }
 
-.coleducator-left p,.col-right p {
+.coleducator-left p, .col-right p {
     font-style: italic;
     margin-bottom: 8px;
 }
