@@ -1899,7 +1899,97 @@ p.form-title {
 
 .project-brief-box .details {
 }
-
+#drop-box-project { 
+	height:147px; 
+	z-index:1; 
+	bottom:0; 
+	left:0; 
+	position:fixed; 
+	width:100%; 
+	overflow:scroll; 
+}
+#drop-box-project .box-tab-project { 
+	background: url("../images/project-box-tab.png") no-repeat center 2px; 
+	width:114px; 
+	height:18px; 
+	margin:0 auto; 
+	color:white; 
+	font-size:12px; 
+	padding-top:6px; 
+	padding-left:8px; 
+	cursor:pointer; 
+}
+.project-drop-area-wrapper { 
+	position:relative;
+	background:#fff;
+	margin-top:20px; 
+	margin-left: 0px; 
+	margin-right: 0px;
+ }
+.project-drop-area-wrapper .task-title { 
+	position: static !important;
+} 
+.project-drop-area { 
+	padding:15px 10px 10px 20px; 
+	background:#fcfcfc; 
+	border:1px dashed #e3e3e3 !important; 
+	color:#444; 
+	font-weight:bold; 
+	margin-top:16px; 
+	height:28px; 
+}
+.project-drop-area h1 { 
+	font-family:Arial, Helvetica, sans-serif; 
+	color:#515151; 
+	text-align:right; 
+	margin-top:-3px; 
+	font-size:21px; 
+	float:right; 
+	font-weight:bold; 
+}
+.dropFileHere {}
+.project-drop-area p {
+	text-align: left; 
+	float: left; 
+	font-weight: normal; 
+	font-style: italic; 
+	color: #dcdbdb; 
+	font-size: 14px; 
+	background: url('../images/sprite.png') left -115px no-repeat; 
+	padding-left: 25px; 
+	line-height: 23px; 
+	text-shadow: 0px 1px 0px #ffffff;
+	filter: dropshadow(color=#ffffff, offx=0, offy=1);
+}
+.project-drop-area span {  
+	font-weight:normal; 
+	display: block; 
+	color: #51ACAC; 
+}
+.project-drop-area .files { 
+	color:#666666; 
+	font-size:11px; 
+	padding-top:4px; 
+}
+.project-drop-area .files span { 
+	color:#e06161; 
+}
+.task-wrapper { 
+	margin-bottom:10px; 
+}
+p.task { 
+	font-weight:bold; 
+	color:#333333; 
+	padding:8px; 
+	background:#fff; 
+	border:1px solid #CACCD2; 
+	-webkit-border-radius:3px; 
+	-moz-border-radius:3px; 
+}
+.drag-here { color:#666666; font-size:11px; padding-bottom:8px; }
+.category { color:white; font-size:12px; padding-bottom:4px; }
+.project-box-title { color:white; font-size:11px; font-weight:bold; }
+.category span { color:#e06161; font-size:11px; }
 .project-brief-box .details p {
     margin-bottom: 10px;
     font-size: 13px;
@@ -2331,25 +2421,7 @@ p.field-title {
 
 
 
-#drop-box-project { height:147px; z-index:1; bottom:0; left:0; position:fixed; width:100%; overflow:scroll; }
-#drop-box-project .box-tab-project { background: url("../images/project-box-tab.png") no-repeat center 2px; width:114px; height:18px; margin:0 auto; color:white; font-size:12px; padding-top:6px; padding-left:8px; cursor:pointer; }
-.project-drop-area-wrapper { position:relative;background:#fff;margin-top:20px; margin-left: 0px; margin-right: 0px;
- }
-.project-drop-area-wrapper .task-title { position: static !important;} 
-.project-drop-area { padding:15px 10px 10px 20px; background:#fcfcfc; border:1px dashed #e3e3e3 !important; color:#444; font-weight:bold; margin-top:16px; height:28px; }
-.project-drop-area h1 { font-family:Arial, Helvetica, sans-serif; color:#515151; text-align:right; margin-top:-3px; font-size:21px; float:right; font-weight:bold; }
-.dropFileHere {}
-.project-drop-area p {text-align: left; float: left; font-weight: normal; font-style: italic; color: #dcdbdb; font-size: 14px; background: url('../images/sprite.png') left -115px no-repeat; padding-left: 25px; line-height: 23px; text-shadow: 0px 1px 0px #ffffff;
-filter: dropshadow(color=#ffffff, offx=0, offy=1);}
-.project-drop-area span {  font-weight:normal; display: block; color: #51ACAC; }
-.project-drop-area .files { color:#666666; font-size:11px; padding-top:4px; }
-.project-drop-area .files span { color:#e06161; }
-.task-wrapper { margin-bottom:10px; }
-p.task { font-weight:bold; color:#333333; padding:8px; background:#fff; border:1px solid #CACCD2; -webkit-border-radius:3px; -moz-border-radius:3px; }
-.drag-here { color:#666666; font-size:11px; padding-bottom:8px; }
-.category { color:white; font-size:12px; padding-bottom:4px; }
-.project-box-title { color:white; font-size:11px; font-weight:bold; }
-.category span { color:#e06161; font-size:11px; }
+
 /* End Drop box */
 
 
