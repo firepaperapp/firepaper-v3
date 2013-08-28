@@ -533,6 +533,10 @@ p.task-tickbox a {
 	color: #363f48;
 	margin-bottom: 15px;
 }
+.view-all-projects {
+	margin: 10px auto;
+	display: inline-block;
+}
 .add-projects {
 	
 }
