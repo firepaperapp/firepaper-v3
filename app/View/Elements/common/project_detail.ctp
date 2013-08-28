@@ -32,11 +32,13 @@
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			</div>
 			<div class="left deadline-details">
-			<h3>Details</h3> 
-				<p class="title">Due:</p>
-				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
-				<p class="title">Project leader:</p>
+			<p class="title">Project leader:</p>
 				<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
+				
+				<p class="title">Due:</p>
+				<div class="day"><?php echo date("F", strtotime($prjDetails['Project']['duedate']))?></div>
+				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
+				
 				<?php
 	 			if($isOwner == 1)
 				{?>
