@@ -901,7 +901,9 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
 .project-brief-box {
 }
-
+.project-wrapper {
+	padding: 50px;
+}
 .project-brief-box .left p.title, .project-brief-box .right p.title {
     color: #286985;
     font-size: 14px;
