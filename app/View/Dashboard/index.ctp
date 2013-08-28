@@ -96,7 +96,7 @@
  		}
  		?>	
   	 </div><!-- end left -->        
-   <div class="right">
+   <div class="latest-activity">
      		<?php echo $this->requestAction("/users/currentComments");?>   
      		<?php 
 if($usertype!=6)
