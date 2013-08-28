@@ -25,10 +25,10 @@
 			{?>
 				<div class="completed-bubble"><span><?php echo $howMuchCompleted;?>%</span> Completed</div>
 			<?php }?>
-				<p class="title">Project title:</p>
+				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>
-				<div class="clr-spacer"></div>
-				<p class="title">Project brief:</p>
+				<div class="clr-spacer"></div>-->
+				<p class="title">Course details</p>
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			</div>
 			<div class="right">
