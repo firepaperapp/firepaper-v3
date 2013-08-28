@@ -1434,7 +1434,7 @@ div.file-name em {
     height: 1px;
     width: 98%;
     clear: both;
-    background: url(../images/dots.png) repeat-x;
+    background: url('../images/dots.png') repeat-x;
     margin-bottom: 12px;
 }
 
@@ -1838,8 +1838,6 @@ p.form-title {
     font-weight: 700;
     padding: 2px 0 0 4px;
 }
-/* Overall project indicator */
-
 
 
 /* end Overall project indicator */
@@ -1944,7 +1942,6 @@ p.form-title {
 }
 
 
-.dropFileHere {}
 .project-drop-area p {
 	text-align: left; 
 	float: left; 
@@ -1983,10 +1980,25 @@ p.task {
 	-webkit-border-radius:3px; 
 	-moz-border-radius:3px; 
 }
-.drag-here { color:#666666; font-size:11px; padding-bottom:8px; }
-.category { color:white; font-size:12px; padding-bottom:4px; }
-.project-box-title { color:white; font-size:11px; font-weight:bold; }
-.category span { color:#e06161; font-size:11px; }
+.drag-here { 
+	color:#666666; 
+	font-size:11px; 
+	padding-bottom:8px; 
+}
+.category { 
+	color:white; 
+	font-size:12px; 
+	padding-bottom:4px; 
+}
+.project-box-title { 
+	color:white; 
+	font-size:11px; 
+	font-weight:bold; 
+}
+.category span { 
+	color:#e06161; 
+	font-size:11px; 
+}
 .project-brief-box .details p {
     margin-bottom: 10px;
     font-size: 13px;
@@ -2030,11 +2042,11 @@ p.task {
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
     margin-bottom: 22px;
     box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    background: url(../images/lines.png);
+    background: url('../images/lines.png');
 }
 
 .project-brief-box .note .text-field {
-    background: transparent url(../images/margin.png) repeat-y left;
+    background: transparent url('../images/margin.png') repeat-y left;
     line-height: 23px;
     padding: 25px 20px 20px 29px;
     border: none;
@@ -2052,7 +2064,7 @@ p.task {
     padding: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background: #FFF url(../images/shadow.gif) top repeat-x;
+    background: #FFF url('../images/shadow.gif') top repeat-x;
 }
 
 .pickdate {
@@ -2149,7 +2161,7 @@ p.task {
     width: 75%;
     padding: 3px;
     margin-top: 0;
-    background: #FFF url(../images/shadow.gif) top repeat-x;
+    background: #FFF url('../images/shadow.gif') top repeat-x;
     font-size: 16px;
     color: #666;
     float: left;
@@ -2199,7 +2211,7 @@ p.field-title {
 }
 
 .project-stream {
-    background: url(../images/project-details.jpg) no-repeat;
+    background: url('../images/project-details.jpg') no-repeat;
     width: 620px;
     height: 598px;
 }
@@ -2347,11 +2359,6 @@ p.field-title {
 .validation-signup p {
     color: #fff;
 }
-/* End Sign Up styling */
-
-
-
-
 
 
 
@@ -2404,22 +2411,21 @@ p.field-title {
 .footer-signin a:hover { 
 	text-decoration:underline; 
 }
-.validation-signin { height:100%; width:220px; margin:0 auto; border:1px solid #F20000; background:#FFF4F4; padding:20px; margin-bottom:14px; }
-.validation-signin p { color:#F20000; }
+.validation-signin {
+	height:100%; 
+	width:220px; 
+	margin:0 auto; 
+	border:1px solid #F20000; 
+	background:#FFF4F4; 
+	padding:20px; 
+	margin-bottom:14px; 
+}
+.validation-signin p { 
+	color:#F20000; 
+}
 /* End Sign in */
 
 
-
-
-
-
-
-/* Drop box */
-
-
-
-
-/* End Drop box */
 
 
 
