@@ -915,7 +915,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	text-align: center;
 	float: left;
 }
-.project-wrapper {
+.project-wrapper, .profile-container {
 	padding:40px 50px;
 }
 .project-brief-box .left p.title, .project-brief-box .right p.title {
