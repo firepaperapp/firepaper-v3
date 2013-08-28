@@ -107,13 +107,15 @@
 				if(in_array($this->Session->read('user_type'), array(1,3,7)))
            	 	{
            	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/">Add a new project</a>';
-           	 	}
+           	 	} ?>
+           	 	<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View all projects</a>
+           	 	<?php 
 				echo "</div>";
 			}
 			?> 
 <!-- end Project bars --->
 		
-		<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View all projects</a>
+		
 	<div class="clr"></div>
  
  </div>
