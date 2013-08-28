@@ -826,7 +826,72 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-bar-wrapper:hover {
     display: block;
 }
+.project-brief-box h3 {
+    padding-top: 4px;
+    padding-bottom: 6px;
+    text-shadow: 0 1px #FFF;
+    margin: 0;
+    border: none;
+    padding-left: 0;
+    width: 100%;
+    border-bottom: 1px dotted #FFF;
+}
 
+.project-brief-box .completed-bubble {
+    float: right;
+    margin-left: 10px;
+}
+
+.project-brief-box .details {
+}
+#drop-box-project { 
+	height:147px; 
+	z-index:1; 
+	bottom:0; 
+	left:0; 
+	position:fixed; 
+	width:100%; 
+	overflow:scroll; 
+}
+#drop-box-project .box-tab-project { 
+	background: url("../images/project-box-tab.png") no-repeat center 2px; 
+	width:114px; 
+	height:18px; 
+	margin:0 auto; 
+	color:white; 
+	font-size:12px; 
+	padding-top:6px; 
+	padding-left:8px; 
+	cursor:pointer; 
+}
+.project-drop-area-wrapper { 
+	position:relative;
+	background:#fff;
+	margin-top:20px; 
+	margin-left: 0px; 
+	margin-right: 0px;
+ }
+.project-drop-area-wrapper .task-title { 
+	position: static !important;
+} 
+.project-drop-area { 
+	padding:15px 10px 10px 20px; 
+	background:#fcfcfc; 
+	border:1px dashed #e3e3e3 !important; 
+	color:#444; 
+	font-weight:bold; 
+	margin-top:16px; 
+	height:28px; 
+}
+.project-drop-area h1 { 
+	font-family:Arial, Helvetica, sans-serif; 
+	color:#515151; 
+	text-align:right; 
+	margin-top:-3px; 
+	font-size:21px; 
+	float:right; 
+	font-weight:bold; 
+}
 .completed-bubble {
     color: #cbcbcb;
     font-size: 12px;
@@ -1881,72 +1946,7 @@ p.form-title {
     border-bottom: 1px solid #dedede;
 }
 
-.project-brief-box h3 {
-    padding-top: 4px;
-    padding-bottom: 6px;
-    text-shadow: 0 1px #FFF;
-    margin: 0;
-    border: none;
-    padding-left: 0;
-    width: 100%;
-    border-bottom: 1px dotted #FFF;
-}
 
-.project-brief-box .completed-bubble {
-    float: right;
-    margin-left: 10px;
-}
-
-.project-brief-box .details {
-}
-#drop-box-project { 
-	height:147px; 
-	z-index:1; 
-	bottom:0; 
-	left:0; 
-	position:fixed; 
-	width:100%; 
-	overflow:scroll; 
-}
-#drop-box-project .box-tab-project { 
-	background: url("../images/project-box-tab.png") no-repeat center 2px; 
-	width:114px; 
-	height:18px; 
-	margin:0 auto; 
-	color:white; 
-	font-size:12px; 
-	padding-top:6px; 
-	padding-left:8px; 
-	cursor:pointer; 
-}
-.project-drop-area-wrapper { 
-	position:relative;
-	background:#fff;
-	margin-top:20px; 
-	margin-left: 0px; 
-	margin-right: 0px;
- }
-.project-drop-area-wrapper .task-title { 
-	position: static !important;
-} 
-.project-drop-area { 
-	padding:15px 10px 10px 20px; 
-	background:#fcfcfc; 
-	border:1px dashed #e3e3e3 !important; 
-	color:#444; 
-	font-weight:bold; 
-	margin-top:16px; 
-	height:28px; 
-}
-.project-drop-area h1 { 
-	font-family:Arial, Helvetica, sans-serif; 
-	color:#515151; 
-	text-align:right; 
-	margin-top:-3px; 
-	font-size:21px; 
-	float:right; 
-	font-weight:bold; 
-}
 .dropFileHere {}
 .project-drop-area p {
 	text-align: left; 
