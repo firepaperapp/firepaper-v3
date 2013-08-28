@@ -836,12 +836,17 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .project-brief-box .details {
-	padding: 16px;
+	padding: 16px 20px 20px 20px;
 	background-color: #fdf9d7;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	border: solid 1px #e2db9b;
+}
+.project-brief-box .details p {
+	color: #6c6b6b;
+	text-shadow: 0 1px 0 #fff;
+
 }
 #drop-box-project { 
 	height:147px; 
@@ -902,7 +907,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-brief-box {
 }
 .project-wrapper {
-	padding: 50px;
+	padding:40px 50px;
 }
 .project-brief-box .left p.title, .project-brief-box .right p.title {
     color: #c7bf7b;
@@ -910,7 +915,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     font-weight: bold;
     text-shadow: 0 1px 0 #fff;
     filter: dropshadow(color=#ffffff,offx=0,offy=1);
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 .project-drop-area h1 { 
 	font-family:Arial, Helvetica, sans-serif; 
