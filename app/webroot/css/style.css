@@ -16,19 +16,12 @@ body {
 	margin:0;
 	padding:0; 
 }
-h1, .title-field {  
-	border-bottom:1px dotted #cbcbcb; 
-	border-left: 0px; 
-	border-right: 0px; 
-	border-top:0px; 
-	color: #b9b9b9; 
+h1 {  
+	color: #454040; 
 	font-size:24px; 
-	padding:3px; 
 	margin-top:10px; 
 	margin-bottom:10px; 
-	width: 100%;
-	font-style: italic; 
-	font-weight: normal; 
+	font-weight: bold; 
 }
 h1 span.title {
 	color:#cecece;
@@ -843,6 +836,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .project-brief-box .details {
+	background-color: #fdf9d7;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
+	box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
+	border: solid 1px #e2db9b;
 }
 #drop-box-project { 
 	height:147px; 
