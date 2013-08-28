@@ -808,13 +808,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
     margin-bottom: 10px;
     padding: 0;
--webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.09);
 	box-shadow: 0 3px 3px rgba(0,0,0,.09);
-	border: solid 1px #d2d2d2;
 	background: white; 
-	-webkit-border-radius: 5px;
-    border-radius: 5px;
+	-webkit-border-radius: 3px;
+    border-radius: 3px;
     float: left;
     margin-right: 36px;
     width: 272px;
@@ -890,8 +889,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
 .project-content {
     margin: 17px;
-    -webkit-box-shadow: 0 0 3px 1px rgba(230,230,230,0.5);
-    box-shadow: 0 0 3px 1px rgba(230,230,230,0.5);
 }
 
 .project-content .inner {
