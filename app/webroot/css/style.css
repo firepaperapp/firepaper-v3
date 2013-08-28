@@ -821,7 +821,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #454040;
     margin: 17px 17px 4px;
     text-shadow: 0 1px 0 #fff;
-    filter: dropshadow(color=#ffffff,offx=0,offy=1);
 }
 
 .project-bar-wrapper:hover {
