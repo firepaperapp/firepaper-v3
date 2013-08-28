@@ -16,11 +16,10 @@
 </script>
 <div class="project-brief-box-wrapper">
 	<div class="project-brief-box">
-		
-		
-		<div class="details">
-			<div class="left">
-			<h3>Brief</h3> 
+	
+		<div class="details left">
+			
+			<h3>Course details</h3> 
 			<?php
 			if($isOwner == 0 && isset($howMuchCompleted))
 			{?>
@@ -88,7 +87,7 @@
 				}					
 				?>
 			</div>
-		</div>
+		
 		<div class="clr"></div>
 	</div>
 </div>

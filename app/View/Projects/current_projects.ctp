@@ -73,11 +73,13 @@
 								
 									<div class="inner">
 									<h4>Course details</h4>
+										<div class="note">
 										<p>
 										<?php echo Sanitize::html($rec['Project']['description']);?>
 										<span class="started-details">- <?php 
 										echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
 										</p>
+										</div>
 										<div class="project-items">
 											<span class="file-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
 											
