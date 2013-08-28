@@ -172,12 +172,17 @@ select {
 }
 .navigation .profile .name { 
 	color:#7a7a7a; 
-	text-shadow:0 1px white; 
 	font-size:15px; 
 	margin-top:15px; 
 	margin-left: 10px; 
 	font-weight:bold; 
 	float: left; 
+}
+.navigation .profile .options {
+	margin-top:5px; 
+	margin-left: 10px; 
+	font-size: 12px;
+	float: left;
 }
 .navigation .profile .name span { 
 	color:#6696A6; 
@@ -208,10 +213,10 @@ select {
 	border: 1px solid black;
  }
 .index { 
-	margin-left: 150px;
-	float: left;
-	margin-top: 50px;
-	width: 68%;
+	margin-left: 120px;
+	margin-right: 50px;
+	margin-top: 69px;
+	width: 100%;
 }
 .page {
 	padding:15px; 
