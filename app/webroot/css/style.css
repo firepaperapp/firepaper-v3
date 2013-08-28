@@ -938,6 +938,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
 /* Project */
 
+.project-brief-box-wrapper {
+    position: relative;
+    padding: 50px;
+}
+
 /* Left Col end*/
 
 
@@ -1846,10 +1851,7 @@ p.form-title {
     margin: 54px;
 }
 
-.project-brief-box-wrapper {
-    position: relative;
-    padding: 50px;
-}
+
 
 .project-brief-box-wrapper .left {
     width: 480px;
