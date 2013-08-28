@@ -905,8 +905,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	padding: 50px;
 }
 .project-brief-box .left p.title, .project-brief-box .right p.title {
-    color: #286985;
-    font-size: 14px;
+    color: #c7bf7b;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    filter: dropshadow(color=#ffffff,offx=0,offy=1);
+    margin-bottom: 20px;
 }
 .project-drop-area h1 { 
 	font-family:Arial, Helvetica, sans-serif; 
