@@ -524,7 +524,7 @@ p.task-tickbox a {
 
 .no-projects {
 	background: #fafafa;
-	padding: 50px;
+	padding: 50px 50px 40px 50px;
 	text-align: center;	
 }
 .no-projects h2 {
@@ -536,6 +536,7 @@ p.task-tickbox a {
 .view-all-projects {
 	margin: 10px auto;
 	display: inline-block;
+	color: #cccccc;
 }
 .add-projects {
 	
@@ -595,7 +596,9 @@ p.task-tickbox a {
 
 /* Listed Activity */
 
-
+.latest-activity {
+	display: none;
+}
 
 .activity-panel-wrapper { 
 
