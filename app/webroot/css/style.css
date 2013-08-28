@@ -904,7 +904,8 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     padding: 4px 5px;
 }
 
-.project-brief-box {
+.deadline-details {
+	margin-left: 20px;
 }
 .project-wrapper {
 	padding:40px 50px;
@@ -2285,9 +2286,7 @@ p.task {
     display: block;
     color: #e06161;
 }
-.deadline-details {
-	margin-left: 20px;
-}
+
 .project-brief-box .details .right p.title {
     color: #666;
     font-weight: 700;
