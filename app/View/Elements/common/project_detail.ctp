@@ -36,7 +36,7 @@
 				<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
 				
 				<p class="title">Due:</p>
-				<div class="day"><?php echo date("F", strtotime($prjDetails['Project']['duedate']))?></div>
+				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
 				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
 				
 				<?php
