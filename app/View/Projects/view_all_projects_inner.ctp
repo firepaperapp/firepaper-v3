@@ -69,13 +69,12 @@
 						  <h3>Course details</h3>
 						  <p><?php echo Sanitize::html($rec['Project']['title']);?>  <span class="started-details">- <?php 
 								echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span></p>
-						  </div>
-						
 						<p class="project-content">
 							<?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files and
-							  <?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments
-							  
-						</p><!-- end project-content -->
+<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</p><!-- end project-content -->
+						  </div>
+						
+						
 						</div><!-- end project-bar -->	
 						<div class="clr"></div>
 					</div><!-- end project-bar-wrapperr -->
