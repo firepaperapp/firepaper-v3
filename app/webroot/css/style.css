@@ -971,9 +971,9 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .progressbg {
 	position: relative;
 	background: #d4d9de;
-	width: 210px;
+	width: 240px;
 	height: 6px;
-	margin: 10px 17px;
+	margin: 10px 0px 17px 17px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
