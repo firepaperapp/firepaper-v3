@@ -838,16 +838,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-bar-wrapper:hover {
     display: block;
 }
-.project-brief-box h3 {
-    padding-top: 4px;
-    padding-bottom: 6px;
-    text-shadow: 0 1px #FFF;
-    margin: 0;
-    border: none;
-    padding-left: 0;
-    width: 100%;
-    border-bottom: 1px dotted #FFF;
-}
 
 .project-brief-box .completed-bubble {
     float: right;
@@ -862,8 +852,18 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	border: solid 1px #e2db9b;
 }
-.project-brief-box .details p {
-	color: #6c6b6b;
+.details h3 {
+	padding-top: 4px;
+    padding-bottom: 6px;
+    text-shadow: 0 1px #FFF;
+    margin: 0;
+    border: none;
+    padding-left: 0;
+    width: 100%;
+    border-bottom: 1px dotted #FFF;
+}
+.details p {
+	color: #c7bf7b;
 	text-shadow: 0 1px 0 #fff;
 
 }

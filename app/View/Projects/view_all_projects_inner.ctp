@@ -64,8 +64,11 @@
 						  <div class="clr"></div>
 						  <em>Project</em></div>
 						  <p class="project-title"><?php echo Sanitize::html($rec['Subject']['title']);?></p>
+						  <div class="details">
+						  <h3>Course details</h3>
 						  <p><?php echo Sanitize::html($rec['Project']['title']);?>  <span class="started-details">- <?php 
 								echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span></p>
+						  </div>
 						
 						<p class="project-content">
 							<?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files and
