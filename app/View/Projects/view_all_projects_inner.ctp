@@ -53,7 +53,7 @@
 			<div class="duein-date">
 				<span>Due in:</span> <?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></div>
 				<div class="progressbg">
-						<div class="projectBar"></div>
+						<div class="progressBar"></div>
 				</div>
 						  
 						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
