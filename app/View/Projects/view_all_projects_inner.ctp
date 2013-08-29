@@ -52,9 +52,7 @@
 		<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
 			<div class="duein-date">
 				<span>Due in:</span> <?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></div>
-				<div class="progressbg">
-						<div class="progressBar"></div>
-				</div>
+				
 						  
 						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
 						  <div class="clr"></div>
@@ -70,6 +68,9 @@
 						  ?>
 						  
 						   </div>
+						   <div class="progressbg">
+						<div class="progressBar"></div>
+				</div>
 						  <div class="details">
 						  <h3>Course details</h3>
 						  <p><?php echo Sanitize::html($rec['Project']['title']);?> </p>
