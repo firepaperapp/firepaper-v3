@@ -856,19 +856,18 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	width: 195px;
 }
 .details h3 {
-	padding: 16px 20px 20px 20px;
+	padding: 16px 20px 0px 20px;
     text-shadow: 0 1px #FFF;
     color: #c7bf7b;
     margin: 0;
     border: none;
-    padding-left: 0;
     text-transform: capitalize;
 }
 .details p {
 	padding: 16px 20px 20px 20px;
 	color: #c7bf7b;
 	text-shadow: 0 1px 0 #fff;
-
+	border-bottom: 1px dotted #d7d09c;
 }
 .flat-files-icon {
 	
