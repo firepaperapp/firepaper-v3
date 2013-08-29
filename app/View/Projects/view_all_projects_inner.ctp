@@ -68,7 +68,7 @@
 						  else 
 						  	echo "Completed";
 						  ?>
-						  <div class="progressBar"></div>
+						  
 						   </div>
 						  <div class="details">
 						  <h3>Course details</h3>

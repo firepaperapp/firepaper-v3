@@ -1,5 +1,5 @@
 <div class="header-signup">
-  <h1><span>Dashboard</h1>
+  <h1>Dashboard</h1>
 </div>
 <!-- end header -->
 
