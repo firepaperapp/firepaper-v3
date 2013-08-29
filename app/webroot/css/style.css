@@ -846,14 +846,14 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	display: none;
 }
 .details {
-	margin: 17px;
+	margin: 17px 0px 0px 17px;
 	
 	background-color: #fdf9d7;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	border: solid 1px #e2db9b;
-	width: 195px;
+	width: 236px;
 }
 .details h3 {
 	padding: 16px 20px 0px 20px;
@@ -971,9 +971,9 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .progressbg {
 	position: relative;
 	background: #d4d9de;
-	width: 184px;
+	width: 210px;
 	height: 6px;
-	margin: 17px;
+	margin: 10px 17px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
