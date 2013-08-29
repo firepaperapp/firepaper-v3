@@ -367,6 +367,30 @@ select {
 .grey { 
 	color:#999; 
 }
+.submit {
+    margin-top: 20px;
+    display: block;
+    float: left;
+}
+
+.submit, .submit-grey, .sign-in {
+    background: #fff;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
+    box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
+    padding: 6px 16px;
+    line-height: 15px;
+    border: 1px solid #cbcbcb;
+    color: #bfbfbf;
+    font-weight: 700;
+    margin-right: 5px;
+    font-size: 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.submit:hover, .submit-grey:hover, .sign-in:hover {
+    color: #454040;
+}
 a.std-btn { 
 	padding:4px 6px 4px 6px; 
 	font-weight:normal; 
@@ -1663,45 +1687,7 @@ div.file-name em {
     height: 10px;
 }
 
-.submit {
-    margin-top: 20px;
-    display: block;
-    float: left;
-}
 
-.submit, .submit-grey, .sign-in {
-    background: #fff;
-/* Old browsers */
-    background: 0 0 rgba(249,249,249,1) 100%;
-/* FF3.6+ */
-    background: 0 color-stop(100%,rgba(249,249,249,1)));
-/* Chrome,Safari4+ */
-    background: 0 0 100%;
-/* Chrome10+,Safari5.1+ */
-    background: 0 0 100%;
-/* Opera 11.10+ */
-    background: 0 0 100%;
-/* IE10+ */
-    background: linear-gradient(tobottom,rgba(255,255,255,1) 0 100%;
-/* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f9f9f9',GradientType=0);
-/* IE6-9 */
-    -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    padding: 6px 16px;
-    line-height: 15px;
-    border: 1px solid #cbcbcb;
-    color: #bfbfbf;
-    font-weight: 700;
-    margin-right: 5px;
-    font-size: 12px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-}
-
-.submit:hover, .submit-grey:hover, .sign-in:hover {
-    color: #454040;
-}
 
 .pagination a {
     color: #FFF;
