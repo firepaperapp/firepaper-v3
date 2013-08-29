@@ -851,6 +851,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
 	border: solid 1px #e2db9b;
+	width: 195px;
 }
 .details h3 {
 	padding-top: 4px;
@@ -964,8 +965,35 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #cbcbcb;
     font-size: 12px;
     font-weight: 500;
+    margin-left: 17%;
+}
+.progressbg {
+	position: relative;
+	background: #d4d9de;
+	width: 184px;
+	height: 6px;
+	margin: 47px 83px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,.15), inset 0px -1px 2px 0px 	rgba(0,0,0,.05), 0px 1px 0px 0px rgba(255,255,255,.65);
+	-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,.15), inset 0px -1px 2px 0px rgba(0,0,0,.05), 0px 1px 0px 0px rgba(255,255,255,.65) box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,.15), inset 0px -1px 2px 0px rgba(0,0,0,.05), 0px 1px 0px 0px rgba(255,255,255,.65);
 }
 
+.completed-bubble .progressBar {
+	position: absolute;
+	width: 140px;
+	height: 4px;
+	background: url(../images/progress.png) repeat;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #3c92d3;
+	-webkit-box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px 	rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px rgba(0,0,0,.2);
+	box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px rgba(0,0,0,.2);
+}
+}
 .completed-bubble span {
 }
 
