@@ -50,63 +50,52 @@
 					
 						
 							<!-- Project bars --->
-							<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
-								<p class="title-other">Due: <span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
-								<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
-								<div class="project-bar">
-								  <div class="completed-bubble">
-								  <span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
-								  <?php
-								  if($owner == 1)
-								  	echo "Weight";
-								  else 
-								  	echo "Completed";
-								  ?>
-								   </div>
-								  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
-								  <div class="clr"></div>
-								  <em>Project</em></div>
-								  
-								  
-							
-								<div class="project-content">
-								
-									<div class="inner">
-									<h4>Course details</h4>
-										<div class="note">
-										<p>
-										<?php echo Sanitize::html($rec['Project']['description']);?>
-										<span class="started-details">- <?php 
-										echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
-										</p>
-										</div>
-										<div class="project-items">
-											<span class="file-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
-											
-											<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
-										</div>
-										
-									   </div><!-- end project-content -->
-									   <p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
-									   
-									   
-									   
-									 </div>
-								</div><!-- end project-bar -->	
-								<div class="clr"></div>
-							</div><!-- end project-bar-wrapperr -->
-							<!-- end Project bars --->
-						<!-- Project summary end here-->
-					<?php		 
-					$i++;
-				}?>
-				<div class="clr-spacer"></div> 
-			<?php
-			}
+	<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
+		<p class="title-other">Due: <span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
+		<div class="details">
+			<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
+		</div>
+		<div class="project-bar">
+		<div class="completed-bubble">
+		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
+		<?php
+			if($owner == 1)
+				echo "Weight";
 			else 
-			{
-				echo "<div class='no-projects'><h2>".NO_RECENT_PROJECTS_FOUND;
-				if(in_array($this->Session->read('user_type'), array(1,3,7)))
+			echo "Completed";
+		?>
+		</div>
+		<div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
+		<div class="clr"></div>
+		<em>Project</em></div>
+		<div class="project-content">
+		<div class="inner">
+		<h4>Course details</h4>
+		<div class="note">
+			<p><?php echo Sanitize::html($rec['Project']['description']);?>
+			<span class="started-details">- <?php 
+			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
+			</p>
+		</div>
+		<div class="project-items">
+		<span class="file-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
+		<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
+		</div>
+		</div><!-- end project-content -->
+		<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
+		</div>
+		</div><!-- end project-bar -->	
+		<div class="clr"></div>
+	</div><!-- end project-bar-wrapperr -->
+		<!-- end Project bars --->
+		<?php		 
+			$i++;
+			} ?>
+		<div class="clr-spacer"></div> 
+		<?php
+			} else {
+			echo "<div class='no-projects'><h2>".NO_RECENT_PROJECTS_FOUND;
+			if(in_array($this->Session->read('user_type'), array(1,3,7)))
            	 	{
            	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/">Add a new project</a>';
            	 	} ?>

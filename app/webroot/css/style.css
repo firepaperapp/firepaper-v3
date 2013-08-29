@@ -628,7 +628,6 @@ p.task-tickbox a {
 }
 .activity-panel {
 	padding:0px 0px 26px 0px; 
-	background:#fff url("../images/project-bg.png"); 
 }
 a.group-tab { 
 	-moz-border-radius: 3px 3px 3px 3px; 
@@ -762,7 +761,7 @@ ul.list-activity li span {
 }
 
 .btn {
-    background: url(../images/btn-rpt-blue.gif) repeat-x scroll 0 0 #408FB2 !important;
+    background: #408FB2 !important;
     border: 1px solid #3885A7 !important;
     width: 66px;
     height: 28px;
@@ -778,7 +777,7 @@ ul.list-activity li span {
 }
 
 .btn:hover {
-    background: #c9c9c9 url(../images/btn-rpt-grey.gif) repeat-x !important;
+    background: #c9c9c9;
     color: #595959;
     border: 1px solid #9b9b9b !important;
 }
@@ -795,16 +794,12 @@ ul.list-activity li span {
 
 /* Project */
 p.title-today, p.title-tomorrow, p.title-standard, p.title-other {
-    -webkit-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0;
+
     text-align: center;
     text-shadow: 0 1px 0 #fff;
-    border-bottom: 1px solid #d0cfcf;
-    background: #fff;
     font-weight: 500;
     font-size: 13px;
     color: #b5b4b4;
-    padding: 16px 18px;
 }
 
 p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other span {
@@ -859,7 +854,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     margin-left: 10px;
 }
 
-.project-brief-box .details {
+.details {
 	padding: 16px 20px 20px 20px;
 	background-color: #fdf9d7;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
