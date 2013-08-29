@@ -49,7 +49,9 @@
 			?>
 				<!-- Project_summary start here -->
 					<!-- Project bars --->
-					<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
+		<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
+			<div class="duein-date">
+				<?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></div>
 						<div class="project-bar">
 						  
 						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
@@ -67,11 +69,10 @@
 						   </div>
 						  <div class="details">
 						  <h3>Course details</h3>
-						  <p><?php echo Sanitize::html($rec['Project']['title']);?>  <span class="started-details">- <?php 
-								echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span></p>
+						  <p><?php echo Sanitize::html($rec['Project']['title']);?> </p>
 						<p class="project-content">
-							<?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files and
-<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</p><!-- end project-content -->
+							<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> <span class="flat-tasks-icon">
+<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</p><!-- end project-content --></span>
 						  </div>
 						
 						

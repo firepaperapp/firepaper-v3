@@ -804,7 +804,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #c46d6d;
 }
 
-
+.duein-date
 .started-details {
     color: #999;
     font-size: 11px;
@@ -823,6 +823,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     float: left;
     margin-right: 20px;
     width: 272px;
+    height:400px;
 }
 
 .project-bar-wrapper .project-title {
@@ -864,6 +865,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	color: #c7bf7b;
 	text-shadow: 0 1px 0 #fff;
 
+}
+.flat-files-icon {
+	
+}
+.flat-tasks-icon {
+	
 }
 #drop-box-project { 
 	height:147px; 
@@ -1008,7 +1015,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .project-content {
-    margin: 17px;
+ 
 }
 
 .project-content .inner {
