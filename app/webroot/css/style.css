@@ -574,7 +574,6 @@ p.task-tickbox a {
 	border-radius: 3px;
 }
 #content_projects {
-	padding: 50px;
 }
 /* Nav 1 icons */
 
@@ -3011,7 +3010,6 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton { -moz-background-clip:borde
 
 .marginT10 {
     margin-top: 20px;
-    border-top: #c3c6c7 1px dotted;
     padding-top: 15px;
     margin-left: 20px;
     position: relative;
