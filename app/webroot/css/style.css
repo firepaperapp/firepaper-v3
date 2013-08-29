@@ -830,7 +830,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     font-weight: 700;
     font-size: 17px;
     color: #454040;
-    margin: 17px 0px 4px 0px;
+    margin: 17px 17px 4px 17px;
     text-shadow: 0 1px 0 #fff;
 }
 
@@ -844,6 +844,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .details {
+	margin: 17px;
 	padding: 16px 20px 20px 20px;
 	background-color: #fdf9d7;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14), inset 0 0 5px #fff;
@@ -976,7 +977,13 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .duein-date {
 	text-align: center;
 	padding: 16px;
+	font-size: 13px;
 	border-bottom: 1px solid #f4f4f4;
+	font-weight: bold;
+	color: #c46d6d;
+}
+.duein-date span {
+	color: #b5b4b4;
 }
 .project-bar .project {
     display: none;

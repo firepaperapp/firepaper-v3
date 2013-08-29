@@ -51,7 +51,7 @@
 					<!-- Project bars --->
 		<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
 			<div class="duein-date">
-				<?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></div>
+				<span>Due in:</span> <?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></div>
 						<div class="project-bar">
 						  
 						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
