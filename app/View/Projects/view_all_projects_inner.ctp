@@ -69,7 +69,7 @@
 						  
 						   </div>
 						   <div class="progressbg">
-						<div class="progressBar"></div>
+						<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
 				</div>
 						  <div class="details">
 						  <h3>Course details</h3>

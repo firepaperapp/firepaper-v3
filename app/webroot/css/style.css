@@ -994,6 +994,8 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	-moz-box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px rgba(0,0,0,.2);
 	box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px rgba(0,0,0,.2);
 }
+.project-content {
+	border-bottom: none;
 }
 .completed-bubble span {
 }
