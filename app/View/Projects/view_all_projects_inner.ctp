@@ -81,7 +81,7 @@
 						
 						
 						</div><!-- end project-bar -->	
-						<div class="clr"></div>
+						
 					</div><!-- end project-bar-wrapperr -->
 					<!-- end Project bars --->
 				<!-- Project summary end here-->
