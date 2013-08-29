@@ -971,9 +971,13 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-bar {
     width: 88%;
     float: left;
-    padding: 17px;
+    
 }
-
+.duein-date {
+	text-align: center;
+	padding: 16px;
+	border-bottom: 1px solid #f4f4f4;
+}
 .project-bar .project {
     display: none;
     float: left;
