@@ -52,9 +52,9 @@
 							<!-- Project bars --->
 	<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
 		<p class="title-other">Due: <span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
-		<div class="details">
+		
 			<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
-		</div>
+		
 		<div class="project-bar">
 		<div class="completed-bubble">
 		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
