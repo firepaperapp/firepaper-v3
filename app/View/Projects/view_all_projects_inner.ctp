@@ -51,6 +51,11 @@
 					<!-- Project bars --->
 					<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
 						<div class="project-bar">
+						  
+						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
+						  <div class="clr"></div>
+						  <em>Project</em></div>
+						  <p class="project-title"><?php echo Sanitize::html($rec['Subject']['title']);?></p>
 						  <div class="completed-bubble">
 						  <span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
 						  <?php
@@ -60,10 +65,6 @@
 						  	echo "Completed";
 						  ?>
 						   </div>
-						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
-						  <div class="clr"></div>
-						  <em>Project</em></div>
-						  <p class="project-title"><?php echo Sanitize::html($rec['Subject']['title']);?></p>
 						  <div class="details">
 						  <h3>Course details</h3>
 						  <p><?php echo Sanitize::html($rec['Project']['title']);?>  <span class="started-details">- <?php 

@@ -32,7 +32,6 @@ h2 {
 	color:#408fb2; 
 }
 h3 {  
-	display: none;
 	margin-bottom:14px; 
 	color:#abaaaa; 
 	font-size: 13px; 
@@ -831,7 +830,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     font-weight: 700;
     font-size: 17px;
     color: #454040;
-    margin: 17px 17px 4px;
+    margin: 17px 0px 4px 0px;
     text-shadow: 0 1px 0 #fff;
 }
 
@@ -856,11 +855,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	padding-top: 4px;
     padding-bottom: 6px;
     text-shadow: 0 1px #FFF;
+    color: #c7bf7b;
     margin: 0;
     border: none;
     padding-left: 0;
     width: 100%;
-    border-bottom: 1px dotted #FFF;
+    text-transform: capitalize;
 }
 .details p {
 	color: #c7bf7b;
@@ -958,7 +958,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #cbcbcb;
     font-size: 12px;
     font-weight: 500;
-    margin: 4px 17px 16px;
 }
 
 .completed-bubble span {
@@ -967,6 +966,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-bar {
     width: 100%;
     float: left;
+    padding: 17px;
 }
 
 .project-bar .project {
