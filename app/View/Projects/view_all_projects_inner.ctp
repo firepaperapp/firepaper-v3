@@ -28,13 +28,13 @@
 				if($currDate == $date)
 				{	$b = "red";
 					?>
-					<p class="title-today">Due Today <span class="date"><? print(Date("dS F Y")); ?></span></p>
-				<?}	
+<p class="title-today">Due Today <span class="date"><? print(Date("dS F Y")); ?></span></p>
+				<? }	
 				else if($date == $tom)
 				{
 					$b = "orange";
 					?>
-					 <p class="title-tomorrow">Due Tomorrow <span class="date"><? print(Date("dS F Y", strtotime($tom))); ?></span></p>
+<p class="title-tomorrow">Due Tomorrow <span class="date"><? print(Date("dS F Y", strtotime($tom))); ?></span></p>
 				<?php
 				}
 		 	}
@@ -47,45 +47,49 @@
 				<?php
 				}		 
 			?>
-				<!-- Project_summary start here -->
-					<!-- Project bars --->
-		<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
-			<div class="duein-date">
-				<span>Due in:</span> <?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></div>
 				
-						  
-						  <div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
-						  <div class="clr"></div>
-						  <em>Project</em></div>
-						  <p class="project-title"><?php echo Sanitize::html($rec['Subject']['title']);?></p>
-						  <div class="completed-bubble">
-						  <span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
-						  <?php
-						  if($owner == 1)
-						  	echo "Weight";
-						  else 
-						  	echo "Completed";
-						  ?>
-						  
-						   </div>
-						   <div class="progressbg">
-						<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
-				</div>
-						  <div class="details">
-						  <h3>Course details</h3>
-						  <p><?php echo Sanitize::html($rec['Project']['title']);?> </p>
-						<p class="project-content">
-							<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> <span class="flat-tasks-icon">
-<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</p><!-- end project-content --></span>
-						  </div>
-						
-						
-						</div><!-- end project-bar -->	
-						
-					</div><!-- end project-bar-wrapperr -->
-					<!-- end Project bars --->
-				<!-- Project summary end here-->
-			<?php		 
+<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
+
+	<div class="duein-date">
+		<span>Due in:</span> <?php echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?>
+	</div>
+		<div class="project">
+			<span class="<?php echo $b;?>"><?php echo $i;?></span>
+			<div class="clr"></div>
+			<em>Project</em>
+		</div>
+		<p class="project-title"><?php echo Sanitize::html($rec['Subject']['title']);?></p>
+<!-- Bubble -->
+	<div class="completed-bubble">
+		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
+		<?php
+			if($owner == 1)
+				echo "Weight";
+				else 
+				echo "Completed";
+		?>
+	</div>
+<!-- End bubble -->
+<!-- Progress bar -->
+	<div class="progressbg">
+		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
+	</div>
+<!-- End Progress bar -->
+<!-- Details -->
+	<div class="details">
+		<h3>Course details</h3>
+		<p><?php echo Sanitize::html($rec['Project']['title']);?> </p>
+		<p class="project-content">
+		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
+		<span class="flat-tasks-icon">
+<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></p>
+	</div>
+<!-- End Details -->
+	
+	</div><!-- end project-bar-wrapper -->	
+
+		<!-- Project summary end here-->
+	<?php		 
 			$i++;
 		}
 		
