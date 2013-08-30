@@ -874,14 +874,16 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-weight: bold;
 	text-shadow: 0 1px #FFF;
     color: #c7bf7b;
+    padding-top: 2px;
+    padding-left: 22px;
 }
 .flat-files-icon {
-	background: url("../images/project-content-icons.png") no-repeat 0px 0px;
+	background: url("../images/project-content-icons.png") no-repeat left top;
 	
 }
 .flat-tasks-icon {
-	background: url("../images/project-content-icons.png") no-repeat 0px 0px;
-	margin-left: 10px;
+	background: url("../images/project-content-icons.png") no-repeat left 20px;
+	
 }
 #drop-box-project { 
 	height:147px; 
