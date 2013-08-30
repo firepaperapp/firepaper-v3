@@ -1,4 +1,4 @@
-<div style="float:left;width:100%;">
+<div class="clr"></div>
 <?php       
 if($totalPages>1)
 {?>
