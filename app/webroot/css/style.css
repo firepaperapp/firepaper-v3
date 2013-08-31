@@ -926,7 +926,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-drop-area-wrapper { 
 	position:relative;
 	background:#fff;
-	margin-top:20px; 
+	margin-top:28px; 
 	margin-left: 0px; 
 	margin-right: 0px;
  }
@@ -1004,7 +1004,10 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .deadline-details .due-in .title {
 	font-weight: normal;
 }
-.project-wrapper, .profile-container {
+.project-wrapper {
+	margin:40px 50px;
+}
+.profile-container {
 	padding:40px 50px;
 	width: 40%;
 }
