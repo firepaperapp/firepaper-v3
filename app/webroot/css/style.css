@@ -335,7 +335,7 @@ select {
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.09);
 	box-shadow: 0 3px 3px rgba(0,0,0,.09);
-	border: solid 1px black;
+	border: solid 1px #d2d2d2;
 	background: white; 
 	-webkit-border-radius: 5px;
     border-radius: 5px;
