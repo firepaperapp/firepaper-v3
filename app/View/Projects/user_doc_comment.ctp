@@ -74,6 +74,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		{ ?>
 		<?php if($isOwner == 1) { ?>
 				By - <a class="edit" href="#"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
+				<br />
 		<?php
 			}
 		} else { ?>
