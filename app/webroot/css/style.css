@@ -957,6 +957,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .deadline-details .title {
 	color: #cbcbcb;
 	margin-top: 10px;
+	font-size: 13px;
 }
 .deadline-details #imgid {
 	border:none;
@@ -966,13 +967,21 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	float: left;
 	margin-right: 10px;
 }
-.day {
+.deadline-details .day {
 	padding: 20px;
 	border-radius: 50%;
 	font-weight: bold;
 	font-size: 24px;
 	text-align: center;
 	float: left;
+	margin-right: 10px;
+	background: #f6f4f4;
+	color: #dddddd;
+	text-shadow: 0 1px 0 #fff;
+    filter: dropshadow(color=#ffffff,offx=0,offy=1);
+}
+.deadline-details .due-in {
+	font-weight: bold;
 }
 .project-wrapper, .profile-container {
 	padding:40px 50px;
