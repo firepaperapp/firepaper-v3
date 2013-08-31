@@ -2408,7 +2408,7 @@ textarea#projectDesc {
 .pickdate input {
     width: 50%;
     position: relative;
-    cursor: hand;
+    cursor:move;
 }
 
 .pickdate img {
