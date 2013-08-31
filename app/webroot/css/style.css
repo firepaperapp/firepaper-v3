@@ -974,6 +974,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-size: 24px;
 	text-align: center;
 	float: left;
+	margin-top: 20px;
 	margin-right: 10px;
 	background: #f6f4f4;
 	color: #dddddd;
@@ -982,7 +983,10 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .deadline-details .due-in {
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 35px;
+}
+.deadline-details .due-in .title {
+	font-weight: normal;
 }
 .project-wrapper, .profile-container {
 	padding:40px 50px;
