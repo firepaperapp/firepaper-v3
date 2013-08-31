@@ -16,7 +16,23 @@
 </script>
 <div class="project-brief-box-wrapper">
 	<div class="project-brief-box">
-	
+	<!-- Bubble -->
+	<div class="completed-bubble">
+		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
+		<?php
+			if($owner == 1)
+				echo "Weight";
+				else 
+				echo "Completed";
+		?>
+	</div>
+<!-- End bubble -->
+<!-- Progress bar -->
+	<div class="progressbg">
+		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
+	</div>
+<!-- End Progress bar -->
+
 		<div class="details left">
 			
 			<h3>Course details</h3> 
