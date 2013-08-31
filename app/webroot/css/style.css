@@ -990,6 +990,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-wrapper, .profile-container {
 	padding:40px 50px;
+	width: 40%;
 }
 .project-brief-box .left p.title, .project-brief-box .right p.title {
     color: #c7bf7b;
@@ -1400,8 +1401,12 @@ p.contact span {
 }
 .file-name { 
 	font-weight:bold;  
-	color:#595959; 
-	font-size:14px; 
+	color:#454040; 
+	text-transform: capitalize;
+	font-size:16px; 
+	padding-bottom: 2px;
+	margin-bottom: 4px;
+	display: inline-block;
 }
 .version-documents .file-name {
 	width: 100%;
@@ -1531,6 +1536,9 @@ div.file-name em {
     margin-top: 2px;
     color: #cbcbcb;
     font-style: italic;
+    margin-left: 36px;
+    border-top:1px dotted #cbcbcb;
+    padding-top: 6px;
 }
 
 .file-links a {
@@ -2811,11 +2819,11 @@ ul#archived-list .month {
     right: 0;
     float: right;
     color: #aaa9a9;
-    font-size: 38px;
-    padding: 14px 10px 12px 20px;
-    font-weight: 700;
+    font-size: 16px;
+    padding: 0px;
+    font-weight: normal;
     font-family: Helvetica, arial, sans-serif;
-    letter-spacing: -2px;
+    
 }
 
 .add {
