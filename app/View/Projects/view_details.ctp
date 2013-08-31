@@ -148,7 +148,7 @@
 					 <!-- HTML To add a Comment for user task Doc -->
 					<div class="addcomment marginT10" id="addcomment_<?php echo $rec['prjTask']['id'];?>_box" >
 					<h3>Add a comment</h3>
-					<div class="task-pointer"></div>
+					
 					<textarea name="addcommenttext_<?php echo $rec['prjTask']['id'];?>" id="addcommenttext_<?php echo $rec['prjTask']['id'];?>" class="text-field-comment"></textarea>
 					<div class="submit-wrapper">
 					<input type="button" name="submit" value="Submit" onclick="addCommentTask(<?php echo $rec['prjTask']['id'];?>, <?php echo $rec['prjTask']['id'];?>);" class="submit"/>
