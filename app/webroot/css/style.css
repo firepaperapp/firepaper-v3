@@ -951,7 +951,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .deadline-details {
-	margin-left: 20px;
+	margin-left: 10px;
+	
+}
+.deadline-details .title {
+	color: #cbcbcb;
+	margin-top: 10px;
 }
 .deadline-details #imgid {
 	border:none;
@@ -959,6 +964,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	-webkit-border-radius:50%;
 	background: #ccc;
 	float: left;
+	margin-right: 10px;
 }
 .day {
 	padding: 20px;
