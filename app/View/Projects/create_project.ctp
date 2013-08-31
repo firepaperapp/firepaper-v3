@@ -44,11 +44,8 @@ if(isset($errMsg))
 	<div class="clr"></div>
 	<div id="projectCreated"></div>
     <div id="createProject">
-	      <div class="project-brief-box-wrapper">
-	        <div class="project-brief-box">
-	          
-	           
-	            	<?php echo $this->Form->input('title',array('id'=>'projectTitle','div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
+	    <div class="project-brief-box">
+	     <?php echo $this->Form->input('title',array('id'=>'projectTitle','div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	            	
 	              
 	            <div class="note">
@@ -108,8 +105,7 @@ if(isset($errMsg))
 	           
 	          
 	          <div class="clr"></div>
-	        
-	      </div> 	     
+	      	     
 	      <!-- end project wrapper -->      
 	     </div>
 	     <input type="hidden" id="project_id" name="project_id" value="<?php echo $project_id;?>" />
