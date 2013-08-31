@@ -899,6 +899,9 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	display: inline-block;
 	width: 400px;
 }
+.project-controls .close {
+	margin-top: 20px;
+}
 #drop-box-project .box-tab-project { 
 	background: url("../images/project-box-tab.png") no-repeat center 2px; 
 	width:114px; 
