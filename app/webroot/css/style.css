@@ -2908,23 +2908,73 @@ ul#archived-list .month {
 }
 
 
+.addcomment h3 {
+	font-size: 11px;
+}
 
-
-.comment-link a.viewTskCommentsLink { color:black; text-decoration:underline; font-weight:normal; text-align:right; }
-.col-middle .comment-box { background:white; padding:10px; clear:both; margin-bottom:10px; }
-.col-weight { color: #d3d3d3; position: absolute; top:0; right: 0;
-float: right;font-size: 16px; font-style:italic;  }
-.col-weight p {color: #AAA9A9; float: left;}
-.col-weight a {letter-spacing: 0px; text-align: center;}
-.col-weight .weight { color:white; background:#7CC2C2; font-size:11px; -webkit-border-radius:3px; -moz-border-radius:3px; padding:4px 6px 4px 6px; font-weight:normal; }
+.comment-link a.viewTskCommentsLink { 
+	color:black; 
+	text-decoration:underline; 
+	font-weight:normal; 
+	text-align:right; 
+}
+.col-middle .comment-box { 
+	background:white; 
+	padding:10px; 
+	clear:both; 
+	margin-bottom:10px; 
+}
+.col-weight { 
+	color: #d3d3d3; 
+	position: absolute; 
+	top:0; 
+	right: 0;
+	float: right;
+	font-size: 16px; 
+	font-style:italic;  
+}
+.col-weight p {
+	color: #AAA9A9; 
+	float: left;
+}
+.col-weight a {
+	letter-spacing: 0px; 
+	text-align: center;
+}
+.col-weight .weight { 
+	color:white; 
+	background:#7CC2C2; 
+	font-size:11px; 
+	-webkit-border-radius:3px; 
+	-moz-border-radius:3px; 
+	padding:4px 6px 4px 6px; 
+	font-weight:normal; 
+}
 /* Tabbed Box */
 
-#addcomment_180, #viewTskComments_180 { color:#e06161; }
+#addcomment_180, #viewTskComments_180 { 
+	color:#e06161; 
+}
 
-.side-container { padding:4px 0px 9px 0px; }
-.tab-wrapper { margin-top:69px;padding:0px;position: relative;z-index: 15; -webkit-box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
-box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);}
-ul.tabs { margin:0 0 0px 1px; float: left; list-style: none; position: relative; z-index:25; display: none; }
+.side-container { 
+	padding:4px 0px 9px 0px; 
+}
+.tab-wrapper { 
+	margin-top:69px;
+	padding:0px;
+	position: relative;
+	z-index: 15; 
+	-webkit-box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
+}
+ul.tabs { 
+	margin:0 0 0px 1px; 
+	float: left; 
+	list-style: none; 
+	position: relative; 
+	z-index:25; 
+	display: none; 
+}
 ul.tabs li { float: left; margin-right: 0px; overflow: hidden; position: relative; height: 30px; width:39px; }
 ul.tabs li a { height: 30px; width:39px; }
 ul.tabs li#files { background: url("../images/tabs.png") no-repeat 0 0; }
@@ -3115,7 +3165,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton { -moz-background-clip:borde
 
 .marginT10 {
     margin-top: 20px;
-    padding-top: 15px;
+
     margin-left: 20px;
     position: relative;
 }
