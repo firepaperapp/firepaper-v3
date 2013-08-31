@@ -20,7 +20,7 @@
 		<?php echo $this->Form->input('user_type',array('type'=>'select','div'=>false,'label'=>false,'options'=>$userTypes,'id'=>"user_type"));?>
 		
 		<p class="sign-in-link">
-		<a href="#" onclick="redirect();">Sign Up</a> or <a href="<?php echo SITE_HTTP_URL?>login" class="submit" >Login</a>
+		<a href="#" onclick="redirect();">Sign Up</a> or <a href="<?php echo SITE_HTTP_URL?>login" class="sign-in" >Login</a>
 		</p>
 		
 		
