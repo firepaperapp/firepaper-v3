@@ -42,7 +42,7 @@
 					{
 						if($prjDetails['Project']['published'] == 1)
 						{?>
-							or <a href="<?php echo SITE_HTTP_URL?>projects/closeProject/<?php echo $prjDetails['Project']['id'];?>" onclick="closeProject(<?php echo $prjDetails['Project']['id'];?>)" class="close">Close Project</a>
+							or <a href="<?php echo SITE_HTTP_URL?>projects/closeProject/<?php echo $prjDetails['Project']['id'];?>" onclick="closeProject(<?php echo $prjDetails['Project']['id'];?>)" class="close red">Close Project</a>
 						<?php
 						}
 						else
