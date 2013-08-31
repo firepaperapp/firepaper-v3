@@ -1684,7 +1684,10 @@ div.file-name em {
     position: relative;
     background: #fff;
 }
-
+.task-comment p {
+	display: inline-block;
+	clear: both;
+}
 .right-snippet-wrapper {
 }
 
