@@ -36,7 +36,7 @@
 	 			if($isOwner == 1)
 				{?>
 					<p><a href="<?php echo SITE_HTTP_URL?>projects/addEditProject/<?php echo $prjDetails['Project']['id'];?>/?m=e" class="submit">Edit Project</a></p>
-					<p>
+					
 					<?php
 					if(isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], "projects/markProject") == false)
 					{
