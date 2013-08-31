@@ -1002,7 +1002,8 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	margin-top: 34px;
 }
 .project-brief-box-wrapper {
-	margin:40px 50px;
+	padding-top: 50px;
+	margin:0px 0px 0px 50px;
 }
 .deadline-details .due-in .title {
 	font-weight: normal;
