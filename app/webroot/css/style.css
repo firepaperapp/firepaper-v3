@@ -968,7 +968,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	margin-right: 10px;
 }
 .deadline-details .day {
-	padding: 20px;
+	padding: 15px;
 	border-radius: 50%;
 	font-weight: bold;
 	font-size: 24px;
