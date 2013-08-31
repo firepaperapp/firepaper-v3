@@ -2823,7 +2823,7 @@ ul#archived-list .month {
     padding: 0px;
     font-weight: normal;
     font-family: Helvetica, arial, sans-serif;
-    
+    font-style: italic;
 }
 
 .add {
