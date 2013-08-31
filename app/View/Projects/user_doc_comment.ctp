@@ -49,7 +49,7 @@
 	<?php }
 ?>
 <?php
-$pointer = "task-pointer";
+//$pointer = "task-pointer";
 $box = "task-comment";
 
 if(strpos($_SERVER['HTTP_REFERER'], "markProject") != 0)

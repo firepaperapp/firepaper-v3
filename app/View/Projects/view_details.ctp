@@ -181,7 +181,7 @@
 	   	  	}
 		}?> 
 	    <?php
-	    $pointer = "task-pointer";
+	    //$pointer = "task-pointer";
 $box = "task-comment";
 	if(count($projComments)>0)
 	{?>
