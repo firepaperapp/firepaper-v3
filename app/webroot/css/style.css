@@ -1566,7 +1566,7 @@ p.contact span {
 }
 
 #projectTitle {
-	
+	width: 100%;
 }
 /* end Files page */
 
@@ -2372,13 +2372,13 @@ p.task {
 
 .project-brief-box .note .text-field {
     line-height: 23px;
-    padding: 25px 20px 20px 29px;
+    padding: 10px;
     border: none;
     height: 100px;
-    width: 600px;
+    width: 100%;
     color: #acacac;
     font-size: 13px;
-    font-style: italic;
+    font-style: normal;
 }
 
 .project-brief-box .note .date-field {
@@ -2399,7 +2399,6 @@ p.task {
     padding: 5px 0;
     font-size: 14px;
     color: #c4c3c3;
-    border-bottom: 1px dotted #cbcbcb;
 }
 
 .pickdate input {
