@@ -31,16 +31,8 @@
 				
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			</div>
-			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
-			<div class="left deadline-details">
-			<p class="title">Project leader:</p>
-				<img id="imgid" alt="" height="100" width="100" src="<?php echo $userimage;?>" /><p class="leader"></p>
-				
-				<p class="title">Due:</p>
-				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
-				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
-				
-				<?php
+			
+			<?php
 	 			if($isOwner == 1)
 				{?>
 					<p><a href="<?php echo SITE_HTTP_URL?>projects/addEditProject/<?php echo $prjDetails['Project']['id'];?>/?m=e" class="submit">Edit Project</a></p>
@@ -60,6 +52,18 @@
 						}
 					}?>
 					</p> 
+					
+					
+			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
+			<div class="left deadline-details">
+			<p class="title">Project leader:</p>
+				<img id="imgid" alt="" height="100" width="100" src="<?php echo $userimage;?>" /><p class="leader"></p>
+				
+				<p class="title">Due:</p>
+				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
+				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
+				
+				
 		   		<?php 
 				} 
 				if( ($this->Session->read("user_type")==3 || $this->Session->read("user_type")==4) && $isOwner==0) 
