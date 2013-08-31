@@ -103,7 +103,7 @@ textarea, input {
 	color: #55606e;
 	background: #fff;
 	border: 1px solid #c2c6cb;
-	height: 40px;
+	
 	font-size: 14px;
 	line-height: 1.2;
 	margin: 0 0 10px 0;
@@ -116,6 +116,12 @@ textarea, input {
 	-webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
 	-moz-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.05);
+}
+input {
+	height: 40px;
+}
+textarea {
+	width: 100%;
 }
 .clr-spacer { 
 	height:0px; 
