@@ -2402,6 +2402,7 @@ textarea#projectDesc {
     padding: 5px 0;
     font-size: 14px;
     color: #c4c3c3;
+    position: relative;
 }
 
 .pickdate input {
