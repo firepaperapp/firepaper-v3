@@ -68,24 +68,21 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 	<div class="<?php echo $pointer;?>"></div>
 	  <div class="<?php echo $box;?>">
 	  <div class="authorbox">
+	  <img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 	  <?php
 		if($this->Session->read("userid") == $rec['projComments']['posted_by'] || ( $isOwner == 1 && $viewType == "common"))
-		{?>
+		{ ?>
 		<a href="javascript:void(0);" id="editcomment_<?php echo $rec['projComments']['id']?>" class="editcommentlink edit">Edit</a>&nbsp;-&nbsp;<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId;?>, '<?php echo $from;?>');" class="edit">Delete</a>
-			<?php
-			if($isOwner == 1)
-			{?>
+		<?php if($isOwner == 1) { ?>
 				By - <a class="edit" href="#"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
-			<?php
+		<?php
 			}
-		}
-		else 
-		{?>
+		} else { ?>
 			By - <a class="edit" href="#"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
 		<?php
 		}
 		$comment_date = $rec['projComments']['updated_on'] == '0000-00-00 00:00:00'?$rec['projComments']['created']:$rec['projComments']['updated_on'];
-				echo "&nbsp;-&nbsp;	on - ".date("d-M-Y", strtotime($comment_date));
+		echo "On: ".date("d-M-Y", strtotime($comment_date));
 		?>
 	  </div>
 		<p>
