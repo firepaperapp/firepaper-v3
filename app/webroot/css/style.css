@@ -1683,11 +1683,6 @@ div.file-name em {
     padding: 15px;
     position: relative;
     background: #fff;
-    border: 1px solid #c3c6c7;
-    margin-top: -1px;
-    -webkit-box-shadow: 0 2px 0 0 #dbdbdb;
-    -moz-box-shadow: 0 2px 0 0 #dbdbdb;
-    box-shadow: 0 2px 0 0 #dbdbdb;
 }
 
 .right-snippet-wrapper {
