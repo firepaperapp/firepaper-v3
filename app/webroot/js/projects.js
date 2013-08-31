@@ -298,7 +298,7 @@ function createTaskHtml(gotFormObj, taskId)
 	{
 		st+='<span class="task-title">'+title+'</span>';
 	}
-	st+='&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject('+taskId+')">Delete Task</a> <p class="task-comment-title">Comment</p><div class="task-comment-wrapper"><div class="task-pointer"></div><div class="task-comment"><p>'+text+'</p></div></div></div></div><div class="clr"></div><div class="clr-spacer"></div></div>';
+	st+='&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject('+taskId+')">Delete Task</a> <p class="task-comment-title">Comment</p><div class="task-comment-wrapper"><div class="task-comment"><p>'+text+'</p></div></div></div></div><div class="clr"></div><div class="clr-spacer"></div></div>';
 	 					            
 	$('div#createdTasks').prepend(st);
 }
