@@ -80,8 +80,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		} else { ?>
 			By - <a class="edit" href="#"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
 		<?php } ?>
-		<a href="javascript:void(0);" id="editcomment_<?php echo $rec['projComments']['id']?>" class="editcommentlink edit">Edit</a>
-		<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId; ?>, '<?php echo $from;?>');" class="edit">Delete</a>
+		
 		
 		<?php
 		$comment_date = $rec['projComments']['updated_on'] == '0000-00-00 00:00:00'?$rec['projComments']['created']:$rec['projComments']['updated_on'];
@@ -91,7 +90,8 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		<p>
 		<span class="editcommentbox" style="word-wrap: break-word;" id="editcomment_<?php echo $rec['projComments']['id'];?>_box"><?php echo nl2br(Sanitize::html($rec['projComments']['comment']));?></span>
 		</p>
-		
+		<a href="javascript:void(0);" id="editcomment_<?php echo $rec['projComments']['id']?>" class="editcommentlink edit">Edit</a>
+		<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId; ?>, '<?php echo $from;?>');" class="edit">Delete</a>
 		</div>
 	</div>
 	<?php	

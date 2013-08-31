@@ -974,7 +974,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	margin-right: 10px;
 }
 .authorbox {
-	
+	color: #cbcbcb;
 }
 .authorbox #imgid {
 	float: left;
