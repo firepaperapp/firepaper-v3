@@ -973,13 +973,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	float: left;
 	margin-right: 10px;
 }
-.authorbox p {
-	color: #cbcbcb;
-}
-.authorbox #imgid {
-	float: left;
-	margin-right: 15px;
-}
+
 .deadline-details .day {
 	padding: 15px;
 	border-radius: 50%;
@@ -1289,7 +1283,13 @@ p.contact span {
 	width: 100%;
 	padding: 20px 20px 20px 0px;
 }
-
+.authorbox p {
+	color: #cbcbcb;
+}
+.authorbox #imgid {
+	float: left;
+	margin-right: 15px;
+}
 .upload-container-wrapper {
     background: #E8EAED url(../images/border-lines.gif);
     padding: 5px;
