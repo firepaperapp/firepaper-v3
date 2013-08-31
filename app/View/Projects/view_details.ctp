@@ -162,9 +162,9 @@
 					<div class="clr"></div>
 					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box" style="display:none;width:500px;">	
 				 
-					</div>
 				</div>				
-				</div><div class="clr"></div><div class="clr-spacer"></div> 	
+				</div><div class="clr"></div>
+				<div class="clr-spacer"></div> 	
 				<?php }?>
 			
 	      </div><!-- end project wrapper -->

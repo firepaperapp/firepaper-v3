@@ -983,7 +983,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .deadline-details .due-in {
 	font-weight: bold;
-	margin-top: 35px;
+	margin-top: 34px;
 }
 .deadline-details .due-in .title {
 	font-weight: normal;
