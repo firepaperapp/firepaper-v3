@@ -42,9 +42,9 @@ if(count($taskDocs)>0)
 		<div class="clr"></div>			
 		<!-- end col-left -->	 	 
 			<!-- HTML To add a Comment for user task Doc -->
-			<div class="addcomment marginT10" id="addcomment_<?php echo $rec['prjTaskUserDoc']['id'];?>_box" style="display:none;width:300px;">
-				 <p class="task-comment-title">Add a comment</p>
-				 <div class="task-pointer"></div>
+			<div class="addcomment marginT10" id="addcomment_<?php echo $rec['prjTaskUserDoc']['id'];?>_box" style="display:none;">
+				 <h3>Add a comment</h3>
+				 
 				<div class="clr"></div>
 				<textarea name="addcommenttext_<?php echo $rec['prjTaskUserDoc']['id'];?>" id="addcommenttext_<?php echo $rec['prjTaskUserDoc']['id'];?>" class="text-field-comment"></textarea>
 			          	

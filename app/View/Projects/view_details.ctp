@@ -146,8 +146,8 @@
 					?> 		 		
 					</div>
 					 <!-- HTML To add a Comment for user task Doc -->
-					<div class="addcomment marginT10" id="addcomment_<?php echo $rec['prjTask']['id'];?>_box" style="display:none;width:300px;">
-					<p class="task-comment-title">Add a comment</p>
+					<div class="addcomment marginT10" id="addcomment_<?php echo $rec['prjTask']['id'];?>_box" >
+					<h3>Add a comment</h3>
 					<div class="task-pointer"></div>
 					<textarea name="addcommenttext_<?php echo $rec['prjTask']['id'];?>" id="addcommenttext_<?php echo $rec['prjTask']['id'];?>" class="text-field-comment"></textarea>
 					<div class="submit-wrapper">
@@ -160,7 +160,7 @@
 					<!-- HTML END To add a Comment for user task Doc -->
 					
 					<div class="clr"></div>
-					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box" style="display:none;width:500px;">	
+					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
 				 
 				</div>				
 				</div><div class="clr"></div>
@@ -185,7 +185,7 @@
 $box = "task-comment";
 	if(count($projComments)>0)
 	{?>
-	  	<p class="task-comment-title">Changes</p>
+	  	<h3>Changes</h3>
 	  	<?php
 	    foreach($projComments as $rec)
 	    {?>	    
