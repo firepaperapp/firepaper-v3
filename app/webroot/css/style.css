@@ -65,7 +65,9 @@ ul {
 	list-style:none; 
 }
 hr { 
-	border:1px dotted #CCC; 
+	border:1px solid #e7e7e7; 
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .error {
 	padding: 5px; 
