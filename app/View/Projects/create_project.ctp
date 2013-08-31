@@ -125,7 +125,7 @@ if(isset($errMsg))
      	}
      ?>
  	<div id="docAndTask" style="<?php echo $d;?>">
- 		
+ 		<div class="rule"></div>
 		<div class="row">
 	        <div class="left">
 	          <h3>Documents <span>&amp;</span> Tasks</h3>
