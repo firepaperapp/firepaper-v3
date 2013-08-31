@@ -972,6 +972,10 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .authorbox {
 	
 }
+.authorbox #imgid {
+	float: left;
+	margin-right: 15px;
+}
 .deadline-details .day {
 	padding: 15px;
 	border-radius: 50%;
@@ -1279,6 +1283,8 @@ p.contact span {
 .task-comment p {
 	display: inline-block;
 	clear: both;
+	width: 100%;
+	padding: 20px;
 }
 
 .upload-container-wrapper {
