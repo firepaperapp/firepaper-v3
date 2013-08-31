@@ -50,7 +50,7 @@ if(isset($errMsg))
 	      <h3>Course details</h3>  
 	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','div'=>false,'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
 	      <h3>Course deadline</h3>
-	           <?php echo $this->Form->text('duedate',array('id'=>'duedate','div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?>
+	          <span class="pickdate"> <?php echo $this->Form->text('duedate',array('id'=>'duedate','div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?></span>
 	          
 	            <select name="data[Project][subject_id]" id="subject_id" class="dropdown">
 	            <option value="">Please Select</option>
