@@ -56,11 +56,11 @@
 			</div>		
 			
 			<div class="left deadline-details">
-			<img id="imgid" alt="" height="50" width="50" src="<?php echo $userimage;?>" />
+			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 			<p class="title">Project leader:
 			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
 				</p>
-				
+				<div class="clr"></div>
 				<p class="title">Due:</p>
 				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
 				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
