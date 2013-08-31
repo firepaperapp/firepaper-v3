@@ -59,15 +59,16 @@ if(strpos($_SERVER['HTTP_REFERER'], "markProject") != 0)
 }
 if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 {?>
-	<h3>Comment</h3>
+	<div class="clr-spacer"></div>
+	<h3>Comments</h3>
 	<?php
 	foreach($taskComments as $rec)
 	{?>
 	<div  id="delcomment_<?php echo $rec['projComments']['id'];?>">
 	<div class="<?php echo $pointer;?>"></div>
 	  <div class="<?php echo $box;?>">
-		<p>
-		<span class="editcommentbox" style="word-wrap: break-word;" id="editcomment_<?php echo $rec['projComments']['id'];?>_box"><?php echo nl2br(Sanitize::html($rec['projComments']['comment']));?></span>&nbsp;-&nbsp;		<?php
+	  <div class="authorbox">
+	  <?php
 		if($this->Session->read("userid") == $rec['projComments']['posted_by'] || ( $isOwner == 1 && $viewType == "common"))
 		{?>
 		<a href="javascript:void(0);" id="editcomment_<?php echo $rec['projComments']['id']?>" class="editcommentlink edit">Edit</a>&nbsp;-&nbsp;<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId;?>, '<?php echo $from;?>');" class="edit">Delete</a>
@@ -86,7 +87,11 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		$comment_date = $rec['projComments']['updated_on'] == '0000-00-00 00:00:00'?$rec['projComments']['created']:$rec['projComments']['updated_on'];
 				echo "&nbsp;-&nbsp;	on - ".date("d-M-Y", strtotime($comment_date));
 		?>
+	  </div>
+		<p>
+		<span class="editcommentbox" style="word-wrap: break-word;" id="editcomment_<?php echo $rec['projComments']['id'];?>_box"><?php echo nl2br(Sanitize::html($rec['projComments']['comment']));?></span>
 		</p>
+		
 		</div>
 	</div>
 	<?php	
