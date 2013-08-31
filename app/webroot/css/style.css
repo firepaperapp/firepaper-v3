@@ -2373,8 +2373,6 @@ p.task {
     border: none;
     height: 100px;
     width: 100%;
-    color: #acacac;
-    font-size: 13px;
     font-style: normal;
 }
 textarea#projectDesc {
