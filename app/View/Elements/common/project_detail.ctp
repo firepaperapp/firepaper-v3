@@ -31,7 +31,7 @@
 				
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			</div>
-			
+			<div class="project-controls">
 			<?php
 	 			if($isOwner == 1)
 				{?>
@@ -52,7 +52,7 @@
 						}
 					}?>
 					</p> 
-					
+			</div><!-- End project controls -->
 					
 			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
 			<div class="left deadline-details">
