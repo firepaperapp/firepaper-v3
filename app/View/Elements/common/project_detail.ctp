@@ -53,10 +53,11 @@
 					}?>
 					</p> 
 			</div><!-- End project controls -->
-					
-			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
+			</div>		
+			
 			<div class="left deadline-details">
 			<p class="title">Project leader:</p>
+			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
 				<img id="imgid" alt="" height="100" width="100" src="<?php echo $userimage;?>" /><p class="leader"></p>
 				
 				<p class="title">Due:</p>
@@ -96,5 +97,5 @@
 			</div>
 		
 		<div class="clr"></div>
-	</div>
+	
 </div>
