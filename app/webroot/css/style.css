@@ -2266,11 +2266,9 @@ p.task {
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
     margin-bottom: 22px;
     box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    background: url('../images/lines.png');
 }
 
 .project-brief-box .note .text-field {
-    background: transparent url('../images/margin.png') repeat-y left;
     line-height: 23px;
     padding: 25px 20px 20px 29px;
     border: none;
@@ -2290,7 +2288,10 @@ p.task {
     margin-bottom: 10px;
     background: #FFF url('../images/shadow.gif') top repeat-x;
 }
-
+.project-brief-box .details { 
+	margin: 0;
+	width: 400px;
+}
 .pickdate {
     width: 100%;
     padding: 5px 0;
