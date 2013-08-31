@@ -1043,6 +1043,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-content {
 	border-bottom: none;
+	padding: 16px 20px 20px 20px;
 }
 .completed-bubble span {
 }
@@ -1103,9 +1104,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     bottom: 6px;
 }
 
-.project-content {
- 
-}
 
 .project-content .inner {
     border: 1px solid #e2db9b;
