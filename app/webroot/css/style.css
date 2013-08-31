@@ -894,6 +894,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	width:100%; 
 	overflow:scroll; 
 }
+.project-controls {
+	float: left;
+	display: inline-block;
+	width: 400px;
+}
 #drop-box-project .box-tab-project { 
 	background: url("../images/project-box-tab.png") no-repeat center 2px; 
 	width:114px; 
