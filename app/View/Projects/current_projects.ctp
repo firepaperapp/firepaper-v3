@@ -56,15 +56,23 @@
 			<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
 		
 		<div class="project-bar">
-		<div class="completed-bubble">
+		<!-- Bubble -->
+	<div class="completed-bubble">
 		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
 		<?php
 			if($owner == 1)
 				echo "Weight";
-			else 
-			echo "Completed";
+				else 
+				echo "Completed";
 		?>
-		</div>
+	</div>
+<!-- End bubble -->
+<!-- Progress bar -->
+	<div class="progressbg">
+		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
+	</div>
+<!-- End Progress bar -->
+
 		<div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
 		<div class="clr"></div>
 		<em>Project</em></div>
