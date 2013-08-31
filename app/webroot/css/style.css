@@ -1268,7 +1268,15 @@ p.contact span {
 
 /* Files page */
 
-
+.task-comment {
+    padding: 15px;
+    position: relative;
+    background: #fff;
+}
+.task-comment p {
+	display: inline-block;
+	clear: both;
+}
 
 .upload-container-wrapper {
     background: #E8EAED url(../images/border-lines.gif);
@@ -1679,15 +1687,7 @@ div.file-name em {
     z-index: 100;
 }
 
-.task-comment {
-    padding: 15px;
-    position: relative;
-    background: #fff;
-}
-.task-comment p {
-	display: inline-block;
-	clear: both;
-}
+
 .right-snippet-wrapper {
 }
 
