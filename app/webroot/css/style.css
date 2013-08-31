@@ -834,9 +834,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     width: 272px;
     min-height:370px;
 }
-.project-bar-wrapper p {
-	color: #cbcbcb;
-}
+
 .project-bar-wrapper .project-title {
     font-weight: 700;
     font-size: 17px;
@@ -1009,6 +1007,10 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-owner {
 	margin: 16px;
+}
+.project-owner p {
+	margin-top: 10px;
+	color: #cbcbcb;
 }
 .deadline-details .due-in .title {
 	font-weight: normal;
