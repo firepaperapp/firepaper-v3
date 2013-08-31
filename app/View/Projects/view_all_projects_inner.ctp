@@ -79,10 +79,10 @@
 	<div class="details">
 		<h3>Course details</h3>
 		<p><?php echo Sanitize::html($rec['Project']['title']);?> </p>
-		<p class="project-content">
+		<div class="project-content">
 		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon">
-<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></p>
+<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></div>
 	</div>
 <!-- End Details -->
 	
