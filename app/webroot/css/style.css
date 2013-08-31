@@ -959,7 +959,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	margin-top: 10px;
 	font-size: 13px;
 }
-.deadline-details #imgid {
+.deadline-details #imgid, .authorbox #imgid {
 	border:none;
 	border-radius:50%;
 	-webkit-border-radius:50%;
