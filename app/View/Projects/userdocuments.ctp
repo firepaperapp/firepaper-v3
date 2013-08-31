@@ -93,7 +93,7 @@ if($canChnage == 1 )//&& (false !==  strpos($url , 'projects/viewDetails/')))
 }?>
 <div class="clr">&nbsp;</div>
 <?php
-$pointer = "task-pointer";
+//$pointer = "task-pointer";
 $box = "task-comment";
 /*if(count($taskOtherComments)>0)
 {?>
