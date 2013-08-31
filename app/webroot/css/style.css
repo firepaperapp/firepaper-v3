@@ -921,6 +921,10 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	margin-left: 0px; 
 	margin-right: 0px;
  }
+.project-drop-area-wrapper .width100Per {
+	margin-top: 20px;
+}
+
 .project-drop-area-wrapper .task-title { 
 	position: static !important;
 } 
