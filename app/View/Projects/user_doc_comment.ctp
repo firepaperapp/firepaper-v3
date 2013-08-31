@@ -63,7 +63,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 	<?php
 	foreach($taskComments as $rec)
 	{?>
-	<div  id="delcomment_<?php echo $rec['projComments']['id'];?>"">
+	<div  id="delcomment_<?php echo $rec['projComments']['id'];?>">
 	<div class="<?php echo $pointer;?>"></div>
 	  <div class="<?php echo $box;?>">
 		<p>
