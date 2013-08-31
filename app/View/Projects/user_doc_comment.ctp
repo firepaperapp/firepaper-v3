@@ -69,6 +69,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 	  <div class="<?php echo $box;?>">
 	  <div class="authorbox">
 	  <img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
+	  <p>
 	  <?php
 		if($this->Session->read("userid") == $rec['projComments']['posted_by'] || ( $isOwner == 1 && $viewType == "common"))
 		{ ?>
@@ -86,6 +87,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		$comment_date = $rec['projComments']['updated_on'] == '0000-00-00 00:00:00'?$rec['projComments']['created']:$rec['projComments']['updated_on'];
 		echo "On: ".date("d-M-Y", strtotime($comment_date));
 		?>
+	  </p>
 	  </div>
 		<p>
 		<span class="editcommentbox" style="word-wrap: break-word;" id="editcomment_<?php echo $rec['projComments']['id'];?>_box"><?php echo nl2br(Sanitize::html($rec['projComments']['comment']));?></span>
