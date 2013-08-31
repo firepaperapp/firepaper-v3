@@ -260,7 +260,7 @@ $box = "task-comment";
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.draggable.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.droppable.js"></script>
 <script>
-/*$('.userTaskDocs').each(function()
+$('.userTaskDocs').each(function()
 		{ 	  
 			var myId = $(this).attr('id');
 			if($('#'+myId+"_box").css('display') == "none")
@@ -292,6 +292,6 @@ $box = "task-comment";
 				$('#'+myId+"_box").show('slow');
 			}
 			
-		});*/
+		});
 </script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>view_project_details.js"></script> 
