@@ -2228,6 +2228,10 @@ p.task {
 	color:#e06161; 
 	font-size:11px; 
 }
+.project-brief-box {
+	float: left;
+	width: 420px;
+}
 .project-brief-box .details p {
     margin-bottom: 10px;
     font-size: 13px;
