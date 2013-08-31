@@ -258,9 +258,9 @@ function addComment(f,t)
 						</div>		
 						 	<div class="clr"></div>			
 						<!-- HTML To add a Comment for user task Doc -->
-						<div class="addcomment marginT10" id="addcomment_<?php echo $docs['id'];?>_box" style="display:none;width:300px;">
-								<p class="task-comment-title">Add a comment</p>
-								<div class="task-pointer"></div>
+						<div class="addcomment marginT10" id="addcomment_<?php echo $docs['id'];?>_box" style="display:none;">
+								<h3>Add a comment</h3>
+								
 					          	<textarea name="addcommenttext_<?php echo $docs['id'];?>" id="addcommenttext_<?php echo $docs['id'];?>" class="text-field-comment"></textarea>
 					          	<div class="submit-wrapper">
 					          		<input type="button" name="submit" value="Submit" onclick="addComment(<?php echo $docs['id'];?>, <?php echo $rec['projectTask']['id'];?>);" class="submit"/>
