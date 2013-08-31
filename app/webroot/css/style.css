@@ -953,6 +953,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .deadline-details {
 	margin-left: 20px;
 }
+.deadline-details .imgid {
+	border:none;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	background: #ccc;
+}
 .day {
 	padding: 20px;
 	border-radius: 50%;
