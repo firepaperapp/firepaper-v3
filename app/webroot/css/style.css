@@ -982,6 +982,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .deadline-details .due-in {
 	font-weight: bold;
+	margin-top: 20px;
 }
 .project-wrapper, .profile-container {
 	padding:40px 50px;

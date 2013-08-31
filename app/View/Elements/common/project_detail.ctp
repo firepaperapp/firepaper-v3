@@ -64,7 +64,7 @@
 				
 				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
 				<p class="due-in">
-				<span class="title">Due in:
+				<span class="title">Due in:</span>
 				<br />
 				<?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?>
 				</p>
