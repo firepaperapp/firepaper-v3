@@ -2364,10 +2364,7 @@ p.task {
 }
 
 .project-brief-box .note {
-    border: 1px solid #dfdfe1;
-    -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    margin-bottom: 22px;
-    box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
+    
 }
 
 .project-brief-box .note .text-field {
