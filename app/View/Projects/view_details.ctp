@@ -164,7 +164,7 @@
 					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
 				 
 				</div>				
-				</div><div class="rule"></div>
+				
 				<div class="clr-spacer"></div> 	
 				<?php }?>
 			
@@ -185,6 +185,7 @@
 $box = "task-comment";
 	if(count($projComments)>0)
 	{?>
+	</div><div class="rule"></div>
 	  	<h3>Changes</h3>
 	  	<?php
 	    foreach($projComments as $rec)
