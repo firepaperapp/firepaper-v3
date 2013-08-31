@@ -108,7 +108,7 @@ if(isset($errMsg))
 	           
 	          
 	          <div class="clr"></div>
-	        </div>
+	        
 	      </div> 	     
 	      <!-- end project wrapper -->      
 	     </div>

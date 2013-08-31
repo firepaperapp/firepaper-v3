@@ -1011,6 +1011,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-owner p {
 	margin-top: 10px;
 	color: #cbcbcb;
+	float: left;
 }
 .deadline-details .due-in .title {
 	font-weight: normal;
