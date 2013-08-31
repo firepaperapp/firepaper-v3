@@ -159,6 +159,7 @@ function addComment(f,t)
 		?>
 		</h3>	
 		<?php echo $this->element("/common/project_detail");?>
+		<div class="rule"></div>
 		<div class="row">
 			<div class="left">
 				<h3>Documents &amp; Tasks</h3>

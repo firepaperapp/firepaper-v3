@@ -29,6 +29,7 @@
 		?> 
 		<h1><a href="#" ><?php echo Sanitize::html($prjDetails['Subject']['title']);?> </a>- <?php echo Sanitize::html($prjDetails['Project']['title']);?></h1>
 		<?php echo $this->element("/common/project_detail");?>
+		<div class="rule"></div>
 		<div class="row">
 			<div class="left">
 				<h3>Documents &amp; Tasks</h3>
@@ -163,12 +164,11 @@
 					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
 				 
 				</div>				
-				</div><div class="clr"></div>
+				</div><div class="rule"></div>
 				<div class="clr-spacer"></div> 	
 				<?php }?>
 			
-	      </div><!-- end project wrapper -->
-	   	  <div class="clr"></div>
+	      
 	   	  <?php
 	   	  if(isset($noOfTasks) && isset($taksDone))
 	   	  {
@@ -208,7 +208,9 @@ $box = "task-comment";
 				?>
 				</p>
 		 </div>		
-	 	<?php }?>	    
+	 	<?php }?>	
+	 	</div><!-- end project wrapper -->
+	   	  <div class="clr"></div>    
 	    <?php
 	    }
 	    $status = "u"; //Project Un Completed
