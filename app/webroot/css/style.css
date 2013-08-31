@@ -1283,6 +1283,9 @@ p.contact span {
 	width: 100%;
 	padding: 20px 20px 20px 0px;
 }
+.authorbox {
+	width: 100%;
+}
 .authorbox p {
 	color: #cbcbcb;
 }
