@@ -965,9 +965,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	-webkit-border-radius:50%;
 	background: #ccc;
 }
-.deadline-details #imgid, .authorbox  {
+.deadline-details #imgid  {
 	float: left;
 	margin-right: 10px;
+}
+.authorbox {
+	
 }
 .deadline-details .day {
 	padding: 15px;
