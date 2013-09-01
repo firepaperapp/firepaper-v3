@@ -144,7 +144,6 @@ textarea {
 }
 .right { 
 	float:right; 
-	width: 23%;
 }
 .red { 
 	color:#e06161; 
@@ -271,6 +270,11 @@ select {
 .add-people {
 	width: 100%;
 	clear: both;
+}
+.add-people p {
+	font-style: italic;
+	color: #dcdbdb;
+	font-size: 14px;
 }
 /* Navigation styling */
 .nav { 
