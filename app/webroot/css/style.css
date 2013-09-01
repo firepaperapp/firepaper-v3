@@ -666,7 +666,7 @@ button {
 }
 .files-categories-box h4 {
 	float: left;
-	margin-top: 8px;
+	margin-top: 10px;
 	margin-right: 10px;
 }
 .files-categories-box ul {
@@ -681,11 +681,13 @@ button {
 .files-categories-box ul li {
 	display: block;
 	float: left;
-	line-height: 33px;
+	line-height: 36px;
 	border-right: 1px solid #cbd0d5;
 }
 .files-categories-box ul li:last-child {
 	border-right:none;
+	border-radius-top-right:2px;
+	border-radius-top-right:2px;
 }
 .files-categories-box ul li a {
 	font-size: 14px;
