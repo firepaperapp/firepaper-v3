@@ -205,10 +205,10 @@ select {
 	margin-top: 10px;
 	border-radius: 60%;
 	-webkit-border-radius: 60%;
-	background: #edf1f5;
-	-webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,.4);
-	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,.4);
-	box-shadow: inset 1px 2px 3px rgba(0,0,0,.4);
+	background: #fafafa;
+	-webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,.6);
+	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,.6);
+	box-shadow: inset 1px 2px 3px rgba(0,0,0,.6);
 }
 .navigation .profile .name { 
 	color:#7a7a7a; 
