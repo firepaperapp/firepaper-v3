@@ -88,10 +88,14 @@ hr {
 	margin-bottom: 20px;
 }
 .error {
-	padding: 5px; 
-	border:1px solid #cd96a0; 
-	background: #f5e3e3; 
+	padding: 10px 15px; 
+	border:1px solid #f19f97; 
+	background: #fef9f8; 
 	padding: 8px;
+	color: #f25e4f;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin: 15px 0 0 0;
 }
 .account-settings-wrapper hr { 
 	margin-top:15px; 
@@ -3347,9 +3351,7 @@ p.marginT10:after {
     width: 80%;
 }
 
-.error {
-    color: red;
-}
+
 
 .whiteboard-comment {
     border: 1px solid #CAE6E6;

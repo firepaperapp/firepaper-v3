@@ -36,7 +36,9 @@
 .file_upload_highlight {
   background: lawngreen;
 }
-
+.project-drop-area #files {
+	float: left;
+}
 .file_upload input {
  position: absolute;
  right: 23px;
