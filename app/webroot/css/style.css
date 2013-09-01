@@ -853,7 +853,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #999;
     font-size: 11px;
 }
-.createProject {
+#createProject {
 	width: 90%;
 }
 .project-bar-wrapper {
