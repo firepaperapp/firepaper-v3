@@ -250,7 +250,7 @@ select {
 }
 
 .page {
-	padding:15px; 
+	padding:54px; 
 }
 
 
@@ -1497,10 +1497,11 @@ p.contact span {
 	font-weight:bold;  
 	color:#454040; 
 	text-transform: capitalize;
-	font-size:16px; 
+	font-size:14px; 
 	padding-bottom: 2px;
 	margin-bottom: 4px;
 	display: inline-block;
+	width: 100%;
 }
 .version-documents .file-name {
 	width: 100%;
@@ -1635,8 +1636,8 @@ div.file-name em {
     color: #cbcbcb;
     font-style: italic;
     margin-left: 36px;
-    border-top:1px dotted #cbcbcb;
-    padding-top: 6px;
+    padding-top: 4px;
+    padding-bottom: 5px;
 }
 
 .file-links a {
