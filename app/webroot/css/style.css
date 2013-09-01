@@ -2336,7 +2336,6 @@ p.form-title {
 
 .project-drop-area p {
 	text-align: left; 
-	float: left; 
 	font-weight: normal; 
 	font-style: italic; 
 	color: #abaaaa; 
@@ -2351,6 +2350,7 @@ p.form-title {
 	font-weight:normal; 
 	display: inline-block; 
 	color: #51ACAC; 
+	position: relative;
 }
 .project-drop-area .files { 
 	color:#666666; 
@@ -2554,9 +2554,13 @@ textarea#projectDesc {
     line-height: 25px;
 }
 .submit-wrapper span {
-	font-size: 13px;
+	font-size: 14px;
 	color: #abaaaa;
-	padding-top: 10px;
+	display: inline-block;
+	padding-top: 5px;
+}
+.submit-wrapper span a {
+	font-size: 14px;
 }
 .submit-wrapper .submit {
     margin-top: 0;
