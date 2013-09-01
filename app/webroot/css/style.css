@@ -226,16 +226,16 @@ select {
 	color: #a7abb1;
 }
 .navigation .latest-activity {
-	height: 20px;
-	width: 20px;
+	height: 22px;
+	width: 22px;
 	padding: 5px;
-	background: url('../images/icons/activity.png') no-repeat;
+	background: url('../images/icons/activity.png') no-repeat 3px 3px;
 	display: inline-block;
 	margin-top: 24px;
 	margin-left: 10px;
 }
 .navigation .latest-activity:hover {
-	background:#fcfcfc url('../images/icons/activity.png') no-repeat;
+	background:#cccccc url('../images/icons/activity.png') no-repeat 3px 3px;
 	border-radius:3px;
 	-webkit-border-radius:3px;
 }
