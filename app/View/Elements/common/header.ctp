@@ -54,7 +54,7 @@ $(document).ready(function() {
 					<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" >Settings</a> |
 				<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
 				</span>
-				</p>
+			
 
     
 </div><!-- end nav -->
