@@ -150,7 +150,7 @@ if(isset($errMsg))
 		        
 			<div class="project-drop-area-wrapper">
 				<div class="task-wrapper">
-				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="submit-grey">+ Create a Task</a> Or you can add a document below
+				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="button">+ Create a Task</a> Or you can add a document below
 				</div>			
 			 
 				<div class="dropFileHere project-drop-area">
