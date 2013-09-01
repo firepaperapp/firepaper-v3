@@ -58,7 +58,7 @@ if(count($data)>0)
 	            	</p>
 	            	<div class="clr"></div>	
 	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>">
-	            		<div class="file-point"></div>
+	            		
 			            <div class="versions-inner"> 
 			            	<p>
 								<span class="title">Comments:</span> 
