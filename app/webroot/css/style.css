@@ -461,6 +461,9 @@ select {
     border-radius: 3px;
     display: inline-block;
 }
+.logout {
+	margin-left: 15px;
+}
 .sign-in {
 	margin-left: 6px;
 }
