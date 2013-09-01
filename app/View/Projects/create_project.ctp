@@ -366,9 +366,9 @@ if(isset($errMsg))
 		    }
 			else 
 			{?>
-				<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(0);">Save in drafts</a>&nbsp;&nbsp;
-				<div class="clr"></div>
+			<p>	<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(0);">Save in drafts</a> or
 				<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(1);">Send project</a>	
+			</p>
 			<?php
 			}    
 		 	?>
