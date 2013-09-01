@@ -231,7 +231,7 @@ select {
 	padding: 5px;
 	background: url('../images/icons/activity.png') no-repeat 6px 6px;
 	display: inline-block;
-	margin-top: 24px;
+	margin-top: 18px;
 	margin-left: 10px;
 }
 .navigation .latest-activity:hover {
@@ -450,7 +450,7 @@ select {
     float: left;
 }
 
-.submit, .submit-grey, .sign-in, .logout {
+button, .submit, .submit-grey, .sign-in, .logout {
 	cursor: pointer;
     background: #fff;
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
@@ -648,20 +648,7 @@ p.task-tickbox a {
 .add-projects {
 	
 }
-button {
-	display: inline-block;
-	cursor: pointer;
-	background: #fca55f;
-	font-size: 12px;
-	font-weight: normal;
-	height: 32px;
-	line-height: 32px;
-	color: #fff !important;
-	padding: 0 12px;
-	border: 0;
-	box-shadow: none;
-	border-radius: 3px;
-}
+
 .button {
 	display: inline-block;
 	background: #fca55f;
