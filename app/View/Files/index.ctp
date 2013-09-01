@@ -106,7 +106,7 @@ function showUploader() {
 			</form>
 			
 			<div id="files-categories-box" class="files-categories-box">
-				
+				<h4>Filters</h4>
 				<ul><?php echo $this->requestAction("/files/getMyCategories"); ?></ul>
 			</div>
 			

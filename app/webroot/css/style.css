@@ -42,7 +42,9 @@ h3 a {
 	color:#1c556e; 
 }
 h4 {
-	font-size: 13px;  
+	font-size: 12px; 
+	color:#abaaaa;  
+	text-transform: uppercase; 
 	margin-bottom: 14px; 
 }
 h4 a:hover { 
@@ -660,13 +662,13 @@ p.task-tickbox a {
 	border-right: 1px solid #cbd0d5;
 }
 .files-categories-box ul li:last-child {
-	
+	border-right:none;
 }
 .files-categories-box ul li a {
 	font-size: 14px;
 	margin: 0;
 	padding: 5px 8px;
-	
+	color:#a7abb1;
 }
 .right-col-categories ul { 
 	list-style-type: none; 
