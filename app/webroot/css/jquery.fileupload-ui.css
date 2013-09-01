@@ -41,8 +41,8 @@
 }
 .file_upload input {
  position: absolute;
- right: 23px;
- top: 69px;
+ right: -4px;
+ top: -4px;
  width:136px;
  z-index: 100;
  padding: 0px;
