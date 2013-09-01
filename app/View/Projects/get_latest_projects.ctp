@@ -12,7 +12,7 @@
 	<?php }
 ?> 
 <div class="activity-panel-wrapper">
-	<div class="activity-panel">
+	
 	<?php
 	if(count($data)>0)
 	{
@@ -72,5 +72,5 @@
 	<!-- end Project bars --->
 	<a href="#" class="readmore-btn">View all projects</a>
 	<div class="clr"></div>
- 	</div>
+ 	
  </div>
