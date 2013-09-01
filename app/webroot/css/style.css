@@ -443,6 +443,7 @@ select {
     font-size: 14px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    display: inline-block;
 }
 .sign-in {
 	margin-left: 6px;
