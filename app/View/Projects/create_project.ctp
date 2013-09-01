@@ -298,11 +298,11 @@ if(isset($errMsg))
 		            	 <div class="width100per">
 		            	 	
 							 <div class="add-people"> 
-							 	 <p>>Note: Enter the keyword to search groups</p>
+							 	 <p><strong>Note:</strong> Enter the keyword to search groups</p>
 								 <select id="usersGroups" name="usersGroups"></select>
 							</div>
 							<div class="add-people">
-								 <p>Note: Enter the keyword to search premium students</p>
+								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
 								<select id="otherUsers" name="otherUsers"></select>
 							</div>
 							<div id="containerLoader"></div>
