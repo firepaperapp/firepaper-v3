@@ -641,13 +641,21 @@ p.task-tickbox a {
 	font-size: 14px; 
 	font-family:"lucida sans", arial; 
 }
-.right-col-categories .files-categories-box {
-	padding:14px; 
-	width:158px;
-	border:1px solid #c3c6c7;
-	-webkit-box-shadow: 0px 2px 0px 0px #dbdbdb; 
-	-moz-box-shadow: 0px 2px 0px 0px #dbdbdb; 
-	box-shadow: 0px 2px 0px 0px #dbdbdb;
+.files-categories-box {
+	
+}
+.files-categories-box ul {
+	list-style: none;
+	padding: 0;
+	margin: -52px 0 0 0;
+	float: right;
+}
+.files-categories-box ul li a {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 5px 8px;
+	border: 1px solid #cbd0d5;
 }
 .right-col-categories ul { 
 	list-style-type: none; 
@@ -1490,14 +1498,14 @@ p.contact span {
 
 
 .file-name-border { 
-	border-bottom:1px dotted #c4c4c4; 
+	border-bottom:1px solid #edf1f5; 
 	padding:10px 5px 10px 0; 
 }
 .file-name { 
-	font-weight:bold;  
+	font-weight:normal;  
 	color:#454040; 
 	text-transform: capitalize;
-	font-size:14px; 
+	font-size:13px; 
 	padding-bottom: 2px;
 	margin-bottom: 4px;
 	display: inline-block;
