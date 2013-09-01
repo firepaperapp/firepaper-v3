@@ -208,7 +208,9 @@
            	if(in_array($usertype, array(1,2,3,7)))
 			{	
            	?>
-           	<div class="<?php echo $markProjectsList;?>"><a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" class="mark-icon">Marking</a></div>
+           	<div class="<?php echo $markProjectsList;?>">
+           		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" class="mark-icon">Marking</a>
+           	</div>
            	<div class="<?php echo $addEditProject;?>"><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="create-icon">Create Project</a></div>
 			<?php }?>
            		
