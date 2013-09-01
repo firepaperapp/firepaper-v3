@@ -21,7 +21,10 @@ li#usersGroups_annoninput {
 	
 }
 li#usersGroups_annoninput input { padding:2px; padding: 5px;}
-li#otherUsers_annoninput {  border-bottom: 1px dotted #cbcbcb; margin-top: 10px; }
+li#otherUsers_annoninput {  
+	margin-top: 10px;
+	margin-bottom: 20px; 
+}
 li#otherUsers_annoninput input { padding:2px; padding: 5px 5px 5px 25px;}
 
 
@@ -46,7 +49,7 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 /* Autocompleter */
 
 .facebook-auto { display: none; position: absolute; width: 180px; background: white; margin-left:0px;}
-.facebook-auto .default { padding:7px; border: 1px solid #ccc; border-width:0px 1px 1px 1px; font-size:12px; color: #bfbfbf;}
+.facebook-auto .default { padding:7px; border: 1px solid #ccc; border-width:0px 1px 1px 1px; font-size:12px; color: #abaaaa}
 .facebook-auto ul { display: none; margin: 0; padding: 0; overflow: auto; position:absolute; z-index:9999}
 .facebook-auto ul li { padding: 5px 12px; z-index: 1000; cursor: pointer; margin: 0; list-style-type: none; border: 1px solid white; border-width: 0 1px 1px; background: #EEF7F7;}
 .facebook-auto ul li em { font-weight: bold; font-style: normal; background: #98D3D3; }
