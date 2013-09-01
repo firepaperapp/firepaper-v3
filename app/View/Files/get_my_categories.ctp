@@ -18,4 +18,4 @@ foreach($fileCategories as $rec)
 <?php
 } 
 ?>
-<li class=""><a href="<?php echo SITE_HTTP_URL."files/addEditCategory"?>" alt="Add Category" class="create-icon" id="addCategory">Add Category</a></li>	
+<li class=""><a href="<?php echo SITE_HTTP_URL."files/addEditCategory"?>" alt="Add Category" class="create-icon" id="addCategory">Add a new filter</a></li>	
