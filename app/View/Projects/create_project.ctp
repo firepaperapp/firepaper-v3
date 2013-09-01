@@ -185,7 +185,7 @@ if(isset($errMsg))
 		    			
 		     		</div>
 		    		<div class="comment-link fl-left"><span>Comment</span></div>
-		        	<div class="comment-point-add"></div>
+		        	
 		        	
 		        	<?php echo $this->Form->textarea('projComments.comment',array("id"=>"comment",'class'=>'text-field-comment'));?> 
 	
