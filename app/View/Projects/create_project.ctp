@@ -49,9 +49,11 @@ if(isset($errMsg))
 	     <?php echo $this->Form->input('title',array('id'=>'projectTitle','div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	      <h3>Course details</h3>  
 	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','div'=>false,'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
+	      <div class="rule"></div>
 	      <h3>Course deadline</h3>
 	          <span class="pickdate"> <?php echo $this->Form->text('duedate',array('id'=>'duedate','div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?></span>
 	          
+	          <div class="rule"></div>
 	            <select name="data[Project][subject_id]" id="subject_id" class="dropdown">
 	            <option value="">Please Select</option>
 	             <?php
@@ -86,9 +88,9 @@ if(isset($errMsg))
 	 				echo "<p><a class='edit' href='".SITE_HTTP_URL."/departments'>Create a Subject</a></p>";
 	 			}?>
 	 			
+	            <div class="rule"></div>
 	            
-	            
-	            <p class="title">Leader:</p>
+	            <h3>Leader:</h3>
 	            <?php
 	            if ($this->Session->read("user_type") == 1 || $this->Session->read("user_type") == 7 ) 
 	            {
