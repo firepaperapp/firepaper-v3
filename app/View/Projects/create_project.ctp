@@ -167,7 +167,7 @@ if(isset($errMsg))
 
 		</div>
 		<div class="clr"></div>
-		<div style="margin-bottom:10px;">
+		<div style="margin-bottom:20px;">
 		  	<div id="validation-container-task" class="validation-signup" style="display:none;"></div>
 		  	<div id="validation-container-success-task" class="success" style="display:none;"></div>
 		</div>
