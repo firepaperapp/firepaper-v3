@@ -658,6 +658,7 @@ p.task-tickbox a {
 	width: 300px;
 	position: absolute;
 	right: 316px;
+	background: white;
 }
 a.group-tab { 
 	-moz-border-radius: 3px 3px 3px 3px; 
@@ -3060,9 +3061,11 @@ html ul.tabs li.active, html ul.tabs li.active a:hover { }
 	background:url("../images/activity-bg.png"); 
 	padding-bottom:20px;
 	clear: both;
-	float: left;
+	float: right;
+	right:0px;
+	top:0px;
 	margin-left: 0;
-	position:relative;
+	position:absolute;
 	min-height: 50px;
 }
 .tab_container .loader {left:120px; top: 20px;}
