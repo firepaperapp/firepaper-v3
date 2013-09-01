@@ -1530,8 +1530,10 @@ p.contact span {
     margin-top: 0;
     border-bottom: 1px solid #E3E3E8;
     color: #363F48;
-    font-size: 14px;
-    font-family: "lucida sans", arial;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    
 }
 
 .title-files span {
@@ -1790,7 +1792,9 @@ div.file-name em {
     font-weight: 700;
     color: #000;
 }
-
+.versions-inner button {
+	margin-left: 10px;
+}
 .versions-inner .file-name {
     border-bottom: 1px dashed #FFF;
     margin-bottom: 4px;
