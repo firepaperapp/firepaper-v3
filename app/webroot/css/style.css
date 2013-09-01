@@ -2411,6 +2411,7 @@ textarea#projectDesc {
     width: 50%;
     position: relative;
     cursor:pointer;
+    padding: 10px 10px 10px 40px;
 }
 
 .pickdate img {
