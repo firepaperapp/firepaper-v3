@@ -235,7 +235,7 @@ select {
 	margin-left: 10px;
 }
 .navigation .latest-activity:hover {
-	background:#fcfcfc;
+	background:#fcfcfc url('../images/icons/activity.png') no-repeat;
 	border-radius:3px;
 	-webkit-border-radius:3px;
 }
