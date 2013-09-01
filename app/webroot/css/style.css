@@ -1532,6 +1532,7 @@ p.contact span {
 .file-name a { 
 	margin-right:4px; 
 	color:#595959;
+	font-weight: normal;
 }
 .file-name a:hover { 
 	text-decoration:underline; 
@@ -1689,12 +1690,12 @@ div.file-name em {
 }
 
 .versions-inner {
-    padding: 6px;
-    font-size: 11px;
-    border: 1px solid #C3C6C7;
-    -webkit-box-shadow: 0 2px 0 0 #dbdbdb;
-    -moz-box-shadow: 0 2px 0 0 #dbdbdb;
-    box-shadow: 0 2px 0 0 #dbdbdb;
+    padding: 10px;
+    background: #fafafa;
+    font-size: 12px;
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+   
 }
 
 .versions-inner .version-title {
