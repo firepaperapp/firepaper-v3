@@ -235,10 +235,11 @@ select {
 	border: 1px solid black;
  }
 .index { 
-	margin-left: 120px;
-	margin-right: 50px;
-	margin-top: 69px;
+	position: absolute;
+	left: 120px;
+	top: 69px;
 	width: 90%;
+	
 }
 
 .page {
@@ -813,7 +814,7 @@ ul.list-activity li span {
     border: 1px solid #9b9b9b !important;
 }
 .activity {
-	margin: 20px;	
+
 }
 .activity .left {
     width: 520px;
