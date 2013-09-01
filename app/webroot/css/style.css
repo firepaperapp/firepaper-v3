@@ -228,7 +228,7 @@ select {
 .navigation .profile .latest-activity {
 	height: 30px;
 	width: 30px;
-	background: url('../images/icons/activity') no-repeat;
+	background: url('../images/icons/activity.png') no-repeat;
 	display: inline-block;
 	margin-top: 20px;
 	margin-left: 20px;
