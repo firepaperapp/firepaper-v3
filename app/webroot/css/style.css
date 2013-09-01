@@ -226,12 +226,12 @@ select {
 	color: #a7abb1;
 }
 .navigation .latest-activity {
-	height: 30px;
-	width: 30px;
+	height: 25px;
+	width: 25px;
 	background: url('../images/icons/activity.png') no-repeat;
 	display: inline-block;
-	margin-top: 20px;
-	margin-left: 20px;
+	margin-top: 23px;
+	margin-left: 30px;
 }
 
 .new-project-btn {
