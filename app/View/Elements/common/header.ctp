@@ -48,8 +48,9 @@ $(document).ready(function() {
 <div class="profile">
          		<img class="" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
       
-                <p class="name"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" ><?php echo ucfirst(Sanitize::html($this->Session->read("firstname"), array('remove' => true)));?></span><?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
-                <span class="options"><?php if (isset($cansignup) && $cansignup == 1) {?>
+                <h1><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" ><?php echo ucfirst(Sanitize::html($this->Session->read("firstname"), array('remove' => true)));?>
+                <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
+                <span><?php if (isset($cansignup) && $cansignup == 1) {?>
 					<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" >Settings</a> |
 				<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
 				</span>
