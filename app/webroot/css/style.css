@@ -620,6 +620,19 @@ p.task-tickbox a {
 .add-projects {
 	
 }
+button {
+	display: inline-block;
+	background: #fca55f;
+	font-size: 12px;
+	font-weight: normal;
+	height: 32px;
+	line-height: 32px;
+	color: #fff !important;
+	padding: 0 12px;
+	border: 0;
+	box-shadow: none;
+	border-radius: 3px;
+}
 .button {
 	display: inline-block;
 	background: #fca55f;
@@ -1646,7 +1659,6 @@ p.contact span {
 
 
 .upload-link {
-	display: none;
     text-decoration: none;
     font-weight: 400;
     margin-bottom: 12px;
@@ -2362,6 +2374,8 @@ p.form-title {
 }
 .task-wrapper { 
 	margin-bottom:10px; 
+	color: #abaaaa;
+	font-size: 14px;
 }
 p.task { 
 	font-weight:bold; 
