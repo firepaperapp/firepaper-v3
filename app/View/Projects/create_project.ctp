@@ -342,11 +342,9 @@ if(isset($errMsg))
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
-        <div class="row">
-	        <div class="left">
+       
 	          <h3>Changes In Project</h3>
-	 	    </div>
-	     </div>	     
+	 	    
         <div class="project-brief-box-wrapper"> 
         	
 	          <div class="add file-details-project">   
