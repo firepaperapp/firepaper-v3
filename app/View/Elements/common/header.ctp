@@ -54,10 +54,8 @@ $(document).ready(function() {
 					<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" >Settings</a> |
 				<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
 				</span>
-			
-			<span class="latest-activity"></span>
-    
-</div><!-- end nav -->
+</div>
+<span class="latest-activity"></span>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
 </div><!-- end header -->
 </div>
