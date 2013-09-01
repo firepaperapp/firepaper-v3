@@ -928,8 +928,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	overflow:scroll; 
 }
 .project-controls {
-	float: left;
-	display: inline-block;
+	
 	width: 400px;
 }
 .project-controls .close {
