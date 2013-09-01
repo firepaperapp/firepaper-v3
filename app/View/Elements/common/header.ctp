@@ -55,7 +55,7 @@ $(document).ready(function() {
 				<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
 				</span>
 			
-
+			<span class="latest-activity"></span>
     
 </div><!-- end nav -->
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
