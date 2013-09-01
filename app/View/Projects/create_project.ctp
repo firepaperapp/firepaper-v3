@@ -385,22 +385,7 @@ if(isset($errMsg))
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>fbkstyle.css" type="text/css" media="screen" title="Test Stylesheet" charset="utf-8" />
 <script src="<?php echo JS_PATH;?>jquery.fcbkcomplete.min.js" type="text/javascript" charset="utf-8"></script>   
 
-<script type="text/javascript">
-	$(document).ready(function(){
-                $("#addedu").fancybox({
-			ajax : {
-			type	: "GET",
-			}
-		});
-		var randomnumber=Math.floor(Math.random()*101);//using random number to resolve cache issue
-   		loadPiece(siteUrl+"dashboard/listTeachersAjax/"+$('#departmentId').val()+"/?rand="+randomnumber,"#content_teachers");
 
-	$("#reset").click(function(){
-		$("#reset").hide();
-	});
-
-   	 });
-</script>
 <script type="text/javascript" src="<?php echo JS_PATH?>projects.js"></script>
 <script src="<?php echo JS_PATH ?>jquery.jeditable.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.livequery.js"></script> 
