@@ -986,7 +986,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-drop-area { 
 	padding:15px 10px 10px 20px; 
 	background:#fcfcfc; 
-	border:1px dashed #e3e3e3 !important; 
+	border:1px dashed #abaaaa !important; 
 	color:#444; 
 	font-weight:bold; 
 	margin-top:16px; 
@@ -2300,7 +2300,7 @@ p.form-title {
 	float: left; 
 	font-weight: normal; 
 	font-style: italic; 
-	color: #dcdbdb; 
+	color: #abaaaa; 
 	font-size: 14px; 
 	background: url('../images/sprite.png') left -115px no-repeat; 
 	padding-left: 25px; 
