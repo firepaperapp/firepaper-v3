@@ -146,7 +146,7 @@ if(isset($errMsg))
         </div>
 	  	<div class="clr"></div>
 	   	<div id="loaderJsTask"></div>
-		<div class="project-brief-box-wrapper">           
+		        
 			<div class="project-drop-area-wrapper">
 				<div class="task-wrapper">
 				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="submit-grey">+ Create a Task</a> Or you can add a document below
@@ -162,7 +162,7 @@ if(isset($errMsg))
 					</form>  
 					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>--></p>
 				</div>
-			</div>
+			
 
 		</div>
 		<div class="clr"></div>
