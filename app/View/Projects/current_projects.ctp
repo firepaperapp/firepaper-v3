@@ -108,7 +108,7 @@
            	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/">Add a new project</a>';
            	 	} ?>
            	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View all projects</a>
+           	 	<a href="<?php echo SITE_HTTP_URL?>projects/addEditProject/<?php echo $dept_id?>" class="view-all-projects">View all projects</a>
            	 	<?php 
 				echo "</div>";
 			}
