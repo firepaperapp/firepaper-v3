@@ -3179,18 +3179,87 @@ html ul.tabs li.active, html ul.tabs li.active a:hover { }
 #plan_table th { border-bottom:1px solid #DDDDDD; }
 #plan_table td { border-bottom:1px solid ##DDDDDD; padding:10px; }
 #plan_table .big { font-size:16px; width: 120px; }
-#plan_table .current_plan td { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding; background:#FFFEEE none repeat scroll 0 0; }
-#plan_table .selected td { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding; background:#FFFCCC none repeat scroll 0 0; }
-#plan_table em { color:#999999; font-size:11px; clear:both; }
-table#project_list td { padding:4px 0; }
-tr th { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding; background:#F6F6F6 none repeat scroll 0 0; font-weight:bold; padding:5px; }
-a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding; -moz-border-radius-bottomleft:3px; -moz-border-radius-bottomright:3px; -moz-border-radius-topleft:3px; -moz-border-radius-topright:3px; background:#FFFFFF url(../images/buttons.jpg) repeat-x scroll left bottom; border:1px solid #DDDDDD; color:#444444; font-size:11px !important; font-weight:bold; margin-right:1px; padding:4px 9px; display: block; text-align: center; margin-top: 5px; }
-.sorter ul { color:#999999; margin-top:0px; }
-.sorter ul li { font-size:10px; display:block; float:left; background:#EBEBEB; display:block; margin-right:1px; }
-.sorter ul li a { display:block; padding:4px 6px; }
-.sorter ul li a:hover { background:#DBDBDB; }
-.create { background:black; color:white; padding:4px 6px 4px 6px; }
-.dept-wrapper { width:450px; margin-top:40px; }
+#plan_table .current_plan td { 
+	-moz-background-clip:border; 
+	-moz-background-inline-policy:continuous; 
+	-moz-background-origin:padding; 
+	background:#FFFEEE none repeat scroll 0 0; 
+}
+#plan_table .selected td { 
+	-moz-background-clip:border; 
+	-moz-background-inline-policy:continuous; 
+	-moz-background-origin:padding; 
+	background:#FFFCCC none repeat scroll 0 0; 
+}
+#plan_table em { 
+	color:#999999; 
+	font-size:11px; 
+	clear:both; 
+}
+table#project_list td { 
+	padding:4px 0; 
+}
+tr th { 
+	-moz-background-clip:border; 
+	-moz-background-inline-policy:continuous; 
+	-moz-background-origin:padding; 
+	background:#F6F6F6 none repeat scroll 0 0; 
+	font-weight:bold; 
+	padding:5px; 
+}
+a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton { 
+	-moz-background-clip:border; 
+	-moz-background-inline-policy:continuous; 
+	-moz-background-origin:padding; 
+	-moz-border-radius-bottomleft:3px; 
+	-moz-border-radius-bottomright:3px; 
+	-moz-border-radius-topleft:3px; 
+	-moz-border-radius-topright:3px; 
+	background:#FFFFFF url(../images/buttons.jpg) repeat-x scroll left bottom; 
+	border:1px solid #DDDDDD; 
+	color:#444444; 
+	font-size:11px !important; 
+	font-weight:bold; 
+	margin-right:1px; 
+	padding:4px 9px; 
+	display: block; 
+	text-align: center; 
+	margin-top: 5px; 
+}
+.sorter ul { 
+	color:#999999; 
+	margin-top:0px; 
+	float: left;
+	border: 1px solid #cbd0d5;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.sorter ul li { 
+	font-size:10px; 
+	float:left; 
+	color: #a7abb1;
+	background:#fff; 
+	display:block; 
+	line-height: 36px;
+	border-right: 1px solid #cbd0d5;
+}
+.sorter ul li a { 
+	display:block; 
+	font-size: 14px;
+	padding:10px 18px; 
+}
+.sorter ul li a:hover { 
+	background:#DBDBDB; 
+}
+.create { 
+	background:black; 
+	color:white; 
+	padding:4px 6px 4px 6px; 
+}
+.dept-wrapper { 
+	width:450px; 
+	margin-top:40px; 
+}
 .dept-box { }
 .dept-box .left-section { width:25px; float:left; }
 .dept-box .left-section .dept-name { font-size:14px; font-weight:bold; color:black; }
