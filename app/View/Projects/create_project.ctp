@@ -197,10 +197,10 @@ if(isset($errMsg))
 			</form>	<div class="clr"></div>
 		</div>
 		<div class="clr"></div>
-<div id="taskUnderDiv" style="display:none;"></div>
+<div id="taskUnderDiv"></div>
 <div class="clr"></div>
 	  	
-	  	<div id="createdTasks" style="display:none;">
+	  	<div id="createdTasks" >
 	   		<?php
 	  		$noOftasks = 0;
 
