@@ -184,9 +184,9 @@ if(isset($errMsg))
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
 		    			
 		     		</div>
-		    		<div class="comment-link fl-left">
+		    		
 		    		<h3>Comment</h3>
-		    		</div>
+		    		
 		        	
 		        	
 		        	<?php echo $this->Form->textarea('projComments.comment',array("id"=>"comment",'class'=>'text-field-comment'));?> 

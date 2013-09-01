@@ -2977,9 +2977,10 @@ ul#archived-list .month {
 .col-weight { 
 	color: #d3d3d3; 
 	position: absolute; 
-	top:0; 
+	top:10px; 
 	right: 0;
 	float: right;
+	width: 200px;
 	font-size: 16px; 
 	font-style:italic;  
 }
