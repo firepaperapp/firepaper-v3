@@ -50,12 +50,14 @@ $(document).ready(function() {
       
                 <a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="name"><?php echo ucfirst(Sanitize::html($this->Session->read("firstname"), array('remove' => true)));?>
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
-                <span><?php if (isset($cansignup) && $cansignup == 1) {?>
-					<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" >Settings</a> |
-				<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
+				
 				</span>
 </div>
 <span class="latest-activity"></span>
+<?php if (isset($cansignup) && $cansignup == 1) {?>
+<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" ></a>
+<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
+
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
 </div><!-- end header -->
 </div>
