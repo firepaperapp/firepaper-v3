@@ -653,12 +653,13 @@ p.task-tickbox a {
 .files-categories-box ul li {
 	display: block;
 	float: left;
+	border-right: 1px solid #cbd0d5;
 }
 .files-categories-box ul li a {
 	
 	margin: 0;
 	padding: 5px 8px;
-	border: 1px solid #cbd0d5;
+	
 }
 .right-col-categories ul { 
 	list-style-type: none; 
@@ -1474,8 +1475,8 @@ p.contact span {
     padding-bottom: 5px;
     margin-bottom: 10px;
     margin-top: 0;
-    border-bottom: 1px dotted #9f9f9f;
-    color: #4A9CD1;
+    border-bottom: 1px solid #E3E3E8;
+    color: #363F48;
     font-size: 14px;
     font-family: "lucida sans", arial;
 }
@@ -1623,6 +1624,7 @@ p.contact span {
 
 
 .upload-link {
+	display: none;
     text-decoration: none;
     font-weight: 400;
     margin-bottom: 12px;
@@ -1690,11 +1692,11 @@ div.file-name em {
 }
 
 .versions-inner {
-    padding: 10px;
+    padding: 25px;
     background: #fafafa;
-    font-size: 12px;
-    border-radius: 3px;
-    -webkit-border-radius:3px;
+    font-size: 13px;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
    
 }
 
@@ -1703,12 +1705,13 @@ div.file-name em {
     margin-top: 12px;
     margin-bottom: 4px;
     font-weight: 700;
+    display: none;
 }
 
 .versions-inner .edit {
     color: #e06161;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .versions-inner .edit a {
@@ -1718,11 +1721,11 @@ div.file-name em {
 .versions-inner p {
     margin-bottom: 10px;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .versions-inner span {
-    color: #6696A6;
+    color: #595959;
 }
 
 .versions-inner .title {
@@ -1841,7 +1844,6 @@ div.file-name em {
     height: 1px;
     width: 98%;
     clear: both;
-    background: url('../images/dots.png') repeat-x;
     margin-bottom: 12px;
 }
 
