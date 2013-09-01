@@ -654,7 +654,10 @@ p.task-tickbox a {
 
 }
 .activity-panel {
-	padding:0px 0px 26px 0px; 
+	padding: 30px;
+	width: 300px;
+	position: absolute;
+	right: 316px;
 }
 a.group-tab { 
 	-moz-border-radius: 3px 3px 3px 3px; 
@@ -3020,7 +3023,9 @@ ul#archived-list .month {
 .tab-wrapper { 
 	margin-top:69px;
 	padding:0px;
-	position: relative;
+	right: 0px;
+	top: 0px;
+	position: absolute;
 	z-index: 15; 
 	-webkit-box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
