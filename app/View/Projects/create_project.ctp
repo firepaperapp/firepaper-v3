@@ -283,7 +283,7 @@ if(isset($errMsg))
 
 	  		}
 	  		else {
-	  			echo '<p id="taskMsgDiv" style="padding:5px;">'.CREATE_TASK.'</p>';
+	  			//echo '<p id="taskMsgDiv" style="padding:5px;">'.CREATE_TASK.'</p>';
 	  		}
 	  		?>
 	   	</div>
@@ -305,11 +305,12 @@ if(isset($errMsg))
 							</div>
 							<div class="clr-spacer"></div>
 							<div class="add-people">
-								 
+								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
 								<select id="otherUsers" name="otherUsers"></select>
 							</div>
+							
 							<div id="containerLoader"></div>
-							<p><strong>Note:</strong> Enter the keyword to search premium students</p>
+							
 							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 						</div>				
@@ -374,11 +375,9 @@ if(isset($errMsg))
 			}    
 		 	?>
 		 
-  	 	
-  	 
-  </div>	
-   
+  
   	<div class="clr"></div>
+  	</div>	
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
 </div>
