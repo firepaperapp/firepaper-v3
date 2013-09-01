@@ -2671,20 +2671,18 @@ p.field-title {
 
 .validation-signup {
     height: 100%;
-    width: 280px;
+    width: 100%;
     margin: 0 auto;
-    border: 1px solid #ce1313;
-    background: url(../images/error-bg.png);
-    padding: 10px;
     margin-bottom: 14px;
-    color: #FFF;
     text-align: center;
 }
 
 .validation-signup .errMsg {
-    color: #FFF;
-    text-shadow: 0 1px 0 #a00707;
-    filter: dropshadow(color=#a00707,offx=0,offy=1);
+    color: #f25e4f;
+    border: 1px solid #f19f97;
+    background: #fef9f8;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 .validation-signup p {
