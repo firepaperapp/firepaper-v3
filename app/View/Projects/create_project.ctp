@@ -184,7 +184,7 @@ if(isset($errMsg))
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
 		    			
 		     		</div>
-		    		
+		    		<div class="clr"></div>
 		    		<h3>Comment</h3>
 		    		
 		        	
