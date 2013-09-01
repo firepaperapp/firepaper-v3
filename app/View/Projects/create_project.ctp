@@ -194,11 +194,11 @@ if(isset($errMsg))
 					</div>
 	 				<div class="clr"></div>
 				</div>
-			</form>	<div class="clr"></div>
+			</form>	
 		</div>
 		<div class="clr"></div>
 <div id="taskUnderDiv"></div>
-<div class="clr"></div>
+
 	  	
 	  	<div id="createdTasks" >
 	   		<?php
