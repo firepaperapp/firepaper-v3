@@ -175,7 +175,7 @@ if(isset($errMsg))
 	    	<form action="" name="createTaskForm" id="createTaskForm" method="POST">	
 				<div class="project-drop-area-wrapper">
 					
-		   			<p class="field-title">Your task title<span class="mandatory">*</span></p>
+		   			<h3>Your task title<span class="mandatory">*</span></h3>
 		   			<?php echo $this->Form->input('projectTask.title',array('div'=>false,'label'=>false,"id"=>"taskTitle",'maxlength'=>'150','class'=>'task-input'));?> 
 		   			
 		     		<div class="col-weight">
@@ -184,7 +184,9 @@ if(isset($errMsg))
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
 		    			
 		     		</div>
-		    		<div class="comment-link fl-left"><span>Comment</span></div>
+		    		<div class="comment-link fl-left">
+		    		<h3>Comment</h3>
+		    		</div>
 		        	
 		        	
 		        	<?php echo $this->Form->textarea('projComments.comment',array("id"=>"comment",'class'=>'text-field-comment'));?> 
