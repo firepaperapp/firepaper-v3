@@ -429,15 +429,16 @@ select {
     background: #fff;
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
     box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    padding: 12px 16px;
-    line-height: 15px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px;
     border: 1px solid #cbcbcb;
     color: #bfbfbf;
-    font-weight: 700;
+    font-weight: bold;
     margin-right: 5px;
-    font-size: 13px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    font-size: 14px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .submit:hover, .submit-grey:hover, .sign-in:hover {
@@ -643,8 +644,10 @@ p.task-tickbox a {
 	font-size: 14px; 
 	font-family:"lucida sans", arial; 
 }
-.files-categories-box {
-	
+.files-categories-box h4 {
+	float: left;
+	margin-top: 8px;
+	margin-right: 10px;
 }
 .files-categories-box ul {
 	list-style: none;
@@ -669,6 +672,10 @@ p.task-tickbox a {
 	margin: 0;
 	padding: 5px 8px;
 	color:#a7abb1;
+}
+.files-categories-box ul li a:active, .files-categories-box ul li a:hover {
+	background: #f5f7f8;
+	color:#55606e;
 }
 .right-col-categories ul { 
 	list-style-type: none; 
