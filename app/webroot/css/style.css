@@ -647,13 +647,20 @@ p.task-tickbox a {
 .files-categories-box ul {
 	list-style: none;
 	padding: 0;
-	margin: -52px 0 0 0;
-	float: right;
+	margin: 0;
+	float: left;
+	border: 1px solid #cbd0d5;
+	border-radius:3px;
+	-webkit-border-radius:3px;
 }
 .files-categories-box ul li {
 	display: block;
 	float: left;
+	padding: 6px;
 	border-right: 1px solid #cbd0d5;
+}
+.files-categories-box ul li:last-child {
+	
 }
 .files-categories-box ul li a {
 	font-size: 14px;
