@@ -193,7 +193,7 @@ if(isset($errMsg))
 	
 		        	<div class="clr"></div>
 		        	<div class="submit-wrapper">
-		    			<input type="submit" name="btnSubmitTask" class="submit" value="Submit" /> &nbsp;or <a href="javascript:void(0);" class="edit" onclick="$('#createTaskDiv').hide('slow');"/>cancel</a>
+		    			<input type="submit" name="btnSubmitTask" class="submit" value="Submit" /> <span>&nbsp;or <a href="javascript:void(0);" class="edit" onclick="$('#createTaskDiv').hide('slow');"/>cancel</a></span>
 					</div>
 	 				<div class="clr"></div>
 				</div>
