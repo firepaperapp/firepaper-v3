@@ -99,13 +99,14 @@ function showUploader() {
 </script>
 
 <div class="white page index">
-			<p class="files-title">Categories <input type="button" value="Upload Files" class="files-upload-button" onclick="showUploader()"><br /></p>
+			<p class="files-title"> <input type="button" value="Upload Files" class="files-upload-button" onclick="showUploader()"><br /></p>
 			
 			<form id="files-upload-form" style="display: none">
 		    	<div id="uploader"></div>
 			</form>
 			
 			<div id="files-categories-box" class="files-categories-box">
+				<h3>Categories</h3>
 				<ul><?php echo $this->requestAction("/files/getMyCategories"); ?></ul>
 			</div>
 			
