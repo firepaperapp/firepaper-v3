@@ -287,11 +287,9 @@ if(isset($errMsg))
 		
 		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
-	        <div class="left">
-	          <h3>Add Groups</h3>
-	 	    </div>
 	       
-	      
+	          <h3>Add Groups</h3>
+	 	   
         <div class="project-brief-box-wrapper"> 
         	<div class="project-drop-area-wrapper">
 		          <div class="add file-details-project">            	            	
