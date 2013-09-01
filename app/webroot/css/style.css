@@ -1682,8 +1682,9 @@ p.contact span {
     margin-bottom: 12px;
 }
 .upload-link input {
-	border: none;
+	border: 1px solid #ccc;
 	background: none;
+	margin-right: 10px;
 	-webkit-box-shadow:none;
 	box-shadow:none;
 }
