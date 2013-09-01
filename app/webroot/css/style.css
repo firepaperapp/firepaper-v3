@@ -203,8 +203,8 @@ select {
 .navigation .profile img {
 	float: left;
 	margin-top: 10px;
-	border-radius: 60%;
-	-webkit-border-radius: 60%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
 	background: #fafafa;
 	-webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
 	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
