@@ -82,7 +82,7 @@ if(count($data)>0)
 			             
 		                	<p class="width100per">
 								<span class="title">Filter:</span>&nbsp;
-								<label id="addcategory_<?php echo $rec['userFile']['id'];?>_box_span"><?php echo $title;?></label>-&nbsp;<b id= "category_<?php echo $rec['userFile']['id'];?>" class="edit editcategory" style="display: inline">Edit</b>&nbsp;or&nbsp;
+								<label id="addcategory_<?php echo $rec['userFile']['id'];?>_box_span"><?php echo $title;?></label>-<br><b id= "category_<?php echo $rec['userFile']['id'];?>" class="edit editcategory" style="display: inline">Edit</b>&nbsp;or&nbsp;
 								<a href="javascript:void(0);" class="edit addcategorylink" id="addcategory_<?php echo $rec['userFile']['id'];?>">Create a filter</a>
 								
 							</p>
