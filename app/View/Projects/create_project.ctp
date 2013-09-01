@@ -308,7 +308,7 @@ if(isset($errMsg))
 							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 						</div>				
-						<p>&nbsp;</p>
+						
 		          </div>
 		    </div>
         </div>
