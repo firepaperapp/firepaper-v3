@@ -301,6 +301,7 @@ if(isset($errMsg))
 							 	 <p><strong>Note:</strong> Enter the keyword to search groups</p>
 								 <select id="usersGroups" name="usersGroups"></select>
 							</div>
+							<div class="clr-spacer"></div>
 							<div class="add-people">
 								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
 								<select id="otherUsers" name="otherUsers"></select>
@@ -366,7 +367,7 @@ if(isset($errMsg))
 		    }
 			else 
 			{?>
-			<p>	<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(0);">Save in drafts</a> or
+			<p>	<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(0);">Save in drafts</a> 
 				<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(1);">Send project</a>	
 			</p>
 			<?php
