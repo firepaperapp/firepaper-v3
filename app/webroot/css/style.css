@@ -247,7 +247,6 @@ select {
 	position: absolute;
 	left: 120px;
 	top: 69px;
-	width: 100%;
 	
 }
 
@@ -1996,7 +1995,6 @@ p.form-title {
     width: 100%;
     margin-bottom: 10px;
     min-height: 20px;
-    margin-top: 14px;
     font-weight: 700;
 }
 
@@ -2304,7 +2302,7 @@ p.form-title {
 }
 .project-drop-area span {  
 	font-weight:normal; 
-	display: block; 
+	display: inline-block; 
 	color: #51ACAC; 
 }
 .project-drop-area .files { 
