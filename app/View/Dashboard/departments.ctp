@@ -18,7 +18,7 @@
 <div class="white page index">
 <!-- search Section tart here -->
 	<h3>Departments</h3>  
-		<a id="various2" class="submit-grey" href="<?php echo SITE_HTTP_URL?>dashboard/addEditDepartment">+&nbsp;Create another Department</a><p>&nbsp;</p>
+		<a id="various2" class="button" href="<?php echo SITE_HTTP_URL?>dashboard/addEditDepartment">+&nbsp;Create another Department</a><p>&nbsp;</p>
 		<!-- search Section tart here -->
 		<!-- Inner Content List start -->
 		<div class="listingContent" id="content_departments">			
