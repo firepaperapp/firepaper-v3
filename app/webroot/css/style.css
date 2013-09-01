@@ -2408,7 +2408,7 @@ textarea#projectDesc {
 .pickdate input {
     width: 50%;
     position: relative;
-    cursor:move;
+    cursor:pointer;
 }
 
 .pickdate img {
@@ -2417,6 +2417,7 @@ textarea#projectDesc {
     top:5px;
     left:10px;
     z-index: 10;
+    cursor: pointer;
 }
 
 .dropdown-containers {
