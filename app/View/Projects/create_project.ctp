@@ -286,23 +286,23 @@ if(isset($errMsg))
 		
 		
 		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
-        <div class="row">
+        <div class="line"></div>
 	        <div class="left">
 	          <h3>Add Groups</h3>
 	 	    </div>
-	     </div>	   
+	       
 	      
         <div class="project-brief-box-wrapper"> 
         	<div class="project-drop-area-wrapper">
 		          <div class="add file-details-project">            	            	
 		            	 <div class="width100per">
 		            	 	
-							 <div style="float:left;width:300px;"> 
-							 	 <p><small>Note: Enter the keyword to search groups</small></p>
+							 <div class="add-people"> 
+							 	 <p>>Note: Enter the keyword to search groups</p>
 								 <select id="usersGroups" name="usersGroups"></select>
 							</div>
-							<div style="float:left;width:300px;">
-								 <p><small>Note: Enter the keyword to search premium students</small></p>
+							<div class="add-people">
+								 <p>Note: Enter the keyword to search premium students</p>
 								<select id="otherUsers" name="otherUsers"></select>
 							</div>
 							<div id="containerLoader"></div>
