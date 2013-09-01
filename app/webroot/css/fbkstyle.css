@@ -13,9 +13,9 @@ ul.holder li.bit-input input.smallinput {  }
 li#usersGroups_annoninput {  
 	
 }
-li#usersGroups_annoninput input { background: url('../images/sprite.png') left -86px no-repeat; padding:2px; padding: 5px 5px 5px 25px;}
+li#usersGroups_annoninput input { padding:2px; padding: 5px 5px 5px 25px;}
 li#otherUsers_annoninput {  border-bottom: 1px dotted #cbcbcb; margin-top: 10px; }
-li#otherUsers_annoninput input { background: url('../images/sprite.png') left -63px no-repeat; padding:2px; padding: 5px 5px 5px 25px;}
+li#otherUsers_annoninput input { padding:2px; padding: 5px 5px 5px 25px;}
 
 
 /* Facebook demo CSS */      
