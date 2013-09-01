@@ -288,7 +288,7 @@ if(isset($errMsg))
 		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
 	       
-	          <h3>Add Groups</h3>
+	          <h3>Invite</h3>
 	 
         	<div class="project-drop-area-wrapper">
 		          <div class="add file-details-project">            	            	
@@ -300,10 +300,11 @@ if(isset($errMsg))
 							</div>
 							<div class="clr-spacer"></div>
 							<div class="add-people">
-								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
+								 
 								<select id="otherUsers" name="otherUsers"></select>
 							</div>
 							<div id="containerLoader"></div>
+							<p><strong>Note:</strong> Enter the keyword to search premium students</p>
 							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 						</div>				
