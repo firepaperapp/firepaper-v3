@@ -59,6 +59,6 @@ $(document).ready(function() {
 <?php } ?>
 
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
-<a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="submit right"> Logout</a>
+<a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="logout right"> Logout</a>
 </div><!-- end header -->
 </div>
