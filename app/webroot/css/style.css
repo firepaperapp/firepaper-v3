@@ -266,7 +266,9 @@ select {
 #Project, #docAndTask {
 	margin: 54px;
 }
-
+#docAndTask {
+	width: 90%;
+}
 /* Navigation styling */
 .nav { 
 	position:absolute; 
