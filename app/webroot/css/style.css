@@ -284,7 +284,7 @@ select {
 	font-style: italic;
 	color: #abaaaa;
 	font-size: 14px;
-	margin-top: 20px;
+	margin-top: 14px;
 }
 /* Navigation styling */
 .nav { 
@@ -2553,7 +2553,11 @@ textarea#projectDesc {
     margin-top: 10px;
     line-height: 25px;
 }
-
+.submit-wrapper span {
+	font-size: 13px;
+	color: #abaaaa;
+	padding-top: 10px;
+}
 .submit-wrapper .submit {
     margin-top: 0;
     margin-right: 8px;
