@@ -681,7 +681,7 @@ button {
 .files-categories-box ul li {
 	display: block;
 	float: left;
-	
+	line-height: 33px;
 	border-right: 1px solid #cbd0d5;
 }
 .files-categories-box ul li:last-child {
@@ -690,7 +690,7 @@ button {
 .files-categories-box ul li a {
 	font-size: 14px;
 	margin: 0;
-	padding: 10px 15px;
+	padding: 10px 18px;
 	color:#a7abb1;
 }
 .files-categories-box ul li a:active, .files-categories-box ul li a:hover {
