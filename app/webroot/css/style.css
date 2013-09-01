@@ -275,6 +275,7 @@ select {
 	font-style: italic;
 	color: #dcdbdb;
 	font-size: 14px;
+	margin-top: 20px;
 }
 /* Navigation styling */
 .nav { 
