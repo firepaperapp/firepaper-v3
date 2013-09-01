@@ -8,9 +8,11 @@ ul.holder li.bit-box {color:white; background: #cbcbcb; padding: 3px 7px 3px; te
 
 ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
 ul.holder li.bit-input {width:100%;} /* no left/right padding here please */
-ul.holder li.bit-input input {width:100%; overflow:visible; margin: 0; border: 0px; outline: 0;  font-size: 14px; color: #d3d3d3;}
+ul.holder li.bit-input input {width:100%; overflow:visible; margin:10px 0 10px 0px; outline: 0;  font-size: 14px; color: #d3d3d3;}
 ul.holder li.bit-input input.smallinput {  }
-li#usersGroups_annoninput {  border-bottom: 1px dotted #cbcbcb; }
+li#usersGroups_annoninput {  
+	
+}
 li#usersGroups_annoninput input { background: url('../images/sprite.png') left -86px no-repeat; padding:2px; padding: 5px 5px 5px 25px;}
 li#otherUsers_annoninput {  border-bottom: 1px dotted #cbcbcb; margin-top: 10px; }
 li#otherUsers_annoninput input { background: url('../images/sprite.png') left -63px no-repeat; padding:2px; padding: 5px 5px 5px 25px;}
@@ -46,5 +48,5 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 .deleted { background-color:#98D3D3 !important; color:#ffffff !important;}
 .hidden { display:none;}
 #otherGroups_feed{width:180px;}
-#demo ul.holder li.bit-input input { padding: 2px 0 1px; border: 1px solid #999; }
+#demo ul.holder li.bit-input input { padding: 2px 0 1px; }
 .ie6fix {height:1px;width:1px; position:absolute;top:0px;left:0px;z-index:1;}
