@@ -108,7 +108,7 @@ if(isset($errMsg))
 		         	echo "<input type='hidden' name='data[Project][leader_id]' tabindex='6' id='leader_id' value='".$this->Session->read("userid")."' /><p>You</p>";   	
 				}
 	           ?>
-	           <a href="javascript:void(0)" class="submit" id="createProjectBtn" onclick="submitProject(2)">Continue</a>&nbsp;&nbsp;
+	          <!-- <a href="javascript:void(0)" class="submit" id="createProjectBtn" onclick="submitProject(2)">Continue</a>&nbsp;&nbsp;-->
 	           
 	          
 	          <div class="clr"></div>
