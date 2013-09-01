@@ -90,7 +90,7 @@ if(isset($errMsg))
 	 				echo "<p><a class='edit' href='".SITE_HTTP_URL."/departments'>Create a Subject</a></p>";
 	 			}?>
 	 			
-	            
+	            <div class="line"></div>
 	            
 	            <h3>Owner</h3>
 	            <?php

@@ -2421,7 +2421,7 @@ textarea#projectDesc {
 }
 
 .pickdate input {
-    width: 50%;
+    width: 28%;
     position: relative;
     cursor:pointer;
     padding: 10px 10px 10px 40px;
@@ -2436,7 +2436,6 @@ textarea#projectDesc {
     cursor: pointer;
 }
 #leader {
-	display: inline-block;
 	clear: both;
 }
 .dropdown-containers {
