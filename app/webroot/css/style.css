@@ -2434,7 +2434,7 @@ textarea#projectDesc {
     cursor: pointer;
 }
 #leader {
-	display: inline-block;
+	display: none;
 	clear: both;
 }
 .dropdown-containers {
