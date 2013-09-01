@@ -267,7 +267,7 @@ select {
 #docAndTask {
 	width: 81.6%;
 	margin: 0;
-	padding: 54px;
+	padding:0px 54px 54px 54px;
 }
 .add-people {
 	width: 100%;
