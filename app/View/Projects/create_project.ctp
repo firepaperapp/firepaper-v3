@@ -200,7 +200,7 @@ if(isset($errMsg))
 <div id="taskUnderDiv" style="display:none;"></div>
 <div class="clr"></div>
 	  	
-	  	<div id="createdTasks">
+	  	<div id="createdTasks" style="display:none;">
 	   		<?php
 	  		$noOftasks = 0;
 
@@ -209,7 +209,9 @@ if(isset($errMsg))
   				foreach($projTasks as $rec)
 	  			{
 	  				$noOftasks++;
-	  			?><div  id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
+	  			?>
+	  			
+	  			<div  id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 			        <div class="project-brief-box-wrapper createdTasksCl">
 				           <div class="project-drop-area-wrapper">
 				           		<div class="col-weight" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>%<a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
