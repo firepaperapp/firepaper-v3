@@ -56,8 +56,9 @@ $(document).ready(function() {
 <span class="latest-activity"></span>
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" ></a>
-<?php } ?><a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="grey"> Logout</a>
+<?php } ?>
 
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
+<a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="submit right"> Logout</a>
 </div><!-- end header -->
 </div>
