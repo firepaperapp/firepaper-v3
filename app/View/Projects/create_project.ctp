@@ -348,13 +348,13 @@ if(isset($errMsg))
 	 	    </div>
 	     </div>	     
         <div class="project-brief-box-wrapper"> 
-        	<div class="project-drop-area-wrapper">
+        	
 	          <div class="add file-details-project">   
 	          		
 	          		<p><small>Note: Please enter the changes that you made.</small></p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
 	          </div>
-	         </div>
+	       
         </div>
 		<?php }?>
         </form>
