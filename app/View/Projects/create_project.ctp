@@ -99,7 +99,7 @@ if(isset($errMsg))
 	            	 //print_r($teachers);die;
 	           		echo '<p id="leader">'.$this->Form->input('leader_id',array('type'=>'select','div'=>false,'label'=>false,'value'=>$lid,'options'=>$teachers,'id'=>'cardtype','class'=>'dropdown','empty'=>"Select an owner"))."</p>";
 	           		?>
-	           		<a id="addedu" class="red" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">Add a new owner</a>
+	           		<!--<a id="addedu" class="red" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">Add a new owner</a>-->
 	           		
 	           		<?php
 	            }
