@@ -197,7 +197,7 @@ select {
 }
 .navigation .button {
 	float: right;
-	margin-right: 20px;
+	margin-right: 13px;
 	margin-top: 16px;
 }
 .navigation .profile img {
@@ -231,7 +231,7 @@ select {
 	background: url('../images/icons/activity.png') no-repeat;
 	display: inline-block;
 	margin-top: 23px;
-	margin-left: 30px;
+	margin-left: 10px;
 }
 .navigation .settings-icon {
 	height: 25px;
@@ -462,7 +462,9 @@ select {
     display: inline-block;
 }
 .logout {
-	margin-left: 15px;
+	margin-left: 0px;
+	margin-top: 16px;
+	margin-right: 20px;
 }
 .sign-in {
 	margin-left: 6px;

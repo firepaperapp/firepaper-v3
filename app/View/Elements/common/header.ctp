@@ -53,7 +53,7 @@ $(document).ready(function() {
 				
 				</span>
 </div>
-<span class="latest-activity"></span>
+<a class="latest-activity" href=""></a>
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" ></a>
 <?php } ?>
