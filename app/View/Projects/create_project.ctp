@@ -48,15 +48,15 @@ if(isset($errMsg))
 	    <h3>Course title</h3>
 	     <?php echo $this->Form->input('title',array('id'=>'projectTitle', 'tabindex'=>1,'div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	      <h3>Course details</h3>  
-	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','div'=>false,'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
+	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','div'=>false,'tabindex'=>2, 'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
 	      <div class="line"></div>
 	      <h3>Course deadline</h3>
-	          <span class="pickdate"> <?php echo $this->Form->text('duedate',array('id'=>'duedate','div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?></span>
+	          <span class="pickdate"> <?php echo $this->Form->text('duedate',array('id'=>'duedate','tabindex'=>3, 'div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?></span>
 	          
 	          
 	      <div class="line"></div>
 	      <h3>Select a department</h3>
-	            <select name="data[Project][subject_id]" id="subject_id" class="dropdown">
+	            <select name="data[Project][subject_id]" id="subject_id" tabindex="4" class="dropdown">
 	            <option value="">Please Select</option>
 	             <?php
 	             	$st = "";
@@ -97,7 +97,7 @@ if(isset($errMsg))
 	            if ($this->Session->read("user_type") == 1 || $this->Session->read("user_type") == 7 ) 
 	            {
 	            	 //print_r($teachers);die;
-	           		echo '<p id="leader">'.$this->Form->input('leader_id',array('type'=>'select','div'=>false,'label'=>false,'value'=>$lid,'options'=>$teachers,'id'=>'cardtype','class'=>'dropdown','empty'=>"Select an owner"))."</p>";
+	           		echo '<p id="leader">'.$this->Form->input('leader_id',array('type'=>'select','div'=>false,'tabindex'=>5, 'label'=>false,'value'=>$lid,'options'=>$teachers,'id'=>'cardtype','class'=>'dropdown','empty'=>"Select an owner"))."</p>";
 	           		?>
 	           		<!--<a id="addedu" class="red" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">Add a new owner</a>-->
 	           		
@@ -105,7 +105,7 @@ if(isset($errMsg))
 	            }
 	            else 
 	            {
-		         	echo "<input type='hidden' name='data[Project][leader_id]' id='leader_id' value='".$this->Session->read("userid")."' /><p>You</p>";   	
+		         	echo "<input type='hidden' name='data[Project][leader_id]' tabindex='6' id='leader_id' value='".$this->Session->read("userid")."' /><p>You</p>";   	
 				}
 	           ?>
 	           <a href="javascript:void(0)" class="submit" id="createProjectBtn" onclick="submitProject(2)">Continue</a>&nbsp;&nbsp;
