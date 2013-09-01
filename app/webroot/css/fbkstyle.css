@@ -20,7 +20,9 @@ ul.holder li.bit-input input.smallinput {  }
 li#usersGroups_annoninput {  
 	
 }
-li#usersGroups_annoninput input { padding:2px; padding: 5px;}
+li#usersGroups_annoninput input { 
+ padding: 10px;
+ }
 li#otherUsers_annoninput {  
 	margin-top: 10px;
 	margin-bottom: 20px; 

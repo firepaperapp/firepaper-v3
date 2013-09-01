@@ -86,8 +86,10 @@
 							
 					         ?></a>
 				         </div>
-				        <div class="comment-link fl-left"><span>Comment</span></div>
-				        <div class="comment-point-add"></div>
+				        <div class="comment-link fl-left">
+				        <h3>Comment</h3>
+				        </div>
+				        
 				      <?php echo $this->Form->textarea('projComments.comment',array('div'=>false,'label'=>false,"id"=>"comment",'class'=>'text-field-comment'));?> 
 				       <div class="clr"></div>
 				       <?php

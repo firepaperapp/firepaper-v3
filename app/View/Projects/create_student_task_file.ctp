@@ -20,8 +20,7 @@
 	         </div>
 	    </div> 
 	    <div class="comment-link fl-left"><span>Comment</span></div>
-	    <div class="comment-point-add"></div>
-		<?php echo $this->Form->textarea('projComments.comment',array('div'=>false,'label'=>false,"id"=>"comment",'class'=>'text-field-comment'));?> 
+	    <?php echo $this->Form->textarea('projComments.comment',array('div'=>false,'label'=>false,"id"=>"comment",'class'=>'text-field-comment'));?> 
 	    <div class="clr"></div>
 	    <div class="submit-wrapper">
 	         <input type="hidden" name="data[projectStudentTaskDoc][title]" value="<?php echo  $name[0];?>" />
