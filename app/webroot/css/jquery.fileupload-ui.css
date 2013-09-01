@@ -39,9 +39,12 @@
 
 .file_upload input {
  position: absolute;
- right:20px;
- top:-20px;
-width:90px;
+ right: 23px;
+ top: 69px;
+ width:136px;
+ z-index: 100;
+ padding: 0px;
+ height: 50px;
   opacity: 0;
   -ms-filter: 'alpha(opacity=0)';
   filter: alpha(opacity=0);
