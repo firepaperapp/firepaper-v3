@@ -46,7 +46,7 @@ if(isset($errMsg))
     <div id="createProject">
 	    
 	    <h3>Course title</h3>
-	     <?php echo $this->Form->input('title',array('id'=>'projectTitle','div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
+	     <?php echo $this->Form->input('title',array('id'=>'projectTitle', 'tabindex'=>1,'div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	      <h3>Course details</h3>  
 	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','div'=>false,'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
 	      <div class="line"></div>
