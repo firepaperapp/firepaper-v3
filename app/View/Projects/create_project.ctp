@@ -127,8 +127,9 @@ if(isset($errMsg))
      		$d = "display:block;";
      	}
      ?>
+     <div class="line"></div>
  	<div id="docAndTask" style="<?php //echo $d;?>">
- 		<div class="rule"></div>
+ 		
 		
 	        <div class="left">
 	          <h3>Documents <span>&amp;</span> Tasks</h3>
