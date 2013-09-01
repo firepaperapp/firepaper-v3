@@ -54,6 +54,12 @@
   -moz-transform: translate(0px, 0) scale(10);
   cursor: pointer;
 }
+.file_upload {
+	position: absolute;
+ right: 23px;
+ top: 69px;
+
+}
 .file_upload div { 
 padding: 4px 14px;
 
