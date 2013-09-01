@@ -44,7 +44,7 @@ if(isset($errMsg))
 	<div class="clr"></div>
 	<div id="projectCreated"></div>
     <div id="createProject">
-	    <div class="project-brief-box">
+	    
 	    <h3>Course title</h3>
 	     <?php echo $this->Form->input('title',array('id'=>'projectTitle','div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	      <h3>Course details</h3>  
@@ -373,10 +373,10 @@ if(isset($errMsg))
 			}    
 		 	?>
 		 
-  	 </div>  	
+  	 	
   	 
   </div>	
-    <div class="clr"></div>
+   
   	<div class="clr"></div>
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
