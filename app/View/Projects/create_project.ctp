@@ -53,6 +53,9 @@ if(isset($errMsg))
 	      <h3>Course deadline</h3>
 	          <span class="pickdate"> <?php echo $this->Form->text('duedate',array('id'=>'duedate','div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?></span>
 	          
+	          
+	      <div class="line"></div>
+	      <h3>Select a department</h3>
 	            <select name="data[Project][subject_id]" id="subject_id" class="dropdown">
 	            <option value="">Please Select</option>
 	             <?php
@@ -89,13 +92,16 @@ if(isset($errMsg))
 	 			
 	            
 	            
-	            <h3>Leader:</h3>
+	            <h3>Owner</h3>
 	            <?php
 	            if ($this->Session->read("user_type") == 1 || $this->Session->read("user_type") == 7 ) 
 	            {
 	            	 //print_r($teachers);die;
-	           		echo '<p id="leader">'.$this->Form->input('leader_id',array('type'=>'select','div'=>false,'label'=>false,'value'=>$lid,'options'=>$teachers,'id'=>'cardtype','class'=>'dropdown','empty'=>"Please Select"))."</p>";
-
+	           		echo '<p id="leader">'.$this->Form->input('leader_id',array('type'=>'select','div'=>false,'label'=>false,'value'=>$lid,'options'=>$teachers,'id'=>'cardtype','class'=>'dropdown','empty'=>"Select an owner"))."</p>";
+	           		?>
+	           		<a href="<?php echo SITE_HTTP_URL;?>listTeachers" class="red" alt="">Add a new leader to the list</a>
+	           		
+	           		<?php
 	            }
 	            else 
 	            {
@@ -376,8 +382,25 @@ if(isset($errMsg))
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
 </div>
+
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>fbkstyle.css" type="text/css" media="screen" title="Test Stylesheet" charset="utf-8" />
 <script src="<?php echo JS_PATH;?>jquery.fcbkcomplete.min.js" type="text/javascript" charset="utf-8"></script>   
+<script type="text/javascript">
+	$(document).ready(function(){
+                $("#addedu").fancybox({
+			ajax : {
+			type	: "GET",
+			}
+		});
+		var randomnumber=Math.floor(Math.random()*101);//using random number to resolve cache issue
+   		loadPiece(siteUrl+"dashboard/listTeachersAjax/"+$('#departmentId').val()+"/?rand="+randomnumber,"#content_teachers");
+
+	$("#reset").click(function(){
+		$("#reset").hide();
+	});
+
+   	 });
+</script>
 <script type="text/javascript" src="<?php echo JS_PATH?>projects.js"></script>
 <script src="<?php echo JS_PATH ?>jquery.jeditable.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.livequery.js"></script> 
