@@ -129,21 +129,21 @@ if(isset($errMsg))
      ?>
  	<div id="docAndTask" style="<?php echo $d;?>">
  		<div class="rule"></div>
-		<div class="row">
+		
 	        <div class="left">
 	          <h3>Documents <span>&amp;</span> Tasks</h3>
 	 	    </div>
 	        <div class="right">
 	          <h3>Weight</h3>
 	        </div>
-        </div>
+        
 	  	<div class="clr"></div>
-<div class="row">
+
 	        <div class="left">
 	          <h3>Create a Task</h3>
 	 	    </div>
 	       
-        </div>
+      
 	  	<div class="clr"></div>
 	   	<div id="loaderJsTask"></div>
 		        
