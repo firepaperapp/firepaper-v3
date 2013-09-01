@@ -139,9 +139,9 @@ if(isset($errMsg))
         
 	  	<div class="clr"></div>
 
-	        <div class="left">
+	       
 	          <h3>Create a Task</h3>
-	 	    </div>
+	 	   
 	       
       
 	  	<div class="clr"></div>
@@ -289,8 +289,7 @@ if(isset($errMsg))
         <div class="line"></div>
 	       
 	          <h3>Add Groups</h3>
-	 	   
-        <div class="project-brief-box-wrapper"> 
+	 
         	<div class="project-drop-area-wrapper">
 		          <div class="add file-details-project">            	            	
 		            	 <div class="width100per">
@@ -308,8 +307,7 @@ if(isset($errMsg))
 							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 						</div>				
-						
-		          </div>
+					
 		    </div>
         </div>
          <!--< <div class="row">

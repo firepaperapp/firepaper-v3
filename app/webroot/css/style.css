@@ -973,7 +973,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-drop-area-wrapper { 
 	position:relative;
 	background:#fff;
-	margin-top:28px; 
 	margin-left: 0px; 
 	margin-right: 0px;
  }
