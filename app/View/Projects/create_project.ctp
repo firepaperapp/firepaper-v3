@@ -99,7 +99,7 @@ if(isset($errMsg))
 	            	 //print_r($teachers);die;
 	           		echo '<p id="leader">'.$this->Form->input('leader_id',array('type'=>'select','div'=>false,'label'=>false,'value'=>$lid,'options'=>$teachers,'id'=>'cardtype','class'=>'dropdown','empty'=>"Select an owner"))."</p>";
 	           		?>
-	           		<a href="<?php echo SITE_HTTP_URL;?>listTeachers" class="red" alt="">Add a new leader to the list</a>
+	           		<a id="addedu" class="red" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">
 	           		
 	           		<?php
 	            }
@@ -233,8 +233,7 @@ if(isset($errMsg))
 								</p>
 								
 								
-								
-								<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo count($rec['projComments']);?> Comment(s)</a></p> 
+	<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo count($rec['projComments']);?> Comment(s)</a></p> 
 					
 					
 						<!-- HTML To add a Comment for user task Doc -->
