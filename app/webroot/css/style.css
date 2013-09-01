@@ -26,21 +26,21 @@ h1 {
 h2 { 
 	font-size:18px; 
 	font-weight:normal; 
-	color:#408fb2; 
+	color:#55606e; 
 }
 h3 {  
 	margin-top: 10px;
 	margin-bottom:14px; 
-	color:#abaaaa; 
+	color:#55606e; 
 	font-size: 13px; 
 	text-transform: uppercase; 
 }
 h3 a { 
-	color:#1c556e; 
+	color:#55606e; 
 }
 h4 {
 	font-size: 12px; 
-	color:#abaaaa;  
+	color:#55606e;  
 	text-transform: uppercase; 
 	margin-bottom: 14px; 
 }
@@ -433,8 +433,8 @@ select {
     background: #fff;
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
     box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
-    height: 36px;
-    line-height: 36px;
+    height: 32px;
+    line-height: 32px;
     padding: 0 15px;
     border: 1px solid #cbcbcb;
     color: #bfbfbf;
@@ -444,7 +444,9 @@ select {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-
+.sign-in {
+	margin-left: 6px;
+}
 .submit:hover, .submit-grey:hover, .sign-in:hover {
     color: #454040;
 }
