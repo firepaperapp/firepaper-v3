@@ -1,5 +1,5 @@
 <div class="activity-panel-wrapper marginT10">
-	<div class="activity-panel">
+	
 	<?php
 	App::import('Helper','Time');
 	$time = new TimeHelper(new View());
@@ -107,5 +107,5 @@
 	}
 	?> 
 	<!-- end Project bars --->
-	</div>
+	
 </div>
