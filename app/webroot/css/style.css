@@ -1026,7 +1026,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-brief-box-wrapper {
 	padding-top: 50px;
-	margin:0px 0px 0px 50px;
 }
 .project-owner {
 	margin: 16px;
@@ -1040,7 +1039,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-weight: normal;
 }
 .project-wrapper {
-	
+	margin: 0px 0px 0px 40px;
 }
 .profile-container {
 	padding:40px 50px;
