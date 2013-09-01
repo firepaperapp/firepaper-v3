@@ -205,20 +205,13 @@ select {
 	margin-top: 10px;
 }
 .navigation .profile .name { 
-	color:#363F48; 
-	font-size:220px; 
+	color:#7a7a7a; 
+	font-size:13px; 
 	margin-left: 10px; 
 	font-weight:300; 
 	float: left; 
 }
-.navigation .profile h1 {
-	color: #454040;
-	font-size: 24px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-.navigation .profile h1 span { 
+.navigation .profile .name span { 
 	font-size: 14px;
 	font-weight: normal;
 	margin-left: 10px;
