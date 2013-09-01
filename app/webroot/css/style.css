@@ -812,7 +812,9 @@ ul.list-activity li span {
     color: #595959;
     border: 1px solid #9b9b9b !important;
 }
-
+.activity {
+	margin: 20px;	
+}
 .activity .left {
     width: 520px;
 }
