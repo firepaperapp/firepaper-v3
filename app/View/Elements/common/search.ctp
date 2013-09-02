@@ -73,7 +73,7 @@ $(document).ready(function(){
  		<option value="classgroup">Class Group</option>
  		<option value="student">Student</option>
  	</select>
- 	<input type="submit" name="searchKeywordBtn" id="searchKeywordBtn" value="Submit" />
+ 	<input type="submit" name="searchKeywordBtn" class="action-button" id="searchKeywordBtn" value="Submit" />
 	 <input type="hidden" name="data[classGroupSearch][posted]" id="posted" value="1">
 	</form>
 	<!-- Search Form End -->

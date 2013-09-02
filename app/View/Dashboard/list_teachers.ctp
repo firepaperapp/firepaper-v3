@@ -53,7 +53,7 @@
 		<?php } ?>
  		<span><strong>Search:</strong> 
 			 <?php echo $this->Form->input('departmentTeacherSearch.firstname',array('div'=>false,'label'=>false,"id"=>"firstname",'maxlength'=>'150'));?> 
-			 <input name="frmSubmit" class="formButtonBluebg" value="Search" alt="Search" title="Search" type="submit"/>
+			 <input name="frmSubmit" class="formButtonBluebg action-button" value="Search" alt="Search" title="Search" type="submit"/>
 <!--			 <a class="sign-in" href="<?php echo SITE_HTTP_URL?>listTeachers/<?php echo $departmentId;?>">Reset Search</a>-->
 
 		<a class="sign-in" id="reset" style="display:none; "onclick="filterRecords('reset');" href="#">Reset Search</a>
