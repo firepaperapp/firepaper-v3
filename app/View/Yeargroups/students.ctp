@@ -10,13 +10,12 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="activity">
-	<div class="index">
+<div class="index page white">
 	<h3>Students</h3>
 	 <div class="upload-container">
                                  		
     		<a href="" class="button">Add another Student</a>
-            <a href="javascript:animatedcollapse.toggle('add-groups')" class="submit">Create a Year or Class group</a>
+            <a href="javascript:animatedcollapse.toggle('add-groups')" class="button right">Create a Year or Class group</a>
     		<span class="form-title"><strong>Search:</strong> </span>
             <input class="doc-name" value="Search">
             <div class="clr"></div>
@@ -209,4 +208,3 @@ $(document).ready(function(){
 	            <div class="clr"></div>
 	        </div>
 	   </div>
-</div><!-- end activity -->

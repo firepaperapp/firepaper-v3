@@ -125,7 +125,7 @@ $(document).ready(function()
 		Add Another Student</a>
 	<?php } ?>
 	<?php if($show_yrgroup_link=='Y'){?>
- 	<a href="javascript:void(0)" onclick="$('#add-groups').slideToggle('slow');" class="button">Create a Year or Class group</a> 
+ 	<a href="javascript:void(0)" onclick="$('#add-groups').slideToggle('slow');" class="button right">Create a Year or Class group</a> 
 	<?php }?>
 	
 	<!-- Search Form Start -->
