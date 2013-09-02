@@ -18,7 +18,7 @@ $(document).ready(function()
 	<div class="index">
 		<h3>Co-Admins</h3>
 	 		<div class="upload-container" style="height:25px;">	
-				<a id="addcoadmin" href="<?php echo SITE_HTTP_URL?>users/addNewCoadmin" class="add-btn">Add New Co-Admin</a>
+				<a id="addcoadmin" href="<?php echo SITE_HTTP_URL?>users/addNewCoadmin" class="submit">Add New Co-Admin</a>
 			</div>
 			<div class="clr-spacer"></div>
  		 
