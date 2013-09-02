@@ -169,11 +169,6 @@ textarea {
 }
 select {	
 	width: 220px;
-	/*-webkit-appearance: none;
-	border-radius:1px !important;
-	height:34px;
-	background:url(../images/ddarrows.png) right top no-repeat;
-	border: 1px solid #cbcbcb;*/
 	color:#bfbfbf;
 	font-size: 13px;
 	padding: 8px 9px 8px 12px;
@@ -450,7 +445,7 @@ select {
     float: left;
 }
 
-button, .submit, .submit-grey, .sign-in, .logout {
+button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	cursor: pointer;
     background: #fff;
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
