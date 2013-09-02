@@ -55,7 +55,7 @@ if(isset($errMsg))
 	          
 	          
 	      <div class="line"></div>
-	      <h3>Select a department</h3>
+	      <h3>Select a subject</h3>
 	            <select name="data[Project][subject_id]" id="subject_id" tabindex="4" class="dropdown">
 	            <option value="">Please Select</option>
 	             <?php
