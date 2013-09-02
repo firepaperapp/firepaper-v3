@@ -26,8 +26,8 @@ if(isset($errMsg))
 } 
 ?>
 </div>
-<div class="activity">
-	<div class="index">
+
+	<div class="index page white">
 	<h3>Students</h3>
 	<?php if($showbox=="Y"){ echo  $this->requestAction("/yeargroups/addyeargroup/".$group_id);} 
 	else {?>
@@ -48,4 +48,3 @@ if(isset($errMsg))
 	</div><!-- end rightcol -->
 	<input type="hidden" name="group_id" id="group_id" value="<?php echo $group_id;?>" />
 	<input type="hidden" name="calledAction" id="calledAction" value="listYearGroupsAjax/<?php echo $group_id;?>" />
-</div><!-- end activity -->

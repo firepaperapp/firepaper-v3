@@ -10,7 +10,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload-ui.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui.min.js"></script> 
 <!-- File Upload Progress bar End -->
-<div class="index white">
+<div class="index white page">
 <div class="validation-signup" id="validation-container" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
 <?php
 if(isset($errMsg))
@@ -20,7 +20,6 @@ if(isset($errMsg))
 ?>
 </div>
 <?php echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project')); ?>
-<div class="activity">
 <script> 
 	var groupAdded = <?php echo json_encode($dataGroups);?>;	
 	var userAdded = <?php echo json_encode($dataUsers);?>;	
@@ -315,7 +314,6 @@ if(isset($errMsg))
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 						</div>				
 					
-		    </div>
         </div>
          <!--< <div class="row">
 	        <div class="left">

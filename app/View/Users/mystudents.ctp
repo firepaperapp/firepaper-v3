@@ -1,5 +1,4 @@
-<div class="activity">
-	<div class="index">
+<div class="index page white">
 	<h3>Students</h3>
  	<!-- Inner Content List start -->
 	<div class="row">
@@ -43,5 +42,3 @@
 	 }?>
 	 <div class="clr"></div>
  </div>
-	<!-- Inner Content List end -->	 
-</div><!-- end activity -->

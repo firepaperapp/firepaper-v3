@@ -130,8 +130,8 @@ function addComment(f,t)
 	}
 }
 </script>
-<div class="activity">
-	 <div class="index">
+
+	 <div class="index page white">
 	 	<?php
 		if($this->Session->check('Message.flash'))
 		{?>
@@ -305,4 +305,3 @@ function addComment(f,t)
 		</form>
 		<div class="clr"></div>
 	</div>
-</div><!-- end activity -->

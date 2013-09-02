@@ -19,8 +19,7 @@ if(isset($errMsg))
 } 
 ?>
 </div>
-<div class="activity">
-	<div class="index">
+	<div class="index page white">
 	<h3>Students</h3>
 	<?php echo $this->requestAction("/yeargroups/addyeargroup");?>
     <div class="clr-spacer"></div>
@@ -174,4 +173,3 @@ if(isset($errMsg))
 	            <div class="clr"></div>
 	        </div>
 	   </div>
-</div><!-- end activity -->

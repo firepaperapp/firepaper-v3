@@ -25,8 +25,8 @@ else
 <input type="hidden" id="urluid" value="<?php echo $url_uid;?>">
 
 <!--<div style="float:right;cursor:pointer;"><a onclick="javascript:history.go(-1)">Back</a></div>-->
-<div class="activity">
-    <div class="index white">
+
+    <div class="index white page">
          
     	
         <div class="profile-container">
@@ -202,4 +202,3 @@ else
     </div>
     <div id="backgroundPopup"></div>
 </div><!-- end activity -->
-<div class="clr"></div>

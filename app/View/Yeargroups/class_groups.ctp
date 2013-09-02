@@ -20,8 +20,7 @@
 
    	 });
 </script>
-<div class="activity">
-	<div class="index">
+	<div class="index page white">
 		<h3>Students</h3>
 	 	<!-- search Section start here -->
  		<?php if($showbox=="Y"){ echo $this->requestAction("/yeargroups/addyeargroup/$classgroupid");} 
@@ -39,4 +38,3 @@
 		<input type="hidden" name="showadduserid" id="showadduserid" value="<?php echo $showadduser;?>">
 		<input type="hidden" name="calledAction" id="calledAction" value="listStudentsAjax/<?php echo $classgroupid;?>" />
 	</div>
-</div>

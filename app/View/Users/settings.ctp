@@ -24,8 +24,8 @@ else
 <input type="hidden" id="uniquename" value="<?php echo $userdata['User']['username']?>">
 <input type="hidden" id="sitetitle" value="<?php echo $userdata['User']['sitetitle']?>">
 <input type="hidden" id="emailval" value="<?php echo $userdata['User']['email']?>">
-<div class="activity">  
-    <div class="index">
+
+    <div class="index page white">
 	<?php
 	if($this->Session->check('Message.flash'))
 	{?>
@@ -273,4 +273,4 @@ else
 </div>
 </div>
 <div id="backgroundPopup"></div>
-</div><!-- end activity -->
+
