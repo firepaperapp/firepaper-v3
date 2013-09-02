@@ -2089,24 +2089,38 @@ p.form-title {
     text-align: right;
     margin-right: 0;
 }
-
+.user-box-wrapper {
+	float: left;
+	width: 255px;
+	background: #f5f7f8;
+	padding: 6px;
+	margin: 0 0 16px 16px;
+	border-radius: 4px;
+}
 .user-box-left {
-    background: #EEF7F7;
-    border: 1px solid #ABD8D8;
-    padding: 10px;
-    float: left;
-    width: 166px;
-    margin-bottom: 10px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    color: #55606e;
+    text-align: center;
+    padding: 0 40px;
+    border: 1px solid #e0e0e0;
+    height: 260px;
+    position: relative;
+    border-radius: 3px;
 }
 
 .user-box {
-    background: #EEF7F7;
-    border: 1px solid #ABD8D8;
-    padding: 10px;
-    float: left;
-    width: 186px;
-    margin-left: 14px;
-    margin-bottom: 10px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    color: #55606e;
+    text-align: center;
+    padding: 0 40px;
+    border: 1px solid #e0e0e0;
+    height: 260px;
+    position: relative;
+    border-radius: 3px;
 }
 
 .links {
@@ -2123,8 +2137,11 @@ p.form-title {
 }
 
 .links a {
-    font-weight: 400;
-    text-decoration: underline;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #363f48;
+    margin: 0;
 }
 
 .profile-details-wrapper {
