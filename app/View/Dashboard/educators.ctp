@@ -1,4 +1,4 @@
-<div class="activity">
+
 <div class="index">
 <h3>Educators</h3>
     	<div class="row">
@@ -130,6 +130,6 @@
             <div class="clr"></div>
         </div>
 
-</div><!-- end activity -->
+
 <div class="clr"></div>
 </div>

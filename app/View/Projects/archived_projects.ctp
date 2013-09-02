@@ -8,8 +8,7 @@
     });
    
 </script>
-<div class="activity">
-	 <div class="index">
+	 <div class="index page white">
 	 	<!-- search Section start here -->
 	 	 <h3><?php
 	 		if(!isNull($draft))
@@ -33,5 +32,4 @@
 		</div>
 		<!-- Inner Content List end -->
 	</div>
-</div>
 <input type="hidden" name="draft" id="draft" value="<?php echo $draft;?>" />

@@ -1,5 +1,4 @@
-<div class="activity">
-  <div class="index">
+<div class="index page white">
     <h3>
     <?php
     if($user_id !=  $this->Session->read("userid"))
