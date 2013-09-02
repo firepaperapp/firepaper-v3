@@ -82,6 +82,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		   		 	}
 		   		 	else {
 		   		 	?>
+		   		 	<div class="user-box-wrapper">
 		   		 		<div class="user-box">	
 		   		 	<?php 
 		   		 	}
