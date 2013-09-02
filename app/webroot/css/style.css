@@ -2091,13 +2091,13 @@ p.form-title {
 }
 .user-box-wrapper {
 	float: left;
-	width: 255px;
+	width: 210px;
 	background: #f5f7f8;
 	padding: 6px;
 	margin: 0 0 16px 16px;
 	border-radius: 4px;
 }
-.user-box-left {
+.user-box, .user-box-left {
     background: #fff;
     font-size: 12px;
     line-height: 20px;
@@ -2105,23 +2105,11 @@ p.form-title {
     text-align: center;
     padding: 0 40px;
     border: 1px solid #e0e0e0;
-    height: 260px;
+    min-height: 200px;
     position: relative;
     border-radius: 3px;
 }
 
-.user-box {
-    background: #fff;
-    font-size: 12px;
-    line-height: 20px;
-    color: #55606e;
-    text-align: center;
-    padding: 0 40px;
-    border: 1px solid #e0e0e0;
-    height: 260px;
-    position: relative;
-    border-radius: 3px;
-}
 .user-box-left img, .user-box img {
 	margin: 35px auto 10px auto;
 }
@@ -2134,9 +2122,6 @@ p.form-title {
     text-align: center;
 }
 
-.profile {
-    float: right;
-}
 
 .links a {
     font-size: 14px;
