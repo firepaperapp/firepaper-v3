@@ -48,7 +48,7 @@
 			
 			<?php if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7) { ?>
 		<p>
-		<a id="addedu" class="browse-btn" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">
+		<a id="addedu" class="submit" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">
 		Add New Educator</a></p>
 		<?php } ?>
  		<span><strong>Search:</strong> 
