@@ -88,12 +88,12 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		   		 	}
 		   		 }
 		   		?>
-	 				<div class="imgclass"><img src="<?php echo $teachers['User']['profilepic'];?>" class="profile" /></div>
+	 				<img src="<?php echo $teachers['User']['profilepic'];?>" class="profile" />
 
 			       <?php $editpgurl = SITE_HTTP_URL."users/viewProfile/".$teachers['User']['id'];?>
 
 					<div class="links">
-						<p class="title"><a id="edituserprof" href="<?php echo $editpgurl; ?>"><b><?php echo ucfirst(Sanitize::html($teachers['User']['firstname']." ".$teachers['User']['lastname']));?></b></a>
+						<p class="title"><a id="edituserprof" href="<?php echo $editpgurl; ?>"><strong><?php echo ucfirst(Sanitize::html($teachers['User']['firstname']." ".$teachers['User']['lastname']));?></strong></a>
 						</p>
 	 					<p>
 	 					<?php
