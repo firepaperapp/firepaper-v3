@@ -88,7 +88,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		   		 	}
 		   		 }
 		   		?>
-	 				<img src="<?php echo $teachers['User']['profilepic'];?>" class="profile" />
+	 				<img src="<?php echo $teachers['User']['profilepic'];?>"  />
 
 			       <?php $editpgurl = SITE_HTTP_URL."users/viewProfile/".$teachers['User']['id'];?>
 
