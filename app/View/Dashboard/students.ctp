@@ -16,7 +16,7 @@ $(document).ready(function(){
 	 <div class="upload-container">
                                  		
     		<a href="" class="browse-btn">Add another Student</a>
-            <a href="javascript:animatedcollapse.toggle('add-groups')" class="button">Create a Year or Class group</a>
+            <a href="javascript:animatedcollapse.toggle('add-groups')" class="submit">Create a Year or Class group</a>
     		<span class="form-title"><strong>Search:</strong> </span>
             <input class="doc-name" value="Search">
             <div class="clr"></div>

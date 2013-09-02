@@ -23,7 +23,7 @@ if(isset($errMsg))
      <input type="password" <?php if(!$this->request->data){?>onfocus="if(this.value =='123456789' ) this.value=''" onblur="if(this.value=='') this.value='123456789'" value="<?php echo $passCookieval;?>" <?}else {?> value="<?php echo $this->request->data['password'];?>" <?php }?> id="vPasswordLeft" name="data[password]">
      
     <div class="clr"></div>
-     <input name="" type="submit" value="Sign in" class="sign-in"/>
+     <input name="" type="submit" value="Sign in" class="button"/>
      <div class="tick-box">
      <input name="remember_me" type="checkbox" value="1" <?php if((isset($_POST['remember_me']) && $_POST['remember_me']==1) || $remember_me==true){ echo 'checked = "checked"'; }?>/><label for="remember-me">Remember me on this computer</label>
     </div>

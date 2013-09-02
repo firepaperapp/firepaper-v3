@@ -44,7 +44,7 @@ function filterRecords(check)
  			<span><strong>Search:</strong> 
 			 <?php echo $this->Form->input('search.title',array('div'=>false,'label'=>false,"id"=>"title",'maxlength'=>'150'));?> 
 			 <input name="frmSubmit" class="formButtonBluebg" value="Search" alt="Search" title="Search" type="submit"/>
-			<a class="sign-in" id="reset" style="display:none;" onclick="filterRecords('reset');" href="#">Reset Search</a>
+			<a class="button" id="reset" style="display:none;" onclick="filterRecords('reset');" href="#">Reset Search</a>
 			 <input type="hidden" name="data[search][posted]" id="posted" value="1">
 			 </span>		 
 			 <p style="margin-left: 50px;"><small>^ is not allowed</small></p>
