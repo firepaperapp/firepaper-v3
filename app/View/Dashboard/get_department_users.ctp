@@ -104,7 +104,7 @@ $(document).ready(function()
 	{
 	?>
 		<a class="edit assignUser" href="<?php echo SITE_HTTP_URL?>dashboard/assignUserToDepartment/educator/<?php echo $departmentId;?>">Assign another educator</a>&nbsp;-&nbsp;
-		<a class="edit" class="button" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/<?php echo $departmentId;?>">Add new educator</a>	
+		<a class="edit" class="button right" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/<?php echo $departmentId;?>">Add new educator</a>	
 	<?}?>
 </li>
 </ul>
