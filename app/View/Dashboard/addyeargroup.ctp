@@ -19,7 +19,7 @@ $(document).ready(function()
 <?php echo $this->Form->create('classGroup', array('action'=>'','type' => 'post','id'=>'classGroup')); ?>
 <div class="upload-container">
 	<a href="" class="button">Add another Student</a>
-	<a href="javascript:animatedcollapse.toggle('add-groups')" class="submit">Create a Year or Class group</a>
+	<a href="javascript:animatedcollapse.toggle('add-groups')" class="submit right">Create a Year or Class group</a>
 	<span class="form-title"><strong>Search:</strong> </span>
 	<input class="doc-name" value="Search">
 	<div class="clr"></div>
