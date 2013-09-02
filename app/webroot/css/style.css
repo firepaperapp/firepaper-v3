@@ -2122,14 +2122,16 @@ p.form-title {
     position: relative;
     border-radius: 3px;
 }
-
+.user-box-left img, .user-box img {
+	margin: 35px auto 10px auto;
+}
 .links {
-    float: left;
-    width: 90px;
+
 }
 
 .links p {
-    margin-bottom: 4px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .profile {
