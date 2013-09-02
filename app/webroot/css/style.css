@@ -2090,7 +2090,7 @@ p.form-title {
     margin-right: 0;
 }
 
-.row .user-box-left {
+.user-box-left {
     background: #EEF7F7;
     border: 1px solid #ABD8D8;
     padding: 10px;
@@ -2099,7 +2099,7 @@ p.form-title {
     margin-bottom: 10px;
 }
 
-.row .user-box {
+.user-box {
     background: #EEF7F7;
     border: 1px solid #ABD8D8;
     padding: 10px;
@@ -2109,20 +2109,20 @@ p.form-title {
     margin-bottom: 10px;
 }
 
-.row .links {
+.links {
     float: left;
     width: 90px;
 }
 
-.row .links p {
+.links p {
     margin-bottom: 4px;
 }
 
-.row .profile {
+.profile {
     float: right;
 }
 
-.row .links a {
+.links a {
     font-weight: 400;
     text-decoration: underline;
 }
