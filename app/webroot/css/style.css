@@ -2129,6 +2129,8 @@ p.form-title {
 }
 .user-box-left img, .user-box img {
 	margin: 35px auto 10px auto;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
 }
 .links {
 

@@ -108,7 +108,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 	 					}
 	 					?>
 	 					 <?php echo $subjects;?></p>
-						<p><a href="<?php echo $editpgurl; ?>">View info</a></p>				
+						<a href="<?php echo $editpgurl; ?>" class="edit">View info</a>				
 			        </div>
 					<div class="clr"></div>
 			    </div>  
