@@ -113,7 +113,7 @@ echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class=
 					if($showdel==1)
 					{
 					?>
-					<p><a class="edit deleteGroup" href="<?php echo SITE_HTTP_URL."yeargroups/deletegroup/".$rec['classGroup']['id'];?>">Delete</a></p>
+					<a class="edit deleteGroup" href="<?php echo SITE_HTTP_URL."yeargroups/deletegroup/".$rec['classGroup']['id'];?>">Delete</a>
 					<?php }?>
 					<?php 
 					}?>
