@@ -2122,6 +2122,7 @@ p.form-title {
 	font-family: "modern_pictograms_proregular";
 	font-size: 30px;
 	color: #55606e;
+	letter-spacing: -2px;
 	text-align: center;
 	margin: 20px;
 
