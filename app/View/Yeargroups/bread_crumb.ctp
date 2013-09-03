@@ -6,7 +6,7 @@
 
     	<?php if($showyear=='Y'){?>
 		<div class="crumb" style="cursor:pointer;" onclick="window.location = '<?php echo SITE_HTTP_URL;?>yeargroups/viewgroups/<?php echo $yrgpid;?>'">
-			<h3<a  href="<?php echo SITE_HTTP_URL;?>yeargroups/viewgroups/<?php echo $yrgpid;?>"><?php echo $yrgpname?></a></h3>
+			<h3><a  href="<?php echo SITE_HTTP_URL;?>yeargroups/viewgroups/<?php echo $yrgpid;?>"><?php echo $yrgpname?></a></h3>
 			<p><a href="<?php echo SITE_HTTP_URL;?>yeargroups/viewgroups/<?php echo $yrgpid;?>"><?php echo $classgrpcount?> Class Groups</a></p>
 		</div>
 	<?php } ?>
