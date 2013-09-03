@@ -40,18 +40,21 @@ echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class=
 				<div class="clr"></div>
   			  </div>
        		 <div class="row">
+       		 <div class="user-box-wrapper">
 				<div class="user-box-left">		 			
 	   <?php }
 	   		 else 
 	   		 { 
 	   		 	if($m==0)
 	   		 	{?>
+	   		 	<div class="user-box-wrapper">
 	   		 		<div class="user-box-left">
 				
 	   		 	<?php 
 	   		 	}
 	   		 	else {
 	   		 	?>
+	   		 	<div class="user-box-wrapper">
 	   		 		<div class="user-box">	
 	   		 	<?php 
 	   		 	}
@@ -117,12 +120,14 @@ echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class=
 		        </div>
 				<div class="clr"></div>
 		    </div>  
+	   		 	</div>
 	<?php
 	$k++;	
      $m++;		 
     
 	 }?>
 	 <div class="clr"></div>
+</div>
 </div>
 <?php 
 $this->Paginator->options(array('url' => $this->passedArgs));
