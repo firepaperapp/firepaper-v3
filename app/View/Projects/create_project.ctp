@@ -113,7 +113,7 @@ if(isset($errMsg))
 	          <div class="clr"></div>
 	      	     
 	      <!-- end project wrapper -->      
-	     </div>
+	     
 	     <input type="hidden" id="project_id" name="project_id" value="<?php echo $project_id;?>" />
   		 </form>
     </div>   
@@ -376,6 +376,7 @@ if(isset($errMsg))
   
   	<div class="clr"></div>
   	</div>	
+  	</div>
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
 </div>
