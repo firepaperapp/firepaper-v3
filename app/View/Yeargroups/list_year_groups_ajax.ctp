@@ -69,7 +69,7 @@ echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class=
 		       	$editpgurl = SITE_HTTP_URL."yeargroups/classGroups/".$rec['classGroup']['id'];
 		       }
 		       ?>
-		       <div class="user-icon">f</div>
+		       <div class="user-icon">ff</div>
 				<div class="links">
 					<p class="title">
 					
