@@ -33,7 +33,7 @@ echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class=
    	 <?php $k=1;
  	 foreach($data as $rec)
 	 { 
-	 		if($m%3==0 && $m!=0)
+	 		if($m%4==0 && $m!=0)
 	 		{ 
 	 		?>
 			
