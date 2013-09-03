@@ -491,15 +491,16 @@ a.std-btn {
 a.std-btn:hover { 
 	background:#7CC2C2; 
 }
-.edit { 
+.edit, .links a.edit { 
 	color:#e06161; 
 	font-weight:normal; 
 	font-size:12px; 
 }
-.edit:hover { 
+.edit:hover, .links a.edit:hover { 
 	text-decoration:underline; 
 	cursor:pointer; 
 }
+
 /* Left Col */
 
 p.task-title { 
