@@ -69,9 +69,10 @@ echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class=
 		       	$editpgurl = SITE_HTTP_URL."yeargroups/classGroups/".$rec['classGroup']['id'];
 		       }
 		       ?>
-
-				<div class="links" style="width:160px;">
+		       <div class="user-icon">f</div>
+				<div class="links">
 					<p class="title">
+					
 						<a id="edituserprof" href="<?php echo $editpgurl; ?>"><b><?php echo ucfirst(Sanitize::html($rec['classGroup']['title']));?></b></a>
 					</p>
 					<?php
