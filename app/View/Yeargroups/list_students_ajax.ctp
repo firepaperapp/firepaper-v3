@@ -88,17 +88,20 @@ if($this->Session->check('Message.flash'))
 			<!--	<div class="clr"></div>-->
   			  </div>
        		 <div class="row">
+       		 <div class="user-box-wrapper">
 				<div class="user-box-left">		 			
 	   <?php }
 	   		 else 
 	   		 {
 	   		 	if($i==0)
 	   		 	{?>
+	   		 	<div class="user-box-wrapper">
 	   		 		<div class="user-box-left">
 	   		 	<?php 
 	   		 	}
 	   		 	else {
 	   		 	?>
+	   		 	<div class="user-box-wrapper">
 	   		 		<div class="user-box">	
 	   		 	<?php 
 	   		 	}
@@ -189,12 +192,14 @@ if($this->Session->check('Message.flash'))
 		        ?>
 				<div class="clr"></div>
 		    </div>  
+		   </div>
 	<?php
 	$k++;	
      $i++;		 
      
 	 }?>
 	 <div class="clr"></div>
+ </div>
  </div>
 <?php }
 else 
