@@ -450,7 +450,7 @@ select {
 }
 
 
-button, .submit, .submit-grey, .sign-in, .logout {
+button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	cursor: pointer;
     background: #fff;
     -webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
@@ -2122,9 +2122,9 @@ p.form-title {
 	font-family: "modern_pictograms_proregular";
 	font-size: 30px;
 	color: #55606e;
-	letter-spacing: -2px;
+	letter-spacing: -7px;
 	text-align: center;
-	margin: 20px;
+	margin: 40px 0px 10px -6px;
 
 }
 .user-box-left img, .user-box img {
@@ -3381,8 +3381,6 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 
 .marginT10 {
     margin-top: 20px;
-
-    margin-left: 20px;
     position: relative;
 }
 
