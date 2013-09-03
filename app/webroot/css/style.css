@@ -2103,7 +2103,7 @@ p.form-title {
 	width: 210px;
 	background: #f5f7f8;
 	padding: 6px;
-	margin: 0 0 16px 16px;
+	margin: 0 16px 16px 0px;
 	border-radius: 4px;
 }
 .user-box, .user-box-left {
