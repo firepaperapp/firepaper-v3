@@ -3294,30 +3294,10 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 	margin-right:2px; 
 }
 
-.bread .crumb em { 
-	color:#51ADAD; 
-	margin-top:4px; 
-	padding:4px; 
-	font-size:12px; 
-	font-style:normal; 
-}
+
 /*End Breadcrumb trail */
 
 
-.bread { }
-.bread .crumb { 
-	padding:8px;
-	background:#EEF7F7; 
-	border-bottom:2px solid #000000;
-	border-left:3px solid #EEF7F7; 
-	float:left; 
-	margin-right:2px; 
-}
-.bread .crumb h2 { 
-	font-size:14px; 
-	color:black; 	
- }
-.bread .crumb em { color:#51ADAD; margin-top:4px; padding:0px; font-size:10px; font-style:normal; }
 /* Added by manpreet */
 
 
