@@ -1,7 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+@font-face {
+	font-family: 'modern_pictograms_proregular';
+	src: url('../fonts/modernpictogramspro_2-webfont.eot');
+	src: url('../fonts/modernpictogramspro_2-webfont.eot?#iefix') 
+			format('embedded-opentype'),
+		 url('../fonts/modernpictogramspro_2-webfont.woff') 
+		 	format('woff'),
+		 url('../fonts/modernpictogramspro_2-webfont.ttf') 
+		 	format('truetype');
+	font-weight: normal;
+	font-style: normal;	
+}
 
 body { 
 	font-size:12px; 
@@ -2107,7 +2118,14 @@ p.form-title {
     position: relative;
     border-radius: 3px;
 }
-
+.user-box .user-icon {
+	font-family: "modern_pictograms_proregular";
+	font-size: 30px;
+	color: #55606e;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
 .user-box-left img, .user-box img {
 	margin: 35px auto 10px auto;
 }
