@@ -2799,7 +2799,7 @@ p.field-title {
 	color:#CCC; 
 	font-weight:normal; 
 }
-.main-signin input#username, .main-signin input#vPasswordLeft, .searchKeyword {
+.main-signin input#username, .main-signin input#vPasswordLeft {
 	width: 100%;
 }
 .main-signin input.sign-in { 
