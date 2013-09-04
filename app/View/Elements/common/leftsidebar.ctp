@@ -254,7 +254,7 @@
 	         </div><!-- end nav -->
 
          </div><!-- end nav -->
-
+   <footer class="footer"></div>
 </section>
 
 
