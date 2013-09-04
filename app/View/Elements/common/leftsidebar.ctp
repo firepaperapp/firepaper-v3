@@ -110,7 +110,7 @@
 	?>
 
 <section class="nav">
-	<div class="inner">
+
  		<?php if($this->Session->read("user_type")!=6) {?>
        
         	<div class="dashboard-icon"><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" >Projects</a></div>
@@ -251,7 +251,7 @@
 			
          
 	         <div class="clr"></div>
-	         </div><!-- end nav -->
+	        
 	          <footer class="footer"></div>
          </div><!-- end nav -->
   
