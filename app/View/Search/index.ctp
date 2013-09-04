@@ -41,12 +41,12 @@ function filterRecords(check)
 			<!-- search Section tart here -->
  		 <form method="post" action="" name="search" id="search" onsubmit="return filterRecords('filter');">
 		 <div class="upload-container">
- 			<span><strong>Search:</strong> 
+ 			<h3>Search:</h3> 
 			 <?php echo $this->Form->input('search.title',array('div'=>false,'label'=>false,"id"=>"title",'maxlength'=>'150'));?> 
 			 <input name="frmSubmit" class="formButtonBluebg" value="Search" alt="Search" title="Search" type="submit"/>
 			<a class="button" id="reset" style="display:none;" onclick="filterRecords('reset');" href="#">Reset Search</a>
 			 <input type="hidden" name="data[search][posted]" id="posted" value="1">
-			 </span>		 
+			 		 
 			 <p style="margin-left: 50px;"><small>^ is not allowed</small></p>
 		</div>		
 		</form>
