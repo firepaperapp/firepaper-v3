@@ -84,8 +84,8 @@ class AppController extends Controller {
 	}
    function beforeFilter(){
 	   	
-		echo $this->Session->read('user_type'); exit;
-		if($this->Session->read('user_type') == 1){
+		//echo $this->Session->read('user_type'); exit;
+		if($this->Session->read('user_type') == 7){
 			
 			$this->redirect("http://school.firepaperapp.com");	
 		}
