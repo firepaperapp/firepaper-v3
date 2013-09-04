@@ -109,7 +109,7 @@
 	}
 	?>
 
-<div class="nav">
+<section class="nav">
 	<div class="inner">
  		<?php if($this->Session->read("user_type")!=6) {?>
        
@@ -255,6 +255,6 @@
 
          </div><!-- end nav -->
 
-</div>
+</section>
 
 

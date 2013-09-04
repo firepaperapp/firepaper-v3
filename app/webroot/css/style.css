@@ -141,12 +141,20 @@ textarea, input {
 	-moz-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.05);
 }
-input {
-	
-}
 textarea {
 	width: 100%;
 }
+select {	
+	width: 220px;
+	color:#bfbfbf;
+	font-size: 13px;
+	padding: 8px 9px 8px 12px;
+	font-weight: bold;
+	outline: 0;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(170, 170, 170, 0.1);
+	box-shadow: 0px 2px 3px 0px rgba(170, 170, 170, 0.1);	
+}
+
 .clr-spacer { 
 	height:0px; 
 	clear:both; 
@@ -163,30 +171,35 @@ textarea {
 .red { 
 	color:#e06161; 
 }
+.index { 
+	position: absolute;
+	left: 120px;
+	top: 69px;
+	width: 60%;
+}
+.page {
+	padding:54px; 
+}
+
+
+.white {
+	background: white; 
+}
+.main { 
+	margin:0 auto 70px;
+	width:100%; 
+}
 .fl-left { 
 	float:left !important; 
 	clear:both; 
 	margin-top:12px; 
 	margin-bottom:6px;
 }
-.button {
-	
-}
 .logo {
 	background: url(../images/fp-logo.png) no-repeat; 
 	width:127px; 
 	height: 134px; 
 	margin: 90px auto;
-}
-select {	
-	width: 220px;
-	color:#bfbfbf;
-	font-size: 13px;
-	padding: 8px 9px 8px 12px;
-	font-weight: bold;
-	outline: 0;
-	-webkit-box-shadow: 0px 2px 3px 0px rgba(170, 170, 170, 0.1);
-	box-shadow: 0px 2px 3px 0px rgba(170, 170, 170, 0.1);	
 }
 .navigation {  
 	width:100%;
@@ -275,25 +288,7 @@ select {
 	box-shadow: inset 0px 1px 0px 0px #67686a;
 	border: 1px solid black;
  }
-.index { 
-	position: absolute;
-	left: 120px;
-	top: 69px;
-	width: 60%;
-}
 
-.page {
-	padding:54px; 
-}
-
-
-.white {
-	background: white; 
-}
-.main { 
-	margin:0 auto 70px;
-	width:100%; 
-}
 #Project {
 	
 }
@@ -312,8 +307,11 @@ select {
 }
 /* Navigation styling */
 .nav { 
-	position:absolute; 
+	display: table;
+	table-layout: fixed;
+	border-collapse: collapse;
 	width:120px; 
+	height: 100%;
 	margin-left:0; 
 	margin-right: 46px; 
 	top:69px; 
