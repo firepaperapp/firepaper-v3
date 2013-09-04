@@ -177,6 +177,14 @@ select {
 	top: 69px;
 	width: 60%;
 }
+.container {
+	height: 100%;
+	display: table;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
 .page {
 	padding:54px; 
 }
