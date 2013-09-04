@@ -175,8 +175,9 @@ select {
 	position: absolute;
 	left: 120px;
 	top: 69px;
-	width: 75%;
-}
+	width: 77.4%;
+	}
+
 .container {
 	height: 100%;
 	display: table;
@@ -755,6 +756,7 @@ p.task-tickbox a {
 	position: absolute;
 	right: 316px;
 	background: white;
+	display: none;
 }
 a.group-tab { 
 	-moz-border-radius: 3px 3px 3px 3px; 
