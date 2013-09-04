@@ -83,6 +83,8 @@ class AppController extends Controller {
 		//    }
 	}
    function beforeFilter(){
+	   	
+		$this->Auth->logoutRedirect = array('component'=>'User','action'=>'logout');
    		$departments = array();
    		$dueInCount = 0;
 		if($this->request->params['controller'] == "projects")
