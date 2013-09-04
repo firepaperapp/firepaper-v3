@@ -27,7 +27,7 @@ if($this->Session->check('Message.flash'))
 if(is_array($data) && count($data)>0)
 {
 
-echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class="edit">Click Here</a> to create group.</p>';
+//echo '<p class="marginT10"><a href="javascript:void(0);" onclick="'.$f.'" class="edit">Click Here</a> to create group.</p>';
 ?>
 <div class="row">
    	 <?php $k=1;
