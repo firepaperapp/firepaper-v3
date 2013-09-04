@@ -36,15 +36,7 @@ $(document).ready(function() {
 });
 </script>
 
-
-  	<div class="top">
-  		<!--<div class="date-circle">
-			<div class="m"><? print(Date("M")); ?></div>
-		    <div class="d"><? print(Date("d")); ?></div>
-		</div>-->
-    	
-         
-<div class="navigation">
+<aside class="navigation">
 <div class="profile">
          		<img class="" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
       
@@ -61,5 +53,5 @@ $(document).ready(function() {
 
 <a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="logout right"> Logout</a>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
-</div><!-- end header -->
-</div>
+
+</aside>
