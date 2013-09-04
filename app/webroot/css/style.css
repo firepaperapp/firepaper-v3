@@ -743,9 +743,7 @@ p.task-tickbox a {
 /* Listed Activity */
 
 .latest-activity {
-	position: absolute;
-	left: 0px;
-	top:0px;
+	
 }
 
 .activity-panel-wrapper { 
