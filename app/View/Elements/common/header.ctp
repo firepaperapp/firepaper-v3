@@ -45,8 +45,8 @@ $(document).ready(function() {
 				
 				</span>
 </div>
-
-		 <div class="activity-panel-wrapper">
+<a class="latest-activity" href=""></a>
+ <div class="activity-panel-wrapper">
 			<div class="activity-panel">
 				<div class="upload-container">
 					<p>Filter by: </p>
@@ -55,7 +55,7 @@ $(document).ready(function() {
 				</div>
 		 		<div id="gotActivity">
 		 		<?php
-		 		echo $this->requestAction("/dashboard/adminLatestActivity");
+		 		echo $this->requestAction("../dashboard/adminLatestActivity");
 		 		?>
 		 		</div>
 		 	</div>
@@ -65,13 +65,13 @@ $(document).ready(function() {
  		?>	
   	 </div><!-- end left -->        
    <div class="latest-activity">
-     		<?php echo $this->requestAction("/users/currentComments");?>   
+     		<?php echo $this->requestAction("../users/currentComments");?>   
      		<?php 
 if($usertype!=6)
-echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
+echo $this->requestAction("../files/activityFilesProjectsDropbox");?>
   
  	</div><!-- end right -->
-
+ 	
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" ></a>
 <?php } ?>
