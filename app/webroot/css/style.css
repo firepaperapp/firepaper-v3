@@ -212,10 +212,6 @@ select {
 .navigation {  
 	width:100%;
 	background: white; 
-	position: absolute; 
-	top:0; 
-	left:0; 
-	z-index:16;
 	height: 68px;
 }
 .navigation .profile {
