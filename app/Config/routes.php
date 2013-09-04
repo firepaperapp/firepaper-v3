@@ -46,7 +46,7 @@ Router::connect('/listTeachers/*', array('controller' => 'dashboard', 'action' =
 Router::connect('/projects/draftProjects/*', array('controller' => 'projects', 'action' => 'archivedProjects'));
 Router::connect('/projects/viewProjects/*', array('controller' => 'projects', 'action' => 'index'));
 Router::connect('/whiteboard/:id', array('controller' => 'whiteboards','action' => 'viewWhiteboard'), array('pass'=>array('id')));
-
+Router::connect("/{$prefix}/:controller/:action/*", array('prefix' => $prefix, $prefix => true));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
