@@ -3309,7 +3309,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 	text-align:center; 
 	text-shadow: 0 1px white; 
 }
-#expandView p {
+.expandView p {
 	margin-bottom: 10px;
 	font-size: 13px;
 }
