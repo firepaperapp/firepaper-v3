@@ -161,7 +161,7 @@ $(document).ready(function()
 					<div class="clr"></div>
 		 		</div>
 				<div class="clr"></div>
-				<input type="submit" class="add-btn" value="Submit" name="btnSubmit" id="btnSubmit" style="border:0;padding: 5px 10px;height:22px;width:80px;"/>			 
+				<input type="submit" class="submit" value="Submit" name="btnSubmit" id="btnSubmit" />			 
 				
 				<div class="clr"></div>
 		</div>
