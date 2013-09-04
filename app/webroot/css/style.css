@@ -175,7 +175,7 @@ select {
 	position: absolute;
 	left: 120px;
 	top: 69px;
-	width: 70%;
+	width: 75%;
 }
 .container {
 	height: 100%;
@@ -743,7 +743,9 @@ p.task-tickbox a {
 /* Listed Activity */
 
 .latest-activity {
-
+	position: absolute;
+	left: 0px;
+	top:0px;
 }
 
 .activity-panel-wrapper { 
