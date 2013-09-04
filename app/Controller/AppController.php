@@ -84,6 +84,13 @@ class AppController extends Controller {
 	}
    function beforeFilter(){
 	   	
+		echo $this->Session->read('user_type'); exit;
+		if($this->Session->read('user_type') == 1){
+			
+			$this->redirect("http://school.firepaperapp.com");	
+		}
+		
+		
 		//echo "<pre />";
 		//print_r($this->Session->read('Auth'));
 		$this->Auth->logoutRedirect = array('component'=>'User','action'=>'logout');
@@ -162,10 +169,6 @@ class AppController extends Controller {
  		$user_id = $this->getAdminId();
 		$prjCount = 0;
 		
-		if($this->Session->read('user_type') == 1){
-			
-			$this->redirect("http://school.firepaperapp.com");	
-		}
 		
 		if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7|| $this->Session->read('user_type')==3)
 		{
