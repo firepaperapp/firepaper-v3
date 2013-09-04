@@ -45,7 +45,33 @@ $(document).ready(function() {
 				
 				</span>
 </div>
-<a class="latest-activity" href=""></a>
+
+		 <div class="activity-panel-wrapper">
+			<div class="activity-panel">
+				<div class="upload-container">
+					<p>Filter by: </p>
+					<?php echo $this->Form->input('department',array('type'=>'select','div'=>false,'label'=>false,'options'=>$deptList,'id'=>"department_act","onchange"=>"getStuAndTeachers();","empty"=>"Please Select"));?>
+					<span id="stuTeacher"></span>
+				</div>
+		 		<div id="gotActivity">
+		 		<?php
+		 		echo $this->requestAction("/dashboard/adminLatestActivity");
+		 		?>
+		 		</div>
+		 	</div>
+		 </div>
+ 		<?php
+ 		}
+ 		?>	
+  	 </div><!-- end left -->        
+   <div class="latest-activity">
+     		<?php echo $this->requestAction("/users/currentComments");?>   
+     		<?php 
+if($usertype!=6)
+echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
+  
+ 	</div><!-- end right -->
+
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" ></a>
 <?php } ?>
