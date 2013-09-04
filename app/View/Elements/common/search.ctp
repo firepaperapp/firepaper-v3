@@ -59,9 +59,8 @@ $(document).ready(function(){
 </script>
 
 
- 	<span class="form-title" style="float:left;padding:5px;">
-		<strong>Search:</strong> 
-	</span>
+		<h3>Search:</h3> 
+
 	<!-- Search Form Start -->
 	<?php
 	echo $this->Form->create('classGroupSearch', array('action'=>'','type' => 'post', 'id'=>'classGroupSearch', 'submit'=>'return false;')); 
