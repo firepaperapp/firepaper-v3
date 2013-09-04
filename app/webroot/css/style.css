@@ -328,11 +328,11 @@ select {
 }
 .nav .inner {
 }
-.nav .inner div {    
+.nav div {    
 	display: block; 
 	margin-top:16px; 
 }
-.nav .inner div a {
+.nav div a {
 	width:120px;  
 	height:15px; 
 	padding:80px 0px 0px 0px; 
@@ -344,44 +344,44 @@ select {
 	display: block; 
 	margin-top: 10px;}
 
-.nav .inner div.dashboard-icon {
+.nav div.dashboard-icon {
 	background: url(../images/nav-icons.png) no-repeat -70px 14px;
 }
-.nav .inner div.dashboard-icon a {
+.nav div.dashboard-icon a {
 	padding:90px 0px 0px 0px;
 }
-.nav .inner div.projects-icon {
+.nav div.projects-icon {
 	background: url(../images/nav-icons.png) no-repeat -70px -102px;
 }
-.nav .inner div.files-icon {
+.nav div.files-icon {
 	background: url(../images/nav-icons.png) no-repeat -70px -102px;
 }
-.nav .inner div.subjects-icon{
+.nav div.subjects-icon{
 	background: url(../images/nav-icons.png) no-repeat -70px -214px;
 }
-.nav .inner div.subjects-icon a {
+.nav div.subjects-icon a {
 	padding:70px 0px 0px 0px;
 }
-.nav .inner div.user-icon, .nav .inner div.departments-icon {
+.nav div.user-icon, .nav div.departments-icon {
 	background: url(../images/nav-icons.png) no-repeat -70px -323px;
 }
-.nav .inner div.user-icon a, .nav .inner div.departments-icon a{
+.nav div.user-icon a, .nav div.departments-icon a{
 	padding:60px 0px 0px 0px;
 }
 
-.nav .inner div.dashboard-icon:hover {
+.nav div.dashboard-icon:hover {
 	background: url(../images/nav-icons.png) no-repeat 32px 14px;
 }
-.nav .inner div.projects-icon:hover {
+.nav div.projects-icon:hover {
 	background: url(../images/nav-icons.png) no-repeat 32px -102px;
 }
-.nav .inner div.files-icon:hover {
+.nav div.files-icon:hover {
 	background: url(../images/nav-icons.png) no-repeat 32px -102px;
 }
-.nav .inner div.subjects-icon:hover {
+.nav div.subjects-icon:hover {
 	background: url(../images/nav-icons.png) no-repeat 32px  -214px;
 } 
-.nav .inner div.user-icon:hover, .nav .inner div.departments-icon:hover {
+.nav div.user-icon:hover, .nav div.departments-icon:hover {
 	background: url(../images/nav-icons.png) no-repeat 32px -323px;
 }
 
