@@ -84,6 +84,7 @@ class AppController extends Controller {
 	}
    function beforeFilter(){
 	   	
+		echo "<pre />";
 		print_r($this->Session->read());
 		$this->Auth->logoutRedirect = array('component'=>'User','action'=>'logout');
    		$departments = array();
