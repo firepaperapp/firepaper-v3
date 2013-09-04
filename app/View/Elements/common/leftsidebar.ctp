@@ -252,9 +252,9 @@
          
 	         <div class="clr"></div>
 	         </div><!-- end nav -->
-
+	          <footer class="footer"></div>
          </div><!-- end nav -->
-   <footer class="footer"></div>
+  
 </section>
 
 
