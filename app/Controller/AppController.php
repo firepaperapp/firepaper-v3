@@ -89,7 +89,7 @@ class AppController extends Controller {
 		//echo $this->Session->read('user_type'); exit;
 		if($this->Session->read('user_type') == 7){
 			
-			$this->redirect("http://school.firepaperapp.com");	
+			$this->redirect("http://school.firepaperapp.com/dev/");	
 		}
 		
 		
