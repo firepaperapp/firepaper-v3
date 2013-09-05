@@ -84,6 +84,8 @@ class AppController extends Controller {
 	}
    function beforeFilter(){
 	   	
+		$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
+		
 		//echo $this->Session->read('user_type'); exit;
 		if($this->Session->read('user_type') == 7){
 			
@@ -93,7 +95,7 @@ class AppController extends Controller {
 		
 		//echo "<pre />";
 		//print_r($this->Session->read('Auth'));
-		$this->Auth->logoutRedirect = array('component'=>'User','action'=>'logout');
+		
    		$departments = array();
    		$dueInCount = 0;
 		if($this->request->params['controller'] == "projects")
