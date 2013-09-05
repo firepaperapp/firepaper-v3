@@ -38,7 +38,7 @@
  * @subpackage	cake.cake
  */
 class AppController extends Controller {
-
+ 
 	var $helpers=array('Js','Html','Utility','AddJsCss');
 	var $components=array('Session','Cookie','Image','Email');
 	var $breadcrumb=array('Home'=>'');
