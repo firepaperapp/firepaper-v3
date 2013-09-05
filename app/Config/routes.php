@@ -35,7 +35,7 @@
 
 Configure::write('Routing.prefixes', array('school'));
 
-/*Router::connect('/', array('controller' => 'home', 'action' => 'display'));
+Router::connect('/', array('controller' => 'home', 'action' => 'display'));
 Router::connect('/signup/step1/*', array('controller' => 'users', 'action' => 'step1'));
 Router::connect('/signup/step2', array('controller' => 'users', 'action' => 'step2'));
 Router::connect('/accounts/dashboard', array('controller' => 'users', 'action' => 'dashboard'));
@@ -48,7 +48,7 @@ Router::connect('/departments', array('controller' => 'dashboard', 'action' => '
 Router::connect('/listTeachers/*', array('controller' => 'dashboard', 'action' => 'listTeachers'));
 Router::connect('/projects/draftProjects/*', array('controller' => 'projects', 'action' => 'archivedProjects'));
 Router::connect('/projects/viewProjects/*', array('controller' => 'projects', 'action' => 'index'));
-Router::connect('/whiteboard/:id', array('controller' => 'whiteboards','action' => 'viewWhiteboard'), array('pass'=>array('id')));*/
+Router::connect('/whiteboard/:id', array('controller' => 'whiteboards','action' => 'viewWhiteboard'), array('pass'=>array('id')));
 Router::connect('/school/:controller/:action/*', array('prefix' => 'school', 'school' => true));/**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
