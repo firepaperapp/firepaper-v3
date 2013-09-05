@@ -87,11 +87,11 @@ class AppController extends Controller {
 		$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
 		
 		//echo $this->Session->read('user_type'); exit;
-		if($this->Session->read('user_type') == 7){
+		/*if($this->Session->read('user_type') == 7){
 			
-			$this->redirect("http://school.firepaperapp.com/");	
+			$this->redirect("http://school.firepaperapp.com/dev/");	
 		}
-		
+		*/
 		
 		//echo "<pre />";
 		//print_r($this->Session->read('Auth'));
