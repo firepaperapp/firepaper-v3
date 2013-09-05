@@ -32,6 +32,9 @@
  */
 	// Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
+
+Configure::write('Routing.prefixes', array('school'));
+
 Router::connect('/', array('controller' => 'home', 'action' => 'display'));
 Router::connect('/signup/step1/*', array('controller' => 'users', 'action' => 'step1'));
 Router::connect('/signup/step2', array('controller' => 'users', 'action' => 'step2'));
@@ -46,7 +49,7 @@ Router::connect('/listTeachers/*', array('controller' => 'dashboard', 'action' =
 Router::connect('/projects/draftProjects/*', array('controller' => 'projects', 'action' => 'archivedProjects'));
 Router::connect('/projects/viewProjects/*', array('controller' => 'projects', 'action' => 'index'));
 Router::connect('/whiteboard/:id', array('controller' => 'whiteboards','action' => 'viewWhiteboard'), array('pass'=>array('id')));
-Router::connect("/{$prefix}/:controller/:action/*", array('prefix' => $prefix, $prefix => true));
+Router::connect("/school/:controller/:action/*", array('prefix' => $prefix, $prefix => true));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
