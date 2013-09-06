@@ -103,14 +103,46 @@ class AppController extends Controller {
         }
     }
 
+	/**
+	 * Return header codes for AJAX errors.
+	 *
+	 * @param $errorCode
+	 * @param $message
+	 * @return unknown_type
+	 */
+	protected function throwAjaxError ($errorCode = 400, $message = null) {
+
+		if ($this->RequestHandler->isAjax() || (isset($this->isAjax) && $this->isAjax == true)) {
+			switch ($errorCode) {
+				case 400 :
+				case 403 :
+				    $defaultMessage = 'The request could not be processed because access is forbidden.';
+                    header("'HTTP/1.0 403 Forbidden", true, 403);
+                    echo ($message == null)?$defaultMessage:$message;
+                    break;
+				case 408 :
+				case 409 :
+					$defaultMessage = 'The request could not be processed because of conflict in the request.';
+					header("HTTP/1.0 409 Conflict", true, 409);
+					echo ($message == null)?$defaultMessage:$message;
+					break;
+				case 500 :
+					break;
+			}
+			$this->autoRender = false;
+			$this->layout = 'ajax';
+			Configure::write('debug', 0);
+		}
+		else {
+			throw new Exception('Ajax Error should only be thrown for ajax requests.');
+		}
+	}
+	
 	
    function beforeFilter(){
 	   		
-			
-		
-			if ($this->Auth->User()){
-				
- 			echo "here at 1"; exit;
+			// echo "here at 3342"; exit;
+	
 		
 		
 		//echo $this->Session->read('user_type'); exit;
@@ -245,13 +277,22 @@ class AppController extends Controller {
 		$this->set("dueInCount", $dueInCount);
  		$this->set("departments", $departments);
 		
-   }else{
+  /* }else{
 	   
-	   
+	   //
+	   	if($this->RequestHandler->isAjax()){
+			
+			echo "here at 23"; exit;
+			// if the session expired
+			$return['login'] = 'Please Login! Session Expires';
+			echo json_encode($return); // responseText: "{"login":true}"
+		}else{
+			//echo "here at 22"; exit;
 
 			// if the session expired
 			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
-   }
+		}
+   }*/
 	}
 
 	function beforeRender() {
