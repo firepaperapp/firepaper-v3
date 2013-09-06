@@ -333,6 +333,7 @@ class UsersController extends AppController{
 		 	
 		 }
  		if ($this->Session->read("userid")) {
+			echo "i am here.."; exit;
 		 	$this->redirect("/dashboard");
 		}
  		if ($this->request->data)
