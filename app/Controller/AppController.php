@@ -106,6 +106,7 @@ class AppController extends Controller {
 	
    function beforeFilter(){
 	   		
+			echo "<pre />";
 			print_r($this->Auth); exit;
 		
 			if ($this->Auth->User()){
