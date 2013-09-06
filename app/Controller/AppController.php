@@ -145,7 +145,7 @@ class AppController extends Controller {
 	
 		
 		
-		echo 'here==>>'.$this->Session->read('user_type'); exit;
+		//echo 'here==>>'.$this->Session->read('user_type'); exit;
 		/*if($this->Session->read('user_type') == 7){
 			
 			$this->redirect("http://school.firepaperapp.com/dev/");	
