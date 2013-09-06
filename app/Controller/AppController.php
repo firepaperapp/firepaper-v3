@@ -40,7 +40,7 @@
 class AppController extends Controller {
  
 	var $helpers=array('Js','Html','Utility','AddJsCss');
-	var $components=array('Session','Cookie','Image','Email');
+	var $components=array('Auth','Session','Cookie','Image','Email');
 	var $breadcrumb=array('Home'=>'');
 	var $uses = array('activityLog','projectStudent','Department','DepartmentStudent','DepartmentTeacher','User','Project');
 
