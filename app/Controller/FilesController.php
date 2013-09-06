@@ -352,7 +352,7 @@ class FilesController  extends AppController{
 	 */
 	function uploadFile($fileId="")
 	{
-		 
+		 echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
 		global $videoArray;
