@@ -144,7 +144,7 @@ class AppController extends Controller {
 		
 			if ($this->Auth->User()){
 				
-
+ echo "here at 1"; exit;
 		
 		
 		//echo $this->Session->read('user_type'); exit;
@@ -281,6 +281,7 @@ class AppController extends Controller {
 		
    }else{
 	   
+	   echo "here at 2"; exit;
 	   	if($this->RequestHandler->isAjax()){
 			// if the session expired
 			$return['login'] = 'Please Login! Session Expires';
