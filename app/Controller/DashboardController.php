@@ -38,9 +38,11 @@ class DashboardController  extends AppController{
     }
 	function beforeFilter()
 	{
+		echo "In BF >> Dashboard"; exit;
 		if(!isUserLoggedIn($this->Session, "userid"))
 		{
-		///	$this->redirect("/");
+			$this->Auth->logoutRedirect = array('users/logout/');
+			//$this->redirect("/users/logout");
 		}
 		else
 		{
@@ -70,7 +72,7 @@ class DashboardController  extends AppController{
 		
 		echo "i am here in Index - dashboard"; exit;
 		print "<pre />";
-print_e($_SESSION);
+print_r($_SESSION);
 //print "</pre>";
 die;
 		$this->set('announce_view','');
