@@ -352,14 +352,15 @@ class FilesController  extends AppController{
 	 */
 	function uploadFile($fileId="")
 	{
-		 echo "i am here.."; exit;
+		 //echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
 		global $videoArray;
 		$this->request->params['form'] = $_FILES;
 	  
-		if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
-		{
+		//if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
+		//{
+			
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
 			########### whether user's admin or user itself has enough space to upload the file ###########	
@@ -551,11 +552,12 @@ class FilesController  extends AppController{
 					$response['error'] = FILE_CANT_UPLOADED;
 				}
 			}				 
-        }
-		else
-		{
-			$response['error'] = $this->userFile->errMsg;
-		}
+        
+		//}
+		//else
+		//{
+		//	$response['error'] = $this->userFile->errMsg;
+		//}
 		//$this->RequestHandler->respondAs('json'); 			
 		echo json_encode($response);
 		$this->autoRender = false;         
