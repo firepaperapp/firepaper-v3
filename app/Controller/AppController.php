@@ -283,7 +283,7 @@ class AppController extends Controller {
    }else{
 	   
 	  // echo "here at 2"; exit;
-	   	if($this->RequestHandler->isAjax()){
+	   	/*if($this->RequestHandler->isAjax()){
 			// if the session expired
 			$return['login'] = 'Please Login! Session Expires';
 			echo json_encode($return); // responseText: "{"login":true}"
@@ -291,7 +291,7 @@ class AppController extends Controller {
 
 			// if the session expired
 			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
-		}
+		}*/
    }
 	}
 
