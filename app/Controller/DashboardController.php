@@ -68,10 +68,10 @@ class DashboardController  extends AppController{
 
 	function index(){ 
 		
-//		print "<pre>";
-//print_R($_SESSION);
+		print "<pre />";
+print_e($_SESSION);
 //print "</pre>";
-//die;
+die;
 		$this->set('announce_view','');
 		if($this->Session->read("user_type")==1 || $this->Session->read("user_type")==2 ||$this->Session->read("user_type")==3 || $this->Session->read("user_type")==7)
 		{
