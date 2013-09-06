@@ -103,45 +103,10 @@ class AppController extends Controller {
         }
     }
 
-	/**
-	 * Return header codes for AJAX errors.
-	 *
-	 * @param $errorCode
-	 * @param $message
-	 * @return unknown_type
-	 */
-	protected function throwAjaxError ($errorCode = 400, $message = null) {
-
-		if ($this->RequestHandler->isAjax() || (isset($this->isAjax) && $this->isAjax == true)) {
-			switch ($errorCode) {
-				case 400 :
-				case 403 :
-				    $defaultMessage = 'The request could not be processed because access is forbidden.';
-                    header("'HTTP/1.0 403 Forbidden", true, 403);
-                    echo ($message == null)?$defaultMessage:$message;
-                    break;
-				case 408 :
-				case 409 :
-					$defaultMessage = 'The request could not be processed because of conflict in the request.';
-					header("HTTP/1.0 409 Conflict", true, 409);
-					echo ($message == null)?$defaultMessage:$message;
-					break;
-				case 500 :
-					break;
-			}
-			$this->autoRender = false;
-			$this->layout = 'ajax';
-			Configure::write('debug', 0);
-		}
-		else {
-			throw new Exception('Ajax Error should only be thrown for ajax requests.');
-		}
-	}
-	
 	
    function beforeFilter(){
 	   		
-			// echo "here at 3342"; exit;
+			print_r($this->Auth); exit;
 		
 			if ($this->Auth->User()){
 				
