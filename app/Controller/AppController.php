@@ -141,7 +141,11 @@ class AppController extends Controller {
 	
    function beforeFilter(){
 	   	
-		$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
+		
+			if ($this->Auth->User()){
+				
+
+		
 		
 		//echo $this->Session->read('user_type'); exit;
 		/*if($this->Session->read('user_type') == 7){
@@ -274,6 +278,11 @@ class AppController extends Controller {
 		$this->set("prjCount", $prjCount);
 		$this->set("dueInCount", $dueInCount);
  		$this->set("departments", $departments);
+		
+   }else{
+			// if the session expired
+			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
+			}
 	}
 
 	function beforeRender() {
