@@ -280,9 +280,16 @@ class AppController extends Controller {
  		$this->set("departments", $departments);
 		
    }else{
+	   
+	   	if($this->RequestHandler->isAjax()){
+			// if the session expired
+			$return['login'] = 'Please Login! Session Expires';
+			echo json_encode($return); // responseText: "{"login":true}"
+		}else{
+
 			// if the session expired
 			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
-			}
+		}
 	}
 
 	function beforeRender() {
