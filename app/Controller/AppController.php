@@ -143,9 +143,9 @@ class AppController extends Controller {
 	   		
 			 echo "here at 3342"; exit;
 		
-			if ($this->Auth->User()){
+			//if ($this->Auth->User()){
 				
- 			echo "here at 1"; exit;
+ 			//echo "here at 1"; exit;
 		
 		
 		//echo $this->Session->read('user_type'); exit;
@@ -280,7 +280,7 @@ class AppController extends Controller {
 		$this->set("dueInCount", $dueInCount);
  		$this->set("departments", $departments);
 		
-   }else{
+ /*  }else{
 	   
 	   echo "here at 2"; exit;
 	   	if($this->RequestHandler->isAjax()){
@@ -291,7 +291,7 @@ class AppController extends Controller {
 
 			// if the session expired
 			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
-		}
+		}*/
 	}
 
 	function beforeRender() {
