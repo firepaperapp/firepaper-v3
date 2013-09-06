@@ -140,11 +140,12 @@ class AppController extends Controller {
 	
 	
    function beforeFilter(){
-	   	
+	   		
+			 echo "here at 3342"; exit;
 		
 			if ($this->Auth->User()){
 				
- echo "here at 1"; exit;
+ 			echo "here at 1"; exit;
 		
 		
 		//echo $this->Session->read('user_type'); exit;
