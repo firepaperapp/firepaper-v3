@@ -489,6 +489,7 @@ class UsersController extends AppController{
         
 	function logout()
 	{
+		echo "==>>This"; exit;
 		$userId = $this->Session->read("userid");
 	 	if($this->Session->valid())
 		{
