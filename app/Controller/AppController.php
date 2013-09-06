@@ -290,7 +290,7 @@ class AppController extends Controller {
 			//echo "here at 22"; exit;
 
 			// if the session expired
-			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
+			$this->Auth->logoutRedirect = array('users/logout/');
 		}
    }*/
 	}
