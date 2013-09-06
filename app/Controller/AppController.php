@@ -282,7 +282,7 @@ class AppController extends Controller {
 		
    }else{
 	   
-	   echo "here at 2"; exit;
+	  // echo "here at 2"; exit;
 	   	if($this->RequestHandler->isAjax()){
 			// if the session expired
 			$return['login'] = 'Please Login! Session Expires';
