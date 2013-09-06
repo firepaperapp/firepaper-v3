@@ -108,6 +108,7 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
+echo "here at 1"; exit;
 include_once('site_constants.php');
 include_once('messages.php');
 include_once('functions.php');
