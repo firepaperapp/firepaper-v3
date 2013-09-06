@@ -68,6 +68,7 @@ class DashboardController  extends AppController{
 
 	function index(){ 
 		
+		echo "i am here in Index - dashboard"; exit;
 		print "<pre />";
 print_e($_SESSION);
 //print "</pre>";
