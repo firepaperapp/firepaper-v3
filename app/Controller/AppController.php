@@ -292,6 +292,7 @@ class AppController extends Controller {
 			// if the session expired
 			$this->Auth->logoutRedirect = array('controller'=>'User','action'=>'logout');
 		}
+   }
 	}
 
 	function beforeRender() {
