@@ -81,7 +81,7 @@
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
 				$getModelName = array_keys($postArray['data']);
-				echo '<pre>'; print_r($getModelName[0]); echo '</pre>';
+				echo '<pre>'; print_r($postArray); echo '</pre>';
 				exit('test');
 			}
 			
@@ -90,7 +90,7 @@
 				$this->errMsg =  FILE_CANT_UPLOADED;
 				$this->err=1;			
 			}
-			else if($postArray['uploadfile']['size'] > MAX_FILESIZE)
+			else if($postArray['data'][$getModelName[0]]['uploadfile']['size'] > MAX_FILESIZE)
 			{
 				$this->errMsg= MAX_FILESIZE_MSG;
 				$this->err=1;				
