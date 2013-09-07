@@ -189,6 +189,7 @@ select {
 
 .container {
 	height: 100%;
+	margin-left: 184px;
 	border-spacing: 0;
 	width: 100%;
 	-webkit-box-sizing: border-box; 
