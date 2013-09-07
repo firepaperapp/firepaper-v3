@@ -358,8 +358,8 @@ class FilesController  extends AppController{
 		global $videoArray;
 		$this->request->params['form'] = $_FILES;
 	  //	print_r($this->request->params['form']); exit;
-		//if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
-		//{
+			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
+		{
 			
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
@@ -556,12 +556,12 @@ class FilesController  extends AppController{
 				}
 			}				 
         
-		//}
-		//else
-		//{
-		//	$response['error'] = $this->userFile->errMsg;
-		//}
-		//$this->RequestHandler->respondAs('json'); 			
+		}
+		else
+		{
+			$response['error'] = $this->userFile->errMsg;
+		}
+		$this->RequestHandler->respondAs('json'); 			
 		echo json_encode($response);
 		$this->autoRender = false;         
 		die; 
