@@ -80,7 +80,8 @@
 			
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
-				echo '<pre>'; print_r($postArray); echo '</pre>';
+				$getModelName = array_keys($data['data']);
+				echo '<pre>'; print_r($getModelName[0]); echo '</pre>';
 				exit('stop');
 			}
 			
@@ -109,5 +110,31 @@
 			 
 			return $this->err; 
   		}
+		
+		function checkFileType($data, $inputFile, $fileType=NULL)
+		{
+			$getModelName = array_keys($data['data']);
+			if(!empty($fileType)) {
+				$getFileType = $data['data'][$getModelName[0]][$inputFile]['type'];
+				if(!in_array($getFileType,$fileType)) {
+					$fileTypeError = 'File Type Error';
+					return $fileTypeError;
+				}
+			}
+		}
+		
+		function checkFileSize($data, $inputFile, $fileSize=NULL)
+		{
+			$getModelName = array_keys($data['data']);
+			if(!empty($fileSize))
+			{
+				$getFileSize = $data['data'][$getModelName[0]][$inputFile]['size']/1024;
+				if($getFileSize > $fileSize) {
+					$fileSizeError = 'File size Error';
+					return $fileSizeError;
+				}
+			}
+		}
+		
 	}
 ?>
