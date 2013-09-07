@@ -416,8 +416,10 @@ class FilesController  extends AppController{
 			else 
 			{
 				
+				/*
 				echo "check2 ==="; exit;
 				print_r($this->request->params['form']); exit;
+				*/
 				########### End Here ###########
 				
 				$uploads_dir.= $this->Session->read("userid"); 
