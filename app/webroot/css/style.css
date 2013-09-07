@@ -366,6 +366,21 @@ select {
 .nav li a .dashboard-icon:before {
 	content:'\1F680';
 }
+.nav li a .projects-icon:before {
+	content:'\1F393';
+}
+.nav li a .marking-icon:before {
+	content:'\1F4C8';
+}
+.nav li a .files-icon:before {
+	content:'\1F4F0';
+}
+.nav li a .subjects-icon:before {
+	content:'\E723';
+}
+.nav li a .students-icon:before {
+	content:'\1F465';
+}
 /* End Navigation styling */
 
 
