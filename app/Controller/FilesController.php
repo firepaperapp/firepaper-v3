@@ -502,7 +502,7 @@ class FilesController  extends AppController{
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
 					}
-					
+					/*
 					if($return == true)
 					{
 						$iconType = $this->userFile->getIconType($fileExt);				
@@ -557,7 +557,8 @@ class FilesController  extends AppController{
 					{
 						$response['error'] = FILE_CANT_UPLOADED;
 					}
-					echo '<pre>'; var_dump($response); echo '</prE>'; exit;
+					*/
+					$response['id'] = 1;
 					
 				}else{
 					/*
