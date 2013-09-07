@@ -359,12 +359,14 @@ class FilesController  extends AppController{
 		$this->request->params['form'] = $_FILES;
 		
 	  //	print_r($this->request->params['form']); exit;
-			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
-		{
-			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
+	  if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
+				echo '<pre>'; print_r($this->userFile->validateFileUpload($this->request->params['form'])); echo '</pre>';
 				exit('stop');
 			}
+			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
+		{
+			
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
 			########### whether user's admin or user itself has enough space to upload the file ###########	
