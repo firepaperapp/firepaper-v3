@@ -38,8 +38,8 @@ class DashboardController  extends AppController{
     }
 	function beforeFilter()
 	{
-		echo "<pre /> here..";
-		print_r($this->Session->read()); exit;
+		//echo "<pre /> here..";
+		//print_r($this->Session->read()); exit;
 		//echo "In BF >> Dashboard"; exit;
 		if(!isUserLoggedIn($this->Session, "userid"))
 		{
@@ -53,7 +53,7 @@ class DashboardController  extends AppController{
 					$this->redirect("/users/viewProfile");
 			}
 		}
- 		parent::beforeFilter();
+ 		//parent::beforeFilter();
 	}
 
     /**
