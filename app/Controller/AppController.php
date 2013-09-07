@@ -96,6 +96,7 @@ class AppController extends Controller {
 		
 		//echo "<pre />";
 		//print_r($this->Session->read('Auth'));
+		if ($this->Session->read("userid")) {
    		$departments = array();
    		$dueInCount = 0;
 		if($this->request->params['controller'] == "projects")
@@ -219,7 +220,7 @@ class AppController extends Controller {
  		$this->set("departments", $departments);
 		
 		
-		/*   }else{
+		   }else{
 			   
 			   //
 				if($this->RequestHandler->isAjax()){
@@ -232,9 +233,9 @@ class AppController extends Controller {
 					//echo "here at 22"; exit;
 		
 					// if the session expired
-					$this->redirect = array('users/logout/');
+					$this->redirect = array('users/login/');
 				}
-		   }*/
+		   }
 	}
 
 	function beforeRender() {
