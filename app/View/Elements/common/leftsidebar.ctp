@@ -113,7 +113,7 @@
 
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
-        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" >Projects <span class="dashboard-icon"></span></a></li>
+        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" >Projects <span class="dashboard-icon">🎓</span></a></li>
              <!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
              <?php 
             if($prjCount>0)

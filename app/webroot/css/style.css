@@ -349,14 +349,23 @@ select {
 	text-align: right;
 }
 .nav li a {
-	padding:10px 10px 10px 0px; 
+	padding:18px 20px 18px 0px; 
 	text-align: center; 
 	color: #686b6c; 
 	text-transform: uppercase; 
 	font-weight: bold;
-	margin-top: 10px;
 }
-
+.nav li a:hover {
+	color:#e56a6a ;
+}
+.nav li span {
+	font-family:'entypo';
+	font-size: 36px;
+	font-weight: normal;
+}
+.nav li .dashboard-icon {
+	
+}
 /* End Navigation styling */
 
 
