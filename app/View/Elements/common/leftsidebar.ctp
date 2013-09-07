@@ -113,14 +113,14 @@
 
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
-        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" >Dashboard <span class="dashboard-icon"></span></a></li>
+        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" >Dashboard </a><span class="dashboard-icon"></span></li>
              <!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
              <?php 
             if($prjCount>0)
             {
             	//echo $prjCount;
             }?></li>
-			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" >Files <span class="files-icon"></span></a></li>
+			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" >Files </a><span class="files-icon"></span></li>
 			  <!--<div class="user-icon"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" >Profile</a></div>-->
 			    
             <!-- <a href="<?php echo SITE_HTTP_URL."search"?>" alt="Search" class="search-icon">Search</a> -->
@@ -139,7 +139,7 @@
            	if($dashboardMenu!='')
            	{?>
 				<div class="<?php echo $overviewAction;?>">
-					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" class="activity-icon">Overview <span></span></a></li> 
+					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" >Overview </a><span class="activity-icon"></span></li> 
 				
 				<!-- <li class="<?php echo $filesAction;?>"><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="My Files" class="files-icon">My Files</a></li>
 				
@@ -150,11 +150,11 @@
 				<?php } ?>
 				
 				<?php if($usertype==1 ||  $usertype==2 || $usertype==7) {?>
-				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" class="educators-icon">Educators </a><span></span></li>
+				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" >Educators </a><span class="educators-icon"></span></li>
 				<?php }?>
 
 				<?php if($usertype==1 ||  $usertype==2 ||$usertype==3 || $usertype==7){?>
-				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" class="students-icon">Students <span></span></a></li>
+				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" >Students </a><span class="students-icon"></span></li>
 				
 			
            	<?php }
@@ -164,19 +164,19 @@
            		<li class="<?php echo $viewProfile;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" class="profile-details-icon">Profile details</a></li>
            	 <?php if($usertype==6)
 					{?>
-						<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" class="students-icon">Students <span></span></a></li>
+						<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" >Students </a><span class="students-icon"></span></li>
 					<?php
 					}
 				?>
            	<?php if(in_array($this->Session->read('user_type'), array(4,5)))
            	 {?>
-<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" class="progress-icon">My Progress <span></span></a></li>
+<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" >My Progress </a><span class="progress-icon"></span></li>
 			<?php
            	 }?>
            	 <?php
            	 if($usertype == 1)	
            	 {?>
-           	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" class="students-icon">Co-Admins <span></span></a></li>           	 	
+           	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" >Co-Admins </a><span class="students-icon"></span></li>           	 	
            	<?php 
            	 }
            	}
@@ -211,10 +211,10 @@
            	<li class="<?php echo $markProjectsList;?>">
            		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" class="mark-icon">Marking</a>
            	</li>
-           	<li class="<?php echo $addEditProject;?>"><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="create-icon">Create Project <span></span></a></li>
+           	<li class="<?php echo $addEditProject;?>"><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" >Create Project </a><span class="create-icon"></span></li>
 			<?php }?>
            		
-			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" class="due-icon">Due in<?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> <span></span></a></li>
+			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" class="due-icon">Due in<?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> </a><span></span></li>
 			<?php
 			
 			foreach($departments as $rec)
@@ -232,7 +232,7 @@
 			<?php
 			}	
 			?>	
-			<li class="<?php if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" class="project-icon">Archive</a></li>
+			<li class="<?php if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" >Archive </a><span class="project-icon"></span></li>
 			<?php }
 			else if($searchMenu!='')
 			{?>
