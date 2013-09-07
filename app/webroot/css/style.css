@@ -344,21 +344,15 @@ select {
 .nav li {    
 	display: block; 
 	margin-top:16px; 
-	font-weight: bold;
-	text-transform: uppercase;
 	color: #686b6c;
 	font-size: 13px;
 }
 .nav li a {
-	width:120px;  
-	height:15px; 
-	padding:80px 0px 0px 0px; 
+	padding:10px 10px 10px 0px; 
 	text-align: center; 
 	color: #686b6c; 
 	text-transform: uppercase; 
 	font-weight: bold;
-	margin: 0 auto;  
-	display: block; 
 	margin-top: 10px;
 }
 
