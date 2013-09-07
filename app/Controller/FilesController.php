@@ -453,8 +453,7 @@ class FilesController  extends AppController{
 					}
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
 					
-					echo var_dump(in_array(strtolower($fileExt), $videoArray));
-					echo '<pre>'; print_r($source); echo '</prE>';
+					echo '<pre>'; print_r($filename); echo '</prE>';
 					echo '<pre>'; print_r($arFile); exit;
 					
 					if($fileId!='')
@@ -487,7 +486,7 @@ class FilesController  extends AppController{
 					else
 					{	 
 						//we will simply upload the file
-						move_uploaded_file( $this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
+						move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
 							 
 			
 						$old = umask(0);
