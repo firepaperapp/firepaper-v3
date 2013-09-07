@@ -557,7 +557,7 @@ class FilesController  extends AppController{
 					{
 						$response['error'] = FILE_CANT_UPLOADED;
 					}
-					
+					echo '<pre>'; var_dump($response); echo '</prE>'; exit;
 					
 				}else{
 					/*
@@ -710,7 +710,7 @@ class FilesController  extends AppController{
 		{
 			$response['error'] = $this->userFile->errMsg;
 		}
-		echo '<pre>'; var_dump($response); echo '</prE>'; exit;
+		
 		$this->RequestHandler->respondAs('json'); 			
 		echo json_encode($response);
 		$this->autoRender = false;         
