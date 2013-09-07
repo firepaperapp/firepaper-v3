@@ -80,7 +80,7 @@
 			
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
-				$getModelName = array_keys($data['data']);
+				$getModelName = array_keys($postArray['data']);
 				echo '<pre>'; print_r($getModelName[0]); echo '</pre>';
 				exit('test');
 			}
