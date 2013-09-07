@@ -82,7 +82,7 @@
 			{
 				$getModelName = array_keys($data['data']);
 				echo '<pre>'; print_r($getModelName[0]); echo '</pre>';
-				exit('stop');
+				exit('test');
 			}
 			
 			if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
