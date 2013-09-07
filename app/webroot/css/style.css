@@ -318,14 +318,13 @@ select {
 }
 /* Navigation styling */
 .nav { 
-	display: table;
-	table-layout: fixed;
-	border-collapse: collapse;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	width:120px; 
 	height: 100%;
 	margin-left:0; 
 	margin-right: 46px; 
-	top:69px; 
 }
 .nav .inner {
 }
