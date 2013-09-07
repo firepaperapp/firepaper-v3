@@ -77,6 +77,13 @@
 		function validateFileUpload($postArray)
 		{
 			global $videoArray, $filesArray;
+			
+			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
+			{
+				echo '<pre>'; print_r($postArray); echo '</pre>';
+				exit('stop');
+			}
+			
 			if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
 			{
 				$this->errMsg =  FILE_CANT_UPLOADED;
