@@ -364,7 +364,7 @@ select {
 	font-weight: normal;
 }
 .nav li .dashboard-icon {
-	content:/128640;
+	content:'\1F680';
 }
 /* End Navigation styling */
 
