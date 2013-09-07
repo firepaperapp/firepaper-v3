@@ -83,7 +83,12 @@
 				$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];
 				
-				if($postArray['data']['size'][$_moduleName]['uploadfile'] > MAX_FILESIZE)
+				if($postArray['data']['name'][$_moduleName]['uploadfile']=='' || $postArray['data']['error'][$_moduleName]['uploadfile']==1 ||  !is_uploaded_file($postArray['data']['tmp_name'][$_moduleName]['uploadfile']))
+				{
+					$this->errMsg =  FILE_CANT_UPLOADED;
+					$this->err=1;			
+				}
+				else if($postArray['data']['size'][$_moduleName]['uploadfile'] > MAX_FILESIZE)
 				{
 					$this->errMsg= MAX_FILESIZE_MSG;
 					$this->err=1;				
