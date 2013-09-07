@@ -361,7 +361,7 @@ class FilesController  extends AppController{
 	  //	print_r($this->request->params['form']); exit;
 	  if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
-				echo '<pre>'; print_r($this->userFile->validateFileUpload($this->request->params['form'])); echo '</pre>';
+				echo '<pre>'; print_r($this->request->params['form']); echo '</pre>';
 				exit('stop');
 			}
 			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
