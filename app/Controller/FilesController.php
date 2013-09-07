@@ -454,7 +454,7 @@ class FilesController  extends AppController{
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
 					
 					echo '<pre>'; print_r($filename); echo '</prE>';
-					echo '<pre>'; print_r($arFile); exit;
+					echo '<pre>'; print_r($uploads_strt_dir.$uploads_dir."/".$filename); exit;
 					
 					if($fileId!='')
 					{
