@@ -453,9 +453,6 @@ class FilesController  extends AppController{
 					}
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
 					
-					echo '<pre>'; print_r($filename); echo '</prE>';
-					echo '<pre>'; print_r($uploads_strt_dir.$uploads_dir."/".$filename); exit;
-					
 					if($fileId!='')
 					{
 						$uploads_dir = $uploads_dir."/".$fileId;
@@ -505,6 +502,9 @@ class FilesController  extends AppController{
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
 					}
+					
+					echo '<pre>'; var_dump($return); echo '</prE>'; exit;
+					
 					if($return == true)
 					{
 						$iconType = $this->userFile->getIconType($fileExt);				
