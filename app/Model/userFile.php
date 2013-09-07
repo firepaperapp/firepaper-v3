@@ -81,7 +81,8 @@
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
 				$getModelName = array_keys($postArray['data']['name']);
-				echo '<pre>'; print_r($getModelName[0]); echo '</pre>';
+				$_moduleName = $getModelName[0];
+				echo '<pre>'; print_r($postArray); echo '</pre>';
 				exit('test');
 			}
 			
