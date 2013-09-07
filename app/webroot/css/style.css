@@ -346,6 +346,7 @@ select {
 	margin-top:16px; 
 	color: #686b6c;
 	font-size: 13px;
+	text-align: right;
 }
 .nav li a {
 	padding:10px 10px 10px 0px; 
