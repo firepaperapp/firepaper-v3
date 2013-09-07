@@ -432,7 +432,7 @@ class FilesController  extends AppController{
 					$filename = $filebase.".".$fileExt;
 					$actualFilename = $string.".".$fileExt;
 					
-					$result = move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'],WWW_ROOT.'files/'.$filename);
+					$result = copy($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'],WWW_ROOT.'files/'.$filename);
 					echo '<pre>'; var_dump($result); echo '</prE>';
 					echo '<pre>'; var_dump(WWW_ROOT.'files/'.$filename); echo '</prE>'; exit;
 					
