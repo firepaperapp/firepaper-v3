@@ -363,25 +363,25 @@ select {
 	font-size: 36px;
 	font-weight: normal;
 }
-.nav li a .dashboard-icon:before {
+.nav li .dashboard-icon:before {
 	content:'\1F680';
 }
-.nav li a .projects-icon:before {
+.nav li .projects-icon:before {
 	content:'\1F393';
 }
-.nav li a .marking-icon:before {
+.nav li .marking-icon:before {
 	content:'\1F4C8';
 }
-.nav li a .files-icon:before {
+.nav li .files-icon:before {
 	content:'\1F4F0';
 }
-.nav li a .departments-icon:before {
+.nav li .departments-icon:before {
 	content:'\E723';
 }
-.nav li a .students-icon:before {
+.nav li .students-icon:before {
 	content:'\1F465';
 }
-.nav li a .educators-icon:before {
+.nav li .educators-icon:before {
 	content:'\1F465';
 }
 /* End Navigation styling */
