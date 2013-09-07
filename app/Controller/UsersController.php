@@ -286,6 +286,7 @@ class UsersController extends AppController{
 					/*
                  	After successful login, user will be redirected to live calls page
                  	*/
+				//	print_r($_SESSION); exit;
 					$this->Session->setFlash(ACCOUNT_VALIDATED);
 					$this->redirect(SITE_HTTP_URL."dashboard");
 			}
