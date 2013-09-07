@@ -80,23 +80,23 @@
 			
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
-				echo '<pre>'; print_r($postArray); echo '</pre>';
+				echo '<pre>'; print_r($postArray['data']['name']); echo '</pre>';
 				exit('stop');
 			}
 			
-			if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
+			if($postArray['data']['name']=='' || $postArray['data']['error']==1 ||  !is_uploaded_file($postArray['data']['tmp_name']))
 			{
 				$this->errMsg =  FILE_CANT_UPLOADED;
 				$this->err=1;			
 			}
-			else if($postArray['uploadfile']['size'] > MAX_FILESIZE)
+			else if($postArray['data']['size'] > MAX_FILESIZE)
 			{
 				$this->errMsg= MAX_FILESIZE_MSG;
 				$this->err=1;				
 			}
 			else
 			{
-				$arFile = explode(".",$postArray['uploadfile']['name']);				
+				$arFile = explode(".",$postArray['data']['name']);				
 				$string = remove_specialchars($arFile[0]);				
 				$fileExt = array_pop($arFile); 
 				 
