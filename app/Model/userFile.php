@@ -99,7 +99,6 @@
 						$this->errMsg="Please upload valid file.";
 						$this->err=1;				
 					}
-					echo '<pre>'; print_r($this->errMsg); echo '</pre>'; exit('test');	
 				}
 				 
 				return $this->err; 
