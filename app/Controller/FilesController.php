@@ -452,7 +452,7 @@ class FilesController  extends AppController{
 						mkdir($uploads_strt_dir.$uploads_dir);
 					}
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
-					echo '<pre>'; var_dump($uploads_strt_dir.$uploads_dir."/".$filename); echo '</prE>'; exit;
+					
 					if($fileId!='')
 					{
 						$uploads_dir = $uploads_dir."/".$fileId;
@@ -483,7 +483,7 @@ class FilesController  extends AppController{
 					else
 					{	 
 						//we will simply upload the file
-						move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
+						move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], "/var/www/firepaperapp.com/dev/app/webroot/files/files/".$filename);
 							 
 			
 						$old = umask(0);
