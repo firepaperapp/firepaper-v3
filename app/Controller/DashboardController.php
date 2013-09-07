@@ -39,7 +39,7 @@ class DashboardController  extends AppController{
 	function beforeFilter()
 	{
 		echo "<pre /> here..";
-		print_r($_SESSION); exit;
+		print_r($this->Session->read()); exit;
 		//echo "In BF >> Dashboard"; exit;
 		if(!isUserLoggedIn($this->Session, "userid"))
 		{
