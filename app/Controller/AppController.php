@@ -233,7 +233,7 @@ class AppController extends Controller {
 					//echo "here at 22"; exit;
 		
 					// if the session expired
-					$this->redirect = array('users/login/');
+					$this->redirect = array('users/login/'); 
 				}
 		   }
 	}
