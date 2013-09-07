@@ -347,16 +347,17 @@ select {
 	color: #686b6c;
 	font-size: 13px;
 	text-align: right;
+	padding:18px 20px 18px 0px; 
+}
+.nav li:hover {
+	color:#e56a6a ;
 }
 .nav li a {
-	padding:18px 20px 18px 0px; 
+	
 	text-align: center; 
 	color: #686b6c; 
 	text-transform: uppercase; 
 	font-weight: bold;
-}
-.nav li a:hover {
-	color:#e56a6a ;
 }
 .nav li span {
 	font-family:'entypo';
