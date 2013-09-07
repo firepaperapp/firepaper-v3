@@ -139,7 +139,7 @@
            	if($dashboardMenu!='')
            	{?>
 				<div class="<?php echo $overviewAction;?>">
-					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" class="activity-icon">Overview </a><span>🚀</span></li>
+					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" class="activity-icon">Overview </a><span>🚀</span></li> 
 				
 				<!-- <li class="<?php echo $filesAction;?>"><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="My Files" class="files-icon">My Files</a></li>
 				
