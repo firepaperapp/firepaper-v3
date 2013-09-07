@@ -40,7 +40,7 @@
 class AppController extends Controller {
  
 	var $helpers=array('Js','Html','Utility','AddJsCss');
-	var $components=array('Auth','Session','Cookie','Image','Email');
+	var $components=array('Session','Cookie','Image','Email');
 	var $breadcrumb=array('Home'=>'');
 	var $uses = array('activityLog','projectStudent','Department','DepartmentStudent','DepartmentTeacher','User','Project');
 
@@ -88,19 +88,12 @@ class AppController extends Controller {
 	
    function beforeFilter(){
 	   		
-			// echo "here at 3342"; exit;
-	
-		
-		
-		//echo 'here==>>'.$this->Session->read('user_type'); exit;
 		/*if($this->Session->read('user_type') == 7){
 			
 			$this->redirect("http://school.firepaperapp.com/dev/");	
 		}
 		*/
 		
-		//echo "<pre />";
-		//print_r($this->Session->read('Auth'));
 		
    		$departments = array();
    		$dueInCount = 0;
