@@ -80,7 +80,7 @@
 			
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 			{
-				echo '<pre>'; print_r($postArray['data']['name']); echo '</pre>';
+				echo '<pre>'; print_r($postArray['data']['error']); echo '</pre>';
 				exit('stop');
 			}
 			
