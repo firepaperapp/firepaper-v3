@@ -363,7 +363,7 @@ select {
 	font-size: 36px;
 	font-weight: normal;
 }
-.nav li a .dashboard-icon {
+.nav li a .dashboard-icon:before {
 	content:'\1F680';
 }
 /* End Navigation styling */
