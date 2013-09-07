@@ -223,7 +223,7 @@
 				if(isset($dept_id) && $dept_id == $rec['Department']['id'])	
 					$active = "active";
 			?>
-				<li class="<?php echo $active ;?>" id="deptSub_<?php echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" class="project-icon <?php echo $deptProject;?>"><?php echo $rec['Department']['title'];?> <span></span></a></li>
+				<li class="<?php echo $active ;?>" id="deptSub_<?php echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" class="project-icon <?php echo $deptProject;?>"><?php echo $rec['Department']['title'];?> <span class="projects-icon"></span></a></li>
 			<?php
 			}
 			if(in_array($usertype, array(1,2,3,7)))
