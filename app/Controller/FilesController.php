@@ -427,9 +427,6 @@ class FilesController  extends AppController{
 					$string = remove_specialchars($arFile[0]);				
 					$fileExt = array_pop($arFile);
 					
-					echo '<pre>'; print_r($source); echo '</prE>';
-					echo '<pre>'; print_r($arFile); exit;
-					
 					$filebase = $string."_".time();
 					
 					$filename = $filebase.".".$fileExt;
@@ -455,6 +452,115 @@ class FilesController  extends AppController{
 						mkdir($uploads_strt_dir.$uploads_dir);
 					}
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
+					
+					echo var_dump(in_array(strtolower($fileExt), $videoArray));
+					echo '<pre>'; print_r($source); echo '</prE>';
+					echo '<pre>'; print_r($arFile); exit;
+					
+					if($fileId!='')
+					{
+						$uploads_dir = $uploads_dir."/".$fileId;
+						if(!file_exists($uploads_strt_dir.$uploads_dir))
+						{
+
+							mkdir($uploads_strt_dir.$uploads_dir); 
+						}
+						@chmod($uploads_strt_dir.$uploads_dir,0777);
+						$this->request->data['userFile']['version_of'] = $fileId;
+					}					
+					if(in_array(strtolower($fileExt), $videoArray))
+					{
+						//if it is a video file
+						$filename = $this->uploadVideo($uploads_dir."/", $this->request->params['form']['uploadfile']);			 
+						if($filename!=false)
+						{
+							$return = true; 						 
+							$rest = explode("##", $filename);
+							$filename = $rest[0];
+							$this->request->params['form']['uploadfile']['size'] = $rest[1];
+						}
+						else 
+						{
+							$return = false; 						 
+						}
+					}
+					else
+					{	 
+						//we will simply upload the file
+						move_uploaded_file( $this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
+							 
+			
+						$old = umask(0);
+						@chmod("$uploads_dir/$filename", 0755);
+						umask($old);
+
+						// Checking
+						if ($old != umask()) {
+							die('An error occured while changing back the umask');
+						}
+						else {
+							//We will upload the object into amazon
+							 $return = true;
+							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+							//We will delete the local file
+							//@unlink($uploads_strt_dir.$uploads_dir);
+						}
+					}
+					if($return == true)
+					{
+						$iconType = $this->userFile->getIconType($fileExt);				
+						$this->request->data['userFile']['name'] = $filename;
+						$this->request->data['userFile']['file_name'] = $actualFilename;//$filename;
+						$this->request->data['userFile']['file_type_id'] = $iconType;
+						$this->request->data['userFile']['size'] = $this->request->params['form']['uploadfile']['size'];
+						$this->request->data['userFile']['created_by'] = $this->Session->read("userid");
+						$this->request->data['userFile']['uploaded'] = date("Y-m-d H:i:s");
+						
+						//$this->Session->setFlash(MSG_FILE_UPLOADED);				 
+						if(isset($_POST['category_id']) && !isNull($_POST['category_id']))
+						{
+							$gotCat = $_POST['category_id'];
+						}
+						else 
+						{
+							$defaultCat = $this->fileCategory->find("first", array(
+							"conditions"=>"isdefault = 1 and created_by = ".$this->Session->read("userid")
+							));
+							if(!isset($defaultCat['fileCategory']['id']))
+							{
+								$defCat['fileCategory']['title'] = "UnCategorized";
+								$defCat['fileCategory']['isdefault'] = 1;
+								$defCat['fileCategory']['created_by'] = $this->Session->read("userid");
+								$this->fileCategory->Save($defCat);
+								$gotCat = $this->fileCategory->getLastInsertId();
+							}
+							else 
+							{
+								$gotCat = $defaultCat['fileCategory']['id'];
+							}
+						}
+						 
+						$this->request->data['userFile']['category_id'] = $gotCat;
+						$this->userFile->Save($this->request->data);
+						//we will increase admin's used space
+						if($this->Session->read("admin_id")!=0)
+						{
+							$uid = $this->Session->read("admin_id");						
+						}
+						else 
+						{
+							//If is a individual user
+							$uid = $this->Session->read("userid");			
+						}
+						$this->User->manageUserSpace($this->request->data['userFile']['size'], $uid, "add");
+						$response['success'] = MSG_FILE_UPLOADED;
+						$response['id'] = $this->userFile->getLastInsertId();
+					}
+					else 
+					{
+						$response['error'] = FILE_CANT_UPLOADED;
+					}
+					
 					
 				}else{
 					/*
