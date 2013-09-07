@@ -432,8 +432,9 @@ class FilesController  extends AppController{
 					$filename = $filebase.".".$fileExt;
 					$actualFilename = $string.".".$fileExt;
 					
-					echo '<pre>'; var_dump($uploads_strt_dir."/".$filename); echo '</prE>'; exit;
-					$result = move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir."/".$filename);
+					echo '<pre>'; var_dump($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile']); echo '</prE>';
+					echo '<pre>'; var_dump($uploads_strt_dir.$filename); echo '</prE>'; exit;
+					$result = move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$filename);
 					
 					if(!file_exists($uploads_strt_dir))
 					{	
