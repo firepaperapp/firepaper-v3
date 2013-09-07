@@ -342,13 +342,13 @@ select {
 
 .nav li {    
 	display: block; 
-	margin-top:16px; 
+	margin-top:14px; 
 	color: #686b6c;
 	font-size: 13px;
 	text-align: right;
 	padding:0px 20px 0px 0px; 
 }
-.nav li:hover {
+.nav li:hover, .nav li a:hover {
 	color:#e56a6a ;
 }
 .nav li a {
