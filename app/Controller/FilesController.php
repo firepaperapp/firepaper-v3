@@ -352,7 +352,6 @@ class FilesController  extends AppController{
 	 */
 	function uploadFile($fileId="")
 	{
-		phpinfo(); exit;
 		 //echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
@@ -432,6 +431,10 @@ class FilesController  extends AppController{
 					
 					$filename = $filebase.".".$fileExt;
 					$actualFilename = $string.".".$fileExt;
+					
+					$result = move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir."/".$filename);
+					echo '<pre>'; var_dump($result); echo '</prE>'; exit;
+					
 					if(!file_exists($uploads_strt_dir))
 					{	
 						mkdir($uploads_strt_dir); 
@@ -484,7 +487,7 @@ class FilesController  extends AppController{
 					else
 					{	 
 						//we will simply upload the file
-						move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], "/var/www/firepaperapp.com/dev/app/webroot/files/files/".$filename);
+						move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
 							 
 			
 						$old = umask(0);
