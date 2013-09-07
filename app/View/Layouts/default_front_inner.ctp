@@ -30,9 +30,10 @@
 </script>
 </head>
 <body>
-<section class="container">
+
 
 <?php echo $this->element("common/leftsidebar");?>
+<section class="container">
 <?php echo $this->element("common/header");?>
 <?php echo $content_for_layout; ?>
 <?php echo $this->element("common/footer");?>
