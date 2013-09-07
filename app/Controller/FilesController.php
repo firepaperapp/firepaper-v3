@@ -417,17 +417,17 @@ class FilesController  extends AppController{
 			{
 				if($_SERVER['REMOTE_ADDR'] =='180.188.253.92')
 				{
-					$getModelName = array_keys($postArray['data']['name']);
+					$getModelName = array_keys($this->request->params['form']['data']['name']);
 					$_moduleName = $getModelName[0];
 				
 					$uploads_dir.= $this->Session->read("userid"); 
-					$mineType =  $this->request->params['form']['type'][$_moduleName]['uploadfile'];
-					$source = $this->request->params['form']['tmp_name'][$_moduleName]['uploadfile'];
-					$arFile = explode(".",$this->request->params['form']['name'][$_moduleName]['uploadfile']);
+					$mineType =  $this->request->params['form']['data']['type'][$_moduleName]['uploadfile'];
+					$source = $this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'];
+					$arFile = explode(".",$this->request->params['form']['data']['name'][$_moduleName]['uploadfile']);
 					$string = remove_specialchars($arFile[0]);				
 					$fileExt = array_pop($arFile);
 					
-					echo '<pre>'; print_r($this->request->params['form']); echo '</prE>';
+					echo '<pre>'; print_r($source); echo '</prE>';
 					echo '<pre>'; print_r($arFile); exit;
 					
 					$filebase = $string."_".time();
