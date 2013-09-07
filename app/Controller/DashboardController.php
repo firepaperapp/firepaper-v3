@@ -38,7 +38,7 @@ class DashboardController  extends AppController{
     }
 	function beforeFilter()
 	{
-		echo "In BF >> Dashboard"; exit;
+		//echo "In BF >> Dashboard"; exit;
 		if(!isUserLoggedIn($this->Session, "userid"))
 		{
 			$this->Auth->logoutRedirect = array('users/logout/');
@@ -48,7 +48,7 @@ class DashboardController  extends AppController{
 		{
 			if($this->Session->read("user_type")==6)
 			{
-				$this->redirect("/users/viewProfile");
+					$this->redirect("/users/viewProfile");
 			}
 		}
  		parent::beforeFilter();
