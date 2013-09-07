@@ -427,7 +427,7 @@ class FilesController  extends AppController{
 					$string = remove_specialchars($arFile[0]);				
 					$fileExt = array_pop($arFile);
 					
-					echo '<pre>'; print_r($source); echo '</prE>';
+					echo '<pre>'; print_r($this->request->params['form']); echo '</prE>';
 					echo '<pre>'; print_r($arFile); exit;
 					
 					$filebase = $string."_".time();
