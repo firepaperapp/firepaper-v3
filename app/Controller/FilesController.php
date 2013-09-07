@@ -407,12 +407,15 @@ class FilesController  extends AppController{
 			}
 	 		if(($spaceDetail['User']['usedspace']+$this->request->params['form']['uploadfile']['size']) > $spaceDetail['User']['totalspace'] &&  $spaceDetail['Package']['unlimited']!=1)
 			{
+				echo "check1 ==="; exit;
 				$response['error'] = $ms;
 				
 			}
 			else 
 			{
-				//print_r($this->request->params['form']); exit;
+				
+				echo "check2 ==="; exit;
+				print_r($this->request->params['form']); exit;
 				########### End Here ###########
 				
 				$uploads_dir.= $this->Session->read("userid"); 
