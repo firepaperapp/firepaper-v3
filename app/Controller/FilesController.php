@@ -432,7 +432,7 @@ class FilesController  extends AppController{
 					$filename = $filebase.".".$fileExt;
 					$actualFilename = $string.".".$fileExt;
 					
-					if(move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'],'/app/webroot/files/'.$filename))
+					if(move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename))
 					{
 						echo "File Uploaded!";
 					}
