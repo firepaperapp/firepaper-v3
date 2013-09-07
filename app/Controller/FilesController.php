@@ -352,6 +352,7 @@ class FilesController  extends AppController{
 	 */
 	function uploadFile($fileId="")
 	{
+		phpinfo(); exit;
 		 //echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
