@@ -452,7 +452,7 @@ class FilesController  extends AppController{
 						mkdir($uploads_strt_dir.$uploads_dir);
 					}
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
-					
+					echo '<pre>'; var_dump($uploads_strt_dir.$uploads_dir."/".$filename); echo '</prE>'; exit;
 					if($fileId!='')
 					{
 						$uploads_dir = $uploads_dir."/".$fileId;
