@@ -503,8 +503,6 @@ class FilesController  extends AppController{
 						}
 					}
 					
-					echo '<pre>'; var_dump($return); echo '</prE>'; exit;
-					
 					if($return == true)
 					{
 						$iconType = $this->userFile->getIconType($fileExt);				
