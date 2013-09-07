@@ -93,13 +93,13 @@
 					$arFile = explode(".",$postArray['data']['name'][$_moduleName]['uploadfile']);
 					$string = remove_specialchars($arFile[0]);				
 					$fileExt = array_pop($arFile); 
-					echo '<pre>'; print_r($fileExt); echo '</pre>'; exit('test');					
 					 
 					if(!in_array(strtolower($fileExt), $videoArray) && !in_array(strtolower($fileExt), $filesArray))
 					{	 
 						$this->errMsg="Please upload valid file.";
 						$this->err=1;				
 					}
+					echo '<pre>'; print_r($this->errMsg); echo '</pre>'; exit('test');	
 				}
 				 
 				return $this->err; 
