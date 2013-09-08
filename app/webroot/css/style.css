@@ -306,7 +306,7 @@ select {
 .navigation .settings-icon, .navigation .activity-toggle, .navigation .add-icon {
 	font-size: 20px;
 	display: inline-block;
-	padding: 15px 23px 16px 23px;
+	padding: 16px 23px 15px 23px;
 	float: left;
 	font-family:'entypo';
 	font-size: 36px;
@@ -319,7 +319,7 @@ select {
 .navigation .logout-icon {
 	font-size: 20px;
 	display: inline-block;
-	padding: 15px 23px 16px 23px;
+	padding: 25px 25px 24px 25px;
 	float: left;
 	font-family:'fontawesome';
 	font-size: 36px;
