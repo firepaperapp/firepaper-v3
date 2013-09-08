@@ -747,12 +747,16 @@ p.task-tickbox a {
 
 /* Listed Activity */
 
-.latest-activity {
-	
-}
+
 
 .activity-panel-wrapper { 
 	margin: 30px;
+	width: 66.666%;
+	float: left;
+}
+.latest-activity {
+	width: 33.333%;
+	float: left;
 }
 .activity-panel {
 	padding: 30px;
