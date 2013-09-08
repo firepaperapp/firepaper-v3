@@ -328,6 +328,7 @@ select {
 	margin-top: 14px;
 }
 /* Navigation styling */
+
 .nav { 
 
 	width:184px; 
@@ -339,7 +340,16 @@ select {
 	height: 100%;
 	margin-left:0; 
 }
-
+.nav .profile-image {
+	float: right;
+	margin-top: 10px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background: #fafafa;
+	-webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
+	box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
+}
 .nav li {    
 	display: block; 
 	margin-top:14px; 
@@ -3118,8 +3128,6 @@ ul#archived-list .month {
 	top: 0px;
 	position: absolute;
 	z-index: 15; 
-	-webkit-box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.3);
 }
 ul.tabs { 
 	margin:0 0 0px 1px; 
@@ -3129,20 +3137,72 @@ ul.tabs {
 	z-index:25; 
 	display: none; 
 }
-ul.tabs li { float: left; margin-right: 0px; overflow: hidden; position: relative; height: 30px; width:39px; }
-ul.tabs li a { height: 30px; width:39px; }
-ul.tabs li#files { background: url("../images/tabs.png") no-repeat 0 0; }
-ul.tabs li#files a { display:block; }
-ul.tabs li#files:hover { background-position:0px -30px !important; margin-bottom:-1px; position: relative; z-index:15; }
-ul.tabs li#files.active { background-position:0px -30px; margin-bottom:-1px; position: relative; z-index:15; }
-ul.tabs li#projects { background: url("../images/tabs.png") no-repeat -39px 0px; }
-ul.tabs li#projects a { display:block; }
-ul.tabs li#projects:hover { background-position:-39px -30px !important; margin-bottom:-1px; position: relative; z-index:15; }
-ul.tabs li#projects.active { background-position:-39px -30px; margin-bottom:-1px; position: relative; z-index:15; }
-ul.tabs li#activity-tab { background: url("../images/tabs.png") no-repeat -78px 0px; }
-ul.tabs li#activity-tab a { display:block; }
-ul.tabs li#activity-tab:hover { background-position:-78px -30px !important; margin-bottom:-1px; position: relative; z-index:15; }
-ul.tabs li#activity-tab.active { background-position:-78px -30px; margin-bottom:-1px; position: relative; z-index:15; }
+ul.tabs li { 
+	float: left; 
+	margin-right: 0px; 
+	overflow: hidden; 
+	position: relative; 
+	height: 30px; 
+	width:39px; 
+}
+ul.tabs li a { 
+	height: 30px; 
+	width:39px; 
+}
+ul.tabs li#files { 
+	background: url("../images/tabs.png") no-repeat 0 0; 
+}
+ul.tabs li#files a { 
+	display:block; 
+}
+ul.tabs li#files:hover { 
+	background-position:0px -30px !important; 
+	margin-bottom:-1px; 
+	position: relative; 
+	z-index:15; 
+}
+ul.tabs li#files.active { 
+	background-position:0px -30px; 
+	margin-bottom:-1px; 
+	position: relative; 
+	z-index:15; 
+}
+ul.tabs li#projects { 
+	background: url("../images/tabs.png") no-repeat -39px 0px; 
+}
+ul.tabs li#projects a { 
+	display:block; 
+}
+ul.tabs li#projects:hover { 
+	background-position:-39px -30px !important; 
+	margin-bottom:-1px; 
+	position: relative; 
+	z-index:15; 
+}
+ul.tabs li#projects.active { 
+	background-position:-39px -30px; 
+	margin-bottom:-1px; 
+	position: relative; 
+	z-index:15; 
+}
+ul.tabs li#activity-tab { 
+	background: url("../images/tabs.png") no-repeat -78px 0px; 
+}
+ul.tabs li#activity-tab a { 
+	display:block; 
+}
+ul.tabs li#activity-tab:hover { 
+	background-position:-78px -30px !important; 
+	margin-bottom:-1px; 
+	position: relative; 
+	z-index:15; 
+}
+ul.tabs li#activity-tab.active { 
+	background-position:-78px -30px; 
+	margin-bottom:-1px; 
+	position: relative; 
+	z-index:15; 
+}
 
 html ul.tabs li.active a {  }
 html ul.tabs li.active, html ul.tabs li.active a:hover { }
@@ -3158,8 +3218,11 @@ html ul.tabs li.active, html ul.tabs li.active a:hover { }
 	position:absolute;
 	min-height: 50px;
 }
-.tab_container .loader {left:120px; top: 20px;}
-.tab_content { padding:0px; font-size:11px; background: #fff;  }
+.tab_container .loader {
+	left:120px; top: 20px;
+}
+.tab_content { 
+	padding:0px; font-size:11px; background: #fff;  }
 .tab-wrapper .side-container .file { float:left; padding:7px 7px 5px 26px; cursor:move; }
 .tab-wrapper .side-container .file:hover { background:#E3F4F4 url("../images/icons/move.gif") no-repeat 6px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; width:88%; }
 .tab-wrapper .side-container .file em { color:#999999; font-size:11px; }
