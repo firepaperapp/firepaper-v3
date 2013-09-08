@@ -1,7 +1,7 @@
 <div class="activity">
 	<div class="index">
 		<h3>Activity Log</h3>
-		<div class="activity-panel-wrapper">
+		
 			
 			<?php
 			if(count($data)>0)
@@ -54,7 +54,5 @@
 			}
 			?>
 		</ul>
-		</div>
-
 	</div>
 </div>
