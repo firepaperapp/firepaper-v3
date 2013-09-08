@@ -42,16 +42,13 @@ $(document).ready(function() {
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
 	</span>
 </div>-->
-
+<a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="logout-icon"> Logout</a>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" >⚙</a>
-<a class="activity-toggle" href="">🌎</a>
+<!--<a class="activity-toggle" href="">🌎</a>-->
+<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 
 <?php } ?>
-
-
-<a href="<?php echo SITE_HTTP_URL."logout"?>" alt="Logout" class="logout right"> Logout</a>
-<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="button">Create a new Project</a>
 
 </aside>

@@ -25,6 +25,18 @@
 	font-weight: normal;
 	font-style: normal;	
 }
+@font-face {
+	font-family: 'fontawesome';
+	src: url('../fonts/fontawesome-webfont.eot');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix') 
+			format('embedded-opentype'),
+		 url('../fonts/fontawesome-webfont.woff') 
+		 	format('woff'),
+		 url('../fonts/fontawesome-webfont.ttf') 
+		 	format('truetype');
+	font-weight: normal;
+	font-style: normal;	
+}
 
 body { 
 	font-size:12px; 
@@ -291,7 +303,7 @@ select {
 }
 
 
-.navigation .settings-icon, .navigation .activity-toggle {
+.navigation .settings-icon, .navigation .activity-toggle, .navigation .add-icon {
 	font-size: 20px;
 	display: inline-block;
 	padding: 15px 23px 16px 23px;
