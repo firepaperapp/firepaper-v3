@@ -11,8 +11,8 @@
 		</div>
 	<?php }
 ?> 
-<div class="col1">
 
+<div class="activity-panel-wrapper">
 	
 	<?php
 	if(count($data)>0)
