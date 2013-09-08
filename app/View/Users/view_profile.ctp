@@ -28,10 +28,8 @@ else
 
     <div class="index white page">
          
-    	
-        <div class="profile-container">
         <h3>Profile Details</h3>
-            
+            <div class="profile-details-wrapper">
                 <div class="profile-large">                   
                     <img id="imgid" height="100" width="100" src="<?php echo $userimage;?>" alt="" />
                 </div>
@@ -196,9 +194,9 @@ else
 					}
 					?>
                 </div>
-       
+            </div>
             <div class="clr"></div>
-        </div> 
+        
     </div>
     <div id="backgroundPopup"></div>
 </div><!-- end activity -->
