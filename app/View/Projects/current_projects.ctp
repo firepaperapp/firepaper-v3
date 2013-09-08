@@ -102,7 +102,7 @@
 		<div class="clr-spacer"></div> 
 		<?php
 			} else {
-			echo "<div class='no-projects'><h2>".NO_RECENT_PROJECTS_FOUND;
+			echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
 			if(in_array($this->Session->read('user_type'), array(1,3,7)))
            	 	{
            	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
