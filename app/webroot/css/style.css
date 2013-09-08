@@ -265,19 +265,14 @@ select {
 	color: #a7abb1;
 }
 .navigation .latest-activity {
-	height: 25px;
-	width: 25px;
-	padding: 5px;
+	border-right: 1px solid #f5f5f5;
+	padding:15px 23px;
 	background: url('../images/icons/activity.png') no-repeat 6px 6px;
 	display: inline-block;
 	margin-top: 18px;
 	margin-left: 10px;
 }
-.navigation .latest-activity:hover {
-	background:#f5f5f5 url('../images/icons/activity.png') no-repeat 6px 6px;
-	border-radius:3px;
-	-webkit-border-radius:3px;
-}
+
 .navigation .settings-icon {
 	font-size: 20px;
 	display: inline-block;
