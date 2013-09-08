@@ -4,7 +4,7 @@
    	 });
 </script>   	 
 
- 	<div class="index page white">
+ 	<div class="index page">
 		<h3>Projects</h3>   
 	 	<div id="content_projects">
 	   	</div>
