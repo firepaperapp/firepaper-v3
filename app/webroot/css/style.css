@@ -3113,7 +3113,7 @@ ul#archived-list .month {
 .side-container { 
 	padding:4px 0px 9px 0px; 
 }
-.tab-wrapper { 
+.tab-wrapper, .panel { 
 	width: 33.333%;
 	float: left;
 }
