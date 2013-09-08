@@ -228,7 +228,7 @@ select {
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;   
 	box-sizing: border-box;
-	border-bottom: 1px solid #e0e4e8;
+	border-bottom: 1px solid #f1f1f1;
 }
 .navigation .profile {
 	margin-left: 14px; 
@@ -279,13 +279,16 @@ select {
 	-webkit-border-radius:3px;
 }
 .navigation .settings-icon {
-	height: 25px;
-	width: 25px;
-	background: url('../images/icons/activity.png') no-repeat;
+	font-size: 20px;
 	display: inline-block;
-	margin-top: 23px;
-	margin-left: 30px;
-	float: right;
+	padding: 15px;
+	float: left;
+	font-family:'entypo';
+	font-size: 36px;
+	border-right: 1px solid #f5f5f5;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 .new-project-btn {
 	margin-top: 19px;
@@ -573,9 +576,6 @@ p.task-tickbox a {
 	padding-right:10px; 
 	padding-top: -6px;
 	float:left;
-}
-.navigation li:hover li a:hover { 
-	background: #286985; 
 }
 
 

@@ -37,14 +37,12 @@ $(document).ready(function() {
 </script>
 
 <aside class="navigation">
-<div class="profile">
-         		
-      
-                <a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="name"><?php echo ucfirst(Sanitize::html($this->Session->read("firstname"), array('remove' => true)));?>
+<!--<div class="profile">
+    <a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="name"><?php echo ucfirst(Sanitize::html($this->Session->read("firstname"), array('remove' => true)));?>
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
-				
-				</span>
-</div>
+	</span>
+</div>-->
+<a class="settings-icon" href="">⚙</a>
 <a class="latest-activity" href=""></a>
 
 <?php if (isset($cansignup) && $cansignup == 1) {?>
