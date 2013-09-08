@@ -387,7 +387,9 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
-
+.nav li a i.students-icon {
+	font-size: 33px;
+}
 /* End Navigation styling */
 
 
