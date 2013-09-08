@@ -375,33 +375,33 @@ select {
 	display: inline-block;
 	margin: 10px;
 }
-.nav li i {
+.nav li a i {
 	font-family:'entypo';
 	font-size: 36px;
 	font-weight: normal;
 }
-.nav li i.dashboard-icon {
+.nav li a i.dashboard-icon {
 	content:'\1F680';
 	font-family:'entypo';
 	font-size: 36px;
 	font-weight: normal;
 }
-.nav li i.projects-icon {
+.nav li a i.projects-icon {
 	content:'\1F393';
 }
-.nav li i.marking-icon {
+.nav li a i.marking-icon {
 	content:'\1F4C8';
 }
-.nav li i.files-icon {
+.nav li a i.files-icon {
 	content:'\1F4F0';
 }
-.nav li i.departments-icon {
+.nav li a i.departments-icon {
 	content:'\E723';
 }
-.nav li i.students-icon {
+.nav li a i.students-icon {
 	content:'\1F465';
 }
-.nav li i.educators-icon {
+.nav li a i.educators-icon {
 	content:'\1F465';
 }
 /* End Navigation styling */
