@@ -3193,16 +3193,10 @@ ul.tabs li#activity-tab.active {
 html ul.tabs li.active a {  }
 html ul.tabs li.active, html ul.tabs li.active a:hover { }
 .tab_container { 
-	width:315px;
+	
 	background:url("../images/activity-bg.png"); 
 	padding-bottom:20px;
-	clear: both;
-	float: right;
-	right:0px;
-	top:0px;
-	margin-left: 0;
-	position:absolute;
-	min-height: 50px;
+
 }
 .tab_container .loader {
 	left:120px; top: 20px;
