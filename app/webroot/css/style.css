@@ -317,12 +317,11 @@ select {
 	font-smoothing: antialiased;
 }
 .navigation .logout-icon {
-	font-size: 20px;
+	font-size: 18px;
 	display: inline-block;
-	padding: 25px 25px 24px 25px;
+	padding: 26px 25px 23px 25px;
 	float: left;
 	font-family:'fontawesome';
-	font-size: 36px;
 	border-right: 1px solid #f5f5f5;
 	font-style: normal;
 	color: #c9c9c9;
