@@ -264,17 +264,12 @@ select {
 	margin-left: 8px;
 	color: #a7abb1;
 }
-.navigation .latest-activity {
-	border-right: 1px solid #f5f5f5;
-	padding:15px 23px;
-	background: url('../images/icons/activity.png') no-repeat 6px 6px;
-	display: inline-block;
-}
 
-.navigation .settings-icon {
+
+.navigation .settings-icon, .navigation .latest-activity {
 	font-size: 20px;
 	display: inline-block;
-	padding: 15px 23px;
+	padding: 15px 23px 16px 23px;
 	float: left;
 	font-family:'entypo';
 	font-size: 36px;
