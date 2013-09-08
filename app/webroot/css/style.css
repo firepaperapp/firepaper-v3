@@ -372,7 +372,6 @@ select {
 	text-transform: uppercase; 
 	font-weight: bold;
 	display: inline-block;
-	margin: 10px;
 }
 .nav li a span {
 	margin: 0px 0px 0px 5px;
