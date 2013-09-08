@@ -43,11 +43,11 @@ $(document).ready(function() {
 	</span>
 </div>-->
 
-
-
-<?php if (isset($cansignup) && $cansignup == 1) {?>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" >⚙</a>
 <a class="latest-activity" href="">🌎</a>
+
+<?php if (isset($cansignup) && $cansignup == 1) {?>
+
 <?php } ?>
 
 
