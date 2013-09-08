@@ -217,6 +217,10 @@ select {
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
+.panel { 
+	width: 33.333%;
+	float: left;
+}
 .fl-left { 
 	float:left !important; 
 	clear:both; 
@@ -3113,7 +3117,7 @@ ul#archived-list .month {
 .side-container { 
 	padding:4px 0px 9px 0px; 
 }
-.tab-wrapper, .panel { 
+.tab-wrapper{ 
 	width: 33.333%;
 	float: left;
 }
