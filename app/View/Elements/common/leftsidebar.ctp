@@ -121,7 +121,7 @@
             {
             	//echo $prjCount;
             }?></li>
-			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" >Files </a><span class="files-icon"></span></li>
+			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" class="files-icon">Files </a></li>
 			  <!--<div class="user-icon"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" >Profile</a></div>-->
 			    
             <!-- <a href="<?php echo SITE_HTTP_URL."search"?>" alt="Search" class="search-icon">Search</a> -->
