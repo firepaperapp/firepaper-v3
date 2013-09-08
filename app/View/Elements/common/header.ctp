@@ -42,11 +42,12 @@ $(document).ready(function() {
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
 	</span>
 </div>-->
-<a class="settings-icon" href="">⚙</a>
-<a class="latest-activity" href="">🌎</a>
+
+
 
 <?php if (isset($cansignup) && $cansignup == 1) {?>
-<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" ></a>
+<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" >⚙</a>
+<a class="latest-activity" href="">🌎</a>
 <?php } ?>
 
 
