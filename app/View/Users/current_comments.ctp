@@ -6,8 +6,8 @@
 	}
 </script>
 
-<div class="activity-panel-wrapper">
-	<div class="activity-panel">
+
+	<div class="panel">
 	<?php
 	if(count($data)>0)
 	{
@@ -91,5 +91,5 @@
 	<div class="clr-spacer"></div> 
  	<a href="<?php echo SITE_HTTP_URL."dashboard/viewComments/";?>" class="readmore-btn">View all messages</a>
  	<div class="clr"></div>
- 	</div>
+ 	
  </div>
