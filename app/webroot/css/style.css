@@ -202,7 +202,18 @@ select {
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
-
+.col1 {
+	width: 66.666%;
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.col2 {
+	width: 33.333%;
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 .white {
 	background: white; 
@@ -759,10 +770,6 @@ p.task-tickbox a {
 
 .activity-panel-wrapper { 
 	margin: 30px;
-	width: 66.666%;
-	float: left;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .activity-panel {
