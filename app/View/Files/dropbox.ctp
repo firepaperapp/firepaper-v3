@@ -54,7 +54,7 @@ $(document).ready(function() {
   <div class="tab_container">
     <div style="display: block;" id="tab2" class="tab_content">
       	
-    <div id="dropbox_activity"  style="float:left;width:100%;">
+    <div id="dropbox_activity">
 	   <div class="clr"></div>
 	   </div>
    </div>
