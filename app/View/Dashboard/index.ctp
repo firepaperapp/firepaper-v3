@@ -78,8 +78,8 @@
 		   	 });
 		</script>
 	
-		 <div class="activity-panel-wrapper">
-			<div class="activity-panel">
+		  <div class="latest-activity">
+			
 				<div class="upload-container">
 					<p>Filter by: </p>
 					<?php echo $this->Form->input('department',array('type'=>'select','div'=>false,'label'=>false,'options'=>$deptList,'id'=>"department_act","onchange"=>"getStuAndTeachers();","empty"=>"Please Select"));?>
@@ -90,17 +90,14 @@
 		 		echo $this->requestAction("/dashboard/adminLatestActivity");
 		 		?>
 		 		</div>
-		 	</div>
 		 </div>
  		<?php
  		}
  		?>	
-  	 </div><!-- end left -->        
-   <div class="latest-activity">
-     		<?php echo $this->requestAction("/users/currentComments");?>   
-     		<?php 
+<?php echo $this->requestAction("/users/currentComments");?>   
+<?php 
 if($usertype!=6)
 echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
-  
+   </div><!-- end left --> 
  	</div><!-- end right -->
 
