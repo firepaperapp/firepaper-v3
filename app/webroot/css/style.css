@@ -375,6 +375,9 @@ select {
 	display: inline-block;
 	margin: 10px;
 }
+.nav li a span {
+	margin: 0px 0px 0px 5px;
+}
 .nav li a i {
 	font-family:'entypo';
 	font-size: 36px;
