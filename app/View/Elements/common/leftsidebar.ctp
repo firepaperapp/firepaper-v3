@@ -37,7 +37,7 @@
 			$educatorsAction = "";
 			$studentsAction = "";
 			$filesAction = "";
-			$departmentAction = "";
+			$departmentAction = "active";
 			$whiteAction = "";
 			switch($this->request->params['action'])
 			{	
