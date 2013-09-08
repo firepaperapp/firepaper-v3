@@ -812,8 +812,6 @@ ul.list-activity {
 ul.list-activity li { 
 	margin-bottom:0px; 
 	padding:16px; 
-	border-bottom:1px solid #000000; 
-	border-top:1px solid #363535; 
 	line-height: 18px;
 }
 ul.list-activity li a { 
@@ -3210,9 +3208,7 @@ ul.tabs li#activity-tab.active {
 html ul.tabs li.active a {  }
 html ul.tabs li.active, html ul.tabs li.active a:hover { }
 .tab_container { 
-	
-	background:url("../images/activity-bg.png"); 
-	padding-bottom:20px;
+
 
 }
 .tab_container .loader {
