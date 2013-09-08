@@ -754,10 +754,7 @@ p.task-tickbox a {
 	width: 66.666%;
 	float: left;
 }
-.latest-activity {
-	width: 33.333%;
-	float: left;
-}
+
 .activity-panel {
 	padding: 30px;
 	width: 300px;
@@ -3115,12 +3112,8 @@ ul#archived-list .month {
 	padding:4px 0px 9px 0px; 
 }
 .tab-wrapper { 
-	margin-top:69px;
-	padding:0px;
-	right: 0px;
-	top: 0px;
-	position: absolute;
-	z-index: 15; 
+	width: 33.333%;
+	float: left;
 }
 ul.tabs { 
 	margin:0 0 0px 1px; 
@@ -3215,9 +3208,22 @@ html ul.tabs li.active, html ul.tabs li.active a:hover { }
 	left:120px; top: 20px;
 }
 .tab_content { 
-	padding:0px; font-size:11px; background: #fff;  }
-.tab-wrapper .side-container .file { float:left; padding:7px 7px 5px 26px; cursor:move; }
-.tab-wrapper .side-container .file:hover { background:#E3F4F4 url("../images/icons/move.gif") no-repeat 6px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; width:88%; }
+	padding:0px; 
+	font-size:11px; 
+	background: #fff;  
+}
+.tab-wrapper .side-container .file { 
+	float:left; 
+	padding:7px 7px 5px 26px; 
+	cursor:move; 
+}
+.tab-wrapper .side-container .file:hover { 
+	background:#E3F4F4 url("../images/icons/move.gif") no-repeat 6px; 
+	-moz-border-radius: 3px; 
+	-khtml-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	width:88%; 
+}
 .tab-wrapper .side-container .file em { color:#999999; font-size:11px; }
 .tab-wrapper .side-container .file img { border:0; margin-right:4px; float:left; }
 .tab-wrapper .side-container .file a { font-weight:bold; line-height:19px; cursor:move; }
