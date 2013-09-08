@@ -33,10 +33,10 @@
 		case "yeargroups":
 		case "whiteboards":
 	 		$dashboardMenu = "active";
-			$overviewAction = "";
-			$educatorsAction = "";
-			$studentsAction = "";
-			$filesAction = "";
+			$overviewAction = "active";
+			$educatorsAction = "active";
+			$studentsAction = "active";
+			$filesAction = "active";
 			$departmentAction = "active";
 			$whiteAction = "";
 			switch($this->request->params['action'])
