@@ -316,6 +316,19 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+.navigation .logout-icon {
+	font-size: 20px;
+	display: inline-block;
+	padding: 15px 23px 16px 23px;
+	float: left;
+	font-family:'fontawesome';
+	font-size: 36px;
+	border-right: 1px solid #f5f5f5;
+	font-style: normal;
+	color: #c9c9c9;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
 .new-project-btn {
 	margin-top: 19px;
 	margin-left: 30px;
