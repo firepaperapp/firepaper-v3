@@ -347,6 +347,9 @@ select {
 	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
 	box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
 }
+.nav ul {
+	margin-top: 20px;
+}
 .nav li {    
 	display: block; 
 	margin-top:14px; 
@@ -741,7 +744,7 @@ p.task-tickbox a {
 }
 
 .activity-panel-wrapper { 
-
+	margin: 30px;
 }
 .activity-panel {
 	padding: 30px;
