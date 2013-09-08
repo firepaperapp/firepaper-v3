@@ -271,7 +271,7 @@ select {
 }
 
 
-.navigation .settings-icon, .navigation .latest-activity {
+.navigation .settings-icon, .navigation .activity-toggle {
 	font-size: 20px;
 	display: inline-block;
 	padding: 15px 23px 16px 23px;
