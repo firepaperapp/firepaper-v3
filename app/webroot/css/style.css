@@ -343,6 +343,7 @@ select {
 .nav .profile-image {
 	float: right;
 	margin-top: 10px;
+	margin-right: 20px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	background: #fafafa;
