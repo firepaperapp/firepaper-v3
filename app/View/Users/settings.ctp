@@ -53,7 +53,7 @@ else
                 <input type="hidden" id="hiddenemail" style="display:none;" value="<?php echo Sanitize::html($userdata['User']['email']); ?>">
 
 				<p class="width100per">
-					<span class="title">Email:</span>
+					<h3>Email:</h3>
 					<div id="emailcontent" style="width:200px;"><?php echo trim(Sanitize::html($userdata['User']['email']));?></div>
 					<a href="javascript:void(0);" class="edit" id="editemaillink">Edit</a>
 				</p>
@@ -67,9 +67,9 @@ else
 				</div>
 				</form>
 				<br />
-                <p style="margin-bottom:0px;">
-					<span class="title">Time Zone:</span>&nbsp;<a id="savetimezone" class="edit">Save</a>
-				</p>
+                <h3>Time Zone:</h3>
+                <a id="savetimezone" class="edit">Save</a>
+				
 				<?php echo $this->Form->input('timezone',array('type'=>'select','div'=>false,'label'=>false,'options'=>$timezones,'id'=>"DropDownTimezone",'value'=>$userdata['User']['timezone']));?>	
 
                
