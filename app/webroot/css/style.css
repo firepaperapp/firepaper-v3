@@ -440,7 +440,6 @@ select {
 
 .main-signin, .main-signup { 
 	margin:0 auto 10px;
-	width:220px; 
 	padding:20px; 
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.09);
@@ -449,6 +448,12 @@ select {
 	background: white; 
 	-webkit-border-radius: 5px;
     border-radius: 5px;
+}
+.main-signin {
+	width:220px;
+}
+.main-signup {
+	width:500px; 
 }
 .header { 
 	height: 52px; 
