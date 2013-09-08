@@ -177,7 +177,7 @@
            	 <?php
            	 if($usertype == 1)	
            	 {?>
-           	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon"></i></a></li>           	 	
+           	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>           	 	
            	<?php 
            	 }
            	}
@@ -215,7 +215,7 @@
            	<li class="<?php echo $addEditProject;?>"><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" >Create Project </a><span class="create-icon"></span></li>
 			<?php }?>
            		
-			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> </a><i class="due-icon"></i></li>
+			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> </a><i class="due-icon">⚠</i></li>
 			<?php
 			
 			foreach($departments as $rec)
