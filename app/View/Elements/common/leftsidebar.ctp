@@ -147,7 +147,7 @@
 				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
 				<?php if($usertype==1 || $usertype==7||$usertype==3 ){?>
-				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">👥</i></a></li>
+				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } ?>
 				
 				<?php if($usertype==1 ||  $usertype==2 || $usertype==7) {?>
