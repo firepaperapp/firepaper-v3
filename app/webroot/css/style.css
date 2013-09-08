@@ -2217,9 +2217,7 @@ p.form-title {
 }
 
 .account-settings-wrapper {
-    float: left;
-    margin-left: 10px;
-}
+  }
 
 .indicator-wrapper {
     width: 100%;
