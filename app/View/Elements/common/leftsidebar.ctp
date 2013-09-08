@@ -22,11 +22,11 @@
 	
 	<?php
 
-	$dashboardMenu = "";
-	$profileMenu = "";
-	$projectMenu = "";
-	$searchMenu = "";
-	$fileMenu = "";
+	$dashboardMenu = "active";
+	$profileMenu = "active";
+	$projectMenu = "active";
+	$searchMenu = "active";
+	$fileMenu = "active";
 	switch($this->request->params['controller'])
 	{
 		case "dashboard":
