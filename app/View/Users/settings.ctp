@@ -43,10 +43,9 @@ else
  			 <div id="successcontainer" class="success" style="display:none;"></div>
              <div class="validation-signup" id="validation-container" style="display:none;" ></div>
 			 <div id="emailboxloader" style="display:none;"></div> 
-                <p>
-					<span class="title">Name:</span>
-					<div id="name" style="width:200px;"><?php echo trim(ucfirst(Sanitize::html($userdata['User']['firstname'] . " " .
-									$userdata['User']['lastname'])));?></div>
+                <h3>Name:</h3>
+					<div id="name" style="width:200px;">
+					<p><?php echo trim(ucfirst(Sanitize::html($userdata['User']['firstname'] . " " . $userdata['User']['lastname'])));?></div>
 					<a href="javascript:void(0);" class="edit" id="editnamelink" >Edit</a>
 				</p>
 				<br />
@@ -73,8 +72,7 @@ else
 				</p>
 				<?php echo $this->Form->input('timezone',array('type'=>'select','div'=>false,'label'=>false,'options'=>$timezones,'id'=>"DropDownTimezone",'value'=>$userdata['User']['timezone']));?>	
 
-               <br />
-                <br />
+               
 				
 				<p class="width100per"><a href="javascript:void(0);" id="editpwdlink" class="edit">Change password</a></p>
 
@@ -111,8 +109,7 @@ else
                 <br />-->
 				<span id="status" ></span>
 
-                <p>
-					<span class="title">UserName:</span> 
+                <h3>Username:</h3> 
 					<div id="usernamediv" style="width:200px;"><?php echo trim(Sanitize::html($userdata['User']['username']));?></div>
 					<a  class="edit" id="editusernamelink">Edit</a>
 				</p>
@@ -126,24 +123,22 @@ else
 				</div>
 				</form>
 				<br /> 
-                <p>
-					<span class="title">Company URL on firepaperapp:</span><br /> 
+                <h3>Company URL on firepaperapp:</h3>
 
 					<input id="companyurl" name="companyurl" type="text" value="<?php echo $userdata['User']['sitetitle']?>"/>
 					<em>.firepaperapp.com</em>
 
 					<a id="edit_companyurl_link" class="edit">Save</a>				
 				</p>
-				<br /> 
-                <p style="margin-bottom:0px;">
-					<span class="title">Country:</span><a id="editcountrylink" class="edit">Save</a>
+			
+                <h3>Country:</h3><a id="editcountrylink" class="edit">Save</a>
 				</p> 
                 <?php echo $this->Form->input('country',array('type'=>'select','div'=>false,'label'=>false,'options'=>$countries,'id'=>"DropDownCountry",'value'=>$userdata['User']['country']));?>
 
 <hr />
 <h3>Manage your subscription</h3>
 
-<p class="title">Your plan:<span class="red"> <?php echo $userdata['Package']['name']?></span></p>
+<h3>Your plan:<span class="red"> <?php echo $userdata['Package']['name']?></span></h3>
 			<?php
 			if($userdata['Package']['unlimited'] == 0)
 			{?>
