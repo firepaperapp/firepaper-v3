@@ -1,5 +1,5 @@
 
-<div class="activity-panel-wrapper">
+<div class="col1">
 	
 		<?php
 			App::import('Helper','Time');
