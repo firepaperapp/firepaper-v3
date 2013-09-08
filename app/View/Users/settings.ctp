@@ -72,7 +72,7 @@ else
 				
 				<?php echo $this->Form->input('timezone',array('type'=>'select','div'=>false,'label'=>false,'options'=>$timezones,'id'=>"DropDownTimezone",'value'=>$userdata['User']['timezone']));?>	
 
-               
+               <br />
 				
 				<p class="width100per"><a href="javascript:void(0);" id="editpwdlink" class="edit">Change password</a></p>
 
