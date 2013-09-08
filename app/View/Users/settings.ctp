@@ -91,7 +91,7 @@ else
                 </form>
          		 <br />
                  
-        <hr />
+        <div class="rule"></div>
         
                
                 <!--<h4>Your Logo</h4>
@@ -135,7 +135,7 @@ else
 				</p> 
                 <?php echo $this->Form->input('country',array('type'=>'select','div'=>false,'label'=>false,'options'=>$countries,'id'=>"DropDownCountry",'value'=>$userdata['User']['country']));?>
 
-<hr />
+<div class="rule"></div>
 <h3>Manage your subscription</h3>
 
 <h3>Your plan:<span class="red"> <?php echo $userdata['Package']['name']?></span></h3>
@@ -249,7 +249,7 @@ else
 </table>
  
 
-<hr />
+<div class="rule"></div>
 <h3>Other</h3>
 		<?php if($userdata['User']['status']==1) {?>
 		<p id="suspend" ><a class="edit" style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $userdata['User']['id'];?>,'S');" >Suspend Account</a></p>
