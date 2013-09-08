@@ -571,15 +571,16 @@ p.task-tickbox a {
 .loader { 
 	margin: 0;
 	padding:10px 10px 10px 10px; 
-	opacity: 0.6; 
-	-webkit-border-radius: 3px; 
-	-moz-border-radius: 3px; 
-	border-radius: 3px;  
-	background:black; 
+	-webkit-border-radius:0px 0px 3px 3px; 
+	-moz-border-radius: 0px 0px 3px 3px; 
+	border-radius: 0px 0px 3px 3px;  
+	background:white; 
 	position:absolute; 
-	top:100px; 
-	left:300px; 
-	color:white; 
+	top:0px; 
+	left:50%; 
+	color:#fca55f; 
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 .loader p {
 	margin:0px; 
