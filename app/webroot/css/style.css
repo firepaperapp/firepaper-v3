@@ -384,6 +384,9 @@ select {
 	width: 20px;
 	display: inline-block;
 	height: 22px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 /* End Navigation styling */
