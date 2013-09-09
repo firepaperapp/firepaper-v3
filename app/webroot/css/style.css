@@ -3433,7 +3433,11 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 	border-radius: 3px;
 	border: 1px solid #f5f5f5;
 }
-.bread .crumb h3 a, .bread .crumb p {
+.bread .crumb h3 {
+	margin-top: 8px;
+	margin-bottom: 6px;
+}
+.bread .crumb h3 a, .bread .crumb p a {
 	color: #c9c9c9;
 }
 
