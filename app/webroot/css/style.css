@@ -1220,6 +1220,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .progressbg {
 	position: relative;
+	overflow: hidden;
 	background: #d4d9de;
 	width: 240px;
 	height: 6px;
