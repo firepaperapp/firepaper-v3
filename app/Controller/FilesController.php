@@ -490,14 +490,7 @@ class FilesController  extends AppController{
 						$old = umask(0);
 						@chmod("$uploads_dir/$filename", 0755);
 						umask($old);
-						$response['success'] = MSG_FILE_UPLOADED . var_dump($old != umask());
-						$this->RequestHandler->respondAs('json');
-						echo json_encode($response);
-						$this->autoRender = false;
-						die;
 						
-						
-
 						// Checking
 						if ($old != umask()) {
 							die('An error occured while changing back the umask');
@@ -507,8 +500,13 @@ class FilesController  extends AppController{
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
 							//We will delete the local file
-							//@unlink($uploads_strt_dir.$uploads_dir);
+							@unlink($uploads_strt_dir.$uploads_dir);
 						}
+						$response['success'] = MSG_FILE_UPLOADED . $return;
+						$this->RequestHandler->respondAs('json');
+						echo json_encode($response);
+						$this->autoRender = false;
+						die;
 					}
 					
 					/*
