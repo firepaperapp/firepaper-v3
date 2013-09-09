@@ -486,12 +486,13 @@ class FilesController  extends AppController{
 						//we will simply upload the file
 						move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
 							 
+						
+						$old = umask(0);
 						$response['success'] = MSG_FILE_UPLOADED;
 						$this->RequestHandler->respondAs('json');
 						echo json_encode($response);
 						$this->autoRender = false;
 						die;
-						$old = umask(0);
 						@chmod("$uploads_dir/$filename", 0755);
 						umask($old);
 						
