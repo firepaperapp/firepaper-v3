@@ -3426,9 +3426,11 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 .bread { }
 .bread .crumb { 
 	padding:10px;  
-	border-bottom:1px solid #000; 
 	float:left; 
 	margin-right:2px; 
+	background:#f5f7f8 ;
+	margin-bottom: 10px;
+	border-radius: 3px;
 }
 
 
