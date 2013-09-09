@@ -432,12 +432,6 @@ class FilesController  extends AppController{
 					$filename = $filebase.".".$fileExt;
 					$actualFilename = $string.".".$fileExt;
 					
-					if(move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename))
-					{
-						echo "File Uploaded!";
-					}
-					echo '<pre>'; var_dump($filename); echo '</prE>'; exit;
-					
 					if(!file_exists($uploads_strt_dir))
 					{	
 						mkdir($uploads_strt_dir); 
@@ -509,6 +503,8 @@ class FilesController  extends AppController{
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
 					}
+					$response['success'] = MSG_FILE_UPLOADED;
+					return $response;
 					/*
 					if($return == true)
 					{
