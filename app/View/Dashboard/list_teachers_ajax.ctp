@@ -66,7 +66,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		 		if($i%3==0 && $i!=0)
 		 		{
 		 		?>
-					<div class="clr"></div>
+					
       			  </div>
 	       		 <div class="row">
 	       		 <div class="user-box-wrapper">
