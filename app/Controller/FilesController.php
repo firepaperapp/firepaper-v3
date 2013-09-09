@@ -500,25 +500,21 @@ class FilesController  extends AppController{
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
 							//We will delete the local file
-							@unlink($uploads_strt_dir.$uploads_dir);
+							// @unlink($uploads_strt_dir.$uploads_dir);
 						}
-						$response['success'] = MSG_FILE_UPLOADED . $return;
-						$this->RequestHandler->respondAs('json');
-						echo json_encode($response);
-						$this->autoRender = false;
-						die;
+						
 					}
 					
-					/*
 					if($return == true)
 					{
 						$iconType = $this->userFile->getIconType($fileExt);				
 						$this->request->data['userFile']['name'] = $filename;
 						$this->request->data['userFile']['file_name'] = $actualFilename;//$filename;
 						$this->request->data['userFile']['file_type_id'] = $iconType;
-						$this->request->data['userFile']['size'] = $this->request->params['form']['uploadfile']['size'];
+						$this->request->data['userFile']['size'] = $this->request->params['form']['data']['size'][$_moduleName]['uploadfile'];
 						$this->request->data['userFile']['created_by'] = $this->Session->read("userid");
 						$this->request->data['userFile']['uploaded'] = date("Y-m-d H:i:s");
+						
 						
 						//$this->Session->setFlash(MSG_FILE_UPLOADED);				 
 						if(isset($_POST['category_id']) && !isNull($_POST['category_id']))
@@ -564,8 +560,12 @@ class FilesController  extends AppController{
 					{
 						$response['error'] = FILE_CANT_UPLOADED;
 					}
-					*/
-					$response['id'] = 1;
+					
+					$this->RequestHandler->respondAs('json');
+					echo json_encode($response);
+					$this->autoRender = false;
+					die;
+					
 					
 				}else{
 					/*
