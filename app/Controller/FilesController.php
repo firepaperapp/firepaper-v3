@@ -561,12 +561,6 @@ class FilesController  extends AppController{
 						$response['error'] = FILE_CANT_UPLOADED;
 					}
 					
-					$this->RequestHandler->respondAs('json');
-					echo json_encode($response);
-					$this->autoRender = false;
-					die;
-					
-					
 				}else{
 					/*
 					echo "check2 ==="; exit;
