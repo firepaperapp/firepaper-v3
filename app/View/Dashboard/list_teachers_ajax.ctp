@@ -59,7 +59,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		</div>
 	<?php }
 ?>
- 	<div class="row">
+ 	<!--<div class="row">
 	   	 <?php $k=1;
 	 	 foreach($data as $teachers)
 		 { 
@@ -81,13 +81,13 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		   		 	<?php 
 		   		 	}
 		   		 	else {
-		   		 	?>
+		   		 	?>-->
 		   		 	<div class="user-box-wrapper">
 		   		 		<div class="user-box">	
-		   		 	<?php 
+		   		 <!--	<?php 
 		   		 	}
 		   		 }
-		   		?>
+		   		?> -->
 	 				<img src="<?php echo $teachers['User']['profilepic'];?>"  />
 
 			       <?php $editpgurl = SITE_HTTP_URL."users/viewProfile/".$teachers['User']['id'];?>
@@ -113,12 +113,12 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 					
 			    </div>  
 			  </div> 
-		<?php
+		<!--<?php
 		$k++;	
 	     $i++;		 
 	     
 		 }?>
-		 <div class="clr"></div>
+		 <div class="clr"></div>-->
      </div>
     </div> 
 <?php }
