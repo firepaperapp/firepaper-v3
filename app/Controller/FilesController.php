@@ -490,6 +490,12 @@ class FilesController  extends AppController{
 						$old = umask(0);
 						@chmod("$uploads_dir/$filename", 0755);
 						umask($old);
+						
+						$response['success'] = MSG_FILE_UPLOADED;
+						$this->RequestHandler->respondAs('json');
+						echo json_encode($response);
+						$this->autoRender = false;
+						die;
 
 						// Checking
 						if ($old != umask()) {
@@ -503,8 +509,7 @@ class FilesController  extends AppController{
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
 					}
-					$response['success'] = MSG_FILE_UPLOADED;
-					return $response;
+					
 					/*
 					if($return == true)
 					{
