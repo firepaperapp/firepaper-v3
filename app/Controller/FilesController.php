@@ -489,12 +489,12 @@ class FilesController  extends AppController{
 						
 						$old = umask(0);
 						@chmod("$uploads_dir/$filename", 0755);
-						$response['success'] = MSG_FILE_UPLOADED .$old;
+						umask($old);
+						$response['success'] = MSG_FILE_UPLOADED;
 						$this->RequestHandler->respondAs('json');
 						echo json_encode($response);
 						$this->autoRender = false;
 						die;
-						umask($old);
 						
 						
 
