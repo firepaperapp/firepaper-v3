@@ -8,7 +8,7 @@
     });
    
 </script>
-	 <div class="index page white">
+	 <div class="index">
 	 
 	 	<!-- search Section start here -->
 	 	 <h3><?php
