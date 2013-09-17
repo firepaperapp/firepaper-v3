@@ -1490,7 +1490,6 @@ p.contact span {
 	margin-right: 15px;
 }
 .upload-container-wrapper {
-    background: #E8EAED url(../images/border-lines.gif);
     padding: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1526,7 +1525,12 @@ p.contact span {
 .browse-btn:hover {
     background: #000;
 }
-
+.toolbar {
+	width: 100%;
+}
+#files-upload-form {
+	
+}
 .files-container {
     margin-bottom: 10px;
 }
