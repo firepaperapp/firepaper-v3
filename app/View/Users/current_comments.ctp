@@ -52,11 +52,6 @@
 		        		echo nl2br($rec['ts']['comment']);
 		        	?>	
 		        	</span>
-		        	<span class="text-hidden" style="display:none;">
-		        		<?php
-		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment']));		        		?>
-		        	</span> 
-		        	</p>
 		        	<?php	
 				$preDate = $date;
 				if($currDate == $date)
@@ -78,6 +73,12 @@
 			else {
 				
 			}?>
+		        	<span class="text-hidden" style="display:none;">
+		        		<?php
+		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment']));		        		?>
+		        	</span> 
+		        	</p>
+		        	
 		   		</div><!-- end msg-body -->
 		   		
 			</div><!-- end msg-container -->	 
