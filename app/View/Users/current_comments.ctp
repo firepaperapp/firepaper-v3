@@ -8,38 +8,6 @@
 
 
 	<div class="panel widget">
-	<div class="msg-container">
-		       	<div class="top"><img src="<?php echo IMAGES_PATH;?>icons/user.png" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>">
-		       	<?php
-		       	$st = ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));
-				if(strlen($st)>15)
-						echo substr($st, 0 ,15)."...";
-				else
-		        		echo nl2br($st);
-		        ?>
-		       	</a><span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span></p> </div>
-				<?php
-				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
-				{?>
-		       	<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>
-				<?php }?>	
-		        <div class="msg-body" >
-		        	<p>
-		        	<span class="text-exposed">
-		        	<?php
-		        	if(strlen($rec['ts']['comment'])>120)
-						echo substr(nl2br($rec['ts']['comment']), 0 ,120)."<a onclick='showAfter(this);' class='edit'>...See More</a>";
-						    		else
-		        		echo nl2br($rec['ts']['comment']);
-		        	?>	
-		        	</span>
-		        	<span class="text-hidden" style="display:none;">
-		        		<?php
-		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment']));		        		?>
-		        	</span> 
-		        	</p>
-		   		</div><!-- end msg-body -->
-			</div><!-- end msg-container -->
 	<?php
 	if(count($data)>0)
 	{
@@ -79,7 +47,38 @@
 			else {
 				
 			}?>
-			 	 
+			 <div class="msg-container">
+		       	<div class="top"><img src="<?php echo IMAGES_PATH;?>icons/user.png" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>">
+		       	<?php
+		       	$st = ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));
+				if(strlen($st)>15)
+						echo substr($st, 0 ,15)."...";
+				else
+		        		echo nl2br($st);
+		        ?>
+		       	</a><span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span></p> </div>
+				<?php
+				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
+				{?>
+		       	<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>
+				<?php }?>	
+		        <div class="msg-body" >
+		        	<p>
+		        	<span class="text-exposed">
+		        	<?php
+		        	if(strlen($rec['ts']['comment'])>120)
+						echo substr(nl2br($rec['ts']['comment']), 0 ,120)."<a onclick='showAfter(this);' class='edit'>...See More</a>";
+						    		else
+		        		echo nl2br($rec['ts']['comment']);
+		        	?>	
+		        	</span>
+		        	<span class="text-hidden" style="display:none;">
+		        		<?php
+		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment']));		        		?>
+		        	</span> 
+		        	</p>
+		   		</div><!-- end msg-body -->
+			</div><!-- end msg-container -->	 
 	 		<?php
 			$i++;
 			 
