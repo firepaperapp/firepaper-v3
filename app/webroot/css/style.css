@@ -1449,14 +1449,13 @@ p.title-today .date {
 }
 
 p.contact {
-    font-weight: 400;
+    font-weight: normal;
     line-height: 12px;
 }
 
 p.contact a {
-    color: #285366;
-    text-decoration: underline;
-    font-weight: 400;
+    color: #000000;
+    font-weight: normal;
 }
 
 p.contact a:hover {
