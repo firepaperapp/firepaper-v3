@@ -1387,7 +1387,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .msg-container {
-    margin-bottom: 14px;
+    margin: 8px 24px;
 }
 
 .msg-container .top {
@@ -1409,11 +1409,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
 .msg-container .msg-body {
     padding: 0 12px 12px 20px;
-    background: url('../images/icons/msg-icon.gif') no-repeat 2px left;
 }
 
 .msg-container .msg-body p {
     color: #676565;
+    font-size: 13px;
 }
 
 .msg-container .msg-body .msg-title {
