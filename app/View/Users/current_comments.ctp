@@ -40,7 +40,7 @@
 				}
 				else 
 				{?>
-				<span class="date">Comment<><?php print(Date("dS F Y", strtotime($date))); ?></span>
+				<span class="date">Comment<?php print(Date("dS F Y", strtotime($date))); ?></span>
 				<?php
 				}
 			}
