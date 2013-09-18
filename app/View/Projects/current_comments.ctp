@@ -60,7 +60,7 @@
 				 
 				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
 				{?>
-		       	<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>
+		       	<!--<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>-->
 				<?php }	?>
 				
 		        <div class="msg-body" onClick='<?php 
@@ -75,7 +75,7 @@
 				}
 		
 		        	
-				};?>' style="cursor:pointer;word-wrap: break-word;padding-bottom:2px;">
+				};?>' >
 		        	<p>
 		        	<span class="text-exposed">
 		        	<?php
