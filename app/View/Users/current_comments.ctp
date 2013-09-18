@@ -56,16 +56,8 @@
 				else
 		        		echo nl2br($st);
 		        ?>
-		       	</a> <span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span> </p> </div>
-				<?php
-				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
-				{?>
-		       	<!--<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>-->
-				<?php }?>	
-		        <div class="msg-body" >
-		        	<p>
-		        	<span class="text-exposed">
-		        	<?php
+		       	</a> 
+		       	<?php
 		        	if(strlen($rec['ts']['comment'])>120)
 						echo substr(nl2br($rec['ts']['comment']), 0 ,120)."<a onclick='showAfter(this);' class='edit'>...See More</a>";
 						    		else
@@ -75,7 +67,17 @@
 		        	</span>
 		        	<span class="text-hidden" style="display:none;">
 		        		<?php
-		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment']));		        		?>
+		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment'])); ?>
+		        		<span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span> </p> </div>
+				<?php
+				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
+				{?>
+		       	<!--<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>-->
+				<?php }?>	
+		        <div class="msg-body" >
+		        	<p>
+		        	<span class="text-exposed">
+		        			        		
 		        	</span> 
 		        	</p>
 		   		</div><!-- end msg-body -->
