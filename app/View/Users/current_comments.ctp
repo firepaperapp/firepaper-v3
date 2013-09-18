@@ -26,7 +26,27 @@
 					//echo "</ul><hr><ul class='list-activity'>";
 				}
 				?>					
+				<?php	
+				$preDate = $date;
+				if($currDate == $date)
+				{?>
+					<p class="title-today">Today <span class="date"><?php print(Date("dS F Y")); ?></span></p>		
+				<?}	
+				else if($date == $yesterday)
+				{?>
+					<p class="title-tomorrow">Yesterday <span class="date"><?php print(Date("dS F Y", strtotime($yesterday))); ?></span></p>  
+	
+				<?php
+				}
+				else 
+				{?>
+				<span class="date">Comment<?php print(Date("dS F Y", strtotime($date))); ?></span>
+				<?php
+				}
+			}
+			else {
 				
+			}?>
 			 <div class="msg-container">
 		       	<div class="top"><img src="<?php echo IMAGES_PATH;?>icons/user.png" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>">
 		       	<?php
@@ -52,35 +72,12 @@
 		        		echo nl2br($rec['ts']['comment']);
 		        	?>	
 		        	</span>
-		        	<?php	
-				$preDate = $date;
-				if($currDate == $date)
-				{?>
-					<p class="title-today">Today <span class="date"><?php print(Date("dS F Y")); ?></span></p>		
-				<?}	
-				else if($date == $yesterday)
-				{?>
-					<p class="title-tomorrow">Yesterday <span class="date"><?php print(Date("dS F Y", strtotime($yesterday))); ?></span></p>  
-	
-				<?php
-				}
-				else 
-				{?>
-				<span class="date">Comment<?php print(Date("dS F Y", strtotime($date))); ?></span>
-				<?php
-				}
-			}
-			else {
-				
-			}?>
 		        	<span class="text-hidden" style="display:none;">
 		        		<?php
 		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment']));		        		?>
 		        	</span> 
 		        	</p>
-		        	
 		   		</div><!-- end msg-body -->
-		   		
 			</div><!-- end msg-container -->	 
 	 		<?php
 			$i++;
