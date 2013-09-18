@@ -56,11 +56,11 @@
 				else
 		        		echo nl2br($st);
 		        ?>
-		       	</a><span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span></p> </div>
+		       	</a> <span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span> </p> </div>
 				<?php
 				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
 				{?>
-		       	<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>
+		       	<!--<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>-->
 				<?php }?>	
 		        <div class="msg-body" >
 		        	<p>
@@ -71,6 +71,7 @@
 						    		else
 		        		echo nl2br($rec['ts']['comment']);
 		        	?>	
+		        	
 		        	</span>
 		        	<span class="text-hidden" style="display:none;">
 		        		<?php
