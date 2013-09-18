@@ -7,7 +7,7 @@
 </script>
 
 
-	<div class="panel widget">
+	<div class="widget">
 	<?php
 	if(count($data)>0)
 	{
