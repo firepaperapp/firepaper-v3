@@ -17,7 +17,7 @@
 <div class="project-brief-box-wrapper">
 	<div class="project-brief-box">
 	
-		<div class="left">
+		
 			
 			<h3>Course details</h3> 
 			<?php
@@ -30,11 +30,8 @@
 				<div class="clr-spacer"></div>-->
 				
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
-			<div class="project-content">
-		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
-		<span class="flat-tasks-icon">
-<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></div>
-			</div>
+			
+			
 			<div class="project-controls">
 			<?php
 	 			if($isOwner == 1)
@@ -60,6 +57,9 @@
 			</div>		
 			
 			<div class="left deadline-details">
+			<div class="project-content">
+		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
+		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></div>
                               <?php
 if(is_file(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']))
 {

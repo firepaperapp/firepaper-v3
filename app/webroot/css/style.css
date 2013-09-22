@@ -1199,7 +1199,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-weight: normal;
 }
 .project-wrapper {
-	margin: 50px;
+	padding: 50px;
 }
 .profile-container {
 	padding:40px 50px;
