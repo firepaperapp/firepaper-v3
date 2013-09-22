@@ -2511,20 +2511,20 @@ p.task {
 }
 .project-brief-box {
 	float: left;
-	width: 70%;
+	width: 58%;
 }
-.project-brief-box .details p {
+.project-brief-box p {
     margin-bottom: 10px;
     font-size: 16px;
 }
 
-.project-brief-box .details p.title {
+.project-brief-box p.title {
     font-size: 14px;
     color: #286985;
     margin-bottom: 10px;
 }
 
-.project-brief-box .details .left {
+.project-brief-box .left {
     float: left;
     width: 414px;
     padding-top: 10px;
