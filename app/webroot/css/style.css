@@ -196,7 +196,7 @@ select {
 	color:#e06161; 
 }
 .index { 
-	margin: 30px;
+	margin: 58px;
 }
 
 .container {
@@ -234,6 +234,7 @@ select {
 	width:100%; 
 }
 .widget {
+	width: 333px;
 	background: white;
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
@@ -1146,6 +1147,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 
 .deadline-details {
 	margin-left: 10px;
+	width: 40%;
 	
 }
 .deadline-details .title {
@@ -1197,18 +1199,16 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-weight: normal;
 }
 .project-wrapper {
-	margin: 0px 0px 0px 40px;
+	margin: 50px;
 }
 .profile-container {
 	padding:40px 50px;
 	width: 40%;
 }
 .project-brief-box .left p.title, .project-brief-box .right p.title {
-    color: #c7bf7b;
-    font-size: 13px;
+    color: #2a2e37;
+    font-size: 18px;
     font-weight: bold;
-    text-shadow: 0 1px 0 #fff;
-    filter: dropshadow(color=#ffffff,offx=0,offy=1);
     margin-bottom: 14px;
 }
 .project-drop-area h1 { 
@@ -2511,10 +2511,11 @@ p.task {
 }
 .project-brief-box {
 	float: left;
+	width: 70%;
 }
 .project-brief-box .details p {
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .project-brief-box .details p.title {
