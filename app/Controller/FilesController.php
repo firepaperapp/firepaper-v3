@@ -350,7 +350,7 @@ class FilesController  extends AppController{
 	 *
 	 * @param unknown_type $fileId : If it a version of any file, otherwise NULL
 	 */
-	function uploadFile($fileId="")
+	function uploadFile_17($fileId="")
 	{
 		 //echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
@@ -512,6 +512,384 @@ class FilesController  extends AppController{
 						$this->request->data['userFile']['file_name'] = $actualFilename;//$filename;
 						$this->request->data['userFile']['file_type_id'] = $iconType;
 						$this->request->data['userFile']['size'] = $this->request->params['form']['data']['size'][$_moduleName]['uploadfile'];
+						$this->request->data['userFile']['created_by'] = $this->Session->read("userid");
+						$this->request->data['userFile']['uploaded'] = date("Y-m-d H:i:s");
+						
+						
+						//$this->Session->setFlash(MSG_FILE_UPLOADED);				 
+						if(isset($_POST['category_id']) && !isNull($_POST['category_id']))
+						{
+							$gotCat = $_POST['category_id'];
+						}
+						else 
+						{
+							$defaultCat = $this->fileCategory->find("first", array(
+							"conditions"=>"isdefault = 1 and created_by = ".$this->Session->read("userid")
+							));
+							if(!isset($defaultCat['fileCategory']['id']))
+							{
+								$defCat['fileCategory']['title'] = "UnCategorized";
+								$defCat['fileCategory']['isdefault'] = 1;
+								$defCat['fileCategory']['created_by'] = $this->Session->read("userid");
+								$this->fileCategory->Save($defCat);
+								$gotCat = $this->fileCategory->getLastInsertId();
+							}
+							else 
+							{
+								$gotCat = $defaultCat['fileCategory']['id'];
+							}
+						}
+						 
+						$this->request->data['userFile']['category_id'] = $gotCat;
+						$this->userFile->Save($this->request->data);
+						//we will increase admin's used space
+						if($this->Session->read("admin_id")!=0)
+						{
+							$uid = $this->Session->read("admin_id");						
+						}
+						else 
+						{
+							//If is a individual user
+							$uid = $this->Session->read("userid");			
+						}
+						$this->User->manageUserSpace($this->request->data['userFile']['size'], $uid, "add");
+						$response['success'] = MSG_FILE_UPLOADED;
+						$response['id'] = $this->userFile->getLastInsertId();
+					}
+					else 
+					{
+						$response['error'] = FILE_CANT_UPLOADED;
+					}
+					
+				}else{
+					/*
+					echo "check2 ==="; exit;
+					print_r($this->request->params['form']); exit;
+					*/
+					########### End Here ###########
+					
+					$uploads_dir.= $this->Session->read("userid"); 
+					$mineType =  $this->request->params['form']['uploadfile']['type'];
+					$source = $this->request->params['form']['uploadfile']['tmp_name'];
+					$arFile = explode(".",$this->request->params['form']['uploadfile']['name']);				
+					$string = remove_specialchars($arFile[0]);				
+					$fileExt = array_pop($arFile);
+					
+					$filebase = $string."_".time();
+					//$filebase = $string;
+					
+					$filename = $filebase.".".$fileExt;
+					$actualFilename = $string.".".$fileExt;
+					if(!file_exists($uploads_strt_dir))
+					{	
+						mkdir($uploads_strt_dir); 
+					}
+					$uploads_dir_explode = explode("/", $uploads_dir);
+					if(count($uploads_dir_explode)>0)
+					{
+						foreach($uploads_dir_explode as $createDir)
+						{
+							if(!file_exists($uploads_strt_dir.$createDir))
+							{  
+								mkdir($uploads_strt_dir.$createDir);
+								@chmod($uploads_strt_dir.$createDir, 0755);
+							}
+						}
+					}
+					if(!file_exists($uploads_strt_dir.$uploads_dir))
+					{  
+						mkdir($uploads_strt_dir.$uploads_dir);
+					}
+					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
+					if($fileId!='')
+					{
+						$uploads_dir = $uploads_dir."/".$fileId;
+						if(!file_exists($uploads_strt_dir.$uploads_dir))
+						{
+
+							mkdir($uploads_strt_dir.$uploads_dir); 
+						}
+						@chmod($uploads_strt_dir.$uploads_dir,0777);
+						$this->request->data['userFile']['version_of'] = $fileId;
+					}					
+					if(in_array(strtolower($fileExt), $videoArray))
+					{
+						//if it is a video file
+						$filename = $this->uploadVideo($uploads_dir."/", $this->request->params['form']['uploadfile']);			 
+						if($filename!=false)
+						{
+							$return = true; 						 
+							$rest = explode("##", $filename);
+							$filename = $rest[0];
+							$this->request->params['form']['uploadfile']['size'] = $rest[1];
+						}
+						else 
+						{
+							$return = false; 						 
+						}
+					}
+					else
+					{	 
+						//we will simply upload the file
+						move_uploaded_file( $this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
+							 
+			
+						$old = umask(0);
+						@chmod("$uploads_dir/$filename", 0755);
+						umask($old);
+
+						// Checking
+						if ($old != umask()) {
+							die('An error occured while changing back the umask');
+						}
+						else {
+							//We will upload the object into amazon
+							 $return = true;
+							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+							//We will delete the local file
+							//@unlink($uploads_strt_dir.$uploads_dir);
+						}
+					}
+					if($return == true)
+					{
+						$iconType = $this->userFile->getIconType($fileExt);				
+						$this->request->data['userFile']['name'] = $filename;
+						$this->request->data['userFile']['file_name'] = $actualFilename;//$filename;
+						$this->request->data['userFile']['file_type_id'] = $iconType;
+						$this->request->data['userFile']['size'] = $this->request->params['form']['uploadfile']['size'];
+						$this->request->data['userFile']['created_by'] = $this->Session->read("userid");
+						$this->request->data['userFile']['uploaded'] = date("Y-m-d H:i:s");
+						
+						//$this->Session->setFlash(MSG_FILE_UPLOADED);				 
+						if(isset($_POST['category_id']) && !isNull($_POST['category_id']))
+						{
+							$gotCat = $_POST['category_id'];
+						}
+						else 
+						{
+							$defaultCat = $this->fileCategory->find("first", array(
+							"conditions"=>"isdefault = 1 and created_by = ".$this->Session->read("userid")
+							));
+							if(!isset($defaultCat['fileCategory']['id']))
+							{
+								$defCat['fileCategory']['title'] = "UnCategorized";
+								$defCat['fileCategory']['isdefault'] = 1;
+								$defCat['fileCategory']['created_by'] = $this->Session->read("userid");
+								$this->fileCategory->Save($defCat);
+								$gotCat = $this->fileCategory->getLastInsertId();
+							}
+							else 
+							{
+								$gotCat = $defaultCat['fileCategory']['id'];
+							}
+						}
+						 
+						$this->request->data['userFile']['category_id'] = $gotCat;
+						$this->userFile->Save($this->request->data);
+						//we will increase admin's used space
+						if($this->Session->read("admin_id")!=0)
+						{
+							$uid = $this->Session->read("admin_id");						
+						}
+						else 
+						{
+							//If is a individual user
+							$uid = $this->Session->read("userid");			
+						}
+						$this->User->manageUserSpace($this->request->data['userFile']['size'], $uid, "add");
+						$response['success'] = MSG_FILE_UPLOADED;
+						$response['id'] = $this->userFile->getLastInsertId();
+					}
+					else 
+					{
+						$response['error'] = FILE_CANT_UPLOADED;
+					}
+				}
+			}				 
+        
+		}
+		else
+		{
+			$response['error'] = $this->userFile->errMsg;
+		}
+		
+		$this->RequestHandler->respondAs('json'); 			
+		echo json_encode($response);
+		$this->autoRender = false;         
+		die; 
+	}
+        
+        function uploadFile($fileId="")
+	{
+		 //echo "i am here.."; exit;
+  		$uid = $this->Session->read('userid');
+	    $msg = "";
+		global $videoArray;
+		$this->request->params['form'] = $_FILES;
+		
+	  //	print_r($this->request->params['form']); exit;
+	  
+			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
+		{
+			
+		 	$uploads_dir = "";
+			$uploads_strt_dir = FILES_PATH."files/";
+			########### whether user's admin or user itself has enough space to upload the file ###########	
+			 
+			if($this->Session->read("admin_id")!=0)
+			{
+				$uploads_dir = $this->Session->read("admin_id")."/";
+				//we will get the space used by his admin
+				$spaceDetail = 
+				$this->User->find(
+				"first",
+				array("conditions"=>"User.id = ".$this->Session->read("admin_id"), 
+				"fields"=>"totalspace, usedspace, Package.unlimited",
+				"joins"=>array(
+					array("type"=>"inner",
+					"table"=>"packages",
+					"alias"=>"Package",
+					"conditions"=>array("Package.id = User.package_id")),
+					)
+				)
+			   );		
+					
+				$ms = ENOUGH_SPACE_ADMIN;	
+			}
+			else 
+			{
+				//If is a individual user
+				$spaceDetail = 
+				
+				$this->User->find(
+				"first",
+				array("conditions"=>"User.id = ".$this->Session->read("userid"), 
+				"fields"=>"totalspace, usedspace, Package.unlimited",
+				"joins"=>array(
+					array("type"=>"inner",
+					"table"=>"packages",
+					"alias"=>"Package",
+					"conditions"=>array("Package.id = User.package_id")),
+					)
+				)
+			   );		
+			   
+				$ms = ENOUGH_SPACE_USER;
+			}
+	 		if(($spaceDetail['User']['usedspace']+$this->request->params['form']['uploadfile']['size']) > $spaceDetail['User']['totalspace'] &&  $spaceDetail['Package']['unlimited']!=1)
+			{
+				echo "check1 ==="; exit;
+				$response['error'] = $ms;
+				
+			}
+			else 
+			{
+				if($_SERVER['REMOTE_ADDR'] =='180.188.253.92' || 1)
+				{ 
+                                 //   pr($this->request->params);
+					//$getModelName = array_keys($this->request->params['form']['data']['name']);
+                                    // chnaged $this->request->params['form']['data'] by $this->request->params['form']['uploadfile']
+					//$getModelName = array_keys($this->request->params['form']['data']['name']);
+					//$getModelName = array_keys($this->request->params['form']['uploadfile']['name']);
+					//$_moduleName = $getModelName[0];
+				
+					$uploads_dir.= $this->Session->read("userid"); 
+					//$mineType =  $this->request->params['form']['uploadfile']['type'][$_moduleName]['uploadfile'];
+					$mineType =  $this->request->params['form']['uploadfile']['type'];
+					//$source = $this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'];
+					$source = $this->request->params['form']['uploadfile']['tmp_name'];
+				//	$arFile = explode(".",$this->request->params['form']['data']['name'][$_moduleName]['uploadfile']);
+					$arFile = explode(".",$this->request->params['form']['uploadfile']['name']);
+					$string = remove_specialchars($arFile[0]);				
+					$fileExt = array_pop($arFile);
+					
+					$filebase = $string."_".time();
+					
+					$filename = $filebase.".".$fileExt;
+					$actualFilename = $string.".".$fileExt;
+					
+					if(!file_exists($uploads_strt_dir))
+					{	
+						mkdir($uploads_strt_dir); 
+					}
+					$uploads_dir_explode = explode("/", $uploads_dir);
+					if(count($uploads_dir_explode)>0)
+					{
+						foreach($uploads_dir_explode as $createDir)
+						{
+							if(!file_exists($uploads_strt_dir.$createDir))
+							{  
+								mkdir($uploads_strt_dir.$createDir);
+								@chmod($uploads_strt_dir.$createDir, 0755);
+							}
+						}
+					}
+					if(!file_exists($uploads_strt_dir.$uploads_dir))
+					{  
+						mkdir($uploads_strt_dir.$uploads_dir);
+					}
+					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
+					
+					if($fileId!='')
+					{
+						$uploads_dir = $uploads_dir."/".$fileId;
+						if(!file_exists($uploads_strt_dir.$uploads_dir))
+						{
+
+							mkdir($uploads_strt_dir.$uploads_dir); 
+						}
+						@chmod($uploads_strt_dir.$uploads_dir,0777);
+						$this->request->data['userFile']['version_of'] = $fileId;
+					}					
+					if(in_array(strtolower($fileExt), $videoArray))
+					{
+						//if it is a video file
+						$filename = $this->uploadVideo($uploads_dir."/", $this->request->params['form']['uploadfile']);			 
+						if($filename!=false)
+						{
+							$return = true; 						 
+							$rest = explode("##", $filename);
+							$filename = $rest[0];
+							$this->request->params['form']['uploadfile']['size'] = $rest[1];
+						}
+						else 
+						{
+							$return = false; 						 
+						}
+					}
+					else
+					{	 
+						//we will simply upload the file
+						//move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
+						move_uploaded_file($this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
+							 
+						
+						$old = umask(0);
+						@chmod("$uploads_dir/$filename", 0755);
+						umask($old);
+						
+						// Checking
+						if ($old != umask()) {
+							die('An error occured while changing back the umask');
+						}
+						else {
+							//We will upload the object into amazon
+							 $return = true;
+							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+							//We will delete the local file
+							// @unlink($uploads_strt_dir.$uploads_dir);
+						}
+						
+					}
+					
+					if($return == true)
+					{
+						$iconType = $this->userFile->getIconType($fileExt);				
+						$this->request->data['userFile']['name'] = $filename;
+						$this->request->data['userFile']['file_name'] = $actualFilename;//$filename;
+						$this->request->data['userFile']['file_type_id'] = $iconType;
+						//$this->request->data['userFile']['size'] = $this->request->params['form']['data']['size'][$_moduleName]['uploadfile'];
+						$this->request->data['userFile']['size'] = $this->request->params['form']['uploadfile']['size'];
 						$this->request->data['userFile']['created_by'] = $this->Session->read("userid");
 						$this->request->data['userFile']['uploaded'] = date("Y-m-d H:i:s");
 						

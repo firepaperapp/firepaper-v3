@@ -18,7 +18,7 @@
 	   {
 	   		$data = $this->find('all', array(
 	   		"conditions"=> "projComments.student_doc_id = $taskId and (received_by = ".$userId." OR posted_by = ".$userId.") ",
-	   		"fields"=>"projComments.*, User.firstname, User.lastname",
+	   		"fields"=>"projComments.*, User.firstname, User.lastname,User.profilepic",
 	   		"joins"=>array(
 					array("type"=>"inner",
 					"table"=>"users",
@@ -38,7 +38,7 @@
 			}
 			else 
 			{
-				$fieldOrCnt = "ts.*, User.firstname, User.lastname, User.id, fileType.icon";
+				$fieldOrCnt = "ts.*, User.firstname, User.lastname, User.id,User.username, fileType.icon,User.profilepic";
 			}
 			$query ="
 				SELECt $fieldOrCnt FROM

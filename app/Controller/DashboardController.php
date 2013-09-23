@@ -8,7 +8,7 @@ class DashboardController  extends AppController{
 
 	var $helpers = array('Html', 'Form', 'Time','Js','Flash');
 	var $layout = "default_front_inner";
-	var $components = array('RequestHandler','Email');
+	var $components = array('RequestHandler','Email','GeneralFunction');
 	  /**
 	 * Determines if user will have option to set a cookie based login.
 	 *
@@ -41,18 +41,19 @@ class DashboardController  extends AppController{
 		//echo "<pre /> here..";
 		//print_r($this->Session->read()); 
 		//echo "In BF >> Dashboard"; exit;
-		if(!isUserLoggedIn($this->Session, "userid"))
+		/*if(!isUserLoggedIn($this->Session, "userid"))
 		{
 			$this->Auth->logoutRedirect = array('users/logout/');
 			//$this->redirect("/users/logout");
 		}
 		else
-		{
+		{*/
+            $this->GeneralFunction->checkUserLogin();
 			if($this->Session->read("user_type")==6)
 			{
 					$this->redirect("/users/viewProfile");
 			}
-		}
+		//}
  		//parent::beforeFilter();
 	}
 
@@ -77,6 +78,8 @@ class DashboardController  extends AppController{
 //print_r($_SESSION);
 //print "</pre>";
 //die;
+               
+                
 		$this->set('announce_view','');
 		if($this->Session->read("user_type")==1 || $this->Session->read("user_type")==2 ||$this->Session->read("user_type")==3 || $this->Session->read("user_type")==7)
 		{
@@ -399,7 +402,7 @@ class DashboardController  extends AppController{
 		$this->paginate = array('User'=>
    		array(
 	   		"conditions"=>"User.admin_id = ".$admin_id."  ".$filters,
-	   		"fields"=> "User.id,User.firstname, User.lastname, User.profilepic,User.status", 
+	   		"fields"=> "User.id,User.firstname, User.lastname, User.profilepic,User.status, User.username", 
 	   		"order"=>"firstname",
 	   		"limit"=>12
 			)

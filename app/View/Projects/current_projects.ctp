@@ -1,4 +1,15 @@
-
+<script type="text/javascript" src="<?php echo JS_PATH;?>fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="<?php echo JS_PATH;?>fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript">
+$(document).ready(function(){
+		$("a.add-projects").fancybox({				 
+			ajax : {
+			type	: "GET"
+			}
+		});
+		
+});
+</script>
 <div class="col1">
 	
 		<?php

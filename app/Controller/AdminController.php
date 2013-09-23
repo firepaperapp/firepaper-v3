@@ -574,7 +574,7 @@ class AdminController extends AppController {
 
 			}
 
-			$arUser['username']  = mysql_real_escape_string($this->request->data['Admin']['username']);
+			$arUser['username']  = ($this->request->data['Admin']['username']);
 
 			$arUser['password'] = $this->request->data['Admin']['password'];
 

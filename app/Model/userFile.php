@@ -74,7 +74,7 @@
 			return false;
 		}
 		//To validate the file uploaded by the user
-		function validateFileUpload($postArray)
+		function validateFileUpload_17($postArray)
 		{
 			global $videoArray, $filesArray;
 			
@@ -137,6 +137,81 @@
 			}
   		}
 		
+                //To validate the file uploaded by the user
+		function validateFileUpload($postArray)
+		{
+			global $videoArray, $filesArray;
+			
+			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92' || 1)
+			{
+                            $postArray['data'] = $postArray['uploadfile'];
+				/*$getModelName = array_keys($postArray['data']['name']);
+				$_moduleName = $getModelName[0];*/
+				
+				/*if($postArray['data']['name'][$_moduleName]['uploadfile']=='' || $postArray['data']['error'][$_moduleName]['uploadfile']==1 ||  !is_uploaded_file($postArray['data']['tmp_name'][$_moduleName]['uploadfile']))
+				{
+					$this->errMsg =  FILE_CANT_UPLOADED;
+					$this->err=1;			
+				}*/
+				if($postArray['data']['name']=='' || $postArray['data']['error']==1 ||  !is_uploaded_file($postArray['data']['tmp_name']))
+				{
+					$this->errMsg =  FILE_CANT_UPLOADED;
+					$this->err=1;			
+				}
+				/*else if($postArray['data']['size'][$_moduleName]['uploadfile'] > MAX_FILESIZE)
+				{
+					$this->errMsg= MAX_FILESIZE_MSG;
+					$this->err=1;				
+				}*/
+                                else if($postArray['data']['size'] > MAX_FILESIZE)
+				{
+					$this->errMsg= MAX_FILESIZE_MSG;
+					$this->err=1;				
+				}
+				else
+				{
+					// $arFile = explode(".",$postArray['data']['name'][$_moduleName]['uploadfile']);
+					$arFile = explode(".",$postArray['data']['name']);
+					$string = remove_specialchars($arFile[0]);				
+					$fileExt = array_pop($arFile); 
+					 
+//					if(!in_array(strtolower($fileExt), $videoArray) && !in_array(strtolower($fileExt), $filesArray))
+//					{	 
+//						$this->errMsg="Please upload valid file.";
+//						$this->err=1;				
+//					}
+				}
+				 
+				return $this->err; 
+				
+			}else{
+			
+				if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
+				{
+					$this->errMsg =  FILE_CANT_UPLOADED;
+					$this->err=1;			
+				}
+				else if($postArray['uploadfile']['size'] > MAX_FILESIZE)
+				{
+					$this->errMsg= MAX_FILESIZE_MSG;
+					$this->err=1;				
+				}
+				else
+				{
+					$arFile = explode(".",$postArray['uploadfile']['name']);				
+					$string = remove_specialchars($arFile[0]);				
+					$fileExt = array_pop($arFile); 
+					 
+					if(!in_array(strtolower($fileExt), $videoArray) && !in_array(strtolower($fileExt), $filesArray))
+					{	 
+						$this->errMsg="Please upload valid file.";
+						$this->err=1;				
+					}
+				}
+				 
+				return $this->err; 
+			}
+  		}
 		function checkFileType($data, $inputFile, $fileType=NULL)
 		{
 			$getModelName = array_keys($data['data']);
