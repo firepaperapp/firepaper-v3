@@ -43,7 +43,7 @@ class Admin extends AppModel {
 
 	/*Function to return admin data if login is valid*/
 	Private function __getAclData( $login, $passwd) {
-		$data = $this->find("Admin.username = '{$login}' AND Admin.password = '{$passwd}'");
+		$data = $this->find('first',array('conditions'=>"Admin.userName = '{$login}' AND Admin.password = '{$passwd}'"));
 		return $data;
 	}//EF
 

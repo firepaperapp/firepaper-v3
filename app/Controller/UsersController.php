@@ -6,7 +6,7 @@ class UsersController extends AppController{
 	var $uses = array('User','State','Package','Country','Payment','Department','coadminGaurdian','projComments','Project','classgroupStudent', 'projectStudent','UserType');
 	var $layout = "default";
 	var $helpers = array('Flash');
-	var $components = array('RequestHandler','Paypal','Email');
+	var $components = array('RequestHandler','Paypal','Email','GeneralFunction');
 	  /**
 	 * Determines if user will have option to set a cookie based login.
 	 *
@@ -491,7 +491,7 @@ class UsersController extends AppController{
         
 	function logout()
 	{
-		echo "==>>This"; exit;
+		$this->GeneralFunction->checkUserLogin();
 		$userId = $this->Session->read("userid");
 	 	if($this->Session->valid())
 		{
@@ -512,11 +512,12 @@ class UsersController extends AppController{
 	}
 	/***********Logegd In user function starts here ******************************/
 
-	function viewProfile($id=Null) 
+	function viewProfile($id=Null,$username=null) 
 	{
+            
 		$this->set('showlinks','N');
 		$this->set("url_uid",''); 
-		if($id!=NULL && $id!="")
+		if($id!=NULL && $id!="" && $username!=NULL && $username!="")
 		{
 			$this->set("url_uid",$id);
 			// For display of suspend and delete link to user 			
@@ -586,6 +587,9 @@ class UsersController extends AppController{
 			$userid =$id;
 			
 		}
+                else{
+                    $this->redirect(SITE_HTTP_URL.'dashboard');
+                }
  		if($id==NULL || $id==$this->Session->read('userid'))
 		{
 			$userid = $this->Session->read('userid');
@@ -625,6 +629,7 @@ class UsersController extends AppController{
 
 	function updateUserName($id=NULL)
 	{ 
+                $this->GeneralFunction->checkUserLogin();
 		$_POST['value'] = trim($_POST['value']);
 
 		$namearr = explode(' ',$_POST['value']);
@@ -661,6 +666,7 @@ class UsersController extends AppController{
 
 		function updateAboutMe($id=NULL)
 		{
+                        $this->GeneralFunction->checkUserLogin();
 			$userdata['aboutme'] = trim($_POST['value']);
 
 			if($id!=NULL && $id!="")
@@ -679,6 +685,7 @@ class UsersController extends AppController{
 
 	function updateEmail($id=NULL)
 	{ 
+            $this->GeneralFunction->checkUserLogin();
 		if($id!=NULL && $id!="")
 		{
 			$userid  = $id;
@@ -744,6 +751,7 @@ class UsersController extends AppController{
 
         function updatePassword($id=NULL)
         {
+                $this->GeneralFunction->checkUserLogin();
         	if(!isUserLoggedIn($this->Session, "userid"))
 			{
 				$this->redirect("/");
@@ -1892,4 +1900,14 @@ class UsersController extends AppController{
         $result = $this->Email->sendEmail();
         die;
 	}
+         public function check_user_login(){
+            $this->autoLayout = false;
+            $this->autoRender = false;
+            $loggeduserid =$this->Session->read('userid');
+            if(empty($loggeduserid)){ 
+               echo $this->redirect('/users/logout');
+            }else{
+                return true;
+            }
+        }
 }

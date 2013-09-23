@@ -25,7 +25,26 @@ if(isset($errMsg))
 	var userAdded = <?php echo json_encode($dataUsers);?>;	
 	var whiteboardsAdded = <?php echo json_encode($dataWhiteboards);?>;	
 </script>
-				
+<script type="text/javascript">
+$(document).ready(function(){
+		
+                $("#duedate").datepicker({
+				dateFormat: 'D MM yy',
+				showOn: 'button',
+				buttonImage: siteImagesUrl+'calendar.png',
+				changeMonth: true,
+				changeYear: true,
+				minDate: new Date(),
+				buttonImageOnly: true
+		});
+		
+});
+</script>
+<style>
+    #duedate{
+        width: 100%
+    }
+</style>				
 	<h1>
 	<?php
  	if($project_id!=0)

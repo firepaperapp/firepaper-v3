@@ -359,7 +359,7 @@ class ProjectsController  extends AppController{
 		));	 
 		$this->set("taskOtherComments", $taskOtherComments);	
 		$this->set("task_id", $task_id);	
-		$this->set("canChnage", isset($this->request->params['url']['s'])&&$this->request->params['url']['s']=="c"?0:1);	
+		$this->set("canChnage", isset($this->request->query['s'])&&$this->request->query['s']=="c"?0:1);	
 		$this->set("taskDocs", $taskDocs);	
 		$this->render("userdocuments", "ajax");
 	}
@@ -958,7 +958,7 @@ class ProjectsController  extends AppController{
 	/**/
 	function createTask($task_id = 0)
 	{
-		$project_id = $this->request->params['url']['p'];
+		$project_id = $this->request->query['p'];
 		if(isset($this->request->data['projectTask']) && count($this->request->data['projectTask'])>0)
 		{
 			$this->request->data['projectTask']['project_id'] = $project_id;
@@ -1067,7 +1067,7 @@ class ProjectsController  extends AppController{
  	{
  	 	$this->loadModel('classGroup');
  		$data = array();
- 		$tag = $this->request->params['url']['tag'];	 
+ 		$tag = $this->request->query['tag'];	 
  		$userId = $this->Session->read('userid'); 
 		//  filter the class grop by the admin id for admin and coadmin user
 		$filters= "";
@@ -1109,7 +1109,7 @@ class ProjectsController  extends AppController{
  	{
  	 	 
  		$data = array();
- 		$tag = $this->request->params['url']['tag'];	 
+ 		$tag = $this->request->query['tag'];	 
  		$userId = $this->Session->read('userid'); 
 		//  filter the class grop by the admin id for admin and coadmin user
 		$filters= "";
@@ -1296,7 +1296,7 @@ class ProjectsController  extends AppController{
  	  */
  	 function studentSubmitDocToProject($task_id)
  	 {
- 	 	$project_id = $this->request->params['url']['p'];
+ 	 	$project_id = $this->request->query['p'];
 		if(isset($this->request->data['projectStudentTaskDoc']) && count($this->request->data['projectStudentTaskDoc'])>0)
 		{
 			$this->request->data['projectStudentTaskDoc']['project_id'] = $project_id;
@@ -1436,7 +1436,7 @@ class ProjectsController  extends AppController{
 		$userId = $this->Session->read("userid");
 		//To get the docs submitted by the user corresponding to a task
 		$taskDocs = $this->Project->getTasksDocsByUser($task_id, $userId);		 
-		$this->set("canChnage", isset($this->request->params['url']['s'])&&$this->request->params['url']['s']=="c"?0:1);	
+		$this->set("canChnage", isset($this->request->query['s'])&&$this->request->query['s']=="c"?0:1);	
 	 	$this->set("task_id", $task_id);	
 		$this->set("taskDocs", $taskDocs);	
  		$this->render("user_documents_drop", "ajax");	 	 
@@ -1459,9 +1459,9 @@ class ProjectsController  extends AppController{
  	 	$this->set("docsArr", $docs);
  	 	$this->set("isSubmitted", $isSubmitted);	
  	 	$this->set("task_id", $task_id);	
- 	 	if(isset($this->request->params['url']['view']))
+ 	 	if(isset($this->request->query['view']))
  	 	{
- 	 		$view = $this->request->params['url']['view'];
+ 	 		$view = $this->request->query['view'];
  	 	}
   	 	if(strtolower($view) == "large")
  	 	{
@@ -1479,7 +1479,7 @@ class ProjectsController  extends AppController{
 		$this->set("taskOtherComments", $taskOtherComments);	
  	 	//This view will be used both project detail ad left drop box
  	 	$this->set("view", $view);	
- 	 	$this->set("canChnage", isset($this->request->params['url']['s'])&&$this->request->params['url']['s']=="c"?0:1);	
+ 	 	$this->set("canChnage", isset($this->request->query['s'])&&$this->request->query['s']=="c"?0:1);	
  	 	$this->render("user_documents_tick", "ajax");
  	 }
  	 /**
@@ -1729,7 +1729,7 @@ class ProjectsController  extends AppController{
 
 	function archivedProjects()
 	{
-		if(isset($this->request->params['url']['url']) && $this->request->params['url']['url']=="projects/draftProjects")
+		if(isset($this->request->query['url']) && $this->request->query['url']=="projects/draftProjects")
 		{
 	 		$this->set("draft", "viewdraft");
 		}
@@ -1773,11 +1773,11 @@ class ProjectsController  extends AppController{
 		$selectedChar = "all";
 	 	
 	 	################## Start Delete a Project ############################
- 	 	if(isset($this->request->params['url']['d']) && !isNull($this->request->params['url']['d']))
+ 	 	if(isset($this->request->query['d']) && !isNull($this->request->query['d']))
    		{			
 			// find all the students related with a project 
 			$usersrec = $this->projectStudent->find("all" ,array(
-										"conditions"=>array("projectStudent.project_id"=>$this->request->params['url']['d']),
+										"conditions"=>array("projectStudent.project_id"=>$this->request->query['d']),
 										"joins" => array(
 												array(
 											"type"=>"inner",
@@ -1791,11 +1791,11 @@ class ProjectsController  extends AppController{
 				);
 
 			//$ret = true;
-			$ret = $this->Project->delete($this->request->params['url']['d']); 
+			$ret = $this->Project->delete($this->request->query['d']); 
    			if($ret == true)
    			{ 
    				//$this->Session->setFlash(MSG_REC_DELTED);
-				$this->projectStudent->deleteAll("projectStudent.project_id=".$this->request->params['url']['d']); 
+				$this->projectStudent->deleteAll("projectStudent.project_id=".$this->request->query['d']); 
 				echo MSG_REC_DELTED;
 				$this->doEmailToUser($usersrec);
    			}
@@ -2102,12 +2102,12 @@ class ProjectsController  extends AppController{
 	function extraTaskDocs()
 	{
 	 
-		if(isset($this->request->params['url']['addFile'])>0)
+		if(isset($this->request->query['addFile'])>0)
 		{
-			$this->request->data['projectTaskExtraDoc']['project_id'] = $this->request->params['url']['project_id'];
-			$this->request->data['projectTaskExtraDoc']['task_id'] = $this->request->params['url']['task_id'];
+			$this->request->data['projectTaskExtraDoc']['project_id'] = $this->request->query['project_id'];
+			$this->request->data['projectTaskExtraDoc']['task_id'] = $this->request->query['task_id'];
 			$this->request->data['projectTaskExtraDoc']['user_id'] = $this->Session->read("userid");
-		 	$this->request->data['projectTaskExtraDoc']['refer_file_id'] = $this->request->params['url']['addFile'];
+		 	$this->request->data['projectTaskExtraDoc']['refer_file_id'] = $this->request->query['addFile'];
 	 	 	$this->projectTaskExtraDoc->id = -1;
 			$this->projectTaskExtraDoc->Save($this->request->data['projectTaskExtraDoc']); 
 			
@@ -2160,14 +2160,14 @@ class ProjectsController  extends AppController{
 		 	$pasedData['activityLog']['user_ids'] = $st;
 			$this->createActivityLog($pasedData); 
 		}
-		if(isset($this->request->params['url']['delId'])>0)
+		if(isset($this->request->query['delId'])>0)
 		{
-			$this->projectTaskExtraDoc->delete($this->request->params['url']['delId']);
+			$this->projectTaskExtraDoc->delete($this->request->query['delId']);
 		}
-		if($this->request->params['url']['task_id']!='')
+		if($this->request->query['task_id']!='')
 		{
 			$docs = $this->projectTaskExtraDoc->find('all', array(
-			"conditions"=>"projectTaskExtraDoc.task_id = ".$this->request->params['url']['task_id'],
+			"conditions"=>"projectTaskExtraDoc.task_id = ".$this->request->query['task_id'],
 			"fields"=>"projectTaskExtraDoc.id, userFile.id, userFile.name, userFile.file_name, fileType.icon",
 				"joins"=>array(
 		 							array("type"=>"inner",
@@ -2184,7 +2184,7 @@ class ProjectsController  extends AppController{
 		 		); 
 		 	$this->set("docs", $docs);
 		} 
-		$this->set("task_id", $this->request->params['url']['task_id']);
+		$this->set("task_id", $this->request->query['task_id']);
 		$this->render("extra_task_docs","ajax");
 	}
 	function completeProject($project_id)
