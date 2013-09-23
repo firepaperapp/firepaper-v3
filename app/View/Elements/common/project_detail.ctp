@@ -25,6 +25,21 @@
 			{?>
 				<div class="completed-bubble"><span><?php echo $howMuchCompleted;?>%</span> Completed</div>
 			<?php }?>
+			<?php
+if(is_file(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']))
+{
+	$userimage = USER_IMAGES_PATH.'100X100/'.$userdata['User']['profilepic'];
+}
+else
+{
+	$userimage = IMAGES_PATH.'profile-pic.png';
+}
+?>
+			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
+			<p class="title">Project leader:
+			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
+				</p>
+				<div class="clr"></div>
 				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>
 				<div class="clr-spacer"></div>-->
@@ -60,21 +75,7 @@
 			<div class="project-content">
 		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></div>
-                              <?php
-if(is_file(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']))
-{
-	$userimage = USER_IMAGES_PATH.'100X100/'.$userdata['User']['profilepic'];
-}
-else
-{
-	$userimage = IMAGES_PATH.'profile-pic.png';
-}
-?>
-			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
-			<p class="title">Project leader:
-			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
-				</p>
-				<div class="clr"></div>
+                              
 				
 				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
 				<p class="due-in">

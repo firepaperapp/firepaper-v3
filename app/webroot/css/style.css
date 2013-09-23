@@ -51,8 +51,8 @@ body {
 	padding:0; 
 }
 h1 {  
-	color: #55606e; 
-	font-size:24px; 
+	color: #2a2e37; 
+	font-size:30px; 
 	margin-top:10px; 
 	margin-bottom:10px; 
 	font-weight: bold; 
@@ -66,9 +66,9 @@ h2 {
 h3 {  
 	margin-top: 10px;
 	margin-bottom:14px; 
-	color:#55606e; 
-	font-size: 13px; 
-	text-transform: uppercase; 
+	color:#2a2e37; 
+	font-size: 18px; 
+	font-weight: bold; 
 }
 h3 a { 
 	color:#55606e; 
@@ -1093,9 +1093,8 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	width:100%; 
 	overflow:scroll; 
 }
-.project-controls {
-	
-	width: 400px;
+.project-controls p {
+	font-size: 13px;
 }
 .project-controls .close {
 	margin-top: 28px;
