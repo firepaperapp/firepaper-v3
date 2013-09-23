@@ -36,9 +36,9 @@ else
 }
 ?>
 			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
-			<p class="title">Project leader:
-			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
-				</p>
+			<span class="project-leader-title">Project leader:<br />
+			<strong><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" ><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></strong>
+				</span>
 				<div class="clr"></div>
 				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>

@@ -2518,6 +2518,15 @@ p.task {
 	float: left;
 	width: 58%;
 }
+.project-brief-box #imgid {
+	float: left;
+	margin-right: 34px;
+}
+.project-leader-title {
+	color: #b1b1b1;
+	font-size: 16px;
+	float: left;
+}
 .project-brief-box p {
     margin-bottom: 10px;
     font-size: 16px;
