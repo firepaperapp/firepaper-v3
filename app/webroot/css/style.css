@@ -1065,16 +1065,15 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .details p {
 	padding: 16px 20px 20px 20px;
 	color: #c7bf7b;
-	text-shadow: 0 1px 0 #fff;
 	border-bottom: 1px dotted #d7d09c;
 }
 .flat-due-icon, .flat-files-icon, .flat-tasks-icon {
 	font-size: 16px;
 	font-weight: bold;
-	text-shadow: 0 1px #FFF;
     color: #b1b1b1;
-    padding-top: 2px;
-    padding-left: 22px;
+    display: block;
+    margin-bottom: 12px;
+    padding: 16px 0px 16px 45px;
 }
 .flat-files-icon {
 	background: url("../images/project-content-icons.png") no-repeat left top;
