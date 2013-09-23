@@ -97,7 +97,7 @@ $(document).ready(function(){
 			</p>
 		</div>
 		<div class="project-items">
-		<span class="file-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
+		<span class="file-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
 		<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
 		</div>
 		</div><!-- end project-content -->

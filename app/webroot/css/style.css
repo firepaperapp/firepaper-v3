@@ -54,7 +54,7 @@ h1 {
 	color: #2a2e37; 
 	font-size:30px; 
 	margin-top:10px; 
-	margin-bottom:14px; 
+	margin-bottom:20px; 
 	font-weight: bold; 
 }
 
@@ -1067,7 +1067,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	color: #c7bf7b;
 	border-bottom: 1px dotted #d7d09c;
 }
-.flat-due-icon, .flat-files-icon, .flat-tasks-icon {
+.deadline-details .flat-due-icon, .deadline-details .flat-files-icon, .deadline-details .flat-tasks-icon {
 	font-size: 16px;
 	font-weight: 500;
     color: #b1b1b1;
@@ -1075,16 +1075,16 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     margin-bottom: 20px;
     padding: 16px 0px 16px 60px;
 }
-.flat-due-icon {
+.deadline-details .flat-due-icon {
 	background: url("../images/project-content-icons.png") no-repeat left 5px;
 	
 }
 
-.flat-files-icon {
+.deadline-details .flat-files-icon {
 	background: url("../images/project-content-icons.png") no-repeat left -96px;
 	
 }
-.flat-tasks-icon {
+.deadline-details .flat-tasks-icon {
 	background: url("../images/project-content-icons.png") no-repeat left -48px;
 	
 }
@@ -1155,7 +1155,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .deadline-details {
-	margin-top: 60px;
+	margin-top: 88px;
 	margin-left: 10px;
 	width: 40%;
 	
@@ -1262,6 +1262,17 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-content {
 	border-bottom: none;
+}
+.project-content .flat-files-icon span, .project-content .flat-tasks-icon span{
+	font-family: 'font-awesome';
+	font-size: 16px;
+	color: black;
+}
+.project-content .flat-files-icon span {
+	
+}
+.project-content .flat-tasks-icon {
+	
 }
 .completed-bubble span {
 }
