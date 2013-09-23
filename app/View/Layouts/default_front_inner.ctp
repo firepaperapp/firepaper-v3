@@ -35,7 +35,7 @@ $(document).ready(function(){
     $(document).idleTimeout({
       alive_url:'<?php echo SITE_HTTP_URL;?>users/check_user_login',
       logout_url:'<?php echo SITE_HTTP_URL;?>users/check_user_login',
-      redirect_url:'<?php echo SITE_HTTP_URL;?>dashboard'
+      //redirect_url:'<?php echo SITE_HTTP_URL;?>dashboard'
     });
   });
 </script>
