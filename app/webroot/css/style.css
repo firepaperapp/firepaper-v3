@@ -2520,12 +2520,16 @@ p.task {
 }
 .project-brief-box #imgid {
 	float: left;
-	margin-right: 34px;
+	margin-top: 10px;
+	margin-right: 22px;
 }
 .project-leader-title {
 	color: #b1b1b1;
 	font-size: 16px;
 	float: left;
+}
+.project-leader-title strong {
+	color: #b1b1b1;
 }
 .project-brief-box p {
     margin-bottom: 10px;
