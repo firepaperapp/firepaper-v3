@@ -36,7 +36,7 @@ else
 }
 ?>
 			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
-			<span class="project-leader-title">Project leader:<br />
+			<span class="project-leader-title">Details:<br />
 			<strong><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" ><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></strong>
 				</span>
 				<div class="clr"></div>
@@ -74,16 +74,14 @@ else
 			<div class="left deadline-details">
 			<div class="project-content">
 		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
-		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></div>
+		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
                               
 				
-				<div class="day"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?></div>
-				<p class="due-in">
-				<span class="title">Due in:</span>
-				<br />
-				<?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?>
-				</p>
+				<span class="flat-due-icon"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?>
 				
+				<?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?>
+				</span>
+				</div>
 		   		<?php 
 				} 
 				if( ($this->Session->read("user_type")==3 || $this->Session->read("user_type")==4) && $isOwner==0) 
