@@ -393,7 +393,7 @@ $(document).ready(function(){
 		 	?>
 		 
   
-  	<div class="clr"></div>
+  	<div class="clr-spacer-height"></div>
   	</div>	
   	</div>
   	<div id="loaderJs"></div>  
