@@ -1069,11 +1069,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .flat-due-icon, .flat-files-icon, .flat-tasks-icon {
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 500;
     color: #b1b1b1;
     display: block;
-    margin-bottom: 12px;
-    padding: 16px 0px 16px 45px;
+    margin-bottom: 20px;
+    padding: 16px 0px 16px 60px;
 }
 .flat-due-icon {
 	background: url("../images/project-content-icons.png") no-repeat left 5px;
@@ -1081,11 +1081,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .flat-files-icon {
-	background: url("../images/project-content-icons.png") no-repeat left 5px;
+	background: url("../images/project-content-icons.png") no-repeat left -96px;
 	
 }
 .flat-tasks-icon {
-	background: url("../images/project-content-icons.png") no-repeat left 20px;
+	background: url("../images/project-content-icons.png") no-repeat left -48px;
 	
 }
 #drop-box-project { 
@@ -1155,6 +1155,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .deadline-details {
+	margin-top: 60px;
 	margin-left: 10px;
 	width: 40%;
 	
@@ -1261,7 +1262,6 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-content {
 	border-bottom: none;
-	padding: 16px 20px 20px 20px;
 }
 .completed-bubble span {
 }
