@@ -8,7 +8,9 @@
 </script>
 <?php echo $this->Html->css(CSS_PATH.'admin/adminstyle.css'); ?>
 <?php echo $this->Html->css(CSS_PATH.'admin/alignment.css'); ?>
-<script type="text/javascript" src="<?php echo JS_PATH;?>jquery-1.4.2.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<!--<script type="text/javascript" src="<?php echo JS_PATH;?>jquery-1.4.2.js"></script>-->
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>

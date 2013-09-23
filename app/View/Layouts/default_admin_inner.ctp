@@ -10,7 +10,9 @@
 <?php echo $this->Html->css(CSS_PATH.'admin/alignment.css'); ?>
 <?php echo $this->Html->css(CSS_PATH.'admin/menu.css'); ?>
 
-<script type="text/javascript" src="<?php echo JS_PATH;?>jquery-1.4.2.js"></script>
+<!--<script type="text/javascript" src="<?php echo JS_PATH;?>jquery-1.4.2.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js"></script>
 <!-- DD MENU SCRIPT -->
 <script type="text/javascript">
