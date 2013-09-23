@@ -1098,7 +1098,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	overflow:scroll; 
 }
 .project-controls p {
-	font-size: 13px;
+	font-size: 13px !important;
 }
 .project-controls .close {
 	margin-top: 28px;
