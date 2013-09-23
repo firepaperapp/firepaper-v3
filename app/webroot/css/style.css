@@ -1075,8 +1075,13 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     margin-bottom: 12px;
     padding: 16px 0px 16px 45px;
 }
+.flat-due-icon {
+	background: url("../images/project-content-icons.png") no-repeat left 5px;
+	
+}
+
 .flat-files-icon {
-	background: url("../images/project-content-icons.png") no-repeat left top;
+	background: url("../images/project-content-icons.png") no-repeat left 5px;
 	
 }
 .flat-tasks-icon {
@@ -1899,7 +1904,6 @@ div.file-name em {
     height: 6px;
     clear: both;
     width: 100%;
-    background: url('../images/point.gif') no-repeat 165px 0;
 }
 
 .task-tick-box {
@@ -1921,7 +1925,6 @@ div.file-name em {
     height: 6px;
     clear: both;
     width: 100%;
-    background: url(../images/point.gif) no-repeat 20px 0;
     margin-top: 4px;
     position: relative;
     z-index: 100;
@@ -2521,7 +2524,7 @@ p.task {
 }
 .project-leader-title {
 	color: #b1b1b1;
-	margin-top: 16px;
+	margin-top: 10px;
 	font-size: 16px;
 	float: left;
 }
@@ -2588,7 +2591,6 @@ textarea#projectDesc {
     padding: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background: #FFF url('../images/shadow.gif') top repeat-x;
 }
 .project-brief-box .details { 
 	margin: 0;
