@@ -183,6 +183,10 @@ select {
 	height:0px; 
 	clear:both; 
 }
+.clr-spacer-height {
+	height:20px; 
+	clear:both; 
+}
 .col {
 	float:left;
 }
@@ -380,6 +384,7 @@ select {
 	color: #abaaaa;
 	font-size: 14px;
 	margin-top: 14px;
+	margin-bottom: 14px;
 }
 /* Navigation styling */
 
