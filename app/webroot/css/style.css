@@ -1277,6 +1277,9 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	text-shadow: 0 1px #FFF;
     color: #c7bf7b;
     margin-right: 8px;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
 }
 .project-content .flat-files-icon span {
 	
