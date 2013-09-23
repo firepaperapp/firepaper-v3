@@ -19,7 +19,7 @@
 	
 		
 			
-			<h3>Course details</h3> 
+			
 			<?php
 			if($isOwner == 0 && isset($howMuchCompleted))
 			{?>
@@ -43,7 +43,7 @@ else
 				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>
 				<div class="clr-spacer"></div>-->
-				
+				<h3>Course details</h3> 
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			
 			
