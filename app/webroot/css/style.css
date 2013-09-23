@@ -1264,7 +1264,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	border-bottom: none;
 }
 .project-content .flat-files-icon span, .project-content .flat-tasks-icon span{
-	font-family: 'font-awesome';
+	font-family: 'fontawesome';
 	font-size: 16px;
 	color: black;
 }
