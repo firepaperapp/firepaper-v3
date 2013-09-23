@@ -1058,6 +1058,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	padding: 16px 20px 0px 20px;
     text-shadow: 0 1px #FFF;
     color: #c7bf7b;
+    font-size: 13px;
     margin: 0;
     border: none;
     text-transform: capitalize;
@@ -1262,17 +1263,26 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-content {
 	border-bottom: none;
+	padding: 16px;
+}
+.project-content .flat-files-icon, .project-content .flat-tasks-icon {
+	font-size: 12px;
+	text-shadow: 0 1px #FFF;
+    color: #c7bf7b;
+    font-weight: bold;
 }
 .project-content .flat-files-icon span, .project-content .flat-tasks-icon span{
 	font-family: 'fontawesome';
 	font-size: 16px;
-	color: black;
+	text-shadow: 0 1px #FFF;
+    color: #c7bf7b;
+    margin-right: 8px;
 }
 .project-content .flat-files-icon span {
 	
 }
 .project-content .flat-tasks-icon {
-	
+	margin-left: 12px;
 }
 .completed-bubble span {
 }
