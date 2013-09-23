@@ -73,14 +73,12 @@ else
 			
 			<div class="left deadline-details">
 			<div class="project-content">
-		<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
-		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
-                              
-				
-				<span class="flat-due-icon"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?>
+		<span class="flat-due-icon"><?php echo date("d", strtotime($prjDetails['Project']['duedate']))?>
 				
 				<?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?>
 				</span>
+				<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
+		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
 				</div>
 		   		<?php 
 				} 
