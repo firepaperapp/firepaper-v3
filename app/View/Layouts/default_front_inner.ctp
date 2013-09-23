@@ -26,7 +26,21 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.widget.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.mouse.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>common.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>jquery-idleTimeout.js"></script>
+
 <script type="text/javascript">
+        
+$(document).ready(function(){
+    var s = <?php echo Configure::read('Session.timeout');?>;
+    $(document).idleTimeout({
+      inactivity: 30000,
+      noconfirm: 10000,
+      sessionAlive: s,
+      alive_url:'<?php echo SITE_HTTP_URL;?>users/check_user_login',
+      logout_url:'<?php echo SITE_HTTP_URL;?>users/check_user_login',
+      redirect_url:'<?php echo SITE_HTTP_URL;?>dashboard'
+    });
+  });
 </script>
 </head>
 <body>
