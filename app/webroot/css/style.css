@@ -112,7 +112,7 @@ hr {
 	margin-bottom: 40px;
 }
 .line {
-	width: 100%;
+	width: 90%;
 	height: 1px;
 	background: #e7e7e7;
 	clear: both;
@@ -374,6 +374,7 @@ select {
 }
 #docAndTask {
 	margin: 0;
+	width: 90%;
 }
 .add-people {
 	width: 100%;
