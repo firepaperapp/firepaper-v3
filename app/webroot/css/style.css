@@ -1281,11 +1281,12 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     font-smoothing: antialiased;
 }
 }
-.project-content .flat-files-icon span {
-	
+.project-content .flat-tasks-icon span {
+	font-size: 14px;
+	margin-right: 2px;
 }
 .project-content .flat-tasks-icon {
-	margin-left: 12px;
+	margin-left: 20px;
 }
 .completed-bubble span {
 }
