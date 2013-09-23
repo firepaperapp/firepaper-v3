@@ -376,7 +376,7 @@ $(document).ready(function(){
         </div>
 		<?php }?>
         </form>
-        <div class="clr"></div>
+        <div class="clr-spacer-height"></div>
             <?php
 		    if(isset($data['Project']['published']) && $data['Project']['published']==1)
 		    {?>
