@@ -1278,12 +1278,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #c7bf7b;
     margin-right: 8px;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
+
 }
 .project-content .flat-tasks-icon span {
-	font-size: 14px;
-	margin-right: 2px;
+	font-size: 14px !important;
+	margin-right: 2px !important;
 }
 .project-content .flat-tasks-icon {
 	margin-left: 20px;
