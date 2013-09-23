@@ -54,7 +54,7 @@ h1 {
 	color: #2a2e37; 
 	font-size:30px; 
 	margin-top:10px; 
-	margin-bottom:10px; 
+	margin-bottom:14px; 
 	font-weight: bold; 
 }
 
@@ -1068,11 +1068,11 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	text-shadow: 0 1px 0 #fff;
 	border-bottom: 1px dotted #d7d09c;
 }
-.flat-files-icon, .flat-tasks-icon {
-	height: 12px;
+.flat-due-icon, .flat-files-icon, .flat-tasks-icon {
+	font-size: 16px;
 	font-weight: bold;
 	text-shadow: 0 1px #FFF;
-    color: #c7bf7b;
+    color: #b1b1b1;
     padding-top: 2px;
     padding-left: 22px;
 }
@@ -1166,10 +1166,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	-webkit-border-radius:50%;
 	background: #ccc;
 }
-.deadline-details #imgid  {
-	float: left;
-	margin-right: 10px;
-}
+
 
 .deadline-details .day {
 	padding: 15px;
@@ -2521,14 +2518,15 @@ p.task {
 .project-brief-box #imgid {
 	float: left;
 	margin-right: 22px;
+	margin-bottom: 18px;
 }
 .project-leader-title {
 	color: #b1b1b1;
-	margin-top: 10px;
+	margin-top: 16px;
 	font-size: 16px;
 	float: left;
 }
-.project-leader-title strong {
+.project-leader-title strong a {
 	color: #b1b1b1;
 }
 .project-brief-box p {
