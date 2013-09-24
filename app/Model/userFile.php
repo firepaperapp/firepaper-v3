@@ -144,7 +144,7 @@
 			
 			if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
 			{
-                            $postArray['data'] = $postArray;
+                            $postArray['data'] = $postArray['userFile']['uploadfile'];
 				/*$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];*/
 				
@@ -153,7 +153,7 @@
 					$this->errMsg =  FILE_CANT_UPLOADED;
 					$this->err=1;			
 				}*/
-				echo "<pre>"; print_r($postArray);die;
+				//echo "<pre>"; print_r($postArray);die;
 				if($postArray['data']['name']=='' || $postArray['data']['error']==1 ||  !is_uploaded_file($postArray['data']['tmp_name']))
 				{
 					$this->errMsg =  FILE_CANT_UPLOADED;
