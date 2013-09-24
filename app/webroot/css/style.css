@@ -1679,6 +1679,13 @@ p.contact span {
 	margin-right:4px; 
 	
 }
+.file-name a { 
+	color:#686b6c;
+	
+}
+.file-name a:hover { 
+	text-decoration:underline; 
+}
 .version-documents .file-name {
 	width: 100%;
 }
@@ -1694,13 +1701,7 @@ p.contact span {
 	font-weight:normal; 
 	margin-top: -13px; 
 }
-.file-name a { 
-	color:#686b6c;
-	
-}
-.file-name a:hover { 
-	text-decoration:underline; 
-}
+
 .project-name { 
 	font-weight:bold; 
 	float:left; 
