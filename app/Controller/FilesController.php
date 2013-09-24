@@ -730,7 +730,7 @@ class FilesController  extends AppController{
 	  //	print_r($this->request->params['form']); exit;
 	  
 			if($this->userFile->validateFileUpload($this->request->data) == 0)
-		{echo "a";die;
+		{
 			
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
