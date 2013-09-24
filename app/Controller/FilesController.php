@@ -720,7 +720,7 @@ class FilesController  extends AppController{
 	}
         
         function uploadFile($fileId="")
-	{echo "a";die; 
+	{ 
 		 //echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
@@ -730,7 +730,7 @@ class FilesController  extends AppController{
 	  //	print_r($this->request->params['form']); exit;
 	  
 			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
-		{
+		{echo "1";die;
 			
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
@@ -1087,7 +1087,7 @@ class FilesController  extends AppController{
         
 		}
 		else
-		{
+		{echo "2";die;
 			$response['error'] = $this->userFile->errMsg;
 		}
 		
