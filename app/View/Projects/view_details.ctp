@@ -31,7 +31,7 @@
 		<?php echo $this->element("/common/project_detail");?>
 		<div class="rule"></div>
 		
-				<h3>TO DO's</h3>
+				<h3 class="todo">TO DO's</h3>
 		
 		
 	 	<div id="loaderJsTask"></div>
