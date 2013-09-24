@@ -124,7 +124,7 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 	display: none; 
 	position: absolute; 
 	width: 180px; 
-	background: white; 
+	background: black; 
 	margin-left:0px;
 }
 .facebook-auto .default { 
@@ -147,7 +147,7 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 	cursor: pointer; 
 	margin: 0; 
 	list-style-type: none;  
-	background: #2a2e37;
+	background: black ;
 	color: white;
 }
 .facebook-auto ul li em { 
@@ -156,7 +156,7 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 	background: #cbcbcb; 
 }
 .facebook-auto ul li.auto-focus { 
-	background: #54575e; 
+	background: #2a2e37; 
 	color: #fff; 
 }
 .facebook-auto ul li.auto-focus em { 
