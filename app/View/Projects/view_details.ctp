@@ -200,11 +200,11 @@ $box = "task-comment";
 				<? }
 				else 
 				{?>
-					&nbsp;-&nbsp;	by - <a class="edit" href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['User']['id'];?>"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
+					<a class="edit" href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['User']['id'];?>"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
 				<?php
 				}
 				$comment_date = $rec['projComments']['updated_on'] == '0000-00-00 00:00:00'?$rec['projComments']['created']:$rec['projComments']['updated_on'];
-				echo "&nbsp;-&nbsp;	on - ".date("d-M-Y", strtotime($comment_date));
+				echo "".date("d", strtotime($comment_date));
 				?>
 				</p>
 		 </div>		
