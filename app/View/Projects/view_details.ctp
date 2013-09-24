@@ -122,7 +122,7 @@
 					  {?>				  
 					  &nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['prjTask']['id']?>)">View Other Docs</a>
 <?php
-					  }?></p> <div class="rule"></div>	
+					  }?></p> 
 		 			<?php
 					}
 					//else 					
