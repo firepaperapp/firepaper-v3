@@ -268,8 +268,8 @@ select {
 }
 .logo {
 	background: url(../images/fp-logo.png) no-repeat; 
-	width:127px; 
-	height: 134px; 
+	width:115px; 
+	height: 89px; 
 	margin: 90px auto;
 }
 .navigation {  
@@ -480,12 +480,12 @@ select {
 	background: url(../images/nav-rpt.jpg) repeat-x; 
 }
 .header-signup { 
-	height:200px; 
+	height:134px; 
 	width:495px; 
 	margin:0 auto; 
 }
 .header-signin { 
-	height:200px; 
+	height:134px; 
 	width:280px; 
 	margin:0 auto; 
 }
