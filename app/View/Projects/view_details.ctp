@@ -31,7 +31,7 @@
 		<?php echo $this->element("/common/project_detail");?>
 		<div class="rule"></div>
 		
-				<h3>Documents &amp; Tasks</h3>
+				<h3>TO DO's</h3>
 		
 		
 	 	<div id="loaderJsTask"></div>
@@ -122,7 +122,7 @@
 					  {?>				  
 					  &nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['prjTask']['id']?>)">View Other Docs</a>
 <?php
-					  }?></p> <div class="clr"></div>	
+					  }?></p> <div class="rule"></div>	
 		 			<?php
 					}
 					//else 					
