@@ -50,5 +50,5 @@ $(document).ready(function() {
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 <?php } ?>
-<a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><?php echo IMAGES_PATH.'header-logo.png'; ?></a>
+<a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><img src="<?php echo IMAGES_PATH.'header-logo.png'; ?>" /></a>
 </aside>
