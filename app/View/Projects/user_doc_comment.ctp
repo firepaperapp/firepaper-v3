@@ -85,7 +85,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		
 		<?php
 		$comment_date = $rec['projComments']['updated_on'] == '0000-00-00 00:00:00'?$rec['projComments']['created']:$rec['projComments']['updated_on'];
-		echo "".date("d", strtotime($comment_date));
+		echo "".date("F j, Y", strtotime($comment_date));
 		?>
 	  </p>
 	  </div>
