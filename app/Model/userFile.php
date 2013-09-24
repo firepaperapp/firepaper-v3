@@ -77,7 +77,7 @@
 		function validateFileUpload_17($postArray)
 		{
 			global $videoArray, $filesArray;
-			echo $_SERVER['REMOTE_ADDR'];die;
+			
 			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92' || 1)
 			{
 				$getModelName = array_keys($postArray['data']['name']);
