@@ -359,7 +359,7 @@ class FilesController  extends AppController{
 		$this->request->params['form'] = $_FILES;
 		
 	  //	print_r($this->request->params['form']); exit;
-	  
+	  echo $_SERVER['REMOTE_ADDR'];die;
 			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
 		{
 			
@@ -730,7 +730,7 @@ class FilesController  extends AppController{
 	  //	print_r($this->request->params['form']); exit;
 	  
 			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
-		{echo "1";die;
+		{
 			
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
@@ -1087,7 +1087,7 @@ class FilesController  extends AppController{
         
 		}
 		else
-		{echo "2";die;
+		{
 			$response['error'] = $this->userFile->errMsg;
 		}
 		
