@@ -726,7 +726,7 @@ class FilesController  extends AppController{
 	    $msg = "";
 		global $videoArray;
 		$this->request->params['form'] = $_FILES;
-		echo $_SERVER['REMOTE_ADDR'];die;
+		
 	  //	print_r($this->request->params['form']); exit;
 	  
 			if($this->userFile->validateFileUpload($this->request->params['form']) == 0)
@@ -784,7 +784,7 @@ class FilesController  extends AppController{
 			}
 			else 
 			{
-				if($_SERVER['REMOTE_ADDR'] =='180.188.253.92' || 1)
+				if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
 				{ 
                                  //   pr($this->request->params);
 					//$getModelName = array_keys($this->request->params['form']['data']['name']);
