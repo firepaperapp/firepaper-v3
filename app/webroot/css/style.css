@@ -1092,7 +1092,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	color: #c7bf7b;
 	border-bottom: 1px dotted #d7d09c;
 }
-.deadline-details .flat-due-icon, .deadline-details .flat-files-icon, .deadline-details .flat-tasks-icon {
+.deadline-details .project-content .flat-due-icon, .deadline-details .project-content .flat-files-icon, .deadline-details .project-content .flat-tasks-icon {
 	font-size: 16px;
 	font-weight: 500;
     color: #b1b1b1;
