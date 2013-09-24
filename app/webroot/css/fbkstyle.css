@@ -148,11 +148,12 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 	margin: 0; 
 	list-style-type: none;  
 	background: #2a2e37;
+	color: white;
 }
 .facebook-auto ul li em { 
 	font-weight: bold; 
 	font-style: normal; 
-	background: #fca55f; 
+	background: #cbcbcb; 
 }
 .facebook-auto ul li.auto-focus { 
 	background: #98D3D3; 
