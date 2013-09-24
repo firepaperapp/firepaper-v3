@@ -144,7 +144,7 @@
 			
 			if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
 			{
-                            $postArray['data'] = $postArray['uploadfile'];
+                            $postArray['data'] = $postArray['userFile']['uploadfile'];
 				/*$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];*/
 				
