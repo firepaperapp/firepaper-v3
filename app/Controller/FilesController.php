@@ -1007,7 +1007,7 @@ class FilesController  extends AppController{
 						}
 					}
 					else
-					{	 
+					{	echo "a";die; 
 						//we will simply upload the file
 						move_uploaded_file( $this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
 							 
