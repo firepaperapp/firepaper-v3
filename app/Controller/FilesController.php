@@ -725,7 +725,8 @@ class FilesController  extends AppController{
   		$uid = $this->Session->read('userid');
 	    $msg = "";
 		global $videoArray;
-		$this->request->params['form'] = $_FILES;
+		//$this->request->params['form'] = $_FILES;
+		$this->request->params['form'] = $this->request->data['userFile'];
 		//echo "<pre>"; print_r($this->request->data);die;
 	  //	print_r($this->request->params['form']); exit;
 	  
