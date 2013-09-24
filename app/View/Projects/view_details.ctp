@@ -29,7 +29,7 @@
 		?> 
 		<h1><a href="#" ><?php echo Sanitize::html($prjDetails['Subject']['title']);?> </a>- <?php echo Sanitize::html($prjDetails['Project']['title']);?></h1>
 		<?php echo $this->element("/common/project_detail");?>
-		<div class="rule"></div>
+		<div class="project-rule"></div>
 		
 				<h3>TO DO's</h3>
 		
@@ -153,7 +153,7 @@
 					<input type="button" name="submit" value="Submit" onclick="addCommentTask(<?php echo $rec['prjTask']['id'];?>, <?php echo $rec['prjTask']['id'];?>);" class="submit"/>
 					or <a class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['prjTask']['id'];?>_box').slideUp('slow');">Cancel</a>
 					</div>
-					<div class="rule"></div>	
+					<div class="project-rule"></div>	
 							
 					</div>    
 					<!-- HTML END To add a Comment for user task Doc -->
@@ -183,7 +183,7 @@
 $box = "task-comment";
 	if(count($projComments)>0)
 	{?>
-	</div><div class="rule"></div>
+	</div>
 	  	<h3>Changes</h3>
 	  	<?php
 	    foreach($projComments as $rec)
