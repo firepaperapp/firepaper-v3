@@ -19,7 +19,7 @@ if(isset($errMsg))
 } 
 ?>
 </div>
-<?php echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project')); ?>
+<?php echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project', 'enctype' => 'multipart/form-data')); ?>
 <script> 
 	var groupAdded = <?php echo json_encode($dataGroups);?>;	
 	var userAdded = <?php echo json_encode($dataUsers);?>;	
