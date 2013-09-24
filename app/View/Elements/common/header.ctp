@@ -45,10 +45,10 @@ $(document).ready(function() {
 <a href="<?php echo SITE_HTTP_URL?>logout" alt="Logout" class="logout-icon"></a>
 <a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" >⚙</a>
 <!--<a class="activity-toggle" href="">🌎</a>-->
-
+<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 
 <?php if (isset($cansignup) && $cansignup == 1) {?>
-<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
+
 <?php } ?>
 <a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><img src="<?php echo IMAGES_PATH.'header-logo.png'; ?>" /></a>
 </aside>
