@@ -1542,7 +1542,12 @@ p.contact span {
 	width: 100%;
 }
 .authorbox p {
-	color: #cbcbcb;
+	color: #686b6c;
+	font-size: 13px;
+}
+.authorbox p .edit {
+	color: #1ea9d7;
+	font-size: 14px;
 }
 .authorbox #imgid {
 	float: left;
