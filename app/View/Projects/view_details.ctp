@@ -154,7 +154,7 @@
 					<input type="button" name="submit" value="Submit" onclick="addCommentTask(<?php echo $rec['prjTask']['id'];?>, <?php echo $rec['prjTask']['id'];?>);" class="submit"/>
 					or <a class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['prjTask']['id'];?>_box').slideUp('slow');">Cancel</a>
 					</div>
-					<div class="project-rule"></div>	
+						
 							
 					</div>    
 					<!-- HTML END To add a Comment for user task Doc -->
