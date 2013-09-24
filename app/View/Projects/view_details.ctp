@@ -30,12 +30,9 @@
 		<h1><a href="#" ><?php echo Sanitize::html($prjDetails['Subject']['title']);?> </a>- <?php echo Sanitize::html($prjDetails['Project']['title']);?></h1>
 		<?php echo $this->element("/common/project_detail");?>
 		<div class="rule"></div>
-		<div class="row">
-			<div class="left">
+		
 				<h3>Documents &amp; Tasks</h3>
-			</div>
-			
-		</div>
+		
 		
 	 	<div id="loaderJsTask"></div>
 	    	<?php
@@ -134,7 +131,7 @@
 					       
 				<?php
 					}?>
-					<div class="width100Per" id="extraDocs_<?php echo $rec['prjTask']['id'];?>" style="display:none;width:500px;">	
+					<div class="width100Per" id="extraDocs_<?php echo $rec['prjTask']['id'];?>" style="display:none;">	
 				 	    
 					 </div>
 					  <div id="task_<?php echo $rec['prjTask']['id'];?>_box" style="">     
@@ -144,7 +141,8 @@
 				 
 							echo $this->requestAction("/projects/userDocuments/".$rec['prjTask']['id']."?view=Large&s=u");
 						}
-					?> 		 		
+					?> 		 	
+					
 					</div>
 					 <!-- HTML To add a Comment for user task Doc -->
 					<div class="addcomment marginT10" id="addcomment_<?php echo $rec['prjTask']['id'];?>_box" style="display:none;">
