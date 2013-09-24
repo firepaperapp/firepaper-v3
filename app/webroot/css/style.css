@@ -341,6 +341,10 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+.navigation .header-logo {
+	float: right;
+
+}
 .new-project-btn {
 	margin-top: 19px;
 	margin-left: 30px;
@@ -712,6 +716,7 @@ p.task-tickbox a {
 
 .no-projects {
 	text-align: center;	
+	padding: 40px;
 }
 .no-projects h2 {
 	font-size: 20px;
