@@ -78,7 +78,7 @@
 		{
 			global $videoArray, $filesArray;
 			
-			if($_SERVER['REMOTE_ADDR'] =='180.188.253.92' || 1)
+			if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
 			{
 				$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];
