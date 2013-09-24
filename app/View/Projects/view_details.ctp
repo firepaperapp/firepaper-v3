@@ -62,7 +62,7 @@
 		 		          if($rec['fileType']['icon']!='')
 				          {?>
 				          	 <a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $rec['prjTask']['refer_file_id']?>" id="tool-tip">
-				          	 <?php echo . '<em>' . Sanitize::html($rec['prjTask']['title']); .'</em>'. ?></a>
+				          	 <?php echo Sanitize::html($rec['prjTask']['title']);?></a>
 				           <em></em>
 				          <?php
 				          }
