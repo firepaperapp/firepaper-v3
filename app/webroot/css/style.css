@@ -1290,7 +1290,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-size: 14px !important;
 	margin-right: 2px !important;
 }
-.project-content .flat-tasks-icon {
+.details .project-content .flat-tasks-icon {
 	margin-left: 20px;
 }
 .completed-bubble span {
