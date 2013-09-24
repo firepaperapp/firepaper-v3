@@ -29,7 +29,7 @@
 		?> 
 		<h1><a href="#" ><?php echo Sanitize::html($prjDetails['Subject']['title']);?> </a>- <?php echo Sanitize::html($prjDetails['Project']['title']);?></h1>
 		<?php echo $this->element("/common/project_detail");?>
-		<div class="project-rule"></div>
+		<div class="rule"></div>
 		
 				<h3>TO DO's</h3>
 		
@@ -131,6 +131,7 @@
 					       
 				<?php
 					}?>
+					<div class="project-rule"></div>
 					<div class="width100Per" id="extraDocs_<?php echo $rec['prjTask']['id'];?>" style="display:none;">	
 				 	    
 					 </div>
