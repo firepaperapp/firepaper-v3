@@ -143,7 +143,7 @@
 			global $videoArray, $filesArray;
 			
 			if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
-			{
+			{echo "M-a";die;
                             $postArray['data'] = $postArray['uploadfile'];
 				/*$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];*/
