@@ -136,12 +136,13 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 	display: none; 
 	margin: 0; 
 	padding: 0; 
+	font-size: 14px;
 	overflow: auto; 
 	position:absolute; 
 	z-index:9999;
 }
 .facebook-auto ul li { 
-	padding: 5px 12px; 
+	padding: 10px 12px; 
 	z-index: 1000; 
 	cursor: pointer; 
 	margin: 0; 
@@ -151,13 +152,15 @@ ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutt
 .facebook-auto ul li em { 
 	font-weight: bold; 
 	font-style: normal; 
-	background: #98D3D3; 
+	background: #fca55f; 
 }
 .facebook-auto ul li.auto-focus { 
 	background: #98D3D3; 
 	color: #fff; 
 }
-.facebook-auto ul li.auto-focus em { background: #98D3D3; }
+.facebook-auto ul li.auto-focus em { 
+	background: #3c3f47; 
+}
 .deleted { background-color:#98D3D3 !important; color:#ffffff !important;}
 .hidden { display:none;}
 #otherGroups_feed{width:180px;}
