@@ -343,7 +343,8 @@ select {
 }
 .navigation .header-logo {
 	float: right;
-
+	margin-top: 12px;
+	margin-right: 12px;
 }
 .new-project-btn {
 	margin-top: 19px;
