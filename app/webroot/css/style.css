@@ -1668,12 +1668,16 @@ p.contact span {
 	padding:10px 5px 10px 0; 
 }
 .file-name { 
-	font-weight:normal;  
-	color:#454040; 
+	font-size: 18px;
+	letter-spacing: -1px;
+	font-weight: bold; 
+	color:#686b6c;
 	padding-bottom: 2px;
 	margin-bottom: 4px;
 	display: inline-block;
-	width: 100%;
+	color:#686b6c;
+	margin-right:4px; 
+	
 }
 .version-documents .file-name {
 	width: 100%;
@@ -1691,11 +1695,8 @@ p.contact span {
 	margin-top: -13px; 
 }
 .file-name a { 
-	margin-right:4px; 
-	color:#595959;
-	font-size: 18px;
-	letter-spacing: -1px;
-	font-weight: bold;
+	color:#686b6c;
+	
 }
 .file-name a:hover { 
 	text-decoration:underline; 
