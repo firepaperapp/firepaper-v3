@@ -310,6 +310,7 @@ class FilesController  extends AppController{
 	 */
 	function getFileComments($fileId=NULL)
 	{
+		echo "<pre>"; print_r($this->request);die;
 		if($fileId!='')
 		{				
 			################## Start Add a Coment ############################
