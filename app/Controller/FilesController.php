@@ -195,9 +195,11 @@ class FilesController  extends AppController{
 		{
 			case "comments":
 				{
-					$val = explode("_",$this->request->params['form']['id']);
+					//$val = explode("_",$this->request->params['form']['id']);
+					$val = explode("_",$this->request->data);
 		 			$this->Comment->id = $val[1];
-					$data['Comment']['message'] = $this->request->params['form']['value'];
+					//$data['Comment']['message'] = $this->request->params['form']['value'];
+					$data['Comment']['message'] = $this->request->data['value'];
 					$this->Comment->Save($data);
 					echo $data['Comment']['message'];
 					break;
@@ -219,8 +221,10 @@ class FilesController  extends AppController{
 				}
 			case "category":
 				{		 
-					$val = explode("_",$this->request->params['form']['id']);
-					$valCat = explode("_",$this->request->params['form']['value']);
+					//$val = explode("_",$this->request->params['form']['id']);
+					$val = explode("_",$this->request->data['id']);
+					//$valCat = explode("_",$this->request->params['form']['value']);
+					$valCat = explode("_",$this->request->data['value']);
 		 			$this->userFile->id = $val[1];
 					$data['userFile']['category_id'] = $valCat[0];
 					$this->userFile->Save($data);
