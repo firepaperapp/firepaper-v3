@@ -190,7 +190,7 @@ class FilesController  extends AppController{
 	 * To save the parameters like:comment, category and tags
 	 */
 	function saveParameters($action="")
-	{
+	{echo $action;die;
 		switch ($action)
 		{
 			case "comments":
