@@ -190,7 +190,7 @@ class FilesController  extends AppController{
 	 * To save the parameters like:comment, category and tags
 	 */
 	function saveParameters($action="")
-	{echo "<pre>"; print_r($this->request);die;
+	{
 		switch ($action)
 		{
 			case "comments":
@@ -205,9 +205,14 @@ class FilesController  extends AppController{
 			case "tags":
 				{
 				 
-					$val = explode("_",$this->request->params['form']['id']);
+					//#OLD ## $this->request->params['form']
+					## Changed To
+					##NEW## $this->request->data
+					//$val = explode("_",$this->request->params['form']['id']);
+					$val = explode("_",$this->request->data['id']);
 		 			$this->userFile->id = $val[1];
-					$data['userFile']['tags'] = $this->request->params['form']['value'];
+					//$data['userFile']['tags'] = $this->request->params['form']['value'];
+					$data['userFile']['tags'] = $this->request->data['value'];
 					$this->userFile->Save($data);
 					echo $data['userFile']['tags'];
 					break;
