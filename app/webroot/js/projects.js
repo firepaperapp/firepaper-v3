@@ -180,7 +180,7 @@ $(document).ready(function(){
 		var status = $('#loaderJsTask');
 		
 		 $('#file_upload').fileUploadUI({
-		 	dragDropSupport: false,
+		 	dragDropSupport: true,
 	        uploadTable: $('#files'),
 	        downloadTable: $('#files'),
 	        buildUploadRow: function (files, index) {
