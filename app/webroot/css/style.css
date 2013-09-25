@@ -1625,7 +1625,8 @@ p.contact span {
     float: right;
 }
 
-.files-box-wrapper {
+.files-box-wrapper .files-box .file-name {
+	display: block;
 }
 
 .files-box {
