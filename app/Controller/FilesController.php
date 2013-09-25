@@ -233,7 +233,8 @@ class FilesController  extends AppController{
 				}
 			case "addcategory":
 				{
-					$post = $this->request->params['form'];
+					//$post = $this->request->params['form'];
+					$post = $this->request->data;
 					$post['created_by'] = $this->Session->read("userid");
 					if($this->userFile->saveCategory($post))
 					{
