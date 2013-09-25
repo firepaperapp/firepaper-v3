@@ -310,15 +310,17 @@ class FilesController  extends AppController{
 	 */
 	function getFileComments($fileId=NULL)
 	{
-		echo "<pre>"; print_r($this->request);die;
+		
 		if($fileId!='')
 		{				
 			################## Start Add a Coment ############################
-			if(isset($this->request->params['form']['comment']))
+			//if(isset($this->request->params['form']['comment']))
+			if(isset($this->request->data['comment']))
 			{
-				$val = explode("_",$this->request->params['form']['comment']);
+				//$val = explode("_",$this->request->params['form']['comment']);
 	 			$this->Comment->id = -1;
-				$data['Comment']['message'] = $this->request->params['form']['comment'];
+				//$data['Comment']['message'] = $this->request->params['form']['comment'];
+				$data['Comment']['message'] = $this->request->data['comment'];
 				$data['Comment']['from_id'] = $this->Session->read("userid");
 				$data['Comment']['file_id'] = $fileId;
 				$this->Comment->Save($data);
