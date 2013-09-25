@@ -1,4 +1,4 @@
-<?php
+<?php 
 App::uses('Sanitize', 'Utility');
 class FilesController  extends AppController{
 
