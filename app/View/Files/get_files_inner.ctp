@@ -40,7 +40,7 @@ if(count($data)>0)
 		$myVersion = isset($rec['userFile']['Revison'])&&count($rec['userFile']['Revison'])>0?$rec['userFile']['Revison']:0;
 		$i++;
   	?>		
-	<div class="file-col-1<?php echo $j;?>-wrapper">
+	<div class="file-col-<?php echo $j;?>-wrapper">
 		<div class="files-box-wrapper">
 			<div class="files-box" >
 				<p class="title-files"><?php echo Sanitize::html($recCategory['fileCategory']['title']);?></p>
