@@ -64,7 +64,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 	<?php
 	foreach($taskComments as $rec)
 	{
-		echo USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic'];
+		//echo USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic'];
 		if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
 		{
 			$userimage = USER_IMAGES_PATH.'100X100/'.$rec['User']['profilepic'];
