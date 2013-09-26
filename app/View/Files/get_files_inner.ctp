@@ -1,6 +1,3 @@
-<script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.draggable.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.droppable.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH?>files.js"></script>
 <?php
 	if($this->Session->check('Message.flash'))
 	{?>
