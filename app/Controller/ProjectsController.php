@@ -965,15 +965,15 @@ class ProjectsController  extends AppController{
 			if(!isNull($this->request->data['projectTask']['title']))
 			{
 				if(isset($this->request->data['projectTask']['id']) && $this->request->data['projectTask']['id']!=0)	
-				{
-					echo get_class($this->projectTask);die;
+				{ 					
 					$this->projectTask->id = $this->request->data['projectTask']['id'];
-					//$this->projectTask->Save($this->request->data['projectTask']); 					 
+					$this->projectTask->Save($this->request->data['projectTask']); 					 
 				 	$response['success'] = MSG_TASK_UPDATED;
 				 	$response['id'] = $this->request->data['projectTask']['id'];
 				}
 				else 
 				{
+					echo get_class($this->projectTask);die;
 					$this->projectTask->id = -1;
 					$this->projectTask->Save($this->request->data['projectTask']); 					 
 					$response['success'] = MSG_TASK_CREATED;
