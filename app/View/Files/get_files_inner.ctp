@@ -73,7 +73,7 @@ if(count($data)>0)
 						     <div class="addcomment comment-file" id="addcomment_<?php echo $rec['userFile']['id'];?>_box" style="display:none;">
 					          	<textarea name="addcommenttext_<?php echo $rec['userFile']['id'];?>" id="addcommenttext_<?php echo $rec['userFile']['id'];?>" rows="5" cols="40" ></textarea>
 					          	<div id="submitComment_<?php echo $rec['userFile']['id'];?>"></div>
-					          	<div class="submit-wrapper" style=" position:  relative;">
+					          	<div class="submit-wrapper">
 						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
 						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
 						          	
@@ -99,7 +99,7 @@ if(count($data)>0)
 		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
 		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
 	              	  	   </p>
-	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
+	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;  position:  relative;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
 	              	  	   	<div class="dotted-spacer"></div>
 	              	  	   	<?php
 					 		if($this->Session->read("user_type") == 5 && $this->Session->read("admin_id")!=0)
