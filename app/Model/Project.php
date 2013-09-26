@@ -114,7 +114,13 @@ class Project extends AppModel {
 	 	 		"table"=>"subjects",
 	 	 		"alias"=>"Subject",
 	 	 		"conditions"=>"Subject.id = Project.subject_id"
-	 	 		) 	 	
+	 	 		),
+				array(
+	 	 		"type"=>"inner",
+	 	 		"table"=>"users",
+	 	 		"alias"=>"User",
+	 	 		"conditions"=>"User.id = Project.leader_id"
+	 	 		) 
 	 	 	),
 	 	 	"limit"=>"10"
 	 	 	);	
