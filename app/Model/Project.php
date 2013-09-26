@@ -8,15 +8,7 @@ class Project extends AppModel {
 	   var $useTable= "projects";
 	   var $errMsg=array();
 	   var $err=0;
-	   var $belongsTo = array(
-            'User' => array(
-                    'className' => 'User',
-                    'foreignKey' => 'leader_id',
-                    'conditions' => '',
-                    'fields' => '',
-                    'order' => ''
-            )
-	   );
+	  
 	   function getTasks($project_id, $userId, $getMarksAlso = 0)
 	   {
 	   	 	$stQuery = "SELECT DISTINCT prjTask.project_id, prjTask.title, prjTask.file_name, prjTask.weight, prjTask.id, fileType.icon,prjTask.refer_file_id,	prjTask.created,   		
@@ -118,8 +110,8 @@ class Project extends AppModel {
 				array(
 	 	 		"type"=>"inner",
 	 	 		"table"=>"users",
-	 	 		"alias"=>"U",
-	 	 		"conditions"=>"U.id = Project.leader_id"
+	 	 		"alias"=>"User",
+	 	 		"conditions"=>"User.id = Project.leader_id"
 	 	 		) 
 	 	 	),
 	 	 	"limit"=>"10"
