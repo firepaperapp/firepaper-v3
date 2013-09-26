@@ -968,7 +968,7 @@ class ProjectsController  extends AppController{
 				{
 					echo get_class($this->projectTask);die;
 					$this->projectTask->id = $this->request->data['projectTask']['id'];
-					$this->projectTask->Save($this->request->data['projectTask']); 					 
+					//$this->projectTask->Save($this->request->data['projectTask']); 					 
 				 	$response['success'] = MSG_TASK_UPDATED;
 				 	$response['id'] = $this->request->data['projectTask']['id'];
 				}
