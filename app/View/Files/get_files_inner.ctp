@@ -107,9 +107,9 @@ if(count($data)>0)
 						 	?>
 	              	  	   	<table id="uploadRevison_<?php echo $rec['userFile']['id'];?>"></table>
 			           	   	<form id="form_<?php echo $rec['userFile']['id'];?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/<?php echo $rec['userFile']['id'];?>" method="POST" enctype="multipart/form-data" class="upload-link">	
-		                	 <input type="file" id="uploadfiledsf" name="data[userFile][uploadfile]" />
+		                	 <input type="file" id="uploadfile" name="data[userFile][uploadfile]" />
 							 <input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
-				    		 <button class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</button>
+				    		 <a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>
 				   			 <div>Upload files</div>
 		               		</form>
                				 <?php } ?>
