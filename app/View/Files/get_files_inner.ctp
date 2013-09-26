@@ -52,7 +52,7 @@ if(count($data)>0)
 				$rec['userFile'] = $gotRec;
 				?>
 				<div class="file-name file-name-border" id="main_<?php echo $rec['userFile']['id'];?>"> 
-					<img src="<?php echo IMAGES_PATH;?>icons/<?php echo $fileTypes[$rec['userFile']['file_type_id']];?>" />
+					<img src="<?php echo IMAGES_PATH;?>file-icons/<?php echo $fileTypes[$rec['userFile']['file_type_id']];?>" />
 					<a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $rec['userFile']['id'];?>"  id="tool-tip" style="cursor:pointer;"><span id="fileProject_<?php echo $rec['userFile']['id'];?>" class=" dragFileForProject"><?php echo Sanitize::html($rec['userFile']['file_name']);?></span>
 					</a>
 	            	<p class="file-links">

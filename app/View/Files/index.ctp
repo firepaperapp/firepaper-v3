@@ -98,7 +98,7 @@ function showUploader() {
 }
 </script>
 
-<div class="white page index">
+<div class="white files index">
 			<input type="button" value="Upload Files" class="button" onclick="showUploader()">
 			
 			<form id="files-upload-form" style="display: none">
