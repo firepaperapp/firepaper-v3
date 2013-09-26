@@ -63,7 +63,16 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 	<h3>Comments</h3>
 	<?php
 	foreach($taskComments as $rec)
-	{ echo "<pre>"; print_r($rec);?>
+	{
+		if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
+		{
+			$userimage = USER_IMAGES_PATH.'100X100/'.$rec['User']['profilepic'];
+		}
+		else
+		{
+			$userimage = IMAGES_PATH.'profile-pic.png';
+		}
+	?>
 	<div  id="delcomment_<?php echo $rec['projComments']['id'];?>">
 	
 	  <div class="<?php echo $box;?>">
