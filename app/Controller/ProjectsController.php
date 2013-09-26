@@ -957,7 +957,7 @@ class ProjectsController  extends AppController{
 	}
 	/**/
 	function createTask($task_id = 0)
-	{ echo "a";die;
+	{ 
 		$project_id = $this->request->query['p'];
 		if(isset($this->request->data['projectTask']) && count($this->request->data['projectTask'])>0)
 		{
@@ -973,7 +973,7 @@ class ProjectsController  extends AppController{
 				}
 				else 
 				{
-					$this->projectTask->id = -1;
+					$this->projectTask->id = 1;
 					$this->projectTask->Save($this->request->data['projectTask']); 					 
 					$response['success'] = MSG_TASK_CREATED;
 					$response['id'] = $this->projectTask->getLastInsertId();
