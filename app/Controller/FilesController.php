@@ -734,7 +734,7 @@ class FilesController  extends AppController{
         
         function uploadFile($fileId="")
 	{ 
-		 //echo "i am here.."; exit;
+		//echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
 		global $videoArray;
@@ -1256,6 +1256,7 @@ class FilesController  extends AppController{
 		} 
 		if($this->request->data)
 		{
+			echo "<pre>"; print_r();die;
 			if(isset($this->request->data['userFile']['delFile']))
 			{
 				$reduceSpace = 0;
