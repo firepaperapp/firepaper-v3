@@ -174,11 +174,10 @@ $(function()
 	$(".dragFileForProject").draggable({helper:"clone" });
 	 
    	$(".upload-link .uploadfilterfile").live("click", function(){
-		event.preventDefault();
 		fileId = $(this).attr('id');
 		file = fileId.split("_");
 		formId = 'form_'+file[1];
-		
+		alert($("#"+formId).attr('action'));
 		$.ajax({
 			type: "POST",
 			url: $("#"+formId).attr('action'),
