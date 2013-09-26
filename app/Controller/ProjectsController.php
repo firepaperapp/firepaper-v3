@@ -201,7 +201,8 @@ class ProjectsController  extends AppController{
 		//project detail
 		$prjDetails = $this->Project->find('first', array(
 			"conditions"=>"Project.id = ".$project_id,
-			"fields"=>"Project.*, Subject.title, UserAdmin.status, UserAdmin.email, User.profilepic, User.email, User.status,User.firstname, User.lastname",
+			"fields"=>"Project.*, Subject.title, UserAdmin.status, UserAdmin.email, User.profilepic,
+			User.email, User.status,User.firstname, User.lastname",
 			"joins"=>array(
 	 							array("type"=>"inner",
 	 							"table"=>"subjects",
