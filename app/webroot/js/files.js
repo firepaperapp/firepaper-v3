@@ -183,15 +183,15 @@ $(function()
 			url: $("#"+formId).attr('action'),
 			data: $("#"+formId).serialize(),
 			complete: function(data){
-				var json = jQuery.parseJSON(data); // create an object with the key of the array
+				var json = JSON.parse(data); // create an object with the key of the array
 				alert(json.toSource());
 			},
 			success: function(data){
-				var json = jQuery.parseJSON(data); // create an object with the key of the array
+				var json = JSON.parse(data); // create an object with the key of the array
 				alert(json.toSource()); // where html is the key of array that you want, $response['html'] = "<a>something..</a>";
 			},
 			     error: function(data){
-				var json = jQuery.parseJSON(data);
+				var json = JSON.parse(data);
 				alert(json.error);
 			}
 		});
