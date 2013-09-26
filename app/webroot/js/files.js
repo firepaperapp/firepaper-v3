@@ -173,7 +173,32 @@ $(function()
 	 
 	$(".dragFileForProject").draggable({helper:"clone" });
 	 
-   	 
+   	$(".upload-link .uploadfilterfile").live("click", function(){
+		event.preventDefault();
+		fileId = $(this).attr('id');
+		file = fileId.split("_");
+		formId = 'form_'+file[1];
+		
+		$.ajax({
+			type: "POST",
+			url: $("#"+formId).attr('action'),
+			dataType: "json",
+			data: $("#"+formId).serialize(),
+			complete: function(data){
+				//var json = JSON.parse(data); // create an object with the key of the array
+				alert(data.toSource());
+			},
+			success: function(data){
+				//var json = JSON.parse(data); // create an object with the key of the array
+				alert(data.toSource()); // where html is the key of array that you want, $response['html'] = "<a>something..</a>";
+			},
+			     error: function(data){
+				//var json = JSON.parse(data);
+				//alert(json.error);
+			}
+		});
+		
+	}) 
     
 });
 function updateCategoryEdit(data)
