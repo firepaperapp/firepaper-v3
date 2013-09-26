@@ -25,7 +25,7 @@
 			{?>
 				<div class="completed-bubble"><span><?php echo $howMuchCompleted;?>%</span> Completed</div>
 			<?php }?>
-			<?php
+			<?php echo "<pre>"; print_r($userdata);
 if(is_file(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']))
 {
 	$userimage = USER_IMAGES_PATH.'100X100/'.$userdata['User']['profilepic'];
