@@ -107,11 +107,47 @@ if(count($data)>0)
 						 	?>
 	              	  	   	<table id="uploadRevison_<?php echo $rec['userFile']['id'];?>"></table>
 			           	   	<form id="form_<?php echo $rec['userFile']['id'];?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/<?php echo $rec['userFile']['id'];?>" method="POST" enctype="multipart/form-data" class="upload-link">	
-		                	 <input type="file" id="uploadfile" name="data[userFile][uploadfile]" />
+		                	 <input type="file" id="uploadfile<?php echo $rec['userFile']['id']?>" name="data[userFile][uploadfile]" />
 							 <input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
-				    		 <a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>
+				    		 <!--<a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>-->
 				   			 <div>Upload files</div>
 		               		</form>
+							<script type="text/javascript">
+								var btnUpload = $('#uploadfile'+<?php echo $rec['userFile']['id']?>);
+								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
+								$('#form_'+<?php echo $rec['userFile']['id']?>).fileUploadUI({
+									dragDropSupport: true,
+														uploadTable: $('#files'),
+														downloadTable: $('#files'),
+														buildUploadRow: function (files, index) {
+															 return $('<tr><td>' + files[index].name + '<\/td>' +
+																	'<td class="file_upload_progress"><div><\/div><\/td>' +
+																	'<td class="file_upload_cancel">' +
+																	'<button class="ui-state-default ui-corner-all" title="Cancel">' +
+																	'<span class="ui-icon ui-icon-cancel">Cancel<\/span>' +
+																	'<\/button><\/td><\/tr>');
+														},
+														buildDownloadRow: function (response) {
+																//Add uploaded file to list
+																						if("undefined" == typeof(response.success))
+																						{
+																								$("#validation-container-task").empty().html("<p class='error'>"+response.error+"</p>").show();
+																								$("#validation-container-success-task").empty().hide();
+												
+																						} else{	 
+																										$("#validation-container-task").empty().hide();
+																										$("#validation-container-success-task").empty().html(response.success).show();								
+																										$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
+																										{	 
+																												$("div#taskUnderDiv").empty().html(data).show('slow');	
+																												$("#loaderJsTask").hide();
+																												$(".dropFileHere").fadeOut('slow');
+																										}
+																										);
+																						}        
+														}
+										});
+							</script>
                				 <?php } ?>
 							<div id="revisions<?php echo $rec['userFile']['id'];?>">
 			                
