@@ -181,6 +181,7 @@ $(function()
 		$.ajax({
 			type: "POST",
 			url: $("#"+formId).attr('action'),
+			dataType: "json",
 			data: $("#"+formId).serialize(),
 			complete: function(data){
 				var json = JSON.parse(data); // create an object with the key of the array
