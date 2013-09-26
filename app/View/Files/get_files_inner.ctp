@@ -61,7 +61,7 @@ if(count($data)>0)
 	            		<a href="javascript:void(0);" class="viewDetails edit" id="<?php echo $rec['userFile']['id'];?>" >View options</a>| <a href="<?php echo SITE_HTTP_URL?>files/confirmDeletion/<?php echo $rec['userFile']['id'];?>/" class="edit deleteFile">Delete</a>
 	            	</p>
 	            	<div class="clr"></div>	
-	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" >
+	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" style=" position:  relative;">
 	            		
 			            <div class="versions-inner"> 
 			            	<p>
@@ -99,7 +99,7 @@ if(count($data)>0)
 		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
 		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
 	              	  	   </p>
-	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;  position:  relative;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
+	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
 	              	  	   	<div class="dotted-spacer"></div>
 	              	  	   	<?php
 					 		if($this->Session->read("user_type") == 5 && $this->Session->read("admin_id")!=0)
