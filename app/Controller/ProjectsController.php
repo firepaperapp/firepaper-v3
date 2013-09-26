@@ -973,7 +973,7 @@ class ProjectsController  extends AppController{
 				}
 				else 
 				{
-					//echo get_class($this->projectTask);die;
+					echo get_class($this->projectTask);die;
 					//$this->projectTask->id = -1;
 					if($this->projectTask->save($this->request->data['projectTask'])){ 					 
 						$response['success'] = MSG_TASK_CREATED;
