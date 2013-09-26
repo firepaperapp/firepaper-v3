@@ -973,13 +973,13 @@ class ProjectsController  extends AppController{
 				}
 				else 
 				{
-					echo get_class($this->projectTask);die;
+					//echo get_class($this->projectTask);die;
 					//$this->projectTask->id = -1;
-					if($this->projectTask->save($this->request->data['projectTask'])){ 					 
+					if($this->projectTask->Save($this->request->data['projectTask'])){ 					 
 						$response['success'] = MSG_TASK_CREATED;
 						$response['id'] = $this->projectTask->getLastInsertId();
 					}else{
-						pr($this->validateErrors($this->projectTask));
+						echo '<pre>';print_r($this->validateErrors($this->projectTask));die;
 					}
 		 		} 
 		 		if(!isNull($this->request->data['projComments']['comment']))
