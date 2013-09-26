@@ -4,7 +4,7 @@
  * Specfically used in the projects controller
  */
 class projectTask extends AppModel {
-	   var $name = 'projectTaskExtraDoc';
+	   var $name = 'projectTask';
 	   var $useTable= "project_tasks";
 	   var $errMsg=array();
 	   var $err=0; 
