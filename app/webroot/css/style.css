@@ -235,6 +235,11 @@ select {
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
+.files {
+	margin: 30px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
 .col1 {
 	width: 99%;
 	margin-right: 1%;
@@ -1838,7 +1843,7 @@ div.file-name em {
 
 .file-links {
     font-size: 14px;
-    font-weight: 400;
+
     margin-top: 2px;
     color: #cbcbcb;
     font-style: normal;
@@ -1848,7 +1853,7 @@ div.file-name em {
 }
 
 .file-links a {
-    font-weight: 400;
+  
     color: #1ea9d7;
     text-decoration: none;
 }
