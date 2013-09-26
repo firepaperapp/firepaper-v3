@@ -180,7 +180,6 @@ $(function()
 		
 		$.ajax({
 			type: "POST",
-			dataType: "json",
 			url: $("#"+formId).attr('action'),
 			data: $("#"+formId).serialize(),
 			complete: function(data){
