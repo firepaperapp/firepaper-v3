@@ -87,7 +87,7 @@
 <!-- End Details -->
 
 	<div class="project-owner">
-              <?php echo "<pre>"; print_r($rec['User']);die;
+              <?php //echo "<pre>"; print_r($rec['User']);die;
 if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
 {
 	$userimage = USER_IMAGES_PATH.'100X100/'.$rec['User']['profilepic'];
