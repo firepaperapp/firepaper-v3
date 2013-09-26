@@ -1256,7 +1256,7 @@ class FilesController  extends AppController{
 		} 
 		if($this->request->data)
 		{
-			echo "<pre>"; print_r();die;
+			
 			if(isset($this->request->data['userFile']['delFile']))
 			{
 				$reduceSpace = 0;
