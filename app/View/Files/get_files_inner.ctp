@@ -61,7 +61,7 @@ if(count($data)>0)
 	            		<a href="javascript:void(0);" class="viewDetails edit" id="<?php echo $rec['userFile']['id'];?>" >View options</a>| <a href="<?php echo SITE_HTTP_URL?>files/confirmDeletion/<?php echo $rec['userFile']['id'];?>/" class="edit deleteFile">Delete</a>
 	            	</p>
 	            	<div class="clr"></div>	
-	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>">
+	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" style=" position:  relative;">
 	            		
 			            <div class="versions-inner"> 
 			            	<p>
