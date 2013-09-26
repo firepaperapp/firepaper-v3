@@ -106,7 +106,7 @@ class Project extends AppModel {
 	  			$con = " and date_format(Project.duedate, '%y-%m-%d')>=curdate()";
 	  		$currentProjects = array(
 	 	 	"conditions"=> $filters." Project.published = 1 ".$con,
-	 	 	"fields"=>"Project.*, (SELECT SUM(weight) FROM project_tasks WHERE project_tasks.project_id = Project.id) as completed, (SELECT COUNT(id) FROM project_student_task_docs as pstdo WHERE pstdo.project_id = Project.id) as noOfFiles, (SELECT COUNT(id) FROM project_comments  as psc WHERE psc.project_id = Project.id) as noOfComments, Subject.title",
+	 	 	"fields"=>"Project.*, U.profilepic, (SELECT SUM(weight) FROM project_tasks WHERE project_tasks.project_id = Project.id) as completed, (SELECT COUNT(id) FROM project_student_task_docs as pstdo WHERE pstdo.project_id = Project.id) as noOfFiles, (SELECT COUNT(id) FROM project_comments  as psc WHERE psc.project_id = Project.id) as noOfComments, Subject.title",
 	 	 	"order"=>"Project.duedate asc",
 	 	 		"joins"=>array(	 	 		 
 	 	 		array(
