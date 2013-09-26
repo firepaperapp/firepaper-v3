@@ -123,8 +123,8 @@ if(count($data)>0)
 								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
 								$('#form_'+<?php echo $rec['userFile']['id']?>).fileUploadUI({
 									dragDropSupport: true,
-									 uploadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>),
-											downloadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>'),
+									uploadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>),
+									downloadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>),
 											buildUploadRow: function (files, index) {
 												 return $('<tr><td>' + files[index].name + '<\/td>' +
 														'<td class="file_upload_progress"><div><\/div><\/td>' +
