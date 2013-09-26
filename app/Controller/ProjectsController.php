@@ -957,7 +957,7 @@ class ProjectsController  extends AppController{
 	}
 	/**/
 	function createTask($task_id = 0)
-	{
+	{ echo "a";die;
 		$project_id = $this->request->query['p'];
 		if(isset($this->request->data['projectTask']) && count($this->request->data['projectTask'])>0)
 		{
