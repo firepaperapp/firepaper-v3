@@ -97,4 +97,6 @@ padding: 4px 14px;
     height: 71px;
     line-height: 1;
     width: 98%;
+    right: 0px !important;
+    top: 55px !important;
 }
