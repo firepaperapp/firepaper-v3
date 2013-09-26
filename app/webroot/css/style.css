@@ -599,7 +599,6 @@ a.std-btn:hover {
 .edit, .links a.edit { 
 	color:#e06161; 
 	font-weight:normal; 
-	font-size:12px; 
 }
 .edit:hover, .links a.edit:hover { 
 	text-decoration:underline; 
@@ -1641,7 +1640,7 @@ p.contact span {
 }
 
 .files-box a {
-    font-weight: 700;
+    
 }
 
 .files-box img,.project-name img {
@@ -1842,11 +1841,11 @@ div.file-name em {
 }
 
 .file-links {
-    font-size: 14px;
-
+    font-size: 13px;
+    letter-spacing: 1px;
     margin-top: 2px;
     color: #cbcbcb;
-    font-style: normal;
+    font-style: 400;
     margin-left: 36px;
     padding-top: 4px;
     padding-bottom: 5px;
