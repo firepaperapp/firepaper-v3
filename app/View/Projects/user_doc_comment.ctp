@@ -63,7 +63,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 	<h3>Comments</h3>
 	<?php
 	foreach($taskComments as $rec)
-	{?>
+	{ echo "<pre>"; print_r($rec);?>
 	<div  id="delcomment_<?php echo $rec['projComments']['id'];?>">
 	
 	  <div class="<?php echo $box;?>">
