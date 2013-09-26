@@ -1216,10 +1216,10 @@ class FilesController  extends AppController{
 	 	App::import('Vendor', 's3', array('file' => 's3'.DS.'sdk.class.php')); 
 		$buket = MAIN_BUCKET;
 		$obj = new AmazonS3(AMAZON_S3_KEY, AMAZON_S3_SECURITY_KEY);
-		print "<pre>";
-		print_R($obj);
-		print "</pre>";
-		die;
+		//print "<pre>";
+		//print_R($obj);
+		//print "</pre>";
+		//die;
 		if(!is_Array($fileWithPath))
 		{
 			$size = $obj->get_object_filesize($buket, "files/".$fileWithPath);				 
@@ -1300,10 +1300,10 @@ class FilesController  extends AppController{
 							$ex = $res['userFile']['version_of']."/";
 						}
 							$ret = $this->deleteFileFromAmazon($fileWithPath.$this->Session->read("userid")."/".$ex.$res['userFile']['file_name']);
-			 		$reduceSpace+= $ret;
+						$reduceSpace+= $ret;
 					}				
 				 	if($this->request->data['userFile']['delFile']==1 || $this->request->data['userFile']['delFile']==2)
-					{
+					{ echo "a";die;
 						//to delete the revisons
 						//@rrmdir(FILES_PATH."files/".$this->Session->read("userid")."/".$fileId);						
 						$files = $this->userFile->find("all", 
