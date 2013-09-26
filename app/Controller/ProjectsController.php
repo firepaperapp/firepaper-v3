@@ -263,7 +263,7 @@ class ProjectsController  extends AppController{
 			//To get the comments on the project
 			$projComments = $this->projComments->find("all", array(
 			"conditions"=>"projComments.comment_type = 'project' and projComments.project_id = ".$project_id,
-			"fields"=>"projComments.*, User.id, User.firstname, User.lastname",
+			"fields"=>"projComments.*, User.id, User.profilepic, User.firstname, User.lastname",
 	   		"joins"=>array(
 					array("type"=>"inner",
 					"table"=>"users",
