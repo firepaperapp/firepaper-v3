@@ -17,7 +17,85 @@ function showFiles() {
 	loadPiece("<?php echo SITE_HTTP_URL;?>files/getFilesInner/<?php echo $id;?>", "#content_files");
 }
 
+function showUploader() {
+	if ($("#files-upload-form").css("display") == "none") {
+		$("#files-upload-form").css("display", "");
 
+		$("#files-upload-form").css("position", "absolute");
+		$("#files-upload-form").css("width", "100%");
+		
+		function attachCallbacks(uploader) {
+			uploader.bind('BeforeUpload', function(up) {
+				up.settings.multipart_params.category_id = <?php echo (int) $id;?>
+			});
+
+	 		uploader.bind('Error', function(up, err, result) {
+	 			try {
+		 			var data = $.parseJSON(result.response);
+		 			
+		 			if (data.error) {
+			        	alert(data.error);
+			        } else {
+			        	alert(result.response);
+			        }
+		        } catch(e) {
+		        	alert(result.response);
+		        }
+		    });
+		    
+		    uploader.bind('FileUploaded', function(up, file, result) {
+		    	try {
+			    	var data = $.parseJSON(result.response);
+			    	
+			    	if (data.success) {
+			    		// do nothing, see Upload Complete
+			        } else if (data.error) {
+			        	// display the error message
+			        	alert(data.error)
+			        } else {
+			        	alert(result.response);
+			        }
+			    } catch(e) {
+		        	alert(result.response);
+		        }
+		    });
+					    
+		    uploader.bind('UploadComplete', function(up, file) {
+		    	$("#files-upload-form").css("display", "none");
+		    	showFiles();
+		    });
+	 	}
+	 	
+	    $("#uploader").pluploadQueue({
+	        runtimes : 'html5,html4',
+	        url : '<?php echo SITE_HTTP_URL;?>files/uploadFile',
+	        multipart: true,
+	        multipart_params: { 'category_id': <?php echo (int) $id;?> },
+	        file_data_name: 'uploadfile',
+	        init: attachCallbacks
+	    });
+	 	
+	    $("#files-upload-form").submit(function(e) {
+	        var uploader = $("#uploader").pluploadQueue();
+	 		
+	        if (uploader.files.length > 0) {
+	        	uploader.bind('StateChanged', function() {
+	                if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
+	                    $("#files-upload-form").submit();
+	                }
+	            });
+			    
+	            uploader.start();
+	        } else {
+	            alert("You must queue at least one file.");
+	        }
+	 
+	        return false;
+	    });
+	} else {
+		$("#files-upload-form").css("display", "none");
+	}
+}
 </script>
 
 <div class="white page index">
