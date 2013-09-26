@@ -87,9 +87,7 @@ padding: 4px 14px;
   cursor: pointer;
   display:none;
 }
-.project-drop-area-wrapper .file_upload{ position: absolute;
-    right: 0;
-    top: 54px;}
+.project-drop-area-wrapper .file_upload{}
 .project-drop-area-wrapper .file_upload_large {
     background: none repeat scroll 0 0 #98FB98;
     border: 1px solid #32CD32;
