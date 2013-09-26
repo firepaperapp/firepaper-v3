@@ -61,7 +61,7 @@ if(count($data)>0)
 	            		<a href="javascript:void(0);" class="viewDetails edit" id="<?php echo $rec['userFile']['id'];?>" >View options</a>| <a href="<?php echo SITE_HTTP_URL?>files/confirmDeletion/<?php echo $rec['userFile']['id'];?>/" class="edit deleteFile">Delete</a>
 	            	</p>
 	            	<div class="clr"></div>	
-	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" style=" position:  relative;">
+	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" >
 	            		
 			            <div class="versions-inner"> 
 			            	<p>
@@ -73,7 +73,7 @@ if(count($data)>0)
 						     <div class="addcomment comment-file" id="addcomment_<?php echo $rec['userFile']['id'];?>_box" style="display:none;">
 					          	<textarea name="addcommenttext_<?php echo $rec['userFile']['id'];?>" id="addcommenttext_<?php echo $rec['userFile']['id'];?>" rows="5" cols="40" ></textarea>
 					          	<div id="submitComment_<?php echo $rec['userFile']['id'];?>"></div>
-					          	<div class="submit-wrapper">
+					          	<div class="submit-wrapper" style=" position:  relative;">
 						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
 						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
 						          	
