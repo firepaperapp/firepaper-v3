@@ -87,7 +87,7 @@
 <!-- End Details -->
 
 	<div class="project-owner">
-              <?php
+              <?php echo USER_IMAGES_URL.'32X29/'.$prjDetails['User']['profilepic'];
 if(is_file(USER_IMAGES_URL.'32X29/'.$prjDetails['User']['profilepic']) && file_exists(USER_IMAGES_URL.'32X29/'.$prjDetails['User']['profilepic']))
 {
 	$userimage = USER_IMAGES_PATH.'32X29/'.$prjDetails['User']['profilepic'];
