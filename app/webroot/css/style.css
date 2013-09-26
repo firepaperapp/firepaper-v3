@@ -1812,9 +1812,15 @@ p.contact span {
 
 
 #filesDrag180 {margin:0 auto;}
-
-
-
+.btn-container {
+	width: 100%;
+}
+.btn-holder {
+	float: left;
+}
+.files-categories-box {
+	float: left;
+}
 .upload-link {
     text-decoration: none;
     font-weight: 400;
