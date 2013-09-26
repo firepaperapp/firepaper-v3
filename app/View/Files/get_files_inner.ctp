@@ -117,7 +117,7 @@ if(count($data)>0)
 				   			 <div>Upload files</div>
 		               		</form>
 							<div id="validation-container-task<?php echo $rec['userFile']['id']?>" class="validation-signup" style="display:none;"></div>
-							<div id="validation-container-success-task<?php echo $rec['userFile']['id']?>" class="success" style="">File has been uploaded successfully.</div>
+							<div id="validation-container-success-task<?php echo $rec['userFile']['id']?>" class="success" style=" display: none;"></div>
 							<script type="text/javascript">
 								var btnUpload = $('#uploadfile'+<?php echo $rec['userFile']['id']?>);
 								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
