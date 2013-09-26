@@ -1,6 +1,10 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.draggable.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.droppable.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH?>files.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>jquery.fileupload-ui.css" />
+<script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload-ui.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>jquery-ui.min.js"></script>
 <?php
 	if($this->Session->check('Message.flash'))
 	{?>
