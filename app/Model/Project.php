@@ -118,8 +118,8 @@ class Project extends AppModel {
 				array(
 	 	 		"type"=>"inner",
 	 	 		"table"=>"users",
-	 	 		"alias"=>"User",
-	 	 		"conditions"=>"User.id = Project.leader_id"
+	 	 		"alias"=>"U",
+	 	 		"conditions"=>"U.id = Project.leader_id"
 	 	 		) 
 	 	 	),
 	 	 	"limit"=>"10"
