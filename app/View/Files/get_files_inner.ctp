@@ -142,14 +142,14 @@ if(count($data)>0)
 							
 												} else{	 
 														$("#validation-container-task"+<?php echo $rec['userFile']['id']?>).empty().hide();
-														$("#validation-container-success-task"+<?php echo $rec['userFile']['id']?>).empty().html(response.success).show();								
-														//$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
-														//{	 
-														//	$("div#taskUnderDiv").empty().html(data).show('slow');	
-														//	$("#loaderJsTask").hide();
-														//	$(".dropFileHere").fadeOut('slow');
-														//}
-														//);
+														$("#validation-container-success-task"+<?php echo $rec['userFile']['id']?>).empty().html(response.success).show();
+														http://www.firepaperapp.com/dev/files/getSubFiles/451?rand=25?v=1380196461425&cache=false
+														$.get(siteUrl+"files/getSubFiles/"+<?php echo $rec['userFile']['id']?>+"/?v="+Number(new Date())+"&cache=false",function(data)
+														{	 
+															$("div#revisions"+<?php echo $rec['userFile']['id']?>).empty().html(data).show('slow');	
+															$("#loaderJsTask").hide();
+															$(".dropFileHere").fadeOut('slow');
+														});
 												}        
 									}
 								});
