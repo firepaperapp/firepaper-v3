@@ -973,8 +973,8 @@ class ProjectsController  extends AppController{
 				}
 				else 
 				{
-					echo get_class($this->projectTask);die;
-					$this->projectTask->id = -1;
+					
+					//$this->projectTask->id = 1;
 					$this->projectTask->Save($this->request->data['projectTask']); 					 
 					$response['success'] = MSG_TASK_CREATED;
 					$response['id'] = $this->projectTask->getLastInsertId();
