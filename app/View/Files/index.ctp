@@ -71,7 +71,7 @@ function showUploader() {
 	        url : '<?php echo SITE_HTTP_URL;?>files/uploadFile',
 	        multipart: true,
 	        multipart_params: { 'category_id': <?php echo (int) $id;?> },
-	        file_data_name: 'uploadfile',
+	        //file_data_name: 'uploadfile',
 	        init: attachCallbacks
 	    });
 	 	
