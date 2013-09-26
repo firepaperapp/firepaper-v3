@@ -733,7 +733,7 @@ class FilesController  extends AppController{
 	}
         
         function uploadFile($fileId="")
-	{ echo $fileId;die;
+	{ 
 		 //echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
 	    $msg = "";
