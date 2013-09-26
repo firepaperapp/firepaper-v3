@@ -173,7 +173,30 @@ $(function()
 	 
 	$(".dragFileForProject").draggable({helper:"clone" });
 	 
-   	 
+   	$(".upload-link .uploadfilterfile").live("click", function(){
+		fileId = $(this).attr('id');
+		file = fileId.split("_");
+		formId = 'form_'+file[1];
+		
+		$.ajax({
+			type: "POST",
+			dataType: "json",
+			url: $("#"+formId).attr('action'),
+			data: $("#"+formId).serialize(),
+			complete: function(data){
+				alert()
+			},
+			success: function(data){
+				var json = $.parseJSON(data); // create an object with the key of the array
+				alert(json.toSource()); // where html is the key of array that you want, $response['html'] = "<a>something..</a>";
+			},
+			     error: function(data){
+				var json = $.parseJSON(data);
+				alert(json.error);
+			}
+		});
+		
+	}) 
     
 });
 function updateCategoryEdit(data)
