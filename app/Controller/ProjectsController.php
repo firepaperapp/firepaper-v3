@@ -957,37 +957,36 @@ class ProjectsController  extends AppController{
 	}
 	/**/
 	function createTask($task_id = 0)
-	{ 
+	{
 		$project_id = $this->request->query['p'];
 		if(isset($this->request->data['projectTask']) && count($this->request->data['projectTask'])>0)
-		{echo "upperif";
+		{
 			$this->request->data['projectTask']['project_id'] = $project_id;
 			if(!isNull($this->request->data['projectTask']['title']))
-			{echo "titelnull";
+			{
 				if(isset($this->request->data['projectTask']['id']) && $this->request->data['projectTask']['id']!=0)	
-				{ echo "edit";					
+				{ 					
 					$this->projectTask->id = $this->request->data['projectTask']['id'];
 					$this->projectTask->Save($this->request->data['projectTask']); 					 
 				 	$response['success'] = MSG_TASK_UPDATED;
 				 	$response['id'] = $this->request->data['projectTask']['id'];
 				}
 				else 
-				{echo "newtask";
-					$this->projectTask->id = 1;
-					echo _get_class($this->projectTask);die;
+				{
+					$this->projectTask->id = -1;
 					$this->projectTask->Save($this->request->data['projectTask']); 					 
 					$response['success'] = MSG_TASK_CREATED;
 					$response['id'] = $this->projectTask->getLastInsertId();
 		 		} 
 		 		if(!isNull($this->request->data['projComments']['comment']))
-		 		{echo "comment";die;
+		 		{
 		 			$Data['projComments']['posted_by'] = $this->Session->read("userid");
 		 			$Data['projComments']['project_id'] = $project_id;
 		 			$Data['projComments']['task_id'] = $response['id'];
 		 			$Data['projComments']['comment'] = $this->request->data['projComments']['comment'];
   	 				$Data['projComments']['comment_type'] = "task";
   	 				$this->projComments->Save($Data);	 				
-		 		}die;
+		 		}
 		 		$this->set("project_id", $project_id);
 				$this->set("task_id", $response['id']); 
 		 		
