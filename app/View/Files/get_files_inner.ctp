@@ -116,11 +116,42 @@ if(count($data)>0)
 				    		 <!--<a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>-->
 				   			 <div>Upload files</div>
 		               		</form>
+							<div id="validation-container-task<?php echo $rec['userFile']['id']?>" class="validation-signup" style="display:none;"></div>
+							<div id="validation-container-success-task<?php echo $rec['userFile']['id']?>" class="success" style="">File has been uploaded successfully.</div>
 							<script type="text/javascript">
 								var btnUpload = $('#uploadfile'+<?php echo $rec['userFile']['id']?>);
 								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
 								$('#form_'+<?php echo $rec['userFile']['id']?>).fileUploadUI({
 									dragDropSupport: true,
+									 uploadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>),
+											downloadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>'),
+											buildUploadRow: function (files, index) {
+												 return $('<tr><td>' + files[index].name + '<\/td>' +
+														'<td class="file_upload_progress"><div><\/div><\/td>' +
+														'<td class="file_upload_cancel">' +
+														'<button class="ui-state-default ui-corner-all" title="Cancel">' +
+														'<span class="ui-icon ui-icon-cancel">Cancel<\/span>' +
+														'<\/button><\/td><\/tr>');
+											},
+											buildDownloadRow: function (response) {
+												//Add uploaded file to list
+														if("undefined" == typeof(response.success))
+														{
+															$("#validation-container-task"+<?php echo $rec['userFile']['id']?>).empty().html("<p class='error'>"+response.error+"</p>").show();
+															$("#validation-container-success-task"+<?php echo $rec['userFile']['id']?>).empty().hide();
+									
+														} else{	 
+																$("#validation-container-task"+<?php echo $rec['userFile']['id']?>).empty().hide();
+																$("#validation-container-success-task"+<?php echo $rec['userFile']['id']?>).empty().html(response.success).show();								
+																//$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
+																//{	 
+																//	$("div#taskUnderDiv").empty().html(data).show('slow');	
+																//	$("#loaderJsTask").hide();
+																//	$(".dropFileHere").fadeOut('slow');
+																//}
+																);
+														}        
+											}
 								});
 							</script>
                				 <?php } ?>
