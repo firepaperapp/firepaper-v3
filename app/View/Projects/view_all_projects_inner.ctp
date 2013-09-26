@@ -99,7 +99,7 @@ else
 ?>
 	<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 			<p class="title">Project leader:
-			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
+			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
 				</p>
 	</div><!-- end project-bar-wrapper -->	
 </div>
