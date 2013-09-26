@@ -582,7 +582,7 @@ class ProjectsController  extends AppController{
    		
 		$data = $this->projComments->find('all', array(
    		"conditions"=> "projComments.task_id = $taskId ".$ex,
-   		"fields"=>"projComments.*, User.firstname, User.lastname",
+   		"fields"=>"projComments.*, User.profilepic, User.firstname, User.lastname",
    		"joins"=>array(
 				array("type"=>"inner",
 				"table"=>"users",
