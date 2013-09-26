@@ -18,6 +18,8 @@ function showFiles() {
 }
 
 
+</script>
+
 <div class="white page index">
 			<input type="button" value="Upload Files" class="button" onclick="showUploader()">
 			
