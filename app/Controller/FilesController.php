@@ -1303,7 +1303,7 @@ class FilesController  extends AppController{
 						$reduceSpace+= $ret;
 					}				
 				 	if($this->request->data['userFile']['delFile']==1 || $this->request->data['userFile']['delFile']==2)
-					{ echo "a";die;
+					{ 
 						//to delete the revisons
 						//@rrmdir(FILES_PATH."files/".$this->Session->read("userid")."/".$fileId);						
 						$files = $this->userFile->find("all", 
