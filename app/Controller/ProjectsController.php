@@ -1245,6 +1245,7 @@ class ProjectsController  extends AppController{
 					        $result = $this->Email->sendEmail();
 	 					}	 
 	 				}
+					echo "<pre>"; print_r($prjDetail);
 					echo $insertQuery."<br>";
 	 				$insertQuery = substr($insertQuery, 0, -1);
 					echo $insertQuery;die;
