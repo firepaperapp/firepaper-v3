@@ -74,7 +74,7 @@
 				<form name="createTaskDoc" id="createTaskDoc" action="" method="post">
 				    <div class="version-documents">
 					    <div class="weight-col">
-						      Add your weight &rarr;      
+						      <span>Add your weight &rarr;</span>      
 						      <?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 					     
 					    </div>
 				        <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>

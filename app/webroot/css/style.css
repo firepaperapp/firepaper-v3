@@ -3235,6 +3235,11 @@ ul#archived-list .month {
 	letter-spacing: 0px; 
 	text-align: center;
 }
+.weight-col span {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+}
 .weight-col .weight { 
 	color:white; 
 	background:#7CC2C2; 
