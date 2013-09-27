@@ -118,7 +118,7 @@ class DashboardController  extends AppController{
 		$data = $this->activityLog->find("all",
 						 array(
 							"conditions"=>"activityLog.user_ids LIKE '%,".$userId.",%'",
-							"fields"=>"Project.*, User.profilepic",
+							"fields"=>"activityLog.*, User.profilepic",
 							"order"=>"activityLog.created DESC",
 							"joins"=>array(	 	 		 
 									array(
