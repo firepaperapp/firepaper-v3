@@ -9,9 +9,9 @@ $(document).ready(function(){
 <div class="project-brief-box-wrapper createdTasksCl">
        <div class="project-drop-area-wrapper">
        		<div class="weight-col" style="width:50px;">
-       		<span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>
+       		<span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?>%</span>
        		
-       		%</div>
+       		</div>
           	<p><?php //pa($rec['projectTask']);
   			if(!isNull($rec['projectTask']['refer_file_id']))
   			{?>
