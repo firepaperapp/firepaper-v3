@@ -4,16 +4,9 @@
     {
     	foreach($data as $rec)	
     	{
+	    echo "<pre>"; print_r($rec);
     		if($rec['activityLog']['activity_text']!='')
     		{
-		    if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
-		    {
-			    $userimage = USER_IMAGES_PATH.'100X100/'.$rec['User']['profilepic'];
-		    }
-		    else
-		    {
-			    $userimage = IMAGES_PATH.'profile-pic.png';
-		    }
   			echo "<li>".$rec['activityLog']['activity_text']." <span>- ".$this->Time->timeAgoInWords(strtotime($rec['activityLog']['created']))."</span></li>";;  		
     		}
     	}        	
