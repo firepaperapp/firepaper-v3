@@ -677,6 +677,7 @@ class ProjectsController  extends AppController{
 		{
 			$CreateProject['Project']['is_complete'] = 0;
 			$this->Project->save($CreateProject);
+			$project_id = $this->Project->id;
 		}
 	 	if(!in_array($this->Session->read('user_type'), array(1,2,3,7)))
 		{
