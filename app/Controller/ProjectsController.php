@@ -1158,7 +1158,7 @@ class ProjectsController  extends AppController{
 			$this->Project->id = $project_id;
 			//echo "<pre>"; print_r($gotUsers);die;
 			$this->Project->Save($gotUsers);			
-			echo $this->Project->id;
+			$project_id = $this->Project->id;;
 			if(isset($this->request->data['projComments']['comment_project']) && $this->request->data['projComments']['comment_project']!='')
 			{
 				$Data = array();
