@@ -1139,7 +1139,7 @@ class ProjectsController  extends AppController{
  	 * Otherwise it will just save selected groups in the db
  	 */ 
  	function saveOrSendProject($project_id, $saveOrSend)
- 	{ echo "a";die;
+ 	{ echo "<pre>"; print_r($this->request);die;
  		$returnArr = array();
  		$pasedData = array();
  		 
