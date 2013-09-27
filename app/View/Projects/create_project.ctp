@@ -197,7 +197,7 @@ $(document).ready(function(){
 		   			<?php echo $this->Form->input('projectTask.title',array('div'=>false,'label'=>false,"id"=>"taskTitle",'maxlength'=>'150','class'=>'task-input'));?> 
 		   			
 		     		<div class="weight-col">
-		     		<p>Add your weight &rarr;</p>
+		     		<span>Add your weight &rarr;</span>
 		    			 
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
 		    			
