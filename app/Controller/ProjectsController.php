@@ -1245,10 +1245,10 @@ class ProjectsController  extends AppController{
 					        $result = $this->Email->sendEmail();
 	 					}	 
 	 				}
-					echo "<pre>"; print_r($prjDetail);
-					echo $insertQuery."<br>";
+					//echo "<pre>"; print_r($prjDetail);
+					//echo $insertQuery."<br>";
 	 				$insertQuery = substr($insertQuery, 0, -1);
-					echo $insertQuery;die;
+					//echo $insertQuery;die;
 	 				$this->Project->query($insertQuery);
 	 				//We will trigger an activity to the selectd users	
 	 				
