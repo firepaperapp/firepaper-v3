@@ -99,7 +99,7 @@
 					  <div class="weight" style="background-color:red;"><?php echo $rec['projectStudentTaskMark']['marks'];?>%</div>
 					</div>
 				<?php } ?>
-		         	 <div class="weight-col"><?php echo $rec['prjTask']['weight'];?>%</div>
+		         	 <div class="col-weight"><?php echo $rec['prjTask']['weight'];?>%</div>
 		         	 
 		 		      <?php
 				      if($rec['prjTask']['refer_file_id'] == 0)

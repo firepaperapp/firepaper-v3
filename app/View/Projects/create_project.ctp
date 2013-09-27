@@ -244,7 +244,7 @@ $(document).ready(function(){
 					  			}	
 								else
 								{?>
-									<p class="task-title"><?php echo $rec['projectTask']['title'];?>
+									<p class="file-name"><?php echo $rec['projectTask']['title'];?>
 								<?php
 								}
 								?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
