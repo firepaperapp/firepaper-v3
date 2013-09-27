@@ -1157,7 +1157,7 @@ class ProjectsController  extends AppController{
 			$gotUsers['published'] = $saveOrSend;
 			$this->Project->id = $project_id;
 			$this->Project->Save($gotUsers);			
- 
+			echo "a";die;
 			if(isset($this->request->data['projComments']['comment_project']) && $this->request->data['projComments']['comment_project']!='')
 			{
 				$Data = array();
