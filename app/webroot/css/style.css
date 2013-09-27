@@ -3117,6 +3117,7 @@ ul#archived-list .month {
     position: absolute;
     top: 10px;
     right: 0;
+    width: 218px;
     float: right;
     color: #a9abae;
     font-size: 30px;
@@ -3239,6 +3240,8 @@ ul#archived-list .month {
 	font-size: 14px;
 	font-style: italic;
 	font-weight: normal;
+	display: inline-block;
+	color: #fca55f;
 }
 .weight-col .weight { 
 	color:white; 
@@ -3619,7 +3622,10 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 .success {
     border: 1px solid #A5D3A5;
     background: #E2FCE3;
-    padding: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     color: #485946;
 }
 
