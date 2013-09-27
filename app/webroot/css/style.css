@@ -3226,13 +3226,7 @@ ul#archived-list .month {
 	clear:both; 
 	margin-bottom:10px; 
 }
-.col-weight { 
-	color: #d3d3d3; 
-	float: right;
-	width: 200px;
-	font-size: 16px; 
-	font-style:italic;  
-}
+
 .col-weight p {
 	color: #AAA9A9; 
 	float: left;
