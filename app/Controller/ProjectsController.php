@@ -1158,7 +1158,7 @@ class ProjectsController  extends AppController{
 			$this->Project->id = $project_id;
 			//echo "<pre>"; print_r($gotUsers);die;
 			$this->Project->Save($gotUsers);			
-			die;
+			
 			if(isset($this->request->data['projComments']['comment_project']) && $this->request->data['projComments']['comment_project']!='')
 			{
 				$Data = array();
@@ -1241,6 +1241,7 @@ class ProjectsController  extends AppController{
 							
 					        $this->Email->text_body = $sMessage;
 					        $this->Email->subject = SITE_NAME.' - '.$subject;
+						echo "<pre>"; print_r($this->Email);die;
 					        $result = $this->Email->sendEmail();
 	 					}	 
 	 				}
