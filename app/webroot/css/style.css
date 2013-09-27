@@ -1723,7 +1723,7 @@ p.contact span {
 	text-decoration:underline; 
 }
 .version-documents .file-name {
-	width: 100%;
+	
 }
 .version-documents .file-name img {
 	margin-right:14px;
@@ -2736,7 +2736,7 @@ textarea#projectDesc {
 
 .weight-input {
     float: right;
-    width: 22%;
+    width: 25%;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -3619,9 +3619,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 .success {
     border: 1px solid #A5D3A5;
     background: #E2FCE3;
-    width: 91%;
     padding: 10px;
-    margin: 20px 20px 0;
     color: #485946;
 }
 
