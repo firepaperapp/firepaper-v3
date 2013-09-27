@@ -52,9 +52,9 @@
                    
 		       	<div class="top">
 			<?php
-					if(is_file(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']))
+					if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']))
 					{
-						$userimage = USER_IMAGES_PATH.'32X29/'.$prjDetails['User']['profilepic'];
+						$userimage = USER_IMAGES_PATH.'100X100/'.$prjDetails['User']['profilepic'];
 					}
 					else
 					{
