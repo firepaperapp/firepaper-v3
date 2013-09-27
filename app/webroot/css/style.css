@@ -1189,7 +1189,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 
 .deadline-details {
-	margin-top: 88px;
+	margin-top: 65px;
 	margin-left: 10px;
 	width: 40%;
 	
@@ -1235,6 +1235,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	margin-top: 10px;
 	color: #cbcbcb;
 	float: left;
+	margin-left: 5px;
 }
 .deadline-details .due-in .title {
 	font-weight: normal;
