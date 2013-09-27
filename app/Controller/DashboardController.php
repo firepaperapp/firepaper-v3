@@ -117,19 +117,10 @@ class DashboardController  extends AppController{
 		//To get the latest activities from the last login
 		$data = $this->activityLog->find("all",
 						 array(
-							"conditions"=>"activityLog.user_ids LIKE '%,".$userId.",%'",
-							"fields"=>"activityLog.*, User.profilepic",
-							"order"=>"activityLog.created DESC",
-							"joins"=>array(	 	 		 
-									array(
-									"type"=>"inner",
-									"table"=>"users",
-									"alias"=>"User",
-									"conditions"=>"User.id = activityLog.user_ids"
-									)
-								      ),
-							"limit"=>10
-						)
+					"conditions"=>"activityLog.user_ids LIKE '%,".$userId.",%'",
+					"order"=>"activityLog.created DESC",
+					"limit"=>10
+			)
 		); 
 		$this->set("data", $data);
 		$this->render("list_activity", "ajax");
