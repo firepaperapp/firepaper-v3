@@ -5,7 +5,7 @@
  * @see http://bakery.cakephp.org/articles/view/94
  */
 
-class EmailComponent
+class EmailComponent extends Component
 {
   /**
    * Send email using SMTP Auth by default.
