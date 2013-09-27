@@ -83,7 +83,7 @@ foreach($tasks as $rec)
 	  	echo Sanitize::html($rec['prjTask']['title']);
 	  }
       ?></div>
-      <div class="col-weight"><?php echo $rec['prjTask']['weight'];?>%</div>
+      <div class="weight-col"><?php echo $rec['prjTask']['weight'];?>%</div>
       <?php
       if($rec['prjTask']['refer_file_id'] == 0)
       {
