@@ -46,20 +46,23 @@
 			}
 			else {
 				
-			}?>
+			}
+			?>
 			 <div class="msg-container">
-                             
-		       	<div class="top"> <?php
-if(is_file(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']))
-{
-	$userimage = USER_IMAGES_PATH.'32X29/'.$prjDetails['User']['profilepic'];
-}
-else
-{
-	$userimage = IMAGES_PATH.'profile-pic.png';
-}
-?>
+                   
+		       	<div class="top">
+			<?php
+					if(is_file(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']))
+					{
+						$userimage = USER_IMAGES_PATH.'32X29/'.$prjDetails['User']['profilepic'];
+					}
+					else
+					{
+						$userimage = IMAGES_PATH.'profile-pic.png';
+					}
+				?>
                             <img src="<?php echo $userimage;?>" height="29" width="32" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL.$rec['User']['id']."/".$rec['User']['username'];?>">
+
 		       	<?php
 		       	$st = ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));
 				if(strlen($st)>15)
