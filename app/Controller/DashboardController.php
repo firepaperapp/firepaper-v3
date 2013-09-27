@@ -71,7 +71,7 @@ class DashboardController  extends AppController{
 	 * @returns NULL
 	 */
 
-	function index(){ echo "a";die;
+	function index(){ 
 		
 		//echo "i am here in Index - dashboard"; exit;
 		//print "<pre />";
