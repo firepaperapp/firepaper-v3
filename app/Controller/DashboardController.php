@@ -71,7 +71,33 @@ class DashboardController  extends AppController{
 	 * @returns NULL
 	 */
 
-	
+	function index(){ echo "a";die;
+		
+		//echo "i am here in Index - dashboard"; exit;
+		//print "<pre />";
+//print_r($_SESSION);
+//print "</pre>";
+//die;
+               
+                
+		$this->set('announce_view','');
+		if($this->Session->read("user_type")==1 || $this->Session->read("user_type")==2 ||$this->Session->read("user_type")==3 || $this->Session->read("user_type")==7)
+		{
+			$this->set('announce_view','admin');
+		}
+
+		if($this->Session->read("user_type")==4 || $this->Session->read("user_type")==5)
+		{
+			$this->set('announce_view','student');
+		}
+		$userId =  $this->Session->read('userid');
+	 	$deptList = $this->Department->find("list", array(
+		"conditions"=>"Department.admin_id = ".$userId,
+		"fields"=>"Department.id, Department.title"
+		)); 
+		$this->set("deptList", $deptList);
+	}
+
 	function adminLatestActivity($userId="")
 	{		 
 		$userId = !isNull($userId)?$userId:$this->Session->read('userid');
