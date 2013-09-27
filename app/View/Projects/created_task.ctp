@@ -8,7 +8,7 @@ $(document).ready(function(){
 <div id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 <div class="project-brief-box-wrapper createdTasksCl">
        <div class="project-drop-area-wrapper">
-       		<div class="col-weight" style="width:50px;">
+       		<div class="weight-col" style="width:50px;">
        		<span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>
        		
        		%</div>

@@ -111,7 +111,7 @@ function addComment(f)
 	          <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>
 	          <div class="file-name"><?php echo Sanitize::html($rec['prjTask']['title']);?></div>
 	          <div class="comment-box"> <a class="btn"><?php echo $rec[0]['cnt_comment']>0?$rec[0]['cnt_comment']:0;?> Comments</a></div>
-	          <div class="col-weight"><?php echo $rec['prjTask']['weight'];?>%</div>
+	          <div class="weight-col"><?php echo $rec['prjTask']['weight'];?>%</div>
 	          
         </div>
         <div id="task_<?php echo $rec['prjTask']['id'];?>_box" class="file-details">      		 		

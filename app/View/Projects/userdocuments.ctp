@@ -61,7 +61,7 @@ if(count($taskDocs)>0)
 		<?php
 	  	if($rec['prjTaskUserDoc']['marks']>0)
 	  	{?>
-			<div class="col-weight">
+			<div class="weight-col">
 			  <div class="weight"><?php echo $rec['prjTaskUserDoc']['marks'];?>%</div>
 			</div>
 		<?php } ?>

@@ -3231,11 +3231,11 @@ ul#archived-list .month {
 	color: #AAA9A9; 
 	float: left;
 }
-.col-weight a {
+.weight-col a {
 	letter-spacing: 0px; 
 	text-align: center;
 }
-.col-weight .weight { 
+.weight-col .weight { 
 	color:white; 
 	background:#7CC2C2; 
 	font-size:11px; 

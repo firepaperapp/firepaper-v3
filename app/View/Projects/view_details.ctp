@@ -95,11 +95,11 @@
 					<?php
 				  	if(isset($rec['projectStudentTaskMark']['marks']) && $rec['projectStudentTaskMark']['marks']>0)
 				  	{?>
-					<div class="col-weight">
+					<div class="weight-col">
 					  <div class="weight" style="background-color:red;"><?php echo $rec['projectStudentTaskMark']['marks'];?>%</div>
 					</div>
 				<?php } ?>
-		         	 <div class="col-weight"><?php echo $rec['prjTask']['weight'];?>%</div>
+		         	 <div class="weight-col"><?php echo $rec['prjTask']['weight'];?>%</div>
 		         	 
 		 		      <?php
 				      if($rec['prjTask']['refer_file_id'] == 0)

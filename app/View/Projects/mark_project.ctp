@@ -176,7 +176,7 @@ function addComment(f,t)
 		{?>
 			<div class="project-brief-box-wrapper">
 			<div class="project-drop-area-wrapper">
-				<div class="col-weight">	
+				<div class="weight-col">	
 				Weight: <?php echo $rec['projectTask']['weight'];?>%
 				<input type="hidden" id="task_<?php echo $rec['projectTask']['id'];?>_ttlweight" name="task_<?php echo $rec['projectTask']['id'];?>_ttlweight" value="<?php echo $rec['projectTask']['weight'];?>" />
 				<?php
