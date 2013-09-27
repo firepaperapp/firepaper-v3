@@ -97,7 +97,7 @@
 <?php echo $this->requestAction("/users/currentComments");?>   
 <?php 
 if($usertype!=6)
-echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
+//echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
    </div><!-- end left --> 
  	</div><!-- end right -->
 
