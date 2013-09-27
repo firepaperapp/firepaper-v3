@@ -4,7 +4,7 @@
     {
     	foreach($data as $rec)	
     	{
-	    echo "<pre>"; print_r($rec);
+	    //echo "<pre>"; print_r($rec);
     		if($rec['activityLog']['activity_text']!='')
     		{
   			echo "<li>".$rec['activityLog']['activity_text']." <span>- ".$this->Time->timeAgoInWords(strtotime($rec['activityLog']['created']))."</span></li>";;  		
