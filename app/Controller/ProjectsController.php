@@ -1139,15 +1139,15 @@ class ProjectsController  extends AppController{
  	 * Otherwise it will just save selected groups in the db
  	 */ 
  	function saveOrSendProject($project_id, $saveOrSend)
- 	{ echo "<pre>"; print_r($this->request);die;
+ 	{ 
  		$returnArr = array();
  		$pasedData = array();
  		 
-		if( (isset($this->request->params['form']['usersGroups']) && count($this->request->params['form']['usersGroups'])>0) || (isset($this->request->params['form']['otherUsers']) && count($this->request->params['form']['otherUsers'])>0))
+		if( (isset($this->request->data['usersGroups']) && count($this->request->data['usersGroups'])>0) || (isset($this->request->data['otherUsers']) && count($this->request->data['otherUsers'])>0))
 		{
-			$groupsSelected = isset($this->request->params['form']['usersGroups'])?$this->request->params['form']['usersGroups']:array();
-			$usersSelected = isset($this->request->params['form']['otherUsers'])?$this->request->params['form']['otherUsers']:array();
-			$whiteboardsSelected = isset($this->request->params['form']['whiteboards'])?$this->request->params['form']['whiteboards']:array();
+			$groupsSelected = isset($this->request->data['usersGroups'])?$this->request->data['usersGroups']:array();
+			$usersSelected = isset($this->request->data['otherUsers'])?$this->request->data['otherUsers']:array();
+			$whiteboardsSelected = isset($this->request->data['whiteboards'])?$this->request->data['whiteboards']:array();
 			
 			$gotUsers['groups'] = implode(",",array_unique($groupsSelected));
 			$gotUsers['otherUsers'] = implode(",",array_unique($usersSelected));
