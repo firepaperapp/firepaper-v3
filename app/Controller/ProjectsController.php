@@ -672,7 +672,13 @@ class ProjectsController  extends AppController{
 	 * By Admin, Educator, Department Leader OR Indiviual Educator
 	 */
 	function addEditProject($project_id=0)
-	{ 
+	{
+		if($project_id == 0)
+		{
+			$CreateProject['Project']['is_complete'] = 0;
+			$this->Project->save($CreateProject);
+			echo $this->Project->id;die;
+		}
 	 	if(!in_array($this->Session->read('user_type'), array(1,2,3,7)))
 		{
 			
