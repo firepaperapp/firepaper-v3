@@ -1711,7 +1711,6 @@ p.contact span {
 	font-weight: bold; 
 	color:#686b6c;
 	padding-bottom: 2px;
-	margin-bottom: 4px;
 	display: inline-block;
 	margin-right:4px; 
 	
@@ -1858,7 +1857,6 @@ div.file-name em {
 .file-links {
     font-size: 13px;
     letter-spacing: 1px;
-    margin-top: 2px;
     color: #cbcbcb;
     font-style: 400;
     margin-left: 36px;
