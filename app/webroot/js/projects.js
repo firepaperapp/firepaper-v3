@@ -288,7 +288,7 @@ function createTaskHtml(gotFormObj, taskId)
 	var text = $("#"+gotFormObj+" :input[name='data[projComments][comment]']").val();
 	 
 	
-	var st = '<div  id="createdTasksCl_'+taskId+'"><div class="project-brief-box-wrapper createdTasksCl"><div class="project-drop-area-wrapper"><div class="col-weight">'+weight+'%</div><p>';
+	var st = '<div  id="createdTasksCl_'+taskId+'"><div class="project-brief-box-wrapper createdTasksCl"><div class="project-drop-area-wrapper"><div class="weight-col">'+weight+'%</div><p>';
 	
 	if($("#"+gotFormObj+" input[name='data[projectTask][refer_file_id]']").length!=0)
 	{
