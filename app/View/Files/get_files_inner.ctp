@@ -162,6 +162,7 @@ if(count($data)>0)
 						</div>	            	
 	            	</div>
 				</div> 
+				<div class="rule"></div>
 				<?php
 				}
 				}
