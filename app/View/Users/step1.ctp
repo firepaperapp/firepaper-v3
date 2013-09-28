@@ -68,6 +68,6 @@ if(isset($errMsg))
      <div class="clr"></div>
      <input type="hidden" name="data[User][user_type_id]" value="<?php echo $user_type?>">
       <input type="hidden" name="data[User][trial]" value="<?php echo $trialpack?>">
-     <input name="" type="submit" value="Create Account!" class="create-account"/>
+     <input name="" type="submit" value="Create Account!" class="submit"/>
 </div>
 </form>

@@ -83,6 +83,6 @@ if(isset($errMsg))
   
      </div>
       <div class="clr"></div>
-      <input name="" type="submit" value="Subscribe" class="create-account"/>
+      <input name="" type="submit" value="Subscribe" class="submit"/>
 </div>
 </form>
