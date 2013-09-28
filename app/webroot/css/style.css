@@ -403,13 +403,6 @@ select {
 	bottom: 0;
 	left: 0;
 }
-#Project {
-	
-}
-#docAndTask {
-	margin: 0;
-	width: 90%;
-}
 .add-people {
 	width: 100%;
 	clear: both;
@@ -1047,7 +1040,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     color: #999;
     font-size: 11px;
 }
-#createProject {
+#createProject, #docAndTask {
 	max-width: 1090px;
 }
 .project-bar-wrapper {
