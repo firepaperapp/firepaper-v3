@@ -141,8 +141,9 @@ $(document).ready(function(){
      		$d = "display:block;";
      	}
      ?>
-     <div class="line"></div>
+     
  	<div id="docAndTask" style="<?php //echo $d;?>">
+ 	<div class="line"></div>
  		
 		
 	        <div class="left">
