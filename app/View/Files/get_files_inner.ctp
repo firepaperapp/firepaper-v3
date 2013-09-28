@@ -64,7 +64,20 @@ if(count($data)>0)
 	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" style=" position:  relative;">
 	            		
 			            <div class="versions-inner"> 
-			            	<div class="clr"></div>
+			            	<p>
+								<span class="title">Comments:</span> 
+								<a href="javascript:void(0);" class="edit commentboxlink" id="<?php echo $rec['userFile']['id'];?>">List Comments</a> - <a href="javascript:void(0);" class="edit addcommentlink" id="addcomment_<?php echo $rec['userFile']['id'];?>">Add New Comment</a>
+						    </p>
+						     <div class="comment-link fl-left"><span>Comment</span></div>
+							 <div class="clr"></div>
+						     <div class="addcomment comment-file" id="addcomment_<?php echo $rec['userFile']['id'];?>_box" style="display:none;">
+					          	<textarea name="addcommenttext_<?php echo $rec['userFile']['id'];?>" id="addcommenttext_<?php echo $rec['userFile']['id'];?>" rows="5" cols="40" ></textarea>
+					          	<div id="submitComment_<?php echo $rec['userFile']['id'];?>"></div>
+					          	<div class="submit-wrapper">
+						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
+						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
+						          	
+						         </div><div class="clr"></div>
 				             </div>    
 							<div class="marginB10" id="comment_<?php echo $rec['userFile']['id'];?>" style="width:250px;display:none;">
 						    
