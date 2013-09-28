@@ -83,7 +83,33 @@ if(count($data)>0)
 						    
 						    </div> 	
 			            
-			             <table id="uploadRevison_<?php echo $rec['userFile']['id'];?>"></table>
+			             
+		                	<p class="width100per">
+								<span class="title">Filter:</span><br />
+								<label id="addcategory_<?php echo $rec['userFile']['id'];?>_box_span"><?php echo $title;?></label><br />
+								<b id= "category_<?php echo $rec['userFile']['id'];?>" class="edit editcategory" style="display: inline">Edit</b>&nbsp;or&nbsp;
+								<a href="javascript:void(0);" class="edit addcategorylink" id="addcategory_<?php echo $rec['userFile']['id'];?>">Create a filter</a>
+								
+							</p>
+							<div id="addcategory_<?php echo $rec['userFile']['id'];?>_box" class="addcategory width100per" style="display:none;">   
+                
+                			</div>  
+	                 	    <!--<p class="width100per">
+		                	    <span class="title">Tags:</span>  
+		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
+		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
+	              	  	   </p>-->
+	              	  	  
+	              	  	   	<div class="dotted-spacer"></div>
+	              	  	   	<?php
+					 		if($this->Session->read("user_type") == 5 && $this->Session->read("admin_id")!=0)
+					 		{
+					 			
+					 		}
+						 	else 
+						 	{	
+						 	?>
+	              	  	   	<table id="uploadRevison_<?php echo $rec['userFile']['id'];?>"></table>
 			           	   	<form id="form_<?php echo $rec['userFile']['id'];?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/<?php echo $rec['userFile']['id'];?>?category_id=<?php echo $recCategory['fileCategory']['id']?>" method="POST" enctype="multipart/form-data" class="upload-link">	
 		                	 <input type="file" id="uploadfile<?php echo $rec['userFile']['id']?>" name="data[userFile][uploadfile]" />
 							 <input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
@@ -133,32 +159,6 @@ if(count($data)>0)
 			                
 			                </div>
 							<div class="clr"></div>
-		                	<p class="width100per">
-								<span class="title">Filter:</span><br />
-								<label id="addcategory_<?php echo $rec['userFile']['id'];?>_box_span"><?php echo $title;?></label><br />
-								<b id= "category_<?php echo $rec['userFile']['id'];?>" class="edit editcategory" style="display: inline">Edit</b>&nbsp;or&nbsp;
-								<a href="javascript:void(0);" class="edit addcategorylink" id="addcategory_<?php echo $rec['userFile']['id'];?>">Create a filter</a>
-								
-							</p>
-							<div id="addcategory_<?php echo $rec['userFile']['id'];?>_box" class="addcategory width100per" style="display:none;">   
-                
-                			</div>  
-	                 	    <!--<p class="width100per">
-		                	    <span class="title">Tags:</span>  
-		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
-		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
-	              	  	   </p>-->
-	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
-	              	  	   	<div class="dotted-spacer"></div>
-	              	  	   	<?php
-					 		if($this->Session->read("user_type") == 5 && $this->Session->read("admin_id")!=0)
-					 		{
-					 			
-					 		}
-						 	else 
-						 	{	
-						 	?>
-	              	  	   	
 						</div>	            	
 	            	</div>
 				</div> 
