@@ -155,7 +155,7 @@ if(count($data)>0)
 								});
 							</script>
                				 <?php } ?>
-							<div id="revisions<?php echo $rec['userFile']['id'];?>">
+							<div id="revisions<?php echo $rec['userFile']['id'];?>" class="clr">
 			                
 			                </div>
 							<div class="clr"></div>
