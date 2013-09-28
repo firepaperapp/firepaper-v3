@@ -40,11 +40,7 @@ $(document).ready(function(){
 		
 });
 </script>
-<style>
-    #duedate{
-        width: 100%
-    }
-</style>				
+				
 	<h1>
 	<?php
  	if($project_id!=0)
