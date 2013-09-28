@@ -58,7 +58,7 @@ if(count($data)>0)
 	            	<p class="file-links">
 	            		<span> <?php 
 						echo date("m/d/y", strtotime($rec['userFile']['uploaded']))." at ".date("h:i:a", strtotime($rec['userFile']['uploaded']));?></span> - 
-	            		<a href="javascript:void(0);" class="viewDetails edit" id="<?php echo $rec['userFile']['id'];?>" >View options</a>| <a href="<?php echo SITE_HTTP_URL?>files/confirmDeletion/<?php echo $rec['userFile']['id'];?>/" class="edit deleteFile">Delete</a>
+	            		<a href="javascript:void(0);" class="viewDetails edit" id="<?php echo $rec['userFile']['id'];?>" >View options</a> | <a href="<?php echo SITE_HTTP_URL?>files/confirmDeletion/<?php echo $rec['userFile']['id'];?>/" class="edit deleteFile">Delete</a>
 	            	</p>
 	            	<div class="clr"></div>	
 	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" style=" position:  relative;">
