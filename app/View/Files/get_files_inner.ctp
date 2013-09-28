@@ -158,7 +158,7 @@ if(count($data)>0)
 							<div id="revisions<?php echo $rec['userFile']['id'];?>">
 			                
 			                </div>
-							
+							<div class="clr"></div>
 						</div>	            	
 	            	</div>
 				</div> 
