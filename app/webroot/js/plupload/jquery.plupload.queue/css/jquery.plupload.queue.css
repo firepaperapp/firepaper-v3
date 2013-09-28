@@ -104,9 +104,13 @@
 .plupload_file_name {float: left; overflow: hidden}
 .plupload_file_status {color: #777;}
 .plupload_file_status span {color: #42454A;}
-.plupload_file_size, .plupload_file_status, .plupload_progress {
+.plupload_file_size, .plupload_file_status {
 	float: right;
 	width: 80px;
+}
+.plupload_progress {
+	width: 200px;
+	float: left;
 }
 .plupload_file_size, .plupload_file_status, .plupload_file_action {text-align: right;}
 
@@ -158,7 +162,7 @@ li.plupload_done a {
 }
 .plupload_progress_bar {
 	width: 0px;
-	height: 7px;
+	height: 17px;
 	background: #CDEB8B;
 }
 
