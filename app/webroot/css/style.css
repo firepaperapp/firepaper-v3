@@ -3642,6 +3642,17 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 }
 
 .success {
+     border: 1px solid #A5D3A5;
+    background: #E2FCE3;
+    padding: 10px 15px;
+    font-size: 14px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #485946;
+    
+}
+.tip {
+   
     border: 1px solid #f0dbb4;
     background: #FFFCEE;
     padding: 10px 15px;
@@ -3649,15 +3660,6 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #ce8f22;
-}
-.tip {
-    border: 1px solid #A5D3A5;
-    background: #E2FCE3;
-    padding: 10px 15px;
-    font-size: 14px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #485946;
 }
 .marginB10 {
     margin-bottom: 10px;
