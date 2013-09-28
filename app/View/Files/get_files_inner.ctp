@@ -162,7 +162,7 @@ if(count($data)>0)
 						</div>	            	
 	            	</div>
 				</div> 
-				<div class="line"></div>
+				<div class="linesep"></div>
 				<?php
 				}
 				}
