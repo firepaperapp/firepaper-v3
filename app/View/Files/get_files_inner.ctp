@@ -77,7 +77,7 @@ if(count($data)>0)
 						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
 						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
 						          	
-						         </div><div class="clr"></div>
+						         
 				             </div>    
 							<div class="marginB10" id="comment_<?php echo $rec['userFile']['id'];?>" style="width:250px;display:none;">
 						    
@@ -158,7 +158,7 @@ if(count($data)>0)
 							<div id="revisions<?php echo $rec['userFile']['id'];?>">
 			                
 			                </div>
-							<div class="clr"></div>
+							
 						</div>	            	
 	            	</div>
 				</div> 
@@ -179,7 +179,7 @@ if(count($data)>0)
 		if($j == 2)
 		{
 			$j = 0;?>
-			<div class="clr"></div>
+			
 		<?php
 		}			
 		$j++;
@@ -197,5 +197,5 @@ else
 echo "<p>".ERR_RECORD_NOT_FOUND."</p>";
 }
 ?>
-<div class="clr"></div>
+
 </div>
