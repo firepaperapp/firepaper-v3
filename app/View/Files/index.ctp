@@ -101,7 +101,7 @@ function showUploader() {
 <div class="white files index">
 	<div class="btn-container">
 			<div class="btn-holder">
-			<input type="button" value="Upload Files" class="button" onclick="showUploader()">
+			<input type="button" value="Upload Files" class="submit" onclick="showUploader()">
 			
 			<form id="files-upload-form" style="display: none">
 		    	<div id="uploader"></div>
