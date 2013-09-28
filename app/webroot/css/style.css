@@ -1647,9 +1647,11 @@ p.contact span {
 	display: block;
 	padding:3% 0;
 }
-
+.files-box-wrapper .files-box .file-name a {
+	margin-top: 4px;
+}
 .files-box {
-    padding: 3%;
+    padding: 4% 8%;
     background: #fff;
     margin-top: 15px;
 }
