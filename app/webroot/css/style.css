@@ -1801,7 +1801,6 @@ p.contact span {
 .upload-details { 
 	color:#fff; 
 	font-weight:normal; 
-	float:left; 
 }
 .file-doc-container .btn { 
 	color:white; 
@@ -1922,11 +1921,8 @@ div.file-name em {
 }
 
 .versions-inner {
-    padding: 25px;
-    background: #fafafa;
+    padding: 25px 0px;
     font-size: 13px;
-    border-radius: 6px;
-    -webkit-border-radius:6px;
    
 }
 
@@ -1979,8 +1975,6 @@ div.file-name em {
 }
 
 .comment-file {
-    padding: 5px;
-    background: #fff;
     margin-bottom: 10px;
     margin-top: 6px;
 }
