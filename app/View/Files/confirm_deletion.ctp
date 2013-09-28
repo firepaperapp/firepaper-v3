@@ -66,7 +66,7 @@ if($anyPrjCnt>0)
 
 <p>&nbsp;</p><input type="hidden" id="fileId" name="data[userFile][fileId]" value="<?php echo $fileId;?>" />
 <p id="submitWrr">
-	<input name="btnSubmit" id="btnSubmit" type="button" value="Submit" class="create-account"/>
-	<input name="" type="button" value="Cancel" class="create-account" onclick="$.fancybox.close();"/>
+	<input name="btnSubmit" id="btnSubmit" type="button" value="Submit" class="submit"/>
+	<input name="" type="button" value="Cancel" class="submit" onclick="$.fancybox.close();"/>
 </p>
 </form>
