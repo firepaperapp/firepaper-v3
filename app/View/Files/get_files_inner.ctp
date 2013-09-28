@@ -77,7 +77,7 @@ if(count($data)>0)
 						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
 						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
 						          	
-						         
+						         </div><div class="clr"></div>
 				             </div>    
 							<div class="marginB10" id="comment_<?php echo $rec['userFile']['id'];?>" style="width:250px;display:none;">
 						    
@@ -173,13 +173,13 @@ if(count($data)>0)
 	 			<div class="clr"></div>
 			</div><!-- end files-box -->
 		</div><!-- end files-box-wrapper -->
-		
+		<div class="clr"></div>
 	</div><!-- end file-col1-wrapper -->
  	<?php
 		if($j == 2)
 		{
 			$j = 0;?>
-			
+		
 		<?php
 		}			
 		$j++;
