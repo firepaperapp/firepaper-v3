@@ -644,6 +644,12 @@ p.task-tickbox a {
 	padding: 3%;
 	box-sizing: border-box;
 }
+.file-col-2-wrapper {
+	width: 33.33333%;
+	float: left;
+	padding: 3%;
+	box-sizing: border-box;
+}
 .loader { 
 	margin: 0;
 	padding:15px 20px; 
@@ -1670,11 +1676,9 @@ p.contact span {
     padding-bottom: 5px;
     margin-bottom: 10px;
     margin-top: 0;
-    border-bottom: 1px solid #E3E3E8;
-    color: #363F48;
-    text-transform: uppercase;
+    color: #c9c9c9;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     
 }
 
@@ -1825,12 +1829,15 @@ p.contact span {
 .btn-container {
 	width: 100%;
 	border-bottom: 1px solid #e8e8e8;
-	height:56px;
+	min-height:59px;
 }
 .btn-holder {
 	float: left;
 	padding: 12px;
 	border-right: 1px solid #f5f5f5;
+}
+btn-holder .submit {
+	
 }
 .files-categories-box {
 	float: left;
