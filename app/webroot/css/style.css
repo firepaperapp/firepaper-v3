@@ -643,6 +643,8 @@ p.task-tickbox a {
 	float: left;
 	padding: 3%;
 	box-sizing: border-box;
+	border-right:1px solid #e8e8e8;
+	border-bottom:1px solid #e8e8e8;
 }
 .file-col-2-wrapper {
 	width: 33.33333%;
