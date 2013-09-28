@@ -3660,6 +3660,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #ce8f22;
+    margin-bottom: 10px;
 }
 .marginB10 {
     margin-bottom: 10px;
