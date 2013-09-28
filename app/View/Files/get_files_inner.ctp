@@ -94,11 +94,11 @@ if(count($data)>0)
 							<div id="addcategory_<?php echo $rec['userFile']['id'];?>_box" class="addcategory width100per" style="display:none;">   
                 
                 			</div>  
-	                 	    <p class="width100per">
+	                 	    <!--<p class="width100per">
 		                	    <span class="title">Tags:</span>  
 		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
 		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
-	              	  	   </p>
+	              	  	   </p>-->
 	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
 	              	  	   	<div class="dotted-spacer"></div>
 	              	  	   	<?php

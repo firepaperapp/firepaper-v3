@@ -3643,6 +3643,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #485946;
+    font-size: normal;
     
 }
 .tip {
