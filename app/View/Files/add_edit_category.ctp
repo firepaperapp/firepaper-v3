@@ -54,15 +54,15 @@ function closeWindow()
 <div class="validation-signup" id="validation-container-category" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
 
 </div>
-	<h2>Add Category</h2>
+	<h2>Add a filter</h2>
 	<p>&nbsp;</p>
 	<form method="post" action="" name="Category" id="Category" onsubmit="return false;"> 
-	<p>Category Title<span class="mandatory">*</span></p>
-	   <p><?php echo $this->Form->input('fileCategory.title',array('div'=>false,'label'=>false,"id"=>"title",'maxlength'=>'150'));?> </p>
-	   <p>
+	<p>Filter itle<span class="mandatory">*</span></p>
+	 <?php echo $this->Form->input('fileCategory.title',array('div'=>false,'label'=>false,"id"=>"title",'maxlength'=>'150'));?> 
+	 
 	<input type="hidden" name="data[fileCategory][cat_id]" id="cat_id" value="<?php echo $cat_id;?>" />
-	 <input name="btnSubmit" type="submit" value="Save" class="create-account"/>
-	 </p>
+	 <input name="btnSubmit" type="submit" value="Save" class="submit"/>
+
 	 <div id="containerLoader"></div>
 	</form>
 </div>
