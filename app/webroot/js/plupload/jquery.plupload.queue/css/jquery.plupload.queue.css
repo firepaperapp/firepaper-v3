@@ -100,6 +100,7 @@
 	height: 35px; 
 	line-height: 26px; 
 	vertical-align: middle;
+	position: relative;
 	}
 .plupload_file_name {float: left; overflow: hidden}
 .plupload_file_status {color: #777;}
