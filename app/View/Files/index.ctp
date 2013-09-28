@@ -80,32 +80,7 @@ function showUploader() {
 	 		
 	        if (uploader.files.length > 0) {
 	        	uploader.bind('StateChanged', function() {
-	                if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
-	                    $("#files-upload-form").submit();
-	                }
-	            });
-			    
-	            uploader.start();
-	        } else {
-	            alert("You must queue at least one file.");
-	        }
-	 
-	        return false;
-	    });
-	} else {
-		$("#files-upload-form").css("display", "none");
-	}
-}
-</script>
-
-<div class="white files index">
-	<div class="btn-container">
-			<div class="btn-holder">
-			<input type="button" value="Upload Files" class="submit" onclick="showUploader()">
-			</div>
-			<div id="files-categories-box" class="files-categories-box">
-				<h4>Filters:</h4>
-				<ul><li><a href="#" onclick="window.location.reload(true);" alt="All">All</a></li><?php echo $this->requestAction("/files/getMyCategories"); ?></ul>
+	                if (uploader.files.length === (uploader.total.uploaded + | alt="All">All</a></li><?php echo $this->requestAction("/files/getMyCategories"); ?></ul>
 			</div>
 			<div class="file-upload-area">
 			<form id="files-upload-form" style="display: none">
