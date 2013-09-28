@@ -168,20 +168,20 @@ $(document).ready(function(){
 		        
 			<div class="project-drop-area-wrapper">
 				<div class="task-wrapper">
-				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="button">+ Create a Task</a> Or you can add a document below
+				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="button">+ Create a Task</a> 
 				</div>			
 			 <div class="tip">
 			 Quick tip: Adding a file will create a task automatically.
 			 </div>
 				<div class="dropFileHere project-drop-area">
-					<p>Drag a document here <span>or</span> 
+					
 					<table id="files"></table>
 					<form id="file_upload" action="<?php echo SITE_HTTP_URL;?>files/uploadFile" method="POST" enctype="multipart/form-data">
 		    		<input type="file" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 					</form>  
-					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>--></p>
+					<p>You can drag file into this area too.</p>
 				</div>
 			
 
