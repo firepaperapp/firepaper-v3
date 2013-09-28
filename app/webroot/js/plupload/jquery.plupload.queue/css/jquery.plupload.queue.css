@@ -111,6 +111,7 @@
 .plupload_progress {
 	width: 200px;
 	float: left;
+	margin-left: 16px;
 }
 .plupload_file_size, .plupload_file_status, .plupload_file_action {text-align: right;}
 
