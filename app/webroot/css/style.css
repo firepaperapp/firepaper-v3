@@ -1649,6 +1649,7 @@ p.contact span {
 }
 .files-box-wrapper .files-box .file-name a {
 	margin-top: 4px;
+	display: inline-block;
 }
 .files-box {
     padding: 4% 8%;
@@ -1658,6 +1659,7 @@ p.contact span {
 .files-box .file-name .file-links {
 	font-size: 12px;
 	font-weight: normal;
+	padding-top: 2px;
 }
 .files-box .file-name .file-links a {
 	color: #e06161;
@@ -1705,9 +1707,9 @@ p.contact span {
     margin-right: 8px;
 }
 
-.file-name img {
-    margin-bottom: -3px;
-    margin-right: 8px;
+.file-box .file-name img {
+    
+    margin-right: 15px;
 }
 
 .file-name { 
