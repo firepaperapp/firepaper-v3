@@ -807,7 +807,6 @@ p.task-tickbox a {
 	padding: 0;
 	margin: 0;
 	float: left;
-	border: 1px solid #cbd0d5;
 	border-radius:3px;
 	-webkit-border-radius:3px;
 }
@@ -824,7 +823,7 @@ p.task-tickbox a {
 .files-categories-box ul li a {
 	font-size: 14px;
 	margin: 0;
-	padding: 10px 18px;
+	padding: 10px 12px;
 	font-weight: bold;
 	color:#c9c9c9;
 }
@@ -1710,7 +1709,6 @@ p.contact span {
 }
 .file-name { 
 	font-size: 18px;
-	letter-spacing: -1px;
 	font-weight: bold; 
 	color:#686b6c;
 	padding-bottom: 2px;
@@ -1875,7 +1873,6 @@ div.file-name em {
 
 .file-links {
     font-size: 13px;
-    letter-spacing: 1px;
     color: #cbcbcb;
     font-style: 400;
     margin-left: 36px;
@@ -3254,7 +3251,6 @@ ul#archived-list .month {
 	float: left;
 }
 .weight-col a {
-	letter-spacing: 0px; 
 	text-align: center;
 }
 .weight-col span {
