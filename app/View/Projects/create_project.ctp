@@ -178,7 +178,7 @@ $(document).ready(function(){
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 					</form>  
-					<p>You can drag file into this area too.</p>
+					<p>You can drag a file into this area to upload.</p>
 				</div>
 			
 
