@@ -64,43 +64,7 @@ if(count($data)>0)
 	            	<div class="versions" id="versions<?php echo $rec['userFile']['id'];?>" style=" position:  relative;">
 	            		
 			            <div class="versions-inner"> 
-			            	<p>
-								<span class="title">Comments:</span> 
-								<a href="javascript:void(0);" class="edit commentboxlink" id="<?php echo $rec['userFile']['id'];?>">List Comments</a> - <a href="javascript:void(0);" class="edit addcommentlink" id="addcomment_<?php echo $rec['userFile']['id'];?>">Add New Comment</a>
-						    </p>
-						     <div class="comment-link fl-left"><span>Comment</span></div>
-							 <div class="clr"></div>
-						     <div class="addcomment comment-file" id="addcomment_<?php echo $rec['userFile']['id'];?>_box" style="display:none;">
-					          	<textarea name="addcommenttext_<?php echo $rec['userFile']['id'];?>" id="addcommenttext_<?php echo $rec['userFile']['id'];?>" rows="5" cols="40" ></textarea>
-					          	<div id="submitComment_<?php echo $rec['userFile']['id'];?>"></div>
-					          	<div class="submit-wrapper">
-						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
-						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
-						          	
-						         </div><div class="clr"></div>
-				             </div>    
-							<div class="marginB10" id="comment_<?php echo $rec['userFile']['id'];?>" style="width:250px;display:none;">
-						    
-						    </div> 	
-			            
-			             
-		                	<p class="width100per">
-								<span class="title">Filter:</span><br />
-								<label id="addcategory_<?php echo $rec['userFile']['id'];?>_box_span"><?php echo $title;?></label><br />
-								<b id= "category_<?php echo $rec['userFile']['id'];?>" class="edit editcategory" style="display: inline">Edit</b>&nbsp;or&nbsp;
-								<a href="javascript:void(0);" class="edit addcategorylink" id="addcategory_<?php echo $rec['userFile']['id'];?>">Create a filter</a>
-								
-							</p>
-							<div id="addcategory_<?php echo $rec['userFile']['id'];?>_box" class="addcategory width100per" style="display:none;">   
-                
-                			</div>  
-	                 	    <!--<p class="width100per">
-		                	    <span class="title">Tags:</span>  
-		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
-		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
-	              	  	   </p>-->
-	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
-	              	  	   	<div class="dotted-spacer"></div>
+			            	
 	              	  	   	<?php
 					 		if($this->Session->read("user_type") == 5 && $this->Session->read("admin_id")!=0)
 					 		{
@@ -158,6 +122,43 @@ if(count($data)>0)
 							<div id="revisions<?php echo $rec['userFile']['id'];?>" class="clr">
 			                
 			                </div>
+			                <p>
+								<span class="title">Comments:</span> 
+								<a href="javascript:void(0);" class="edit commentboxlink" id="<?php echo $rec['userFile']['id'];?>">List Comments</a> - <a href="javascript:void(0);" class="edit addcommentlink" id="addcomment_<?php echo $rec['userFile']['id'];?>">Add New Comment</a>
+						    </p>
+						     <div class="comment-link fl-left"><span>Comment</span></div>
+							 <div class="clr"></div>
+						     <div class="addcomment comment-file" id="addcomment_<?php echo $rec['userFile']['id'];?>_box" style="display:none;">
+					          	<textarea name="addcommenttext_<?php echo $rec['userFile']['id'];?>" id="addcommenttext_<?php echo $rec['userFile']['id'];?>" rows="5" cols="40" ></textarea>
+					          	<div id="submitComment_<?php echo $rec['userFile']['id'];?>"></div>
+					          	<div class="submit-wrapper">
+						          	<input type="button" class="submit" name="submit" value="Submit" onclick="addComment(<?php echo $rec['userFile']['id'];?>);"/>&nbsp;or&nbsp;
+						          	<a name="cancel" class="edit" href="javascript:void(0);" onclick="$('#addcomment_<?php echo $rec['userFile']['id'];?>_box').slideUp('slow');">Cancel</a>
+						          	
+						         </div><div class="clr"></div>
+				             </div>    
+							<div class="marginB10" id="comment_<?php echo $rec['userFile']['id'];?>" style="width:250px;display:none;">
+						    
+						    </div> 	
+			            
+			             
+		                	<p class="width100per">
+								<span class="title">Filter:</span><br />
+								<label id="addcategory_<?php echo $rec['userFile']['id'];?>_box_span"><?php echo $title;?></label><br />
+								<b id= "category_<?php echo $rec['userFile']['id'];?>" class="edit editcategory" style="display: inline">Edit</b>&nbsp;or&nbsp;
+								<a href="javascript:void(0);" class="edit addcategorylink" id="addcategory_<?php echo $rec['userFile']['id'];?>">Create a filter</a>
+								
+							</p>
+							<div id="addcategory_<?php echo $rec['userFile']['id'];?>_box" class="addcategory width100per" style="display:none;">   
+                
+                			</div>  
+	                 	    <!--<p class="width100per">
+		                	    <span class="title">Tags:</span>  
+		                	    <span id="tagbox_<?php echo $rec['userFile']['id'];?>_tag_span"><?php echo $rec['userFile']['tags'];?></span> - 
+		              	  		<a href="javascript:void(0);" class="edit tagboxlink" id="tagbox_<?php echo $rec['userFile']['id'];?>">Edit</a>
+	              	  	   </p>-->
+	              	  	   <div id="tagbox_<?php echo $rec['userFile']['id'];?>_tag" class="tagbox" style="display:none;"><?php echo trim(ucfirst(Sanitize::html($rec['userFile']['tags'])));?></div>
+	              	  	   	<div class="dotted-spacer"></div>
 							<div class="clr"></div>
 						</div>	            	
 	            	</div>
