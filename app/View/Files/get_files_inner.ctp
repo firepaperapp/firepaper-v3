@@ -173,7 +173,7 @@ if(count($data)>0)
 	 			<div class="clr"></div>
 			</div><!-- end files-box -->
 		</div><!-- end files-box-wrapper -->
-		<div class="clr"></div>
+		
 	</div><!-- end file-col1-wrapper -->
  	<?php
 		if($j == 2)
