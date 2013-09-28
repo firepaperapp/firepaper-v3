@@ -197,5 +197,5 @@ else
 echo "<p>".ERR_RECORD_NOT_FOUND."</p>";
 }
 ?>
-
+<div class="clr"></div>
 </div>
