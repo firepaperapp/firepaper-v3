@@ -114,7 +114,7 @@ if(count($data)>0)
 		                	 <input type="file" id="uploadfile<?php echo $rec['userFile']['id']?>" name="data[userFile][uploadfile]" />
 							 <input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
 				    		 <!--<a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>-->
-				   			 <div>Upload files</div>
+				   			 <div>Upload a new version</div>
 		               		</form>
 							<div id="validation-container-task<?php echo $rec['userFile']['id']?>" class="validation-signup" style="display:none;"></div>
 							<div id="validation-container-success-task<?php echo $rec['userFile']['id']?>" class="success" style=" display: none;"></div>
