@@ -1849,6 +1849,11 @@ p.contact span {
 .files-categories-box h4 {
 	color: #c9c9c9;
 }
+.file-upload-area {
+	width: 100%;
+	clear: both;
+	position: relative;
+}
 .upload-link {
     text-decoration: none;
     font-weight: 400;

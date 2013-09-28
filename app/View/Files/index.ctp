@@ -107,9 +107,11 @@ function showUploader() {
 				<h4>Filters:</h4>
 				<ul><?php echo $this->requestAction("/files/getMyCategories"); ?></ul>
 			</div>
+			<div class="file-upload-area">
 			<form id="files-upload-form" style="display: none">
 				<div id="uploader"></div>
 		   </form>
+			</div>
 	</div>	
 			<table id="files">
 			</table>
