@@ -177,7 +177,7 @@ function listcoadmins()
 
 		
 		
-		<input name="" type="submit" value="Add Co-admin" class="create-account"/>
+		<input name="" type="submit" value="Add Co-admin" class="submit"/>
 		
 	</div>
 	
