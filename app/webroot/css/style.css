@@ -2543,11 +2543,13 @@ p.form-title {
 	text-align: left; 
 	font-weight: normal; 
 	font-style: italic; 
+	display: inline-block;
 	color: #abaaaa; 
 	font-size: 14px; 
+	margin-top: 12px;
 	background: url('../images/sprite.png') left -115px no-repeat; 
 	padding-left: 25px; 
-	line-height: 23px; 
+	margin-left: 15px;
 	text-shadow: 0px 1px 0px #ffffff;
 	filter: dropshadow(color=#ffffff, offx=0, offy=1);
 }
