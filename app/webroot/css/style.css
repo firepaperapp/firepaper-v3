@@ -641,7 +641,7 @@ p.task-tickbox a {
 .file-col-1-wrapper {
 	width: 33.33333%;
 	float: left;
-	padding: 3%;
+	padding:1% 3%;
 	box-sizing: border-box;
 	border-right:1px solid #e8e8e8;
 	border-bottom:1px solid #e8e8e8;
@@ -649,7 +649,7 @@ p.task-tickbox a {
 .file-col-2-wrapper {
 	width: 33.33333%;
 	float: left;
-	padding: 3%;
+	padding:1% 3%;
 	box-sizing: border-box;
 }
 .loader { 
