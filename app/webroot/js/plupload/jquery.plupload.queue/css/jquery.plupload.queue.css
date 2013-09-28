@@ -125,7 +125,7 @@
 }
 .plupload_file_size, .plupload_file_status, .plupload_file_action {text-align: right;}
 
-.plupload_filelist {width: 205px}
+.plupload_filelist {}
 
 .plupload_file_action {
 	float: right;
