@@ -101,8 +101,17 @@
 	line-height: 26px; 
 	vertical-align: middle;
 	}
-.plupload_file_name {float: left; overflow: hidden}
-.plupload_file_status {color: #777;}
+.plupload_file_name {
+	float: left; 
+	overflow: hidden;
+	margin-top: 4px;
+}
+
+.plupload_file_status, .plupload_file_size {
+	color: #777;
+	margin-top: 4px;
+}
+
 .plupload_file_status span {color: #42454A;}
 .plupload_file_size, .plupload_file_status {
 	float: right;
@@ -112,10 +121,11 @@
 	width: 200px;
 	float: left;
 	margin-left: 16px;
+	margin-top: 4px;
 }
 .plupload_file_size, .plupload_file_status, .plupload_file_action {text-align: right;}
 
-.plupload_filelist .plupload_file_name {width: 205px}
+.plupload_filelist {width: 205px}
 
 .plupload_file_action {
 	float: right;
