@@ -170,7 +170,9 @@ $(document).ready(function(){
 				<div class="task-wrapper">
 				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="button">+ Create a Task</a> Or you can add a document below
 				</div>			
-			 
+			 <div class="tip">
+			 Quick tip: Adding a file will create a task automatically.
+			 </div>
 				<div class="dropFileHere project-drop-area">
 					<p>Drag a document here <span>or</span> 
 					<table id="files"></table>
