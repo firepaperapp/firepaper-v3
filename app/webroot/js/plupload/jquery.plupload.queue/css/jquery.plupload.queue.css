@@ -105,7 +105,7 @@
 .plupload_file_name {float: left; overflow: hidden}
 .plupload_file_status {color: #777;}
 .plupload_file_status span {color: #42454A;}
-.plupload_progress {
+.plupload_file_size, .plupload_file_status, .plupload_progress {
 	float: right;
 	
 }
