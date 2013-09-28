@@ -1645,7 +1645,7 @@ p.contact span {
 
 .files-box-wrapper .files-box .file-name {
 	display: block;
-	padding:0 3%;
+	padding:3% 0;
 }
 
 .files-box {
