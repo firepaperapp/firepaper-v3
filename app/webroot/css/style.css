@@ -1048,7 +1048,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
     font-size: 11px;
 }
 #createProject {
-	width: 90%;
+	max-width: 1090px;
 }
 .project-bar-wrapper {
 
