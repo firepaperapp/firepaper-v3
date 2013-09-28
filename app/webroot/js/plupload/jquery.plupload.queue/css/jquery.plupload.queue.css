@@ -125,7 +125,9 @@
 	height: 16px;
 }
 
-li.plupload_uploading {background: #ECF3DC url('../img/backgrounds.gif') repeat-x 0 -238px;}
+li.plupload_uploading {
+	background: #ace68a;
+	}
 li.plupload_done {color:#AAA}
 
 li.plupload_delete a {
