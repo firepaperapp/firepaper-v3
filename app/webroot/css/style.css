@@ -1645,10 +1645,11 @@ p.contact span {
 
 .files-box-wrapper .files-box .file-name {
 	display: block;
+	padding:0 3%;
 }
 
 .files-box {
-    padding: 0;
+    padding: 3%;
     background: #fff;
     margin-top: 15px;
 }
