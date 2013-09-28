@@ -89,12 +89,11 @@ padding: 4px 14px;
 }
 .project-drop-area-wrapper .file_upload{}
 .project-drop-area-wrapper .file_upload_large {
-    background: none repeat scroll 0 0 #98FB98;
-    border: 1px solid #32CD32;
-    font-size: 20px;
+    background:#000000;
+    font-size: 12px;
     height: 71px;
     line-height: 1;
-    width: 98%;
+    width: 100%;
     right: 0px !important;
     top: 55px !important;
 }
