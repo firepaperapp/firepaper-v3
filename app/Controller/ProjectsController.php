@@ -669,7 +669,7 @@ class ProjectsController  extends AppController{
 	}
 	
 	function createProject()
-	{ 
+	{ echo "<pre>"; print_r($this->request->data);die;
 		############ CREATE A PROJECT START #################
 		if($this->request->data)
  		{ 
