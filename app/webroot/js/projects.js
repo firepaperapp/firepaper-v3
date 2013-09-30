@@ -353,8 +353,6 @@ function saveProjFormH(status)
             url: $("#Project").attr('action'),
             data: $("#Project").serialize(),
             success: function(){
-                alert("aa")    ;
-                return false;
                 document.saveProjForm.action = siteUrl+"projects/saveOrSendProject/"+$("#project_id").val()+"/"+status;
                 document.saveProjForm.submit();
             },
