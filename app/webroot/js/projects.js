@@ -354,11 +354,13 @@ function saveProjFormH(status)
             data: $("#Project").serialize(),
             success: function(){
                 alert("aa")    ;
+                return false;
+                document.saveProjForm.action = siteUrl+"projects/saveOrSendProject/"+$("#project_id").val()+"/"+status;
+                document.saveProjForm.submit();
             },
-            dataType: dataType
+            dataType: "json"
         });
-		document.saveProjForm.action = siteUrl+"projects/saveOrSendProject/"+$("#project_id").val()+"/"+status;
-		document.saveProjForm.submit();
+		
 	}
 }
 function checkTask()
