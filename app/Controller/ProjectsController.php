@@ -669,7 +669,7 @@ class ProjectsController  extends AppController{
 	}
 	
 	function createProject()
-	{ echo "<pre>"; print_r($this->request);die;
+	{ 
 		############ CREATE A PROJECT START #################
 		if($this->request->data)
  		{ 
@@ -682,19 +682,18 @@ class ProjectsController  extends AppController{
 				$this->request->data['Project']['admin_id'] = $this->getAdminId();
 				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
  				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
- 				if($project_id!=0)	
+ 				if($this->request->data['Project']['project_id']!=0)	
  				{ 			
- 					$this->Project->id = $project_id;		
  					$this->Project->Save($this->request->data); 					 
  				 	$response['success'] = MSG_PROJ_UPDATED;
- 				 	$response['id'] = $project_id;
+					$response['id'] = $this->Project->getLastInsertId();
  				}
  				else 
  				{
- 					$this->Project->id = -1;
+ 					$this->Project->id = $this->request->data['Project']['project_id'];
  					$this->Project->Save($this->request->data); 					 
  					$response['success'] = MSG_PROJ_CREATED;
- 					$response['id'] = $this->Project->getLastInsertId();
+ 					$response['id'] = $this->Project->id;
  		 		} 			 				 				
  			}
  			else 
