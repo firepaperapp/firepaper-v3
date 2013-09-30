@@ -684,7 +684,8 @@ class ProjectsController  extends AppController{
  				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
  				if($this->request->data['Project']['project_id']!=0)	
  				{ 			
- 					$this->Project->Save($this->request->data); 					 
+ 					$this->request->data['Project']['id'] = $this->request->data['Project']['project_id'];
+					$this->Project->Save($this->request->data); 					 
  				 	$response['success'] = MSG_PROJ_CREATED;
 					$response['id'] = $this->Project->getLastInsertId();
  				}
