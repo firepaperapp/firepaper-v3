@@ -685,12 +685,12 @@ class ProjectsController  extends AppController{
  				if($this->request->data['Project']['project_id']!=0)	
  				{ 			
  					$this->Project->Save($this->request->data); 					 
- 				 	$response['success'] = MSG_PROJ_UPDATED;
+ 				 	$response['success'] = MSG_PROJ_CREATED;
 					$response['id'] = $this->Project->getLastInsertId();
  				}
  				else 
  				{
- 					$this->Project->id = $this->request->data['Project']['project_id'];
+ 					$this->Project['id'] = $this->request->data['Project']['project_id'];
  					$this->Project->Save($this->request->data); 					 
  					$response['success'] = MSG_PROJ_CREATED;
  					$response['id'] = $this->Project->id;
@@ -1202,6 +1202,7 @@ class ProjectsController  extends AppController{
 			if($st!='') $st =  "0,".$st.",";
 			$gotUsers['whiteboards'] = $st;
 			$gotUsers['published'] = $saveOrSend;
+			$gotUsers['is_completed'] = 1;
 			$this->Project->id = $project_id;
 			//echo "<pre>"; print_r($gotUsers);die;
 			$this->Project->Save($gotUsers);			
