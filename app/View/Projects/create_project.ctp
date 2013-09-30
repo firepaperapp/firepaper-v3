@@ -19,7 +19,8 @@ if(isset($errMsg))
 } 
 ?>
 </div>
-<?php echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project')); ?>
+<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
+<?php //echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project')); ?>
 <script> 
 	var groupAdded = <?php echo json_encode($dataGroups);?>;	
 	var userAdded = <?php echo json_encode($dataUsers);?>;	
@@ -307,7 +308,7 @@ $(document).ready(function(){
 	  	<div class="clr"></div>
 		
 		
-		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
+		
         <div class="line"></div>
 	       
 	          <h3>Invite</h3>
