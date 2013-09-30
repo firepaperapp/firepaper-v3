@@ -348,7 +348,15 @@ function saveProjFormH(status)
 	}
 	else
 	{
-		 
+		$.ajax({
+            type: "POST",
+            url: $("#Project").attr('action'),
+            data: $("#Project").serialize(),
+            success: function(){
+                alert("aa")    ;
+            },
+            dataType: dataType
+        });
 		document.saveProjForm.action = siteUrl+"projects/saveOrSendProject/"+$("#project_id").val()+"/"+status;
 		document.saveProjForm.submit();
 	}
