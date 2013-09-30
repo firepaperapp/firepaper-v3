@@ -265,7 +265,7 @@ $(document).ready(function(){
 			}
 	  }
 	  
- 	  if($('#project_id').val()!=0 && $('#project_id').val()!='')	
+ 	  if($('#project_id').val()!=0 && $('#projectTitle').val()!='')	
  	  {
  	  		$('#projectTitle').attr("readonly","readonly");
  	  }
