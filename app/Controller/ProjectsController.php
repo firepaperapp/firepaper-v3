@@ -667,6 +667,47 @@ class ProjectsController  extends AppController{
 		$this->createActivityLog($pasedData);
 		die;
 	}
+	
+	function createProject()
+	{ echo "<pre>"; print_r($this->request);die;
+		############ CREATE A PROJECT START #################
+		if($this->request->data)
+ 		{ 
+ 			$result = $this->Project->validatProjectForm($this->request->data['Project']);
+ 			$response = array();
+ 	 		if($this->Project->err==0)						
+ 			{
+ 				//we will add contact
+ 				$this->request->data['Project']['leader_id'] = $this->request->data['Project']['leader_id'];		
+				$this->request->data['Project']['admin_id'] = $this->getAdminId();
+				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
+ 				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
+ 				if($project_id!=0)	
+ 				{ 			
+ 					$this->Project->id = $project_id;		
+ 					$this->Project->Save($this->request->data); 					 
+ 				 	$response['success'] = MSG_PROJ_UPDATED;
+ 				 	$response['id'] = $project_id;
+ 				}
+ 				else 
+ 				{
+ 					$this->Project->id = -1;
+ 					$this->Project->Save($this->request->data); 					 
+ 					$response['success'] = MSG_PROJ_CREATED;
+ 					$response['id'] = $this->Project->getLastInsertId();
+ 		 		} 			 				 				
+ 			}
+ 			else 
+ 			{
+ 	 			$response['error'] = $this->Project->errMsg;
+ 			}
+ 			$this->RequestHandler->respondAs('json'); 			
+ 			echo json_encode($response);
+ 			$this->autoRender = false;         
+ 			die;   
+ 	 	}
+ 	 	############ CREATE A PROJECT ENDS #################
+	}
 	/**
 	 * It will be used to create a project
 	 * By Admin, Educator, Department Leader OR Indiviual Educator
@@ -1146,7 +1187,7 @@ class ProjectsController  extends AppController{
  	 */ 
  	function saveOrSendProject($project_id, $saveOrSend)
  	{
-		echo "<pre>"; print_r($this->request);die;
+		//echo "<pre>"; print_r($this->request);die;
  		$returnArr = array();
  		$pasedData = array();
  		 
