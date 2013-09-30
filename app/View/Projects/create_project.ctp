@@ -19,8 +19,7 @@ if(isset($errMsg))
 } 
 ?>
 </div>
-<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
-<?php //echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project')); ?>
+<?php echo $this->Form->create('Project', array('action'=>'createProject','type' => 'post','id'=>'Project')); ?>
 <script> 
 	var groupAdded = <?php echo json_encode($dataGroups);?>;	
 	var userAdded = <?php echo json_encode($dataUsers);?>;	
@@ -41,7 +40,11 @@ $(document).ready(function(){
 		
 });
 </script>
-				
+<style>
+    #duedate{
+        width: 100%
+    }
+</style>				
 	<h1>
 	<?php
  	if($project_id!=0)
@@ -61,7 +64,7 @@ $(document).ready(function(){
     <div id="createProject">
 	    
 	    <h3>Course title</h3>
-	     <?php echo $this->Form->input('title',array('id'=>'projectTitle','div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
+	     <?php echo $this->Form->input('title',array('id'=>'projectTitle', 'tabindex'=>1,'div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	      <h3>Course details</h3>  
 	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','tabindex'=>2, 'div'=>false, 'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
 	      <div class="line"></div>
@@ -142,9 +145,8 @@ $(document).ready(function(){
      		$d = "display:block;";
      	}
      ?>
-     
+     <div class="line"></div>
  	<div id="docAndTask" style="<?php //echo $d;?>">
- 	<div class="line"></div>
  		
 		
 	        <div class="left">
@@ -166,20 +168,18 @@ $(document).ready(function(){
 		        
 			<div class="project-drop-area-wrapper">
 				<div class="task-wrapper">
-				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="button">+ Create a Task</a> 
+				<a href="javascript:void(0)" onclick="createTaskEmpty()" class="button">+ Create a Task</a> Or you can add a document below
 				</div>			
-			 <div class="tip">
-			 Quick tip: Adding a file will create a task automatically.
-			 </div>
+			 
 				<div class="dropFileHere project-drop-area">
-					
+					<p>Drag a document here <span>or</span> 
 					<table id="files"></table>
 					<form id="file_upload" action="<?php echo SITE_HTTP_URL;?>files/uploadFile" method="POST" enctype="multipart/form-data">
 		    		<input type="file" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 					</form>  
-					<p>You can drag a file into this area to upload.</p>
+					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>--></p>
 				</div>
 			
 
@@ -196,8 +196,8 @@ $(document).ready(function(){
 		   			<h3>Your task title<span class="mandatory">*</span></h3>
 		   			<?php echo $this->Form->input('projectTask.title',array('div'=>false,'label'=>false,"id"=>"taskTitle",'maxlength'=>'150','class'=>'task-input'));?> 
 		   			
-		     		<div class="weight-col">
-		     		<span>Add your weight &rarr;</span>
+		     		<div class="col-weight">
+		     		<p>Add your weight &rarr;</p>
 		    			 
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
 		    			
@@ -235,7 +235,7 @@ $(document).ready(function(){
 	  			<div  id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 			        <div class="project-brief-box-wrapper createdTasksCl">
 				           <div class="project-drop-area-wrapper">
-				           		<div class="weight-col" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?>%</span><a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
+				           		<div class="col-weight" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>%<a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
 					          	<?php //pa($rec['projectTask']);
 					  			if(!isNull($rec['projectTask']['refer_file_id']))
 					  			{?>
@@ -244,7 +244,7 @@ $(document).ready(function(){
 					  			}	
 								else
 								{?>
-									<p class="file-name"><?php echo $rec['projectTask']['title'];?>
+									<p class="task-title"><?php echo $rec['projectTask']['title'];?>
 								<?php
 								}
 								?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
@@ -308,7 +308,7 @@ $(document).ready(function(){
 	  	<div class="clr"></div>
 		
 		
-		
+		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
 	       
 	          <h3>Invite</h3>
