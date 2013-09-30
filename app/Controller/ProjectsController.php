@@ -690,7 +690,7 @@ class ProjectsController  extends AppController{
  				}
  				else 
  				{
- 					$this->Project['id'] = $this->request->data['Project']['project_id'];
+ 					$this->request->data['Project']['id'] = $this->request->data['Project']['project_id'];
  					$this->Project->Save($this->request->data); 					 
  					$response['success'] = MSG_PROJ_CREATED;
  					$response['id'] = $this->Project->id;
