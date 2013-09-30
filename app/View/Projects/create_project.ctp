@@ -133,7 +133,7 @@ $(document).ready(function(){
 	      	     
 	      <!-- end project wrapper -->      
 	     
-	     <input type="hidden" id="project_id" name="project_id" value="<?php echo $project_id;?>" />
+	     <input type="hidden" id="project_id" name="data[Project][project_id]" value="<?php echo $project_id;?>" />
   		 </form>
     </div>   
 
