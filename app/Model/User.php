@@ -13,7 +13,7 @@
 	  /*Function to validate User fields add/edit*/
 		function validateUserForm($postArray, $capCode="") {
         
-         if (!isset($postArray['sitetitle']) || empty($postArray['sitetitle'])) {
+         if ((!isset($postArray['sitetitle']) || empty($postArray['sitetitle'])) && $this->request->data['User']['user_type_id'] == 1) {
             $this->errMsg[] = ERR_sitetitle_EMPTY;
             $this->err = 1;
         } else if (!isset($postArray['email']) || empty($postArray['email'])) {
