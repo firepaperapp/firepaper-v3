@@ -14,6 +14,7 @@ if(isset($errMsg))
 </div>
 <?php echo $this->Form->create('User', array('action'=>'step1/'.$user_type.'/'.$trialpack,'type' => 'post','id'=>'user')); ?>
 <div class="main-signup">
+  <?php if($user_type == 1):?>
   <h3>Your site address</h3>
   <p>Site address details, for example http://stpeters.firepaperapp.com<br />
     <strong>Letters &amp; numbers only</strong></p>
@@ -21,6 +22,7 @@ if(isset($errMsg))
    <?php echo $this->Form->input('sitetitle',array('div'=>false,'label'=>false,"id"=>"sitetitle",'maxlength'=>'50', "tabindex"=>1));?> 
     <h3>.firepaperapp.com<span class="mandatory">*</span></h3>
   </div>
+  <?php endif;?>
   <h3>Your details</h3>
   <div class="col-left">
     <p>First name<span class="mandatory">*</span></p>
