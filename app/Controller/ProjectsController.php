@@ -637,7 +637,7 @@ class ProjectsController  extends AppController{
 	 */
 	function updateComment()
 	{
-		pr($this->request); 
+		pr($this->request); die;
 		$comments = $this->request->params['form']['value'];
 		$com = $this->request->params['form']['commenttext'];		
 		$commenttext_varr = explode('_',$com);
