@@ -635,7 +635,7 @@ class ProjectsController  extends AppController{
 	 *
 	 * @param int $commnetid
 	 */
-	function updateComment($commnetid=NULL)
+	function updateComment()
 	{
 		pr($this->request); 
 		$comments = $this->request->params['form']['value'];
