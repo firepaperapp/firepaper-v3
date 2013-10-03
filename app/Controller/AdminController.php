@@ -178,7 +178,7 @@ class AdminController extends AppController {
 
 
 	function addedituser($user_id=0) {
-
+		 echo "<pre>"; print_r($this->request);die;
 		
 
 		global $defaultTimeZone;
@@ -235,7 +235,7 @@ class AdminController extends AppController {
 
 			$err = $this->User->validateOnAdminEnd($this->request->data['User'], $this->request->params['form']['uid']);
 
-			 echo "<pre>"; print_r($this->request);die;
+			
 
 			if($err == 0) 
 
