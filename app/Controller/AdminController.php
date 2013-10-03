@@ -241,13 +241,13 @@ class AdminController extends AppController {
 
 			{ 			
 
-				$this->request->params['data']['User']['user_type_id'] = $this->request->params['data']['User']['usertype'];
+				$this->request->data['User']['user_type_id'] = $this->request->data['User']['usertype'];
 
 				
 
 				
 
-				foreach($this->request->params['data']['User'] AS $key => $val)
+				foreach($this->request->data['User'] AS $key => $val)
 
 				{
 
@@ -263,13 +263,13 @@ class AdminController extends AppController {
 
 				
 
-				if($this->request->params['form']['uid']!=0 && $this->request->params['form']['uid'] > 0)
+				if($this->request->data['uid']!=0 && $this->request->data['uid'] > 0)
 
 				{
 
-					$this->User->id= $this->request->params['form']['uid']; 
-					$dataEmail = $this->request->params['data']['User'];
-					$data['password'] = md5($this->request->params['data']['User']['password']);
+					$this->User->id= $this->request->data['uid']; 
+					$dataEmail = $this->request->data['User'];
+					$data['password'] = md5($this->request->data['User']['password']);
 
 					$this->User->Save($data);
 					$this->doEmailToUser($dataEmail,"edit");
@@ -283,7 +283,7 @@ class AdminController extends AppController {
 
 				{						
 
-					$newuserdata['registerUser'] = $this->request->params['data']['User'];					
+					$newuserdata['registerUser'] = $this->request->data['User'];					
 
 					$this->Session->write($newuserdata); 
 
