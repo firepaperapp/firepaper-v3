@@ -233,9 +233,9 @@ class AdminController extends AppController {
 
 		if(!isNull($this->request->data)) {
 
-			$err = $this->User->validateOnAdminEnd($this->request->params['data']['User'], $this->request->params['form']['uid']);
+			$err = $this->User->validateOnAdminEnd($this->request->data['User'], $this->request->params['form']['uid']);
 
-			 
+			 echo "<pre>"; print_r($this->request);die;
 
 			if($err == 0) 
 
