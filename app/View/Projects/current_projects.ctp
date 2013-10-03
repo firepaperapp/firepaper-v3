@@ -79,7 +79,7 @@ $(document).ready(function(){
 	</div>
 <!-- End bubble -->
 <!-- Progress bar -->
-<?php echo "<pre>"; print_r($rec);die;?>
+<?php //echo "<pre>"; print_r($rec);die;?>
 	<div class="progressbg">
 		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
 	</div>
@@ -102,7 +102,7 @@ $(document).ready(function(){
 		<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
 		</div>
 		</div><!-- end project-content -->
-		<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
+		<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
 		</div>
 		</div><!-- end project-bar -->	
 		<div class="clr"></div>
