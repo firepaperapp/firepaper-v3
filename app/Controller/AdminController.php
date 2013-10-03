@@ -771,7 +771,7 @@ class AdminController extends AppController {
 		if(!isNull($this->request->data)) {
 
 
-			echo "<pre>"; print_r($this->Auth->user('id'));die;
+			echo "<pre>"; print_r(CakeSession::read("Auth.User.id"));die;
 			$err = $this->Admin->validateAllPasswords($this->request->data['Admin'], $this->Session->read("aid"));
 
 			
