@@ -160,7 +160,7 @@ jQuery.validator.addMethod("siteTitleRequired", function(value, element, param)
 						$defaultTimeZone = $userdata['User']['timezone'];
 					}
 					?>
-					<?php echo "<pre>"; print_r($userdata);die;?>
+					<?php //echo "<pre>"; print_r($userdata);die;?>
 					<tr style="<?php echo $style;?>">
 						<td valign="top" width="25%">Sitetitle<span class="mandatory">*</span></td>
 						<td valign="top" width="75%"><?php echo $this->Form->input( 'User.sitetitle', array('id'=>'sitetitle', 'value'=> $userdata['User']['sitetitle'],'class'=>'inputBox', 'maxlength'=>50, 'label' => false, "style"=>$style) ); ?></td>
