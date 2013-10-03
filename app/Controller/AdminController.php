@@ -323,7 +323,7 @@ class AdminController extends AppController {
 
 
 
-		$userdata = $this->User->find("id = '".$user_id."'"); 		
+		$userdata = $this->User->read(null, $user_id); 		
 
 		$this->set("userdata",$userdata);
 
