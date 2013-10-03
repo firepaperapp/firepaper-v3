@@ -1360,7 +1360,7 @@ class AdminController extends AppController {
 		if(!empty($this->request->data))
 
 		{ 
-
+			echo "<pre>"; print_r($this->request->data);die;
 	 		//$this->request->data['Package']['duration'] = $this->request->data['Package']['duration']* 30;
 
 			$this->request->data['Package']['isdefault'] = $this->request->params['form']['isdefault'];
