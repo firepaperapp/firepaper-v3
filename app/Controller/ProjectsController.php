@@ -516,13 +516,13 @@ class ProjectsController  extends AppController{
 		else 
 			$userId = $gotUserId;
 		################## Start Add a Coment ############################
-		if(isset($this->request->params['form']['comment']))
+		if(isset($this->request->data['comment']))
 		{
-			$gotAd = $this->getAdminsOfProject($this->request->params['form']['project_id']);
-			$val = explode("_",$this->request->params['form']['comment']);
+			$gotAd = $this->getAdminsOfProject($this->request->data['project_id']);
+			$val = explode("_",$this->request->data['comment']);
  			$this->projComments->id = -1;
-			$data['projComments']['comment'] = $this->request->params['form']['comment'];
-			$data['projComments']['project_id'] = $this->request->params['form']['project_id'];
+			$data['projComments']['comment'] = $this->request->data['comment'];
+			$data['projComments']['project_id'] = $this->request->data['project_id'];
 			$data['projComments']['posted_by'] = $this->Session->read("userid");
 			if(!isNull($gotUserId))
 			{
@@ -541,23 +541,23 @@ class ProjectsController  extends AppController{
 			 
 			$data['projComments']['admin_ids'] = ",".$gotAd['admin_id'].",";			
 			$data['projComments']['comment_type'] = "task";
-			$data['projComments']['task_id'] = $this->request->params['form']['task_id'];
+			$data['projComments']['task_id'] = $this->request->data['task_id'];
   	  	
 			$this->projComments->Save($data);
 			$this->Session->setFlash(COMMENT_ADDED);
 			//Save activity		
  
-			$v['project_id'] = $this->request->params['form']['project_id'];	
-			$taskDetail = $this->projectTask->findById($this->request->params['form']['task_id']);
+			$v['project_id'] = $this->request->data['project_id'];	
+			$taskDetail = $this->projectTask->findById($this->request->data['task_id']);
 			$v['task_id'] = $taskDetail['projectTask']['id'];
 			$v['task_title'] = $taskDetail['projectTask']['title'];
 			$this->saveActivityForComment($v);
     	}
 		################## End Add a Comment ############################
 		################## Start Delete a File ############################
- 	 	if(isset($this->request->params['form']['d']) && !isNull($this->request->params['form']['d']))
+ 	 	if(isset($this->request->data['d']) && !isNull($this->request->data['d']))
    		{
-   			$cc = $this->request->params['form']['d'];   			 
+   			$cc = $this->request->data['d'];   			 
    			$ret = $this->projComments->deleteAll(" projComments.id = ".$cc);
    			if($taskId == 0)
    			{
