@@ -771,11 +771,11 @@ class AdminController extends AppController {
 		if(!isNull($this->request->data)) {
 
 
-
+echo "<pre>"; print_r($err);die;
 			$err = $this->Admin->validateAllPasswords($this->request->data['Admin'], $this->Session->read("aid"));
 
 			
-			echo "<pre>"; print_r($err);die;
+			
 			if($err == 0) {
 
 				$this->Admin->id = $this->Session->read("aid");
