@@ -771,8 +771,8 @@ class AdminController extends AppController {
 		if(!isNull($this->request->data)) {
 
 
-			echo "<pre>"; print_r($_SESSION);die;
-			$err = $this->Admin->validateAllPasswords($this->request->data['Admin'], $this->Session->read("aid"));
+			
+			$err = $this->Admin->validateAllPasswords($this->request->data['Admin'], $_SERVER["aid"]);
 
 			
 			
