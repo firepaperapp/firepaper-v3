@@ -29,7 +29,7 @@
  	
  		<?php 
   		if($this->Session->read('user_type') != 1)
- 			echo $this->requestAction("/projects/getLatestProjects");
+ 			//echo $this->requestAction("/projects/getLatestProjects");
  		else
  		{?>
  			
