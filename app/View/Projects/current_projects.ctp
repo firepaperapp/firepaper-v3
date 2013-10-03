@@ -79,6 +79,7 @@ $(document).ready(function(){
 	</div>
 <!-- End bubble -->
 <!-- Progress bar -->
+<?php echo "<pre>"; print_r($owner);die;?.
 	<div class="progressbg">
 		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
 	</div>
