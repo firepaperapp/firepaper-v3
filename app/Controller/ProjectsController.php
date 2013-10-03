@@ -637,9 +637,9 @@ class ProjectsController  extends AppController{
 	 */
 	function updateComment()
 	{
-		echo "<pre>"; print_r($this->request); die;
-		$comments = $this->request->params['form']['value'];
-		$com = $this->request->params['form']['commenttext'];		
+		
+		$comments = $this->request->data['value'];
+		$com = $this->request->data['commenttext'];		
 		$commenttext_varr = explode('_',$com);
 		$commentid =  $commenttext_varr[1];	
 		
@@ -647,7 +647,7 @@ class ProjectsController  extends AppController{
 		$this->projComments->id = $commentid;
 		
 		$updatedecomment = $this->projComments->Save($data);
-	 	echo $com = $this->request->params['form']['value'];
+	 	echo $com = $this->request->data['value'];
 		die;
 	
 	}
