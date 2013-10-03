@@ -1411,7 +1411,7 @@ class AdminController extends AppController {
 		}
 
 		
-echo "<pre>"; print_r($this->request->data);die;
+
 		if($packageID >  0)
 
 		{
