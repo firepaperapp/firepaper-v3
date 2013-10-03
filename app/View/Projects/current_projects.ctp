@@ -102,7 +102,22 @@ $(document).ready(function(){
 		<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
 		</div>
 		</div><!-- end project-content -->
-		<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
+		<div class="project-owner">
+		<?php //echo "<pre>"; print_r($rec['User']);die;
+	      if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
+	      {
+		      $userimage = USER_IMAGES_PATH.'100X100/'.$rec['User']['profilepic'];
+	      }
+	      else
+	      {
+		      $userimage = IMAGES_PATH.'profile-pic.png';
+	      }
+	      ?>
+		      <img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
+		        
+			<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
+		</div>
+		
 		</div>
 		</div><!-- end project-bar -->	
 		<div class="clr"></div>
