@@ -95,8 +95,8 @@ class Admin extends AppModel {
 			$this->errMsg[]=MSG_CPASSWORD_EMPTY;
 			$this->err=1;
 		}
-		$arUser = $this->find('id = "'.$id.'"');
-		echo "<pre>";print_r($id);die;
+		$arUser = $this->read(null, $id);
+		echo "<pre>";print_r($arUser);die;
 		if(!isNull($postArray['cpassword'])){
 			if(md5($postArray['cpassword']) != $arUser['Admin']['password']) {
 				$this->errMsg[]=ERR_OLDPASSWORD_INVALID;
