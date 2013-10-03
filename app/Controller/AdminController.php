@@ -772,7 +772,7 @@ class AdminController extends AppController {
 
 			
 
-			$err = $this->Admin->validateAllPasswords($this->request->params['data']['Admin'], $this->Session->read("aid"));
+			$err = $this->Admin->validateAllPasswords($this->request->data['Admin'], $this->Session->read("aid"));
 
 			
 
