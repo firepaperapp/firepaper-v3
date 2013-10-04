@@ -188,7 +188,7 @@
 				
 			}else{
 				
-			
+				echo $postArray['uploadfile']['name'];die;
 				if($postArray['name']=='' || $postArray['error']==1 ||  !is_uploaded_file($postArray['tmp_name']))
 				{
 					$this->errMsg =  FILE_CANT_UPLOADED;
@@ -211,7 +211,7 @@
 						$this->err=1;				
 					}
 				}
-				echo $this->errMsg;die; 
+				//echo $this->errMsg;die; 
 				return $this->err; 
 			}
   		}
