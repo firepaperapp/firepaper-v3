@@ -187,21 +187,21 @@
 				return $this->err; 
 				
 			}else{
-				
-				echo "<pe>"; print_r($_FILES);die;
-				if($postArray['name']=='' || $postArray['error']==1 ||  !is_uploaded_file($postArray['tmp_name']))
+				$postArray = $_FILES;
+			
+				if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
 				{
 					$this->errMsg =  FILE_CANT_UPLOADED;
 					$this->err=1;			
 				}
-				else if($postArray['size'] > MAX_FILESIZE)
+				else if($postArray['uploadfile']['size'] > MAX_FILESIZE)
 				{
 					$this->errMsg= MAX_FILESIZE_MSG;
 					$this->err=1;				
 				}
 				else
 				{
-					$arFile = explode(".",$postArray['name']);				
+					$arFile = explode(".",$postArray['uploadfile']['name']);				
 					$string = remove_specialchars($arFile[0]);				
 					$fileExt = array_pop($arFile); 
 					 
@@ -211,7 +211,7 @@
 						$this->err=1;				
 					}
 				}
-				//echo $this->errMsg;die; 
+				 
 				return $this->err; 
 			}
   		}
