@@ -211,7 +211,7 @@
 						$this->err=1;				
 					}
 				}
-				 
+				echo $this->errMsg;die; 
 				return $this->err; 
 			}
   		}
