@@ -300,7 +300,7 @@ $(document).ready(function(){
 				var btnUpload = $('#uploadfile_<?php echo $rec['projectTask']['id']?>');
 		var status = $('#loaderJsTask');
 		
-		 $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
+		 $('#task_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
 		 	dragDropSupport: true,
 			namespace: 'file_upload_<?php echo $rec['projectTask']['id']?>',
 			cssClass : 'file_upload_<?php echo $rec['projectTask']['id']?>',
