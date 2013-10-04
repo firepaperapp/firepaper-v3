@@ -51,7 +51,7 @@
             dragOverTimeout,
             isDropZoneEnlarged;
         
-        this.dropZone = container;
+        this.dropZone = container.attr('id');
         this.imageTypes = /^image\/(gif|jpeg|png)$/;
         this.previewSelector = '.file_upload_preview';
         this.progressSelector = '.file_upload_progress div';
@@ -275,7 +275,7 @@
     methods = {
         init : function (options) {
             return this.each(function () { 
-                $(this).fileUpload(new UploadHandler($(this).attr('id'), options));
+                $(this).fileUpload(new UploadHandler($(this), options));
             });
         },
         
