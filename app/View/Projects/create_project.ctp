@@ -280,7 +280,7 @@ $(document).ready(function(){
 					 <table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
  	  				<div class="dropTaskFileHere project-drop-area" id="task_<?php echo $rec['projectTask']['id']?>">
 						<p>Drag a document here <span>or</span> 
-						<form id="fileupload_<?php echo $rec['projectTask']['id']?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/" method="POST" enctype="multipart/form-data" class="extraTaskDocs">
+						<form id="fileupload_<?php echo $rec['projectTask']['id']?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/" method="POST" enctype="multipart/form-data" class="extraTaskDocs file_upload">
 			    		 <input type="file" class="uploadfile" id="uploadfile_<?php echo $rec['projectTask']['id']?>" name="data[userFile][uploadfile]" />    	 
 			    		 <button>Upload</button>
 			   			 <div>Upload files</div> 
@@ -303,6 +303,7 @@ $(document).ready(function(){
 		 $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
 		 	dragDropSupport: true,
 			namespace: 'file_upload_<?php echo $rec['projectTask']['id']?>',
+			cssClass : 'file_upload_<?php echo $rec['projectTask']['id']?>',
 	        uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        buildUploadRow: function (files, index) {
