@@ -89,3 +89,4 @@ padding: 4px 14px;
 .project-drop-area-wrapper .file_upload_large {
     
 }
+.drop-file{ position: absolute !important;  top: 0 !important;  width: 99.4% !important;  height: 82px !important;}
