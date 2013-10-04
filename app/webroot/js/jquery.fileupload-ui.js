@@ -214,8 +214,9 @@
                
                 if (typeof uploadHandler.dropZone.switchClass === func) {
                     uploadHandler.dropZone.switchClass(
-                        uploadHandler.cssClassSmall,
-                        uploadHandler.cssClassLarge
+                        //uploadHandler.cssClassSmall,
+                        //uploadHandler.cssClassLarge
+                        
                     );
                 } else {
                     //uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
@@ -240,18 +241,18 @@
             isDropZoneEnlarged = false;
         };
 
-        this.onDocumentDragEnter = function (event) {
-            uploadHandler.dropZoneEnlarge();
-        };
-        
-        this.onDocumentDragOver = function (event) {
-            if (dragOverTimeout) {
-                clearTimeout(dragOverTimeout);
-            }
-            dragOverTimeout = setTimeout(function () {
-                uploadHandler.dropZoneReduce();
-            }, 200);
-        };
+        //this.onDocumentDragEnter = function (event) {
+        //    uploadHandler.dropZoneEnlarge();
+        //};
+        //
+        //this.onDocumentDragOver = function (event) {
+        //    if (dragOverTimeout) {
+        //        clearTimeout(dragOverTimeout);
+        //    }
+        //    dragOverTimeout = setTimeout(function () {
+        //        uploadHandler.dropZoneReduce();
+        //    }, 200);
+        //};
         
         this.onDragEnter = this.onDragLeave = function (event) {
             uploadHandler.dropZone.toggleClass(uploadHandler.cssClassHighlight);
