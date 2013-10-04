@@ -1,5 +1,12 @@
 $(document).ready(function(){
 		
+        $(".project-drop-area").live("mouseover", function(){
+             $(this).children('form').addClass('drop-file');    
+        });
+        $(".project-drop-area").live("mouseout", function(){
+             $(this).children('form').removeClass('drop-file'); 
+        });
+        
    		commentEvents();
 		var getTeacherForSubject = function()
 		{
