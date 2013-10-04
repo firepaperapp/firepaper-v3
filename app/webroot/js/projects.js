@@ -402,7 +402,8 @@ function addComment(f)
 		{
 		   $("#addcomment_"+f+"_box").slideUp();	
            $('#viewTskComments_'+f+"_box").empty().html(data).show();
-           alert(($('#viewTskComments_'+f+"_box").find("input[name='countComment']").val()));
+           var totalcomment = $('#viewTskComments_'+f+"_box").find("input[name='countComment']").val();
+            $("a#viewTskComments_"+f).html(totalcomment+ 'Comment(s)');
            
   		});
 		//$("div.errorJs").hide();
