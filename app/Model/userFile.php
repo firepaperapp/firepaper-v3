@@ -145,7 +145,7 @@
 			//if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
 			if(!empty($postArray['userFile']['uploadfile']))
 			{
-                            $postArray['data'] = $postArray['userFile']['uploadfile'];
+				 $postArray['data'] = $postArray['userFile']['uploadfile'];
 				/*$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];*/
 				
@@ -187,6 +187,7 @@
 				return $this->err; 
 				
 			}else{
+				echo "<pre>"; print_r($postArray);die;
 			
 				if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
 				{
