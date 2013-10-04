@@ -815,6 +815,7 @@ class FilesController  extends AppController{
 					$source = $this->request->params['form']['uploadfile']['tmp_name'];
 				//	$arFile = explode(".",$this->request->params['form']['data']['name'][$_moduleName]['uploadfile']);
 					$arFile = explode(".",$this->request->params['form']['uploadfile']['name']);
+					echo '<pre>'; print_r($arFile);die;
 					$string = remove_specialchars($arFile[0]);				
 					$fileExt = array_pop($arFile);
 					
