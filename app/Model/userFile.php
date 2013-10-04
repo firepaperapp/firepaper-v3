@@ -187,7 +187,7 @@
 				return $this->err; 
 				
 			}else{
-				echo "<pre>"; print_r($postArray);die;
+				
 			
 				if($postArray['name']=='' || $postArray['error']==1 ||  !is_uploaded_file($postArray['tmp_name']))
 				{
