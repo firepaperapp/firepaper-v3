@@ -348,12 +348,13 @@ function saveProjFormH(status)
 	}
 	else
 	{
+        $("#customstatus").val(status);
 		$.ajax({
             type: "POST",
             url: $("#Project").attr('action'),
             data: $("#Project").serialize(),
             success: function(){
-                document.saveProjForm.action = siteUrl+"projects/saveOrSendProject/"+$("#project_id").val()+"/"+status;
+                document.saveProjForm.action = siteUrl+"projects/saveOrSendProject/"+$("#project_id").val()+"/"+$("#customstatus").val();
                 document.saveProjForm.submit();
             },
             dataType: "json"
@@ -400,7 +401,8 @@ function addComment(f)
 	    }, function(data)
 		{
 		   $("#addcomment_"+f+"_box").slideUp();	
-           $('#viewTskComments_'+f+"_box").empty().html(data).show();           
+           $('#viewTskComments_'+f+"_box").empty().html(data).show();
+           alert(data.find("input[name='countComment']").val());
            
   		});
 		//$("div.errorJs").hide();
