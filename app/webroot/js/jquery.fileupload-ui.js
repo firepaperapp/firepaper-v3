@@ -211,15 +211,17 @@
 
         this.dropZoneEnlarge = function () {
             if (!isDropZoneEnlarged) {
-                alert(uploadHandler.dropZone.attr('id'));
+                alert();
                 if (typeof uploadHandler.dropZone.switchClass === func) {
                     uploadHandler.dropZone.switchClass(
                         uploadHandler.cssClassSmall,
                         uploadHandler.cssClassLarge
                     );
                 } else {
-                    uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
-                    uploadHandler.dropZone.removeClass(uploadHandler.cssClassSmall);
+                    //uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
+                    //uploadHandler.dropZone.removeClass(uploadHandler.cssClassSmall);
+                    uploadHandler.dropZone.attr('id').addClass(uploadHandler.cssClassLarge);
+                    uploadHandler.dropZone.attr('id').removeClass(uploadHandler.cssClassSmall);
                 }
                 isDropZoneEnlarged = true;
             }
