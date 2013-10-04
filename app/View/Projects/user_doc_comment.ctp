@@ -106,7 +106,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId; ?>, '<?php echo $from;?>');" class="edit">Delete</a>
 		</div>
 	</div>
-	<input type="hidden" id="countcomment" value="<?php echo count($taskComments)?>" />
+	<input type="hidden" name="countComment" id="countcomment" value="<?php echo count($taskComments)?>" />
 	<?php	
 	}
 }
