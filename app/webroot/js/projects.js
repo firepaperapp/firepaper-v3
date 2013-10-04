@@ -402,7 +402,7 @@ function addComment(f)
 		{
 		   $("#addcomment_"+f+"_box").slideUp();	
            $('#viewTskComments_'+f+"_box").empty().html(data).show();
-           alert($(('#viewTskComments_'+f+"_box").find("input[name='countComment']").val()));
+           alert(($('#viewTskComments_'+f+"_box").find("input[name='countComment']").val()));
            
   		});
 		//$("div.errorJs").hide();
