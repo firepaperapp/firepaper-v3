@@ -143,7 +143,8 @@
 			global $videoArray, $filesArray;
 			
 			//if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
-			//{
+			if(!empty($postArray['userFile']['uploadfile']))
+			{
                             $postArray['data'] = $postArray['userFile']['uploadfile'];
 				/*$getModelName = array_keys($postArray['data']['name']);
 				$_moduleName = $getModelName[0];*/
@@ -185,33 +186,33 @@
 				 
 				return $this->err; 
 				
-			//}else{
-			//
-			//	if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
-			//	{
-			//		$this->errMsg =  FILE_CANT_UPLOADED;
-			//		$this->err=1;			
-			//	}
-			//	else if($postArray['uploadfile']['size'] > MAX_FILESIZE)
-			//	{
-			//		$this->errMsg= MAX_FILESIZE_MSG;
-			//		$this->err=1;				
-			//	}
-			//	else
-			//	{
-			//		$arFile = explode(".",$postArray['uploadfile']['name']);				
-			//		$string = remove_specialchars($arFile[0]);				
-			//		$fileExt = array_pop($arFile); 
-			//		 
-			//		if(!in_array(strtolower($fileExt), $videoArray) && !in_array(strtolower($fileExt), $filesArray))
-			//		{	 
-			//			$this->errMsg="Please upload valid file.";
-			//			$this->err=1;				
-			//		}
-			//	}
-			//	 
-			//	return $this->err; 
-			//}
+			}else{
+			
+				if($postArray['uploadfile']['name']=='' || $postArray['uploadfile']['error']==1 ||  !is_uploaded_file($postArray['uploadfile']['tmp_name']))
+				{
+					$this->errMsg =  FILE_CANT_UPLOADED;
+					$this->err=1;			
+				}
+				else if($postArray['uploadfile']['size'] > MAX_FILESIZE)
+				{
+					$this->errMsg= MAX_FILESIZE_MSG;
+					$this->err=1;				
+				}
+				else
+				{
+					$arFile = explode(".",$postArray['uploadfile']['name']);				
+					$string = remove_specialchars($arFile[0]);				
+					$fileExt = array_pop($arFile); 
+					 
+					if(!in_array(strtolower($fileExt), $videoArray) && !in_array(strtolower($fileExt), $filesArray))
+					{	 
+						$this->errMsg="Please upload valid file.";
+						$this->err=1;				
+					}
+				}
+				 
+				return $this->err; 
+			}
   		}
 		function checkFileType($data, $inputFile, $fileType=NULL)
 		{
