@@ -298,7 +298,7 @@ $(document).ready(function(){
 				</div>
 			<script>	
 				var btnUpload = $('#uploadfile_<?php echo $rec['projectTask']['id']?>');
-		var status = $('#loaderJsTask');
+		var status = $('#loaderJsTask_<?php echo $rec['projectTask']['id']?>');
 		
 		 $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
 		 	dragDropSupport: true,
@@ -329,7 +329,7 @@ $(document).ready(function(){
 								$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
 								{	 
 									$("div#taskUnderDiv").empty().html(data).show('slow');	
-									$("#loaderJsTask").hide();
+									$("#loaderJsTask_<?php echo $rec['projectTask']['id']?>").hide();
 									$(".dropFileHere").fadeOut('slow');
 								}
 								);
