@@ -281,7 +281,7 @@ $(document).ready(function(){
 						<p>Drag a document here <span>or</span> 
 						<table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
 						<form id="fileupload_<?php echo $rec['projectTask']['id']?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/" method="POST" enctype="multipart/form-data" class="extraTaskDocs">
-			    		 <input type="file" class="uploadfile" id="uploadfile" name="data[userFile][uploadfile]" />    	 
+			    		 <input type="file" class="uploadfile" id="uploadfile_<?php echo $rec['projectTask']['id']?>" name="data[userFile][uploadfile]" />    	 
 			    		 <button>Upload</button>
 			   			 <div>Upload files</div> 
 						</form>  
@@ -296,6 +296,43 @@ $(document).ready(function(){
 				  	
 	  			   <div class="clr"></div><!--<div class="clr-spacer"></div>-->
 				</div>
+			<script>	
+				var btnUpload = $('#uploadfile_<?php echo $rec['projectTask']['id']?>');
+		var status = $('#loaderJsTask');
+		
+		 $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
+		 	dragDropSupport: true,
+	        uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
+	        downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
+	        buildUploadRow: function (files, index) {
+	             return $('<tr><td>' + files[index].name + '<\/td>' +
+	                    '<td class="file_upload_progress"><div><\/div><\/td>' +
+	                    '<td class="file_upload_cancel">' +
+	                    '<button class="ui-state-default ui-corner-all" title="Cancel">' +
+	                    '<span class="ui-icon ui-icon-cancel">Cancel<\/span>' +
+	                    '<\/button><\/td><\/tr>');
+	        },
+	        buildDownloadRow: function (response) {
+	        	//Add uploaded file to list
+						if("undefined" == typeof(response.success))
+						{
+							$("#validation-container-task").empty().html("<p class='error'>"+response.error+"</p>").show();
+							$("#validation-container-success-task").empty().hide();
+	
+						} else{	 
+								$("#validation-container-task").empty().hide();
+								$("#validation-container-success-task").empty().html(response.success).show();								
+								$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
+								{	 
+									$("div#taskUnderDiv").empty().html(data).show('slow');	
+									$("#loaderJsTask").hide();
+									$(".dropFileHere").fadeOut('slow');
+								}
+								);
+						}        
+	        }
+	    });
+			</script>		
 	  			<?php
 	  			}
 
