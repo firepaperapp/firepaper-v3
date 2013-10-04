@@ -211,7 +211,7 @@
 
         this.dropZoneEnlarge = function () {
             if (!isDropZoneEnlarged) {
-                alert();
+               
                 if (typeof uploadHandler.dropZone.switchClass === func) {
                     uploadHandler.dropZone.switchClass(
                         uploadHandler.cssClassSmall,
