@@ -32,7 +32,7 @@ $(document).ready(function(){
 		 
 			</p>
 			
-			<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo "1";?> Comment(s)</a></p> 
+			<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo $commentsFortask;?> Comment(s)</a></p> 
 
 
 	<!-- HTML To add a Comment for user task Doc -->
