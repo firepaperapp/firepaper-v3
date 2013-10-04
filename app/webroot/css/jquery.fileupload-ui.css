@@ -91,8 +91,8 @@ padding: 4px 14px;
 }
 
 .file_upload_large {
-    background: transparent;
-    border: 0;
+    background: none repeat scroll 0 0 #98FB98;
+    border: 1px solid #32CD32;
     font-size: 20px;
     height: 87px;
     left: 0;
@@ -100,5 +100,4 @@ padding: 4px 14px;
     position: absolute;
     top: 150px;
     width: 100%;
-    font-size: 0;
 }
