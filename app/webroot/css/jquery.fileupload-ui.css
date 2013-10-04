@@ -87,5 +87,6 @@ padding: 4px 14px;
 }
 .project-drop-area-wrapper .file_upload{ }
 .project-drop-area-wrapper .file_upload_large {
-    
+     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
 }
