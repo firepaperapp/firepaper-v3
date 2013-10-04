@@ -505,8 +505,8 @@
                 return;
             }
             container
-                .data(settings.namespace, fileUpload)
-                .addClass(settings.cssClass);
+                .data(settings.namespace, fileUpload);
+            container.attr( "id" ).addClass(settings.cssClass);
             settings.dropZone.not(container).addClass(settings.cssClass);
             initEventHandlers();
         };
