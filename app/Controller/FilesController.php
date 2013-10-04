@@ -749,7 +749,7 @@ class FilesController  extends AppController{
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
 			########### whether user's admin or user itself has enough space to upload the file ###########	
-			 
+			$this->request->params['form'] = $_FILES;
 			if($this->Session->read("admin_id")!=0)
 			{
 				$uploads_dir = $this->Session->read("admin_id")."/";
