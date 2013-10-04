@@ -35,9 +35,9 @@
         var fileUpload = this,
             uploadForm,
             fileInput,
-            customNamespace,
+            
             settings = {
-                namespace: customNamespace,
+                namespace: defaultNamespace,
                 uploadFormFilter: function (index) {
                     return true;
                 },
