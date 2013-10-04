@@ -323,7 +323,8 @@ $(document).ready(function(){
 	
 						} else{	 
 								$("#validation-container-task").empty().hide();
-								$("#validation-container-success-task").empty().html(response.success).show();								
+								$("#validation-container-success-task").empty().html(response.success).show();
+								$('.file_upload').removeClass('file_upload_large');
 								$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
 								{	 
 									$("div#taskUnderDiv").empty().html(data).show('slow');	
