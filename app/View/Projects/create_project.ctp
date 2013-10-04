@@ -302,7 +302,7 @@ $(document).ready(function(){
 		
 		 $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
 		 	dragDropSupport: true,
-			customNamespace: 'file_upload_<?php echo $rec['projectTask']['id']?>'
+			customNamespace: 'file_upload_<?php echo $rec['projectTask']['id']?>',
 	        uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        buildUploadRow: function (files, index) {
