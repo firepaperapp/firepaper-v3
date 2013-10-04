@@ -740,7 +740,7 @@ class FilesController  extends AppController{
 		global $videoArray;
 		//$this->request->params['form'] = $_FILES;
 		$this->request->params['form'] = $this->request->data['userFile'];
-		echo "<pre>"; print_r($this->request->data);die;
+		echo "<pre>"; print_r($this->request);die;
 	  //	print_r($this->request->params['form']); exit;
 	  
 		if($this->userFile->validateFileUpload($this->request->data) == 0)
