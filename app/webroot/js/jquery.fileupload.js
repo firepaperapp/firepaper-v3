@@ -505,9 +505,8 @@
                 return;
             }
             container
-                .data(settings.namespace, fileUpload);
-            var contid =  container.attr("id");
-            $("#"+contid).addClass(settings.cssClass);
+                .data(settings.namespace, fileUpload)
+                .addClass(settings.cssClass);
             settings.dropZone.not(container).addClass(settings.cssClass);
             initEventHandlers();
         };
