@@ -274,7 +274,7 @@
 
     methods = {
         init : function (options) {
-            return this.each(function () {
+            return this.each(function () { alert($(this));
                 $(this).fileUpload(new UploadHandler($(this), options));
             });
         },
