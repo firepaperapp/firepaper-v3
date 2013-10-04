@@ -304,6 +304,7 @@ $(document).ready(function(){
 		 	dragDropSupport: true,
 	        uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
+			cssClass: 'file_upload_<?php echo $rec['projectTask']['id']?>'
 	        buildUploadRow: function (files, index) {
 	             return $('<tr><td>' + files[index].name + '<\/td>' +
 	                    '<td class="file_upload_progress"><div><\/div><\/td>' +
