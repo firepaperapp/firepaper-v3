@@ -176,7 +176,7 @@ $(document).ready(function(){
 		/*
 		* TO upload a file when user click on uploadFile
 		*/
-		var btnUpload = $('#uploadfile');
+		var btnUpload = $('#uploadfile'); 
 		var status = $('#loaderJsTask');
 		
 		 $('#file_upload').fileUploadUI({
