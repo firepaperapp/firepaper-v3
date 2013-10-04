@@ -14,8 +14,8 @@
 
 (function ($) {
 
-    //var defaultNamespace = 'file_upload',
-    var    undef = 'undefined',
+    var defaultNamespace = 'file_upload',
+        undef = 'undefined',
         func = 'function',
         num = 'number',
         FileUpload,
@@ -35,16 +35,16 @@
         var fileUpload = this,
             uploadForm,
             fileInput,
-            defaultNamespace,
+            customNamespace,
             settings = {
-                namespace: defaultNamespace,
+                namespace: customNamespace,
                 uploadFormFilter: function (index) {
                     return true;
                 },
                 fileInputFilter: function (index) {
                     return true;
                 },
-                cssClass: 'file_upload',
+                cssClass: defaultNamespace,
                 dragDropSupport: true,
                 dropZone: container,
                 url: function (form) {
