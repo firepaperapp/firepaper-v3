@@ -16,7 +16,6 @@
 		function getIconType($name)
 		{
 			$query = "SELECT id FROM file_types as fileType WHERE type = '".$name."' LIMIT 0,1";
-			echo $query;die;
 			$res = $this->query($query);
 			if(isset($res[0]['fileType']['id']))
 			{
