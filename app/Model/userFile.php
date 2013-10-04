@@ -188,7 +188,7 @@
 				
 			}else{
 				
-				echo $postArray['uploadfile']['name'];die;
+				echo "<pe>"; print_r($_FILES);die;
 				if($postArray['name']=='' || $postArray['error']==1 ||  !is_uploaded_file($postArray['tmp_name']))
 				{
 					$this->errMsg =  FILE_CANT_UPLOADED;
