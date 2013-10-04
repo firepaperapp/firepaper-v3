@@ -175,7 +175,7 @@ $(document).ready(function(){
 					<p>Drag a document here <span>or</span> 
 					<table id="files"></table>
 					<form id="file_upload" action="<?php echo SITE_HTTP_URL;?>files/uploadFile" method="POST" enctype="multipart/form-data">
-		    		<input type="file" id="uploadfile" name="data[userFile][uploadfile]" />    	 
+		    		<input type="file" class="uploadfile" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 					</form>  
