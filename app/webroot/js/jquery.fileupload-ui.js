@@ -211,13 +211,14 @@
 
         this.dropZoneEnlarge = function () {
             if (!isDropZoneEnlarged) {
+                alert(uploadHandler.dropZone.attr('id'));
                 if (typeof uploadHandler.dropZone.switchClass === func) {
                     uploadHandler.dropZone.switchClass(
                         uploadHandler.cssClassSmall,
                         uploadHandler.cssClassLarge
                     );
                 } else {
-                    //uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
+                    uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
                     uploadHandler.dropZone.removeClass(uploadHandler.cssClassSmall);
                 }
                 isDropZoneEnlarged = true;
