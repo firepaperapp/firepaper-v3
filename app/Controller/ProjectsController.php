@@ -1007,6 +1007,7 @@ class ProjectsController  extends AppController{
 	function createTask($task_id = 0)
 	{
 		$project_id = $this->request->query['p'];
+		$commentsForTask = 0;
 		if(isset($this->request->data['projectTask']) && count($this->request->data['projectTask'])>0)
 		{
 			$this->request->data['projectTask']['project_id'] = $project_id;
@@ -1033,7 +1034,11 @@ class ProjectsController  extends AppController{
 		 			$Data['projComments']['task_id'] = $response['id'];
 		 			$Data['projComments']['comment'] = $this->request->data['projComments']['comment'];
   	 				$Data['projComments']['comment_type'] = "task";
-  	 				$this->projComments->Save($Data);	 				
+  	 				if($this->projComments->Save($Data))
+					{
+						$commentsForTask = 1;
+					}
+					
 		 		}
 		 		$this->set("project_id", $project_id);
 				$this->set("task_id", $response['id']); 
@@ -1060,6 +1065,7 @@ class ProjectsController  extends AppController{
  			
 		}
 		$this->set("rec",$details);
+		$this->set('commentsFortask', $commentsForTask);
 		$this->render("created_task","ajax");
 	}
 	/**
