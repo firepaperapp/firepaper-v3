@@ -1102,7 +1102,7 @@ class FilesController  extends AppController{
         
 		}
 		else
-		{
+		{ echo "a";die;
 			$response['error'] = $this->userFile->errMsg;
 		}
 		
