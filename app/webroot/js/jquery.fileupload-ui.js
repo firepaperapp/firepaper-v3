@@ -51,7 +51,7 @@
             dragOverTimeout,
             isDropZoneEnlarged;
         
-        this.dropZone = container.attr('id');
+        this.dropZone = container;
         this.imageTypes = /^image\/(gif|jpeg|png)$/;
         this.previewSelector = '.file_upload_preview';
         this.progressSelector = '.file_upload_progress div';
@@ -217,7 +217,7 @@
                         uploadHandler.cssClassLarge
                     );
                 } else {
-                    uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
+                    //uploadHandler.dropZone.addClass(uploadHandler.cssClassLarge);
                     uploadHandler.dropZone.removeClass(uploadHandler.cssClassSmall);
                 }
                 isDropZoneEnlarged = true;
