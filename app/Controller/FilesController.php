@@ -739,7 +739,8 @@ class FilesController  extends AppController{
 	    $msg = "";
 		global $videoArray;
 		//$this->request->params['form'] = $_FILES;
-		$this->request->params['form'] = $this->request->data['userFile'];
+		 $this->request->params['form'] = isset($this->request->data['simpleupload']) ? $_FILES : $this->request->data['userFile'];
+		
 		//echo "<pre>"; print_r($this->request);die;
 	  //	print_r($this->request->params['form']); exit;
 	  
@@ -749,7 +750,7 @@ class FilesController  extends AppController{
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
 			########### whether user's admin or user itself has enough space to upload the file ###########	
-			$this->request->params['form'] = $_FILES;
+			
 			if($this->Session->read("admin_id")!=0)
 			{
 				$uploads_dir = $this->Session->read("admin_id")."/";
