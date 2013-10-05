@@ -60,7 +60,7 @@ if(strpos($_SERVER['HTTP_REFERER'], "markProject") != 0)
 if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 {?>
 	
-	<h3>Comments</h3>
+	<h4>Comments</h4>
 	<?php
 	foreach($taskComments as $rec)
 	{
