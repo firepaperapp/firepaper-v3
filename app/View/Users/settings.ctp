@@ -122,19 +122,21 @@ else
 				   
 				</div>
 				</form>
+				<div style="display:none">
 				<br /> 
                 <h3>Company URL on firepaperapp:</h3>
 
 					<input id="companyurl" name="companyurl" type="text" value="<?php echo $userdata['User']['sitetitle']?>"/>
 					<em>.firepaperapp.com</em>
 
-					<a id="edit_companyurl_link" class="edit">Save</a>				
+					<a id="edit_companyurl_link" class="edit">Save</a>	
+				</div>			
 				</p>
 			
                 <h3>Country:</h3><a id="editcountrylink" class="edit">Save</a>
 				</p> 
                 <?php echo $this->Form->input('country',array('type'=>'select','div'=>false,'label'=>false,'options'=>$countries,'id'=>"DropDownCountry",'value'=>$userdata['User']['country']));?>
-
+<div style="display:none">
 <div class="rule"></div>
 <h3>Manage your subscription</h3>
 
@@ -248,7 +250,7 @@ else
 	</tr>
 </table>
  
-
+</div>
 <div class="rule"></div>
 <h3>Other</h3>
 		<?php if($userdata['User']['status']==1) {?>
