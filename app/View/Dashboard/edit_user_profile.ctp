@@ -173,7 +173,7 @@ $(document).ready(function(){
 		echo $this->Form->input('leader',array('div'=>false,'label'=>false,"id"=>"leader",'maxlength'=>'50','type'=>'checkbox','value'=>'1', 'checked'=>$checked )); ?> 
 		<br />
 		<?php } ?>
-		<input name="" type="submit" value="Add Educator" class="create-account"/>
+		<input name="" type="submit" value="Add Educator" class="submit"/>
 
 	<!--</div>-->
 	

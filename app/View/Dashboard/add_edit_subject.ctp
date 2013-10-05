@@ -80,7 +80,7 @@ function closeWindow()
 
 		<input type="hidden" name="data[Subject][subject_id]" id="subject_id" value="<?php echo $subjectId;?>" />
 
-		<input name="btnSubmit" type="submit" value="Save" class="create-account"/>
+		<input name="btnSubmit" type="submit" value="Save" class="submit"/>
 
 		<div id="container_Loader"></div>
 	</form>

@@ -230,7 +230,7 @@ function movepage()
 		<?php echo $this->Form->input('leader',array('div'=>false,'label'=>false,"id"=>"leader",'maxlength'=>'50','type'=>'checkbox','value'=>'1')); ?> 
 		<br />
 		<?php } ?>
-		<input name="" type="submit" value="Add <?php if($st_or_edu=="educator") { ?>Educator<?}else{?>Student<?}?>" class="create-account"/>
+		<input name="" type="submit" value="Add <?php if($st_or_edu=="educator") { ?>Educator<?}else{?>Student<?}?>" class="submit"/>
 		<input type="hidden" name="referer" id="referer" value="<?php echo $referer?>" />
 		<input type="hidden" name="userType" id="userType" value="<?php echo $st_or_edu?>" />
  		<input type="hidden" name="departmentId" id="departmentId" value="<?php echo $departmentId; ?>" />

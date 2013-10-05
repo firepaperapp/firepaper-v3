@@ -67,7 +67,7 @@ function closeWindow()
 	   <p><?php echo $this->Form->input('Department.title',array('div'=>false,'label'=>false,"id"=>"title",'maxlength'=>'150'));?> </p>
 	   <p>
 	<input type="hidden" name="data[Department][dept_id]" id="dept_id" value="<?php echo $dept_id;?>" />
-	 <input name="btnSubmit" type="submit" value="Save" class="create-account"/>
+	 <input name="btnSubmit" type="submit" value="Save" class="submit"/>
 	 </p>
 	 <div id="containerLoader"></div>
 	</form>
