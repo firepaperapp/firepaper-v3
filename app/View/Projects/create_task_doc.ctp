@@ -77,7 +77,7 @@
 						      <span>Add your weight &rarr;</span>      
 						      <?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 					     
 					    </div>
-				        <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>file-icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>
+				        <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>
 				        <div class="file-name"><a href="javascript:void(0);" id="tool-tip" >
 					        <?php 
 							echo $fileDetail['userFile']['file_name'];
