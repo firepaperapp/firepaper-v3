@@ -239,7 +239,10 @@ $(document).ready(function(){
 					          	<?php //pa($rec['projectTask']);
 					  			if(!isNull($rec['projectTask']['refer_file_id']))
 					  			{?>
-					  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>"><img src="<?php echo IMAGES_PATH;?>file-icons/<?php echo $rec['fileType']['icon']?>" /><p class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
+					  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>">
+									<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" />
+									
+									<p class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
 					  			<?php
 					  			}	
 								else
