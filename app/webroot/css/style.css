@@ -1160,6 +1160,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 }
 .project-comments .task-comment {
 	background: url("../images/comment-arrow.png") no-repeat left 20px;
+	padding-left: 46px;
 }
 .project-drop-area-wrapper .task-title { 
 	position: static !important;

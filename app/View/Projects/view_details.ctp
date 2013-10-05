@@ -131,7 +131,7 @@
 					       
 				<?php
 					}?>
-					<div class="project-rule"></div>
+					
 					<div class="width100Per" id="extraDocs_<?php echo $rec['prjTask']['id'];?>" style="display:none;">	
 				 	    
 					 </div>
@@ -164,7 +164,8 @@
 				 
 				</div>				
 				
-				<div class="clr-spacer"></div> 	
+				<div class="clr-spacer"></div> 
+					
 				<?php }?>
 			
 	      
@@ -210,7 +211,8 @@ $box = "task-comment";
 		 </div>		
 	 	<?php }?>	
 	 	</div><!-- end project wrapper -->
-	   	  <div class="clr"></div>    
+	   	  <div class="clr"></div>   
+	   	  <div class="project-rule"></div> 
 	    <?php
 	    }
 	    $status = "u"; //Project Un Completed
