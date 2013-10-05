@@ -61,6 +61,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 {?>
 	
 	<h4>Comments</h4>
+	<div class="project-comments">
 	<?php
 	foreach($taskComments as $rec)
 	{
@@ -106,7 +107,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId; ?>, '<?php echo $from;?>');" class="edit">Delete</a>
 		</div>
 	</div>
-	
+	</div>	
 	<?php	
 	}
 	?>

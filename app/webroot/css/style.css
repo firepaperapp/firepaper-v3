@@ -1158,7 +1158,9 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .project-drop-area-wrapper .width100Per {
 	margin-top: 20px;
 }
-
+.project-comments .task-comment {
+	background: url("../images/comment-arrow.png") no-repeat left 20px;
+}
 .project-drop-area-wrapper .task-title { 
 	position: static !important;
 } 
