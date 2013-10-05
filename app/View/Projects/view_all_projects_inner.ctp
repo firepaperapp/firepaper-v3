@@ -77,7 +77,7 @@
 <!-- End Progress bar -->
 <!-- Details -->
 	<div class="details">
-		<h3>Course details</h3>
+		<h3>Details</h3>
 		<p><?php echo Sanitize::html($rec['Project']['title']);?> </p>
 		<div class="project-content">
 		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 

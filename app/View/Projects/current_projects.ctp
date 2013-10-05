@@ -90,7 +90,7 @@ $(document).ready(function(){
 		<em>Project</em></div>
 		<div class="project-content">
 		<div class="inner">
-		<h4>Course details</h4>
+		<h4>Details</h4>
 		<div class="note">
 			<p><?php echo Sanitize::html($rec['Project']['description']);?>
 			<span class="started-details">- <?php 
