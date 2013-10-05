@@ -43,7 +43,7 @@ else
 				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>
 				<div class="clr-spacer"></div>-->
-				<h3>Course details</h3> 
+				<h3>Details</h3> 
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			
 			
