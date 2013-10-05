@@ -45,6 +45,7 @@ body {
 	margin:0; 
 	text-align:left; 
 	font-family:"Helvetica Neue", Helvetica, arial, sans-serif; 
+	background: #2a2e37;
 }
 * { 
 	margin:0;
@@ -233,6 +234,7 @@ select {
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;   
 	box-sizing: border-box;
+	background: white;
 }
 .page {
 	padding:54px; 
@@ -416,9 +418,7 @@ select {
 /* Navigation styling */
 
 .nav { 
-
 	width:184px; 
-	background: #2a2e37;
 	position: absolute;
 	top:0;
 	left:0;
