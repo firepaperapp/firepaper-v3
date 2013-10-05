@@ -36,7 +36,7 @@ $(document).ready(function() {
 	
 	});
 </script>
-<div class="col2 widget">
+<div class="col2 widget" style="display:none;">
 
 <ul class="tabs">
  	<?php  	
