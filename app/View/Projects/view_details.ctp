@@ -163,9 +163,8 @@
 					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
 				 
 				</div>				
-				
-				<div class="clr-spacer"></div> 
-					
+				<div class="project-rule"></div>
+				<div class="clr-spacer"></div> 	
 				<?php }?>
 			
 	      
@@ -211,8 +210,7 @@ $box = "task-comment";
 		 </div>		
 	 	<?php }?>	
 	 	</div><!-- end project wrapper -->
-	   	  <div class="clr"></div>   
-	   	  <div class="project-rule"></div> 
+	   	  <div class="clr"></div>    
 	    <?php
 	    }
 	    $status = "u"; //Project Un Completed
