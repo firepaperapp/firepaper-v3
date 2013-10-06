@@ -19,12 +19,7 @@
 }
 
 .file_upload_small {
-  width: 200px;
-  height: 30px;
-  line-height: 30px;
-  font-size: auto;
-  background: palegreen;
-  border: 1px solid limegreen;
+ 
 }
 
 .file_upload_large {
