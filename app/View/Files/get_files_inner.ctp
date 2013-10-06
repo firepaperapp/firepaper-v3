@@ -122,7 +122,7 @@ if(count($data)>0)
 							<div id="validation-container-success-task<?php echo $rec['userFile']['id']?>" class="success" style=" display: none;"></div>
 							<script type="text/javascript">
 								
-								function test_<?php echo $rec['userFile']['id']?>
+								function test_<?php echo $rec['userFile']['id']?>()
 								{
 								var btnUpload = $('#uploadfile'+<?php echo $rec['userFile']['id']?>);
 								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
