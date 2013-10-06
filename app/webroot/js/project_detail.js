@@ -12,7 +12,7 @@ $(document).ready(function() {
 		var taskId = myId.split("_");
  
  	 	if($("#"+myId).hasClass("file_upload") == false)
-	 	{alert('hajj');
+	 	{
 		 $("#"+myId).fileUploadUI({
 		 	dragDropSupport: false,
 	        uploadTable: $('#filesDrag'+taskId[1]),
