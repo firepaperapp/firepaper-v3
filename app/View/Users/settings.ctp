@@ -110,21 +110,21 @@ else
                 <br />-->
 				<span id="status" ></span>
 
-                <h3>Username:</h3> 
+               <!-- <h3>Username:</h3> 
 					<div id="usernamediv" style="width:200px;"><?php echo trim(Sanitize::html($userdata['User']['username']));?></div>
 					<a  class="edit" id="editusernamelink">Edit</a>
 				</p>
 
 				<?php echo $this->Form->create('User', array('type' => 'post','id'=>'usernameform')); ?>
-						
+		
 			   <div id="usernamebox" style="display:none;">
 			   <?php echo  $this->Form->input('username',array('label'=> false,'maxlength'=>'150','value'=>$userdata['User']['username'], 'id'=>'username' )); ?>			  
 			   <span style="float:left"><?php echo  $this->Form->submit('Ok',array('label'=> false,"div"=>false))?></span><?php echo  $this->Form->button('Cancel',array('label'=> false,'id'=>'cancelusername',"div"=>false))?>
 				   
-				</div>
+				</div>-->
 				</form>
 				<div style="display:none">
-				<br /> 
+				<!--<br /> 
                 <h3>Company URL on firepaperapp:</h3>
 
 					<input id="companyurl" name="companyurl" type="text" value="<?php echo $userdata['User']['sitetitle']?>"/>
@@ -132,7 +132,7 @@ else
 
 					<a id="edit_companyurl_link" class="edit">Save</a>	
 				</div>			
-				</p>
+				</p>-->
 			
                 <h3>Country:</h3><a id="editcountrylink" class="edit">Save</a>
 				</p> 
