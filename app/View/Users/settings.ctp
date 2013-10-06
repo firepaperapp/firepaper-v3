@@ -62,7 +62,8 @@ else
 						
 			   <div id="emailbox" style="display:none;">
 				Email : <?php echo  $this->Form->input('email',array('label'=> false,'maxlength'=>'150','value'=>$userdata['User']['email'], 'id'=>'email' )); ?>			  
-			   <span style="float:left"><?php echo  $this->Form->submit('Ok',array('label'=> false,"div"=>false))?></span><?php echo  $this->Form->button('Cancel',array('label'=> false,'id'=>'cancelemail',"div"=>false))?>
+			   <?php echo  $this->Form->submit('Ok',array('label'=>, 'class'=>'submit' false,"div"=>false))?>
+			   <?php echo  $this->Form->button('Cancel',array('label'=> false,'id'=>'cancelemail',"div"=>false))?>
 				   
 				</div>
 				</form>
