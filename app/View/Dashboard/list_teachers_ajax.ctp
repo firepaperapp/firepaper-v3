@@ -69,20 +69,20 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 					
       			  </div>
 	       		 <div class="row">
-	       		 
+	       		 <div class="user-box-wrapper">
 					<div class="user-box-left">		 			
 		   <?php }
 		   		 else 
 		   		 {
 		   		 	if($i==0)
 		   		 	{?>
-		   		 	
+		   		 	<div class="user-box-wrapper">
 		   		 		<div class="user-box-left">
 		   		 	<?php 
 		   		 	}
 		   		 	else {
 		   		 	?>
-		   		 	
+		   		 	<div class="user-box-wrapper">
 		   		 		<div class="user-box">	
 		   		 	<?php 
 		   		 	}
@@ -110,7 +110,9 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 	 					 <?php echo $subjects;?></p>
 						<a href="<?php echo $editpgurl; ?>" class="edit">View info</a>				
 			        </div>
-				
+					
+			    </div>  
+			  </div> 
 		<?php
 		$k++;	
 	     $i++;		 
@@ -118,7 +120,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 		 }?>
 		 <div class="clr"></div>
      </div>
-   
+    </div> 
 <?php }
 	else 
 	{
