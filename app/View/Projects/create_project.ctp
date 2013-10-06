@@ -172,14 +172,15 @@ $(document).ready(function(){
 				</div>			
 			 
 				<div class="dropFileHere project-drop-area">
-					<p>Drag a document here <span>or</span> 
-					<table id="files"></table>
+					<p>Drag a document here </p>
+					
 					<form id="file_upload" action="<?php echo SITE_HTTP_URL;?>files/uploadFile" method="POST" enctype="multipart/form-data">
 		    		<input type="file" class="uploadfile" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 					</form>  
-					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>--></p>
+					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>-->
+					<table id="files"></table>
 				</div>
 			
 
