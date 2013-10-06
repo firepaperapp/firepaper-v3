@@ -54,7 +54,7 @@ else
 
 				<p class="width100per">
 					<h3>Email:</h3>
-					<div id="emailcontent" style="width:200px;"><?php echo trim(Sanitize::html($userdata['User']['email']));?></div>
+					<div id="emailcontent" style="width:300px;"><?php echo trim(Sanitize::html($userdata['User']['email']));?></div>
 					<a href="javascript:void(0);" class="edit" id="editemaillink">Edit</a>
 				</p>
 				
@@ -62,7 +62,7 @@ else
 						
 			   <div id="emailbox" style="display:none;">
 				Email : <?php echo  $this->Form->input('email',array('label'=> false,'maxlength'=>'150','value'=>$userdata['User']['email'], 'id'=>'email' )); ?>			  
-			   <?php echo  $this->Form->submit('Ok',array('label'=> false,"div"=>false))?>
+			   <?php echo  $this->Form->submit('Ok',array('label'=> false,,'id'=>'cancelemail',"div"=>false))?>
 			   <?php echo  $this->Form->button('Cancel',array('label'=> false,'id'=>'cancelemail',"div"=>false))?>
 				   
 				</div>
