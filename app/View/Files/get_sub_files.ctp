@@ -34,7 +34,7 @@ if(isset($rec['Revison']))
 	foreach($rec['Revison'] as $recSub)
 	{?>
 		<div class="file-name file-name-border">
-			<img src="<?php echo IMAGES_PATH;?>icons/<?php echo $recSub['fileType']['icon'];?>" />
+			<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $recSub['fileType']['icon'];?>" />
 			
 			<a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $recSub['userFile']['id']?>" id="tool-tip"><span id="fileProject_<?php echo $recSub['userFile']['id'];?>" class="dragFileForProject" style="color:black;"><?php echo $recSub['userFile']['file_name']?></span></a> <em></em> 
 			<p class="file-links">

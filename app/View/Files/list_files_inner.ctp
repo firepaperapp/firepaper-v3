@@ -34,7 +34,7 @@ $(document).ready(function() {
 			 
 			<div class="file dragFiles" id="dragFile_<?php echo $files['userFile']['id'];?>">
 				<div class="move"></div>
-				<img src="<?php echo IMAGES_PATH;?>icons/<?php echo $files['fileType']['icon']?>" />
+				<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $files['fileType']['icon']?>" />
 				<a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $files['userFile']['id']?>"><?php echo $files['userFile']['file_name']?></a> <em>- <?php echo date("m/d/Y",strtotime($files['userFile']['uploaded']))?></em>
 			</div>
 		<?php
