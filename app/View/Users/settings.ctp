@@ -45,9 +45,9 @@ else
 			 <div id="emailboxloader" style="display:none;"></div> 
                 <h3>Name:</h3>
 					<div id="name" style="width:200px;">
-					<p><?php echo trim(ucfirst(Sanitize::html($userdata['User']['firstname'] . " " . $userdata['User']['lastname'])));?></div>
+					<?php echo trim(ucfirst(Sanitize::html($userdata['User']['firstname'] . " " . $userdata['User']['lastname'])));?></div>
 					<a href="javascript:void(0);" class="edit" id="editnamelink" >Edit</a>
-				</p>
+				
 				<br />
 
                 <input type="hidden" id="hiddenemail" style="display:none;" value="<?php echo Sanitize::html($userdata['User']['email']); ?>">
