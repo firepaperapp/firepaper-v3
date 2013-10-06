@@ -198,7 +198,7 @@ $(document).ready(function(){
 		   			<h3>Your task title<span class="mandatory">*</span></h3>
 		   			<?php echo $this->Form->input('projectTask.title',array('div'=>false,'label'=>false,"id"=>"taskTitle",'maxlength'=>'150','class'=>'task-input'));?> 
 		   			
-		     		<div class="col-weight">
+		     		<div class="weight-col">
 		     		<p>Add your weight &rarr;</p>
 		    			 
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
@@ -237,7 +237,7 @@ $(document).ready(function(){
 	  			<div  id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 			        <div class="project-brief-box-wrapper createdTasksCl">
 				           <div class="project-drop-area-wrapper">
-				           		<div class="col-weight" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>%<a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
+				           		<div class="weight-col" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>%<a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
 					          	<?php //pa($rec['projectTask']);
 					  			if(!isNull($rec['projectTask']['refer_file_id']))
 					  			{?>
