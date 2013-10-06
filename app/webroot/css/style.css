@@ -411,7 +411,7 @@ select {
 	width: 100%;
 	clear: both;
 }
-.add-people p {
+.add-people p, .width100per p {
 	font-style: italic;
 	color: #abaaaa;
 	font-size: 14px;
