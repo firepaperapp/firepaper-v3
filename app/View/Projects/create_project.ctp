@@ -355,18 +355,18 @@ $(document).ready(function(){
 						<select id="usersGroups" name="usersGroups"></select>
 					</div>
 					<div class="clr-spacer"></div>
-							<div class="add-people">
-								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
-							<select id="otherUsers" name="otherUsers"></select>
-							</div>
-							<div id="containerLoader"></div>
-							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
-							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
+					<div class="add-people">
+						<p><strong>Note:</strong> Enter the keyword to search premium students</p>
+					<select id="otherUsers" name="otherUsers"></select>
+					</div>
+					<div id="containerLoader"></div>
+					<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
+					<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 				
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
-       <div class="clr-spacer"></div>
+       <div class="add-people">
 	        <h3>Changes In Project</h3>
 	 	    <p><strong>Note:</strong> Please enter the changes that you made.</p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
