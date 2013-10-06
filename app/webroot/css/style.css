@@ -1977,7 +1977,12 @@ div.file-name em {
 .versions-inner .file-links {
     margin-bottom: 5px;
 }
-
+.versions-inner .file_upload {
+	
+}
+.versions-inner .file_upload div, .versions-inner .file_upload a {
+	display: none;
+}
 .edit:hover {
     text-decoration: underline;
 }
