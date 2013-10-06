@@ -1720,7 +1720,11 @@ p.contact span {
 	margin-right:4px; 
 	
 }
-.file-name a { 
+.file-name .edit {
+	color: #e06161;
+	font-size: 13px;
+}
+.file-name a {
 	color:#686b6c;
 	
 }
