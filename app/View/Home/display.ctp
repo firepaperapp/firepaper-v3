@@ -17,10 +17,10 @@
 </script>
 <div class="main-signup">
 	
-		<?php echo $this->Form->input('user_type',array('type'=>'select','div'=>false,'label'=>false,'options'=>$userTypes,'id'=>"user_type"));?>
+		<?php echo $this->Form->input('user_type',array('type'=>'select','div'=>false,'class'=>'user_list','label'=>false,'options'=>$userTypes,'id'=>"user_type"));?>
 		
 		<p class="sign-in-link">
-		<a href="#" onclick="redirect();">Sign Up</a> or <a href="<?php echo SITE_HTTP_URL?>login" class="sign-in" >Login</a>
+		<a href="#" class="sign-in" onclick="redirect();">Sign Up</a> or <a href="<?php echo SITE_HTTP_URL?>login" class="sign-in" >Login</a>
 		</p>
 		
 		
