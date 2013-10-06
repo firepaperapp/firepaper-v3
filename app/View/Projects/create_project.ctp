@@ -368,7 +368,7 @@ $(document).ready(function(){
         {?>
        <div class="clr"></div>
 	        <h3>Changes In Project</h3>
-	 	    <p>Note: Please enter the changes that you made.</p>
+	 	    <p><strong>Note:</strong> Please enter the changes that you made.</p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
 	        
 		<?php }?>
