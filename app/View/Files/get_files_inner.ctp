@@ -6,7 +6,6 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload-ui.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-ui.min.js"></script>
 
-
 <?php
 	if($this->Session->check('Message.flash'))
 	{?>
@@ -112,20 +111,17 @@ if(count($data)>0)
 						 	{	
 						 	?>
 	              	  	   	<table id="uploadRevison_<?php echo $rec['userFile']['id'];?>"></table>
-							<form id="form_<?php echo $rec['userFile']['id'];?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/<?php echo $rec['userFile']['id'];?>?category_id=<?php echo $recCategory['fileCategory']['id']?>" method="POST" enctype="multipart/form-data" class="upload-link">	
-								<input type="file" id="uploadfile<?php echo $rec['userFile']['id']?>" name="data[userFile][uploadfile]" />
-								<input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
-								<a onclick="test_<?php echo $rec['userFile']['id']; ?>()" href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile">Upload</a>
-								<div>Upload a new version</div>
-							</form>
+			           	   	<form id="form_<?php echo $rec['userFile']['id'];?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/<?php echo $rec['userFile']['id'];?>?category_id=<?php echo $recCategory['fileCategory']['id']?>" method="POST" enctype="multipart/form-data" class="upload-link">	
+		                	 <input type="file" id="uploadfile<?php echo $rec['userFile']['id']?>" name="data[userFile][uploadfile]" />
+							 <input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
+				    		 <a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile">Upload</a>
+				   			 <div>Upload a new version</div>
+		               		</form>
 							<div id="validation-container-task<?php echo $rec['userFile']['id']?>" class="validation-signup" style="display:none;"></div>
 							<div id="validation-container-success-task<?php echo $rec['userFile']['id']?>" class="success" style=" display: none;"></div>
 							<script type="text/javascript">
-								
-								function test_<?php echo $rec['userFile']['id']?>()
-								{alert('papa');
 								var btnUpload = $('#uploadfile'+<?php echo $rec['userFile']['id']?>);
-								//var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
+								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
 								$('#form_'+<?php echo $rec['userFile']['id']?>).fileUploadUI({
 									dragDropSupport: true,
 									uploadTable: $('#uploadRevison_'+<?php echo $rec['userFile']['id'];?>),
@@ -158,7 +154,6 @@ if(count($data)>0)
 												}        
 									}
 								});
-								}
 							</script>
                				 <?php } ?>
 							<div id="revisions<?php echo $rec['userFile']['id'];?>" class="clr">
@@ -249,5 +244,4 @@ $('.upload-link').each(function(){
 	 	}	
 	 
 	});
-</script>
-<script type="text/javascript" src="<?php echo JS_PATH;?>project_detail.js"></script>
+</script>s
