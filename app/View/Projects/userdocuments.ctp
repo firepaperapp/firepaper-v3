@@ -14,7 +14,7 @@ if(count($taskDocs)>0)
 			<?php
 			if($rec['fileType']['icon']!="")
 			{?>
-				<img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" />	
+				<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon'];?>" />	
 		<?php
 			}?>
 			<a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $rec['prjTaskUserDoc']['refer_file_id']?>" id="tool-tip"><?php echo $rec['prjTaskUserDoc']['title'];?></a> 

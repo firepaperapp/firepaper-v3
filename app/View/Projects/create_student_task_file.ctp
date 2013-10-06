@@ -11,7 +11,7 @@
 		</div>
 		<!-- end col-left -->
 		<div class="col-middle">
-			  <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>
+			  <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>
 			 <div class="file-name drag-file"><a href="javascript:void(0);" id="tool-tip" >
 		        <?php 
 		        $name = explode(".",$fileDetail['userFile']['file_name']);
