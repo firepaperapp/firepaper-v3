@@ -123,7 +123,7 @@ if(count($data)>0)
 							<script type="text/javascript">
 								
 								function test_<?php echo $rec['userFile']['id']?>()
-								{
+								{alert('papa');
 								var btnUpload = $('#uploadfile'+<?php echo $rec['userFile']['id']?>);
 								var status = $('#loaderJsTask'+<?php echo $rec['userFile']['id']?>);
 								$('#form_'+<?php echo $rec['userFile']['id']?>).fileUploadUI({
