@@ -1170,6 +1170,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	position: static !important;
 } 
 .project-drop-area { 
+	position: relative;
 	padding:20px 25px 35px 25px; 
 	background:#fcfcfc; 
 	border:1px dashed #abaaaa !important; 
