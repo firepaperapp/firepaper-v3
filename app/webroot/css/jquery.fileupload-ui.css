@@ -40,7 +40,9 @@
   background: lawngreen;
 }
 .project-drop-area #files {
-	float: left;
+	position: absolute;
+	top:32px;
+	background:#fcfcfc;
 }
 .file_upload input {
  position: absolute;
@@ -57,7 +59,10 @@
   -moz-transform: translate(0px, 0) scale(10); */
   cursor: pointer;
 }
-
+.file_upload_progress {
+	margin-left: 4px;
+	margin-top: 2px;
+}
 .file_upload div { 
 padding: 4px 14px;
 
