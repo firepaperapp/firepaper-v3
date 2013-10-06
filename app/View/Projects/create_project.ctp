@@ -349,7 +349,7 @@ $(document).ready(function(){
 	<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
 	      <h3>Invite</h3>
-	           <div class="width100per">
+	           
 		           <div class="add-people"> 
 					<p><strong>Note:</strong> Enter the keyword to search groups</p>
 						<select id="usersGroups" name="usersGroups"></select>
@@ -366,7 +366,7 @@ $(document).ready(function(){
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
-       <div class="clr"></div>
+       <div class="clr-spacer"></div>
 	        <h3>Changes In Project</h3>
 	 	    <p><strong>Note:</strong> Please enter the changes that you made.</p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
