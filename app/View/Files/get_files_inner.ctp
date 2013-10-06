@@ -202,7 +202,7 @@ echo "<p>".ERR_RECORD_NOT_FOUND."</p>";
 <div class="clr"></div>
 </div>
 <script>
-$('.upload-link').each(function(){ alert("ddd");
+$('.upload-link').each(function(){ 
 		var myId = $(this).attr('id');
 		
 		var btnUpload = $('#form_'+myId);
