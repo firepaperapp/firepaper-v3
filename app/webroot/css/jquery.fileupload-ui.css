@@ -30,8 +30,7 @@
 	height: 150px;
 	line-height: 150px;
 	font-size: 20px;
-	background: #f4f4f4;
-	opacity: 0;
+	background: red;
 }
 
 .file_upload_highlight {
