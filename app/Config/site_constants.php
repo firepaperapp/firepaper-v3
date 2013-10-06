@@ -46,7 +46,7 @@ $cardTypes = array("American"=>"American Express Card",
 					"Visa"=>"Visa Card");
 $defaultTimeZone = "-8.0";
 $videoArray = array("mpg", "mov", "wmv", "wma", "rm","avi","flv","mpg","swf");
-$filesArray = array("gif",'jpg','jpeg', 'doc','xslx','pdf','ppt','mp3','wav','wvi','flv','mpg','mov','wmv','rm','avi','mpg','swf','png', 'html', 'ttf', "psd", "docx", "doc", "pptx", "xls");
+$filesArray = array('3gp','7z','ace','ai','aif','aiff','amr','asf','asx','bat','bin','bmp','bup','cab','cbr','cda','cdl','cdr','chm','dat','divx','dll','dmg','doc','dss','dvf','docx','dwg','eml','eps','exe','fla','flv','gif','gz','hqx','htm','html','ifo','indd','iso','jar','jpeg','jpg','lnk','log','m4a','m4b','m4p','m4v','mcd','mdb','mid','mov','mp2','mp4','mpg','mpeg','msi','mswmm','ogg','pdf','png','pps','ppt','pptx','ps','psd','pst','ptb','pub','qbb','qbw','qxd','ram','rar','rm','rmvb','rtf','sea','ses','sit','sitx','ss','swf','tgz','thm','tif','tmp','tiff','torrent','ttf','txt','vcd','vob','wav','wma','wmv','wps','xls','xlsx','xpi','zip');
 
 
 define("PAGE_LIMIT",4);
