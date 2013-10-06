@@ -8,19 +8,19 @@ $(document).ready(function(){
 <div id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 <div class="project-brief-box-wrapper createdTasksCl">
        <div class="project-drop-area-wrapper">
-       		<div class="weight-col" style="width:50px;">
+       		<div class="weight-col">
        		<span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?>%</span>
        		
        		</div>
-          	<p><?php //pa($rec['projectTask']);
+          	<?php //pa($rec['projectTask']);
   			if(!isNull($rec['projectTask']['refer_file_id']))
   			{?>
-  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>"><img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" /><span class="task-title"><?php echo $rec['projectTask']['file_name'];?></span></a>
+  				<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" /><div class="file-name"><a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>"><?php echo $rec['projectTask']['file_name'];?></a></div>
   			<?php
   			}	
 			else
 			{?>
-				<span class="task-title"><?php echo $rec['projectTask']['title'];?></span>
+				<div class="file-name"><?php echo $rec['projectTask']['title'];?></div>
 			<?php
 			}
 			?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
@@ -28,9 +28,7 @@ $(document).ready(function(){
 			<span id="extraDoc_<?php echo $rec['projectTask']['id']?>" style="display:none;">&nbsp;-&nbsp;
 			<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>)">View Other Docs</a>
 			</span>
-								
-		 
-			</p>
+			
 			
 			<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo $commentsFortask;?> Comment(s)</a></p> 
 
