@@ -1178,6 +1178,7 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 	font-weight:bold; 
 	margin-top:16px; 
 	height:28px; 
+	margin-bottom: 12px;
 }
 .page-wrapper {
     background: #E8EAED url(../images/border-lines.gif);
@@ -2799,7 +2800,7 @@ textarea#projectDesc {
 	padding-top: 5px;
 }
 .submit-wrapper span a {
-	font-size: 3px;
+	font-size: 13px;
 }
 .submit-wrapper .submit {
     margin-top: 0;
@@ -2829,6 +2830,9 @@ p.field-title {
     background: url('../images/project-details.jpg') no-repeat;
     width: 620px;
     height: 598px;
+}
+#taskUnderDiv {
+	margin-top: 20px;
 }
 /* Sign Up styling */
 
