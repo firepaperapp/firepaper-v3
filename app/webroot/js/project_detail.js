@@ -7,12 +7,12 @@ $(document).ready(function() {
 	
 	$('.upload-link').each(function(){
 		var myId = $(this).attr('id');
-		var btnUpload = $('#form_'+myId);alert(btnUpload);
+		var btnUpload = $('#form_'+myId);
 		var status=$('#status');
 		var taskId = myId.split("_");
  
  	 	if($("#"+myId).hasClass("file_upload") == false)
-	 	{
+	 	{alert('hajj');
 		 $("#"+myId).fileUploadUI({
 		 	dragDropSupport: false,
 	        uploadTable: $('#filesDrag'+taskId[1]),
