@@ -3167,7 +3167,7 @@ form.editinplaceform {
 	font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     font-weight: bold !important;
 }
-.editTaskWeight input {
+.editTaskWeight form input {
 	width: 20%;
 }
 .add {
