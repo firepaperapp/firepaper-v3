@@ -2550,6 +2550,7 @@ p.form-title {
 
 
 .project-drop-area p {
+	float: left;
 	text-align: left; 
 	font-weight: normal; 
 	font-style: italic; 
