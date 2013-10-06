@@ -202,9 +202,9 @@ echo "<p>".ERR_RECORD_NOT_FOUND."</p>";
 <div class="clr"></div>
 </div>
 <script>
-$('.upload-link').each(function(){
+$('.upload-link').each(function(){ alert("ddd");
 		var myId = $(this).attr('id');
-		alert(myId);
+		
 		var btnUpload = $('#form_'+myId);
 		var status=$('#status');
 		var taskId = myId.split("_");
@@ -244,4 +244,4 @@ $('.upload-link').each(function(){
 	 	}	
 	 
 	});
-</script>s
+</script>
