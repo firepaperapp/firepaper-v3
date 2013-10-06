@@ -7,6 +7,7 @@ $(document).ready(function() {
 	
 	$('.upload-link').each(function(){
 		var myId = $(this).attr('id');
+		alert(myId);
 		var btnUpload = $('#form_'+myId);
 		var status=$('#status');
 		var taskId = myId.split("_");
