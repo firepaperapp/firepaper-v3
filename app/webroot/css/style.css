@@ -1704,7 +1704,7 @@ p.contact span {
     float: left;
     height: 32px;
     width: 27px;
-    margin-right: 8px;
+    margin-right: 14px;
 }
 
 .file-box .file-name img {
@@ -2767,7 +2767,7 @@ textarea#projectDesc {
 }
 
 .task-input {
-    width: 75%;
+    width: 65%;
     margin-top: 0;
     float: left;
 }
@@ -3139,7 +3139,7 @@ ul#archived-list .month {
 
 .weight-col {
     position: absolute;
-    top: 10px;
+    top: 37px;
     right: 0;
     float: right;
     color: #a9abae;
@@ -3256,8 +3256,10 @@ ul#archived-list .month {
 }
 
 .weight-col p {
-	color: #AAA9A9; 
+	color: #fca55f; 
 	float: left;
+	font-weight: normal;
+	font-size: 16px;
 }
 .weight-col a.editLink {
 	text-align: left;
