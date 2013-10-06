@@ -2788,13 +2788,13 @@ textarea#projectDesc {
     line-height: 25px;
 }
 .submit-wrapper span {
-	font-size: 14px;
+	font-size: 13px;
 	color: #abaaaa;
 	display: inline-block;
 	padding-top: 5px;
 }
 .submit-wrapper span a {
-	font-size: 14px;
+	font-size: 3px;
 }
 .submit-wrapper .submit {
     margin-top: 0;
@@ -3153,6 +3153,10 @@ ul#archived-list .month {
 	float: left;
 	font-weight: normal;
 	font-size: 16px;
+	line-height: 35px;
+}
+#createTaskForm .project-drop-area-wrapper .weight-col {
+	margin-top: 27px;
 }
 form.editinplaceform {
 	border:1px solid red;
