@@ -148,14 +148,14 @@ $(document).ready(function(){
      <div class="line"></div>
  	<div id="docAndTask" style="<?php //echo $d;?>">
  	 	<div class="left">
-	    <h3>Documents <span>&amp;</span> Tasks</h3>
+	    	<h3>Documents <span>&amp;</span> Tasks</h3>
 	 	</div>
 	    <div class="right">
-	    <h3>Weight</h3>
+	    	<h3>Weight</h3>
 	    </div>
-<div class="clr"></div>
-<h3>Create a Task</h3>
-<div class="clr"></div>
+	    <div class="clr"></div>
+	    	<h3>Create a Task</h3>
+	    <div class="clr"></div>
 	   	<div id="loaderJsTask"></div>
 		        
 			<div class="project-drop-area-wrapper">
@@ -349,14 +349,12 @@ $(document).ready(function(){
 	<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
 	      <h3>Invite</h3>
-	      <div class="project-drop-area-wrapper">
-		          <div class="add file-details-project">            	            	
-		            	 <div class="width100per">
-		            	 	<div class="add-people"> 
-							 	 <p><strong>Note:</strong> Enter the keyword to search groups</p>
-								 <select id="usersGroups" name="usersGroups"></select>
-							</div>
-							<div class="clr-spacer"></div>
+	           <div class="width100per">
+		           <div class="add-people"> 
+					<p><strong>Note:</strong> Enter the keyword to search groups</p>
+						<select id="usersGroups" name="usersGroups"></select>
+					</div>
+					<div class="clr-spacer"></div>
 							<div class="add-people">
 								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
 							<select id="otherUsers" name="otherUsers"></select>
@@ -364,24 +362,15 @@ $(document).ready(function(){
 							<div id="containerLoader"></div>
 							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
-						</div>				
-				</div>
-                
+				
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
        <div class="clr"></div>
-	          <h3>Changes In Project</h3>
-	 	    
-        <div class="project-brief-box-wrapper"> 
-        	
-	          <div class="add file-details-project">   
-	          		
-	          		<p><small>Note: Please enter the changes that you made.</small></p>
+	        <h3>Changes In Project</h3>
+	 	    <p>Note: Please enter the changes that you made.</p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
-	          </div>
-	       
-        </div>
+	        
 		<?php }?>
         </form>
         <div class="clr-spacer-height"></div>
