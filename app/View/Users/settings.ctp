@@ -86,7 +86,7 @@ else
 
 				   Confirm Password : <?php echo  $this->Form->input('cpassword',array('label'=> false,'maxlength'=>'50','value'=>'', 'type'=>'password','id'=>'cpassword'))?>
 
-				   <p style="float:left;margin-top:10px;"><?php echo  $this->Form->submit('Ok',array('label'=> false,"div"=>false))?><?php echo  $this->Form->button('Cancel',array('label'=> false,'id'=>'cancelpwd'))?></p>
+				   <p style="float:left;margin-top:10px;"><?php echo  $this->Form->submit('Ok',array('label'=> false,'class'=>'submit',"div"=>false))?><?php echo  $this->Form->button('Cancel',array('label'=> false,'id'=>'cancelpwd'))?></p>
 					   
 				</div>
                 </form>
@@ -124,7 +124,7 @@ else
 				</div>-->
 				</form>
 				<div style="display:none">
-				<!--<br /> 
+				<br /> 
                 <h3>Company URL on firepaperapp:</h3>
 
 					<input id="companyurl" name="companyurl" type="text" value="<?php echo $userdata['User']['sitetitle']?>"/>
@@ -132,7 +132,7 @@ else
 
 					<a id="edit_companyurl_link" class="edit">Save</a>	
 				</div>			
-				</p>-->
+				</p>
 			
                 <h3>Country:</h3><a id="editcountrylink" class="edit">Save</a>
 				</p> 
