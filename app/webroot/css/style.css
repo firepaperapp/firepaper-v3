@@ -50,6 +50,7 @@ body {
 .wrapper {
 	height: 100%;
 	width: 100%;
+	background: #2a2e37;
 }
 * { 
 	margin:0;
@@ -430,7 +431,6 @@ select {
 	bottom: 0;
 	height: 100%;
 	margin-left:0; 
-	background: #2a2e37;
 }
 .nav .profile-image {
 	float: right;
