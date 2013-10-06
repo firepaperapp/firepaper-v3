@@ -3254,16 +3254,12 @@ ul#archived-list .month {
 	color: #AAA9A9; 
 	float: left;
 }
-.weight-col a {
-	text-align: center;
+.weight-col a.editLink {
+	text-align: left;
+	font-size: 13px;
 }
 .weight-col span {
-	font-size: 14px;
-	font-style: italic;
-	font-weight: normal;
-	margin-top: 10px;
-	display: inline-block;
-	color: #fca55f;
+	
 }
 .weight-col .weight { 
 	color:white; 
