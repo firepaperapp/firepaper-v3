@@ -113,7 +113,7 @@ if(count($data)>0)
 			           	   	<form id="form_<?php echo $rec['userFile']['id'];?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/<?php echo $rec['userFile']['id'];?>?category_id=<?php echo $recCategory['fileCategory']['id']?>" method="POST" enctype="multipart/form-data" class="upload-link">	
 		                	 <input type="file" id="uploadfile<?php echo $rec['userFile']['id']?>" name="data[userFile][uploadfile]" />
 							 <input type="hidden" name="category_id" value="<?php echo $recCategory['fileCategory']['id']?>" />	
-				    		 <!--<a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>-->
+				    		 <a href="javascript:void(0)" class="uploadfilterfile" id="uploadfilterfile_<?php echo $rec['userFile']['id']?>">Upload</a>
 				   			 <div>Upload a new version</div>
 		               		</form>
 							<div id="validation-container-task<?php echo $rec['userFile']['id']?>" class="validation-signup" style="display:none;"></div>
