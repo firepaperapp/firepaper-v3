@@ -172,7 +172,7 @@ $(document).ready(function(){
 				</div>			
 			 
 				<div class="dropFileHere project-drop-area">
-					<p>You can also drag and drop a document here </p>
+					<p>Drag and drop a document here</p>
 					
 					<form id="file_upload" action="<?php echo SITE_HTTP_URL;?>files/uploadFile" method="POST" enctype="multipart/form-data">
 		    		<input type="file" class="uploadfile" id="uploadfile" name="data[userFile][uploadfile]" />    	 
