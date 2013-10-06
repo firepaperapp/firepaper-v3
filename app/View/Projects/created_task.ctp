@@ -55,7 +55,7 @@ $(document).ready(function(){
 	 <div class="clr"></div>
 	 <div id="loaderJsTask_<?php echo $rec['projectTask']['id']?>"></div>
 			<div class="dropTaskFileHere project-drop-area" id="task_<?php echo $rec['projectTask']['id']?>">
-		<p>Drag a document here or</p> 
+		<p>Drag and drop a document here</p> 
 		<table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
 		<form id="fileupload_<?php echo $rec['projectTask']['id']?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/" method="POST" enctype="multipart/form-data" class="extraTaskDocs">
 		 <input type="file" id="uploadfile" name="data[userFile][uploadfile]" />    	 
