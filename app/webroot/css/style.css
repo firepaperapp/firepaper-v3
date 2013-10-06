@@ -3148,8 +3148,8 @@ ul#archived-list .month {
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     font-weight: bold;
 }
-editinplaceform {
-	background: black;
+form.editinplaceform {
+	border:1px solid red;
 }
 .editTaskWeight {
 	color: #a9abae !important;
