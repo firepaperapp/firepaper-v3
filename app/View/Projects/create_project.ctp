@@ -147,23 +147,15 @@ $(document).ready(function(){
      ?>
      <div class="line"></div>
  	<div id="docAndTask" style="<?php //echo $d;?>">
- 		
-		
-	        <div class="left">
-	          <h3>Documents <span>&amp;</span> Tasks</h3>
-	 	    </div>
-	        <div class="right">
-	          <h3>Weight</h3>
-	        </div>
-        
-	  	<div class="clr"></div>
-
-	       
-	          <h3>Create a Task</h3>
-	 	   
-	       
-      
-	  	<div class="clr"></div>
+ 	 	<div class="left">
+	    <h3>Documents <span>&amp;</span> Tasks</h3>
+	 	</div>
+	    <div class="right">
+	    <h3>Weight</h3>
+	    </div>
+<div class="clr"></div>
+<h3>Create a Task</h3>
+<div class="clr"></div>
 	   	<div id="loaderJsTask"></div>
 		        
 			<div class="project-drop-area-wrapper">
@@ -354,63 +346,31 @@ $(document).ready(function(){
 	  		?>
 	   	</div>
 	  	<div class="clr"></div>
-		
-		
-		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
+	<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
-	       
-	          <h3>Invite</h3>
-	 
-        	<div class="project-drop-area-wrapper">
+	      <h3>Invite</h3>
+	      <div class="project-drop-area-wrapper">
 		          <div class="add file-details-project">            	            	
 		            	 <div class="width100per">
-		            	 	
-							 <div class="add-people"> 
+		            	 	<div class="add-people"> 
 							 	 <p><strong>Note:</strong> Enter the keyword to search groups</p>
 								 <select id="usersGroups" name="usersGroups"></select>
 							</div>
 							<div class="clr-spacer"></div>
 							<div class="add-people">
 								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
-								<select id="otherUsers" name="otherUsers"></select>
+							<select id="otherUsers" name="otherUsers"></select>
 							</div>
-							
 							<div id="containerLoader"></div>
-							
 							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
 							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
 						</div>				
-					
-        </div>
-         <!--< <div class="row">
-	        <div class="left">
-	          <h3>Add Whiteboards</h3>
-	 	    </div>
-	     </div>	   
-	      
-       <div class="project-brief-box-wrapper"> 
-        	<div class="project-drop-area-wrapper">
-		          <div class="add file-details-project">            	            	
-		            	 <div class="width100per">
-		            	 	
-							 <div style="float:left;width:300px;"> 
-							 	 <p><small>Note: Enter the keyword to search whiteboards</small></p>
-								 <select id="whiteboards" name="whiteboards"></select>
-							</div>
-							 
-							<div id="containerLoader1"></div>
-							<p id="showAddMore1" class="width100per" style="display:none;">No records found.</p>
-							 
-						</div>				
-						<p>&nbsp;</p>
-		          </div>
-		    </div>
-        </div>-->
-        
+				</div>
+                
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
-       
+       <div class="clr"></div>
 	          <h3>Changes In Project</h3>
 	 	    
         <div class="project-brief-box-wrapper"> 
