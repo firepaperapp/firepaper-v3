@@ -29,7 +29,7 @@ class EmailComponent extends Component
 
     var $controller;
 
-    function startup( &$controller ) {
+    function startup(Controller &$controller ) {
       $this->controller = &$controller;
     }
 

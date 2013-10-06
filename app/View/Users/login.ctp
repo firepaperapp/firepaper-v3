@@ -17,10 +17,10 @@ if(isset($errMsg))
 <div class="main-signin">  
 <h3>Sign into your account</h3>
 <br />
-<input type="text" <?php if(!$this->request->data){?> onfocus="if(this.value =='Username' ) this.value=''" onblur="if(this.value=='') this.value='Username'"  value="<?php echo $userCookieval;?>" <?}else {?> value="<?php echo $this->request->data['username'];?>" <?php }?> id="username" name="data[username]">
+<input type="text" <?php if(!$this->request->data){?> onfocus="if(this.value =='Username' ) this.value=''" onblur="if(this.value=='') this.value='Username'"  value="<?php echo $userCookieval;?>" <?php }else if ($this->request->data['username']=='') {?> value="<?php echo 'Username'; } else { echo $this->request->data['username']; } ?>" id="username" name="data[username]">
     
     
-     <input type="password" <?php if(!$this->request->data){?>onfocus="if(this.value =='123456789' ) this.value=''" onblur="if(this.value=='') this.value='123456789'" value="<?php echo $passCookieval;?>" <?}else {?> value="<?php echo $this->request->data['password'];?>" <?php }?> id="vPasswordLeft" name="data[password]">
+     <input type="password" <?php if(!$this->request->data){?>onfocus="if(this.value =='123456789' ) this.value=''" onblur="if(this.value=='') this.value='123456789'" value="<?php echo $passCookieval;?>" <?php }else {?> value="<?php echo $this->request->data['password'];?>" <?php }?> id="vPasswordLeft" name="data[password]">
      
     <div class="clr"></div>
      <input name="" type="submit" value="Sign in" class="submit"/>

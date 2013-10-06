@@ -584,6 +584,9 @@ button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 .sign-in {
 	margin-left: 6px;
 }
+select.user_list{
+    margin-left:  30%;
+}
 .submit:hover, .submit-grey:hover, .sign-in:hover {
     color: #454040;
 }
