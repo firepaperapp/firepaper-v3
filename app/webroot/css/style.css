@@ -3148,6 +3148,12 @@ ul#archived-list .month {
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     font-weight: bold;
 }
+.weight-col .add-weight {
+	color: #fca55f; 
+	float: left;
+	font-weight: normal;
+	font-size: 16px;
+}
 form.editinplaceform {
 	border:1px solid red;
 }
@@ -3258,12 +3264,6 @@ form.editinplaceform {
 	margin-bottom:10px; 
 }
 
-.weight-col p {
-	color: #fca55f; 
-	float: left;
-	font-weight: normal;
-	font-size: 16px;
-}
 .weight-col a.editLink {
 	text-align: left;
 	font-size: 13px;
