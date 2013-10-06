@@ -244,12 +244,12 @@ $(document).ready(function(){
 					  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>">
 									<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" />
 									
-									<p class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
+									<div class="file-name"><?php echo $rec['projectTask']['title'];?></span></a>
 					  			<?php
 					  			}	
 								else
 								{?>
-									<p class="task-title"><?php echo $rec['projectTask']['title'];?>
+									<div class="file-name"><?php echo $rec['projectTask']['title'];?>
 								<?php
 								}
 								?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
@@ -258,7 +258,7 @@ $(document).ready(function(){
 								if($rec[0]['extraDocs'] == 0)
 								{?>display:none;<?php }?>">&nbsp;-&nbsp;
 								<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>)">View Other Docs</a>
-								</p>
+								</div>
 								
 								
 	<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo count($rec['projComments']);?> Comment(s)</a></p> 
