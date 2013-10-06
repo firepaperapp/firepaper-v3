@@ -252,7 +252,7 @@ $(document).ready(function(){
 									<div class="file-name"><?php echo $rec['projectTask']['title'];?>
 								<?php
 								}
-								?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
+								?> <a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
 								<span id="extraDoc_<?php echo $rec['projectTask']['id']?>" style="
 								<?php
 								if($rec[0]['extraDocs'] == 0)
