@@ -5,6 +5,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload-ui.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-ui.min.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH?>project_detail.js"></script>
 <?php
 	if($this->Session->check('Message.flash'))
 	{?>
