@@ -5,7 +5,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.fileupload-ui.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-ui.min.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH?>project_detail.js"></script>
+
 <?php
 	if($this->Session->check('Message.flash'))
 	{?>
@@ -201,3 +201,47 @@ echo "<p>".ERR_RECORD_NOT_FOUND."</p>";
 ?>
 <div class="clr"></div>
 </div>
+<script>
+$('.upload-link').each(function(){
+		var myId = $(this).attr('id');
+		alert(myId);
+		var btnUpload = $('#form_'+myId);
+		var status=$('#status');
+		var taskId = myId.split("_");
+ 
+ 	 	if($("#"+myId).hasClass("file_upload") == false)
+	 	{
+		 $("#"+myId).fileUploadUI({
+		 	dragDropSupport: false,
+	        uploadTable: $('#filesDrag'+taskId[1]),
+	        downloadTable: $('#filesDrag'+taskId[1]),
+	        buildUploadRow: function (files, index) {
+	        	       return $('<tr><td>' + files[index].name + '<\/td>' +
+	                    '<td class="file_upload_progress"><div><\/div><\/td>' +
+	                    '<td class="file_upload_cancel">' +
+	                    '<button class="ui-state-default ui-corner-all" title="Cancel">' +
+	                    '<span class="ui-icon ui-icon-cancel">Cancel<\/span>' +
+	                    '<\/button><\/td><\/tr>');
+	        },
+	        buildDownloadRow: function (response) {
+	        	if("undefined" == typeof(response.success))
+					{
+							alert(response.error);
+
+					} else{	 
+							//alert(response.success);								
+							$.get(siteUrl+"projects/studentUploadTaskDoc/"+response.id+"/"+taskId[1]+"/?v="+Number(new Date()),function(data)
+							{	 
+								$("#task_"+taskId[1]+"_box").append(data).show('slow');		
+								//alert($("#taskUnderDiv").html());
+								$("#loaderJsTask").hide();
+								$("#drag_"+taskId[1]).fadeOut('slow');
+							}
+							);
+					}        
+	        }
+	    });
+	 	}	
+	 
+	});
+</script>
