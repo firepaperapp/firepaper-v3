@@ -439,6 +439,7 @@ function delCommentId(commentId, taskId, from)
 			{
 				var url = "userDocumentComments";
 			}
+            alert(siteUrl+"projects/"+url+"/"+taskId);
 			$.post(siteUrl+"projects/"+url+"/"+taskId, {d:commentId},function(data)			{
 				if(taskId==0)		
 				{
