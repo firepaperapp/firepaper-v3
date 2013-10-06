@@ -390,8 +390,6 @@ $(document).ready(function(){
 		 	?>
 		 
   
-  	<div class="clr-spacer-height"></div>
-  	</div>	
   	</div>
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
