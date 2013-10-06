@@ -3139,7 +3139,7 @@ ul#archived-list .month {
 
 .weight-col {
     position: absolute;
-    top: 37px;
+    top: 10px;
     right: 0;
     float: right;
     color: #a9abae;
@@ -3147,6 +3147,9 @@ ul#archived-list .month {
     padding: 0px;
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     font-weight: bold;
+}
+editinplaceform {
+	background: black;
 }
 .editTaskWeight {
 	color: #a9abae !important;
