@@ -1,15 +1,9 @@
-<!-- File Upload Progress bar -->
-<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>jquery.fileupload-ui.css" />
-<script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload-ui.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui.min.js"></script> 
-<!-- File Upload Progress bar End -->
 <script type="text/javascript">
 $(document).ready(function() {
-	if(location.href.indexOf("addEditProject")!=-1 || location.href.indexOf("viewDetails")!=-1 )
-	{
+	//if(location.href.indexOf("addEditProject")!=-1 || location.href.indexOf("viewDetails")!=-1 )
+	//{
 		$(".dragFiles").draggable({helper:"clone" });
-	}
+	//}
 	$('.callfiles').click(function(){
 	 		var myRef = this;
 			$('.callfiles').each(function(){
