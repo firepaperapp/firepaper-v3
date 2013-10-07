@@ -1,10 +1,3 @@
-<script>
- 
-$(document).ready(function(){
- 
-
-});
-</script>
 <div id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 <div class="project-brief-box-wrapper createdTasksCl">
        <div class="project-drop-area-wrapper">
@@ -54,14 +47,60 @@ $(document).ready(function(){
 	 </div>
 	 <div class="clr"></div>
 	 <div id="loaderJsTask_<?php echo $rec['projectTask']['id']?>"></div>
+	 <table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
 			<div class="dropTaskFileHere project-drop-area" id="task_<?php echo $rec['projectTask']['id']?>">
 		<p>Drag and drop a document here</p> 
-		<table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
+		
 		<form id="fileupload_<?php echo $rec['projectTask']['id']?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/" method="POST" enctype="multipart/form-data" class="extraTaskDocs">
 		 <input type="file" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		 <button>Upload</button>
 			 <div>Upload files</div> 
-		</form>  
+		</form>
+		
+		<script>
+		     $(document).ready(function(){
+			    var btnUpload = $('#uploadfile_<?php echo $rec['projectTask']['id']?>');
+						     var status = $('#loaderJsTask_<?php echo $rec['projectTask']['id']?>');
+				     
+				      $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
+					     dragDropSupport: true,
+					     namespace: 'file_upload_<?php echo $rec['projectTask']['id']?>',
+					     cssClass : 'file_upload_<?php echo $rec['projectTask']['id']?>',
+				     uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
+				     downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
+				     buildUploadRow: function (files, index) {
+					  return $('<tr><td>' + files[index].name + '<\/td>' +
+						 '<td class="file_upload_progress"><div><\/div><\/td>' +
+						 '<td class="file_upload_cancel">' +
+						 '<button class="ui-state-default ui-corner-all" title="Cancel">' +
+						 '<span class="ui-icon ui-icon-cancel">Cancel<\/span>' +
+						 '<\/button><\/td><\/tr>');
+				     },
+				     buildDownloadRow: function (response) {
+					     //Add uploaded file to list
+								     if("undefined" == typeof(response.success))
+								     {
+									     $("#validation-container-task").empty().html("<p class='error'>"+response.error+"</p>").show();
+									     $("#validation-container-success-task").empty().hide();
+			     
+								     } else{	 
+										     $("#validation-container-task").empty().hide();
+										     $("#validation-container-success-task").empty().html(response.success).show();
+										     $('.file_upload').removeClass('file_upload_large');
+										     $('.file_upload').removeClass('file_upload_highlight');
+										     $.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
+										     {	 
+											     $("div#taskUnderDiv").empty().html(data).show('slow');	
+											     $("#loaderJsTask_<?php echo $rec['projectTask']['id']?>").hide();
+											     $(".dropFileHere").fadeOut('slow');
+										     }
+										     );
+								     }        
+				     }
+				 });
+		     
+		     });
+		     </script>
 	 	 
 	</div><div class="clr"></div>
 	<div class="width100Per" id="extraDocs_<?php echo $rec['projectTask']['id'];?>" style="display:none;width:500px;">	
