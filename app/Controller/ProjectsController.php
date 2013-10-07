@@ -678,6 +678,7 @@ class ProjectsController  extends AppController{
  	 		if($this->Project->err==0)						
  			{
  				//we will add contact
+				echo date("Y-m-d", strtotime($this->request->data['Project']['duedate']));die;
  				$this->request->data['Project']['leader_id'] = $this->request->data['Project']['leader_id'];		
 				$this->request->data['Project']['admin_id'] = $this->getAdminId();
 				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
