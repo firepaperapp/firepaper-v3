@@ -1,9 +1,9 @@
 <script type="text/javascript">
 $(document).ready(function() {
-	//if(location.href.indexOf("addEditProject")!=-1 || location.href.indexOf("viewDetails")!=-1 )
-	//{
+	if(location.href.indexOf("addEditProject")!=-1 || location.href.indexOf("viewDetails")!=-1 )
+	{
 		$(".dragFiles").draggable({helper:"clone" });
-	//}
+	}
 	$('.callfiles').click(function(){
 	 		var myRef = this;
 			$('.callfiles').each(function(){
