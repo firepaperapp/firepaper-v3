@@ -116,6 +116,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 }
 else
 {?>
+	<input type="hidden" name="countComment" id="countcomment" value="<?php echo count($taskComments)?>" />
 	  <div class="comment-point"></div>
 	  <div class="comment-box"><p class="error"><?php echo ERR_RECORD_NOT_FOUND; ?></p></div>
 <?php
