@@ -39,11 +39,19 @@ class EmailConfig {
 
 	public $default = array(
 		'transport' => 'Mail',
-		'from' => 'you@localhost',
+		'from' => 'info@firepaperapp.com',
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
-
+class EmailConfig {
+    public $gmail = array(
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => 465,
+        'username' => 'info@firepaperapp.com',
+        'password' => 'steven1980',
+        'transport' => 'Smtp'
+    );
+}
 	public $smtp = array(
 		'transport' => 'Smtp',
 		'from' => array('site@localhost' => 'My Site'),
