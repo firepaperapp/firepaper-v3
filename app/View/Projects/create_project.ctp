@@ -29,7 +29,7 @@ if(isset($errMsg))
 $(document).ready(function(){
 		
                 $("#duedate").datepicker({
-				dateFormat: 'mm/dd/yy 9:16 AM',
+				dateFormat: 'D MM yy',
 				showOn: 'button',
 				buttonImage: siteImagesUrl+'calendar.png',
 				changeMonth: true,
