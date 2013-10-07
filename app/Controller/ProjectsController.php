@@ -682,6 +682,7 @@ class ProjectsController  extends AppController{
 				$this->request->data['Project']['admin_id'] = $this->getAdminId();
 				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
  				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
+				echo $this->request->data['Project']['duedate'];die;
  				if($this->request->data['Project']['project_id']!=0)	
  				{ 			
  					$this->request->data['Project']['id'] = $this->request->data['Project']['project_id'];
@@ -741,7 +742,7 @@ class ProjectsController  extends AppController{
 				$this->request->data['Project']['admin_id'] = $this->getAdminId();
 				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
  				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
-				echo $this->request->data['Project']['duedate'];die;
+				
  				if($project_id!=0)	
  				{ 			
  					$this->Project->id = $project_id;		
