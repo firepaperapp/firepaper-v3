@@ -448,6 +448,8 @@ function delCommentId(commentId, taskId, from)
 				else
 				{
 					$('#viewTskComments_'+taskId+"_box").empty().html(data);
+                    var totalcomment = $('#viewTskComments_'+taskId+"_box").find("input[name='countComment']").val();
+                    $("a#viewTskComments_"+taskId).html(totalcomment+ ' Comment(s)');
 				}
 			} );	   		
 		}		 
