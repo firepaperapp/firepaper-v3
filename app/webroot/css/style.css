@@ -293,6 +293,10 @@ select {
 	display: none;
 	width: 33.333%;
 	float: left;
+	background: white;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	margin-bottom: 1%;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
