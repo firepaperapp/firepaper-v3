@@ -91,7 +91,7 @@
 		        	</span> 
 		        	</p>
 		   		</div><!-- end msg-body -->
-			</div><!-- end msg-container -->	 
+				 
 	 		<?php
 			$i++;
 			 
@@ -104,5 +104,5 @@
 	<div class="clr-spacer"></div> 
  	<a href="<?php echo SITE_HTTP_URL."dashboard/viewComments/";?>" class="readmore-btn">View all messages</a>
  	<div class="clr"></div>
- 
+ </div><!-- end msg-container -->
  </div>
