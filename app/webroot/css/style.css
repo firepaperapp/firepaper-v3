@@ -291,7 +291,7 @@ select {
 }
 .panel { 
 	position:absolute;
-	top:40px;
+	top:67px;
 	left:200px;
 	z-index: 1000;
 	display: none;
@@ -317,6 +317,7 @@ select {
 	margin: 90px auto;
 }
 .navigation {  
+	position: relative;
 	background: white; 
 	height: 68px;
 	-webkit-box-sizing: border-box; 
