@@ -33,9 +33,9 @@ $(document).ready(function() {
     e.preventDefault();
     $.scrollTo(0,300);
   });
-});
-$(document).ready(function() {
-	$(".icon-comment").click(function(ev){
+  
+  $(".icon-comment").click(function(ev){
+  		alert("yo");
 		ev.stopPropagation();		
 			var $this = $(this), content = $(".panel");
 				if (content.is(":visible")) {
@@ -53,8 +53,8 @@ $(document).ready(function() {
 			       $(".panel").fadeOut();
 		       });
 	  });
-	  
 });
+
 
 </script>
 
