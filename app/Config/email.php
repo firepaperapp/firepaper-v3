@@ -54,12 +54,12 @@ class EmailConfig {
 }
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('site@localhost' => 'My Site'),
+		'from' => array('info@firepaperapp.com' => 'My Site'),
 		'host' => 'localhost',
-		'port' => 25,
+		'port' => 465,
 		'timeout' => 30,
 		'username' => 'user',
-		'password' => 'secret',
+		'password' => 'steven1980',
 		'client' => null,
 		'log' => false,
 		//'charset' => 'utf-8',
