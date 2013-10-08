@@ -364,7 +364,7 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
-.navigation .logout-icon {
+.navigation .logout-icon, .navigation .icon-comment {
 	font-size: 18px;
 	display: inline-block;
 	padding: 26px 25px 23px 25px;
