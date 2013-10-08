@@ -35,7 +35,6 @@ $(document).ready(function() {
   });
   
   $("#comment-dropdown").click(function(ev){
-  		alert("yo");
 		ev.stopPropagation();		
 			var $this = $(this), content = $(".panel");
 				if (content.is(":visible")) {
