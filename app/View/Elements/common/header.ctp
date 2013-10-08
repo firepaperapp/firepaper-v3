@@ -34,7 +34,7 @@ $(document).ready(function() {
     $.scrollTo(0,300);
   });
   
-  $(".icon-comment").click(function(ev){
+  $("#comment-dropdown").click(function(ev){
   		alert("yo");
 		ev.stopPropagation();		
 			var $this = $(this), content = $(".panel");
@@ -72,9 +72,8 @@ $(document).ready(function() {
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 
 <?php } ?>
-<div class="comment-dropdown">
-<a href="javascript:void(0);" alt="Comments" class="icon-comment" ></a>
+<a href="javascript:void(0);" alt="Comments" class="icon-comment" id="comment-dropdown" ></a>
 <?php echo $this->requestAction("users/currentComments");?>
-</div>  
+
 <a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><img src="<?php echo IMAGES_PATH.'header-logo.png'; ?>" /></a>
 </aside>
