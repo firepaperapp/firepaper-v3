@@ -292,7 +292,7 @@ select {
 .panel { 
 	position:absolute;
 	top:67px;
-	left:200px;
+	left:197px;
 	z-index: 1000;
 	display: none;
 	width: 33.333%;
@@ -385,6 +385,9 @@ select {
 	color: #c9c9c9;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+}
+.navigation .logout-icon, .navigation .icon-comment:hover, .navigation .logout-icon, .navigation .icon-comment:active {
+	color: #92d968;
 }
 .navigation .header-logo {
 	float: right;
