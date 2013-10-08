@@ -34,6 +34,27 @@ $(document).ready(function() {
     $.scrollTo(0,300);
   });
 });
+$(document).ready(function() {
+	$(".icon-comment").click(function(ev){
+		ev.stopPropagation();		
+			var $this = $(this), content = $(".panel");
+				if (content.is(":visible")) {
+				       return;
+			    }
+			    $(".panel").fadeOut('fast');
+			       content.fadeIn();
+		       });
+		       
+		       $(".panel").click(function(ev) {
+			       ev.stopPropagation();
+		       })
+		      		       
+		       $(document).click(function(){
+			       $(".panel").fadeOut();
+		       });
+	  });
+	  
+});
 </script>
 
 <aside class="navigation">
@@ -50,6 +71,7 @@ $(document).ready(function() {
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 
 <?php } ?>
+<a href="javascript:void(0);" alt="Comments" class="icon-comment" >⚙</a>
 <?php echo $this->requestAction("users/currentComments");?>  
 <a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><img src="<?php echo IMAGES_PATH.'header-logo.png'; ?>" /></a>
 </aside>
