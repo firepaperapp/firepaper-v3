@@ -1484,10 +1484,13 @@ p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other 
 .msg-container .top {
     height: 25px;
     line-height: 20px;
+    margin-top: 12px;
 }
 
 .msg-container .top img {
-    margin-right: 8px; border-radius: 50% 50% 50% 50%;
+    float: left;
+    margin-right: 12px; 
+    border-radius: 50% 50% 50% 50%;
 }
 
 .msg-container .top .profile {
