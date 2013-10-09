@@ -389,6 +389,9 @@ select {
 .navigation .logout-icon, .navigation .icon-comment:hover, .navigation .logout-icon, .navigation .icon-comment:active {
 	color: #92d968;
 }
+.navigation .logout-icon:hover {
+	color: #e06161;
+}
 .navigation .header-logo {
 	float: right;
 	margin-top: 12px;
