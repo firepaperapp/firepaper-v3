@@ -38,7 +38,7 @@ else
 
 			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 			<span class="project-leader-title">Details:<br />
-			<strong><a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['leader_id'];?>" >
+			<strong><a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['leader_id']."/".['User'];?>" >
 			<?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></strong>
 				</span>
 				<div class="clr"></div>
