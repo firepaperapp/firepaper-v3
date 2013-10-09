@@ -62,7 +62,7 @@ $(document).ready(function(){
 						
 							<!-- Project bars --->
 	<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
-		<p class="title-other">Due: <span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
+		<div class="duein-date">Due: <span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></div>
 		
 			<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
 		
