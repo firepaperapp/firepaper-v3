@@ -90,11 +90,11 @@ $(document).ready(function(){
 		<em>Project</em></div>
 		<div class="project-content">
 		<div class="inner">
-		<h4>Details</h4>
-		<div class="note">
+		<h3>Details</h3>
+		<div class="details">
 			<p><?php echo Sanitize::html($rec['Project']['description']);?>
-			<span class="started-details">- <?php 
-			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
+			<!--<span class="started-details">- <?php 
+			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
 			</p>
 		</div>
 		<div class="project-items">
@@ -115,7 +115,10 @@ $(document).ready(function(){
 	      ?>
 		      <img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 		        
-			<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
+			<p class="title">
+			Project leader:
+			<br>
+			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
 		</div>
 		
 		</div>
