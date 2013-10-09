@@ -144,5 +144,7 @@ $(document).ready(function(){
 		
 		
 	<div class="clr"></div>
- 
+ <div id="pagination">
+ <span><a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a></span>
+ </div>
  </div>
