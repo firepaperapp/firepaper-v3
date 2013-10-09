@@ -1,5 +1,5 @@
 
-
+<h3>Latest projects</h3>
 
 <div class="index">
 
