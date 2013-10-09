@@ -3740,7 +3740,7 @@ p.marginT10:after {
 .marginT10 .task-title:hover {
 }
 
-.marginT10 img {
+.marginT10 img, .project-owner img {
     float: left;
     margin-right: 8px;
 }
