@@ -88,10 +88,9 @@ $(document).ready(function(){
 		<div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
 		<div class="clr"></div>
 		<em>Project</em></div>
-		<div class="project-content">
-		<div class="inner">
-		<h3>Details</h3>
 		<div class="details">
+		<h3>Details</h3>
+		
 			<p><?php echo Sanitize::html($rec['Project']['description']);?>
 			<!--<span class="started-details">- <?php 
 			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
