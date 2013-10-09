@@ -110,7 +110,9 @@
 	?>
 
 <section class="nav">
+<a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['id']."/".$prjDetails['User'];?>" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
+</a>
 <div class="clr"></div>
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
