@@ -295,7 +295,7 @@ select {
 	left:197px;
 	z-index: 1000;
 	display: none;
-	width: 33.333%;
+	width: 333px;
 	float: left;
 	background: white;
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
@@ -1541,14 +1541,19 @@ p.title-today .date {
 
 p.contact {
     font-weight: normal;
-    line-height: 12px;
+    line-height: 15px;
+    font-size: 13px;
+    color: #a9a9a9;
 }
 
 p.contact a {
     color: #000000;
     font-weight: normal;
 }
-
+p.contact span {
+	font-style: italic;
+	color: #d0cfcf;
+}
 p.contact a:hover {
 }
 

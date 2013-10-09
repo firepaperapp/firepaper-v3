@@ -40,7 +40,7 @@
 				}
 				else 
 				{?>
-				<span class="date">Comment<?php print(Date("dS F Y", strtotime($date))); ?></span>
+				<span class="date"><?php print(Date("dS F Y", strtotime($date))); ?></span>
 				<?php
 				}
 			}
@@ -61,16 +61,13 @@
 						$userimage = IMAGES_PATH.'profile-pic.png';
 					}
 				?>
-                            <img src="<?php echo $userimage;?>" height="29" width="32" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL.$rec['User']['id']."/".$rec['User']['username'];?>">
-
-		       	<?php
+                            <img src="<?php echo $userimage;?>" height="35" width="35" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL.$rec['User']['id']."/".$rec['User']['username'];?>"><?php
 		       	$st = ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));
 				if(strlen($st)>15)
 						echo substr($st, 0 ,15)."...";
 				else
 		        		echo nl2br($st);
-		        ?>
-		       	</a> 
+		        ?></a> 
 		       	<?php
 		        	if(strlen($rec['ts']['comment'])>120)
 						echo substr(nl2br($rec['ts']['comment']), 0 ,120)."<a onclick='showAfter(this);' class='edit'>...See More</a>";
@@ -79,7 +76,7 @@
 		        	?>	
 		        	
 		        	</span>
-		        	<span class="text-hidden" style="display:none;">
+		        	<span>
 		        		<?php
 		        		echo substr(nl2br($rec['ts']['comment']),121 ,strlen($rec['ts']['comment'])); ?>
 		        		<span> - <? print(date("H:ia", strtotime($rec['ts']['created']))); ?></span> </p> </div>
