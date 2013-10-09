@@ -95,7 +95,6 @@ $(document).ready(function(){
 			<!--<span class="started-details">- <?php 
 			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
 			</p>
-		</div>
 		<div class="project-items">
 		<span class="file-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
 		<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
