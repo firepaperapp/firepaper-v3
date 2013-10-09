@@ -24,7 +24,7 @@
 	}
 	
 	?>
-	 </div><!-- end right -->
+
  	<div class="index">
  	
  		<?php 
