@@ -110,7 +110,7 @@
 	?>
 
 <section class="nav">
-<a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['id']."/".$prjDetails['User'];?>" >
+<a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['leader_id']."/".$prjDetails['User'];?>" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
 <div class="clr"></div>
