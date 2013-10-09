@@ -110,6 +110,14 @@
 	?>
 
 <section class="nav">
+<p>
+<?php 
+	echo $userdata;
+	echo $userId;
+	echo $userFullName;
+	echo $usertype;
+?>
+</p>
 <a href="<?php echo SITE_HTTP_URL."/".$userdata['Project']['id']?>" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
