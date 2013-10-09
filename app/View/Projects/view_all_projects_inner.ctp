@@ -1,4 +1,4 @@
-<div class="activity-panel-wrapper marginT10">
+<div class="col1 marginT10">
 	
 	<?php
 	App::import('Helper','Time');
