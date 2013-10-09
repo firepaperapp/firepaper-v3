@@ -66,7 +66,6 @@ $(document).ready(function(){
 		
 			<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
 		
-		<div class="project-bar">
 		<!-- Bubble -->
 	<div class="completed-bubble">
 		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
@@ -119,8 +118,8 @@ $(document).ready(function(){
 			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
 		</div>
 		
-		</div>
-		</div><!-- end project-bar -->	
+		
+			
 		<div class="clr"></div>
 	</div><!-- end project-bar-wrapperr -->
 		<!-- end Project bars --->
