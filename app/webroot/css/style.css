@@ -2334,7 +2334,7 @@ p.form-title {
     position: relative;
 }
 .user-box, .user-box-left .links a {
-	line-height: 14px;
+	line-height: 24px !important;
 }
 .people-icon {
 	font-family: "modern_pictograms_proregular";
