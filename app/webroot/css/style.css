@@ -3961,11 +3961,6 @@ p.marginT10:after {
     color: green;
 }
 @media screen and (max-width: 768px) {
-	.nav {
-		display: none;
-	}
-	.container {
-		margin-left: 0;
-	}
+
 
 }
