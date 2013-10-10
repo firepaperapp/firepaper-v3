@@ -368,7 +368,7 @@ select {
 }
 
 .navigation .nav-icon, .navigation .settings-icon, .navigation .activity-toggle, .navigation .add-icon {
-	font-size: 36px;
+	font-size: 35px;
 	display: inline-block;
 	padding: 16px 23px 15px 23px;
 	float: left;
@@ -379,8 +379,11 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+.navigation .activity-toggle {
+	font-size: 40px;
+}
 .navigation .logout-icon, .navigation .comment-icon-area .icon-comment {
-	font-size: 18px;
+	font-size: 17px;
 	display: inline-block;
 	padding: 26px 25px 23px 25px;
 	float: left;
