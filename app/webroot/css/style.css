@@ -465,6 +465,9 @@ select {
 .close-nav {
 	display: none;
 }
+.open-nav {
+	margin-left: 180px;
+}
 .nav .profile-image {
 	float: left;
 	margin-top: 20px;
