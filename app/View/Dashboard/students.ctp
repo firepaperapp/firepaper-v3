@@ -11,11 +11,11 @@ $(document).ready(function(){
 </script>
 
 
-<div class="white page index">
-	<h3>Students</h3>
-	 <div class="upload-container">
-                                 		
-    		<a href="" class="button">Add another Student</a>
+<div class="white files index">
+	 <div class="btn-container">
+	 <div class="btn-holder">
+          <a href="" class="submit">Add a Student</a>
+	 </div>       
             <a href="javascript:animatedcollapse.toggle('add-groups')" class="button right">Create a Year or Class group</a>
     		<span class="form-title"><strong>Search:</strong> </span>
             <input class="doc-name" value="Search">
