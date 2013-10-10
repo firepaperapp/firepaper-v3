@@ -255,11 +255,11 @@
 				</ul>
 	         <div class="clr"></div>
 	        
-	          <ul class="user-functions">
-		          <li><a href="">Settings</a></li>
-		          <li><a href="">Logout</a></li>
+	          <div class="user-functions">
+		         <a href="" class="settings">Settings</a>
+		         <a href="<?php echo SITE_HTTP_URL?>logout">Logout</a>
 		          
-	          </ul>
+	          </div>
          </div><!-- end nav -->
   
 </section>
