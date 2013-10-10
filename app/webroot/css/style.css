@@ -1996,7 +1996,7 @@ div.file-name em {
 .versions {
     display: none;
     margin-top: 6px;
-    border-bottom: 1px dashed #cccccc;
+    border-bottom: 1px solid #efefef
 }
 
 .versions-inner {
