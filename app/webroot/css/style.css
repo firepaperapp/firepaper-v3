@@ -2346,7 +2346,7 @@ p.form-title {
 	color: #55606e;
 	letter-spacing: -7px;
 	text-align: left;
-
+	display: none;
 }
 .user-box-left img, .user-box img {
 	margin-right: 15px;
@@ -3639,7 +3639,8 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 	margin-right:2px; 
 	background:#ffffff ;
 	margin-bottom: 10px;
-	border: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
 }
 .bread .crumb h3 {
 	margin-top: 8px;
