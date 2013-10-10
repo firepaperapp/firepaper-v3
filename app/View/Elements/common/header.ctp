@@ -54,12 +54,12 @@ $(document).ready(function() {
 		       
 	$('#nav-toggle').toggle(function(){
 	alert('close');
-    $('.nav', this).addClass('display', 'none');
-    $('.container', this).css('margin-left', '0');
+    $('.nav').addClass('display', 'none');
+    $('.container').css('margin-left', '0');
     }, function(){
     alert('open');
-    $('.nav', this).addClass('display', 'block');
-    $('.container', this).css('margin-left', '280px');
+    $('.nav').addClass('display', 'block');
+    $('.container').css('margin-left', '280px');
     });
 
     
