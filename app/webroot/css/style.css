@@ -466,8 +466,8 @@ select {
 	display: block; 
 	margin-top:14px; 
 	color: #686b6c;
-	font-size: 13px;
-	text-align: right;
+	font-size: 15px;
+	text-align: left;
 	padding:0px 20px 0px 0px; 
 }
 .nav li:hover, .nav li a:hover {
@@ -476,10 +476,9 @@ select {
 .nav li a {
 	text-align: center; 
 	color: #a7abb1; 
-	text-transform: uppercase; 
 	font-weight: bold;
 	display: inline-block;
-	padding-right: 23px;
+	padding-left: 47px;
 	position: relative;
 }
 .nav li a span {
@@ -487,12 +486,12 @@ select {
 }
 .nav li a i {
 	font-family:'entypo';
-	font-size: 36px;
+	font-size: 34px;
 	font-weight: normal;
 	width: 20px;
 	position: absolute;
 	top:2px;
-	right:0px;
+	left:0px;
 	line-height: 13px;
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
