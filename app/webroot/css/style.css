@@ -2344,7 +2344,7 @@ p.form-title {
     text-align: left;
     position: relative;
 }
-.user-box, .user-box-left .links {
+.user-box, .user-box-left .links a {
 	line-height: 14px;
 }
 .people-icon {
