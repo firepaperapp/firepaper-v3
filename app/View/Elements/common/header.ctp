@@ -55,7 +55,7 @@ $(document).ready(function() {
 	$('#nav-toggle').click(function() {
     $('.nav').toggle();
     $('.container').css('margin-left', '0');
-    $(this).toggleClass('close-nav');
+    $(this).toggleClass('close-nav', 'open-nav');
     return false;
     });
 });
