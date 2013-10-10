@@ -135,9 +135,8 @@ $(document).ready(function(){
 	     
 	     <input type="hidden" id="project_id" name="data[Project][project_id]" value="<?php echo $project_id;?>" />
   		 </form>
-    </div>   
+   
 
-     <div class="clr"></div>
      <?php
      	$d = "display:none;";
      	if(isset($this->request->params['url']['m']) && $this->request->params['url']['m'] == "e")
