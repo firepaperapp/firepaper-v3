@@ -1875,6 +1875,10 @@ p.contact a:hover {
 	height: 39px;
 	margin-bottom: 0px;
 }
+.search-holder {
+	float: left;
+	padding: 12px;	
+}
 .files-categories-box {
 	float: left;
 	margin-top: 13px;
@@ -3666,7 +3670,6 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 }
 
 .listingContent {
-    width: 100%;
     padding: 40px;
 }
 
