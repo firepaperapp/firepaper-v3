@@ -67,7 +67,7 @@ $('#nav-toggle').click(function() {
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
 	</span>
 </div>-->
-<a href="" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
+<a href="javascript:void(0);" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 
 <?php if (isset($cansignup) && $cansignup == 1) {?>
