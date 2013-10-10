@@ -41,17 +41,14 @@
    
 </script>
 <div class="white files index">
-		
-			<!-- search Section tart here -->
- 		 <form method="post" action="" name="departmentTeacherSearch" id="departmentTeacherSearch" onsubmit="return filterRecords('filter');">
+	<form method="post" action="" name="departmentTeacherSearch" id="departmentTeacherSearch" onsubmit="return filterRecords('filter');">
 		 <div class="upload-container">
-			
-			<?php if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7) { ?>
-		<p>
-		<a id="addedu" class="button right" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">
-		Add New Educator</a></p>
+		 	<div class="btn-holder">
+		<?php if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7) { ?>
+			<a id="addedu" class="submit" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">Add New Educator</a>
+		 	</div>
 		<?php } ?>
- 		<h3>Search:</h3> 
+
 			 <?php echo $this->Form->input('departmentTeacherSearch.firstname',array('div'=>false,'label'=>false,"id"=>"firstname",'maxlength'=>'150'));?> 
 			 <input name="frmSubmit" class="formButtonBluebg action-button" value="Search" alt="Search" title="Search" type="submit"/>
 <!--			 <a class="sign-in" href="<?php echo SITE_HTTP_URL?>listTeachers/<?php echo $departmentId;?>">Reset Search</a>-->
