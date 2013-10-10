@@ -255,10 +255,11 @@
 				</ul>
 	         <div class="clr"></div>
 	        
-	          <div class="user-functions">
+	          <ul class="user-functions">
+		          <li><a href="">Settings</a></li>
+		          <li><a href="">Logout</a></li>
 		          
-		          
-	          </div>
+	          </ul>
          </div><!-- end nav -->
   
 </section>
