@@ -116,22 +116,24 @@ $(document).ready(function()
 	 
 });
 </script>
-<div class="upload-container">
+<div class="btn-container">
+	<div class="btn-holder">
 	<?php
  		if($this->Session->read('user_type')!=4 &&  $this->Session->read('user_type')!=5) {?>
 	<!--	<a id="addstudent" style="display:none;" class="browse-btn" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/student/0/<?php echo $group_id?>">
 		Add New Student</a>-->
-		<a id="addStudentToGroup" style="display:none;" class="browse-btn" href="<?php echo SITE_HTTP_URL?>yeargroups/assignUserToGroup/<?php echo $group_id?>">
+		<a id="addStudentToGroup" style="display:none;" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/assignUserToGroup/<?php echo $group_id?>">
 		Add Another Student</a>
 	<?php } ?>
 	<?php if($show_yrgroup_link=='Y'){?>
- 	<a href="javascript:void(0)" onclick="$('#add-groups').slideToggle('slow');" class="button right">Create a Year or Class group</a> 
+ 	<a href="javascript:void(0)" onclick="$('#add-groups').slideToggle('slow');" class="submit">Create a Year or Class group</a> 
 	<?php }?>
-	
+	</div>
+	<div class="search-holder">
 	<!-- Search Form Start -->
 	<?php echo $this->element('common/search'); ?>
 	<!-- Search Form End -->
-<br>
+	</div>
 
 
   	<div id="add-groups">
