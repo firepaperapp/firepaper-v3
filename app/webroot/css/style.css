@@ -1898,8 +1898,8 @@ p.contact a:hover {
 	margin-bottom: 0px;
 }
 .search-holder {
-	float: left;
-	padding: 12px;	
+	float: right;
+	padding: 12px 12px 0px 0px;	
 }
 .search-holder .submit {
 	height: 39px;
