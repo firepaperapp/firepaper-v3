@@ -511,7 +511,7 @@ select {
 }
 
 .user-functions a {
-	display: inline;
+	display: inline-block;
 	width: 37%;
 	padding:16px;
 	text-align: center;
