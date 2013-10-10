@@ -127,9 +127,7 @@ $(document).ready(function(){
 				}
 	           ?>
 	          <!-- <a href="javascript:void(0)" class="submit" id="createProjectBtn" onclick="submitProject(2)">Continue</a>&nbsp;&nbsp;-->
-	           
-	          
-	          <div class="clr"></div>
+
 	      	     
 	      <!-- end project wrapper -->      
 	     
@@ -144,8 +142,9 @@ $(document).ready(function(){
      		$d = "display:block;";
      	}
      ?>
-     <div class="line"></div>
+     
  	<div id="docAndTask" style="<?php //echo $d;?>">
+ 	<div class="line"></div>
  	 	<div class="left">
 	    	<h3>Documents <span>&amp;</span> Tasks</h3>
 	 	</div>
