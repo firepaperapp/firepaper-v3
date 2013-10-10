@@ -3960,7 +3960,7 @@ p.marginT10:after {
 .success {
     color: green;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
 	.nav {
 		display: none;
 	}
