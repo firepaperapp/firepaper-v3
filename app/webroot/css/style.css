@@ -2310,7 +2310,7 @@ p.form-title {
 	float: left;
 	width:100%;
 	padding: 6px;
-	margin: 16px 0px 0px 0px;
+	border-bottom: 1px solid #e0e0e0;
 }
 .user-box, .user-box-left {
     background: #fff;
@@ -2319,7 +2319,6 @@ p.form-title {
     color: #55606e;
     text-align: left;
     padding: 20px;
-    border-bottom: 1px solid #e0e0e0;
     position: relative;
 }
 .people-icon {
