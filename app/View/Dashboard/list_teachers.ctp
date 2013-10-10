@@ -41,7 +41,7 @@
    
 </script>
 <div class="white files index">
-	<form method="post" action="" name="departmentTeacherSearch" id="departmentTeacherSearch" onsubmit="return filterRecords('filter');">
+	
 		 <div class="upload-container">
 		 	<div class="btn-holder">
 		<?php if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7) { ?>
@@ -49,15 +49,17 @@
 		 	</div>
 		<?php } ?>
 			<div class="search-holder">
+			<form method="post" action="" name="departmentTeacherSearch" id="departmentTeacherSearch" onsubmit="return filterRecords('filter');">
 			 <?php echo $this->Form->input('departmentTeacherSearch.firstname',array('div'=>false,'label'=>false,"id"=>"firstname",'maxlength'=>'150'));?> 
 			 <input name="frmSubmit" class="formButtonBluebg action-button" value="Search" alt="Search" title="Search" type="submit"/>
 <!--			 <a class="sign-in" href="<?php echo SITE_HTTP_URL?>listTeachers/<?php echo $departmentId;?>">Reset Search</a>-->
 
 		<a class="sign-in" id="reset" style="display:none; "onclick="filterRecords('reset');" href="#">Reset Search</a>
 			 <input type="hidden" name="data[departmentTeacherSearch][posted]" id="posted" value="1">
-			</div> 		 
-		</div>		
-		</form>
+				
+			 </form>
+			 </div> 		 
+		</div>	
   		<!-- search Section tart here -->
 		<!-- Inner Content List start -->
 		<div class="listingContent" id="content_teachers">
