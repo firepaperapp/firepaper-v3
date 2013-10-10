@@ -2345,8 +2345,7 @@ p.form-title {
 	font-size: 30px;
 	color: #55606e;
 	letter-spacing: -7px;
-	text-align: center;
-	margin: 40px 0px 10px -6px;
+	text-align: left;
 
 }
 .user-box-left img, .user-box img {
