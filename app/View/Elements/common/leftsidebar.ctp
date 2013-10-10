@@ -255,7 +255,10 @@
 				</ul>
 	         <div class="clr"></div>
 	        
-	          <footer class="footer"></div>
+	          <div class="user-functions">
+		          
+		          
+	          </div>
          </div><!-- end nav -->
   
 </section>
