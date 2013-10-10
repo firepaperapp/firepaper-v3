@@ -374,7 +374,7 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
-.navigation .logout-icon, .navigation .icon-comment {
+.navigation .logout-icon, .navigation .comment-icon-area .icon-comment {
 	font-size: 18px;
 	display: inline-block;
 	padding: 26px 25px 23px 25px;
@@ -385,6 +385,9 @@ select {
 	color: #c9c9c9;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+}
+.comment-icon-area {
+	position: relative;
 }
 .navigation .logout-icon, .navigation .icon-comment:hover, .navigation .logout-icon, .navigation .icon-comment:active {
 	color: #92d968;
