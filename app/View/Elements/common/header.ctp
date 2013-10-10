@@ -53,11 +53,9 @@ $(document).ready(function() {
 		       });
 		       
 	$('#nav-toggle').toggle(function(){
-	alert('close');
     $('.nav').css('display', 'none');
     $('.container').css('margin-left', '0');
     }, function(){
-    alert('open');
     $('.nav').css('display', 'block');
     $('.container').css('margin-left', '280px');
     });
