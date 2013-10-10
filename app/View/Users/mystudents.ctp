@@ -1,5 +1,5 @@
-<div class="index page white">
-	<h3>Students</h3>
+<div class="index files white">
+	
  	<!-- Inner Content List start -->
 	<div class="row">
    	 <?php $k=1; $j=0;
