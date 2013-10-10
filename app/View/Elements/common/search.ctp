@@ -58,9 +58,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-		<h3>Search:</h3> 
-
 	<!-- Search Form Start -->
 	<?php
 	echo $this->Form->create('classGroupSearch', array('action'=>'','type' => 'post', 'id'=>'classGroupSearch', 'submit'=>'return false;')); 
