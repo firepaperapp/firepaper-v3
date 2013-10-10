@@ -451,7 +451,7 @@ select {
 .nav .profile-image {
 	float: left;
 	margin-top: 20px;
-	margin-right: 17px;
+	margin-left: 17px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	background: #fafafa;
