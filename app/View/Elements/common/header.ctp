@@ -54,11 +54,11 @@ $(document).ready(function() {
 		       
 	$('#nav-toggle').toggle(function(){
 	alert('close');
-    $('.nav').addClass('display', 'none');
+    $('.nav').css('display', 'none');
     $('.container').css('margin-left', '0');
     }, function(){
     alert('open');
-    $('.nav').addClass('display', 'block');
+    $('.nav').css('display', 'block');
     $('.container').css('margin-left', '280px');
     });
 
