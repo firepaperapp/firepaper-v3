@@ -69,8 +69,9 @@ $(document).ready(function() {
 <?php if (isset($cansignup) && $cansignup == 1) {?>
 
 <?php } ?>
-<a href="javascript:void(0);" alt="Comments" class="icon-comment" id="comment-dropdown" ></a>
+<div class="comment-icon-area">
+	<a href="javascript:void(0);" alt="Comments" class="icon-comment" id="comment-dropdown" ></a>
 <?php echo $this->requestAction("users/currentComments");?>
-
+</div>
 <a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><img src="<?php echo IMAGES_PATH.'header-logo.png'; ?>" /></a>
 </aside>
