@@ -3564,7 +3564,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 	padding:4px 6px 4px 6px; 
 }
 .dept-wrapper { 
-	margin:40px; 
+	padding:40px; 
 }
 .dept-box { 
 	display: inline-block;
