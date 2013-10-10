@@ -54,6 +54,7 @@ $(document).ready(function() {
 	  });
 
 $('#nav-toggle').click(function() {
+	alert("hey");
     $('.nav').toggle();
     $(this).toggleClass('close-nav');
     return false;
