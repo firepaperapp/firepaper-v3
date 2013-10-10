@@ -3963,7 +3963,7 @@ p.marginT10:after {
 @media screen and (max-width: 820px) {
 
 	.file-col-1-wrapper, .file-col-2-wrapper {
-		width: 1000%;
+		width: 100%;
 		border-right: 0px;
 	}
 
