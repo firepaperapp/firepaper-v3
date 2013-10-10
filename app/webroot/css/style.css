@@ -1879,6 +1879,11 @@ p.contact a:hover {
 	float: left;
 	padding: 12px;	
 }
+.search-holder .submit {
+	height: 39px;
+	line-height: 33px;
+	margin-left: 6px;
+}
 .files-categories-box {
 	float: left;
 	margin-top: 13px;
