@@ -19,7 +19,7 @@
 <!-- search Section tart here -->
 	<div class="btn-container">
 		<div class="btn-holder">
-		<a id="various2" class="submit" href="<?php echo SITE_HTTP_URL?>dashboard/addEditDepartment">+&nbsp;Create a Department</a>
+		<a id="various2" class="submit" href="<?php echo SITE_HTTP_URL?>dashboard/addEditDepartment">Create a Department</a>
 		</div>
 	</div>
 		<!-- search Section tart here -->
