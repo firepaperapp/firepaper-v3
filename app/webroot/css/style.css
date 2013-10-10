@@ -326,7 +326,7 @@ select {
 .navigation {  
 	position: relative;
 	background: white; 
-	height: 68px;
+	height: 67px;
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;   
 	box-sizing: border-box;
@@ -385,7 +385,7 @@ select {
 .navigation .logout-icon, .navigation .comment-icon-area .icon-comment {
 	font-size: 17px;
 	display: inline-block;
-	padding: 26px 25px 23px 25px;
+	padding: 24px 25px 24px 25px;
 	float: left;
 	font-family:'fontawesome';
 	border-right: 1px solid #f5f5f5;
