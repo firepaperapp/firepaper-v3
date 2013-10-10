@@ -42,7 +42,7 @@
 </script>
 <div class="white files index">
 	
-		 <div class="upload-container">
+		 <div class="btn-container">
 		 	<div class="btn-holder">
 		<?php if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7) { ?>
 			<a id="addedu" class="submit" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/educator/0">Add New Educator</a>
