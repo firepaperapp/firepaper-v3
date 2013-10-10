@@ -52,16 +52,14 @@ $(document).ready(function() {
 			       $(".panel").fadeOut();
 		       });
 		       
-	$('#nav-toggle').click(function() {
-    $('.nav').toggle();
-    $(this).toggleClass('close-nav');
-    return false;
+	$('#nav-toggle').toggle(function(){
+    $('.nav', this).addClass('display', 'none');
+    $('.container', this).css('margin-left', '0');
+    }, function(){
+    $('.nav', this).addClass('display', 'block');
+    $('.container', this).css('margin-left', '280px');
     });
-    $('#nav-toggle').click(function() {
-    $('.container').css('margin-left','0px');
-    $(this).toggleClass('margin-left','280px');
-    return false;
-    });
+
     
 });
 
