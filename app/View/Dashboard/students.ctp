@@ -17,7 +17,7 @@ $(document).ready(function(){
           <a href="" class="submit">Add a Student</a>
 	 </div>       
             <a href="javascript:animatedcollapse.toggle('add-groups')" class="button right">Create a Year or Class group</a>
-    		<span class="form-title"><strong>Search:</strong> </span>
+    		<span class="form-title"></span>
             <input class="doc-name" value="Search">
             <div class="clr"></div>
             <div style="display: block;" fade="1" id="add-groups">
