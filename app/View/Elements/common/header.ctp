@@ -51,14 +51,16 @@ $(document).ready(function() {
 		       $(document).click(function(){
 			       $(".panel").fadeOut();
 		       });
-	  });
-
-$('#nav-toggle').click(function() {
+		       
+		       $('#nav-toggle').click(function() {
 	alert("hey");
     $('.nav').toggle();
     $(this).toggleClass('close-nav');
     return false;
-}
+});
+});
+
+
 
 </script>
 
