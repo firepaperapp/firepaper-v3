@@ -2840,9 +2840,11 @@ p.field-title {
 }
 .task-icon {
 	font-family:'entypo';
-	font-size: 38px;
+	font-size: 35px;
 	padding: 5px;
 	color: white;
+	height: 16px;
+	line-height: 17px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	background: #dadada;
