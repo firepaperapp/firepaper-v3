@@ -3572,7 +3572,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 }
 .btn-holder a {
 	line-height: 39px;
-	margin-bottom: -2px;
+	margin-bottom: -2px !important;
 }
 .dept-box .left-section { 
 	width:25px; 
