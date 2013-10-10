@@ -28,7 +28,7 @@ if(isset($errMsg))
 } 
 ?>
 <script>
-$(".file-col-1-wrapper").first().css( "display", "none" );
+$(".file-col-1-wrapper").first().css( "border-left", "0" );
 </script>
 </div>
 <?php
