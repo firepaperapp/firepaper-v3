@@ -2841,7 +2841,7 @@ p.field-title {
 .task-icon {
 	font-family:'entypo';
 	font-size: 35px;
-	padding: 5px;
+	padding: 5px 5px 5px 6px;
 	color: white;
 	height: 16px;
 	line-height: 17px;
