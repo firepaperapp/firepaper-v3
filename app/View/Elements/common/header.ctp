@@ -53,7 +53,11 @@ $(document).ready(function() {
 		       });
 	  });
 
-
+$('#nav-toggle').click(function() {
+    $('.nav').toggle();
+    $(this).toggleClass('close-nav');
+    return false;
+}
 
 </script>
 
@@ -63,7 +67,7 @@ $(document).ready(function() {
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
 	</span>
 </div>-->
-<a href="" alt="nav-toggle" class="nav-icon">☰</a>
+<a href="" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 
 <?php if (isset($cansignup) && $cansignup == 1) {?>
