@@ -52,12 +52,12 @@ $(document).ready(function() {
 			       $(".panel").fadeOut();
 		       });
 		       
-		       $('#nav-toggle').click(function() {
-	alert("hey");
+	$('#nav-toggle').click(function() {
     $('.nav').toggle();
+    $('.container').css('margin-left', '0');
     $(this).toggleClass('close-nav');
     return false;
-});
+    });
 });
 
 
