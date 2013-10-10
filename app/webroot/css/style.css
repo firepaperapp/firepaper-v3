@@ -480,6 +480,7 @@ select {
 	text-transform: uppercase; 
 	font-weight: bold;
 	display: inline-block;
+	position: relative;
 }
 .nav li a span {
 	margin: 0px 5px 0px 5px;
@@ -489,6 +490,9 @@ select {
 	font-size: 36px;
 	font-weight: normal;
 	width: 20px;
+	position: absolute;
+	top:2px;
+	right:0px;
 	display: inline-block;
 	height: 22px;
 	font-style: normal;
