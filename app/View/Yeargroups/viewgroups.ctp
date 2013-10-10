@@ -27,8 +27,8 @@ if(isset($errMsg))
 ?>
 </div>
 
-	<div class="index page white">
-	<h3>Students</h3>
+	<div class="index files white">
+	
 	<?php if($showbox=="Y"){ echo  $this->requestAction("/yeargroups/addyeargroup/".$group_id);} 
 	else {?>
 
