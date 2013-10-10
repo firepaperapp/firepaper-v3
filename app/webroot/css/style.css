@@ -3566,7 +3566,10 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 .dept-wrapper { 
 	margin:40px; 
 }
-.dept-box { }
+.dept-box { 
+	display: inline-block;
+	width: 100%;
+}
 .dept-box .left-section { 
 	width:25px; 
 	float:left; 
