@@ -3570,6 +3570,10 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 	display: inline-block;
 	width: 100%;
 }
+.btn-holder a {
+	line-height: 39px;
+	margin-bottom: -2px;
+}
 .dept-box .left-section { 
 	width:25px; 
 	float:left; 
