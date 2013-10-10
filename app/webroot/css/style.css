@@ -2332,17 +2332,13 @@ p.form-title {
 
 }
 .user-box-left img, .user-box img {
-	margin-right: 25px;
+	margin-right: 15px;
+	float: left;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 }
-.links {
-
-}
-
-.links p {
-    margin: 0 auto;
-    text-align: center;
+.user-box-left .links {
+	float: left;
 }
 
 
