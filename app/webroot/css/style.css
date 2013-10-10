@@ -2344,6 +2344,9 @@ p.form-title {
     text-align: left;
     position: relative;
 }
+.user-box, .user-box-left .links {
+	line-height: 14px;
+}
 .people-icon {
 	font-family: "modern_pictograms_proregular";
 	font-size: 30px;
