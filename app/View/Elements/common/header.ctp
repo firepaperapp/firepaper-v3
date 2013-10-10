@@ -52,9 +52,7 @@ $(document).ready(function() {
 			       $(".panel").fadeOut();
 		       });
 	  });
-$( document ).click(function() {
-  $( ".nav" ).toggle( "slide" );
-});
+
 
 
 </script>
