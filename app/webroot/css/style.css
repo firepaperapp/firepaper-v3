@@ -379,6 +379,9 @@ select {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+.navigation .nav-icon:hover, .navigation .nav-icon:active, .navigation .add-icon:hover {
+	color: #fca55f;
+}
 .navigation .activity-toggle {
 	font-size: 40px;
 }
