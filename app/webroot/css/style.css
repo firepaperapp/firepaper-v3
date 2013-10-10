@@ -451,6 +451,7 @@ select {
 /* Navigation styling */
 
 .nav { 
+	display: block;
 	width:280px; 
 	position: fixed;
 	overflow: hidden;
@@ -460,6 +461,9 @@ select {
 	height: 100%;
 	margin-left:0; 
 	background: #2a2e37;
+}
+.close-nav {
+	display: none;
 }
 .nav .profile-image {
 	float: left;
