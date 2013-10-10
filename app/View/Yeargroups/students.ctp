@@ -10,8 +10,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="index page white">
-	<h3>Students</h3>
+<div class="index files white">
 	 <div class="upload-container">
                                  		
     		<a href="" class="button">Add another Student</a>

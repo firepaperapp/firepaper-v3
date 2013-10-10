@@ -20,8 +20,8 @@
 
    	 });
 </script>
-	<div class="index page white">
-		<h3>Students</h3>
+	<div class="index files white">
+		
 	 	<!-- search Section start here -->
  		<?php if($showbox=="Y"){ echo $this->requestAction("/yeargroups/addyeargroup/$classgroupid");} 
 		else {
