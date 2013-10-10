@@ -23,16 +23,16 @@
 				$preDate = $date;
 				if($currDate == $date)
 				{?>
-					<p class="title-today">Todays Activity <span class="date"><? print(Date("dS F Y")); ?></span></p>		
+					<span class="date"><span class="title-today">Today</span> <? print(Date("dS F Y")); ?></span>	
 				<?}	
 				else if($date == $yesterday)
 				{?>
-					 <p class="title-tomorrow">Yesterdays Activity <span class="date"><? print(Date("dS F Y", strtotime($yesterday))); ?></span></p>
+					 <span class="date"><span class="title-today">Today</span> <span class="date"><? print(Date("dS F Y", strtotime($yesterday))); ?></span>
 				<?php
 				}
 				else 
 				{?>
-					<p class=""><span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
+					<span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span>
 				<?php
 				}
 			}

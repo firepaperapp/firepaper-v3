@@ -21,17 +21,17 @@ if(count($data)>0)
 			$preDate = $date;
 			if($currDate == $date)
 			{?>
-				<p class="title-today">Today <span class="date"><?php print(Date("dS F Y")); ?></span></p>		
+				<span class="date"><span class="title-today">Today</span> <?php print(Date("dS F Y")); ?></span>	
 			<?}	
 			else if($date == $yesterday)
 			{?>
-				<p class="title-tomorrow">Yesterday <span class="date"><?php print(Date("dS F Y", strtotime($yesterday))); ?></span></p>  
+				<span class="date"><span class="title-today">Yesterday</span> <?php print(Date("dS F Y", strtotime($yesterday))); ?></span> 
 
 			<?php
 			}
 			else 
 			{?>
-				<p class="title-standard"><span class="date"><?php print(Date("dS F Y", strtotime($date))); ?></span></p>
+				<span class="date"><?php print(Date("dS F Y", strtotime($date))); ?></span>
 			<?php
 			}
 		}
