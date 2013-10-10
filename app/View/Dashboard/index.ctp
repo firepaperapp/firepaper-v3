@@ -25,7 +25,6 @@
 	
 	?>
 
- 	<div class="index">
  	
  		<?php 
   		if($this->Session->read('user_type') != 1)
