@@ -3960,20 +3960,21 @@ p.marginT10:after {
 .success {
     color: green;
 }
-@media screen and (max-width: 960px) {
 
-	.file-col-1-wrapper, .file-col-2-wrapper {
-		width: 100%;
-		border-right: 0px;
-	}
-
-}
 @media screen and (max-width: 1150px) {
 	.file-col-2-wrapper {
 		border-right: 0px;
 	}
 	.file-col-1-wrapper, .file-col-2-wrapper {
 		width: 50%;
+	}
+
+}
+@media screen and (max-width: 960px) {
+
+	.file-col-1-wrapper, .file-col-2-wrapper {
+		width: 100%;
+		border-right: 0px;
 	}
 
 }
