@@ -1527,7 +1527,7 @@ ul.list-activity li span {
 }
 
 .msg-container .top {
-    height: 25px;
+    min-height: 25px;
     line-height: 20px;
     margin-top: 12px;
 }
