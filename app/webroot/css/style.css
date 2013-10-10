@@ -281,20 +281,21 @@ select {
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	margin-bottom: 1%;
 }
-.widget .date, p.title-today .date {
+.widget .date {
 	width: 100%;
 	display: inline-block;
 	text-align: center;
-	font-size: 12px;
+	font-size: 11px;
 	text-transform: uppercase;
 	color: #c9c9c9;
 	padding: 10px 0px;
-	border-top:1px solid #f5f5f5;
-	border-bottom:1px solid #f5f5f5;
+	border-top:1px solid #e8e8e8;
+	border-bottom:1px solid #e8e8e8;
 }
-p.title-today .date {
-	
+.date .title-today, .date .title-tomorrow {
+	color: #fca55f;
 }
+
 .panel { 
 	position:absolute;
 	top:67px;
@@ -304,8 +305,8 @@ p.title-today .date {
 	width: 333px;
 	float: left;
 	background: white;
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0 4px 1px rgba(0,0,0,0.3);
+	box-shadow: 0 4px 1px rgba(0,0,0,0.3);
 	margin-bottom: 1%;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1081,20 +1082,9 @@ ul.list-activity li span {
 }
 
 /* Project */
-p.title-today, p.title-tomorrow, p.title-standard, p.title-other {
 
-    text-align: center;
-    text-shadow: 0 1px 0 #fff;
-    font-weight: 500;
-    font-size: 13px;
-    color: #b5b4b4;
-}
-p.title-other { display: none;}
-p.title-today span, p.title-tomorrow span, p.title-standard span, p.title-other span {
-    color: #c46d6d;
-}
 
-.duein-date
+.duein-date {}
 .started-details {
     color: #999;
     font-size: 11px;
