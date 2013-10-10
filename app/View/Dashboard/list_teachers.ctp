@@ -40,8 +40,8 @@
 	}
    
 </script>
-<div class="white page index">
-		<h3>Educators</h3>
+<div class="white files index">
+		
 			<!-- search Section tart here -->
  		 <form method="post" action="" name="departmentTeacherSearch" id="departmentTeacherSearch" onsubmit="return filterRecords('filter');">
 		 <div class="upload-container">
