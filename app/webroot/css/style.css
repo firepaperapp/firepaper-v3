@@ -500,6 +500,23 @@ select {
 .nav li a i.students-icon {
 	font-size: 33px;
 }
+ul.user-functions {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	z-index: 1200;
+	height: 40px;
+	background: black;
+}
+ul.user-functions li {
+	width: 50%;
+}
+ul.user-functions li a {
+	display: block;
+	text-align: center;
+	color: #333;
+}
 /* End Navigation styling */
 
 
