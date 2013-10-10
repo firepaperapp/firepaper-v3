@@ -52,7 +52,11 @@
 			          <?php if($rec['fileType']['icon']!='')
 			          {?>
 			          <img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon'];?>" />
-						<?php }?>
+						<?php } else { ?>
+						<div class="task-icon">
+						
+						</div>
+						<?php } ?>
 			          </div>
 			          <div class="file-name">
 				          <?php 
