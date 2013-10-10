@@ -238,7 +238,7 @@ select {
 	height: 100%;
 	border: 0;
 	display: block;
-	margin-left: 184px;
+	margin-left: 280px;
 	border-spacing: 0; 
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;   
@@ -362,8 +362,7 @@ select {
 	color: #a7abb1;
 }
 
-
-.navigation .settings-icon, .navigation .activity-toggle, .navigation .add-icon {
+.navigation .nav-icon, .navigation .settings-icon, .navigation .activity-toggle, .navigation .add-icon {
 	font-size: 36px;
 	display: inline-block;
 	padding: 16px 23px 15px 23px;
@@ -440,7 +439,7 @@ select {
 /* Navigation styling */
 
 .nav { 
-	width:184px; 
+	width:280px; 
 	position: absolute;
 	top:0;
 	left:0;
