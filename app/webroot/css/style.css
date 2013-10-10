@@ -3961,8 +3961,11 @@ p.marginT10:after {
     color: green;
 }
 @media screen and (max-width: 1150px) {
+	.file-col-2-wrapper {
+		border-right: 0px;
+	}
 	.file-col-1-wrapper, .file-col-2-wrapper {
-		width: 49%;
+		width: 50%;
 	}
 
 }
