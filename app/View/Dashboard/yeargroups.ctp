@@ -1,6 +1,6 @@
 
-	<div class="white page index">
-	<h3>Students</h3>
+	<div class="white files index">
+	
 	<?php echo $this->requestAction("/dashboard/addyeargroup");?>
     <div class="clr-spacer"></div>
     <div class="bread">
