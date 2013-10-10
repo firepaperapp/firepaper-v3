@@ -2331,16 +2331,17 @@ p.form-title {
 .user-box-wrapper {
 	float: left;
 	width:100%;
-	padding: 6px;
+	padding: 12px;
 	border-bottom: 1px solid #e0e0e0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .user-box, .user-box-left {
     background: #fff;
     font-size: 12px;
-    line-height: 20px;
     color: #55606e;
     text-align: left;
-    padding: 20px;
     position: relative;
 }
 .people-icon {
