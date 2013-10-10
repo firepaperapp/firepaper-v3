@@ -494,8 +494,7 @@ select {
 	position: absolute;
 	top:2px;
 	right:0px;
-	display: inline-block;
-	height: 22px;
+	line-height: 13px;
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
