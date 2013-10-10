@@ -59,7 +59,7 @@ $(document).ready(function() {
     $('.nav').css('display', 'block');
     $('.container').css('margin-left', '280px');
     });
-
+$( ".file-col-1-wrapper:first" ).css( "border-left", "0" );
     
 });
 
