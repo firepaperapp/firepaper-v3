@@ -474,9 +474,9 @@ select {
 	color:#e56a6a ;
 }
 .nav li a {
-	text-align: center; 
+	text-align: left; 
 	color: #a7abb1; 
-	font-weight: bold;
+	font-weight: normal;
 	display: inline-block;
 	padding-left: 47px;
 	position: relative;
@@ -486,12 +486,12 @@ select {
 }
 .nav li a i {
 	font-family:'entypo';
-	font-size: 34px;
+	font-size: 32px;
 	font-weight: normal;
 	width: 20px;
 	position: absolute;
 	top:2px;
-	left:0px;
+	left:20px;
 	line-height: 13px;
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
