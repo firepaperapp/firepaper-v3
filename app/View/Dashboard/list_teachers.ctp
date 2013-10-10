@@ -54,7 +54,7 @@
 			 <input name="frmSubmit" class="submit" value="Search" alt="Search" title="Search" type="submit"/>
 <!--			 <a class="sign-in" href="<?php echo SITE_HTTP_URL?>listTeachers/<?php echo $departmentId;?>">Reset Search</a>-->
 
-		<a class="sign-in" id="reset" style="display:none; "onclick="filterRecords('reset');" href="#">Reset Search</a>
+		<a class="edit" id="reset" style="display:none; "onclick="filterRecords('reset');" href="#">Reset Search</a>
 			 <input type="hidden" name="data[departmentTeacherSearch][posted]" id="posted" value="1">
 				
 			 </form>
