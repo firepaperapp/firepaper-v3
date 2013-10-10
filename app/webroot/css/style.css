@@ -3753,7 +3753,9 @@ p.marginT10:after {
     width: 200px;
     height: 100px;
 }
-
+.sorter {
+	display:none;
+}
 .sorter ul li a.selected {
     background: #DBDBDB;
 }

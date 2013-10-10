@@ -11,7 +11,7 @@ if($this->Session->check('Message.flash'))
 	</div>
 <?php }
 ?>
-<div class="clr"></div>
+
 <div class="sorter">
 	<ul>
 	<?php
