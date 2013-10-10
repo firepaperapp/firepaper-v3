@@ -53,10 +53,15 @@ $(document).ready(function() {
 		       });
 		       
 	$('#nav-toggle').click(function() {
-    $('.nav').toggle();
-    $('.container').css('margin-left', '0');
-    $(this).toggleClass('close-nav');
+    $('.nav').toggle(function(){
+	    $('.container').css('margin-left', '0');
+    });
+    
+    
+    $('.nav').toggleClass(function(){
+    $(this).addClass('close-nav');
     $('.container').css('margin-left', '280px');
+    }
     return false;
     });
     
