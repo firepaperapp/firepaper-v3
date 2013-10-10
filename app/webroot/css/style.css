@@ -449,7 +449,7 @@ select {
 	background: #2a2e37;
 }
 .nav .profile-image {
-	float: right;
+	float: left;
 	margin-top: 20px;
 	margin-right: 17px;
 	border-radius: 50%;
