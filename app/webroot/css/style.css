@@ -2842,6 +2842,7 @@ p.field-title {
 	font-family:'entypo';
 	font-size: 38px;
 	padding: 5px;
+	color: white;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	background: #dadada;
