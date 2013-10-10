@@ -27,6 +27,9 @@ if(isset($errMsg))
 	echo $this->Utility->display_message($errMsg);	
 } 
 ?>
+<script>
+$(".file-col-1-wrapper").first().css( "display", "none" );
+</script>
 </div>
 <?php
 if(count($data)>0)
