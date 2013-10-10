@@ -471,7 +471,7 @@ select {
 	padding:0px 20px 0px 0px; 
 }
 .nav li:hover, .nav li a:hover {
-	color:#e56a6a ;
+	color:#fca55f ;
 }
 .nav li a {
 	text-align: left; 
@@ -517,6 +517,9 @@ select {
 	text-align: center;
 	color: #c9caca;
 	font-size: 13px;
+}
+.user-functions a:hover {
+	color: #fca55f;
 }
 .user-functions a.settings {
 	border-right:1px solid #363a43;
