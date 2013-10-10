@@ -3818,7 +3818,8 @@ p.marginT10:after {
 
 .row .imgclass {
     width: 60px;
-    float: right;
+    float: left;
+    margin-right: 12px;
 }
 
 .coleducator-left p, .col-right p {
