@@ -63,12 +63,12 @@ $(document).ready(function(){
 	echo $this->Form->create('classGroupSearch', array('action'=>'','type' => 'post', 'id'=>'classGroupSearch', 'submit'=>'return false;')); 
 	?>
  	<?php echo $this->Form->input('classGroupSearch.keyword',array('div'=>false,'label'=>false,"id"=>"keyword",'maxlength'=>'150', "class"=>"searchKeyword","value"=>"Search",'style'=>'color:#00'));?> 
- 	<select name="data[classGroupSearch][searchType]" id="searchType">
+ 	<!--<select name="data[classGroupSearch][searchType]" id="searchType">
  		<option value="">global</option>
  		<option value="yeargroup">Year Group</option>
  		<option value="classgroup">Class Group</option>
  		<option value="student">Student</option>
- 	</select>
+ 	</select>-->
  	<input type="submit" name="searchKeywordBtn" class="action-button" id="searchKeywordBtn" value="Submit" />
 	 <input type="hidden" name="data[classGroupSearch][posted]" id="posted" value="1">
 	</form>
