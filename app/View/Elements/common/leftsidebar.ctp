@@ -172,11 +172,8 @@
            	 if($usertype == 1)	
            	 {?>
            	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>           	 	
-           	<?php } ?>
-			
-			
-			
-				</ul>
+           	<?php } } ?>
+		</ul>
 	         <div class="clr"></div>
 	        
 	          <div class="user-functions">
