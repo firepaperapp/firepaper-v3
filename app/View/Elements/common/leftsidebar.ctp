@@ -165,7 +165,7 @@
 			
 				<h4>Projects</h4>
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))) {?>
-				<li class="<?php echo $markProjectsList;?>">
+				<li>
            		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
            		</li>
            		<?php } ?>
