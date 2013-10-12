@@ -18,96 +18,6 @@
 	}	
 ?>
 
-	
-	
-	<?php
-
-	$dashboardMenu = "active";
-	$profileMenu = "active";
-	$projectMenu = "active";
-	$searchMenu = "active";
-	$fileMenu = "active";
-	switch($this->request->params['controller'])
-	{
-		case "dashboard":
-		case "yeargroups":
-		case "whiteboards":
-	 		$dashboardMenu = "active";
-			$overviewAction = "active";
-			$educatorsAction = "active";
-			$studentsAction = "active";
-			$filesAction = "active";
-			$departmentAction = "active";
-			$whiteAction = "";
-			switch($this->request->params['action'])
-			{	
-				/** Files handling starts here **/			
-				case "getFiles":
-					$filesAction = "active";
-					break;
-				/** Files handling end here **/
-				case "listTeachers":
-					$educatorsAction = "active";
-					break;
-				case "departments":
-		 			$departmentAction = "active";
-					break;
-				case "index":
-					if($this->request->params['controller'] == "whiteboards")
-		 				$whiteAction = "active";
-		 			else 
-		 				$overviewAction = "active";
-					break;
-				case "classGroups":
-	 			case "viewgroups":					
-		 			$studentsAction = "active";
-					break;	
-		 		default:
-					$overviewAction = "active";
-			}
-			break;
-		case "files":
-			$fileMenu = "active";
-			switch($this->request->params['action'])
-			{	
-				/** Files handling starts here **/			
-				case "getFiles":
-					$filesAction = "active";
-					break;
-				default:
-					$filesAction = "active";
-			}
-			break;
-		case "users":
-			$profileMenu = "active";
-			$viewProfile = "active";
-			$coadmins = "active";
-			$viewProgress = "active";
-			switch($this->request->params['action'])
-			{
-				case "viewProfile":
-					$viewProfile = "active";
-					break;
-				case "viewProgress":
-					$viewProgress = "active";
-					break;
-				case "coadmins":
-					$coadmins = "active";
-				
-				default:
-					$viewProfile = "active";
-					break;
-			}
-			break;
-		case "projects":
-			$projectMenu = "active";
-			break;
-	 		break;
-		case "search":
-			$searchMenu = "active";
-			break;
-	}
-	?>
 
 <section class="nav">
 <!--<a href="<?php echo SITE_HTTP_URL ?>/<?php echo $userId; ?>" >-->
@@ -148,15 +58,15 @@
 				
 				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
-				<?php if($usertype==2||$usertype==3 ){?>
+				<?php if($usertype==1 || $usertype==2 || $usertype==7){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } ?>
 				
-				<?php if($usertype==1 ||  $usertype==2 || $usertype==3) {?>
+				<?php if($usertype==1 || $usertype==2 || $usertype==7) {?>
 				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
 				<?php }?>
 
-				<?php if($usertype==2 ||$usertype==3){?>
+				<?php if($usertype==1 || $usertype==2 || $usertype==7){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
 			
