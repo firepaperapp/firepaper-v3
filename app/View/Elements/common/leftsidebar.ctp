@@ -202,7 +202,20 @@
 			<?php }?>
            		
 			
+			<?php
 			
+			foreach($departments as $rec)
+			{
+				$active = "";
+				if(isset($dept_id) && $dept_id == $rec['Department']['id'])	
+					$active = "active";
+			?>
+				<li class="<?php echo $active ;?>" id="deptSub_<?php echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
+			<?php
+			}
+			?> 
+           	 
+           	  
            	   	 
            	<?php
            		echo $this->requestAction("/files/getMyCategories");
