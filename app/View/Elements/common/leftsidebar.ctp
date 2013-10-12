@@ -12,7 +12,7 @@
 	}
 	
 	$usertype = $this->Session->read('user_type');
-	$cansignup= $this->Session->read('cansignup');
+	$cansignup = $this->Session->read('cansignup');
 	if (strlen($userFullName) > 45) {
 	 	//$userFullName = substr($userFullName,0,45)."...";
 	}	
@@ -80,9 +80,9 @@
 			break;
 		case "users":
 			$profileMenu = "active";
-			$viewProfile = "";
-			$coadmins = "";
-			$viewProgress = "";
+			$viewProfile = "active";
+			$coadmins = "active";
+			$viewProgress = "active";
 			switch($this->request->params['action'])
 			{
 				case "viewProfile":
@@ -110,9 +110,9 @@
 	?>
 
 <section class="nav">
-<a href="<?php echo SITE_HTTP_URL ?>/<?php echo $userId; ?>" >
+<!--<a href="<?php echo SITE_HTTP_URL ?>/<?php echo $userId; ?>" >-->
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
-</a>
+<!--</a>-->
 <div class="clr"></div>
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
@@ -148,15 +148,15 @@
 				
 				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
-				<?php if($usertype==1 || $usertype==7||$usertype==3 ){?>
+				<?php if($usertype==2||$usertype==3 ){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } ?>
 				
-				<?php if($usertype==1 ||  $usertype==2 || $usertype==7) {?>
+				<?php if($usertype==1 ||  $usertype==2 || $usertype==3) {?>
 				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
 				<?php }?>
 
-				<?php if($usertype==1 ||  $usertype==2 ||$usertype==3 || $usertype==7){?>
+				<?php if($usertype==2 ||$usertype==3){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
 			
@@ -183,7 +183,7 @@
            	<?php 
            	 }
            	}
-           	else if($projectMenu!='')
+           	else if($projectMenu!='active')
            	{ 
            		$markProjectsList = "";
            		$addEditProject = "";
