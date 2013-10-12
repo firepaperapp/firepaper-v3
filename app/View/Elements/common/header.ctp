@@ -79,7 +79,7 @@ $(document).ready(function() {
 <p>
 <?php echo $usertype; ?></p>
 <a href="javascript:void(0);" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
-<?php if($usertype==2) {?>
+<?php if($usertype==1 || $usertype==2 || $usertype==2 || $usertype==7) {?>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 <?php } else { } ?>
 <?php if (isset($cansignup) && $cansignup == 1) {?>
