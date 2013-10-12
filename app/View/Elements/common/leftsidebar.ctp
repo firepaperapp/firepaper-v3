@@ -115,11 +115,11 @@
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
         <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a></li>
-             <!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
+             
              <?php 
             if(isset($prjCount) && $prjCount>0)
             {
-            	//echo $prjCount;
+            	echo $prjCount;
             }?></li>
 			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📁</i></a></li>
 			 
@@ -131,12 +131,6 @@
            	<?php 
            	if($dashboardMenu!='')
            	{?>
-				<div class="<?php echo $overviewAction;?>">
-					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
-				
-				<!-- <li class="<?php echo $filesAction;?>"><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="My Files" class="files-icon">My Files</a></li>
-				
-				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
@@ -154,6 +148,9 @@
 				<?php } ?>
 			
 				<h4>Projects</h4>
+				
+				<!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
+				
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))) {?>
 				<li>
            		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
