@@ -149,7 +149,7 @@
 				
 				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))){?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } else { } ?>
 				
