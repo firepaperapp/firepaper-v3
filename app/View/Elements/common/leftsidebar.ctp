@@ -138,7 +138,9 @@
 		 <?php } ?>
 		
          
-           
+           	<?php 
+           	if($dashboardMenu!='')
+           	{?>
 				<div class="<?php echo $overviewAction;?>">
 					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
 				
@@ -161,7 +163,7 @@
 			
            	<?php } ?>
 			
-			<?php 
+			<?php }
 			
            	else if($profileMenu!='')
            	{?>
