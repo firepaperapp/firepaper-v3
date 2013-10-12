@@ -25,7 +25,7 @@
 		<!-- search Section tart here -->
 		<!-- Inner Content List start -->
 		
-        	<div class="page"> 
+        	<div class="index"> 
 				<div class="listingContent" id="content_archievedProjects">
 					
 				</div>
