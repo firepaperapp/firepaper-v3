@@ -192,7 +192,7 @@
            	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>           	 	
            	<?php 
            	 }
-           	}
+           	
            
            	if(in_array($usertype, array(1,2,3,7)))
 			{	
