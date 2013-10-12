@@ -73,6 +73,8 @@ $(document).ready(function() {
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
 	</span>
 </div>-->
+<p>
+<?php echo $usertype; ?></p>
 <a href="javascript:void(0);" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
 <?php if($usertype==2) {?>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
