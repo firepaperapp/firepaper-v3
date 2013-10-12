@@ -1,3 +1,6 @@
+<?php
+	$usertype = $this->Session->read('user_type');
+?>
 <script type="text/javascript">
 jQuery.fn.topLink = function(settings) {
   settings = jQuery.extend({
