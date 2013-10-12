@@ -164,10 +164,14 @@
 				<?php } ?>
 			
 				<h4>Projects</h4>
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))) {?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))) {?>
 				<li class="<?php echo $markProjectsList;?>">
            		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
            		</li>
+           		<?php } ?>
+           		
+           		<?php if(in_array($this->Session->read('user_type'), array(1,2,3,4,7))) {?>
+           		<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> </a><i class="due-icon">⚠</i></li>
            		<?php } ?>
 			<?php }
 			
