@@ -110,6 +110,9 @@
 <!--<a href="<?php echo SITE_HTTP_URL ?>/<?php echo $userId; ?>" >-->
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 <!--</a>-->
+<p style="color:white;">
+<?php echo $usertype; ?>
+</p>
 <div class="clr"></div>
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
