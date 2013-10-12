@@ -124,8 +124,17 @@
             	//echo $prjCount;
             }?></li>
 			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📰</i></a></li>
-			  		 <?php } ?>
+			  <!--<div class="user-icon"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" >Profile</a></div>-->
+			    
+            <!-- <a href="<?php echo SITE_HTTP_URL."search"?>" alt="Search" class="search-icon">Search</a> -->
 
+		 <?php } ?>
+
+		<!-- <?php if($this->Session->read("user_type")==6) {?>
+		   <ul class="left">        	
+				 <li class="<?php echo $profileMenu;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" class="user-icon">Profile</a></li>
+				
+		  </ul>< -->
 		 <?php } ?>
 		
          
@@ -150,7 +159,9 @@
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 					<?php } ?>
-			
+			}
+           	else if($profileMenu!='')
+           	{?>
            		<li class="<?php echo $viewProfile;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" ><span>Profile details</span> <i class="profile-details-icon">👤</i></a></li>
            	 <?php if($usertype==6)
 					{?>
