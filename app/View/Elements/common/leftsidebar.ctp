@@ -18,11 +18,7 @@
 	}	
 ?>
 
-	<p style="color:white;">
-	<?php
-		echo $usertype;
-	?>
-	</p>
+	
 	
 	<?php
 
