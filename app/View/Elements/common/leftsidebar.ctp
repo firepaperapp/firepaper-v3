@@ -138,9 +138,7 @@
 		 <?php } ?>
 		
          
-           	<?php 
-           	if($dashboardMenu!='')
-           	{?>
+           
 				<div class="<?php echo $overviewAction;?>">
 					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
 				
@@ -152,22 +150,25 @@
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } else { } ?>
 				
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))) {?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))) {?>
 				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
 				<?php }?>
 
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
+				<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 			
-           	<?php }
-			}
+           	<?php } ?>
+			
+			<?php 
+			
            	else if($profileMenu!='')
            	{?>
-           		<li class="<?php echo $viewProfile;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" ><span>Profile details</span> <i class="profile-details-icon">👤</i></a></li>
+           
            	 <?php if($usertype==6)
 					{?>
-						<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
+						
 					<?php
 					}
 				?>
