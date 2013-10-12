@@ -161,9 +161,14 @@
 				<?php }?>
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
-				
-           	<?php } ?>
+				<?php } ?>
 			
+				<h4>Projects</h4>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))) {?>
+				<li class="<?php echo $markProjectsList;?>">
+           		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
+           		</li>
+           		<?php } ?>
 			<?php }
 			
            	else if($profileMenu!='')
