@@ -186,11 +186,11 @@
            	}
            	else if($projectMenu!='active')
            	{ 
-           		$markProjectsList = "";
-           		$addEditProject = "";
-           		$draftProjects = "";
-           		$archivedProjects = "";
-           		$deptProject = "";
+           		$markProjectsList = "active";
+           		$addEditProject = "active";
+           		$draftProjects = "active";
+           		$archivedProjects = "active";
+           		$deptProject = "active";
            		 
 	           	switch($this->request->params['action'])	
 	           	{
