@@ -53,7 +53,7 @@
 			if(in_array($usertype, array(1,2,3,7)))
 			} else { } ?>
          
-<div class="<?php echo $overviewAction;?>">
+<div>
 	<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a>
 	</li> 
 				
@@ -80,21 +80,21 @@
 	<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a>
 	</li>
 			       	
-	<li class="<?php echo $coadmins;?>">
+	<li>
 		<a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a>
 	</li>           	 	
                 
-    <li class="<?php echo $markProjectsList;?>">
+    <li>
         <a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
     </li>
     
-    <li class="<?php echo $addEditProject;?>"><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" >Create Project </a><span class="create-icon"></span>
+    <li><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" >Create Project </a><span class="create-icon"></span>
     </li>
 			       		
     <li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> </a><i class="due-icon">⚠</i>
     </li>
 			
-	<li class="<?php echo $active ;?>" id="deptSub_<?php echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a>
+	<li id="deptSub_<?php echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" ><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a>
 	</li>
 			
 	<li class="<?php if($this->request->params['url']['url'] == "projects/draftProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/draftProjects"?>" alt="Archive" ><span>Drafts</span> <i class="project-icon"></i></a>
