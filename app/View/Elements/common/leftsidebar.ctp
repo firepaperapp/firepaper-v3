@@ -124,17 +124,8 @@
             	//echo $prjCount;
             }?></li>
 			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📰</i></a></li>
-			  <!--<div class="user-icon"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" >Profile</a></div>-->
-			    
-            <!-- <a href="<?php echo SITE_HTTP_URL."search"?>" alt="Search" class="search-icon">Search</a> -->
+			  		 <?php } ?>
 
-		 <?php } ?>
-
-		<!-- <?php if($this->Session->read("user_type")==6) {?>
-		   <ul class="left">        	
-				 <li class="<?php echo $profileMenu;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" class="user-icon">Profile</a></li>
-				
-		  </ul>< -->
 		 <?php } ?>
 		
          
@@ -144,34 +135,22 @@
 				<div class="<?php echo $overviewAction;?>">
 					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
 				
-				<!-- <li class="<?php echo $filesAction;?>"><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="My Files" class="files-icon">My Files</a></li>
 				
-				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
+	<?php if(in_array($this->Session->read('user_type'), array(1,2,7))){?>
+		<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))){?>
-				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
-				<?php } else { } ?>
-				
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))) {?>
-				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
-				<?php }?>
+		<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
+	<?php }?>
 
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
-				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
-					<?php } ?>
-			
-           		<li class="<?php echo $viewProfile;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" ><span>Profile details</span> <i class="profile-details-icon">👤</i></a></li>
-           	 <?php if($usertype==6)
-					{?>
-						<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
-					<?php
-					}
-				?>
-           	<?php if(in_array($this->Session->read('user_type'), array(4,5)))
-           	 {?>
-<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
-			<?php
-           	 }?>
+	<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
+		<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
+				
+		<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
+	<?php } ?>
+    <?php if(in_array($this->Session->read('user_type'), array(4,5)))
+    {?>
+    <li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
+    <?php }?>
            	 <?php
            	 if($usertype == 1)	
            	 {?>
