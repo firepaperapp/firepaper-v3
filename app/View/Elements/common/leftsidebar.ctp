@@ -38,19 +38,16 @@
 			    
             <!-- <a href="<?php echo SITE_HTTP_URL."search"?>" alt="Search" class="search-icon">Search</a> -->
 
-		 <?php } ?>
+
 
 		<!-- <?php if($this->Session->read("user_type")==6) {?>
 		   <ul class="left">        	
 				 <li class="<?php echo $profileMenu;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" class="user-icon">Profile</a></li>
 				
 		  </ul>< -->
-		 <?php } ?>
+	
 		
          
-           	<?php 
-           	if($dashboardMenu!='')
-           	{?>
 				<div class="<?php echo $overviewAction;?>">
 					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
 				
