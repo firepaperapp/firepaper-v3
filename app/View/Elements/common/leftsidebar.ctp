@@ -193,7 +193,31 @@
            	<?php 
            	 }
            	}
-           
+           	else if($projectMenu!='active')
+           	{ 
+           		$markProjectsList = "active";
+           		$addEditProject = "active";
+           		$draftProjects = "active";
+           		$archivedProjects = "active";
+           		$deptProject = "active";
+           		 
+	           	switch($this->request->params['action'])	
+	           	{
+	           		case "markProjectsList":
+	           			$markProjectsList = "active";
+	           			break;
+	           		case "addEditProject":
+	           			$addEditProject = "active";
+	           			break;
+	           		case "draftProjects":
+	           			//$draftProjects = "active";
+	           			break;
+	           		case "archivedProjects":
+	           			$archivedProjects = "active";
+	           			break;	
+	           		default:
+	           			$deptProject = "active";	
+	           	}
            	if(in_array($usertype, array(1,2,3,7)))
 			{	
            	?>
