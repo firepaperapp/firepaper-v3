@@ -19,9 +19,6 @@
 ?>
 <?php
 	//Permissions for usertypes
-	if (in_array($this->Session->read('user_type'), array(1,2,3,7))) {
-		$editor_allow = true;
-		}
 	$dashboardMenu = "active";
 	$profileMenu = "active";
 	$projectMenu = "active";
@@ -148,15 +145,15 @@
 				
 				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
-				<?php if($editor_allow == true){?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } else { } ?>
 				
-				<?php if($usertype==1 || $usertype==2 || $usertype==7) {?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))) {?>
 				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
 				<?php }?>
 
-				<?php if($usertype==1 || $usertype==2 || $usertype==7){?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
 			
