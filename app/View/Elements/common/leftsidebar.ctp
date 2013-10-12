@@ -175,12 +175,6 @@
            	<?php } ?>
 			
 			
-           
-           	           	   	 
-           	<?php
-           		echo $this->requestAction("/files/getMyCategories");
-           	}
-			?>
 			
 				</ul>
 	         <div class="clr"></div>
