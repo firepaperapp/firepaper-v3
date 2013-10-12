@@ -175,6 +175,8 @@
            		<?php if(in_array($this->Session->read('user_type'), array(1,2,3,4,7))) {?>
            		<li>
            		<a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><?php if($dueInCount>0) echo "<span class='duein'>".$dueInCount."</span>";?> <i class="due-icon">⚠</i></a></li>
+           		<li class="<?php if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" ><span>Archive</span> <i class="project-icon"></i></a>
+           		</li>
            		<?php } ?>
 			<?php }
 			
