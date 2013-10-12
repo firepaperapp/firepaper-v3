@@ -158,14 +158,12 @@
 
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
-				
-				
-			
+				<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
            	<?php } ?>
 			
 			<?php }
 			
-           	else if($profileMenu!='active')
+           	else if($profileMenu!='')
            	{?>
            <li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
            	 <?php if($usertype==6)
