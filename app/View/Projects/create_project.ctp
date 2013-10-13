@@ -43,7 +43,7 @@ $(document).ready(function(){
 				
 	<h1>
 	<?php
- 	if($project_id!=0)
+    if(!$isNew)
 	{
 		$mode = "edit"; 
 		echo "Update";

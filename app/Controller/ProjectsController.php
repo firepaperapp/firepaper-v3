@@ -716,12 +716,14 @@ class ProjectsController  extends AppController{
 	 */
 	function addEditProject($project_id=0)
 	{
-		if($project_id == 0)
+        $isNew = FALSE;
+        if($project_id == 0)
 		{
 			$CreateProject['Project']['is_complete'] = 0;
 			$this->Project->save($CreateProject);
 			$project_id = $this->Project->id;
-		}
+            $isNew = TRUE;
+        }
 	 	if(!in_array($this->Session->read('user_type'), array(1,2,3,7)))
 		{
 			
@@ -763,7 +765,7 @@ class ProjectsController  extends AppController{
  			{
  	 			$response['error'] = $this->Project->errMsg;
  			}
- 			$this->RequestHandler->respondAs('json'); 			
+    		$this->RequestHandler->respondAs('json'); 			
  			echo json_encode($response);
  			$this->autoRender = false;         
  			die;   
@@ -981,7 +983,9 @@ class ProjectsController  extends AppController{
 		$this->set("project_id", $project_id);
 		$this->set("teachers", $teachers);
 		$this->set("subjects", $subjects);
-	 	$this->render("create_project");
+	 	$this->set("isNew", $isNew);
+        $this->render("create_project");
+
 	}
 	function getTeachersOfSubject($subject_id="")
 	{
