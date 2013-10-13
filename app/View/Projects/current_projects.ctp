@@ -138,7 +138,7 @@ $(document).ready(function(){
            	 	<p>These will be your mailing list groups, this will help when distributing your projects.</p>
            	 	<br />
            	 	<a href="" class="submit" alt="Start creating groups">Start creating groups</a>
-           	 	<br />
+           	 	<div class="clr-spacer"></div>
            	 	<h3>Next thing is to create your first project!</h3>
            	 	<p>All active project will be displayed here on your dashboard.</p>
            	 	<br />
