@@ -1299,14 +1299,14 @@ class ProjectsController  extends AppController{
 							
 					        $this->Email->text_body = $sMessage;
 					        $this->Email->subject = SITE_NAME.' - '.$subject;
-						//echo "<pre>"; print_r($this->Email);die;
+						echo "<pre>"; print_r($this->Email);die;
 					        $result = $this->Email->sendEmail();
 	 					}	 
 	 				}
-					//echo "<pre>"; print_r($prjDetail);
-					//echo $insertQuery."<br>";
+					echo "<pre>"; print_r($prjDetail);
+					echo $insertQuery."<br>";
 	 				$insertQuery = substr($insertQuery, 0, -1);
-					//echo $insertQuery;die;
+					echo $insertQuery;die;
 	 				$this->Project->query($insertQuery);
 	 				//We will trigger an activity to the selectd users	
 	 				
