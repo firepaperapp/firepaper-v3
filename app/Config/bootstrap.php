@@ -107,7 +107,7 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-
+CakePlugin::load('DebugKit');
 
 include_once('site_constants.php');
 include_once('messages.php');
