@@ -388,11 +388,11 @@ function checkTask()
 		$("div#validation-container-task").empty().html('Please enter numeric digits');
 	    return false;
 	}
-	/*else
+	else
 	{
 		$("div#validation-container-task").empty().hide();
 		return true;
-	}*/
+	}
 }
 function addComment(f)
 {		
