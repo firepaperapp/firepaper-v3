@@ -40,7 +40,7 @@
 class AppController extends Controller {
  
 	var $helpers=array('Js','Html','Utility','AddJsCss');
-	var $components=array('Session','Cookie','Image','Email');
+	var $components=array('Session','Cookie','Image','Email','DebugKit.Toolbar');
 	var $breadcrumb=array('Home'=>'');
 	var $uses = array('activityLog','projectStudent','Department','DepartmentStudent','DepartmentTeacher','User','Project');
 
@@ -57,7 +57,6 @@ class AppController extends Controller {
 	 */
 	public $allowCookie = TRUE;
 	
-	public $components = array('Session','DebugKit.Toolbar');
 
 	/**
 	 * Determines length of time that the cookie will be valid.
