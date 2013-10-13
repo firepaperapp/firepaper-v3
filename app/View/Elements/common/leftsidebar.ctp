@@ -153,7 +153,11 @@
 				
 				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))) {?>
 				<li>
-           		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
+           		<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" ><span>Create a project</span> <i class="mark-icon">✎</i></a>
+           		</li>
+           		
+				<li>
+           		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Grading</span> <i class="mark-icon">✓</i></a>
            		</li>
            		
            		<li class="<?php if($this->request->params['url']['url'] == "projects/draftProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/draftProjects"?>" alt="Archive" ><span>Drafts</span> <i class="project-icon">📰</i></a></li>
