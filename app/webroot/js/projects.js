@@ -378,7 +378,7 @@ function checkTask()
 {	//alert("MAN");
  	var regexp = /^[0-9]{1,2}$/gi;
  	$("div#validation-container-task").show();
-  	//if($.trim(document.editinplaceform.value.value)=="")
+  	if($.trim(document.editinplaceform.value.value)=="")
 	{
 	    $("div#validation-container-task").empty().html('Please enter weight');
 	    return false;
