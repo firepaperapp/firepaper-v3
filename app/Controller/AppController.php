@@ -56,8 +56,8 @@ class AppController extends Controller {
 	 *
 	 */
 	public $allowCookie = TRUE;
-
-	//public $components = array('DebugKit.Toolbar');
+	
+	public $components = array('Session','DebugKit.Toolbar');
 
 	/**
 	 * Determines length of time that the cookie will be valid.
@@ -70,7 +70,7 @@ class AppController extends Controller {
 	 * Name to use for cookie holding user values
 	 */
 	public $cookieName = 'User';
-	public $components = array('Session','DebugKit.Toolbar');
+	
  
 
 	function __construct($request = null, $response = null)
