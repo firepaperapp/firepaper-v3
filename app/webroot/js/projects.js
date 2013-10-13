@@ -602,7 +602,8 @@ function commentEvents()
 		        submitdata: { _method: "put" },
 		        onsubmit : checkTask,		        
             	event : 'manclick.editable',
-            	callback: tasEditDone
+            	callback: taskEditDone,
+            	
 		     });
 	  
 		$(".editLink").on("click", function()
