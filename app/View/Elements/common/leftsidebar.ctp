@@ -114,13 +114,13 @@
 <div class="clr"></div>
 <?php if($this->Session->read("user_type")!=6) {?>
      <ul>
-        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a></li>
+        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a>
              
              <?php 
-            if(isset($prjCount) && $prjCount>0)
+            /*if(isset($prjCount) && $prjCount>0)
             {
             	echo $prjCount;
-            }?></li>
+            } */?></li>
 			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📁</i></a></li>
 			 
 			    
