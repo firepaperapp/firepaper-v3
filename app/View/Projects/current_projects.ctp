@@ -140,10 +140,10 @@ $(document).ready(function(){
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Start creating groups</a>
            	 	<div class="clr-spacer"></div>
-           	 	<h3>Next thing is to create your first project!</h3>
+           	 	<h3>Next thing is to create your project!</h3>
            	 	<p>All active project will be displayed here on your dashboard.</p>
            	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your first project</a>
+           	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your project</a>
            	 	<div class="clr-spacer"></div> 
            	 	<?php
            	 		//echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
