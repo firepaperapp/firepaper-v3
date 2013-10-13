@@ -471,7 +471,7 @@ select {
 .nav { 
 	display: block;
 	width:280px; 
-	position: fixed;
+	position: absolute;
 	overflow: hidden;
 	top:0;
 	left:0;
