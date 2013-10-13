@@ -143,8 +143,11 @@ $(document).ready(function(){
            	 	<p>All active project will be displayed here on your dashboard.</p>
            	 	<br />
            	 	<a href="" class="submit" alt="Create your first project">Create your first project</a>
-           	 	
            	 	<div class="clr-spacer"></div> 
+           	 	<?php
+           	 		//echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
+           	 	} ?>
+           	 	
            	 	
            	 	<?php 
 				echo "</div>";
