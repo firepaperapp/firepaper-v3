@@ -127,13 +127,13 @@ $(document).ready(function(){
 			$i++;
 			} ?>
 		<div class="clr-spacer"></div> 
-		<div class='no-projects widget'>
+		
 		<?php
 			} else {
 			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
 			if(in_array($this->Session->read('user_type'), array(1,2,3,7)))
            	 	{ ?>
-           	 	
+           	 	<div class='no-projects widget'>
            	 	<h2>Welcome to Firepaperapp!</h2>
            	 	<h3>First things first, create your class structures and student accounts</h3>
            	 	<p>These will be your mailing list groups, this will help when distributing your projects.</p>
