@@ -145,8 +145,11 @@ $(document).ready(function(){
            	 	<a href="" class="submit" alt="Create your first project">Create your first project</a>
            	 	
            	 	<div class="clr-spacer"></div> 
-           	 	</div>
-           	 	<?php } ?> 
+           	 	
+           	 	<?php 
+				echo "</div>";
+			}
+			?> 
 <!-- end Project bars --->
 		
 		
