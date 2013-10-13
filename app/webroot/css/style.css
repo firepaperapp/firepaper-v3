@@ -286,8 +286,12 @@ select {
 .widget h2, .widget h3, .widget p, .widget .submit {
 	text-align: left;
 }
+.widget h3 {
+	font-size:16px;
+}
 .widget .submit {
 	margin-bottom: 16px;
+	float: left;
 }
 .widget .date {
 	width: 100%;
