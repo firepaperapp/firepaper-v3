@@ -482,6 +482,7 @@ select {
 }
 .nav h4 {
 	margin:20px 0px 0px 20px;
+	color: #686b6c;
 }
 .close-nav {
 	display: none;
