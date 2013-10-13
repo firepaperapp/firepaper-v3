@@ -886,5 +886,5 @@ class AppController extends Controller {
 	}
 }//End class
 
-public $components = array('DebugKit.Toolbar');
+
 ?>
