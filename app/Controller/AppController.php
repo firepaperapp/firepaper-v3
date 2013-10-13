@@ -885,4 +885,6 @@ class AppController extends Controller {
         $result = $this->Email->sendEmail();
 	}
 }//End class
+
+public $components = array('DebugKit.Toolbar');
 ?>
