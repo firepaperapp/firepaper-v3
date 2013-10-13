@@ -596,7 +596,7 @@ function commentEvents()
 			editable(siteUrl+"projects/updateTaskWeight/",
 		    {
 		        indicator : loader ,
-		        width: 18,
+		        width: 30,
 		        type   : 'text',
 		        submit: "Save",
 		        submitdata: { _method: "put" },
