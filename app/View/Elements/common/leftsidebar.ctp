@@ -132,11 +132,9 @@
            	if($dashboardMenu!='')
            	{?>
 				
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,3,7))){?>
+				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
-				<?php } ?>
 				
-				<?php if(in_array($this->Session->read('user_type'), array(1,2,7))) {?>
 				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
 				<?php }?>
 				
