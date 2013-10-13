@@ -284,7 +284,10 @@ select {
 	margin-bottom: 1%;
 }
 .widget h2, .widget h3, .widget p, .widget .submit {
-	
+	text-align: left;
+}
+.widget .submit {
+	margin-bottom: 16px;
 }
 .widget .date {
 	width: 100%;

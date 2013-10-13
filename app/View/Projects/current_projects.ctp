@@ -147,7 +147,7 @@ $(document).ready(function(){
            	 		//echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
            	 	} ?>
            	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
+           	 	
            	 	<?php 
 				echo "</div>";
 			}
