@@ -3249,8 +3249,12 @@ form.editinplaceform {
 	font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     font-weight: bold !important;
 }
+.editTaskWeight form {
+	width: 120px;
+}
 .editTaskWeight form input {
 	width: 20% !important;
+	margin-right: 10px;
 }
 .add {
     display: block !important;
@@ -3358,7 +3362,7 @@ form.editinplaceform {
 	font-size: 13px;
 }
 .weight-col span {
-	
+	display: inline-block;
 }
 .weight-col .weight { 
 	color:white; 
