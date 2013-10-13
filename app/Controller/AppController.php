@@ -57,7 +57,7 @@ class AppController extends Controller {
 	 */
 	public $allowCookie = TRUE;
 
-	public $components = array('DebugKit.Toolbar');
+	//public $components = array('DebugKit.Toolbar');
 
 	/**
 	 * Determines length of time that the cookie will be valid.
