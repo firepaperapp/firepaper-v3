@@ -3250,10 +3250,10 @@ form.editinplaceform {
     font-weight: bold !important;
 }
 .editTaskWeight form {
-	width: 120px;
+	width: 150px;
 }
 .editTaskWeight form input {
-	width: 20% !important;
+	width: 52px !important;
 	margin-right: 10px;
 }
 .add {
