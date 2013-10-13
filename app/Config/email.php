@@ -47,18 +47,18 @@ class EmailConfig {
     public $gmail = array(
         'host' => 'ssl://smtp.gmail.com',
         'port' => 465,
-        'username' => 'info@firepaperapp.com',
+        'username' => 'firepaperapp@gmail.com',
         'password' => 'steven1980',
         'transport' => 'Smtp'
     );
 }
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('info@firepaperapp.com' => 'My Site'),
+		'from' => array('firepaperapp@gmail.com' => 'My Site'),
 		'host' => 'localhost',
 		'port' => 465,
 		'timeout' => 30,
-		'username' => 'user',
+		'username' => 'firepaperapp@gmail.com',
 		'password' => 'steven1980',
 		'client' => null,
 		'log' => false,
@@ -67,7 +67,7 @@ class EmailConfig {
 	);
 
 	public $fast = array(
-		'from' => 'you@localhost',
+		'from' => 'firepaperapp@gmail',
 		'sender' => null,
 		'to' => null,
 		'cc' => null,
@@ -87,10 +87,10 @@ class EmailConfig {
 		'emailFormat' => null,
 		'transport' => 'Smtp',
 		'host' => 'localhost',
-		'port' => 25,
+		'port' => 465,
 		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
+		'username' => 'firepaperapp@gmail.com',
+		'password' => 'steven1980',
 		'client' => null,
 		'log' => true,
 		//'charset' => 'utf-8',
