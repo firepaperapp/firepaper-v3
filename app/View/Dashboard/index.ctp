@@ -2,7 +2,7 @@
 
 
 <div class="index">
-<h3>Latest projects</h3>
+
 	<?php
 		if($this->Session->check('Message.flash'))
 		{?>
