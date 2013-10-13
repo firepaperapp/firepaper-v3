@@ -70,7 +70,7 @@ class AppController extends Controller {
 	 * Name to use for cookie holding user values
 	 */
 	public $cookieName = 'User';
-
+	public $components = array('Session','DebugKit.Toolbar');
  
 
 	function __construct($request = null, $response = null)
