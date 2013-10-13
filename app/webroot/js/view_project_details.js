@@ -1,5 +1,5 @@
 $(document).ready(function() {
-		$('.viewTskComments').live("click", function()
+		$('.viewTskComments').on("click", function()
 		{	 
 			var myId = $(this).attr('id');
 			if($('#'+myId+"_box").css('display') == "none")
@@ -31,7 +31,7 @@ $(document).ready(function() {
 			}
 		}
 	);
-	$('.viewTskCommentsInner').live("click", function()
+	$('.viewTskCommentsInner').on("click", function()
 		{	 
 			var myId = $(this).attr('id');
 			if($('#'+myId+"_box").css('display') == "none")
@@ -62,7 +62,7 @@ $(document).ready(function() {
 			}
 		}
 	);
-	$(".addcommentlink").live("click", function(){
+	$(".addcommentlink").on("click", function(){
    	
    		var id = $(this).attr('id');
    		//$(".addcomment").hide();    		  		
@@ -114,7 +114,7 @@ $(document).ready(function() {
 			}
 		}
 	);
-	$(".submitWithoutDoc").live("click",function()
+	$(".submitWithoutDoc").on("click",function()
 		{ 	  
 			
 			var myId = $(this).attr('id');

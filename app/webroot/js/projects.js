@@ -482,7 +482,7 @@ function deleteDoc(task_id, fileId)
 }
 function commentEvents()
 {
-	$('.viewTskComments').live("click", function()
+	$('.viewTskComments').on("click", function()
 		{	 
 			var myId = $(this).attr('id');
 			if($('#'+myId+"_box").css('display') == "none")
@@ -511,7 +511,7 @@ function commentEvents()
 			}
 		}
 	);
-	$(".addcommentlink").live("click", function(){
+	$(".addcommentlink").on("click", function(){
    	
    		var id = $(this).attr('id');
    		//$(".addcomment").hide();    		  		
@@ -605,7 +605,7 @@ function commentEvents()
             	callback: tasEditDone
 		     });
 	  
-		$(".editLink").live("click", function()
+		$(".editLink").on("click", function()
 		{
 			var id = $(this).attr('id');  
 			var me = $.trim($("#taskWeight_"+id).html());
