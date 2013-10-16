@@ -1,4 +1,4 @@
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js" type="text/javascript"></script>
+<script src="<?php echo JS_PATH?>jquery.fileupload-validate.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo JS_PATH?>jquery.ui.datepicker.js"></script>
 <link type="text/css" href="<?php echo CSS_PATH?>jquery-ui-1.8.6.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.draggable.js"></script>
