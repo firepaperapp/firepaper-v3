@@ -17,7 +17,7 @@
 	var siteUrl = "<?php echo SITE_HTTP_URL;?>";	
 	var siteImagesUrl = "<?php echo SITE_HTTP_URL;?>app/webroot/images/";
 </script>
-<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>bubble.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>animatedcollapse.js"></script>
