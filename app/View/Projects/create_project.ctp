@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>jquery.fileupload-ui.css" />
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload-ui.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui.min.js"></script> 
+<script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui-1.10.3.custom.min.js"></script> 
 <!-- File Upload Progress bar End -->
 <div class="index white page">
 <div class="validation-signup" id="validation-container" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
