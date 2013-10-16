@@ -1,4 +1,4 @@
-<script src="<?php echo JS_PATH?>jquery.validate.js" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo JS_PATH?>jquery.ui.datepicker.js"></script>
 <link type="text/css" href="<?php echo CSS_PATH?>jquery-ui-1.8.6.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.draggable.js"></script>
@@ -57,8 +57,7 @@ $(document).ready(function(){
 	
 	<div class="clr"></div>
 	<div id="projectCreated"></div>
-    <div id="createProject">
-	    
+ 
 	    <h3>Course title</h3>
 	     <?php echo $this->Form->input('title',array('id'=>'projectTitle', 'tabindex'=>1,'div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
 	      <h3>Details</h3>  
@@ -382,9 +381,7 @@ $(document).ready(function(){
 			<?php
 			}    
 		 	?>
-		 
-  
-  	</div>
+
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
 </div>
