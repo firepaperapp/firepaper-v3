@@ -35,17 +35,15 @@ else
 	$userimage = IMAGES_PATH.'profile-pic.png';
 }
 ?>
-
 			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 			<span class="project-leader-title">Details:<br />
-			<a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['leader_id']."/".$prjDetails['User'];?>" class="red">
-			<?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a>
+			<strong><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" ><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></strong>
 				</span>
 				<div class="clr"></div>
 				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>
 				<div class="clr-spacer"></div>-->
-				<h3>Details</h3> 
+				<h3>Course details</h3> 
 				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			
 			
@@ -79,8 +77,8 @@ else
 				
 				<?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?>
 				</span>
-				<span class="flat-files-icon"><?php echo $prjDetails[0]['noOfFiles']>0?$prjDetails[0]['noOfFiles']:0;?> Files</span> 
-		<span class="flat-tasks-icon"><?php echo $prjDetails['noOfComments'];?> Comments</span>
+				<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
+		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
 				</div>
 		   		<?php 
 				} 

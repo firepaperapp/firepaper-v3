@@ -1,6 +1,3 @@
-<?php
-	$usertype = $this->Session->read('user_type');
-?>
 <script type="text/javascript">
 jQuery.fn.topLink = function(settings) {
   settings = jQuery.extend({
@@ -36,38 +33,7 @@ $(document).ready(function() {
     e.preventDefault();
     $.scrollTo(0,300);
   });
-  
-  $("#comment-dropdown").click(function(ev){
-		ev.stopPropagation();		
-			var $this = $(this), content = $(".panel");
-				if (content.is(":visible")) {
-				       return;
-			    }
-			    $(".panel").fadeOut('fast');
-			       content.fadeIn();
-		       });
-		       
-		       $(".panel").click(function(ev) {
-			       ev.stopPropagation();
-		       })
-		      		       
-		       $(document).click(function(){
-			       $(".panel").fadeOut();
-		       });
-		       
-	$('#nav-toggle').toggle(function(){
-    $('.nav').css('display', 'none');
-    $('.container').css('margin-left', '0');
-    }, function(){
-    $('.nav').css('display', 'block');
-    $('.container').css('margin-left', '280px');
-    });
-
-    
 });
-
-
-
 </script>
 
 <aside class="navigation">
@@ -76,14 +42,13 @@ $(document).ready(function() {
                 <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
 	</span>
 </div>-->
-
-<a href="javascript:void(0);" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
-<?php if($usertype==1 || $usertype==2 || $usertype==3 || $usertype==7) {?>
+<a href="<?php echo SITE_HTTP_URL?>logout" alt="Logout" class="logout-icon"></a>
+<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" >⚙</a>
+<!--<a class="activity-toggle" href="">🌎</a>-->
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
-<?php } else { } ?>
-<div class="comment-icon-area">
-	<a href="javascript:void(0);" alt="Comments" class="icon-comment" id="comment-dropdown" ></a>
-<?php echo $this->requestAction("users/currentComments");?>
-</div>
+
+<?php if (isset($cansignup) && $cansignup == 1) {?>
+
+<?php } ?>
 <a href="<?php echo SITE_HTTP_URL."dashboard/"?>" alt="Dashboard" class="header-logo"><img src="<?php echo IMAGES_PATH.'header-logo.png'; ?>" /></a>
 </aside>
