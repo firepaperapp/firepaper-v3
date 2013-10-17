@@ -51,10 +51,8 @@
 			          <div class="doc-icon">
 			          <?php if($rec['fileType']['icon']!='')
 			          {?>
-			          <img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon'];?>" />
-						<?php } else { ?>
-						<div class="task-icon">✓</div>
-						<?php } ?>
+			          <img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" />
+						<?php }?>
 			          </div>
 			          <div class="file-name">
 				          <?php 
@@ -133,7 +131,7 @@
 					       
 				<?php
 					}?>
-					
+					<div class="project-rule"></div>
 					<div class="width100Per" id="extraDocs_<?php echo $rec['prjTask']['id'];?>" style="display:none;">	
 				 	    
 					 </div>
@@ -165,8 +163,8 @@
 					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
 				 
 				</div>				
-				<div class="project-rule"></div>
-					
+				
+				<div class="clr-spacer"></div> 	
 				<?php }?>
 			
 	      
@@ -221,7 +219,38 @@ $box = "task-comment";
 	    	$status = "c"; //Project Completed
 	    }
 	    ?>
-	   
+	    <div class="clr"></div>
+	    <?php
+	    if(count($dataWhiteboards)>0)
+	    {?>
+	    <div class="row">
+			<div class="left">
+				<h3>Whiteboards</h3>
+			</div>
+			<div class="right">
+				<h3></h3>
+			</div>
+		</div> <div class="clr"></div>
+		 <div class="project-wrapper">
+		 		<div class="project-brief-box-wrapper">
+					<div class="project-drop-area-wrapper">
+					 <?php
+					    foreach($dataWhiteboards as $rec)
+					    {?>
+					    	<p class="marginT10">
+					    	<a href="<?php echo SITE_HTTP_URL;?>whiteboard/<?php echo $rec['Whiteboard']['id'];?>" class="edit">
+					    	<?php echo Sanitize::html($rec['Whiteboard']['title']);?>
+					    	</a>
+					    	<div class="clr"></div>
+					    	</p>
+						<?php
+					    }?>
+					</div>
+				</div>
+		</div>
+	    <?php
+	    }
+	    ?>
 		<input type="hidden" name="isOwner" id="isOwner" value="<?php echo $isOwner;?>" />
 		<input type="hidden" name="gotUserId" id="gotUserId" value="<?php echo $posted_to;?>" />
 	    <input type="hidden" name="posted_to" id="posted_to" value="<?php echo $posted_to;?>" />

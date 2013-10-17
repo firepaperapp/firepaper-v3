@@ -29,17 +29,17 @@
 				$preDate = $date;
 				if($currDate == $date)
 				{?>
-					<span class="date"><span class="title-today">Today</span> <?php print(Date("dS F Y")); ?></span></p>		
+					<p class="title-today">Today <span class="date"><?php print(Date("dS F Y")); ?></span></p>		
 				<?}	
 				else if($date == $yesterday)
 				{?>
-					<span class="date"><span class="title-tomorrow">Yesterday</span> <?php print(Date("dS F Y", strtotime($yesterday))); ?></span></p>  
+					<p class="title-tomorrow">Yesterday <span class="date"><?php print(Date("dS F Y", strtotime($yesterday))); ?></span></p>  
 	
 				<?php
 				}
 				else 
 				{?>
-					<span class="date"><?php print(Date("dS F Y", strtotime($date))); ?></span>
+					<p class=""><span class="date"><?php print(Date("dS F Y", strtotime($date))); ?></span></p>
 				<?php
 				}
 			}
@@ -91,7 +91,7 @@
 		        	</span> 
 		        	</p>
 		   		</div><!-- end msg-body -->
-			 </div><!-- end msg-container --> 
+			</div><!-- end msg-container -->	 
 	 		<?php
 			$i++;
 			 
@@ -104,5 +104,5 @@
 	<div class="clr-spacer"></div> 
  	<a href="<?php echo SITE_HTTP_URL."dashboard/viewComments/";?>" class="readmore-btn">View all messages</a>
  	<div class="clr"></div>
-
+ 
  </div>

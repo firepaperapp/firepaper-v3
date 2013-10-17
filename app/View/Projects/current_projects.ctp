@@ -62,10 +62,11 @@ $(document).ready(function(){
 						
 							<!-- Project bars --->
 	<div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
-		<div class="duein-date"><span>Due:</span> <? print(Date("dS F Y", strtotime($date))); ?></div>
+		<p class="title-other">Due: <span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
 		
 			<p class="project-title"><?php echo Sanitize::html($rec['Project']['title']);?> </p>
 		
+		<div class="project-bar">
 		<!-- Bubble -->
 	<div class="completed-bubble">
 		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
@@ -87,18 +88,20 @@ $(document).ready(function(){
 		<div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
 		<div class="clr"></div>
 		<em>Project</em></div>
-		<div class="details">
-		<h3>Details</h3>
-		
-			<p><?php echo Sanitize::html($rec['Project']['description']);?>
-			<!--<span class="started-details">- <?php 
-			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
-			</p>
 		<div class="project-content">
-		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
-		<span class="flat-tasks-icon"><span>&#xf075;</span>
-<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span></div>
-	</div>
+		<div class="inner">
+		<h4>Course details</h4>
+		<div class="note">
+			<p><?php echo Sanitize::html($rec['Project']['description']);?>
+			<span class="started-details">- <?php 
+			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
+			</p>
+		</div>
+		<div class="project-items">
+		<span class="file-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span>
+		<?php //echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> <!--Comments-->
+		</div>
+		</div><!-- end project-content -->
 		<div class="project-owner">
 		<?php //echo "<pre>"; print_r($rec['User']);die;
 	      if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
@@ -112,14 +115,11 @@ $(document).ready(function(){
 	      ?>
 		      <img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 		        
-			<p class="title">
-			Project leader:
-			<br>
-			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
+			<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a></p>
 		</div>
 		
-		
-			
+		</div>
+		</div><!-- end project-bar -->	
 		<div class="clr"></div>
 	</div><!-- end project-bar-wrapperr -->
 		<!-- end Project bars --->
@@ -127,35 +127,16 @@ $(document).ready(function(){
 			$i++;
 			} ?>
 		<div class="clr-spacer"></div> 
-		
 		<?php
 			} else {
-			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
-			if(in_array($this->Session->read('user_type'), array(1,2,3,7)))
-           	 	{ ?>
-           	 	<div class='no-projects widget'>
-           	 	<h2>Welcome to Firepaperapp!</h2>
-           	 	<h3>First things first, create your class structures and student accounts</h3>
-           	 	<p>These will be your mailing list groups, this will help when distributing your projects.</p>
+			echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
+			if(in_array($this->Session->read('user_type'), array(1,3,7)))
+           	 	{
+           	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
+           	 	} ?>
            	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Start creating groups</a>
-           	 	<div class="clr-spacer"></div>
-           	 	<h3>Next thing is to create your project!</h3>
-           	 	<p>All active project will be displayed here on your dashboard.</p>
-           	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your project</a>
-           	 	<div class="clr-spacer"></div> 
-           	 	<?php
-           	 		//echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
-           	 	} else if (in_array($this->Session->read('user_type'), array(4))) { ?>
-           	 	<h2>Hey there!</h2>
-           	 	<h3>Looks like you don't have any projects.</h3>
-           	 	<p>You have your own file storage area, keep everything in one area.</p>
-           	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" class="submit" alt="View File area">View File area</a>
-           	 	
+           	 	<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
            	 	<?php 
-				} else { }
 				echo "</div>";
 			}
 			?> 
@@ -163,7 +144,5 @@ $(document).ready(function(){
 		
 		
 	<div class="clr"></div>
- <div id="pagination">
- <span><a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a></span>
- </div>
+ 
  </div>

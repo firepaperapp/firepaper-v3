@@ -23,13 +23,13 @@
 		 </h3>   
 		<!-- search Section tart here -->
 		<!-- Inner Content List start -->
-		
-        	<div class="index"> 
+		<div class="page-wrapper">
+        	<div class="page"> 
 				<div class="listingContent" id="content_archievedProjects">
 					
 				</div>
 			</div>
-		
+		</div>
 		<!-- Inner Content List end -->
 	</div>
 <input type="hidden" name="draft" id="draft" value="<?php echo $draft;?>" />
