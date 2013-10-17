@@ -61,7 +61,7 @@ $(document).ready(function(){
 		 <input type="file" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		 <button>Upload</button>
 		<div>Upload files</div> 
-		</form>
+	
 -		
 -		<script>
 -		     $(document).ready(function(){
