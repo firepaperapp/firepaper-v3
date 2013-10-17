@@ -4,7 +4,7 @@
 <div class="version-documents projectTasks projectTaskHolder">	
 	<form name="studSubmitTaskDocDrop_<?php echo $task_id;?>" id="studSubmitTaskDocDrop_<?php echo $task_id;?>" action="" method="post" onsubmit="return studentUploadDocDrop(<?php echo $task_id;?>);">
 	 	<div class="col-middle">
-			  <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>
+			  <div class="doc-icon"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $fileDetail['fileType']['icon']?>" /></div>
 			 <div class="file-name">
 		        <?php 
 		        $name = explode(".",$fileDetail['userFile']['file_name']);

@@ -59,9 +59,8 @@ if(strpos($_SERVER['HTTP_REFERER'], "markProject") != 0)
 }
 if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 {?>
-	
-	<h4>Comments</h4>
-	<div class="project-comments">
+	<div class="rule"></div>
+	<h3>Comments</h3>
 	<?php
 	foreach($taskComments as $rec)
 	{
@@ -107,7 +106,7 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		<a href="javascript:void(0)" onclick="delCommentId(<?php echo $rec['projComments']['id'];?>, <?php echo $userTaskId; ?>, '<?php echo $from;?>');" class="edit">Delete</a>
 		</div>
 	</div>
-	</div>	
+	
 	<?php	
 	}
 	?>
@@ -116,7 +115,6 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 }
 else
 {?>
-	<input type="hidden" name="countComment" id="countcomment" value="<?php echo count($taskComments)?>" />
 	  <div class="comment-point"></div>
 	  <div class="comment-box"><p class="error"><?php echo ERR_RECORD_NOT_FOUND; ?></p></div>
 <?php

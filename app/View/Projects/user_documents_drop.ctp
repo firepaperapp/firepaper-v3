@@ -86,7 +86,7 @@ if(count($taskDocs)>0)
 	{?>
  
 	 	<!-- end col-left -->
-	 <p class="title"><img src="<?php echo IMAGES_PATH;?>file-icons/<?php echo $rec['fileType']['icon'];?>" />&nbsp;&nbsp;
+	 <p class="title"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" />&nbsp;&nbsp;
 	  <?php  
 	  	echo $rec['prjTaskUserDoc']['title']; 
 	  ?> 
