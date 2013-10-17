@@ -22,9 +22,9 @@ define("CSS_PATH", SITE_HTTP_URL."app/webroot/css/");
 define("JS_PATH", SITE_HTTP_URL."app/webroot/js/");
 define("FILES_PATH", SITE_BASE_PATH."app/webroot/files/");
 define("FILES_PATH_URL", SITE_HTTP_URL."app/webroot/files/");
-define("SITE_NAME", "Firepaperapp");
+define("SITE_NAME", "uBundle");
 
-/*define('EMAIL_CONTENT_TYPE','text/html; charset=utf-8');
+define('EMAIL_CONTENT_TYPE','text/html; charset=utf-8');
 define('EMAIL_FROM_ADDRESS',"nsberrow@gmail.com");
 define('EMAIL_ADMIN',"nsberrow@gmail.com");
 define('EMAIL_SUPPORT',"nsberrow@gmail.com");
@@ -34,8 +34,8 @@ define('EMAIL_METHOD','smtp');
 define('EMAIL_HOST','localhost');
 define('EMAIL_SMTP_AUTH','false');
 define('EMAIL_USERNAME','');
-define('EMAIL_PASSWORD','');*/
-define("ADMIN_NAME","Firepaperapp");
+define('EMAIL_PASSWORD','');
+define("ADMIN_NAME","uBundle");
 global $cardTypes, $defaultTimeZone, $videoArray, $filesArray;;
 $serviceLevels = array(1=>"Individual Account",2=>"Company");
 $phoneTypes = array(1=>"Mobile",2=>"Work Phone",3=>"Home Phone");
@@ -66,9 +66,9 @@ define("MAX_FILESIZE_PIC_MSG",  "Please upload up to 2MB only.");  // 2MB
 
 //Dont forget to chnage the payment constants when going live
 //AMAZON WEB SERVICE CONSTANTS
-/*define("AMAZON_S3_KEY", "AKIAJA5PZZ4H3N3N2CAA");
+define("AMAZON_S3_KEY", "AKIAJA5PZZ4H3N3N2CAA");
 define("AMAZON_S3_SECURITY_KEY", "SnqMWKCEpnlw/P4RkAcRSYHZN/4ZnRZ75uWnx1oY");  // 2MB
 define("MAIN_BUCKET", "testcloudpollen");
-define("MULTIPLY_BY", "1073741824");*/
+define("MULTIPLY_BY", "1073741824");
 
 ?>
