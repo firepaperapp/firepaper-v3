@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>jquery.fileupload-ui.css" />
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload-ui.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui-1.10.3.custom.min.js"></script> 
+<script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui.min.js"></script> 
 <!-- File Upload Progress bar End -->
 <div class="index white page">
 <div class="validation-signup" id="validation-container" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
@@ -29,7 +29,7 @@ if(isset($errMsg))
 $(document).ready(function(){
 		
                 $("#duedate").datepicker({
-				dateFormat: 'yy-mm-dd',
+				dateFormat: 'D MM yy',
 				showOn: 'button',
 				buttonImage: siteImagesUrl+'calendar.png',
 				changeMonth: true,
@@ -40,10 +40,14 @@ $(document).ready(function(){
 		
 });
 </script>
-				
+<style>
+    #duedate{
+        width: 100%
+    }
+</style>				
 	<h1>
 	<?php
-    if(!$isNew)
+ 	if($project_id!=0)
 	{
 		$mode = "edit"; 
 		echo "Update";
@@ -57,10 +61,11 @@ $(document).ready(function(){
 	
 	<div class="clr"></div>
 	<div id="projectCreated"></div>
- 
+    <div id="createProject">
+	    
 	    <h3>Course title</h3>
 	     <?php echo $this->Form->input('title',array('id'=>'projectTitle', 'tabindex'=>1,'div'=>false,'label'=>false,'maxlength'=>'150','class'=>'title-field'));?>
-	      <h3>Details</h3>  
+	      <h3>Course details</h3>  
 	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','tabindex'=>2, 'div'=>false, 'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
 	      <div class="line"></div>
 	      <h3>Course deadline</h3>
@@ -122,14 +127,17 @@ $(document).ready(function(){
 				}
 	           ?>
 	          <!-- <a href="javascript:void(0)" class="submit" id="createProjectBtn" onclick="submitProject(2)">Continue</a>&nbsp;&nbsp;-->
-
+	           
+	          
+	          <div class="clr"></div>
 	      	     
 	      <!-- end project wrapper -->      
 	     
 	     <input type="hidden" id="project_id" name="data[Project][project_id]" value="<?php echo $project_id;?>" />
   		 </form>
-   
+    </div>   
 
+     <div class="clr"></div>
      <?php
      	$d = "display:none;";
      	if(isset($this->request->params['url']['m']) && $this->request->params['url']['m'] == "e")
@@ -137,18 +145,25 @@ $(document).ready(function(){
      		$d = "display:block;";
      	}
      ?>
-     
+     <div class="line"></div>
  	<div id="docAndTask" style="<?php //echo $d;?>">
- 	<div class="line"></div>
- 	 	<div class="left">
-	    	<h3>Documents <span>&amp;</span> Tasks</h3>
-	 	</div>
-	    <div class="right">
-	    	<h3>Weight</h3>
-	    </div>
-	    <div class="clr"></div>
-	    	<h3>Create a Task</h3>
-	    <div class="clr"></div>
+ 		
+		
+	        <div class="left">
+	          <h3>Documents <span>&amp;</span> Tasks</h3>
+	 	    </div>
+	        <div class="right">
+	          <h3>Weight</h3>
+	        </div>
+        
+	  	<div class="clr"></div>
+
+	       
+	          <h3>Create a Task</h3>
+	 	   
+	       
+      
+	  	<div class="clr"></div>
 	   	<div id="loaderJsTask"></div>
 		        
 			<div class="project-drop-area-wrapper">
@@ -157,16 +172,14 @@ $(document).ready(function(){
 				</div>			
 			 
 				<div class="dropFileHere project-drop-area">
-					<p>Drag and drop a document here</p>
-					
+					<p>Drag a document here <span>or</span> 
+					<table id="files"></table>
 					<form id="file_upload" action="<?php echo SITE_HTTP_URL;?>files/uploadFile" method="POST" enctype="multipart/form-data">
 		    		<input type="file" class="uploadfile" id="uploadfile" name="data[userFile][uploadfile]" />    	 
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 					</form>  
-					
-					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>-->
-					<table id="files"></table>
+					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>--></p>
 				</div>
 			
 
@@ -183,8 +196,8 @@ $(document).ready(function(){
 		   			<h3>Your task title<span class="mandatory">*</span></h3>
 		   			<?php echo $this->Form->input('projectTask.title',array('div'=>false,'label'=>false,"id"=>"taskTitle",'maxlength'=>'150','class'=>'task-input'));?> 
 		   			
-		     		<div class="weight-col">
-		     		<span class="add-weight">Add your weight &rarr;</span>
+		     		<div class="col-weight">
+		     		<p>Add your weight &rarr;</p>
 		    			 
 		    			<?php echo $this->Form->input('projectTask.weight',array('div'=>false,'label'=>false,"id"=>"taskWeight",'maxlength'=>'3','class'=>'weight-input'));?> 
 		    			
@@ -221,31 +234,29 @@ $(document).ready(function(){
 	  			
 	  			<div  id="createdTasksCl_<?php echo $rec['projectTask']['id']?>">
 			        <div class="project-brief-box-wrapper createdTasksCl">
-			        <div class="project-rule"></div>
 				           <div class="project-drop-area-wrapper">
-				           		<div class="weight-col" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>%<a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
+				           		<div class="col-weight" ><span class="editTaskWeight" id="taskWeight_<?php echo $rec['projectTask']['id']?>"><?php echo $rec['projectTask']['weight']?></span>%<a class="editLink edit" id="<?php echo $rec['projectTask']['id']?>"> Edit</a></div>
 					          	<?php //pa($rec['projectTask']);
 					  			if(!isNull($rec['projectTask']['refer_file_id']))
 					  			{?>
-					  			<div class="doc-icon">
-					  				
-									<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" /></div>
+					  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>">
+									<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" />
 									
-									<div class="file-name"><a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>"><?php echo $rec['projectTask']['title'];?></span></a>
+									<p class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
 					  			<?php
 					  			}	
 								else
 								{?>
-									<div class="file-name"><?php echo $rec['projectTask']['title'];?>
+									<p class="task-title"><?php echo $rec['projectTask']['title'];?>
 								<?php
 								}
-								?> <a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
+								?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
 								<span id="extraDoc_<?php echo $rec['projectTask']['id']?>" style="
 								<?php
 								if($rec[0]['extraDocs'] == 0)
 								{?>display:none;<?php }?>">&nbsp;-&nbsp;
 								<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>)">View Other Docs</a>
-								</div>
+								</p>
 								
 								
 	<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['projectTask']['created']))); ?> at <? print(date("H:ia", strtotime($rec['projectTask']['created']))); ?></span>&nbsp;-&nbsp;<a href="javascript:void(0);" class="addcommentlink" id="addcomment_<?php echo $rec['projectTask']['id'];?>">Add New Comment</a>&nbsp;-&nbsp;<a href="javascript:void(0)" class="viewTskComments viewTskCommentsLink" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>"><?php echo count($rec['projComments']);?> Comment(s)</a></p> 
@@ -271,7 +282,7 @@ $(document).ready(function(){
 					 <div id="loaderJsTask_<?php echo $rec['projectTask']['id']?>"></div>
 					 <table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
  	  				<div class="dropTaskFileHere project-drop-area" id="task_<?php echo $rec['projectTask']['id']?>">
-						<p>Drag and drop a document here</p> 
+						<p>Drag a document here <span>or</span> 
 						<form id="fileupload_<?php echo $rec['projectTask']['id']?>" action="<?php echo SITE_HTTP_URL;?>files/uploadFile/" method="POST" enctype="multipart/form-data" class="extraTaskDocs file_upload">
 			    		 <input type="file" class="uploadfile" id="uploadfile_<?php echo $rec['projectTask']['id']?>" name="data[userFile][uploadfile]" />    	 
 			    		 <button>Upload</button>
@@ -339,31 +350,74 @@ $(document).ready(function(){
 	  		?>
 	   	</div>
 	  	<div class="clr"></div>
-	<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
+		
+		
+		<form action="" name="saveProjForm" id="saveProjForm" method="POST" onsubmit="return false;">
         <div class="line"></div>
-	      <h3>Invite</h3>
-	       <div class="add-people"> 
-				<p><strong>Note:</strong> Enter the keyword to search groups</p>
-				<select id="usersGroups" name="usersGroups"></select>
-			</div>
-			<div class="clr-spacer"></div>
-			<div class="add-people">
-				<p><strong>Note:</strong> Enter the keyword to search premium students</p>
-				<select id="otherUsers" name="otherUsers"></select>
-			</div>
-			<div id="containerLoader"></div>
-			<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
-					<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
-				
+	       
+	          <h3>Invite</h3>
+	 
+        	<div class="project-drop-area-wrapper">
+		          <div class="add file-details-project">            	            	
+		            	 <div class="width100per">
+		            	 	
+							 <div class="add-people"> 
+							 	 <p><strong>Note:</strong> Enter the keyword to search groups</p>
+								 <select id="usersGroups" name="usersGroups"></select>
+							</div>
+							<div class="clr-spacer"></div>
+							<div class="add-people">
+								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
+								<select id="otherUsers" name="otherUsers"></select>
+							</div>
+							
+							<div id="containerLoader"></div>
+							
+							<p id="showAddMore" class="width100per" style="display:none;">No records found.</p>
+							<input type="hidden" name="mode" id="mode" value="<?php echo $mode;?>" />
+						</div>				
+					
+        </div>
+         <!--< <div class="row">
+	        <div class="left">
+	          <h3>Add Whiteboards</h3>
+	 	    </div>
+	     </div>	   
+	      
+       <div class="project-brief-box-wrapper"> 
+        	<div class="project-drop-area-wrapper">
+		          <div class="add file-details-project">            	            	
+		            	 <div class="width100per">
+		            	 	
+							 <div style="float:left;width:300px;"> 
+							 	 <p><small>Note: Enter the keyword to search whiteboards</small></p>
+								 <select id="whiteboards" name="whiteboards"></select>
+							</div>
+							 
+							<div id="containerLoader1"></div>
+							<p id="showAddMore1" class="width100per" style="display:none;">No records found.</p>
+							 
+						</div>				
+						<p>&nbsp;</p>
+		          </div>
+		    </div>
+        </div>-->
+        
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
-        <div class="line"></div>
-       <div class="add-people">
-	        <h3>Changes In Project</h3>
-	 	    <p><strong>Note:</strong> Please enter the changes that you made.</p>
+       
+	          <h3>Changes In Project</h3>
+	 	    
+        <div class="project-brief-box-wrapper"> 
+        	
+	          <div class="add file-details-project">   
+	          		
+	          		<p><small>Note: Please enter the changes that you made.</small></p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
-	        
+	          </div>
+	       
+        </div>
 		<?php }?>
         </form>
         <div class="clr-spacer-height"></div>
@@ -381,7 +435,11 @@ $(document).ready(function(){
 			<?php
 			}    
 		 	?>
-
+		 
+  
+  	<div class="clr-spacer-height"></div>
+  	</div>	
+  	</div>
   	<div id="loaderJs"></div>  
   	<input type="hidden" name="tasksCount" id="tasksCount" value="<?php echo $noOftasks;?>" />
 </div>
