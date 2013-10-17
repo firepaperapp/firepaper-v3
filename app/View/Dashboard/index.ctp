@@ -24,12 +24,12 @@
 	}
 	
 	?>
-
+	 </div><!-- end right -->
+ 	<div class="index">
  	
  		<?php 
   		if($this->Session->read('user_type') != 1)
 		{
-			
  			echo $this->requestAction("/projects/getLatestProjects");
 		}
  		else
@@ -96,9 +96,9 @@
  		<?php
  		}
  		?>	
- 
+<?php echo $this->requestAction("/users/currentComments");?>   
 <?php 
-if(!isset($usertype) || $usertype!=6)
+if($usertype!=6)
 echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
    </div><!-- end left --> 
  	</div><!-- end right -->
