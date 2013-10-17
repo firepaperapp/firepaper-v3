@@ -116,7 +116,11 @@
      <ul>
         <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a></li>
              <!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
-            </li>
+             <?php 
+            /*f($prjCount>0)
+            {
+            	//echo $prjCount;
+            }*/?></li>
 			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📰</i></a></li>
 			  <!--<div class="user-icon"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" >Profile</a></div>-->
 			    
@@ -211,7 +215,7 @@
            	<li class="<?php echo $addEditProject;?>"><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" >Create Project </a><span class="create-icon"></span></li>
 			<?php }?>
            		
-			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><?php if($dueInCount>0) //echo "<span>".$dueInCount."</span>";?> </a><i class="due-icon">⚠</i></li>
+			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span></a><i class="due-icon">⚠</i></li>
 			<?php
 			
 			foreach($departments as $rec)
