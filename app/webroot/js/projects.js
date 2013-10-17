@@ -439,7 +439,7 @@ function delCommentId(commentId, taskId, from)
 			{
 				var url = "userDocumentComments";
 			}
-            
+            alert(siteUrl+"projects/"+url+"/"+taskId);
 			$.post(siteUrl+"projects/"+url+"/"+taskId, {d:commentId},function(data)			{
 				if(taskId==0)		
 				{
@@ -448,9 +448,6 @@ function delCommentId(commentId, taskId, from)
 				else
 				{
 					$('#viewTskComments_'+taskId+"_box").empty().html(data);
-                    var totalcomment = $('#viewTskComments_'+taskId+"_box").find("input[name='countComment']").val();
-                   
-                    $("a#viewTskComments_"+taskId).html(totalcomment+ ' Comment(s)');
 				}
 			} );	   		
 		}		 
@@ -482,7 +479,7 @@ function deleteDoc(task_id, fileId)
 }
 function commentEvents()
 {
-	$('.viewTskComments').on("click", function()
+	$('.viewTskComments').live("click", function()
 		{	 
 			var myId = $(this).attr('id');
 			if($('#'+myId+"_box").css('display') == "none")
@@ -511,7 +508,7 @@ function commentEvents()
 			}
 		}
 	);
-	$(".addcommentlink").on("click", function(){
+	$(".addcommentlink").live("click", function(){
    	
    		var id = $(this).attr('id');
    		//$(".addcomment").hide();    		  		
@@ -596,17 +593,16 @@ function commentEvents()
 			editable(siteUrl+"projects/updateTaskWeight/",
 		    {
 		        indicator : loader ,
-		        width: 30,
+		        width: 18,
 		        type   : 'text',
 		        submit: "Save",
 		        submitdata: { _method: "put" },
 		        onsubmit : checkTask,		        
             	event : 'manclick.editable',
-            	callback: taskEditDone,
-            	
+            	callback: tasEditDone
 		     });
 	  
-		$(".editLink").on("click", function()
+		$(".editLink").live("click", function()
 		{
 			var id = $(this).attr('id');  
 			var me = $.trim($("#taskWeight_"+id).html());
@@ -615,7 +611,7 @@ function commentEvents()
 			 
 		});
 }
-function taskEditDone(data)
+function tasEditDone(data)
 {
 	 
 }

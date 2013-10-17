@@ -4565,7 +4565,7 @@ var rexclude = /z-?index|font-?weight|opacity|zoom|line-?height/i,
 jQuery.fn.css = function( name, value ) {
 	return access( this, name, value, true, function( elem, name, value ) {
 		if ( value === undefined ) {
-			return jQuery.css( elem, name );
+			return jQuery.curCSS( elem, name );
 		}
 		
 		if ( typeof value === "number" && !rexclude.test(name) ) {
@@ -4599,7 +4599,7 @@ jQuery.extend({
 
 				// Set the alpha filter to set the opacity
 				var opacity = parseInt( value, 10 ) + "" === "NaN" ? "" : "alpha(opacity=" + value * 100 + ")";
-				var filter = style.filter || jQuery.css( elem, "filter" ) || "";
+				var filter = style.filter || jQuery.curCSS( elem, "filter" ) || "";
 				style.filter = ralpha.test(filter) ? filter.replace(ralpha, opacity) : opacity;
 			}
 
@@ -4635,13 +4635,13 @@ jQuery.extend({
 
 				jQuery.each( which, function() {
 					if ( !extra ) {
-						val -= parseFloat(jQuery.css( elem, "padding" + this, true)) || 0;
+						val -= parseFloat(jQuery.curCSS( elem, "padding" + this, true)) || 0;
 					}
 
 					if ( extra === "margin" ) {
-						val += parseFloat(jQuery.css( elem, "margin" + this, true)) || 0;
+						val += parseFloat(jQuery.curCSS( elem, "margin" + this, true)) || 0;
 					} else {
-						val -= parseFloat(jQuery.css( elem, "border" + this + "Width", true)) || 0;
+						val -= parseFloat(jQuery.curCSS( elem, "border" + this + "Width", true)) || 0;
 					}
 				});
 			}
@@ -4655,10 +4655,10 @@ jQuery.extend({
 			return Math.max(0, Math.round(val));
 		}
 
-		return jQuery.css( elem, name, force );
+		return jQuery.curCSS( elem, name, force );
 	},
 
-	css: function( elem, name, force ) {
+	curCSS: function( elem, name, force ) {
 		var ret, style = elem.style, filter;
 
 		// IE uses filters for opacity
@@ -4762,7 +4762,7 @@ if ( jQuery.expr && jQuery.expr.filters ) {
 			true :
 			width > 0 && height > 0 && !skip ?
 				false :
-				jQuery.css(elem, "display") === "none";
+				jQuery.curCSS(elem, "display") === "none";
 	};
 
 	jQuery.expr.filters.visible = function( elem ) {
@@ -5747,7 +5747,7 @@ jQuery.fx.prototype = {
 		}
 
 		var r = parseFloat(jQuery.css(this.elem, this.prop, force));
-		return r && r > -10000 ? r : parseFloat(jQuery.css(this.elem, this.prop)) || 0;
+		return r && r > -10000 ? r : parseFloat(jQuery.curCSS(this.elem, this.prop)) || 0;
 	},
 
 	// Start an animation from one number to another
@@ -6019,7 +6019,7 @@ if ( "getBoundingClientRect" in document.documentElement ) {
 
 jQuery.offset = {
 	initialize: function() {
-		var body = document.body, container = document.createElement("div"), innerDiv, checkDiv, table, td, bodyMarginTop = parseFloat( jQuery.css(body, "marginTop", true) ) || 0,
+		var body = document.body, container = document.createElement("div"), innerDiv, checkDiv, table, td, bodyMarginTop = parseFloat( jQuery.curCSS(body, "marginTop", true) ) || 0,
 			html = "<div style='position:absolute;top:0;left:0;margin:0;border:5px solid #000;padding:0;width:1px;height:1px;'><div></div></div><table style='position:absolute;top:0;left:0;margin:0;border:5px solid #000;padding:0;width:1px;height:1px;' cellpadding='0' cellspacing='0'><tr><td></td></tr></table>";
 
 		jQuery.extend( container.style, { position: "absolute", top: 0, left: 0, margin: 0, border: 0, width: "1px", height: "1px", visibility: "hidden" } );
@@ -6054,8 +6054,8 @@ jQuery.offset = {
 		jQuery.offset.initialize();
 
 		if ( jQuery.offset.doesNotIncludeMarginInBodyOffset ) {
-			top  += parseFloat( jQuery.css(body, "marginTop",  true) ) || 0;
-			left += parseFloat( jQuery.css(body, "marginLeft", true) ) || 0;
+			top  += parseFloat( jQuery.curCSS(body, "marginTop",  true) ) || 0;
+			left += parseFloat( jQuery.curCSS(body, "marginLeft", true) ) || 0;
 		}
 
 		return { top: top, left: left };
@@ -6063,13 +6063,13 @@ jQuery.offset = {
 	
 	setOffset: function( elem, options, i ) {
 		// set position first, in-case top/left are set even on static elem
-		if ( /static/.test( jQuery.css( elem, "position" ) ) ) {
+		if ( /static/.test( jQuery.curCSS( elem, "position" ) ) ) {
 			elem.style.position = "relative";
 		}
 		var curElem   = jQuery( elem ),
 			curOffset = curElem.offset(),
-			curTop    = parseInt( jQuery.css( elem, "top",  true ), 10 ) || 0,
-			curLeft   = parseInt( jQuery.css( elem, "left", true ), 10 ) || 0;
+			curTop    = parseInt( jQuery.curCSS( elem, "top",  true ), 10 ) || 0,
+			curLeft   = parseInt( jQuery.curCSS( elem, "left", true ), 10 ) || 0;
 
 		if ( jQuery.isFunction( options ) ) {
 			options = options.call( elem, i, curOffset );
@@ -6107,12 +6107,12 @@ jQuery.fn.extend({
 		// Subtract element margins
 		// note: when an element has margin: auto the offsetLeft and marginLeft
 		// are the same in Safari causing offset.left to incorrectly be 0
-		offset.top  -= parseFloat( jQuery.css(elem, "marginTop",  true) ) || 0;
-		offset.left -= parseFloat( jQuery.css(elem, "marginLeft", true) ) || 0;
+		offset.top  -= parseFloat( jQuery.curCSS(elem, "marginTop",  true) ) || 0;
+		offset.left -= parseFloat( jQuery.curCSS(elem, "marginLeft", true) ) || 0;
 
 		// Add offsetParent borders
-		parentOffset.top  += parseFloat( jQuery.css(offsetParent[0], "borderTopWidth",  true) ) || 0;
-		parentOffset.left += parseFloat( jQuery.css(offsetParent[0], "borderLeftWidth", true) ) || 0;
+		parentOffset.top  += parseFloat( jQuery.curCSS(offsetParent[0], "borderTopWidth",  true) ) || 0;
+		parentOffset.left += parseFloat( jQuery.curCSS(offsetParent[0], "borderLeftWidth", true) ) || 0;
 
 		// Subtract the two offsets
 		return {
