@@ -678,12 +678,10 @@ class ProjectsController  extends AppController{
  	 		if($this->Project->err==0)						
  			{
  				//we will add contact
-				
  				$this->request->data['Project']['leader_id'] = $this->request->data['Project']['leader_id'];		
 				$this->request->data['Project']['admin_id'] = $this->getAdminId();
 				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
  				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
-				
  				if($this->request->data['Project']['project_id']!=0)	
  				{ 			
  					$this->request->data['Project']['id'] = $this->request->data['Project']['project_id'];
@@ -716,14 +714,12 @@ class ProjectsController  extends AppController{
 	 */
 	function addEditProject($project_id=0)
 	{
-        $isNew = FALSE;
-        if($project_id == 0)
+		if($project_id == 0)
 		{
 			$CreateProject['Project']['is_complete'] = 0;
 			$this->Project->save($CreateProject);
 			$project_id = $this->Project->id;
-            $isNew = TRUE;
-        }
+		}
 	 	if(!in_array($this->Session->read('user_type'), array(1,2,3,7)))
 		{
 			
@@ -745,7 +741,6 @@ class ProjectsController  extends AppController{
 				$this->request->data['Project']['admin_id'] = $this->getAdminId();
 				$this->request->data['Project']['created_by'] = $this->Session->read('userid');
  				$this->request->data['Project']['duedate'] = date("Y-m-d", strtotime($this->request->data['Project']['duedate']));
-				
  				if($project_id!=0)	
  				{ 			
  					$this->Project->id = $project_id;		
@@ -765,7 +760,7 @@ class ProjectsController  extends AppController{
  			{
  	 			$response['error'] = $this->Project->errMsg;
  			}
-    		$this->RequestHandler->respondAs('json'); 			
+ 			$this->RequestHandler->respondAs('json'); 			
  			echo json_encode($response);
  			$this->autoRender = false;         
  			die;   
@@ -983,9 +978,7 @@ class ProjectsController  extends AppController{
 		$this->set("project_id", $project_id);
 		$this->set("teachers", $teachers);
 		$this->set("subjects", $subjects);
-	 	$this->set("isNew", $isNew);
-        $this->render("create_project");
-
+	 	$this->render("create_project");
 	}
 	function getTeachersOfSubject($subject_id="")
 	{
@@ -1303,14 +1296,14 @@ class ProjectsController  extends AppController{
 							
 					        $this->Email->text_body = $sMessage;
 					        $this->Email->subject = SITE_NAME.' - '.$subject;
-						    //echo "<pre>"; print_r($this->Email);die;
+						//echo "<pre>"; print_r($this->Email);die;
 					        $result = $this->Email->sendEmail();
 	 					}	 
 	 				}
-					echo "<pre>"; print_r($prjDetail);
-					echo $insertQuery."<br>";
+					//echo "<pre>"; print_r($prjDetail);
+					//echo $insertQuery."<br>";
 	 				$insertQuery = substr($insertQuery, 0, -1);
-					echo $insertQuery;die;
+					//echo $insertQuery;die;
 	 				$this->Project->query($insertQuery);
 	 				//We will trigger an activity to the selectd users	
 	 				
