@@ -117,8 +117,8 @@
         <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a></li>
              <!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
              <?php 
-            if($prjCount>0)
-            {
+            //if($prjCount>0)
+            //{
             	//echo $prjCount;
             }?></li>
 			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📰</i></a></li>
