@@ -129,7 +129,7 @@
 				 <li class="<?php echo $profileMenu;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" class="user-icon">Profile</a></li>
 				
 		  </ul>< -->
-		 
+		 <?php } ?>
 		
          
            	<?php 
