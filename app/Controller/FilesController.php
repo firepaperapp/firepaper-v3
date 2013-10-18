@@ -52,6 +52,7 @@ class FilesController  extends AppController{
 	    $this->set("id", $id);
    		$this->render("index");
 	}	
+
 	function getFilesInner($id=0)
 	{  	
 		$data = array();
@@ -732,7 +733,7 @@ class FilesController  extends AppController{
 		die; 
 	}
         
-        function uploadFile($fileId="")
+    function uploadFile($fileId="")
 	{ 
 		//echo "i am here.."; exit;
   		$uid = $this->Session->read('userid');
@@ -767,8 +768,8 @@ class FilesController  extends AppController{
 					"conditions"=>array("Package.id = User.package_id")),
 					)
 				)
-			   );		
-					
+			   );
+               		
 				$ms = ENOUGH_SPACE_ADMIN;	
 			}
 			else 
@@ -791,15 +792,16 @@ class FilesController  extends AppController{
 			   
 				$ms = ENOUGH_SPACE_USER;
 			}
-	 		if(($spaceDetail['User']['usedspace']+$this->request->params['form']['uploadfile']['size']) > $spaceDetail['User']['totalspace'] &&  $spaceDetail['Package']['unlimited']!=1)
-			{
-				echo "check1 ==="; exit;
-				$response['error'] = $ms;
-				
-			}
+            if (count($spaceDetail)>0){
+                if ( ($spaceDetail['User']['usedspace']+$this->request->params['form']['uploadfile']['size']) > $spaceDetail['User']['totalspace'] &&  $spaceDetail['Package']['unlimited']!=1)
+			    {
+				    echo "check1 ==="; exit;
+				    $response['error'] = $ms;
+			    }
+            }
 			else 
 			{
-				if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
+             	if($_SERVER['REMOTE_ADDR'] =='122.161.50.193' || 1)
 				{ 
                                  //   pr($this->request->params);
 					//$getModelName = array_keys($this->request->params['form']['data']['name']);
@@ -823,20 +825,27 @@ class FilesController  extends AppController{
 					$filename = $filebase.".".$fileExt;
 					$actualFilename = $string.".".$fileExt;
 					
+
 					if(!file_exists($uploads_strt_dir))
 					{	
 						mkdir($uploads_strt_dir); 
 					}
+
 					$uploads_dir_explode = explode("/", $uploads_dir);
+
 					if(count($uploads_dir_explode)>0)
 					{
-						foreach($uploads_dir_explode as $createDir)
+                        $upload_dir_count = 1;
+                        foreach($uploads_dir_explode as $createDir)
 						{
-							if(!file_exists($uploads_strt_dir.$createDir))
-							{  
-								mkdir($uploads_strt_dir.$createDir);
-								@chmod($uploads_strt_dir.$createDir, 0755);
-							}
+                            if ($upload_dir_count < count($uploads_dir_explode)){
+							    if(!file_exists($uploads_strt_dir.$createDir))
+							    {  
+								    mkdir($uploads_strt_dir.$createDir);
+								    @chmod($uploads_strt_dir.$createDir, 0755);
+							    }
+                            }
+                            $upload_dir_count++;
 						}
 					}
 					if(!file_exists($uploads_strt_dir.$uploads_dir))
@@ -844,7 +853,6 @@ class FilesController  extends AppController{
 						mkdir($uploads_strt_dir.$uploads_dir);
 					}
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
-					
 					if($fileId!='')
 					{
 						$uploads_dir = $uploads_dir."/".$fileId;
