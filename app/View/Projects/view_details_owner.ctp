@@ -88,8 +88,8 @@ function addComment(f)
 			<div class="right deadline-details">
 				<p class="title">Due:</p>
 				<p class="due-in"><?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?></p>
-				<p class="title">Project leader:</p>
-				<p class="leader"><a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Subject']['title'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
+				<p class="title">Project leader:<br>
+				<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Subject']['title'];?>" class="red"><?php echo ucfirst(Sanitize::html($prjDetails['User']['firstname']." ".$prjDetails['User']['lastname']));?></a></p>
 				<p class="title">Any questions?</p>
 				<p><a href="" class="red">Send a message</a></p>
 			</div>
