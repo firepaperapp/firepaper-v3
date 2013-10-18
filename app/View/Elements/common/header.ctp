@@ -72,9 +72,6 @@ $(document).ready(function() {
 </div>-->
 <a href="javascript:void(0);" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
 <?php if($usertype==1 || $usertype==2 || $usertype==3 || $usertype==7) {?>
-<a href="<?php echo SITE_HTTP_URL?>logout" alt="Logout" class="logout-icon"></a>
-<a href="<?php echo SITE_HTTP_URL?>users/settings/" alt="Settings" class="settings-icon" >⚙</a>
-<!--<a class="activity-toggle" href="">🌎</a>-->
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>
 <?php } else { } ?>
 <div class="comment-icon-area">
