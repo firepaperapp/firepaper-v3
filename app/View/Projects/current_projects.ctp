@@ -155,12 +155,15 @@ $(document).ready(function(){
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" class="submit" alt="View File area">View File area</a>
            	 	
-           	 	<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
+           	 	
             	 	<?php 
-				}
+				} ?>
+				<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
+				<?php
  				echo "</div>";
  			}
  			?> 
+ 			
 <!-- end Project bars --->
 		
 		
