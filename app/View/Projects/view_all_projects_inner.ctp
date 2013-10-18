@@ -28,13 +28,13 @@
 				if($currDate == $date)
 				{	$b = "red";
 					?>
-<p class="title-today">Due Today <span class="date"><? print(Date("dS F Y")); ?></span></p>
+<span class="duein-date"><span>Due Today </span><? print(Date("dS F Y")); ?></span>
 				<? }	
 				else if($date == $tom)
 				{
 					$b = "orange";
 					?>
-<p class="title-tomorrow">Due Tomorrow <span class="date"><? print(Date("dS F Y", strtotime($tom))); ?></span></p>
+<span class="duein-date"><span>Due Tomorrow </span><? print(Date("dS F Y", strtotime($tom))); ?></span>
 				<?php
 				}
 		 	}
@@ -43,7 +43,7 @@
 				{	
 					$printed = true;
 					?>
-					<p class="title-other">Others Due<span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
+					<span class="duein-date"><span>Others Due</span><? print(Date("dS F Y", strtotime($date))); ?></span>
 				<?php
 				}		 
 			?>
