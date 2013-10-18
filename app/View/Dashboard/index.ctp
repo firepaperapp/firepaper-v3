@@ -1,4 +1,6 @@
-
+<?php
+	$usertype = $this->Session->read('user_type');
+?>
 
 
 <div class="index">
