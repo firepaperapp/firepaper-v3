@@ -33,17 +33,17 @@
 					echo "</ul>";
 				}
 				?>
-				<p class="title-today">Due Today <span class="date"><? print(Date("dS F Y")); ?></span></p>
+				<span class="duein"><span>Due Today</span> <? print(Date("dS F Y")); ?></span>
 	
 				<?php	
 				$preDate = $date;
 				if($currDate == $date)
 				{?>
-					<p class="title-today">Due Today <span class="date"><? print(Date("dS F Y")); ?></span></p>		
-				<?}	
+					<span class="duein-date"><span>Due Today</span><? print(Date("dS F Y")); ?></span>
+				<?php }	
 				else if($date == $tom)
-				{?>
-					 <p class="title-tomorrow">Due Tomorrow <span class="date"><? print(Date("dS F Y", strtotime($yesterday))); ?></span></p>
+				{ ?>
+					 <span class="duein-date"><span>Due Tomorrow </span><? print(Date("dS F Y", strtotime($yesterday))); ?></span>
 				<?php
 				}
 				
@@ -55,7 +55,7 @@
 			{
 				$printed = true;
 				?>
-				<p class="title-other">Others Due<span class="date"><? print(Date("dS F Y", strtotime($date))); ?></span></p>
+				<span class="duein-date"><span>Others Due </span><? print(Date("dS F Y", strtotime($date))); ?></span>
 			<?php
 			}
 			?>
