@@ -128,7 +128,7 @@ $(document).ready(function(){
 			} ?>
 		<div class="clr-spacer"></div> 
 		<?php
- 			} else if in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
+ 			 else if (in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
 			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
  ?>
            	 	<div class='no-projects widget'>
@@ -137,10 +137,6 @@ $(document).ready(function(){
            	 	
            	 	<p>These will be your mailing list groups, this will help when distributing your projects.</p>
            	 	
-			<?php echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
-			} else if(in_array($this->Session->read('user_type'), array(1,3,7))) {
-           	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
-           	 	} ?>
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Start creating groups</a>
            	 	<div class="clr-spacer"></div>
@@ -149,10 +145,8 @@ $(document).ready(function(){
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your project</a>
            	 	<div class="clr-spacer"></div> 
-           	 	<?php
-           	 		//echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
-           	 	} else if (in_array($this->Session->read('user_type'), array(4))) { ?>
-           	 	<h2>Hey there!</h2>
+           	 	</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
+           	 	
            	 	<h3>Looks like you don't have any projects.</h3>
            	 	<p>You have your own file storage area, keep everything in one area.</p>
            	 	<br />
