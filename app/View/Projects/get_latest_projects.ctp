@@ -12,7 +12,7 @@
 	<?php }
 ?> 
 
-<div class="col1">
+
 	
 	<?php
 	if(count($data)>0)
