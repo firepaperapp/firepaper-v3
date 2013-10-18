@@ -90,14 +90,14 @@ $(document).ready(function(){
 		<em>Project</em></div>
 		<div class="details">
 		
-		<h4>Details</h4>
+		<h3>Details</h3>
 
 			<p><?php echo Sanitize::html($rec['Project']['description']);?>
-			<span class="started-details">- <?php 
-			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
+			<!--<span class="started-details">- <?php 
+			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
 			</p>
 		
-		<div class="project-items">
+		<div class="project-content">
 		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon"><span>&#xf075;</span>
 <?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
