@@ -130,7 +130,7 @@ $(document).ready(function(){
 		<?php
  			 else {
  			 
- 			 if (in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
+ 			 //if (in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
 			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
  ?>
            	 	<div class='no-projects widget'>
