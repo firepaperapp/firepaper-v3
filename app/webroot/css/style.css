@@ -1395,7 +1395,10 @@ ul.list-activity li span {
 	text-shadow: 0 1px #FFF;
     color: #c7bf7b;
     font-weight: bold;
-    margin-left: 20px;
+
+}
+.project-content .flat-tasks-icon {
+	margin-left: 20px;
 }
 .project-content .flat-files-icon span, .project-content .flat-tasks-icon span{
 	font-family: 'fontawesome';
