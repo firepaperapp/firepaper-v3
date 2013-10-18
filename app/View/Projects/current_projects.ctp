@@ -10,7 +10,7 @@ $(document).ready(function(){
 		
 });
 </script>-->
-<div class="col1">
+
 	
 		<?php
 			App::import('Helper','Time');
@@ -164,6 +164,4 @@ $(document).ready(function(){
 <!-- end Project bars --->
 		
 		
-	<div class="clr"></div>
- 
- </div>
+	
