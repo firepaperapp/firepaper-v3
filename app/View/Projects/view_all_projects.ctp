@@ -5,7 +5,7 @@
 </script>   	 
 
  	<div class="index">
-		<h3>Projects</h3>   
+		  
 	 	<div id="content_projects">
 	   	</div>
 	</div>
