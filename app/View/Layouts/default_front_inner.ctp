@@ -4,8 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>style.css" />
 <title><?php echo ucfirst($this->Session->read("username"))." - ".$metaTitle; ?></title>
-<meta name="keywords" content="<?php echo $metaKeyword; ?>" />
-<meta name="description" content="<?php echo $metaDescription; ?>" />
+<meta name="keywords" content="<?php //echo $metaKeyword; ?>" />
+<meta name="description" content="<?php //echo $metaDescription; ?>" />
 <!--<link rel="stylesheet" href="<?php echo CSS_PATH;?>popupjquery/general.css" type="text/css" media="screen" />-->
 <!--[if IE 8]>
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>ie8.css" type="text/css" media="screen" />
