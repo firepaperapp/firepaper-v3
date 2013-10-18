@@ -91,12 +91,12 @@ $(document).ready(function(){
 		<div class="project-content">
 		<div class="inner">
 		<h4>Details</h4>
-		<div class="note">
+
 			<p><?php echo Sanitize::html($rec['Project']['description']);?>
 			<span class="started-details">- <?php 
 			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>
 			</p>
-		</div>
+		
 		<div class="project-items">
 		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon"><span>&#xf075;</span>
