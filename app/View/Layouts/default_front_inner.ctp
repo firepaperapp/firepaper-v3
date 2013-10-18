@@ -45,15 +45,14 @@ $(document).ready(function(){
 <body>
 
 
-
-<section class="container">
-<?php echo $this->element("common/header");?>
-<?php echo $content_for_layout; ?>
-<?php echo $this->element("common/footer");?>
-<div class="clr"></div>
-	 
-</section>
+<section class="wrapper">
+	<section class="container">
+	<?php echo $this->element("common/header");?>
+	<?php echo $content_for_layout; ?>
+	<?php echo $this->element("common/footer");?>	 
+	</section>
 <?php echo $this->element("common/leftsidebar");?>
+</section>
 <div id="fancybox-overlay1" style="background-color: rgb(119, 119, 119);  position: absolute;top: 0;width: 100%;z-index: 1100;cursor: pointer; height: 1114px; opacity:0.7;display: none;"></div>
 </body>
 </html>
