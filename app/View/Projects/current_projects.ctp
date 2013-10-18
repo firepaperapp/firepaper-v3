@@ -88,8 +88,8 @@ $(document).ready(function(){
 		<div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
 		<div class="clr"></div>
 		<em>Project</em></div>
-		<div class="project-content">
-		<div class="inner">
+		<div class="details">
+		
 		<h4>Details</h4>
 
 			<p><?php echo Sanitize::html($rec['Project']['description']);?>
@@ -101,7 +101,7 @@ $(document).ready(function(){
 		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon"><span>&#xf075;</span>
 <?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
-		</div>
+		
 		</div><!-- end project-content -->
 		<div class="project-owner">
 		<?php //echo "<pre>"; print_r($rec['User']);die;
