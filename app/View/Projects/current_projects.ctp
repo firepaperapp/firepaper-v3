@@ -122,7 +122,7 @@ $(document).ready(function(){
 		</div>
 		</div><!-- end project-bar -->	
 		
-	</div><!-- end project-bar-wrapperr -->
+
 		<!-- end Project bars --->
 		<?php		 
 			$i++;
