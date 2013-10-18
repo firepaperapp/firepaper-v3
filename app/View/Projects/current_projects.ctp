@@ -128,7 +128,7 @@ $(document).ready(function(){
 			} ?>
 		<div class="clr-spacer"></div> 
 		<?php
- 			 if (in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
+ 			 else if (in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
 			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
  ?>
            	 	<div class='no-projects widget'>
@@ -145,7 +145,7 @@ $(document).ready(function(){
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your project</a>
            	 	<div class="clr-spacer"></div> 
-           	 	</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
+           	 	
            	 	
            	 	<h3>Looks like you don't have any projects.</h3>
            	 	<p>You have your own file storage area, keep everything in one area.</p>
