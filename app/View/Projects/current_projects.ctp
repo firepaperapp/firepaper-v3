@@ -128,10 +128,9 @@ $(document).ready(function(){
 			} ?>
 		<div class="clr-spacer"></div> 
 		<?php
- 			} else 
+ 			} else if in_array($this->Session->read('user_type'), array(1,2,3,7))) { 
 			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
-			if(in_array($this->Session->read('user_type'), array(1,2,3,7)))
-           	 	{ ?>
+ ?>
            	 	<div class='no-projects widget'>
            	 	<h2>Welcome to Firepaperapp!</h2>
            	 	<h3>First things first, create your class structures and student accounts</h3>
@@ -139,8 +138,7 @@ $(document).ready(function(){
            	 	<p>These will be your mailing list groups, this will help when distributing your projects.</p>
            	 	
 			<?php echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
-			if(in_array($this->Session->read('user_type'), array(1,3,7)))
-           	 	{
+			} else if(in_array($this->Session->read('user_type'), array(1,3,7))) {
            	 		echo '</h2><a class="add-projects button" href="'.SITE_HTTP_URL.'projects/addEditProject">Add a new project</a>';
            	 	} ?>
            	 	<br />
