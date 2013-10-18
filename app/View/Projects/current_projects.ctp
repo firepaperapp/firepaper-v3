@@ -158,11 +158,12 @@ $(document).ready(function(){
            	 	
             	 	<?php 
 				} ?>
-				<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
+				
 				<?php
  				echo "</div>";
  			}
  			?> 
+ 			<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
  			
 <!-- end Project bars --->
 		
