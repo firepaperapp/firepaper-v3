@@ -39,13 +39,13 @@
 				}
 		 	}
 			 
-				if($date!=$currDate && $date!=$tom && $printed == false) 
+				/*if($date!=$currDate && $date!=$tom && $printed == false) 
 				{	
 					$printed = true;
 					?>
 					<span class="duein-date"><span>Others Due</span><? print(Date("dS F Y", strtotime($date))); ?></span>
 				<?php
-				}		 
+				}	*/	 
 			?>
 				
 <div class="project-bar-wrapper" onClick="location.href='<?php echo SITE_HTTP_URL."projects/viewDetails/".$rec['Project']['id'];?>';" style="cursor:pointer;">
