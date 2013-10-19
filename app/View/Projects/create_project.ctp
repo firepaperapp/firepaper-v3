@@ -175,51 +175,7 @@ $(document).ready(function(){
 		    		 <button>Upload</button>
 		   			 <div>Upload files</div> 
 		   			 </form>
--		
--		<script>
--		     $(document).ready(function(){
--			    var btnUpload = $('#uploadfile_<?php echo $rec['projectTask']['id']?>');
--						     var status = $('#loaderJsTask_<?php echo $rec['projectTask']['id']?>');
--				     
--				      $('#fileupload_<?php echo $rec['projectTask']['id']?>').fileUploadUI({
--					     dragDropSupport: true,
--					     namespace: 'file_upload_<?php echo $rec['projectTask']['id']?>',
--					     cssClass : 'file_upload_<?php echo $rec['projectTask']['id']?>',
--				     uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
--				     downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
--				     buildUploadRow: function (files, index) {
--					  return $('<tr><td>' + files[index].name + '<\/td>' +
--						 '<td class="file_upload_progress"><div><\/div><\/td>' +
--						 '<td class="file_upload_cancel">' +
--						 '<button class="ui-state-default ui-corner-all" title="Cancel">' +
--						 '<span class="ui-icon ui-icon-cancel">Cancel<\/span>' +
--						 '<\/button><\/td><\/tr>');
--				     },
--				     buildDownloadRow: function (response) {
--					     //Add uploaded file to list
--								     if("undefined" == typeof(response.success))
--								     {
--									     $("#validation-container-task").empty().html("<p class='error'>"+response.error+"</p>").show();
--									     $("#validation-container-success-task").empty().hide();
--			     
--								     } else{	 
--										     $("#validation-container-task").empty().hide();
--										     $("#validation-container-success-task").empty().html(response.success).show();
--										     $('.file_upload').removeClass('file_upload_large');
--										     $('.file_upload').removeClass('file_upload_highlight');
--										     $.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
--										     {	 
--											     $("div#taskUnderDiv").empty().html(data).show('slow');	
--											     $("#loaderJsTask_<?php echo $rec['projectTask']['id']?>").hide();
--											     $(".dropFileHere").fadeOut('slow');
--										     }
--										     );
--								     }        
--				     }
--				 });
--		     
--		     });
--		     </script>
+
 					</form>  
 					<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>--></p>
 				</div>
