@@ -15,7 +15,7 @@ $(document).ready(function(){
           	<p><?php //pa($rec['projectTask']);
   			if(!isNull($rec['projectTask']['refer_file_id']))
   			{?>
-  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon']?>" /><span class="task-title"><?php echo $rec['projectTask']['file_name'];?></span></a>
+  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>"><img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" /><span class="task-title"><?php echo $rec['projectTask']['file_name'];?></span></a>
   			<?php
   			}	
 			else

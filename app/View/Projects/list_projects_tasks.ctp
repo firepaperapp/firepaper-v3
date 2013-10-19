@@ -60,7 +60,7 @@ foreach($tasks as $rec)
       <div class="doc-icon">
       <?php if($rec['fileType']['icon']!='')
       {?>
-     	 <img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" />
+     	 <img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon'];?>" />
 	  <?php 
       }
 		else 
