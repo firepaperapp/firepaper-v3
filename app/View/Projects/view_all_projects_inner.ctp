@@ -113,7 +113,7 @@ else
 	}
 	else 
 	{
-		echo "<p class='marginT10'>".NO_RECENT_PROJECTS_FOUND."</p>";
+		echo "<p class='marginT10'><div class='empty-banner'>".NO_RECENT_PROJECTS_FOUND."</div></p>";
 	}
 	?> 
 	<!-- end Project bars --->
