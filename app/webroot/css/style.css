@@ -159,6 +159,16 @@ hr {
 	-webkit-border-radius: 3px;
 	margin: 15px 0 0 0;
 }
+.empty-banner {
+	padding: 10px 15px;
+	border:1px solid #ccc; 
+	background: white;
+	color: #333;
+	border-radius: 3px;
+	text-align: left;
+	font-size: 14px;
+	-webkit-border-radius: 3px;
+}
 .account-settings-wrapper hr { 
 	margin-top:15px; 
 	margin-bottom:15px; 
@@ -3805,7 +3815,6 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 }
 
 p.marginT10 {
-    border-top: #c3c6c7 1px dotted;
     padding-top: 15px;
 }
 p.marginT10:after {
