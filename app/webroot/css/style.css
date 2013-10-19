@@ -472,7 +472,7 @@ select {
 .nav { 
 	display: block;
 	width:280px; 
-	position: absolute;
+	position: fixed;
 	overflow: hidden;
 	top:0;
 	left:0;
@@ -700,7 +700,7 @@ a.std-btn:hover {
 
 /* Left Col */
 
-p.task-title { 
+p.-title { 
 	margin-bottom:6px;
 	margin-top:0px; 
 	margin-left:0px; 
@@ -2900,10 +2900,8 @@ p.field-title {
 .task-icon {
 	font-family:'entypo';
 	font-size: 35px;
-	padding: 5px 5px 5px 6px;
+	padding: 2px 9px 0px 10px;
 	color: white;
-	height: 16px;
-	line-height: 17px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	background: #dadada;
