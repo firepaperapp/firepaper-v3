@@ -79,7 +79,7 @@ else
 				
 				<?php echo date("F j, Y", strtotime($prjDetails['Project']['duedate']))?>
 				</span>
-				<span class="flat-files-icon"><?php echo $prjDetails[0]['noOfFiles']>0?$prjDetails[0]['noOfFiles']:0;?> Files</span> 
+				<span class="flat-files-icon"><?php echo $prjDetails ?> Files</span> 
 -		<span class="flat-tasks-icon"><?php echo $prjDetails['noOfComments'];?> Comments</span>
 +				<span class="flat-files-icon"><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 +		<span class="flat-tasks-icon"><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
