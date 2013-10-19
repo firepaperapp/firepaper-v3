@@ -102,7 +102,7 @@
 	}
 	?>
 	<div class="clr-spacer"></div> 
- 	<a href="<?php echo SITE_HTTP_URL."dashboard/viewComments/";?>" class="readmore-btn">View all messages</a>
- 	<div class="clr"></div>
+ 	<!--<a href="<?php echo SITE_HTTP_URL."dashboard/viewComments/";?>" class="readmore-btn">View all messages</a>
+ 	<div class="clr"></div>-->
  
  </div>
