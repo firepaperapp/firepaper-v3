@@ -38,16 +38,14 @@ else
 ?>
 			<img id="imgid" alt="" height="55" width="55" src="<?php echo $userimage;?>" />
 			<span class="project-leader-title">Details:<br />
-			<a href="<?php echo SITE_HTTP_URL?><?php echo $prjDetails['Project']['leader_id']."/".$prjDetails['User'];?>" class="red">
 			<a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $rec['Project']['leader_id'];?>" class="red"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
-			
 				</span>
 				<div class="clr"></div>
 				<!--<p class="title">Project title:</p>
 				<p><?php echo Sanitize::html($prjDetails['Project']['title']);?></p>
 				<div class="clr-spacer"></div>-->
 				<h3>Details</h3> 
-				<p><?php echo Sanitize::html($rec['Project']['description']);?></p>
+				<p><?php echo nl2br(Sanitize::html($prjDetails['Project']['description']));?></p>
 			
 			
 			<div class="project-controls">
