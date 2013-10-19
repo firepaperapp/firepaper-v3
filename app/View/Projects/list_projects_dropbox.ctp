@@ -143,5 +143,5 @@ if(count($myProjects)>0)
 	}
 }
 else {?>
-	<p class="marginT10"><?php echo NO_PROJECTS_FOUND;?></p>
+	<p class="marginT10"><div class="empty-banner"><?php echo NO_PROJECTS_FOUND;?></div></p>
 <?php }?>
