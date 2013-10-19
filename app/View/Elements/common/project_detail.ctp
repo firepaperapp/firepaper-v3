@@ -14,52 +14,7 @@
 		}
 	}
 </script>
-<?php
-			App::import('Helper','Time');
-			$time = new TimeHelper(new View());
-			if(count($data)>0)
-			{
-				$gotData = array();
-				$printed = false;
-				$preDate = "";
-				$i = 0;
-				$b = "blue";
-				$currDate = date("Y-m-d");
-				$tom = date("Y-m-d", strtotime("+1 DAY"));$i=1;
-				foreach ($data as $rec)
-				{	
-					$date = date("Y-m-d", strtotime($rec['Project']['duedate']));
-					if($preDate != $date)
-					{
-						
-						if($i!=0)
-						{
-						//	echo "</ul>";
-						}
-							
-						$preDate = $date;
-						if($currDate == $date)
-						{	$b = "red";
-							?>
-							
-						<? }	
-						else if($date == $tom)
-						{
-							$b = "orange";
-							?>
-							 
-						<?php
-						}
-				 	}
-					 
-						if($date!=$currDate && $date!=$tom && $printed == false) 
-						{	
-							$printed = true;
-							?>
-						
-						<?php
-						}		 
-					?> 
+
 <div class="project-brief-box-wrapper">
 	<div class="project-brief-box">
 	
