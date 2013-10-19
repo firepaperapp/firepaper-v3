@@ -155,7 +155,7 @@ $(document).ready(function(){
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" class="submit" alt="View File area">View File area</a>
            	 	
-           	 	
+           	 	<div class="clr"></div>
             	 	<?php 
 				} ?>
 				
