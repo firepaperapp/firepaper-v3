@@ -161,9 +161,9 @@ hr {
 }
 .empty-banner {
 	padding: 10px 15px;
-	border:1px solid #ccc; 
+	border:1px solid #c9c9c9; 
 	background: white;
-	color: #333;
+	color: #c9c9c9;
 	border-radius: 3px;
 	text-align: left;
 	font-size: 14px;
