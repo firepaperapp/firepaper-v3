@@ -253,10 +253,7 @@
 				</ul>
 	         <div class="clr"></div>
 	        
-	         <div class="user-functions">
-             <a href="<?php echo SITE_HTTP_URL?>users/settings/" class="settings">Settings</a>
-             <a href="<?php echo SITE_HTTP_URL?>logout">Logout</a>
-          </div>
+	        
          </div><!-- end nav -->
   
 </section>
