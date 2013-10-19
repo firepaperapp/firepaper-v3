@@ -83,7 +83,7 @@
 				<?php
 				if(isset($rec['ts']['refer_file_id']) && $rec['fileType']['icon']!='')
 				{?>
-		       	<!--<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>icons/<?php echo $rec['fileType']['icon'];?>" /></div>-->
+		       	<!--<div class="doc-type"><img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon'];?>" /></div>-->
 				<?php }?>	
 		        <div class="msg-body" >
 		        	<p>
