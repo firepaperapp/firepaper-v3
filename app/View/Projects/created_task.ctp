@@ -20,7 +20,7 @@ $(document).ready(function(){
   			}	
 			else
 			{?>
-				<span class="task-icon"></span><span class="task-title"><?php echo $rec['projectTask']['title'];?></span>
+				<span class="task-icon">✓</span><span class="task-title"><?php echo $rec['projectTask']['title'];?></span>
 			<?php
 			}
 			?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
