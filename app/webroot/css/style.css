@@ -237,6 +237,7 @@ select {
 .container {
 	overflow: auto;
 	height: 100%;
+	position: relative;
 	border: 0;
 	display: block;
 	margin-left:280px;
