@@ -1241,6 +1241,10 @@ ul.list-activity li span {
 	margin-left: 0px; 
 	margin-right: 0px;
  }
+.project-drop-area-wrapper a img {
+	position: absolute;
+	
+}
 .project-drop-area-wrapper .width100Per {
 	margin-top: 20px;
 }
