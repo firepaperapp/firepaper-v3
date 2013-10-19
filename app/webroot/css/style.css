@@ -2853,11 +2853,14 @@ textarea#projectDesc {
 }
 
 .task-input {
-    width: 65%;
+    width: 56%;
     margin-top: 0;
     float: left;
 }
-
+.col-weight {
+	width: 30%;
+	float: right;
+}
 .text-field-comment {
     height: 60px;
     width: 100%;
@@ -3380,6 +3383,8 @@ form.editinplaceform {
 }
 .weight-col span {
 	display: inline-block;
+	color: #fca55f;
+	font-size: 13px;
 }
 .weight-col .weight { 
 	color:white; 
