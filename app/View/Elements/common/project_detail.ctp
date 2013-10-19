@@ -14,6 +14,13 @@
 		}
 	}
 </script>
+<?php
+
+if (Configure::read('debug') == 0):
+    throw new NotFoundException();
+endif;
+
+?>
 <div class="project-brief-box-wrapper">
 	<div class="project-brief-box">
 	
