@@ -21,6 +21,7 @@ if(isset($errMsg))
     
     
      <input type="password" <?php if(!$this->request->data){?>onfocus="if(this.value =='123456789' ) this.value=''" onblur="if(this.value=='') this.value='123456789'" value="<?php echo $passCookieval;?>" <?php }else {?> value="<?php echo $this->request->data['password'];?>" <?php }?> id="vPasswordLeft" name="data[password]">
+      
      
     <div class="clr"></div>
      <input name="" type="submit" value="Sign in" class="submit"/>
