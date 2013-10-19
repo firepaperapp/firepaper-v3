@@ -65,11 +65,7 @@ $(document).ready(function() {
 </script>
 
 <aside class="navigation">
-<!--<div class="profile">
-    <a href="<?php echo SITE_HTTP_URL?>users/viewProfile/<?php echo $prjDetails['Project']['leader_id'];?>" class="name"><?php echo ucfirst(Sanitize::html($this->Session->read("firstname"), array('remove' => true)));?>
-                <?php echo ucfirst(Sanitize::html($this->Session->read("lastname"), array('remove' => true)));?></a>
-	</span>
-</div>-->
+
 <a href="javascript:void(0);" id="nav-toggle" alt="nav-toggle" class="nav-icon">☰</a>
 <?php if($usertype==1 || $usertype==2 || $usertype==3 || $usertype==7) {?>
 <a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" class="add-icon">✎</a>

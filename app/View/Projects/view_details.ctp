@@ -180,7 +180,7 @@
 	   	  	}
 		}?> 
 	    <?php
-	    //$pointer = "task-pointer";
+	    
 $box = "task-comment";
 	if(count($projComments)>0)
 	{?>
@@ -189,7 +189,7 @@ $box = "task-comment";
 	  	<?php
 	    foreach($projComments as $rec)
 	    {?>	    
-	    <div class="<?php echo $pointer;?>"></div>
+	   
 		<div class="<?php echo $box;?>">
 		 		<p id="projComments_<?php echo $rec['projComments']['id'];?>">
 					<span class="editcommentbox" id="editcomment_<?php echo $rec['projComments']['id'];?>_box"><?php echo nl2br(Sanitize::html($rec['projComments']['comment']));?></span>	<?php
