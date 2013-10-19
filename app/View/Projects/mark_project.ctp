@@ -247,7 +247,7 @@ function addComment(f,t)
 							if(!isNull($docs['refer_file_id']))
 							{
 			 				?>
-							<img src="<?php echo IMAGES_PATH;?>icons/<?php echo $fileTypes[$docs['file_type_id']];?>" /><a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $docs['refer_file_id']?>" id="tool-tip"><?php echo Sanitize::html($docs['title']);?></a> <em></em>
+							<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $fileTypes[$docs['file_type_id']];?>" /><a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $docs['refer_file_id']?>" id="tool-tip"><?php echo Sanitize::html($docs['title']);?></a> <em></em>
 							<?php
 							}
 							else
