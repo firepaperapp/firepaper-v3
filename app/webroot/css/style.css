@@ -1977,7 +1977,7 @@ div.file-name em {
     font-size: 13px;
     color: #cbcbcb;
     font-style: 400;
-    margin-left: 36px;
+    margin-left: 42px;
     padding-top: 4px;
     padding-bottom: 5px;
 }
@@ -2905,11 +2905,12 @@ p.field-title {
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	background: #dadada;
+	position: absolute;
 }
 .task-title {
     color: #595959;
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 43px;
     font-weight: 700;
 }
 
