@@ -2861,6 +2861,7 @@ textarea#projectDesc {
 	width: 30%;
 	float: right;
 }
+
 .text-field-comment {
     height: 60px;
     width: 100%;
@@ -3384,7 +3385,8 @@ form.editinplaceform {
 .weight-col span {
 	display: inline-block;
 	color: #fca55f;
-	font-size: 13px;
+	font-size: 15px;
+	margin-top: 10px;
 }
 .weight-col .weight { 
 	color:white; 
