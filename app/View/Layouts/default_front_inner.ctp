@@ -49,7 +49,9 @@ $(document).ready(function(){
 	<section class="container">
 	<?php echo $this->element("common/header");?>
 	<?php echo $content_for_layout; ?>
+	<section class="footer">
 	<?php echo $this->element("common/footer");?>	 
+	</section>
 	</section>
 <?php echo $this->element("common/leftsidebar");?>
 </section>
