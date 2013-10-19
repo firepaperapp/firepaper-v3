@@ -54,11 +54,12 @@ $(document).ready(function(){
 	</section>
 
 	<?php echo $this->element("common/footer");?>	 
+
+</section>
+<div id="fancybox-overlay1" style="background-color: rgb(119, 119, 119);  position: absolute;top: 0;width: 100%;z-index: 1100;cursor: pointer; height: 1114px; opacity:0.7;display: none;"></div>
 <div class="user-functions">
 	<a href="<?php echo SITE_HTTP_URL?>users/settings/" class="settings">Settings</a>
     <a href="<?php echo SITE_HTTP_URL?>logout">Logout</a>
 </div>
-</section>
-<div id="fancybox-overlay1" style="background-color: rgb(119, 119, 119);  position: absolute;top: 0;width: 100%;z-index: 1100;cursor: pointer; height: 1114px; opacity:0.7;display: none;"></div>
 </body>
 </html>
