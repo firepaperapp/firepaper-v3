@@ -55,7 +55,7 @@ class UsersController extends AppController{
 	
 	function step1($user_type="", $trialpack = 0)
 	{ 
- 		if(isUserLoggedIn($this->Session, "userid"))
+ 		/*if(isUserLoggedIn($this->Session, "userid"))
 		{
 			if($this->Session->read("user_type")==6)
 			{
@@ -63,7 +63,7 @@ class UsersController extends AppController{
 			}
 			else
 			{ $this->redirect("/dashboard"); }
-		}
+		}*/
 		if(isNull($user_type) && isNull($this->request->data['User']['user_type_id']))
 		{
 			$this->redirect("/");
