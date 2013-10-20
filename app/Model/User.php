@@ -15,7 +15,7 @@
         
          if ((!isset($postArray['sitetitle']) || empty($postArray['sitetitle'])) && $this->request->data['User']['user_type_id'] == 1) {
             $this->errMsg[] = ERR_sitetitle_EMPTY;
-            $this->err = 0;
+            $this->err = 1;
         } else if (!isset($postArray['email']) || empty($postArray['email'])) {
             $this->errMsg[] = ERR_EMAIL_EMPTY;
             $this->err = 1;
@@ -102,7 +102,7 @@
         
          if (!isset($postArray['sitetitle']) || empty($postArray['sitetitle'])) {
             $this->errMsg[] = ERR_sitetitle_EMPTY;
-            $this->err = 0;
+            $this->err = 1;
         } else if (!isset($postArray['email']) || empty($postArray['email'])) {
             $this->errMsg[] = ERR_EMAIL_EMPTY;
             $this->err = 1;
