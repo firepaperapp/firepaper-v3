@@ -64,7 +64,7 @@ $(document).ready(function(){
 	      <h3>Details</h3>  
 	      <?php echo $this->Form->input('description',array('id'=>'projectDesc','tabindex'=>2, 'div'=>false, 'label'=>false,'type'=>'textarea','class'=>'text-field'));?>
 	      <div class="line"></div>
-	      <h3>Course deadline</h3>
+	      <h3>Project deadline</h3>
 	          <span class="pickdate"> <?php echo $this->Form->text('duedate',array('id'=>'duedate','tabindex'=>3, 'div'=>false,'label'=>false, 'class'=>'date-field','readonly'=>'true'));?></span>
 	          
 	          
@@ -404,14 +404,14 @@ $(document).ready(function(){
         <?php
         if($mode == "edit" && (isset($this->request->data['Project']['published']) && $this->request->data['Project']['published'] == 1))
         {?>
-       
-	          <h3>Changes In Project</h3>
+        	<div class="clr-spacer-height"></div>
+	          <h3>Changes</h3>
 	 	    
         <div class="project-brief-box-wrapper"> 
         	
 	          <div class="add file-details-project">   
 	          		
-	          		<p><small>Note: Please enter the changes that you made.</small></p>
+	          		<p>Note: Please enter the changes that you made.</p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
 	          </div>
 	       
