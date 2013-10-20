@@ -1250,6 +1250,7 @@ ul.list-activity li span {
 	background:#fff;
 	margin-left: 0px; 
 	margin-right: 0px;
+	margin-top: 18px;
  }
 .project-drop-area-wrapper a img {
 	position: absolute;
@@ -3392,7 +3393,7 @@ form.editinplaceform {
 	display: inline-block;
 	color: #fca55f;
 	font-size: 15px;
-	margin-top: 10px;
+	margin-top: 0px;
 }
 .weight-col .weight { 
 	color:white; 
