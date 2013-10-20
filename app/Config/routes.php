@@ -32,7 +32,11 @@
  */
 	// Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
-
+Router::connect('/contact-us', array(
+    'plugin'=>'contact_us',
+    'controller'=>'contacts',
+    'action'=>'message'
+));
 
 
 Router::connect('/', array('controller' => 'home', 'action' => 'display'));
