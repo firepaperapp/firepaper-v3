@@ -114,7 +114,7 @@ $(document).ready(function(){
 
    rules: {
 
-   		 "data[User][sitetitle]":  {required: true,numberandletter:true},	
+   		 //"data[User][sitetitle]":  {required: true,numberandletter:true},
    		 "data[User][firstname]":  {required: true},
 	     "data[User][lastname]":  {required: true},
 	     "data[User][email]":  {required: true, email: true},		      

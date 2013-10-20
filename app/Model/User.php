@@ -160,7 +160,7 @@
             		}
             		if($rec['User']['sitetitle'] == $postArray['sitetitle']  && $sittitleExist==false)
             		{
-            			$this->errMsg[] = ERR_SAME_SITETITLE_EXIST; 			
+            			$this->errMsg[] = ERR_SAME_u_EXIST; 			
             			$sittitleExist = true;
             			$this->err = 1;
             		}
