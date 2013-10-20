@@ -2113,10 +2113,6 @@ div.file-name em {
 .task-tick-box {
     height: 15px;
 }
-
-.task-title {
-}
-
 .task-comment-title {
     margin-top: 10px;
     color: #286985;
@@ -2134,9 +2130,6 @@ div.file-name em {
     z-index: 100;
 }
 
-
-.right-snippet-wrapper {
-}
 
 .right-snippet-wrapper .marginT10 {
     border: none;
@@ -2923,7 +2916,7 @@ p.field-title {
 }
 .task-title {
     color: #595959;
-    font-size: 14px;
+    font-size: 18px;
     margin-left: 43px;
     font-weight: 700;
 }

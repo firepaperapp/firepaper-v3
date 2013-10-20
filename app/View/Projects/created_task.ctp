@@ -20,6 +20,7 @@ $(document).ready(function(){
   			}	
 			else
 			{?>
+				<div class="clr"></div>
 				<span class="task-icon">✓</span><span class="task-title"><?php echo $rec['projectTask']['title'];?></span>
 			<?php
 			}
