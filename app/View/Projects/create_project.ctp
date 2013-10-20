@@ -43,17 +43,17 @@ $(document).ready(function(){
 				
 	<h1>
 	<?php
- 	if($project_id!=0)
+ 	if($is_completed!=0)
 	{
-		$mode = "edit"; 
+		 
 		echo "Update";
-		echo $project_id;
+		$mode = "edit";
 	}
 	else
 	{
-		$mode = "add";
+		
 		echo "Create a";
-		echo $project_id;
+		$mode = "add";
 	}
 	?> Project</h1>
 	
