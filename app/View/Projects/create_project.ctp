@@ -45,13 +45,14 @@ $(document).ready(function(){
 	<?php
  	if($project_id!=0)
 	{
-		$mode = "edit"; 
-		echo "Update";
+		$mode = "add";
+		echo "Create a";
 	}
 	else
 	{
-		$mode = "add";
-		echo "Create a";
+		
+		$mode = "edit"; 
+		echo "Update";
 	}
 	?> Project</h1>
 	

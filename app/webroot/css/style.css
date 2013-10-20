@@ -2907,8 +2907,9 @@ p.field-title {
 }
 .task-icon {
 	font-family:'entypo';
-	font-size: 35px;
-	padding: 2px 9px 0px 10px;
+	font-size: 28px;
+	height: 26px;
+	padding: 0px 7px 0px 7px;
 	color: white;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -3249,7 +3250,7 @@ ul#archived-list .month {
 
 .weight-col {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 0;
     float: right;
     color: #a9abae;
