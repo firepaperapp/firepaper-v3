@@ -100,10 +100,10 @@
     /*Function to validate User fields on admin end*/
 		function validateOnAdminEnd($postArray, $userId) {
         
-         if (!isset($postArray['sitetitle']) || empty($postArray['sitetitle'])) {
+         /*if (!isset($postArray['sitetitle']) || empty($postArray['sitetitle'])) {
             $this->errMsg[] = ERR_sitetitle_EMPTY;
             $this->err = 1;
-        } else if (!isset($postArray['email']) || empty($postArray['email'])) {
+        } else*/ if (!isset($postArray['email']) || empty($postArray['email'])) {
             $this->errMsg[] = ERR_EMAIL_EMPTY;
             $this->err = 1;
         } else if (!validateEmail($postArray['email'])) {
