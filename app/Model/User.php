@@ -60,7 +60,7 @@
         if ($this->err == 0) {
             //we will check do user with same email already exist in the db.
             $users = $this->find('all',
-                            array("conditions" => "User.username = '" . add_Slashes($postArray['username']) . "' OR User.email = '" . add_Slashes($postArray['email']) . "' OR User.sitetitle = '" . add_Slashes($postArray['sitetitle']) . "'")
+                            array("conditions" => "User.username = '" . add_Slashes($postArray['username']) . "' OR User.email = '" . add_Slashes($postArray['email']) /*. "' OR User.sitetitle = '" . add_Slashes($postArray['sitetitle'])*/. "'")
             );
           
             $emailExist = false;
