@@ -240,12 +240,12 @@ $(document).ready(function(){
 					  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>">
 									<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" />
 									
-									<p class="task-icon"><?php echo $rec['projectTask']['title'];?></span></a>
+									<span class="task-icon">✓</span><span class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
 					  			<?php
 					  			}	
 								else
 								{?>
-									<p class="task-title"><?php echo $rec['projectTask']['title'];?>
+									<span class="task-icon">✓</span><span class="task-title"><?php echo $rec['projectTask']['title'];?></span>
 								<?php
 								}
 								?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
