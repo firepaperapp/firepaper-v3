@@ -108,7 +108,7 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load('DebugKit');
-
+CakePlugin::load('ContactUs', array('routes'=>true));
 include_once('site_constants.php');
 include_once('messages.php');
 include_once('functions.php');
