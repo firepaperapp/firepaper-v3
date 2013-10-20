@@ -240,7 +240,7 @@ $(document).ready(function(){
 					  				<a href="<?php echo SITE_HTTP_URL;?>files/downloadFile/<?php echo $rec['projectTask']['refer_file_id'];?>">
 									<img src="<?php echo IMAGES_PATH;?>large-icons/<?php echo $rec['fileType']['icon']?>" />
 									
-									<span class="task-icon">✓</span><span class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
+									<span class="task-title"><?php echo $rec['projectTask']['title'];?></span></a>
 					  			<?php
 					  			}	
 								else
