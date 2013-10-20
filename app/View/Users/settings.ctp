@@ -10,7 +10,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui.min.js"></script> 
 <!-- File Upload Progress bar End -->
 <script type="text/javascript" src="<?php echo JS_PATH ?>settings.js"></script> 
-<?php 
+<!--<?php 
 if(is_file(USER_IMAGES_URL.'logo/'.$userdata['User']['logopic']) && file_exists(USER_IMAGES_URL.'logo/'.$userdata['User']['logopic']))
 {
 	$userimage = USER_IMAGES_PATH.'logo/'.$userdata['User']['logopic'];
@@ -18,8 +18,8 @@ if(is_file(USER_IMAGES_URL.'logo/'.$userdata['User']['logopic']) && file_exists(
 else
 {
 	$userimage = IMAGES_PATH.'default_logo.jpg';
-}
-?>
+} 
+?> -->
 <input type="hidden" id="urluid" value="<?php echo $currentuserid; ?>">
 <input type="hidden" id="uniquename" value="<?php echo $userdata['User']['username']?>">
 <input type="hidden" id="sitetitle" value="<?php echo $userdata['User']['sitetitle']?>">
