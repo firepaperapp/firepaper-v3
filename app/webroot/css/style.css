@@ -470,7 +470,7 @@ select {
 	width: 100%;
 	clear: both;
 }
-.add-people p, .width100per p {
+.add-people p, .width100per p, .file-details-project p {
 	font-style: italic;
 	color: #abaaaa;
 	font-size: 14px;
