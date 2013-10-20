@@ -43,7 +43,7 @@ $(document).ready(function(){
 				
 	<h1>
 	<?php
- 	if($is_completed!=0)
+ 	if($project_id!=0)
 	{
 		 
 		echo "Update";
