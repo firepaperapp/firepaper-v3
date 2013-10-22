@@ -84,12 +84,12 @@ if(count($taskComments)>0 && isset($taskComments[0]['projComments']['id']))
 		if($this->Session->read("userid") == $rec['projComments']['posted_by'] || ( $isOwner == 1 && $viewType == "common"))
 		{ ?>
 		<?php if($isOwner == 1) { ?>
-				<a class="edit" href="#"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
+				<a class="edit" href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
 				<br />
 		<?php
 			}
 		} else { ?>
-			<a class="edit" href="#"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
+			<a class="edit" href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>"><?php echo ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));?></a>
 		<?php } ?>
 		
 		
