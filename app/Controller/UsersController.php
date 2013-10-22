@@ -255,6 +255,7 @@ class UsersController extends AppController{
 	 	$this->set("displayText",$displayText);
 		$this->set("displayDropDown",$displayDropDown);
 	}
+
 	
 	/**
 	 * User has finished the registration, show thanks screent
@@ -518,7 +519,9 @@ class UsersController extends AppController{
             
 		$this->set('showlinks','N');
 		$this->set("url_uid",''); 
-		if($id!=NULL && $id!="" && $username!=NULL && $username!="")
+		//if($id!=NULL && $id!="" && $username!=NULL && $username!="")
+
+		if(($id!=NULL && $id!="") || ($username!=NULL && $username!=""))
 		{
 			$this->set("url_uid",$id);
 			// For display of suspend and delete link to user 			
@@ -536,7 +539,7 @@ class UsersController extends AppController{
 			{
 				$this->Session->setFlash(MSG_USER_DOES_NOT_EXISTS);
 				$this->redirect("/dashboard");
-			}
+			} 
 	 		//$this->set('showlinks','Y');
 			$this->set('createdbyarr',$createdbyarr);
  			//check that logged in  user is creator of the id passed from url
