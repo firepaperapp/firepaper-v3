@@ -61,7 +61,7 @@
 						$userimage = IMAGES_PATH.'profile-pic.png';
 					}
 				?>
-                            <img src="<?php echo $userimage;?>" height="35" width="35" /><p class="contact"><a href="<?php echo SITE_HTTP_URL.$rec['User']['id']."/".$rec['User']['username'];?>"><?php
+                            <img src="<?php echo $userimage;?>" height="35" width="35" /><p class="contact"><a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>"><?php
 		       	$st = ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));
 				if(strlen($st)>15)
 						echo substr($st, 0 ,15)."...";
