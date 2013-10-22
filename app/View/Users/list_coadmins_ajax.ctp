@@ -72,10 +72,8 @@ if(is_array($data) && count($data)>0)
 		 	     	
 					<div class="imgclass"><img src="<?php echo $coadmins['User']['profilepic'];?>" class="profile" /></div>
 
-			       <?php $editpgurl = SITE_HTTP_URL."users/viewProfile/".$coadmins['User']['id'];?>
-
-					<div class="links">
-						<p class="title"><a id="edituserprof" href="<?php echo $editpgurl; ?>"><b><?php echo ucfirst(Sanitize::html($coadmins['User']['firstname']." ".$coadmins['User']['lastname']));?></b></a>
+			  					<div class="links">
+						<p class="title"><a id="edituserprof" href="<?php echo SITE_HTTP_URL."users/viewProfile/".$coadmins['User']['id']; ?>"><b><?php echo ucfirst(Sanitize::html($coadmins['User']['firstname']." ".$coadmins['User']['lastname']));?></b></a>
 						</p>
 						
 						<p><a onclick="confirmCoadminDelete(<?php echo $coadmins['User']['id'];?>);" class="edit">Delete </a></p>

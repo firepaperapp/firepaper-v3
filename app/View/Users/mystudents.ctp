@@ -31,9 +31,9 @@
 	   		 	}
 	   		 }
 	   		?><div class="imgclass"><img src="<?php echo $students['User']['profilepic'];?>" class="profile" /></div>
-		       <?php $editpgurl = SITE_HTTP_URL."users/viewProfile/".$students['User']['id'];?>
+		       <?php //$editpgurl = SITE_HTTP_URL."users/viewProfile/".$students['User']['id'];?>
 				<div class="links">
-					<p class="title"><a id="edituserprof" href="<?php echo $editpgurl; ?>"><b><?php echo ucfirst(Sanitize::html($students['User']['firstname']." ".$students['User']['lastname']));?></b></a>
+					<p class="title"><a id="edituserprof" href="<?php echo SITE_HTTP_URL."users/viewProfile/".$teachers['User']['id']; ?>"><b><?php echo ucfirst(Sanitize::html($students['User']['firstname']." ".$students['User']['lastname']));?></b></a>
 					</p>
  			      </div>
 				<div class="clr"></div>
