@@ -47,7 +47,8 @@
 				
 			}?>
 			 <div class="msg-container">
-		       	<div class="top"><img src="<?php echo IMAGES_PATH;?>icons/user.png" class="profile"/><p class="contact"><a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>"><b>
+		       	<div class="top"><img src="<?php echo IMAGES_PATH;?>icons/user.png" class="profile"/>
+		       	<p class="contact"><a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$rec['User']['id'];?>"><b>
 		       	<?php
 		       	$st = ucfirst(Sanitize::html($rec['User']['firstname']." ".$rec['User']['lastname']));
 				if(strlen($st)>15)
