@@ -93,7 +93,7 @@ function suspendActivateAccount(uid,su_ac,suspendid)
 			       <?php //$editpgurl = SITE_HTTP_URL.$teachers['User']['id']."/".$teachers['User']['username'];?>
 
 					<div class="links">
-						<a id="edituserprof" href="<?php echo SITE_HTTP_URL?>users/viewProfile/"><strong><?php echo ucfirst(Sanitize::html($teachers['User']['firstname']." ".$teachers['User']['lastname']));?></strong></a>
+						<a id="edituserprof" href="<?php echo SITE_HTTP_URL ?>users/viewProfile/<?php echo $prjDetails['User']['id'];?>"><strong><?php echo ucfirst(Sanitize::html($teachers['User']['firstname']." ".$teachers['User']['lastname']));?></strong></a>
 	 					<p>
 	 					<?php
 	 					$subjects = "";
