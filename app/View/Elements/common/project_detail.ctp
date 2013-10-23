@@ -15,7 +15,16 @@
 	}
 </script>
 
-
+<?php
+$to      = 'nsberrow@gmail.com';
+$subject = 'php mail test';
+$message = 'hello, this is just a test for you.';
+$headers = 'From: nsberrow@gmail.com' . "\r\n" .
+    'Reply-To: nsberrow@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+ 
+mail($to, $subject, $message, $headers);
+?>
 <div class="project-brief-box-wrapper">
 	<div class="project-brief-box">
 	
