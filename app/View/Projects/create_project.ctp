@@ -254,7 +254,7 @@ $(document).ready(function(){
 								<span id="extraDoc_<?php echo $rec['projectTask']['id']?>" style="
 								<?php
 								if($rec[0]['extraDocs'] == 0)
-								{?>display:none;<?php }?>">&nbsp;-&nbsp;
+								{?>display:;<?php }?>">&nbsp;-&nbsp;
 								<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>)">View Other Docs</a>
 								</p>
 								
