@@ -1677,23 +1677,22 @@ class UsersController extends AppController{
 			$cnt_email = $this->User->find('count',
 												array('conditions'=> array('email'=>$uemail)				
 												));
-
+												
 			if($cnt_sitetitle==1)
 			{
 				$errmsg.= ERR_SAME_SITETITLE_EXIST."<br>";
 			}
 			if($cnt_uname==1)
 			{
-				$errmsg.= ERR_SAME_USERNAME_EXIST."<br>";
+							$errmsg.= ERR_SAME_USERNAME_EXIST."<br>";
 			}
-			if($cnt_email==1)
+						if($cnt_email==1)
 			{
-				$errmsg.= ERR_SAME_EMAIL_EXIST."<br>";
+							$errmsg.= ERR_SAME_EMAIL_EXIST."<br>";
 			}
-
-			if($errmsg!="")
+						if($errmsg!="")
 			{
-				echo "error##".$errmsg;
+							echo "error##".$errmsg;
 			}
 			else
 			{

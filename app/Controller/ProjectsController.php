@@ -1094,10 +1094,11 @@ class ProjectsController  extends AppController{
 	 */
 	function deleteTask()
 	{
-		if(isset($this->request->params['form']['taskId']) && $this->request->params['form']['taskId']!='')
+		//if(isset($this->request->params['form']['taskId']) && $this->request->params['form']['taskId']!='')
+		 if(isset($this->request->data['taskId']))
 		{
-			$res = $this->projectTask->delete($this->request->params['form']['taskId']);
-			if($res == true)
+			$res = $this->projectTask->delete($this->request->data['taskId']);
+			if($res)
 			{
 				$response['success'] =  MSG_REC_DELTED;
 			}
@@ -1107,12 +1108,15 @@ class ProjectsController  extends AppController{
 			
 		}else {
 				$response['error'] =  MSG_REC_CANT_DELETE;	
-			}
+			} 
+
 		$this->RequestHandler->respondAs('json'); 			
 		echo json_encode($response);
+
 		$this->autoRender = false;         
-		die; 
+		//die; 
 	}
+
 	/**
  	 * This function is used to get the json data for drop down of "otherGroups" 
  	 * in addYearGroup Page
