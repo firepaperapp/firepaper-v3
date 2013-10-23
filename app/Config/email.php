@@ -35,6 +35,11 @@
  * The origin email. See CakeEmail::from() about the valid values
  *
  */
+ 
+App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
+
+
 class EmailConfig {
 
 	public $default = array(
