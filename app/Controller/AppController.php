@@ -33,14 +33,14 @@
  *
  * Add your application-wide methods in the class below, your controllers
  * will inherit them.
- *
+ *,'DebugKit.Toolbar'
  * @package		cake
  * @subpackage	cake.cake
  */
 class AppController extends Controller {
  
 	var $helpers=array('Js','Html','Utility','AddJsCss');
-	var $components=array('Session','Cookie','Image','Email','DebugKit.Toolbar');
+	var $components=array('Session','Cookie','Image','Email');
 	var $breadcrumb=array('Home'=>'');
 	var $uses = array('activityLog','projectStudent','Department','DepartmentStudent','DepartmentTeacher','User','Project');
 
