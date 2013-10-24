@@ -59,7 +59,7 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'root',
+		'login' => 'shamone',
 		'password' => 'fiosof734%&&rell',
 		'database' => 'firepaperdev',
 		'prefix' => '',
