@@ -742,7 +742,7 @@ p.task-tickbox a {
 }
 
 .file-col-1-wrapper, .file-col-2-wrapper {
-	width: 33.33333%;
+	width:25%;
 	float: left;
 	box-sizing: border-box;
 }
@@ -1346,6 +1346,7 @@ ul.list-activity li span {
 }
 .project-wrapper {
 	padding: 50px;
+	position: relative;
 }
 .profile-container {
 	padding:40px 50px;
