@@ -158,12 +158,8 @@
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
 			
-           	<?php }
-			}
-           	else if($profileMenu!='')
-           	{?>
            		<li class="<?php echo $viewProfile;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" ><span>Profile details</span> <i class="profile-details-icon">👤</i></a></li>
-           	 <?php if($usertype==6)
+           	 <?php } if($usertype==6)
 					{?>
 						<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 					<?php
