@@ -112,7 +112,7 @@
            	  
            	   	 
            	<?php
-           		 //echo $this->requestAction("/files/getMyCategories");
+           		} //echo $this->requestAction("/files/getMyCategories");
 			?>
 			
 				</ul>
