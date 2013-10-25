@@ -146,7 +146,7 @@
 				
 				<div class="<?php echo $whiteAction;?>"><a href="<?php echo SITE_HTTP_URL."whiteboards"?>" alt="Whiteboards" class="files-icon">Whiteboards</a></div>-->
 				
-				<?php if($usertype==1 || $usertype==7||$usertype==3 ){?>
+				<?php if($usertype==1 || $usertype==7|| $usertype==3 ){?>
 				<li><a href="<?php echo SITE_HTTP_URL."departments"?>" alt="Departments"> <span>Departments</span> <i class="departments-icon">🎓</i></a></li>
 				<?php } ?>
 				
@@ -154,7 +154,7 @@
 				<li><a href="<?php echo SITE_HTTP_URL."listTeachers";?>" alt="Educators" ><span>Educators</span> <i class="educators-icon">👤</i></a></li>
 				<?php }?>
 
-				<?php if($usertype==1 ||  $usertype==2 ||$usertype==3 || $usertype==7){?>
+				<?php if($usertype==1 ||  $usertype==2 || $usertype==3 || $usertype==7){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
 			
@@ -181,31 +181,7 @@
            	<?php 
            	 }
            	}
-           	else if($projectMenu!='')
-           	{ 
-           		$markProjectsList = "";
-           		$addEditProject = "";
-           		$draftProjects = "";
-           		$archivedProjects = "";
-           		$deptProject = "";
-           		 
-	           	switch($this->request->params['action'])	
-	           	{
-	           		case "markProjectsList":
-	           			$markProjectsList = "active";
-	           			break;
-	           		case "addEditProject":
-	           			$addEditProject = "active";
-	           			break;
-	           		case "draftProjects":
-	           			//$draftProjects = "active";
-	           			break;
-	           		case "archivedProjects":
-	           			$archivedProjects = "active";
-	           			break;	
-	           		default:
-	           			$deptProject = "active";	
-	           	}
+           	
            	if(in_array($usertype, array(1,2,3,7)))
 			{	
            	?>
