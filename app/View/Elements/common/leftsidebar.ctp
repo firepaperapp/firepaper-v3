@@ -55,8 +55,8 @@
 		 if($usertype == 1) { ?>
         <li class="<?php //echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>
     <?php  }  if(in_array($usertype, array(1,2,3,7))) {	 ?>
-        <li><a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i>✎</i></a></li>
         <li><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" ><span>Create Project</span> <i>✎</i></a></li>
+        <li><a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i>✎</i></a></li>
 	<?php }?>
         <li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><i>⚠</i></a></li>
 	<?php
@@ -74,7 +74,7 @@
 			<?php
 			}	*/
 			?>	
-		<li class="<?php //if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" ><span>Archive</span> <i class="project-icon"></i></a></li>
+		<li class="<?php //if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" ><span>Archive</span> <i></i></a></li>
 			<?php
            		 //echo $this->requestAction("/files/getMyCategories");
 			?>
