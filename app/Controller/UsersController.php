@@ -454,11 +454,11 @@ class UsersController extends AppController{
 			{
 				//we will update the user for the new password and send this in email to the user
 				$password = time();
-				$this->User->id = $result['User']['id'];
+				$this->User->id = $result[0]['users']['id'];
 				$data['password'] = md5($password);
 				$this->User->Save($data);
-   				$sUserFullName = $result['User']['firstname']." ".$result['User']['lastname'];
- 		        $this->Email->to = $result['User']['email'];				
+   				$sUserFullName = $result[0]['users']['firstname']." ".$result[0]['users']['lastname'];
+ 		        $this->Email->to = $result[0]['users']['email'];				
 				$this->Email->fromName = ADMIN_NAME;
 			    $this->Email->from = EMAIL_FROM_ADDRESS;
 
@@ -467,7 +467,7 @@ class UsersController extends AppController{
 				As requested, your password at ".SITE_NAME." has been reset.<br/><br/>
 
 				Here are your new login details:<br/>
-				Username: ".$result['User']['username']." <br/>
+				Username: ".$result[0]['users']['username']." <br/>
 				Password: $password <br/><br/>
 
 				Please use the URL below to login to your account:<br/>
