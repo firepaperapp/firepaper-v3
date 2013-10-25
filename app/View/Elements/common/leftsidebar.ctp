@@ -168,16 +168,13 @@
 			<?php
            	 }?>
            	 <?php
-           	 if($usertype == 1)	
-           	 {?>
-           	 	<li class="<?php echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>           	 	
+           	 if($usertype == 1)	 {?>
+           	 	<li class="<?php //echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>
            	<?php 
-           	 }
-           	
-           	
-           	if(in_array($usertype, array(1,2,3,7)))
+           	 } if(in_array($usertype, array(1,2,3,7)))
 			{	
            	?>
+           	
            	<li>
            		<a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i class="mark-icon">✎</i></a>
            	</li>
