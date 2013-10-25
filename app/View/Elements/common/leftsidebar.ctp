@@ -185,7 +185,7 @@
 			<?php }?>
            		
 			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span></a><i class="due-icon">⚠</i></li>
-			<?php ?>
+			
 				<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
 			<?php
 			
@@ -196,7 +196,7 @@
 			}	
 			?>	
 			<li class="<?php //if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" ><span>Archive</span> <i class="project-icon"></i></a></li>
-			<?php } ?>
+			
 	
            	 
            	  
