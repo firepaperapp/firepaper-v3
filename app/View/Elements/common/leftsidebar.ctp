@@ -184,12 +184,13 @@
            		
 			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><i>⚠</i></a></li>
 			<?php
-      if(in_array($usertype, array(1))) {
+      
       foreach($departments as $rec)
       {
         //$active = "";
-        if(isset($dept_id) && $dept_id == $rec['Department']['id']) 
+        if(isset($dept_id) && $dept_id == $rec['Department']['id'] && in_array($usertype, array(1))  
           //$active = "active";
+           {
       ?>
 				<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php //echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
 			<?php }
