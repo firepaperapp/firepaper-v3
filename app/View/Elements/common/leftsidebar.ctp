@@ -184,7 +184,7 @@
            		
 			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><i>⚠</i></a></li>
 			<?php
-      
+      if(in_array($usertype, array(1))) {
       foreach($departments as $rec)
       {
         //$active = "";
