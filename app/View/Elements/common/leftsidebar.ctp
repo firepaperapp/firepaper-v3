@@ -157,7 +157,7 @@
 				<?php if($usertype==1 ||  $usertype==2 || $usertype==3 || $usertype==7){?>
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
-			
+				<?php } ?>
            		<li><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" ><span>Profile details</span> <i class="profile-details-icon">👤</i></a></li>
            	 <?php } if($usertype==6)
 					{?>
