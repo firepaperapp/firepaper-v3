@@ -62,23 +62,19 @@
 				<li><a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 				
 				<?php } ?>
+				
            		<li><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" ><span>Profile details</span> <i class="profile-details-icon">👤</i></a></li>
+           		
            	 <?php if($usertype==6) {?>
 						<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
+			<?php } if(in_array($this->Session->read('user_type'), array(4,5))) { ?>
+
+				<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
 			<?php } ?>
-           	<?php if(in_array($this->Session->read('user_type'), array(4,5)))
-           	 {?>
-<li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
-			<?php
-           	 }?>
            	 
-           	 <?php
-           	 if($usertype == 1)	 {?>
+           	 <?php if($usertype == 1) { ?>
            	 	<li class="<?php //echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>
-           	<?php 
-           	 } 
-           	 if(in_array($usertype, array(1,2,3,7))) {	
-           	?>
+           	<?php  }  if(in_array($usertype, array(1,2,3,7))) {	 ?>
            	
            	<li><a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i>✎</i></a></li>
            	<li><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" ><span>Create Project</span> <i>✎</i></a></li>
@@ -86,7 +82,7 @@
            		
 			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><i>⚠</i></a></li>
 			<?php
-      
+      /*
       foreach($departments as $rec)
       {
         //$active = "";
@@ -94,14 +90,11 @@
           //$active = "active";
            
       ?>
-				<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php //echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
-			<?php }
-			
-			if(in_array($usertype, array(1,2,3,7)))
-			{?>
+		<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php //echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
+			<?php } if(in_array($usertype, array(1,2,3,7))) {?>
 				<li class="<?php //if($this->request->params['url']['url'] == "projects/draftProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/draftProjects"?>" alt="Archive" ><span>Drafts</span> <i class="project-icon"></i></a></li>
 			<?php
-			}	
+			}	*/
 			?>	
 			<li class="<?php //if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" ><span>Archive</span> <i class="project-icon"></i></a></li>
 			
