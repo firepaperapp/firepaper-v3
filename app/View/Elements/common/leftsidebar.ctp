@@ -193,7 +193,7 @@
 				if(isset($dept_id) && $dept_id == $rec['Department']['id'])	
 					$active = "active";
 			?>
-				<li id="deptSub_<?php echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
+				<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
 			<?php
 			}
 			if(in_array($usertype, array(1,2,3,7)))
@@ -203,14 +203,8 @@
 			}	
 			?>	
 			<li class="<?php //if($this->request->params['url']['url'] == "projects/archivedProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/archivedProjects"?>" alt="Archive" ><span>Archive</span> <i class="project-icon"></i></a></li>
-			<?php }
-			else if($searchMenu!='')
-			{?>
-				 
-			<?php } 
-			
-			else if($fileMenu!='')
-           	{?> 
+			<?php } ?>
+	
            	 
            	  
            	   	 
