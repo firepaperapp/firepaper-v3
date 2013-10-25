@@ -125,7 +125,7 @@ class Project extends AppModel {
 	  			$filter .= " date_format(Project.duedate, '%y-%m-%d')>=curdate() AND ";
 	  		$currentProjects = array(
 	 	 	"conditions"=>$filter." Project.published = 1  AND projectStudent.completed = 0",
-	 	 	"fields"=>"Project.*, (SELECT SUM(weight) FROM project_tasks INNER JOIN project_student_task_marks ON project_student_task_marks.task_id = project_tasks.id WHERE project_tasks.project_id = Project.id) as completed, (SELECT COUNT(id) FROM project_student_task_docs as pstdo WHERE pstdo.project_id = Project.id) as noOfFiles, (SELECT COUNT(id) FROM project_comments  as psc WHERE psc.project_id = Project.id) as noOfComments, Subject.title",
+	 	 	"fields"=>"Project.*, User.*, (SELECT SUM(weight) FROM project_tasks INNER JOIN project_student_task_marks ON project_student_task_marks.task_id = project_tasks.id WHERE project_tasks.project_id = Project.id) as completed, (SELECT COUNT(id) FROM project_student_task_docs as pstdo WHERE pstdo.project_id = Project.id) as noOfFiles, (SELECT COUNT(id) FROM project_comments  as psc WHERE psc.project_id = Project.id) as noOfComments, Subject.title",
 	 	 	"order"=>"Project.duedate asc",
 	 	 	"joins"=>array(
 	 	 		array(
@@ -139,7 +139,14 @@ class Project extends AppModel {
 	 	 		"table"=>"subjects",
 	 	 		"alias"=>"Subject",
 	 	 		"conditions"=>"Subject.id = Project.subject_id"
-	 	 		) 	 	
+	 	 		)  	
+	 	 		,
+	 	 		array(
+	 	 		"type"=>"inner",
+	 	 		"table"=>"users",
+	 	 		"alias"=>"User",
+	 	 		"conditions"=>"User.id = projectStudent.user_id"
+	 	 		)  	
 	 	 	), 	 		 	 	
 	 	 	"limit"=>"10"
 	 	 	);
