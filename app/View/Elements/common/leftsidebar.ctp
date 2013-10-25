@@ -210,7 +210,6 @@
            	   	 
            	<?php
            		echo $this->requestAction("/files/getMyCategories");
-           	}
 			?>
 			
 				</ul>
