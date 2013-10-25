@@ -98,7 +98,7 @@
       foreach($departments as $rec)
       {
         //$active = "";
-        if(isset($dept_id) && $dept_id == $rec['Department']['id'] && $usertype ==1) {
+        if(isset($dept_id) && $dept_id == $rec['Department']['id']) {
           //$active = "active";
            
       ?>
