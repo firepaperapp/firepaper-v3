@@ -185,17 +185,10 @@
 			<?php }?>
            		
 			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span></a><i class="due-icon">⚠</i></li>
-			<?php
-			
-			foreach($departments as $rec)
-			{
-				$active = "";
-				if(isset($dept_id) && $dept_id == $rec['Department']['id'])	
-					$active = "active";
-			?>
+			<?php ?>
 				<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
 			<?php
-			}
+			
 			if(in_array($usertype, array(1,2,3,7)))
 			{?>
 				<li class="<?php //if($this->request->params['url']['url'] == "projects/draftProjects") echo "active";?>"><a href="<?php echo SITE_HTTP_URL."projects/draftProjects"?>" alt="Archive" ><span>Drafts</span> <i class="project-icon"></i></a></li>
