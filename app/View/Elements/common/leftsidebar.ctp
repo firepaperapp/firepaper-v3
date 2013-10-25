@@ -167,6 +167,7 @@
 <li class="<?php echo $viewProgress;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
 			<?php
            	 }?>
+           	 
            	 <?php
            	 if($usertype == 1)	 {?>
            	 	<li class="<?php //echo $coadmins;?>"><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>
@@ -182,7 +183,14 @@
 			<?php }?>
            		
 			<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span></a><i class="due-icon">⚠</i></li>
-			
+			<?php
+      
+      foreach($departments as $rec)
+      {
+        //$active = "";
+        if(isset($dept_id) && $dept_id == $rec['Department']['id']) 
+          //$active = "active";
+      ?>
 				<li id="<?php //echo $rec['Department']['id'];?>"><a href="<?php echo SITE_HTTP_URL."projects/viewProjects/".$rec['Department']['id'];?>" alt="<?php echo $rec['Department']['title'];?>" "<?php echo $deptProject;?>"><span><?php echo $rec['Department']['title'];?></span> <i class="projects-icon"></i></a></li>
 			<?php
 			
