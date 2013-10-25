@@ -145,7 +145,7 @@ class Project extends AppModel {
 	 	 		"type"=>"inner",
 	 	 		"table"=>"users",
 	 	 		"alias"=>"User",
-	 	 		"conditions"=>"User.id = projectStudent.user_id"
+	 	 			"conditions"=>"User.id = Project.leader_id"
 	 	 		)  	
 	 	 	), 	 		 	 	
 	 	 	"limit"=>"10"
