@@ -23,32 +23,26 @@
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 <div class="clr"></div>
 <?php if($this->Session->read("user_type")!=6) {?>
-     <ul>
-        <li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a></li>
+<ul>
+	<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Dashboard" ><span>Dashboard</span> <i class="dashboard-icon">🚀</i></a></li>
              <!--<div class="projects-icon"><a href="<?php echo SITE_HTTP_URL."projects"?>"  alt="Projects" >Projects</a></div>-->
              <?php 
             /*f($prjCount>0)
             {
             	//echo $prjCount;
-            }*/?></li>
-			  <li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📰</i></a></li>
+            }*/?>
+	<li><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="Files" ><span>Files</span> <i class="files-icon">📰</i></a></li>
 			  <!--<div class="user-icon"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" >Profile</a></div>-->
 			    
             <!-- <a href="<?php echo SITE_HTTP_URL."search"?>" alt="Search" class="search-icon">Search</a> -->
-
-		 <?php } ?>
+<?php } ?>
 
 		<!-- <?php if($this->Session->read("user_type")==6) {?>
 		   <ul class="left">        	
 				 <li class="<?php echo $profileMenu;?>"><a href="<?php echo SITE_HTTP_URL."users/viewProfile"?>" alt="Profile" class="user-icon">Profile</a></li>
 				
-		  </ul>< -->
-		 <?php } ?>
-		
-         
-           	<?php 
-           	if($dashboardMenu!='')
-           	{?>
+		  </ul> -->
+
 				<div class="<?php //echo $overviewAction;?>">
 					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
 				
@@ -118,7 +112,7 @@
            	  
            	   	 
            	<?php
-           		} //echo $this->requestAction("/files/getMyCategories");
+           		 //echo $this->requestAction("/files/getMyCategories");
 			?>
 			
 				</ul>
