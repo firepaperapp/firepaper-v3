@@ -1236,7 +1236,7 @@ class ProjectsController  extends AppController{
  				//IF project is updated then we delete the users from who are not in the added groups
  				$qry = "DELETE FROM project_students WHERE project_id = ".$project_id;
  				$this->classgroupStudent->query($qry); 			
- 				if($this->request->params['form']['mode'] == "add")
+ 				if(isset($this->request->params['form']['mode']) &&  $this->request->params['form']['mode']== "add")
  				{
  					$inMail = "created a new" ;
  					$subject = "Project Created";
