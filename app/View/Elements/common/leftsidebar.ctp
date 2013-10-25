@@ -18,96 +18,6 @@
 	}	
 ?>
 
-	
-	
-	<?php
-
-	$dashboardMenu = "active";
-	$profileMenu = "active";
-	$projectMenu = "active";
-	$searchMenu = "active";
-	$fileMenu = "active";
-	switch($this->request->params['controller'])
-	{
-		case "dashboard":
-		case "yeargroups":
-		case "whiteboards":
-	 		$dashboardMenu = "active";
-			$overviewAction = "active";
-			$educatorsAction = "active";
-			$studentsAction = "active";
-			$filesAction = "active";
-			$departmentAction = "active";
-			$whiteAction = "";
-			switch($this->request->params['action'])
-			{	
-				/** Files handling starts here **/			
-				case "getFiles":
-					$filesAction = "active";
-					break;
-				/** Files handling end here **/
-				case "listTeachers":
-					$educatorsAction = "active";
-					break;
-				case "departments":
-		 			$departmentAction = "active";
-					break;
-				case "index":
-					if($this->request->params['controller'] == "whiteboards")
-		 				$whiteAction = "active";
-		 			else 
-		 				$overviewAction = "active";
-					break;
-				case "classGroups":
-	 			case "viewgroups":					
-		 			$studentsAction = "active";
-					break;	
-		 		default:
-					$overviewAction = "active";
-			}
-			break;
-		case "files":
-			$fileMenu = "active";
-			switch($this->request->params['action'])
-			{	
-				/** Files handling starts here **/			
-				case "getFiles":
-					$filesAction = "active";
-					break;
-				default:
-					$filesAction = "active";
-			}
-			break;
-		case "users":
-			$profileMenu = "active";
-			$viewProfile = "";
-			$coadmins = "";
-			$viewProgress = "";
-			switch($this->request->params['action'])
-			{
-				case "viewProfile":
-					$viewProfile = "active";
-					break;
-				case "viewProgress":
-					$viewProgress = "active";
-					break;
-				case "coadmins":
-					$coadmins = "active";
-				
-				default:
-					$viewProfile = "active";
-					break;
-			}
-			break;
-		case "projects":
-			$projectMenu = "active";
-			break;
-	 		break;
-		case "search":
-			$searchMenu = "active";
-			break;
-	}
-	?>
 
 <section class="nav">
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
@@ -139,7 +49,7 @@
            	<?php 
            	if($dashboardMenu!='')
            	{?>
-				<div class="<?php echo $overviewAction;?>">
+				<div class="<?php //echo $overviewAction;?>">
 					<li><a href="<?php echo SITE_HTTP_URL."dashboard"?>" alt="Overview" ><span>Overview</span> <i class="activity-icon"></i></a></li> 
 				
 				<!-- <li class="<?php echo $filesAction;?>"><a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" alt="My Files" class="files-icon">My Files</a></li>
