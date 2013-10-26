@@ -1,6 +1,7 @@
 <?php
 	$userFullName = $this->Session->read("firstname")." ".$this->Session->read("lastname");
 	$imagename = $this->Session->read('profilepic');
+	$userId = $this->Session->read('userid');
 	
 	if(is_file(USER_IMAGES_URL.'100X100/'.$imagename) && file_exists(USER_IMAGES_URL.'100X100/'.$imagename))
 	{
@@ -28,7 +29,7 @@
 
 
 <section class="nav">
-<a href="<?php echo SITE_HTTP_URL."users/viewProfile".$userFullName['id']; ?>" alt="Profile" >
+<a href="<?php echo SITE_HTTP_URL."users/viewProfile" . echo $userid; ?>" alt="Profile" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
 <div class="clr"></div>
