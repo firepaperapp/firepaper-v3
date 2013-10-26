@@ -29,7 +29,7 @@
 
 
 <section class="nav">
-<a href="<?php echo SITE_HTTP_URL."users/viewProfile".$userId['User']['id']; ?>" alt="Profile" >
+<a href="<?php echo SITE_HTTP_URL."users/viewProfile".$userId['id']; ?>" alt="Profile" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
 <div class="clr"></div>
