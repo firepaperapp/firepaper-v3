@@ -367,7 +367,7 @@ $(document).ready(function(){
 							</div>
 							<div class="clr-spacer"></div>
 							<div class="add-people">
-								 <p><strong>Note:</strong> Enter the keyword to search premium students</p>
+								 <p><strong>Note:</strong> Enter the students you want to add this project</p>
 								<select id="otherUsers" name="otherUsers"></select>
 							</div>
 							
