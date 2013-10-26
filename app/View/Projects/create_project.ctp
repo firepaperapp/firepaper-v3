@@ -361,10 +361,10 @@ $(document).ready(function(){
 		          <div class="add file-details-project">            	            	
 		            	 <div class="width100per">
 		            	 	
-							 <div class="add-people"> 
+							<!-- <div class="add-people"> 
 							 	 <p><strong>Note:</strong> Enter the keyword to search groups</p>
 								 <select id="usersGroups" name="usersGroups"></select>
-							</div>
+							</div>-->
 							<div class="clr-spacer"></div>
 							<div class="add-people">
 								 <p><strong>Note:</strong> Enter the students you want to add this project</p>
