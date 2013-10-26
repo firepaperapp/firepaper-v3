@@ -32,6 +32,7 @@
 <a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$userId; ?>" alt="Profile" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
+<a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$userId; ?>" alt="<?php echo $userFullName; ?>" class="user-fullname"><?php echo $userFullName; ?></a>
 <div class="clr"></div>
 <?php //if($this->Session->read("user_type")!=6) {?>
 <ul>
