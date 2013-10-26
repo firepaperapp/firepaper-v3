@@ -10,7 +10,7 @@
 	{
 		$userimage = IMAGES_PATH.'profile-pic.png';
 	}
-	
+	$uid = $this->Session->read("userid");
 	$usertype = $this->Session->read('user_type');
 	$cansignup= $this->Session->read('cansignup');
 	if (strlen($userFullName) > 45) {
@@ -29,7 +29,7 @@
 
 
 <section class="nav">
-<a href="<?php echo SITE_HTTP_URL."users/viewProfile".$userdata['User']['id']; ?>" alt="Profile" >
+<a href="<?php echo SITE_HTTP_URL."users/viewProfile".$uid['User']['id']; ?>" alt="Profile" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
 <div class="clr"></div>
