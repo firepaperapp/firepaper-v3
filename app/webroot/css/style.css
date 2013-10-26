@@ -494,6 +494,7 @@ select {
 .nav a.user-fullname {
 	color:#c9caca;
 	float: left;
+	margin:37px 0px 0px 20px;
 	font-size: 13px;
 }
 .nav h4 {
