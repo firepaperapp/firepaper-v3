@@ -491,6 +491,11 @@ select {
 	margin-left:0; 
 	background: #2a2e37;
 }
+.nav a.user-fullname {
+	color:#c9caca;
+	float: left;
+	font-size: 13px;
+}
 .nav h4 {
 	margin:20px 0px 0px 20px;
 	color: #686b6c;
