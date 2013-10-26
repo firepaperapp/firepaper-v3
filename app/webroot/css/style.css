@@ -469,6 +469,7 @@ select {
 .add-people {
 	width: 100%;
 	clear: both;
+	display: none;
 }
 .add-people p, .width100per p, .file-details-project p {
 	font-style: italic;
