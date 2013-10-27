@@ -78,12 +78,18 @@ class YeargroupsController  extends AppController{
 										'fields' =>array('leader')		
 			));
 
+			
+			if(find_ldr){
 			$ldr = $find_ldr['DepartmentTeacher']['leader'];
 			if($ldr==1){
 				$this->set("showbox",'Y');
 			}
 			else
 				$this->set("showbox",'N');
+			}
+			else
+				$this->set("showbox",'N');
+			
 		}
  		$this->set("group_id",$group_id);
 	}
