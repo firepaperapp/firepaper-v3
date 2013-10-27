@@ -15,11 +15,6 @@ $(document).ready(function()
 			type	: "POST"
 			}
 		});
-    $("#addStudent").fancybox({
-			ajax : {
-			type	: "POST"
-			}
-		});
 
 
 	//using random number to resolve cache issue
@@ -127,23 +122,16 @@ $(document).ready(function()
  		if($this->Session->read('user_type')!=4 &&  $this->Session->read('user_type')!=5) {?>
 	<!--	<a id="addstudent" style="display:none;" class="browse-btn" href="<?php echo SITE_HTTP_URL?>dashboard/addNewUser/student/0/<?php echo $group_id?>">
 		Add New Student</a>-->
-                <a id="addStudent" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/addUser/">
-		Add Student</a>
-
-
 		<a id="addStudentToGroup" style="display:none;" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/assignUserToGroup/<?php echo $group_id?>">
 		Add Another Student</a>
 	<?php } ?>
-	<?php /* if($show_yrgroup_link=='Y'){?>
+	<?php if($show_yrgroup_link=='Y'){?>
  	<a href="javascript:void(0)" onclick="$('#add-groups').slideToggle('slow');" class="submit">Create a Year or Class group</a> 
-	<?php }*/?>
+	<?php }?>
 	</div>
 	<div class="search-holder">
 	<!-- Search Form Start -->
-	<?php  //echo $this->element('common/search');
-			echo $this->element('common/search_invite');
-	
-	 ?>
+	<?php echo $this->element('common/search'); ?>
 	<!-- Search Form End -->
 	</div>
 
