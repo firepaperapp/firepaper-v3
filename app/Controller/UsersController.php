@@ -576,7 +576,7 @@ class UsersController extends AppController{
 		}
 		if(defined("HTTP_HOST"))
 		
-			$this->redirect('http://www.'.HTTP_HOST);	
+			$this->redirect('http://www.'.HTTP_HOST.'/login');	
 		else 
 			$this->redirect('/');	
 		 		
