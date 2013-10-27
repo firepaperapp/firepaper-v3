@@ -1171,7 +1171,8 @@ class ProjectsController  extends AppController{
  		$userId = $this->Session->read('userid'); 
 		//  filter the class grop by the admin id for admin and coadmin user
 		$filters= "";
-		$filters ="( User.user_type_id = 5 OR User.user_type_id = 4) AND User.status = 1";
+		$filters ="( User.user_type_id = 5 OR User.user_type_id = 4) ";
+	//		$filters ="( User.user_type_id = 5 OR User.user_type_id = 4) AND (User.status = 1 ) ";
  		$dataGot = $this->User->find('all', array(
 	 		 "conditions"=>$filters." AND ( User.firstname like '".add_Slashes($tag)."%' OR User.firstname like '".add_Slashes($tag)."%' )",
 	 		 "fields"=>"User.id, User.firstname, User.lastname"
