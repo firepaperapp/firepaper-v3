@@ -325,7 +325,7 @@ select {
 .space-warning {
 	background: #41444c;
 	width: 84%;
-	margin: 8%;
+	margin:20% 8% 0% 8%;
 	padding: 7%;
 	border-radius:3px;
 	-webkit-border-radius: 3px;
