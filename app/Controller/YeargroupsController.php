@@ -1271,9 +1271,8 @@ class YeargroupsController  extends AppController{
 		{
 		
 			$keyword=$this->request->data["User"]["keyword"];
-			$filters[] ="User.firstname like '%".$keyword."%'";
-			$filters[] ="User.lastname like '%".$keyword."%'";
-			$filters[] ="User.email like '%".$keyword."%'";
+			$filters["OR"] =array("User.firstname like '%".$keyword."%'","User.lastname like '%".$keyword."%'","User.email like '%".$keyword."%'");
+		
 		}
 		
 		
@@ -1286,7 +1285,7 @@ class YeargroupsController  extends AppController{
 								'type'=>'inner', 
 								"table"=>"users", 
 								"alias"=>"User",
-								"conditions"=>$filters					)
+								"conditions"=>$filters)
 				),
 			  "fields"=> "Invite.id, User.id,User.firstname, User.lastname, User.profilepic,User.status",
 			   "order"=>"User.firstname",
