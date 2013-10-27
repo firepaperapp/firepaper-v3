@@ -325,8 +325,8 @@ select {
 .space-warning {
 	background: #41444c;
 	width: 100%;
-	margin: 2%;
-	padding: 2%;
+	margin: 10%;
+	padding: 10%;
 	border-radius:3px;
 	-webkit-border-radius: 3px;
 	box-sizing: border-box;
@@ -345,6 +345,8 @@ select {
 	background: white;
 	padding: 4px 7px;
 	color: #bebebe;
+	clear: both;
+	display: block;
 	font-weight: normal;
 	border-radius:3px;
 	-webkit-border-radius: 3px;
