@@ -97,7 +97,7 @@
 	         <span class="title">Amount of space left:</span>
 	         <a href="https://gum.co/QXnr" class="upgrade-btn">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 	         <div class="clr"></div>
-	         <span>Order before you run out, process time can take up to 24 hours</span>
+	         <span class="text">Order before you run out, process time can take up to 24 hours</span>
 	         </div>
 	         
 	        
