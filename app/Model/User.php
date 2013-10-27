@@ -471,13 +471,8 @@
       
         if ($this->err == 0) {
             //we will check do user with same email already exist in the db.
-           // $result = $this->find("User.email = '".add_Slashes($postArray['email'])."'", "id, email, username, firstname, lastname");
-
-		$mail = add_Slashes($postArray['email']);
-		$sQuery = "SELECT * FROM users WHERE users.email = '$mail'";
-		$result = $this->Query($sQuery);
-
-  	 	if (count($result) > 0 && isset($result[0]['users']['id'])) {
+            $result = $this->find("User.email = '".add_Slashes($postArray['email'])."'", "id, email, username, firstname, lastname");
+            if (count($result) > 0 && isset($result['User']['id'])) {
                     $this->err = 0;
                     return $result;
                 
