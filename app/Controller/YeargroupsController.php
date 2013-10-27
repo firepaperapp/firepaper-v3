@@ -79,7 +79,7 @@ class YeargroupsController  extends AppController{
 			));
 
 			
-			if(find_ldr){
+			if($find_ldr){
 			$ldr = $find_ldr['DepartmentTeacher']['leader'];
 			if($ldr==1){
 				$this->set("showbox",'Y');
