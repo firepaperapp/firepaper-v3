@@ -322,7 +322,34 @@ select {
 .date .title-today, .date .title-tomorrow {
 	color: #fca55f;
 }
-
+.space-warning {
+	background: #41444c;
+	width: 100%;
+	margin: 2%;
+	padding: 2%;
+}
+.space-warning .title{
+	color: #a7abb1;
+	font-size: 13px;
+	font-weight: bold;
+}
+.space-warning .text {
+	color: #a7abb1;
+	font-size: 12px;
+	font-weight: normal;
+}
+.space-warning .upgrade-btn {
+	background: white;
+	padding: 4px 7px;
+	color: #bebebe;
+	font-weight: normal;
+	float: left;
+	border-radius:3px;
+	-webkit-border-radius: 3px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	
+}
 .panel { 
 	position:absolute;
 	top:67px;

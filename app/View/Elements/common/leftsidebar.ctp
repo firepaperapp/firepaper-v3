@@ -93,7 +93,11 @@
            		 //echo $this->requestAction("/files/getMyCategories");
 			?>
 </ul>
-	         <div class="space-warning"><a href="https://gum.co/QXnr">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script></div>
+	         <div class="space-warning">
+	         <span class="title">Amount of space left:</span>
+	         <a href="https://gum.co/QXnr" class="upgrade-btn">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+	         <span>Order before you run out, process time can take up to 24 hours</span>
+	         </div>
 	         
 	        
 	         <div class="user-functions">
