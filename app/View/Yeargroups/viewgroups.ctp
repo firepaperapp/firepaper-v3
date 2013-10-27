@@ -13,7 +13,9 @@ $(document).ready(function(){
 			}
 		});
 		
-   		loadPiece(siteUrl+"yeargroups/listYearGroupsAjax/"+$('#group_id').val()+"/?rand="+randomnumber,"#content_yeargroups");
+   		//loadPiece(siteUrl+"yeargroups/listYearGroupsAjax/"+$('#group_id').val()+"/?rand="+randomnumber,"#content_yeargroups");
+		
+		loadPiece(siteUrl+"yeargroups/listInviteStudentsAjax/","#content_yeargroups");
 
 			
 });
@@ -46,5 +48,4 @@ if(isset($errMsg))
 	</div>
 	<!-- Inner Content List end -->  
 	</div><!-- end rightcol -->
-	<input type="hidden" name="group_id" id="group_id" value="<?php echo $group_id;?>" />
-	<input type="hidden" name="calledAction" id="calledAction" value="listYearGroupsAjax/<?php echo $group_id;?>" />
+	
