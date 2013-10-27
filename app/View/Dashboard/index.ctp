@@ -100,7 +100,7 @@
  		?>	
 <?php //echo $this->requestAction("/users/currentComments");?>   
 <?php 
-if(!isset($usertype==1)
+if(!isset($usertype==1) {
 echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
 }
    </div><!-- end left --> 
