@@ -337,7 +337,7 @@ select {
 	font-weight: bold;
 }
 .space-warning .text {
-	color: #a7abb1;
+	color: #f1f1f1;
 	font-size: 12px;
 	font-weight: normal;
 }
@@ -347,7 +347,7 @@ select {
 	color: #bebebe;
 	clear: both;
 	font-size: 13px;
-	display: block;
+	display: inline-block;
 	font-weight: normal;
 	border-radius:3px;
 	-webkit-border-radius: 3px;
