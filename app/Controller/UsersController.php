@@ -52,6 +52,76 @@ class UsersController extends AppController{
 	 * @input NULL
 	 * @returns NULL
 	 */
+	 
+	 	public function verifyme($uniq_id,$email)
+	{	
+		$user_data=$this->User->find("all",array("conditions"=>array("email"=>$email,"unique_key"=>$uniq_id,"status"=>0)));
+		if($user_data){
+		$this->set("user_data",$user_data);
+		}
+		else
+		{
+			$this->redirect("/");
+			
+		}
+		
+		if(isset($this->request->data['User']) && count($this->request->data['User'])>0)
+		{
+			
+				$up=array();
+			foreach($this->request->data["User"] as $field=>$value)
+			{
+				$up[$field]=$value;
+			}
+			
+			$this->request->data["User"]["password"]=md5($this->request->data["User"]["password"]);
+			$this->request->data["User"]["id"]=$user_data[0]["User"]["id"];
+			$this->request->data["User"]["status"]="1";
+				$this->request->data["User"]['lastlogin'] = date("Y-m-d H:i:s");
+			$this->User->Save($this->request->data);
+			
+				
+ 			$isErr = $this->User->validateLoginForm($up);
+	 		if($isErr==0)						
+			{
+			
+ 					//we will set the session for login user
+					//User has successfully login
+					//we will call app_Controller function
+					$loginUser = $this->User->loginUser;
+				//	pr($loginUser);exit; 
+					// find all the coadmins for usertype = 1(admin)
+					
+ 					$this->loginSessionSet($loginUser);
+		 			/********* setting values in cookies**************/
+		 			
+				
+						if(defined('HTTP_HOST'))
+	                 	{
+		                 	if($loginUser['sitetitle']!='')
+		                 	{
+								$this->redirect("http://".$loginUser['sitetitle'].".".HTTP_HOST."/dashboard");
+		                 	}
+		                 	else 
+		                 	{		                 		
+		                 		$this->redirect("http://www.".HTTP_HOST."/"."dashboard");
+		                 	}
+	                 	}
+	                 	else
+						{
+							$this->redirect("/dashboard");
+						}
+				
+				}
+				else
+				{
+					$this->set('errMsg',$this->User->errMsg);
+				}
+			}
+		
+		
+		
+	}
 	
 	function step1($user_type="", $trialpack = 0)
 	{ 
@@ -454,11 +524,11 @@ class UsersController extends AppController{
 			{
 				//we will update the user for the new password and send this in email to the user
 				$password = time();
-				$this->User->id = $result[0]['users']['id'];
+				$this->User->id = $result['User']['id'];
 				$data['password'] = md5($password);
 				$this->User->Save($data);
-   				$sUserFullName = $result[0]['users']['firstname']." ".$result[0]['users']['lastname'];
- 		        $this->Email->to = $result[0]['users']['email'];				
+   				$sUserFullName = $result['User']['firstname']." ".$result['User']['lastname'];
+ 		        $this->Email->to = $result['User']['email'];				
 				$this->Email->fromName = ADMIN_NAME;
 			    $this->Email->from = EMAIL_FROM_ADDRESS;
 
@@ -467,7 +537,7 @@ class UsersController extends AppController{
 				As requested, your password at ".SITE_NAME." has been reset.<br/><br/>
 
 				Here are your new login details:<br/>
-				Username: ".$result[0]['users']['username']." <br/>
+				Username: ".$result['User']['username']." <br/>
 				Password: $password <br/><br/>
 
 				Please use the URL below to login to your account:<br/>
