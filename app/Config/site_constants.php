@@ -1,6 +1,7 @@
 <?php
 
-define("SITE_BASE_PATH", "/var/www/firepaperapp.com/dev/");
+//define("SITE_BASE_PATH", "/var/www/firepaperapp.com/dev/");
+define("SITE_BASE_PATH", "E:/wamp/www/fireappwc/");
 // define("SITE_HTTP_URL", "http://".$_SERVER['HTTP_HOST']."/php_oracle/branches/");
 
 //We have this setup for live site or manpreet copy only
@@ -15,8 +16,8 @@ define("SITE_BASE_PATH", "/var/www/firepaperapp.com/dev/");
 // }
 
 // for localhost only
-define("SITE_HTTP_URL", "http://".$_SERVER['HTTP_HOST']."/dev/");
-
+define("SITE_HTTP_URL", "http://localhost/fireappwc/");
+//define("SITE_HTTP_URL", "http://".$_SERVER['HTTP_HOST']."/dev/");
 define("IMAGES_PATH", SITE_HTTP_URL."app/webroot/images/");
 define("CSS_PATH", SITE_HTTP_URL."app/webroot/css/");
 define("JS_PATH", SITE_HTTP_URL."app/webroot/js/");
@@ -70,5 +71,10 @@ define("AMAZON_S3_KEY", "AKIAJA5PZZ4H3N3N2CAA");
 define("AMAZON_S3_SECURITY_KEY", "SnqMWKCEpnlw/P4RkAcRSYHZN/4ZnRZ75uWnx1oY");  // 2MB
 define("MAIN_BUCKET", "testcloudpollen");
 define("MULTIPLY_BY", "1073741824");
+
+define("INVITE_SUCCESS","All The Selected Users Invited Successfully");
+define("INVITE_UNSUCCESS","All The Selected Users Already Invited");
+define("INVITE_DEL_SUCCESS","Student Deleted Successfully From List");
+define("NO_RESULT","No Result Found");
 
 ?>
