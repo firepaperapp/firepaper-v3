@@ -93,7 +93,8 @@
            		 //echo $this->requestAction("/files/getMyCategories");
 			?>
 </ul>
-	         <div class="clr"></div>
+	         <div class="space-warning"><a href="https://gum.co/QXnr">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script></div>
+	         
 	        
 	         <div class="user-functions">
              <a href="<?php echo SITE_HTTP_URL?>users/settings/" class="settings">Settings</a>
