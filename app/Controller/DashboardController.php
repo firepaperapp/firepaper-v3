@@ -974,6 +974,7 @@ class DashboardController  extends AppController{
 		}
 		$this->render("add_new_user","ajax");
     }//function end
+	
 
 	// private function to send email after adding user
 	private function emailAfterAddUser($data)

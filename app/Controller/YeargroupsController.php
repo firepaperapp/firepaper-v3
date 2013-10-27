@@ -4,7 +4,8 @@ class YeargroupsController  extends AppController{
 
 	var $name = 'Yeargroups';
 
-	var $uses = array('classGroup','UserType','coadminGaurdian', 'classgroupStudent','User','DepartmentTeacher','State');
+
+	var $uses = array('classGroup','UserType','coadminGaurdian', 'classgroupStudent','User','DepartmentTeacher','State','Invite');
 
 	var $helpers = array('Html', 'Form', 'Time','Js','Flash');
 	var $layout = "default_front_inner";
@@ -38,9 +39,13 @@ class YeargroupsController  extends AppController{
     }
 	function beforeFilter()
 	{
+	
+		if(!strstr($_SERVER['REQUEST_URI'],"verifyme")){
 		if(!isUserLoggedIn($this->Session, "userid"))
 		{
 			$this->redirect("/");
+		}
+		
 		}
  		parent::beforeFilter();
 	}
@@ -59,7 +64,9 @@ class YeargroupsController  extends AppController{
  	 * Groups table with the parent_id = 0
  	 */
 	function viewgroups($group_id=0){ 
-		Controller::disableCache();
+	
+
+	Controller::disableCache();
 		$this->Session->delete('classGroupSearch');	
 	//	$loggedinusertype = $this->Session->read('user_type');
 	//	if($loggedinusertype==1){
@@ -1125,5 +1132,208 @@ class YeargroupsController  extends AppController{
 		echo json_encode($data); 	 
 		exit;
 	}
+	
+	
+		
+	//Start of new Added by sourab 26-10-2013
+	
+	function addUser()
+	{
+		$this->render("add_user","ajax");
+	}
+	
+	
+
+	// this function will add new user and also invite user . initiated by teacher
+		function addNewInvite()
+	{
+		$this->autoRender = false;
+	 	global $defaultTimeZone;
+		$timezones = $this->State->getTimeZones();
+		$this->set("timezones",$timezones);
+		$this->set("defaultTimeZone",$defaultTimeZone);
+		$i=0;
+		foreach($this->request->data["User_table"]["firstname"] as $field=>$value)
+		{
+		
+			$check=$this->User->find("all",array('conditions' => array("email"=>$this->request->data["User_table"]["email"][$i])));
+			$userdata=array();
+			if(!$check)
+			{
+				$this->request->data['User']["firstname"] = $this->request->data['User_table']['firstname'][$i];	
+				$this->request->data['User']["lastname"] =$this->request->data["User_table"]["lastname"][$i];
+				$this->request->data['User']["email"] =$this->request->data["User_table"]["email"][$i];
+				$this->request->data['User']['created_by']= $this->Session->read('userid');
+				$this->request->data['User']["status"]= 0;
+				$this->request->data['User']["user_type_id"]= 4;
+				$this->request->data['User']["unique_key"]=uniqid(md5(rand()), true);
+				$this->User->create();
+				$this->User->Save($this->request->data);
+				$lastuserid = $this->User->getLastInsertId(); 
+				
+				
+				$this->request->data['Invite']['teacher_id']= $this->Session->read('userid');
+				$this->request->data['Invite']["student_id"]= $lastuserid;
+				$this->request->data['Invite']["email"]=$this->request->data["User_table"]["email"][$i];
+				$this->Invite->create();
+				$this->Invite->Save($this->request->data);
+				
+				
+				$userdata['firstname']=$this->request->data['User_table']['firstname'][$i];
+				$userdata['lastname']=$this->request->data['User_table']['lastname'][$i];
+				$userdata['email']=$this->request->data['User_table']['email'][$i];
+				$userdata['user_type_id'] = 4	;		
+				$this->emailAfterAddInvite($userdata,$this->request->data['User']["unique_key"]);				
+				
+				
+				$i++;
+				
+			}
+			else
+			{
+			
+				$check2=$this->Invite->find("all",array('conditions' => array("email"=>$this->request->data["User_table"]["email"][$i])));
+				if(!$check2)
+				{
+		
+						$this->request->data['Invite']['teacher_id']= $this->Session->read('userid');
+						$this->request->data['Invite']["student_id"]= $check[0]["User"]["id"];
+						$this->request->data['Invite']["email"]=$this->request->data["User_table"]["email"][$i];
+						$this->Invite->create();
+						$this->Invite->Save($this->request->data);			
+						
+							$userdata['firstname']=$this->request->data['User_table']['firstname'][$i];
+							$userdata['lastname']=$this->request->data['User_table']['lastname'][$i];
+							$userdata['email']=$this->request->data['User_table']['email'][$i];
+							$userdata['user_type_id'] = 4	;		
+							$this->emailAfterAddInvite($userdata,$check[0]["User"]["unique_key"]);
+							$i++;	
+				}
+				
+			}
+			
+		}
+		
+		
+		$errmsg  = "";
+		
+		if($i>0)
+		{
+			echo "success#".INVITE_SUCCESS;
+		}
+		else
+		{
+			echo "error#".INVITE_UNSUCCESS;
+		}
+	
+    }//function end
+	
+	// private function to send email after adding user
+	private function emailAfterAddInvite($data,$unique)
+	{
+ 		$this->autoRender = false;
+		$sUserFullName = $data['firstname']." ".$data['lastname'];
+	  	//$this->Email->config('smtp');
+	    $this->Email->to =   $data['email'];				
+		$this->Email->fromName = ADMIN_NAME;
+	    $this->Email->from = EMAIL_FROM_ADDRESS;
+	  
+		$verified=SITE_HTTP_URL."/users/verifyme/".$unique."/". $data['email'];
+    $sMessage ="Dear ".$sUserFullName.","."<br/><br/>
+
+		Your account has been created for ".SITE_HTTP_URL." successfully by ".$this->Session->read('firstname')." ".$this->Session->read('lastname')."<br/><br/>
+		Please use the URL below to Verify Your your account:<br/>
+		<a href='".$verified."/'>".$verified."</a><br/><br/>
+
+		Thanks & Regards,<br/>
+		Website Support <br/>
+		".SITE_NAME." <br/>";
+		
+        $this->Email->text_body = $sMessage;
+        $this->Email->subject = SITE_NAME.' - Account Created';
+        $result = $this->Email->sendEmail();
+		
+		
+         	
+	}
+	
+	function listInviteStudentsAjax()
+	{
+	
+	
+
+		
+		$page = isset($this->request->params['named']['page'])?$this->request->params['named']['page']:"";
+		
+		$filters=array("User.id = Invite.student_id");
+		if(isset($this->request->data["User"]["keyword"]) && ($this->request->data["User"]["keyword"]<>"")&& ($this->request->data["User"]["keyword"]<>"Search"))
+		{
+		
+			$keyword=$this->request->data["User"]["keyword"];
+			$filters[] ="User.firstname like '%".$keyword."%'";
+			$filters[] ="User.lastname like '%".$keyword."%'";
+			$filters[] ="User.email like '%".$keyword."%'";
+		}
+		
+		
+		
+
+		$this->paginate = array('Invite'=>
+		array('conditions'=>" Invite.teacher_id=".$this->Session->read('userid'),
+				'joins'=>array(		
+							array(
+								'type'=>'inner', 
+								"table"=>"users", 
+								"alias"=>"User",
+								"conditions"=>$filters					)
+				),
+			  "fields"=> "Invite.id, User.id,User.firstname, User.lastname, User.profilepic,User.status",
+			   "order"=>"User.firstname",
+	   		    'group' => array('Invite.id'),
+			   "limit"=>6
+			)	
+		);
+
+
+
+		$data = $this->paginate('Invite'); 
+   		$totalPages = isset($this->request->params['paging']['Invite']['pageCount'])?$this->request->params['paging']['Invite']['pageCount']:"";
+ 		
+   	
+
+		
+		$i = 0;	
+   		foreach($data as $rec)	
+   		{ 
+			if(is_file(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'32X29/'.$rec['User']['profilepic']))
+			{ 
+				$data[$i]['User']['profilepic'] = USER_IMAGES_PATH.'32X29/'.$rec['User']['profilepic'];
+			}
+   			else 
+   			{ 
+   				$data[$i]['User']['profilepic'] = IMAGES_PATH.USER32X29;
+   			}
+   			$i++;
+   		}  
+	
+ 		$this->set('data', $data);
+ 		$this->set('page', $page);
+		$this->set('totalPages', $totalPages); 
+		
+		$this->render("list_invite_students_ajax","ajax");
+	}
+
+	function deleteStudentInvite($uid)
+	{
+		if(!empty($uid))
+		{			
+			$this->Invite->query("DELETE from invites where student_id=$uid AND teacher_id=  ".$this->Session->read('userid'));
+			//echo MSG_USER_DELETED_FROM_GROUP;
+			$this->Session->setFlash(INVITE_DEL_SUCCESS);		
+			die;
+		}
+	}
+	//End of  of new Added by sourab 26-10-2013
+	
 
 }
