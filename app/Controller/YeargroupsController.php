@@ -1199,7 +1199,7 @@ class YeargroupsController  extends AppController{
 			else
 			{
 			
-				$check2=$this->Invite->find("all",array('conditions' => array("email"=>$this->request->data["User_table"]["email"][$i])));
+				$check2=$this->Invite->find("all",array('conditions' => array("email"=>$this->request->data["User_table"]["email"][$i],"teacher_id"=>$this->Session->read('userid'))));
 				if(!$check2)
 				{
 		
