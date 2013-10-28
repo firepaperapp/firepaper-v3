@@ -1191,7 +1191,7 @@ class UsersController extends AppController{
 	/************************ Update timzone starts ****************************/
 	function updateTimezone()
 	{
-		$userdata['timezone'] = $this->request->params['form']['timezone'];
+		$userdata['timezone'] = $this->request->data['timezone'];
 		$this->User->id= $this->Session->read("userid");
 		$this->User->save($userdata);
 		echo MSG_TIMEZONE_UPDATED;
@@ -1247,7 +1247,7 @@ class UsersController extends AppController{
 	/************************ Update Country starts ****************************/
 	function updateCountry()
 	{
-		$userdata['country'] = $this->request->params['form']['country'];
+		$userdata['country'] = $this->request->data['country'];
 		$this->User->id= $this->Session->read("userid");
 		$this->User->save($userdata);
 		echo MSG_COUNTRY_UPDATED;
