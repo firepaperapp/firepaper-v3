@@ -1227,18 +1227,18 @@ class ProjectsController extends AppController {
                 $response['success'] = MSG_TASKDOC_UPLOADED;
                 $response['id'] = $this->projectStudentTaskDoc->getLastInsertId();
                 $gotAd = $this->getAdminsOfProject($project_id);
-                if (!isNull($this->request->data['projComments']['comment'])) {
+              //  if (!isNull($this->request->data['projComments']['comment'])) {
 
                     $Data['projComments']['posted_by'] = $this->Session->read("userid");
                     $Data['projComments']['project_id'] = $project_id;
                     $Data['projComments']['task_id'] = $task_id;
-                    $Data['projComments']['comment'] = $this->request->data['projComments']['comment'];
+                  //  $Data['projComments']['comment'] = $this->request->data['projComments']['comment'];
                     $Data['projComments']['received_by'] = $gotAd['leader_id'];
                     $Data['projComments']['admin_ids'] = "," . $gotAd['admin_id'] . ",";
                     $Data['projComments']['comment_type'] = "studentdoc";
                     $Data['projComments']['student_doc_id'] = $response['id'];
                     $this->projComments->Save($Data);
-                }
+               // }
                 $taskDetail = $this->projectTask->findById($task_id);
                 $pasedData = array();
                 $prjDetail = $this->Project->findById($project_id);
