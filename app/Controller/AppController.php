@@ -238,6 +238,22 @@ class AppController extends Controller {
 	}
 
 	function beforeRender() {
+		
+		
+		$id = $this->Session->read("userid");
+		if(isset($id)){
+			$userdata = $this->User->find('first', array("fields"=>"User.*,  UserType.title", "conditions"=>"User.id = ".$this->Session->read("userid"),
+			"joins"=>array(
+				array(
+				"type"=>"inner",
+				"table"=>"user_types",
+				"alias"=>"UserType",
+				"conditions"=>array("User.user_type_id = UserType.id")		
+			)))); 
+		$this->set('userdata',$userdata); 
+		}
+	
+	
  		$res= "";
 		$this->set('breadcrumbs',$this->breadcrumb);		
 		Controller::disableCache();
