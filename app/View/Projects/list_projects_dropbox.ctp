@@ -8,6 +8,7 @@
 <script>
 function studentUploadDocTick(taskId)
 {
+  
 	if($("#studSubmitTaskDocDrop_"+taskId+" :input").eq(0).is(":checked") == false)
 	{
 		alert("Please check that task is done.");
@@ -15,9 +16,12 @@ function studentUploadDocTick(taskId)
 	}
 	else
 	{
+             
 		var project_id = $("#droptask_"+taskId+"_box").parents(".prjList").attr('id').split("_");
-		$("#loaderJsTask_"+project_id[1]).empty().html(loader).show();
+		
+                 $("#loaderJsTask_"+project_id[1]).empty().html(loader).show();
 		var postedVal = $("#studSubmitTaskDocDrop_"+taskId).serialize();
+                alert("called"+postedVal);
 		$.post(siteUrl+"projects/studentSubmitDocToProject/"+taskId+"/?p="+project_id[1],postedVal,function(data){		
 			
 			$("#loaderJsTask_"+project_id[1]).empty().hide();			            	
