@@ -95,6 +95,27 @@
 </ul>
 	         <div class="space-warning">
 	         <span class="title">Amount of space left:</span>
+	         <?php
+			if($userdata['Package']['unlimited'] == 0)
+			{?>
+			<em>Amount of space used:</em>
+            <div class="indicator-holder">
+              <div class="indicator-bg">
+				<?php
+				$used = 0;
+				if(!isNull($userdata['User']['totalspace']))
+				{
+					if($userdata['User']['usedspace']>0)
+					{
+						$used = round(($userdata['User']['usedspace']/$userdata['User']['totalspace'])*100,2);
+					}
+				}?>
+                <div class="indicator-bar" style="width:<?php echo $used;?>%">&nbsp;<?php echo $used;?>%</div>
+              </div><!-- end indicator-bg -->
+            </div><!-- end indicator-holder -->
+		<?php
+			} 
+			?>
 	         <a href="https://gum.co/QXnr" class="upgrade-btn">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 	         <div class="clr"></div>
 	         <span class="text">Order before you run out, process time can take up to 24 hours</span>
