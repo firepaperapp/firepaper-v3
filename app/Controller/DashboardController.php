@@ -96,6 +96,20 @@ class DashboardController  extends AppController{
 		"fields"=>"Department.id, Department.title"
 		)); 
 		$this->set("deptList", $deptList);
+
+		/////////////
+		$userdata = $this->User->find('first', array("fields"=>"User.*,  UserType.title", "conditions"=>"User.id = ".$this->Session->read("userid"),
+		"joins"=>array(
+			array(
+			"type"=>"inner",
+			"table"=>"user_types",
+			"alias"=>"UserType",
+			"conditions"=>array("User.user_type_id = UserType.id")			
+			)
+		)
+		)); 
+		$this->set('userdata',$userdata);
+		//////////////
 	}
 
 	function adminLatestActivity($userId="")
