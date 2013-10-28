@@ -1370,7 +1370,7 @@ class UsersController extends AppController{
 		{
 			$this->redirect("/");
 		}
-		$userdata = $this->User->find('first',array(
+	/*	$userdata = $this->User->find('first',array(
 		"fields"=>"User.*, Package.*, UserType.title",
 		"conditions"=>"User.id = ".$this->Session->read("userid"),
 		"joins"=>array(
@@ -1380,6 +1380,19 @@ class UsersController extends AppController{
 			"alias"=>"Package",
 			"conditions"=>array("User.package_id = Package.id")			
 			),
+			array(
+			"type"=>"inner",
+			"table"=>"user_types",
+			"alias"=>"UserType",
+			"conditions"=>array("User.user_type_id = UserType.id")			
+			)
+		)
+		)); */
+                $userdata = $this->User->find('first',array(
+		"fields"=>"User.*,  UserType.title",
+		"conditions"=>"User.id = ".$this->Session->read("userid"),
+		"joins"=>array(
+			
 			array(
 			"type"=>"inner",
 			"table"=>"user_types",
