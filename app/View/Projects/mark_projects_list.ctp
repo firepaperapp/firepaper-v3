@@ -3,7 +3,7 @@ $(document).ready(function()
 {
 	var randomnumber=Math.floor(Math.random()*101);//using random number to resolve cache issue
 	loadPiece(siteUrl+"projects/projectsMarking/1"+"/?rand="+randomnumber,"#prjt_marked");
-	loadPiece(siteUrl+"projects/projectsMarking/0"+"/?rand="+randomnumber,"#prjt_unmarked");
+	//loadPiece(siteUrl+"projects/projectsMarking/0"+"/?rand="+randomnumber,"#prjt_unmarked");
 
 });
 </script>
