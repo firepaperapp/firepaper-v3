@@ -49,7 +49,7 @@ if(count($taskDocs)>0)
 				<textarea name="addcommenttext_<?php echo $rec['prjTaskUserDoc']['id'];?>" id="addcommenttext_<?php echo $rec['prjTaskUserDoc']['id'];?>" class="text-field-comment"></textarea>
 			          	
 	          	<div class="submit-wrapper">
-		          	<input type="button" name="submit" value="Submit" onclick="addComment(<?php echo $rec['prjTaskUserDoc']['id'];?>, <?php echo $task_id;?>);" class="submit"/>&nbsp;or&nbsp;
+		          	<input type="button" name="submit" value="Submit" onclick="addCommentTask(<?php echo $rec['prjTaskUserDoc']['id'];?>, <?php echo $task_id;?>);" class="submit"/>&nbsp;or&nbsp;
 		          	<a href="javascript:void(0);" class="edit" title="cancel" onclick="$('#addcomment_<?php echo $rec['prjTaskUserDoc']['id'];?>_box').slideUp('slow');">cancel</a>
 		         </div>
 	        </div>    
