@@ -1,3 +1,6 @@
+<input type="hidden" id="uniquename" value="<?php echo $userdata['User']['username']?>">
+<input type="hidden" id="sitetitle" value="<?php echo $userdata['User']['sitetitle']?>">
+<input type="hidden" id="emailval" value="<?php echo $userdata['User']['email']?>">
 <?php
 	$userFullName = $this->Session->read("firstname")." ".$this->Session->read("lastname");
 	$imagename = $this->Session->read('profilepic');
