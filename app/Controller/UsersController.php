@@ -572,7 +572,7 @@ class UsersController extends AppController{
 			$this->User->Save($data);
 			//Destroy the session
     		$this->Session->destroy();
-    		$this->redirect($this->Auth->logout());
+    		$this->redirect("/login");
 		}
 		if(defined("HTTP_HOST"))
 		
