@@ -125,12 +125,12 @@ else
 				</form>
 				<div style="display:none">
 				<br /> 
-                <h3>Company URL on firepaperapp:</h3>
+                <!--<h3>Company URL on firepaperapp:</h3>
 
 					<input id="companyurl" name="companyurl" type="text" value="<?php echo $userdata['User']['sitetitle']?>"/>
 					<em>.firepaperapp.com</em>
 
-					<a id="edit_companyurl_link" class="edit">Save</a>	
+					<a id="edit_companyurl_link" class="edit">Save</a>	-->
 				</div>			
 				</p>
 			
@@ -168,7 +168,7 @@ else
 	<tr>
 	 	<th class="c" align="center"><strong>Institute</strong></th>
 		<th class="c" align="center"><strong>Educator</strong></th>
-		<th class="c" align="center"><strong>Strudent</strong></th>			
+		<th class="c" align="center"><strong>Student</strong></th>			
 	</tr>
 	<tr class="plan_item">
 	 <?php
