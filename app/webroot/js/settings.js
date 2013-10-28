@@ -553,8 +553,23 @@ $('#editpwdlink').click(function(){
 $("#savetimezone").click(function(){
 
 $('#emailboxloader').empty().html(loader).show();
+ $.ajax({
+                url: siteUrl+'users/updateTimezone/',
+                type: 'POST',
+                data: {'timezone':$("#DropDownTimezone").val()},
+                 success: function(response) {
+                 
+                   $('#emailboxloader').empty().hide();
 
-$.post(siteUrl +'users/updateTimezone/',{'timezone':$("#DropDownTimezone").val()}, function(data){
+		$('#successcontainer').show();
+
+		$('#successcontainer').empty().html(response);
+                },
+                error: function(response){
+                    alert(response);
+                }
+            });
+/*$.post(siteUrl +'users/updateTimezone/',{'timezone':$("#DropDownTimezone").val()}, function(data){
 
 		$('#emailboxloader').empty().hide();
 
@@ -566,7 +581,7 @@ $.post(siteUrl +'users/updateTimezone/',{'timezone':$("#DropDownTimezone").val()
 
 	})
 
-
+*/
 
 }); //timezone ends
 
@@ -577,8 +592,23 @@ $.post(siteUrl +'users/updateTimezone/',{'timezone':$("#DropDownTimezone").val()
 $("#editcountrylink").click(function(){
 
 $('#emailboxloader').empty().html(loader).show();
+$.ajax({
+                url: siteUrl+'users/updateCountry/',
+                type: 'POST',
+                data: {'country':$("#DropDownCountry").val()},
+                 success: function(response) {
+                 
+                   $('#emailboxloader').empty().hide();
 
-$.post(siteUrl +'users/updateCountry/',{'country':$("#DropDownCountry").val()}, function(data){
+		$('#successcontainer').show();
+
+		$('#successcontainer').empty().html(response);
+                },
+                error: function(response){
+                    alert(response);
+                }
+            });
+/*$.post(siteUrl +'users/updateCountry/',{'country':$("#DropDownCountry").val()}, function(data){
 
 		$('#emailboxloader').empty().hide();
 
@@ -588,7 +618,7 @@ $.post(siteUrl +'users/updateCountry/',{'country':$("#DropDownCountry").val()}, 
 
 		$("div#validation-container").hide();
 
-	})
+	})*/
 
 
 
