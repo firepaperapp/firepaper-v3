@@ -1539,8 +1539,8 @@ class ProjectsController extends AppController {
               We will get list of the file type icon, as we cant join table in bindModels
              */
             $projComments = array();
-          
-            //  $fileTypes = $this->projectTask->getFileTypes();
+         
+             // $fileTypes = $this->projectTask->getFileTypes();
          
             /* $fileTypesO = array();
               foreach ($fileTypes as $rec) {
@@ -2003,7 +2003,7 @@ class ProjectsController extends AppController {
         if ($this->request->query['task_id'] != '') {
             $docs = $this->projectTaskExtraDoc->find('all', array(
                 "conditions" => "projectTaskExtraDoc.task_id = " . $this->request->query['task_id'],
-                "fields" => "projectTaskExtraDoc.id, userFile.id, userFile.name, userFile.file_name, fileType.icon",
+                "fields" => "projectTaskExtraDoc.id, userFile.*, fileType.icon",
                 "joins" => array(
                     array("type" => "inner",
                         "table" => "files",
@@ -2035,6 +2035,7 @@ class ProjectsController extends AppController {
             $pasedData['activityLog']['user_ids'] = "," . $prjDetail['Project']['leader_id'] . "," . $prjDetail['Project']['admin_id'] . ",";
 
             $pasedData['activityLog']['activity_task'] = "completeProject";
+            $pasedData['Task']['title']= '';
             //then this activity will be sent to all the students who belongs to that project 
             //Find the students who are in the group 				
             $this->createActivityLog($pasedData);
