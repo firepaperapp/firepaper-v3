@@ -2026,7 +2026,7 @@ class ProjectsController extends AppController {
     function completeProject($project_id) {
         $pasedData = array();
         $prjDetail = $this->Project->findById($project_id);
-        ;
+       
         if (isset($prjDetail['Project']['title'])) {
             $pasedData['Project']['title'] = $prjDetail['Project']['title'];
             $pasedData['Project']['id'] = $prjDetail['Project']['id'];
