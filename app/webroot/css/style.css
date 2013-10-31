@@ -3267,26 +3267,6 @@ p.form-title {
 /* end Overall project indicator */
 
 
-.indicator-wrapper .indicator .leftcol .indicator-holder {
-    border: 1px solid #333;
-    width: 154px;
-    height: 20px;
-}
-
-.indicator-wrapper .indicator .leftcol .indicator-holder .indicator-bg {
-    background: #F3F3F3;
-    border: 1px solid #fff;
-    width: 148px;
-    height: 18px;
-}
-
-.indicator-wrapper .indicator .leftcol .indicator-holder .indicator-bg .indicator-bar {
-    background: #F20006;
-    height: 16px;
-    color: #FFF;
-    font-weight: 700;
-    padding: 2px 0 0 4px;
-}
 
 
 
