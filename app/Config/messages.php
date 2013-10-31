@@ -298,4 +298,5 @@ define("MSG_CAT_CREATED", "Category has been created successfully.");
 
 define("MSG_CAT_UPDATED", "Category has been updated successfully.");
 define("MSG_COMPLETED_PROJECT", "Notification has been sent to the project owner for the project completion.");
+define("MSG_COMPLETE_PROJECT", "Project has successfully been submitted.");
 ?>
