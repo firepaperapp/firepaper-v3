@@ -114,7 +114,7 @@
 						$used = round(($userdata['User']['usedspace']/$userdata['User']['totalspace'])*100,2);
 					}
 				}?>
-                <div class="indicator-bar" style="width:<?php echo $used;?>%">&nbsp;<?php echo $used;?>%</div>
+                <div class="indicator-bar" style="width:<?php echo $used;?>%"><?php //echo $used;?></div>
               </div><!-- end indicator-bg -->
             </div><!-- end indicator-holder -->
 		<?php
