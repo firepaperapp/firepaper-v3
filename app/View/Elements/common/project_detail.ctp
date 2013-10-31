@@ -23,9 +23,17 @@
 			
 			
 			<?php
+                        $percentage_completed = 0;
+                        if(count($tasks) > 0 )
+                        {
+                            foreach($tasks as $list)
+                            {
+                              $percentage_completed += $list['prjTask']['weight'];
+                            }
+                         }
 			if($isOwner == 0 && isset($howMuchCompleted))
 			{?>
-				<div class="completed-bubble"><span><?php echo $tasks[0]['prjTask']['weight'];// $howMuchCompleted;?>%</span> Completed</div>
+				<div class="completed-bubble"><span><?php echo $percentage_completed; // $howMuchCompleted;?>%</span> Completed</div>
 			<?php }?>
 			<?php
 if(is_file(USER_IMAGES_URL.'100X100/'.$prjDetails['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$prjDetails['User']['profilepic']))
