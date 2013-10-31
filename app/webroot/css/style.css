@@ -3242,22 +3242,22 @@ p.form-title {
 }
 
 .indicator-holder {
-    border: 1px solid #7CC2C2;
-    width: 154px;
     height: 20px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 .indicator-holder .indicator-bg {
-    background: #F3F3F3;
-    border: 1px solid #fff;
-    width: 148px;
+    background: #1a1d23;
     height: 18px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 .indicator-holder .indicator-bg .indicator-bar {
     width: 0;
     height: 16px;
-    background: #7CC2C2;
+    background: #eb713c;
     color: #FFF;
     font-weight: 700;
     padding: 2px 0 0 4px;
