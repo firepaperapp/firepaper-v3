@@ -94,7 +94,7 @@
 			?>
 </ul>
 	         <div class="space-warning">
-	         <span class="title">Amount of space left: <?php echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
+	         <span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
 	         <?php
 			
 			//print_r($userdata); exit;
@@ -102,7 +102,7 @@
 			//if($userdata['Package']['unlimited'] == 0)
 			if(1)
 			{?>
-			<em>Amount of space used:</em>
+			
             <div class="indicator-holder">
               <div class="indicator-bg">
 				<?php
