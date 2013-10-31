@@ -2039,9 +2039,13 @@ class ProjectsController extends AppController {
             //then this activity will be sent to all the students who belongs to that project 
             //Find the students who are in the group 				
             $this->createActivityLog($pasedData);
-            $this->Session->setFlash(MSG_COMPLETED_PROJECT);
+       
+         
         }
-        $this->redirect("/projects");
+        $this->Session->setFlash(MSG_COMPLETE_PROJECT);
+      
+        $this->redirect("/projects/viewDetails/".$project_id);
+      
     }
 
 }
