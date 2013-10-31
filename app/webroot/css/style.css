@@ -3242,7 +3242,8 @@ p.form-title {
 }
 
 .indicator-holder {
-	margin-top: 20px;
+	margin-top: 15px;
+	margin-bottom: 10px;
     height: 10px;
     border-radius:10px;
     -webkit-border-radius:10px;
