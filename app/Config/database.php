@@ -60,7 +60,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'shamone',
-		'password' => 'fiosof734%&&rell',
+		'password' => 'L44PNtZveR6RcqaG',
 		'database' => 'firepaperdev',
 		'prefix' => '',
 		//'encoding' => 'utf8',
