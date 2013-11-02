@@ -1989,6 +1989,9 @@ ul.list-activity li span {
 .project-drop-area-wrapper .task-title { 
 	position: static !important;
 } 
+.project-drop-area-wrapper .task-title .task-title {
+	margin-left: 0px;
+}
 .project-drop-area { 
 	position: relative;
 	padding:20px 25px 35px 25px; 
@@ -3987,6 +3990,10 @@ form.editinplaceform {
 .editTaskWeight form input {
 	width: 52px !important;
 	margin-right: 10px;
+	color: #a9abae !important;
+    font-size: 30px !important;
+	font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-weight: bold !important;
 }
 .add {
     display: block !important;
@@ -4703,9 +4710,7 @@ p.marginT10:after {
     color: red;
 }
 
-.success {
-    color: green;
-}
+
 
 @media screen and (max-width: 1150px) {
 	.file-col-2-wrapper {
@@ -5312,9 +5317,6 @@ ul.list-activity li span {
 	background: url("../images/comment-arrow.png") no-repeat left 20px;
 	padding-left: 46px;
 }
-.project-drop-area-wrapper .task-title { 
-	position: static !important;
-} 
 .project-drop-area { 
 	position: relative;
 	padding:20px 25px 35px 25px; 
@@ -6858,12 +6860,7 @@ p.field-title {
 	background: #dadada;
 	position: absolute;
 }
-.task-title {
-    color: #595959;
-    font-size: 18px;
-    margin-left: 43px;
-    font-weight: 700;
-}
+
 
 .project-brief-box .dropdown {
     margin-bottom: 10px;
@@ -7180,46 +7177,6 @@ ul#archived-list .month {
     padding: 10px;
 }
 
-.comment-box .btn {
-    float: left !important;
-    background: #9BD1D1;
-    margin-left: 22px;
-}
-
-.tab-top .comment-box p {
-    color: #000;
-}
-
-.weight-col {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    float: right;
-    color: #a9abae;
-    font-size: 30px;
-    padding: 0px;
-    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    font-weight: bold;
-}
-.weight-col .add-weight {
-	color: #fca55f; 
-	float: left;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 35px;
-}
-#createTaskForm .project-drop-area-wrapper .weight-col {
-	margin-top: 27px;
-}
-form.editinplaceform {
-	border:1px solid red;
-}
-.editTaskWeight {
-	color: #a9abae !important;
-    font-size: 30px !important;
-	font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    font-weight: bold !important;
-}
 .editTaskWeight form {
 	width: 150px;
 }
@@ -7326,31 +7283,6 @@ form.editinplaceform {
 	padding:10px; 
 	clear:both; 
 	margin-bottom:10px; 
-}
-
-.weight-col a.editLink {
-	text-align: left;
-	font-size: 13px;
-}
-.weight-col span {
-	display: inline-block;
-	color: #fca55f;
-	font-size: 15px;
-	margin-top: 0px;
-}
-.weight-col .weight { 
-	color:white; 
-	background:#7CC2C2; 
-	font-size:11px; 
-	-webkit-border-radius:3px; 
-	-moz-border-radius:3px; 
-	padding:4px 6px 4px 6px; 
-	font-weight:normal; 
-}
-/* Tabbed Box */
-
-#addcomment_180, #viewTskComments_180 { 
-	color:#e06161; 
 }
 
 .side-container { 
