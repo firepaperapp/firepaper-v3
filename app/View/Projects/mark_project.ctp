@@ -175,7 +175,7 @@ foreach ($tasks as $rec) {
             <div class="project-brief-box-wrapper">
                 <div class="project-drop-area-wrapper">
                     <div class="weight-col">	
-                        <span>Weight: <?php echo $rec['projectTask']['weight']; ?>% &rarr;
+                        <span>Weight: <?php echo $rec['projectTask']['weight']; ?>% &rarr; &nbsp;
                         <input type="hidden" id="task_<?php echo $rec['projectTask']['id']; ?>_ttlweight" name="task_<?php echo $rec['projectTask']['id']; ?>_ttlweight" value="<?php echo $rec['projectTask']['weight']; ?>" />
     <?php
     if (isset($rec['projectStudentTaskDoc']) && count($rec['projectStudentTaskDoc']) > 0) {
