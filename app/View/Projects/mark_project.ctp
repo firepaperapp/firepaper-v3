@@ -175,12 +175,12 @@ foreach ($tasks as $rec) {
             <div class="project-brief-box-wrapper">
                 <div class="project-drop-area-wrapper">
                     <div class="weight-col">	
-                        <span>Weight: <?php echo $rec['projectTask']['weight']; ?>% &nbsp;
+                        <span>Weight: <?php echo $rec['projectTask']['weight']; ?>% &rarr;
                         <input type="hidden" id="task_<?php echo $rec['projectTask']['id']; ?>_ttlweight" name="task_<?php echo $rec['projectTask']['id']; ?>_ttlweight" value="<?php echo $rec['projectTask']['weight']; ?>" />
     <?php
     if (isset($rec['projectStudentTaskDoc']) && count($rec['projectStudentTaskDoc']) > 0) {
         ?>
-                            &rarr;Add weight &rarr;<input class="weight-input taskProjectWeight" name="taskWeight[<?php echo $rec['projectTask']['id']; ?>]" id="task_<?php echo $rec['projectTask']['id']; ?>_weight" value="<?php echo isset($rec['projectStudentTaskMark']['marks']) ? $rec['projectStudentTaskMark']['marks'] : ""; ?>"/>			
+          Add weight &rarr;<input class="weight-input taskProjectWeight" name="taskWeight[<?php echo $rec['projectTask']['id']; ?>]" id="task_<?php echo $rec['projectTask']['id']; ?>_weight" value="<?php echo isset($rec['projectStudentTaskMark']['marks']) ? $rec['projectStudentTaskMark']['marks'] : ""; ?>"/>			
                         <?php } ?>
                     </span></div>
                     <p>
@@ -211,7 +211,7 @@ foreach ($tasks as $rec) {
     <?php
     if (isset($rec['projectStudentTaskDoc']) && count($rec['projectStudentTaskDoc']) > 0) {
         ?>
-                                    <p class="field-title">Added documents</p>	
+                                    <p class="field-title">Added:</p>	
                                     <?php
                                     /* if($rec['projectTask']['refer_file_id']==0 && count($rec['projectStudentTaskDoc'])>0)
                                       {	$totalSubmission = 1;
