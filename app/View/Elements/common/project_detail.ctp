@@ -23,12 +23,15 @@
 			
 			
 			<?php
+			
+			
+			
                         $percentage_completed = 0;
                         if(count($tasks) > 0 )
                         {
                             foreach($tasks as $list)
                             {
-                              $percentage_completed += $list['prjTask']['weight'];
+                              $percentage_completed += $list['projectTask']['weight'];
                             }
                          }
 			if($isOwner == 0 && isset($howMuchCompleted))
