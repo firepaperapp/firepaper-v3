@@ -1539,13 +1539,14 @@ class ProjectsController extends AppController {
               We will get list of the file type icon, as we cant join table in bindModels
              */
             $projComments = array();
+         $this->loadModel('fileType');
+           $fileTypes = $this->fileType->find("all");
          
-             // $fileTypes = $this->projectTask->getFileTypes();
-         
-            /* $fileTypesO = array();
+        $fileTypesO = array();
               foreach ($fileTypes as $rec) {
+			
               $fileTypesO[$rec['fileType']['id']] = $rec['fileType']['icon'];
-              } */
+           }    /*  /**/
             //Get documents submitted by the user in the project
             $hasMany = array(
                 'projectStudentTaskDoc' => array(
@@ -1596,7 +1597,8 @@ class ProjectsController extends AppController {
             $this->set("userDetail", $userDetail);
             $this->set("classSt", $classSt);
             $this->set("projComments", $projComments);
-         //   $this->set("fileTypes", $fileTypesO);
+		//	pr($fileTypesO);
+            $this->set("fileTypes", $fileTypesO);
             $this->set("isOwner", $isOwner);
             $this->set("gotUserId", $user_id);
             $this->set("project_id", $project_id);
