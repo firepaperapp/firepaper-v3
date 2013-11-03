@@ -1,4 +1,4 @@
-
+	<div class="index">
 	 	<div class="left" id="getLatestProjects">
 	 		<?php
 			if($this->Session->check('Message.flash'))
@@ -17,3 +17,4 @@
 	   <div class="right">
 	     		<?php echo $this->requestAction("/projects/archived");?>     
 	 	</div><!-- end right -->
+	</div>
