@@ -15,7 +15,7 @@ $(document).ready(function()
 			<div class="essage errorServer">
 				<div class="success">
 					<?php
-						$this->Session->flash(); // this line displays our flash messages
+					echo	$this->Session->flash(); // this line displays our flash messages
 					?>
 				</div>
 			</div>
