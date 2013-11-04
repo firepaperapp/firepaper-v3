@@ -1536,7 +1536,9 @@ ul.list-activity li span {
     background: #000;
     font-weight: 400;
     font-size: 18px;
-    padding: 6px 8px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 .deadline-details {
