@@ -1878,30 +1878,30 @@ class ProjectsController extends AppController {
         $filters = "";
         if ($this->Session->read('user_type') == 1 || $this->Session->read('user_type') == 7 || $this->Session->read('user_type') == 3) {
             $admin_id = $this->getAdminId();
-            $filters = "Project.admin_id= " . $admin_id;
+            $filters = "Project2.admin_id= " . $admin_id;
         } else if ($this->Session->read('user_type') == 2) {
-            $filters = "Project.leader_id=" . $this->Session->read('userid');
+            $filters = "Project2.leader_id=" . $this->Session->read('userid');
         } else {
             $filters.=" 1=1 ";
         }
-        $filters.=" AND Project.published =1 AND marked = " . $marked;
+        $filters.=" AND Project2.published =1 AND marked = " . $marked;
         $this->projectStudent->unbindModel(array("belongsTo" => array("Project")));
         $this->paginate = array('projectStudent' => array(
-                "fields" => "projectStudent.submitted_date, projectStudent.marked, Project.title, Project.id, Subject.title, User.id, User.firstname, User.lastname",
+                "fields" => "projectStudent.submitted_date, projectStudent.marked, Project2.title, Project2.id, Subject.title, User.id, User.firstname, User.lastname",
                 "conditions" => $filters,
                 "limit" => 5,
                 "joins" => array(
                     array(
                         "type" => "inner",
                         "table" => "projects",
-                        "alias" => "Project",
-                        "conditions" => "Project.id = projectStudent.project_id"
+                        "alias" => "Project2",
+                        "conditions" => "Project2.id = projectStudent.project_id"
                     ),
                     array(
                         "type" => "inner",
                         "table" => "subjects",
                         "alias" => "Subject",
-                        "conditions" => "Subject.id = Project.subject_id"
+                        "conditions" => "Subject.id = Project2.subject_id"
                     ),
                     array(
                         "type" => "inner",
@@ -1917,6 +1917,8 @@ class ProjectsController extends AppController {
         $page = isset($this->request->params['named']['page']) ? $this->request->params['named']['page'] : "";
         $totalPages = isset($this->request->params['paging']['projectStudent']['pageCount']) ? $this->request->params['paging']['projectStudent']['pageCount'] : "";
         $order = isset($this->request->params['paging']['projectStudent']['options']['order']) ? $this->request->params['paging']['projectStudent']['options']['order'] : "";
+		
+		
         $this->set('page', $page);
         $this->set('order', $order);
         $this->set('totalPages', $totalPages);
