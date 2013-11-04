@@ -3628,10 +3628,11 @@ form.editinplaceform {
 .weight-col .weight { 
 	color:white; 
 	background:#7CC2C2; 
-	font-size:11px; 
+	font-size:23px; 
+	margin-left: 10px;
 	-webkit-border-radius:3px; 
 	-moz-border-radius:3px; 
-	padding:4px 6px 4px 6px; 
+	padding:4px 9px 4px 9px; 
 	font-weight:normal; 
 }
 /* Tabbed Box */
