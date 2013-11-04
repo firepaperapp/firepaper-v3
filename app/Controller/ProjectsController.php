@@ -323,6 +323,8 @@ class ProjectsController extends AppController {
                     "conditions" => array("User.id = projComments.posted_by")),
             ),
         ));
+		
+		
         $this->set("taskOtherComments", $taskOtherComments);
         $this->set("task_id", $task_id);
         $this->set("canChnage", isset($this->request->query['s']) && $this->request->query['s'] == "c" ? 0 : 1);
@@ -1491,6 +1493,12 @@ class ProjectsController extends AppController {
 				$this->projectStudent->updateAll(
 							$update, array("user_id" => $user_id, "project_id" => $project_id)
 					);
+				
+				$data=array();
+				$data["id"]=$project_id;
+				$data["is_completed"]="0";
+				$this->Project->save($data);
+		
 				$this->Session->setFlash(PROJECT_REOPEN);
 				$this->redirect("/projects/markProject/".$project_id."/".$user_id);
 		}
@@ -2063,6 +2071,12 @@ class ProjectsController extends AppController {
         $prjDetail = $this->Project->findById($project_id);
        
         if (isset($prjDetail['Project']['title'])) {
+		
+		$data=array();
+		$data["id"]=$project_id;
+		$data["is_completed"]="1";
+		$this->Project->save($data);
+		
             $pasedData['Project']['title'] = $prjDetail['Project']['title'];
             $pasedData['Project']['id'] = $prjDetail['Project']['id'];
             $pasedData['User']['name'] = ucfirst($this->Session->read("firstname") . " " . $this->Session->read("lastname"));
