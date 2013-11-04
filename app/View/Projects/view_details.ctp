@@ -174,12 +174,24 @@
 	   	  	if($noOfTasks == $taksDone)
 	   	  	{?>
 		   	  <div style="float:left; margin-left:25px;">
-		   	  	<a href="<?php echo SITE_HTTP_URL?>projects/completeProject/<?php echo $project_id;?>" class="submit" onclick="completeProject();">Complete Project</a>
+		   	  	
+				<?php
+					if($data["Project"]["is_completed"]=="0"){
+				?>
+				<a href="<?php echo SITE_HTTP_URL?>projects/completeProject/<?php echo $project_id;?>" class="submit" onclick="completeProject();">Complete Project</a>
+				<?php 
+					}
+					else
+					{
+						echo "<div class='success' style='width:200px'><span class='message'>".PR_MAR_SUCCESS."</span></div>";
+					}	
+				?>
 		   	  </div><div class="clr"></div>
 	   		<?php
 	   	  	}
 		}?> 
 	    <?php
+		
 	    
 $box = "task-comment";
 	if(count($projComments)>0)
