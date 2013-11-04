@@ -3474,7 +3474,7 @@ ul#archived-list .month {
 }
 
 .weight-col {
-    position: absolute;
+    /*position: absolute;*/
     top: 0px;
     right: 0;
     float: right;
