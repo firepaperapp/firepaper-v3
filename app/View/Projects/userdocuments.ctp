@@ -87,7 +87,12 @@ if($canChnage == 1 )//&& (false !==  strpos($url , 'projects/viewDetails/')))
  	</p>
  	
 </div>
-<div id="<?php echo $task_id;?>_withoutdocbox" style="display:none;"></div>
+<div id="<?php echo $task_id;?>_withoutdocbox" style="display:none;">
+
+		
+
+</div>
+
 <p class="marginT10">Or&nbsp;<a class="edit submitWithoutDoc" id="withoutdoctask_<?php echo $task_id;?>">Submit without document</a></p>		
 <?php
 }?>
