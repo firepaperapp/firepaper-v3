@@ -1480,54 +1480,79 @@ class ProjectsController extends AppController {
         //  echo "<pre>"; print_r($prjDetails); exit;
         $userDetail = $this->User->findById($user_id, "firstname, lastname, id, email");
         //marks submitted
-        if (isset($this->request->params['form']['taskProjectChk']) && count($this->request->params['form']['taskProjectChk']) > 0) {
-
-            foreach ($this->request->params['form']['taskProjectChk'] as $key => $val) {
-                if ($val == 1 && isset($this->request->params['form']['taskWeight'][$key])) {
-                    $this->projectStudentTaskMark->updateAll(
-                            array("marked" => 1, "marked_date" => "'" . date("Y-m-d H:i:s") . "'", "marks" => $this->request->params['form']['taskWeight'][$key]), array("task_id" => $key, "user_id" => $user_id)
-                    );
-                }
-            }
-            $update = array("marked" => 1); //, "submitted_date"=>NULL);
-            if (isset($this->request->params['form']['isComplete'])) {
-                $update['completed'] = 1;
-                $sUserFullName = $userDetail['User']['firstname'] . " " . $userDetail['User']['lastname'];
-                $subject = "Project Completed";
-                $this->Email->to = $userDetail['User']['email'];
-                $this->Email->fromName = ADMIN_NAME;
-                $this->Email->from = EMAIL_FROM_ADDRESS;
-                $urlUsed = SITE_HTTP_URL . "projects/viewDetails/" . $project_id;
-
-                $sMessage = "Dear " . $sUserFullName . "," . "<br/><br/>" .
-                        ucfirst($this->Session->read("firstname") . " " . $this->Session->read("lastname")) . " has marked the '" . $prjDetails['Project']['title'] . "' project and indicate that you have successfully completed the project.<br/><br/>
 		
-				Please login into your account and [<a href='" . $urlUsed . "'>Click Here</a>] to view details of the project.<br/><br/>
+		if($this->request->data)
+		$this->request->params["form"]=$this->request->data;
 		
-				Thanks & Regards,<br/>
-				Website Support <br/>
-				" . SITE_NAME . " <br/>";
-
-                $this->Email->text_body = $sMessage;
-                $this->Email->subject = SITE_NAME . ' - ' . $subject;
-                $result = $this->Email->sendEmail();
-            }
-            $this->projectStudent->updateAll(
-                    $update, array("user_id" => $user_id, "project_id" => $project_id)
-            );
-            //We will trigger an activity to the selectd users	
-            $pasedData = array();
-            $pasedData['activityLog']['activity_task'] = "markProject";
-            $pasedData['Project']['title'] = $prjDetails['Project']['title'];
-            $pasedData['Project']['id'] = $project_id;
-            $pasedData['User']['name'] = ucfirst($this->Session->read("firstname") . " " . $this->Session->read("lastname"));
-            $pasedData['User']['id'] = $this->Session->read("userid");
-            $pasedData['activityLog']['user_ids'] = "," . $user_id . ",";
-            $this->createActivityLog($pasedData);
-            //Project marked
-            $this->Session->setFlash(PROJECT_MARKED);
-            $this->redirect("/projects/markProjectsList");
-        }
+		if(isset($this->request->params['form']["re_open"]))
+		{
+				$update=array();
+				$update['completed'] = 0;
+				$this->projectStudent->updateAll(
+							$update, array("user_id" => $user_id, "project_id" => $project_id)
+					);
+				$this->Session->setFlash(PROJECT_REOPEN);
+				$this->redirect("/projects/markProject/".$project_id."/".$user_id);
+		}
+		else
+		{
+		
+			if (isset($this->request->params['form']['taskProjectChk']) && count($this->request->params['form']['taskProjectChk']) > 0) {
+			
+				
+			
+					foreach ($this->request->params['form']['taskProjectChk'] as $key => $val) {
+						if ($val == 1 && isset($this->request->params['form']['taskWeight'][$key])) {
+							$this->projectStudentTaskMark->updateAll(
+									array("marked" => 1, "marked_date" => "'" . date("Y-m-d H:i:s") . "'", "marks" => $this->request->params['form']['taskWeight'][$key]), array("task_id" => $key, "user_id" => $user_id)
+							);
+						}
+					}
+					$update = array("marked" => 1); //, "submitted_date"=>NULL);
+					if (isset($this->request->params['form']['isComplete'])) {
+						$update['completed'] = 1;
+						$sUserFullName = $userDetail['User']['firstname'] . " " . $userDetail['User']['lastname'];
+						$subject = "Project Completed";
+						$this->Email->to = $userDetail['User']['email'];
+						$this->Email->fromName = ADMIN_NAME;
+						$this->Email->from = EMAIL_FROM_ADDRESS;
+						$urlUsed = SITE_HTTP_URL . "projects/viewDetails/" . $project_id;
+		
+						$sMessage = "Dear " . $sUserFullName . "," . "<br/><br/>" .
+								ucfirst($this->Session->read("firstname") . " " . $this->Session->read("lastname")) . " has marked the '" . $prjDetails['Project']['title'] . "' project and indicate that you have successfully completed the project.<br/><br/>
+				
+						Please login into your account and [<a href='" . $urlUsed . "'>Click Here</a>] to view details of the project.<br/><br/>
+				
+						Thanks & Regards,<br/>
+						Website Support <br/>
+						" . SITE_NAME . " <br/>";
+		
+						$this->Email->text_body = $sMessage;
+						$this->Email->subject = SITE_NAME . ' - ' . $subject;
+						$result = $this->Email->sendEmail();
+					}
+					
+					
+					$this->projectStudent->updateAll(
+							$update, array("user_id" => $user_id, "project_id" => $project_id)
+					);
+					//We will trigger an activity to the selectd users	
+					$pasedData = array();
+					$pasedData['activityLog']['activity_task'] = "markProject";
+					$pasedData['Project']['title'] = $prjDetails['Project']['title'];
+					$pasedData['Project']['id'] = $project_id;
+					$pasedData['User']['name'] = ucfirst($this->Session->read("firstname") . " " . $this->Session->read("lastname"));
+					$pasedData['User']['id'] = $this->Session->read("userid");
+					$pasedData['activityLog']['user_ids'] = "," . $user_id . ",";
+					$this->createActivityLog($pasedData);
+					//Project marked
+					$this->Session->setFlash(PROJECT_MARKED);
+					$this->redirect("/projects/markProjectsList");
+				}
+		
+		
+		}
+		
         if (count($prjDetails) > 0 && isset($prjDetails['Project']['id'])) {
             //project related task details
             $userId = $this->Session->read("userid");
@@ -1585,6 +1610,8 @@ class ProjectsController extends AppController {
                     )
                 )
             ));
+		$complete=$this->projectStudent->find("all",array("conditions"=>array("user_id" => $user_id, "project_id" => $project_id),"fields"=>array("projectStudent.completed")));
+		
             //To get the class groups to whom user belongs to
             $classSt = "";
             foreach ($groups as $rec) {
@@ -1598,6 +1625,10 @@ class ProjectsController extends AppController {
             $this->set("classSt", $classSt);
             $this->set("projComments", $projComments);
 		//	pr($fileTypesO);
+			
+			 $this->set("is_completed", $complete[0]["projectStudent"]["completed"]);
+           
+			
             $this->set("fileTypes", $fileTypesO);
             $this->set("isOwner", $isOwner);
             $this->set("gotUserId", $user_id);
