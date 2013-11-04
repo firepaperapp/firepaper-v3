@@ -1533,10 +1533,10 @@ ul.list-activity li span {
     position: absolute;
     top: 30px;
     right: 40px;
-    background: #408fb2;
+    background: #000;
     font-weight: 400;
-    font-size: 11px;
-    padding: 4px 5px;
+    font-size: 18px;
+    padding: 6px 8px;
 }
 
 .deadline-details {
@@ -1614,7 +1614,7 @@ ul.list-activity li span {
 	font-weight:bold; 
 }
 .completed-bubble {
-    color: #cbcbcb;
+    color: #ffffff;
     font-size: 12px;
     font-weight: 500;
     margin-left: 17px;
