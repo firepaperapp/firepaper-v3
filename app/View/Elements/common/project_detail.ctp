@@ -31,6 +31,11 @@
                         {
                             foreach($tasks as $list)
                             {
+								if(!isset($list['projectTask']))
+								{
+									$list['projectTask']=$list["prjTask"];
+								}
+														
                               $percentage_completed += $list['projectTask']['weight'];
                             }
                          }
@@ -63,10 +68,21 @@ else
 			<div class="project-controls">
 			<?php
 	 			if($isOwner == 1)
-				{?>
+				{
+				
+				
+				// condition to hide edit project link from mark project page 
+				if(isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], "projects/markProject") == false)
+					{
+				
+				?>
 					<p><a href="<?php echo SITE_HTTP_URL?>projects/addEditProject/<?php echo $prjDetails['Project']['id'];?>/?m=e" class="submit">Edit Project</a>
 					
 					<?php
+					
+					}
+					
+					
 					if(isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], "projects/markProject") == false)
 					{
 						if($prjDetails['Project']['published'] == 1)
