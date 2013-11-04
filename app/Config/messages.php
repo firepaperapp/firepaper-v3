@@ -254,6 +254,8 @@ define("FILE_CANT_UPLOADED", "File can not be uploaded.");
 
 define("PROJECT_MARKED", "Project has been marked successfully.");
 
+define("PROJECT_REOPEN", "Project has been re-opened successfully.");
+
 define("PROJECT_STATUS", "Project status has been updated successfully.");
 
 ################Admin Message############################################
