@@ -169,9 +169,13 @@
 			
 	      
 	   	  <?php
+		  
+		
 	   	  if(isset($noOfTasks) && isset($taksDone))
 	   	  {
-	   	  	if($noOfTasks == $taksDone)
+		  
+		  
+	   	  	if($noOfTasks <= $taksDone)
 	   	  	{?>
 		   	  <div style="float:left; margin-left:25px;">
 		   	  	
