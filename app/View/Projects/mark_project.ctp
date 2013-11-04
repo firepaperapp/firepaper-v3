@@ -138,7 +138,7 @@
         <div class="essage errorServer">
             <div class="success">
                 <?php
-                $this->Session->flash(); // this line displays our flash messages
+              echo  $this->Session->flash(); // this line displays our flash messages
                 ?>
             </div>
         </div>
@@ -235,8 +235,13 @@ foreach ($tasks as $rec) {
                                       <?php
                                       }
                                       else { */
-
+										
+									
+										
                                     foreach ($rec['projectStudentTaskDoc'] as $docs) {
+										//echo "<pre>";
+									//	print_r($docs);echo "</pre>";
+									//	die();
                                         $totalSubmission = 1;
                                         ?>	 
                                         <div class="file-name"> 
@@ -289,13 +294,32 @@ foreach ($tasks as $rec) {
 ?> 
                             <input type="hidden" name="shdSubmit" id="shdSubmit" value="1" />
 <?php
+
+
+	$user_type=$this->Session->read('user_type');
+	
+
+
 //we will not show submit button if user has not submitted any doc in the project
-if ($totalSubmission > 0) {
+if($is_completed)
+{
+	?>
+	   <input type="submit" name="re_open" id="btnSubmit" class="submit" value="Re-Open" />
+	<?php
+	
+}
+else
+{
+if ($totalSubmission > 0 && ($user_type)) {
     ?>
                                 <input type="checkbox" name="isComplete" id="isComplete" value="1" />&nbsp;<span title="User will not be able to add any file in this project.">Student has completed the project.</span>
                                 <br/>
                                 <input type="submit" name="btnSubmit" id="btnSubmit" class="submit" value="Submit marks" />
-                            <?php } ?>
+                            <?php }
+							
+							
+							
+} ?>
                             </form>
                             <div class="clr"></div>
                             </div>
