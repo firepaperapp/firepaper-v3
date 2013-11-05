@@ -656,7 +656,10 @@ class ProjectsController extends AppController {
         ############ CREATE A PROJECT START #################
         if ($this->request->data) {
             $result = $this->Project->validatProjectForm($this->request->data['Project']);
-            $response = array();
+          
+	
+		  
+		    $response = array();
             if ($this->Project->err == 0) {
                 //we will add contact
                 $this->request->data['Project']['leader_id'] = $this->request->data['Project']['leader_id'];
@@ -905,11 +908,20 @@ class ProjectsController extends AppController {
                     $this->projectTask->id = $this->request->data['projectTask']['id'];
                     $this->projectTask->Save($this->request->data['projectTask']);
                     $response['success'] = MSG_TASK_UPDATED;
-                    $response['id'] = $this->request->data['projectTask']['id'];
+					// used to send email 
+					$data=UPDATED." task ".$this->request->data['projectTask']['title']." in ";
+					$this->emailAfterActivity($project_id,$data,MSG_TASK_UPDATED);
+                    	//end of  used to send email 
+					$response['id'] = $this->request->data['projectTask']['id'];
                 } else {
                     $this->projectTask->id = -1;
                     $this->projectTask->Save($this->request->data['projectTask']);
-                    $response['success'] = MSG_TASK_CREATED;
+					// used to send email 
+					$data=CREATED." task ".$this->request->data['projectTask']['title']." in ";
+					$this->emailAfterActivity($project_id,$data,TASK_CREATED_SUB);
+                    //end of  used to send email 
+                    
+					$response['success'] = MSG_TASK_CREATED;
                     $response['id'] = $this->projectTask->getLastInsertId();
                 }
                 if (!isNull($this->request->data['projComments']['comment'])) {
@@ -974,9 +986,13 @@ class ProjectsController extends AppController {
     function deleteTask() {
         //if(isset($this->request->params['form']['taskId']) && $this->request->params['form']['taskId']!='')
         if (isset($this->request->data['taskId'])) {
-            $res = $this->projectTask->delete($this->request->data['taskId']);
+        	$task_id=$this->request->data['taskId'];
+			
+			$query=$this->projectTask->find("all",array("conditions"=>array("id"=>$task_id)));
+		    $res = $this->projectTask->delete($this->request->data['taskId']);
             if ($res) {
-                $response['success'] = MSG_REC_DELTED;
+				$this->emailAfterActivity($query[0]["projectTask"]["project_id"],DELETE_TASK,DELETE_TASK_SUB);
+			    $response['success'] = MSG_REC_DELTED;
             } else {
                 $response['error'] = MSG_REC_CANT_DELETE;
             }
@@ -1498,7 +1514,10 @@ class ProjectsController extends AppController {
 				$data["id"]=$project_id;
 				$data["is_completed"]="0";
 				$this->Project->save($data);
-		
+				
+				$data=REOPEN;
+				$this->emailAfterActivity($project_id,$data,REOPEN_PR_SUB);
+				
 				$this->Session->setFlash(PROJECT_REOPEN);
 				$this->redirect("/projects/markProject/".$project_id."/".$user_id);
 		}
@@ -1540,6 +1559,12 @@ class ProjectsController extends AppController {
 						$result = $this->Email->sendEmail();
 					}
 					
+					
+					if(!isset($update["completed"]))
+					{
+						$data=" marked the but not completed the project ";
+						$this->emailAfterActivity($project_id,$data,REOPEN_PR_SUB);
+					}
 					
 					$this->projectStudent->updateAll(
 							$update, array("user_id" => $user_id, "project_id" => $project_id)

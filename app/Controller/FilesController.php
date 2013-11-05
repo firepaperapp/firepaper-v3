@@ -747,7 +747,7 @@ class FilesController  extends AppController{
 	  
 		if($this->userFile->validateFileUpload($this->request->data) == 0)
 		{
-			
+		
 		 	$uploads_dir = "";
 			$uploads_strt_dir = FILES_PATH."files/";
 			########### whether user's admin or user itself has enough space to upload the file ###########	
@@ -792,6 +792,7 @@ class FilesController  extends AppController{
 			   
 				$ms = ENOUGH_SPACE_USER;
 			}
+			
             if (count($spaceDetail)>0){
                 if ( ($spaceDetail['User']['usedspace']+$this->request->params['form']['uploadfile']['size']) > $spaceDetail['User']['totalspace'] &&  $spaceDetail['Package']['unlimited']!=1)
 			    {
@@ -852,6 +853,8 @@ class FilesController  extends AppController{
 					{  
 						mkdir($uploads_strt_dir.$uploads_dir);
 					}
+					
+				
 					@chmod("$uploads_strt_dir.$uploads_dir", 0755);
 					if($fileId!='')
 					{
@@ -866,6 +869,7 @@ class FilesController  extends AppController{
 					}					
 					if(in_array(strtolower($fileExt), $videoArray))
 					{
+					
 						//if it is a video file
 						$filename = $this->uploadVideo($uploads_dir."/", $this->request->params['form']['uploadfile']);			 
 						if($filename!=false)
@@ -882,6 +886,8 @@ class FilesController  extends AppController{
 					}
 					else
 					{	 
+					
+					
 						//we will simply upload the file
 						
 						//move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
@@ -899,13 +905,13 @@ class FilesController  extends AppController{
 						else {
 							//We will upload the object into amazon
 							 $return = true;
-							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+							//$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
 							//We will delete the local file
 							// @unlink($uploads_strt_dir.$uploads_dir);
 						}
 						
 					}
-					
+				
 					if($return == true)
 					{
 						$iconType = $this->userFile->getIconType($fileExt);				
@@ -964,6 +970,8 @@ class FilesController  extends AppController{
 					}
 					
 				}else{
+				
+					
 					/*
 					echo "check2 ==="; exit;
 					print_r($this->request->params['form']); exit;
@@ -1032,6 +1040,8 @@ class FilesController  extends AppController{
 					}
 					else
 					{	
+					
+				
 						//we will simply upload the file
 						move_uploaded_file( $this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
 							 
