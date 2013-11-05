@@ -905,7 +905,7 @@ class FilesController  extends AppController{
 						else {
 							//We will upload the object into amazon
 							 $return = true;
-							//$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
 							//We will delete the local file
 							// @unlink($uploads_strt_dir.$uploads_dir);
 						}
