@@ -303,4 +303,17 @@ define("MSG_COMPLETED_PROJECT", "Notification has been sent to the project owner
 define("MSG_COMPLETE_PROJECT", "Project has successfully been submitted.");
 
 define("PR_MAR_SUCCESS","Project submitted for Marking");
+
+
+define("DELETE_TASK","deleted 1 task in ");
+define("DELETE_TASK_SUB","Task Deleted In Project");
+
+define("UPDATED","updated");
+define("CREATED","created");
+define("REOPEN","re-open");
+define("TASK_UPDATED_SUB","Task Updated In Project");
+define("TASK_CREATED_SUB","Task Created In Project");
+define("REOPEN_PR_SUB","Project Re-Opened");
+
+define("MARKED_PR_SUB","Project Marked");
 ?>
