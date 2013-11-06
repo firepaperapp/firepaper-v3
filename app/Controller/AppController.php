@@ -75,7 +75,7 @@ class AppController extends Controller {
 	function __construct($request = null, $response = null)
 	{
 	    parent::__construct($request, $response);
-	   mail("sourabgupta88@gmail.com","testing","just etst");
+	   //mail("sourabgupta88@gmail.com","testing","just etst");
 	     //mail("neil@safarinow.com","testing","just test");
 	     //mail("sourabgupta01@yaho.co.in","testing","just etst");
 		//    if ($this->name == 'CakeError') {
