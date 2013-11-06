@@ -1639,15 +1639,11 @@ ul.list-activity li span {
 	position: absolute;
 	width: 140px;
 	height: 4px;
-	background: url(../images/progress.png) repeat;
+	background: #88c9fa;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	border: 1px solid #52a8e9;
-	-webkit-box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px 	rgba(0,0,0,.2);
-	-moz-box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px rgba(0,0,0,.2);
-	box-shadow: inset 0px 2px 0px 0px rgba(255,255,255,.33), 0px 1px 1px 0px rgba(0,0,0,.2);
-}
+	}
 .project-content {
 	border-bottom: none;
 	padding: 16px;
