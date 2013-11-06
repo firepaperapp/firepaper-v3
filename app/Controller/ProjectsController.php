@@ -471,13 +471,24 @@ class ProjectsController extends AppController {
             $data['projComments']['comment'] = $this->request->data['comment'];
             $data['projComments']['project_id'] = $this->request->data['project_id'];
             $data['projComments']['posted_by'] = $this->Session->read("userid");
-            if (!isNull($gotUserId)) {
+          
+	
+		
+		
+		    if (!isNull($gotUserId)) {
 
                 $data['projComments']['received_by'] = $gotAd['leader_id'];
-                $v['user_ids'] = "," . $gotAd['admin_id'] . ",";
+				
+			   $v['user_ids'] = "," . $gotAd['admin_id'] . ",";
                 $v['mode'] = "to_admin";
-            } else {
-                //admin is posting the comment on the project mark page				
+            	$this->emailAfterActivityTeacherRecieve($this->request->data['project_id'],COMMENT_ADDED_T,COMMENT_ADDED_SUB);
+			
+			} else {
+                
+				
+				$this->emailAfterActivity($this->request->data['project_id'],COMMENT_ADDED_T,COMMENT_ADDED_SUB);
+				
+				//admin is posting the comment on the project mark page				
                 //$data['projComments']['received_by'] = $gotUserId;
                 $v['user_ids'] = "allstudents";
                 $v['mode'] = "to_user";
@@ -487,13 +498,23 @@ class ProjectsController extends AppController {
             $data['projComments']['comment_type'] = "task";
             $data['projComments']['task_id'] = $this->request->data['task_id'];
 
+		//echo $this->request->data['task_id'];
+
+		 $taskDetail = $this->projectTask->findById($this->request->data['task_id']);
+          
+		  //pr($taskDetail);
+		  //die();
+
+
             $this->projComments->Save($data);
             $this->Session->setFlash(COMMENT_ADDED);
             //Save activity		
 
             $v['project_id'] = $this->request->data['project_id'];
             $taskDetail = $this->projectTask->findById($this->request->data['task_id']);
-            $v['task_id'] = $taskDetail['projectTask']['id'];
+          
+		   
+		    $v['task_id'] = $taskDetail['projectTask']['id'];
             $v['task_title'] = $taskDetail['projectTask']['title'];
             $this->saveActivityForComment($v);
         }
@@ -2101,6 +2122,8 @@ class ProjectsController extends AppController {
 		$data["id"]=$project_id;
 		$data["is_completed"]="1";
 		$this->Project->save($data);
+		
+			$this->emailAfterActivityTeacherRecieve($project_id,COMPLETED,COMPLETED_SUB);
 		
             $pasedData['Project']['title'] = $prjDetail['Project']['title'];
             $pasedData['Project']['id'] = $prjDetail['Project']['id'];
