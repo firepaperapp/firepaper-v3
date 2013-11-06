@@ -19,8 +19,9 @@ if(count($taskDocs)>0)
 			}?>
 			<a href="<?php echo SITE_HTTP_URL?>files/downloadFile/<?php echo $rec['prjTaskUserDoc']['refer_file_id']?>" id="tool-tip"><?php echo $rec['prjTaskUserDoc']['title'];?></a> 
 			
-			<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['prjTaskUserDoc']['submitted_date']))); ?> at <? print(date("H:ia", strtotime($rec['prjTaskUserDoc']['submitted_date']))); ?></span> -<?php
-		  	if($rec[0]['cnt_comment']>0)
+			<p class="file-links"><span> <? print(Date("dS F Y", strtotime($rec['prjTaskUserDoc']['submitted_date']))); ?> at <? print(date("H:ia", strtotime($rec['prjTaskUserDoc']['submitted_date']))); ?></span> <?php
+		// commented out for not showing option to add comment in task completed section
+		 /* -	if($rec[0]['cnt_comment']>0)
 		  	{?>
 		  	<a href="javascript:void(0)" class="viewTskCommentsInner  edit viewTskCommentsLink" id="viewTskComments_<?php echo $rec['prjTaskUserDoc']['id'];?>"><?php echo $rec[0]['cnt_comment'];?> Comment(s)</a>	<?php
 		  	}
@@ -36,7 +37,10 @@ if(count($taskDocs)>0)
 			{?>
 			&nbsp;-&nbsp;<a href="javascript:void(0)" class="deleteDocFrmProject edit" id="a_v<?php echo $rec['prjTaskUserDoc']['id'];?>" onclick="delTaskDoc(<?php echo $rec['prjTaskUserDoc']['id'];?>, 'viewDetail')">Delete</a>
 			<?php
-			}?>
+			}
+			
+			*/
+			?>
 			</p> 
 		</div>		
 		<div class="clr"></div>			
