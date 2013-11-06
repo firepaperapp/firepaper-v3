@@ -902,13 +902,44 @@ class AppController extends Controller {
 	}
 	
 	
-	
 	function emailAfterActivity($project_id,$inMail='Update',$subject='Project Updated')
 	{
+
 		$result=$this->projectStudent->query("select users.*,projects.title from project_students,users,projects where project_id=".$project_id." and users.id=project_students.user_id and projects.id=".$project_id);
-		pr($result);
-		$rec=$result[0];
+		if($result){
+			$rec=$result[0];
+			$sUserFullName=$rec['users']['firstname']." ".$rec['users']['lastname'];
+			 $this->Email->to = $rec['users']['email'];
+			$this->Email->fromName = ADMIN_NAME;
+			$this->Email->from = EMAIL_FROM_ADDRESS;
+			$urlUsed = SITE_HTTP_URL . "projects/viewDetails/" . $project_id;
+	
+			$sMessage = "Dear " . $sUserFullName . "," ."<br/><br/>" .
+					ucfirst($this->Session->read("firstname") . " " . $this->Session->read("lastname")) . " has " . $inMail . " project <b>" . $rec['projects']['title'] . "</b>.<br/><br/>
+	
+			Please login into your account, [<a href='" . $urlUsed . "'>Click Here</a>] to view details of the project.<br/><br/>
+	
+			Thanks & Regards,<br/>
+			Website Support <br/>
+			" . SITE_NAME . " <br/>";
+	
+			$this->Email->text_body = $sMessage;
+			$this->Email->subject = SITE_NAME . ' - ' . $subject;
+			//echo "<pre>"; print_r($this->Email);die;
+			$result = $this->Email->sendEmail();
+		}
+
+	}
+	
+	
+	function emailAfterActivityTeacherRecieve($project_id,$inMail='Update',$subject='Project Updated')
+	{
+	
+		$result=$this->projectStudent->query("select users.*,projects.title from users,projects where  users.id=projects.leader_id and projects.id=".$project_id);
 		
+	
+		
+		$rec=$result[0];
 		$sUserFullName=$rec['users']['firstname']." ".$rec['users']['lastname'];
 		 $this->Email->to = $rec['users']['email'];
 		$this->Email->fromName = ADMIN_NAME;
@@ -930,7 +961,6 @@ class AppController extends Controller {
 		$result = $this->Email->sendEmail();
 
 	}
-	
 	
 }//End class
 
