@@ -68,6 +68,13 @@ $(document).ready(function(){
 		
 		<div class="project-bar">
 		<!-- Bubble -->
+	
+<!-- End bubble -->
+<!-- Progress bar -->
+<?php //echo "<pre>"; print_r($rec);die;?>
+	<div class="progressbg">
+		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
+	</div>
 	<div class="completed-bubble">
 		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
 		<?php
@@ -76,12 +83,6 @@ $(document).ready(function(){
 				else 
 				echo "Completed";
 		?>
-	</div>
-<!-- End bubble -->
-<!-- Progress bar -->
-<?php //echo "<pre>"; print_r($rec);die;?>
-	<div class="progressbg">
-		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
 	</div>
 <!-- End Progress bar -->
 
