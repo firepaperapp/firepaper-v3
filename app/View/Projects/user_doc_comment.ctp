@@ -42,7 +42,7 @@
 		<div class="Formmessage marginT10 errorServer">
 			<div class="success">
 				<?php
-					$this->Session->flash(); // this line displays our flash messages
+			echo		$this->Session->flash(); // this line displays our flash messages
 				?>
 			</div>
 		</div>
