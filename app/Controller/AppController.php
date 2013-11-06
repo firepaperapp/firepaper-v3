@@ -905,7 +905,9 @@ class AppController extends Controller {
 	function emailAfterActivity($project_id,$inMail='Update',$subject='Project Updated')
 	{
 		$result=$this->projectStudent->query("select users.*,projects.title from project_students,users,projects where project_id=".$project_id." and users.id=project_students.user_id and projects.id=".$project_id);
+		pr($result);
 		$rec=$result[0];
+		
 		$sUserFullName=$rec['users']['firstname']." ".$rec['users']['lastname'];
 		 $this->Email->to = $rec['users']['email'];
 		$this->Email->fromName = ADMIN_NAME;
