@@ -316,4 +316,12 @@ define("TASK_CREATED_SUB","Task Created In Project");
 define("REOPEN_PR_SUB","Project Re-Opened");
 
 define("MARKED_PR_SUB","Project Marked");
+
+define("COMMENT_ADDED_T","posted 1 comment in one of the task of ");
+define("COMMENT_ADDED_SUB","Comment Posted In Project");
+
+define("COMPLETED","completed");
+define("COMPLETED_SUB","Completed Project");
+
+
 ?>
