@@ -40,30 +40,23 @@ App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
 
 
+
 class EmailConfig {
 
 	public $default = array(
 		'transport' => 'Mail',
-		'from' => 'nsberrow@gmail.com',
-		'charset' => 'utf-8',
-		'headerCharset' => 'utf-8',
+		'from' => SEND_MAIL,
+		//'charset' => 'utf-8',
+		//'headerCharset' => 'utf-8',
 	);
-class EmailConfig {
-    public $gmail = array(
-        'host' => 'ssl://smtp.gmail.com',
-        'port' => 465,
-        'username' => 'nsberrow@gmail.com',
-        'password' => 'steven1980',
-        'transport' => 'Smtp'
-    );
-}
+
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('nsberrow@gmail.com' => 'My Site'),
-		'host' => 'localhost',
-		'port' => 465,
+		'from' => array(SEND_MAIL => SITE_NAME),
+		'host' => 'ssl://smtp.gmail.com',
+		'port' => 25,
 		'timeout' => 30,
-		'username' => 'nsberrow@gmail.com',
+		'username' => 'info@firepaperapp.com',
 		'password' => 'steven1980',
 		'client' => null,
 		'log' => false,
@@ -72,7 +65,7 @@ class EmailConfig {
 	);
 
 	public $fast = array(
-		'from' => 'nsberrow@gmail.com',
+		'from' => 'you@localhost',
 		'sender' => null,
 		'to' => null,
 		'cc' => null,
@@ -92,10 +85,10 @@ class EmailConfig {
 		'emailFormat' => null,
 		'transport' => 'Smtp',
 		'host' => 'localhost',
-		'port' => 465,
+		'port' => 25,
 		'timeout' => 30,
-		'username' => 'nsberrow@gmail.com',
-		'password' => 'steven1980',
+		'username' => 'user',
+		'password' => 'secret',
 		'client' => null,
 		'log' => true,
 		//'charset' => 'utf-8',
@@ -103,3 +96,4 @@ class EmailConfig {
 	);
 
 }
+
