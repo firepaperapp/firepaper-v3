@@ -76,6 +76,7 @@ class AppController extends Controller {
 	{
 	    parent::__construct($request, $response);
 	    //mail("sourabgupta88@gmail.com","testing","just etst");
+	     mail("samberrow@yahoo.co.za","testing","just test");
 		//    if ($this->name == 'CakeError') {
 		//      header('location:'.COMMON_URL);
 		//	  exit;
