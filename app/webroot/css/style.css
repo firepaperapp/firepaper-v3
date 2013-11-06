@@ -1682,7 +1682,9 @@ ul.list-activity li span {
 }
 
 .project-bar .completed-bubble span {
-  color: #7f7f7f;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 13px;
     
 }
 .duein-date {
