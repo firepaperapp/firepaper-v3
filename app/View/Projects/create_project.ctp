@@ -290,7 +290,7 @@ $(document).ready(function(){
 						</form>  
 						<!--<a id="uploadfile" name="data[userFile][uploadFile]" class="edit">Upload it</a>-->
 					</div>
-					<div class="width100Per" id="extraDocs_<?php echo $rec['projectTask']['id'];?>" style="display:none;width:480px;">	
+					<div class="width100Per" id="extraDocs_<?php echo $rec['projectTask']['id'];?>" style="display:none;width:100%;">	
 				 	    
 					 </div><div class="clr"></div>
 				      </div> 

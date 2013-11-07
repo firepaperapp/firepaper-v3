@@ -112,7 +112,7 @@ $(document).ready(function(){
 	</div>
 		</form>
 	<div class="clr"></div>
-	<div class="width100Per" id="extraDocs_<?php echo $rec['projectTask']['id'];?>" style="display:none;width:500px;">	
+	<div class="width100Per" id="extraDocs_<?php echo $rec['projectTask']['id'];?>" style="display:none;width:100%;">	
  	    
 	 </div>
    </div>  
