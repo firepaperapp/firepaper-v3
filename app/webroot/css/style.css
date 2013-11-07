@@ -4045,6 +4045,7 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 p.marginT10 {
     height:40px;
     padding-left: 30px;
+    background: url("../images/comment-arrow.png") no-repeat left 20px;
 }
 p.marginT10:after {
     content: ".";
