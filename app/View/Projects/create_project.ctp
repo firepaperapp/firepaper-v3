@@ -310,6 +310,8 @@ $(document).ready(function(){
 	        uploadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        downloadTable: $('#uploadRevison_<?php echo $rec['projectTask']['id']?>'),
 	        buildUploadRow: function (files, index) {
+				$('#task_<?php echo $rec['projectTask']['id']?>').hide();
+			
 	             return $('<tr><td>' + files[index].name + '<\/td>' +
 	                    '<td class="file_upload_progress"><div><\/div><\/td>' +
 	                    '<td class="file_upload_cancel">' +
@@ -325,13 +327,22 @@ $(document).ready(function(){
 							$("#validation-container-success-task").empty().hide();
 	
 						} else{	 
+						
+						
 								$("#validation-container-task").empty().hide();
 								$("#validation-container-success-task").empty().html(response.success).show();
 								$('.file_upload').removeClass('file_upload_large');
 								$('.file_upload').removeClass('file_upload_highlight');
-								$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
+								$.get(siteUrl+"projects/extraTaskDocs?task_id=<?php echo $rec['projectTask']['id']?>&addFile="+response.id+"&project_id=<?php echo $project_id?>&v="+Number(new Date()),function(data)
 								{	 
-									$("div#taskUnderDiv").empty().html(data).show('slow');	
+								
+				$('#task_<?php echo $rec['projectTask']['id']?>').show();
+								
+								$('#extraDocs_'+<?php echo $rec['projectTask']['id']?>).empty().html(data).show('slow');
+								
+								//	viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>);	
+									
+									//$("div#taskUnderDiv").empty().html(data).show('slow');	
 									$("#loaderJsTask_<?php echo $rec['projectTask']['id']?>").hide();
 									$(".dropFileHere").fadeOut('slow');
 								}
