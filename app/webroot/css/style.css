@@ -1497,6 +1497,8 @@ ul.list-activity li span {
 }
 .project-drop-area-wrapper .width100Per {
 	margin-top: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px #ccc solid;
 }
 .project-drop-area-wrapper .width100Per .task-comment {
 	background: url("../images/comment-arrow.png") no-repeat left 20px;
@@ -1583,6 +1585,7 @@ ul.list-activity li span {
 }
 .project-owner {
 	margin: 16px;
+	min-height: 53px;
 }
 .project-owner p {
 	margin-top: 10px;
@@ -1638,7 +1641,7 @@ ul.list-activity li span {
 .progressBar {
 	position: absolute;
 	width: 140px;
-	height: 4px;
+	height: 6px;
 	background: #88c9fa;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -4035,12 +4038,13 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 }
 
 .marginT10 {
-    margin-top: 20px;
+    
     position: relative;
 }
 
 p.marginT10 {
-    padding-top: 15px;
+    height:40px;
+    padding-left: 30px;
 }
 p.marginT10:after {
     content: ".";
