@@ -2027,6 +2027,18 @@ class ProjectsController extends AppController {
         }
     }
 
+
+	/* function createExtraTaskDoc($task_id,$file_id,$project_id) {
+       $arr["user_id"]=$this->Session->read('userid');
+	   $arr["task_id"]=$task_id;
+	   $arr["project_id"]=$project_id;
+	   $arr["refer_file_id"]=$file_id;
+	   $this->projectTaskExtraDoc->save()
+        $this->render("create_task_doc", "ajax");
+    }*/
+
+
+
     /**
      * 
      */
