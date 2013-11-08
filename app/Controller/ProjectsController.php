@@ -1117,7 +1117,7 @@ class ProjectsController extends AppController {
                 $st = "0," . $st . ",";
             $gotUsers['whiteboards'] = $st;
             $gotUsers['published'] = $saveOrSend;
-            $gotUsers['is_completed'] = 1;
+            $gotUsers['is_completed'] = 0;
             $this->Project->id = $project_id;
             //echo "<pre>"; print_r($gotUsers);die;
             $this->Project->Save($gotUsers);
@@ -1254,6 +1254,7 @@ class ProjectsController extends AppController {
      * @param unknown_type $task_id
      */
     function studentSubmitDocToProject($task_id) {
+
         $project_id = $this->request->query['p'];
         if (isset($this->request->data['projectStudentTaskDoc']) && count($this->request->data['projectStudentTaskDoc']) > 0) {
             $this->request->data['projectStudentTaskDoc']['project_id'] = $project_id;
