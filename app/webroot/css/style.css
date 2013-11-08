@@ -3445,7 +3445,7 @@ ul#archived-list .month {
 }
 
 .open-close {
-    display: block;
+    display: none;
     float: left;
     color: #FFF;
     margin-right: 6px;
