@@ -43,7 +43,7 @@
  		          <?php
 					if($isOwner == 0 && $vistor==0)
 					{?> 	 
-					   <div class="open-close" style="display:block">
+					   <div class="open-close" style="display:none">
 			          	<a href="javascript:void(0);" class="userTaskDocs" id="task_<?php echo $rec['prjTask']['id'];?>">Open</a>
 			          
 			          </div>
