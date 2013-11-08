@@ -339,7 +339,7 @@ $(document).ready(function(){
 				$('#task_<?php echo $rec['projectTask']['id']?>').show();
 								
 								$('#extraDocs_'+<?php echo $rec['projectTask']['id']?>).empty().html(data).show('slow');
-								
+								$('.dropFileHere').show();
 								//	viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>);	
 									
 									//$("div#taskUnderDiv").empty().html(data).show('slow');	
