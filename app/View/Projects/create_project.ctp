@@ -344,7 +344,7 @@ $(document).ready(function(){
 									
 									//$("div#taskUnderDiv").empty().html(data).show('slow');	
 									$("#loaderJsTask_<?php echo $rec['projectTask']['id']?>").hide();
-									$(".dropFileHere").fadeOut('slow');
+									//$(".dropFileHere").fadeOut('slow');
 								}
 								);
 						}        
