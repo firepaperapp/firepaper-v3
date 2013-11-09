@@ -2725,7 +2725,17 @@ p.form-title {
   }
 
 .indicator-wrapper {
-    width: 100%;
+    width: 345px;
+    background: white;
+    margin-bottom: 35px;
+    padding: 0;
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	box-shadow: 0 3px 3px rgba(0,0,0,.09);
+	-webkit-border-radius: 4px;
+    border-radius: 4px;
+    float: left;
+    margin-right: 20px;
 }
 
 .indicator-wrapper .left {
@@ -2857,7 +2867,7 @@ p.form-title {
     width: 186px;
     padding: 12px;
     background: #CFE9E9;
-    float: right;
+   
 }
 
 .right-report span {
