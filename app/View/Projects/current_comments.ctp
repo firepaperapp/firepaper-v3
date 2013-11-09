@@ -69,7 +69,7 @@
 		        	if($this->Session->read("user_type")==1 || $this->Session->read("user_type")==2 ||$this->Session->read("user_type")==3 || $this->Session->read("user_type")==7)
 				{
 					echo 'window.location = "'.SITE_HTTP_URL.'projects/markProject/'.$rec['ts']['project_id'].'/'.$rec['User']['id'].'"'; 
-				}
+				} 
 				else 
 				{
 					echo 'window.location = "'.SITE_HTTP_URL.'projects/viewDetails/'.$rec['ts']['project_id'].'"'; 

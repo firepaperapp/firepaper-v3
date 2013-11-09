@@ -24,7 +24,7 @@ if(isset($errMsg))
 	var groupAdded = <?php echo json_encode($dataGroups);?>;	
 	var userAdded = <?php echo json_encode($dataUsers);?>;	
 	var whiteboardsAdded = <?php echo json_encode($dataWhiteboards);?>;	
-</script>
+</script> 
 <script type="text/javascript">
 $(document).ready(function(){
 		

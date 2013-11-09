@@ -27,7 +27,7 @@ $(document).ready(function(){
 			?>&nbsp;-&nbsp;<a href="javascript:void(0);" class="edit" onclick="delTaskFromProject(<?php echo $rec['projectTask']['id']?>)">Delete Task</a>
 			
 			<span id="extraDoc_<?php echo $rec['projectTask']['id']?>" style="display:none;">&nbsp;-&nbsp;
-			<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>)">View Other Docs</a>
+			<a href="javascript:void(0);" class="edit" onclick="viewExtraTaskDocs(<?php echo $rec['projectTask']['id']?>)">View Other Docs</a> 
 			</span>
 			
 			
