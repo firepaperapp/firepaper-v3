@@ -1434,6 +1434,8 @@ ul.list-activity li span {
 .details p {
 	padding: 16px 20px 20px 20px;
 	color: #c7bf7b;
+	height:32px;
+	overflow: hidden;
 	border-bottom: 1px dotted #d7d09c;
 }
 .deadline-details .project-content .flat-due-icon, .deadline-details .project-content .flat-files-icon, .deadline-details .project-content .flat-tasks-icon {
