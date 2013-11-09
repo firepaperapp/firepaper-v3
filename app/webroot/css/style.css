@@ -2810,12 +2810,12 @@ p.form-title {
 
 
 
-.right-report .indicator-holder {
+.right-report .indicator-container {
 
     height: 20px;
 }
 
-.right-report .indicator-holder .indicator-bg {
+.right-report .indicator-container .indicator-bg {
     background: #d4d9de;
 	margin: 10px 0px 7px 17px;
 	-webkit-border-radius: 5px;
@@ -2826,7 +2826,7 @@ p.form-title {
     height: 18px;
 }
 
-.right-report .indicator-holder .indicator-bg .indicator-bar {
+.right-report .indicator-container .indicator-bg .indicator-bar {
     background: #F20006;
     height: 16px;
     color: #FFF;
