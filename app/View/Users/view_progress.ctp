@@ -29,7 +29,7 @@
         	foreach ($data as $rec)	
         	{?> 
          	 <div class="indicator">       
-		         <div class="leftcol">
+		       
 		          	<h3><?php echo trim(Sanitize::html($rec['Subject']['title']));?></h3>
 		            <p class="title">Overall Mark:</p>
 		            <div class="indicator-container">
@@ -37,7 +37,7 @@
 		                <div class="indicator-bar" style="width:<?php echo $rec['overTtl'];?>%"><?php echo $rec['overTtl'];?>%</div>
 		              </div><!-- end indicator-bg -->
 		            </div><!-- end indicator-holder -->
-		          </div><!-- end leftcol -->
+		         
 		          <div class="index">
 
 		          <p class="title">Individual Projects</p>
