@@ -1429,7 +1429,7 @@ ul.list-activity li span {
     font-size: 13px;
     margin: 0;
     border: none;
-    text-transform: capitalize;
+    text-transform: capitalize; 
 }
 .details p {
 	padding: 16px 20px 20px 20px;
