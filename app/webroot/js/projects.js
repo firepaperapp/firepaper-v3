@@ -172,6 +172,8 @@ $(document).ready(function(){
 		{ 	 
 			var gotId = $(ui.draggable).attr('id').split("_");
 			//We will get the detail of the selected file and populate HTML
+			
+	
 			$("#loaderJsTask").empty().html(loader).show();
 			//$(ui.draggable).hide('slow');
 			$.get(siteUrl+"projects/createTaskDoc/"+gotId[1]+"/?v="+Number(new Date()),function(data)
@@ -179,7 +181,7 @@ $(document).ready(function(){
 				$("#taskUnderDiv").empty().html(data).show('slow');		
 				//alert($("#taskUnderDiv").html());
 				$("#loaderJsTask").hide();
-				$(".dropFileHere").fadeOut('slow');
+				//$(".dropFileHere").fadeOut('slow');
 			}
 			);
 				
@@ -214,10 +216,11 @@ $(document).ready(function(){
 								$("#validation-container-task").empty().hide();
 								$("#validation-container-success-task").empty().html(response.success).show();								
 								$.get(siteUrl+"projects/createTaskDoc/"+response.id+"/?v="+Number(new Date()),function(data)
-								{	 
+								{
+									
 									$("div#taskUnderDiv").empty().html(data).show('slow');	
 									$("#loaderJsTask").hide();
-									$(".dropFileHere").fadeOut('slow');
+									//$(".dropFileHere").fadeOut('slow');
 								}
 								);
 						}        
@@ -566,8 +569,7 @@ function commentEvents()
 	 		 });
 	 	 });
 	   //Yp upload the extra docs related 
-		$( ".dropTaskFileHere").
-		livequery(function()
+		$( ".dropTaskFileHere").livequery(function()
 		{
 			$(this).droppable({ accept: '.dragFiles' , drop: function(event, ui) 
 			{ 	 
@@ -580,9 +582,11 @@ function commentEvents()
 				$.get(siteUrl+"projects/extraTaskDocs/?addFile="+fileId[1]+"&task_id="+taskId[1]+"&project_id="+$("#project_id").val()+"&v="+Number(new Date()),function(data)
 		 
 				{	 
+				
 					$("#extraDoc_"+taskId[1]).show();
 			 		$("#loaderJsTask"+taskId[1]).hide();
 			 		$("div#extraDocs_"+taskId[1]).empty().html(data).show('slow');	
+					$('.dropFileHere').show();
 		 		}
 				);
 					
