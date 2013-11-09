@@ -2832,6 +2832,9 @@ p.form-title {
     color: #FFF;
     font-weight: 700;
     padding: 2px 0 0 4px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+	-moz-border-radius: 3px 0px 0px 3px;
+	border-radius: 3px 0px 0px 3px;
 }
 
 /* end Overall project indicator */
