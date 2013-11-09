@@ -207,14 +207,14 @@ if(count($data)>0)
 						</p>
 						<?php
 						}?>
-						<div class="educatorView" id="educatorView_<?php echo $inRec['id'];?>_box">
+						<!--<div class="educatorView" id="educatorView_<?php echo $inRec['id'];?>_box">
 							
 						</div>
 						<p><span class="title">Students in this department:</span>&nbsp;-&nbsp;
 							<a class="edit studentViewLink" id="studentView_<?php echo $inRec['id'];?>">View</a></p>
 						<div class="studentView" id="studentView_<?php echo $inRec['id'];?>_box">
 							
-						</div>
+						</div>-->
 							
 						<p>
 							<span class="title">Subjects in this department:</span>&nbsp;-&nbsp;
