@@ -1500,7 +1500,7 @@ ul.list-activity li span {
 .project-drop-area-wrapper .width100Per {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	border-bottom: 1px #ccc solid;
+	/*border-bottom: 1px #ccc solid;*/
 }
 .project-drop-area-wrapper .width100Per .task-comment {
 	background: url("../images/comment-arrow.png") no-repeat left 20px;

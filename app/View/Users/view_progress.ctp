@@ -1,4 +1,4 @@
-<div class="index page white">
+
     <h3>
     <?php
     if($user_id !=  $this->Session->read("userid"))
@@ -15,7 +15,7 @@
     if(count($data)>0)
     {?>
     <p>These are all the marked the projects that you have completed.</p>
-    <div class="clr-spacer"></div> <div class="clr-spacer"></div>
+    <div class="clr-spacer"></div> 
 	<?php
     }?>
     
@@ -85,4 +85,4 @@
     	<?php } ?>
     	<div class="clr"></div>
         </div><!-- end indicator-wrapper -->
- 	</div><!-- end activity --></div>
+ 	</div><!-- end activity -->
