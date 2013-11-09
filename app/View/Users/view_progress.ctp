@@ -32,7 +32,7 @@
 		         <div class="leftcol">
 		          	<h3><?php echo trim(Sanitize::html($rec['Subject']['title']));?></h3>
 		            <p class="title">Overall Mark:</p>
-		            <div class="indicator-holder">
+		            <div class="indicator-container">
 		              <div class="indicator-bg">
 		                <div class="indicator-bar" style="width:<?php echo $rec['overTtl'];?>%"><?php echo $rec['overTtl'];?>%</div>
 		              </div><!-- end indicator-bg -->
@@ -46,7 +46,7 @@
 		            {?>
 		            <div class="clr"></div>  
 		         	<p class="underline-link"><?php echo trim(Sanitize::html($projects['title']));?></p>
-		            <div class="indicator-holder">
+		            <div class="indicator-container">
 		              <div class="indicator-bg">
 		                <div class="indicator-bar" style="width:<?php echo $projects['total'];?>%"><?php echo trim(Sanitize::html($projects['total']));?>%</div>
 		              </div><!-- end indicator-bg -->
