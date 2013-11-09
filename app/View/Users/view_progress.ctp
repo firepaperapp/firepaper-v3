@@ -22,7 +22,7 @@
     <!--<div class="pagination"> <a href="#">Day</a><a href="#" class="active">Week</a><a href="#" >Month</a><a href="#">Year</a> </div>-->
    
     <div class="indicator-wrapper">
-    	<div class="left">
+    	
          <?php
         if(count($data)>0)
         {
@@ -64,7 +64,7 @@
         	echo NO_PROJECT_COMPLETED;	
         }
         ?>	 
-      </div> 
+       
         <?php
         if(count($data)>0)
         {?>
