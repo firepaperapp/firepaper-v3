@@ -1,4 +1,4 @@
-
+<div class="index">
     <h3>
     <?php
     if($user_id !=  $this->Session->read("userid"))
@@ -86,3 +86,4 @@
     	<div class="clr"></div>
         </div><!-- end indicator-wrapper -->
  	</div><!-- end activity -->
+ </div>
