@@ -44,7 +44,7 @@
 		            <?php
 		            foreach($rec['Project'] as $projects)
 		            {?>
-		            <div class="clr"></div>
+		            <div class="clr"></div>  
 		         	<p class="underline-link"><?php echo trim(Sanitize::html($projects['title']));?></p>
 		            <div class="indicator-holder">
 		              <div class="indicator-bg">
