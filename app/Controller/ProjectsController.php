@@ -661,6 +661,9 @@ class ProjectsController extends AppController {
      * By Admin, Educator, Department Leader OR Indiviual Educator
      */
     function addEditProject($project_id = 0) {
+	
+		$this->set("main_project_id",$project_id);
+	
         if ($project_id == 0) {
             $CreateProject['Project']['is_complete'] = 0;
             $this->Project->save($CreateProject);
