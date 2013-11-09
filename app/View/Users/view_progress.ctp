@@ -73,7 +73,7 @@
 		      <p class="title">Projects completed: <span><?php echo $noOfProjectCompleted;?></span></p>
 		      <p class="title">Projects late: <span><?php echo $lateProjects; ?></span></p>
 		      <div class="clr-spacer"></div>
-		      <h3>Overall Average</h3>
+		      <!--<h3>Overall Average</h3>
 		      <div class="indicator-holder">
 		        <div class="indicator-bg">
 		        <?php
@@ -81,7 +81,7 @@
 		        ?>
 		        <div class="indicator-bar" style="width:<?php echo $ttl;?>%"><?php echo $ttl;?>%</div></div>
 		          </div>
-		      </div><!-- right -->  
+		      </div> -->  
     	<?php } ?>
     	<div class="clr"></div>
         </div><!-- end indicator-wrapper -->
