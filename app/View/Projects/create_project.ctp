@@ -43,6 +43,11 @@ $(document).ready(function(){
 				
 	<h1>
 	<?php
+	
+	if($main_project_id==0)
+	{
+		echo '<style type="text/css">.dropTaskFileHere{display:none!important}</style>';
+	}	
  	if($project_id!=0)
 	{
 		 
@@ -51,7 +56,7 @@ $(document).ready(function(){
 	}
 	else
 	{
-		
+		echo '<style type="text/css">.dropTaskFileHere{display:none!important}</style>';
 		echo "Create a";
 		$mode = "add";
 	}
@@ -279,6 +284,7 @@ $(document).ready(function(){
 					<div class="width100Per" id="viewTskComments_<?php echo $rec['projectTask']['id'];?>_box" style="display:none;width:500px;">	
 				 	    
 					 </div>
+					
 					 <div id="loaderJsTask_<?php echo $rec['projectTask']['id']?>"></div>
 					 <table id="uploadRevison_<?php echo $rec['projectTask']['id']?>"></table>
  	  				<div class="dropTaskFileHere project-drop-area" id="task_<?php echo $rec['projectTask']['id']?>">
