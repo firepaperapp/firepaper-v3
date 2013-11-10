@@ -69,6 +69,10 @@
 		                <div class="indicator-bar" style="width:<?php echo $projects['total'];?>%"><?php echo trim(Sanitize::html($projects['total']));?>%</div>
 		              </div><!-- end indicator-bg -->
 		            </div>
+		            
+		            <div class="col-md-3">     
+                        <input type="text" value="50" class="knob second" data-thickness=".3" data-inputColor="#333" data-fgColor="#30a1ec" data-bgColor="#d4ecfd" data-width="140">
+                    </div>
 					<?php
 		            }?>		             
          		 </div><!-- end rightcol -->   
