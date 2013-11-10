@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>style.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH; ?>chart-showcase.css" /> 
 <title><?php echo ucfirst($this->Session->read("username")); ?></title>
 <meta name="keywords" content="<?php if (isset($metaKeyword)){ echo $metaKeyword; } ?>" />
 <meta name="description" content="<?php if (isset($metaDescription)) { echo $metaDescription; } ?>" />
@@ -30,8 +29,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.mouse.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>common.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-idleTimeout.js"></script>
-<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
-
+<script src="<?php echo JS_PATH;?>Chart.js"></script>
 <script type="text/javascript">
         
 $(document).ready(function(){
