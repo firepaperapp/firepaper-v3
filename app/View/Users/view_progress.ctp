@@ -71,12 +71,68 @@
 		            </div>
 		            
 		            <!-- Graph -->
-		           <div class="inline">
-                        <div class="easypiechart easyPieChart" data-percent="60" data-line-width="30" data-track-color="#eee" data-bar-color="#afcf6f" data-scale-color="#fff" data-loop="false" data-size="188" style="width: 188px; height: 188px; line-height: 188px;"> <span class="h2">60</span>%
-                            <div class="easypie-text">new visits</div>
-                            <canvas width="188" height="188"></canvas>
-                        </div>
-                    </div>
+		          <canvas id="canvas" height="200" width="200"></canvas>
+
+
+	<script>
+		
+		var doughnutData = [
+				{
+					value: 60,
+					color:"#F7464A"
+				},
+				{
+					value : 50,
+					color : "#46BFBD"
+				},/*
+				{
+					value : 100,
+					color : "#FDB45C"
+				},
+				{
+					value : 40,
+					color : "#949FB1"
+				},
+				{
+					value : 120,
+					color : "#4D5360"
+				}
+*/
+			
+			];
+			var doughnutOptions = {
+				segmentShowStroke : false,
+				animation : true,
+				segmentShowStroke : true,
+	
+				//String - The colour of each segment stroke
+				segmentStrokeColor : "#fff",
+				
+				//Number - The width of each segment stroke
+				segmentStrokeWidth : 2,
+				
+				//The percentage of the chart that we cut out of the middle.
+				percentageInnerCutout : 70,
+				
+				//Number - Amount of animation steps
+				animationSteps : 100,
+				
+				//String - Animation easing effect
+				animationEasing : "easeInOutQuart",
+				
+				//Boolean - Whether we animate the rotation of the Doughnut
+				animateRotate : true,
+			
+				//Boolean - Whether we animate scaling the Doughnut from the centre
+				animateScale : false,
+				
+				//Function - Will fire on animation completion.
+				onAnimationComplete : null
+}
+	var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData,doughnutOptions);
+	
+	</script>
+
 					<?php
 		            }?>		             
          		 </div><!-- end rightcol -->   
