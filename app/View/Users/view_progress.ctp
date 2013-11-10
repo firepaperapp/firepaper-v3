@@ -70,9 +70,38 @@
 		              </div><!-- end indicator-bg -->
 		            </div>
 		            
-		            <div class="col-md-3">     
-                        <input type="text" value="50" class="knob second" data-thickness=".3" data-inputColor="#333" data-fgColor="#30a1ec" data-bgColor="#d4ecfd" data-width="140">
-                    </div>
+		            <!-- Graph -->
+		            <canvas id="canvas" height="450" width="450"></canvas>
+		            
+		            <script>
+
+		var doughnutData = [
+				{
+					value: 30,
+					color:"#F7464A"
+				},
+				{
+					value : 50,
+					color : "#46BFBD"
+				},
+				{
+					value : 100,
+					color : "#FDB45C"
+				},
+				{
+					value : 40,
+					color : "#949FB1"
+				},
+				{
+					value : 120,
+					color : "#4D5360"
+				}
+			
+			];
+
+	var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+	
+	</script>
 					<?php
 		            }?>		             
          		 </div><!-- end rightcol -->   
