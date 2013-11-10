@@ -89,7 +89,7 @@ if($this->Session->check('Message.flash'))
 					}
 					else
 					{
-						echo "<p>Status:Approved</p>";
+						echo "<p>Status: Connected</p>";
 					}
 					
 				?>
