@@ -74,7 +74,46 @@
 		            <canvas id="canvas" height="250" width="250"></canvas>
 		            
 		            <script>
-var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+
+		var doughnutData = [
+				{
+					value: 30,
+					color:"#F7464A"
+				}
+				Doughnut.defaults = {
+		//Boolean - Whether we should show a stroke on each segment
+		segmentShowStroke : false,
+		
+		//String - The colour of each segment stroke
+		segmentStrokeColor : "#f4f4f4",
+		
+		//Number - The width of each segment stroke
+		segmentStrokeWidth : 0,
+		
+		//The percentage of the chart that we cut out of the middle.
+		percentageInnerCutout : 80,
+		
+		//Boolean - Whether we should animate the chart	
+		animation : true,
+		
+		//Number - Amount of animation steps
+		animationSteps : 100,
+		
+		//String - Animation easing effect
+		animationEasing : "easeIn",
+		
+		//Boolean - Whether we animate the rotation of the Doughnut
+		animateRotate : true,
+	
+		//Boolean - Whether we animate scaling the Doughnut from the centre
+		animateScale : false,
+		
+		//Function - Will fire on animation completion.
+		onAnimationComplete : null
+			
+			];
+
+		var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
 		
 		Doughnut.defaults = {
 		//Boolean - Whether we should show a stroke on each segment
@@ -107,15 +146,6 @@ var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).D
 		//Function - Will fire on animation completion.
 		onAnimationComplete : null
 }
-		var doughnutData = [
-				{
-					value: 30,
-					color:"#F7464A"
-				}
-			
-			];
-
-		
 	
 	</script>
 					<?php
