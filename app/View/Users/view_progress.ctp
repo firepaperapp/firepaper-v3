@@ -74,16 +74,7 @@
 		            <canvas id="canvas" height="250" width="250"></canvas>
 		            
 		            <script>
-
-		var doughnutData = [
-				{
-					value: 30,
-					color:"#F7464A"
-				}
-			
-			];
-
-		var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
 		
 		Doughnut.defaults = {
 		//Boolean - Whether we should show a stroke on each segment
@@ -116,6 +107,15 @@
 		//Function - Will fire on animation completion.
 		onAnimationComplete : null
 }
+		var doughnutData = [
+				{
+					value: 30,
+					color:"#F7464A"
+				}
+			
+			];
+
+		
 	
 	</script>
 					<?php
