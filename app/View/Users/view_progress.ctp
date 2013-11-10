@@ -78,11 +78,11 @@
 		
 		var doughnutData = [
 				{
-					value: 60,
+					value: 6,
 					color:"#F7464A"
 				},
 				{
-					value : 50,
+					value : 13,
 					color : "#46BFBD"
 				},/*
 				{
