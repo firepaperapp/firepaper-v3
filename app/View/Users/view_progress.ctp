@@ -71,7 +71,7 @@
 		            </div>
 		            
 		            <!-- Graph -->
-		            <canvas id="canvas" height="250" width="250"></canvas>
+		            <canvas id="canvas" background="#f4f4f4" height="250" width="250"></canvas>
 		            
 		            <script>
 
