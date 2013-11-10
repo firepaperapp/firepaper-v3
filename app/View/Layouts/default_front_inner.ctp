@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH; ?>chart-showcase.css" /> 
 <title><?php echo ucfirst($this->Session->read("username")); ?></title>
 <meta name="keywords" content="<?php if (isset($metaKeyword)){ echo $metaKeyword; } ?>" />
 <meta name="description" content="<?php if (isset($metaDescription)) { echo $metaDescription; } ?>" />
