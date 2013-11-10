@@ -32,6 +32,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-idleTimeout.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.knob.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script type="text/javascript">
         
 $(document).ready(function(){
