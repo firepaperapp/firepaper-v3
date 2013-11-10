@@ -29,7 +29,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.mouse.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>common.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-idleTimeout.js"></script>
-<script src="<?php echo JS_PATH;?>Chart.js"></script>
+<script src="<?php echo JS_PATH;?>Chart.js"></script> 
 <script type="text/javascript">
         
 $(document).ready(function(){
