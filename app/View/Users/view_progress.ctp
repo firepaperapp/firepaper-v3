@@ -71,53 +71,12 @@
 		            </div>
 		            
 		            <!-- Graph -->
-		            <canvas id="canvas" height="250" width="250"></canvas>
-		            
-		            <script>
-
-		var doughnutData = [
-				{
-					value: 30,
-					color:"#F7464A"
-				}
-			
-			];
-
-		var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
-		
-		Doughnut.defaults = {
-		//Boolean - Whether we should show a stroke on each segment
-		segmentShowStroke : true,
-		
-		//String - The colour of each segment stroke
-		segmentStrokeColor : "#f4f4f4",
-		
-		//Number - The width of each segment stroke
-		segmentStrokeWidth : 0,
-		
-		//The percentage of the chart that we cut out of the middle.
-		percentageInnerCutout : 70,
-		
-		//Boolean - Whether we should animate the chart	
-		animation : true,
-		
-		//Number - Amount of animation steps
-		animationSteps : 100,
-		
-		//String - Animation easing effect
-		animationEasing : "easeIn",
-		
-		//Boolean - Whether we animate the rotation of the Doughnut
-		animateRotate : true,
-	
-		//Boolean - Whether we animate scaling the Doughnut from the centre
-		animateScale : false,
-		
-		//Function - Will fire on animation completion.
-		onAnimationComplete : null
-}
-	
-	</script>
+		           <div class="inline">
+                        <div class="easypiechart easyPieChart" data-percent="60" data-line-width="30" data-track-color="#eee" data-bar-color="#afcf6f" data-scale-color="#fff" data-loop="false" data-size="188" style="width: 188px; height: 188px; line-height: 188px;"> <span class="h2">60</span>%
+                            <div class="easypie-text">new visits</div>
+                            <canvas width="188" height="188"></canvas>
+                        </div>
+                    </div>
 					<?php
 		            }?>		             
          		 </div><!-- end rightcol -->   
