@@ -96,7 +96,7 @@
 		segmentStrokeWidth : 0,
 		
 		//The percentage of the chart that we cut out of the middle.
-		percentageInnerCutout : 50,
+		percentageInnerCutout : 70,
 		
 		//Boolean - Whether we should animate the chart	
 		animation : true,
