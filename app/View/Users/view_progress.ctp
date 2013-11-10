@@ -71,7 +71,7 @@
 		            </div>
 		            
 		            <!-- Graph -->
-		            <canvas id="canvas" height="450" width="450"></canvas>
+		            <canvas id="canvas" height="250" width="250"></canvas>
 		            
 		            <script>
 
@@ -79,7 +79,8 @@
 				{
 					value: 30,
 					color:"#F7464A"
-				},
+				}/*
+,
 				{
 					value : 50,
 					color : "#46BFBD"
@@ -96,6 +97,7 @@
 					value : 120,
 					color : "#4D5360"
 				}
+*/
 			
 			];
 
