@@ -14,14 +14,32 @@
      <?php
     if(count($data)>0)
     {?>
-    <p>These are all the marked the projects that you have completed.</p>
-    <div class="clr-spacer"></div> 
-	<?php
-    }?>
+    
+	<?php } ?>
     
     <!--<div class="pagination"> <a href="#">Day</a><a href="#" class="active">Week</a><a href="#" >Month</a><a href="#">Year</a> </div>-->
    
     <div class="indicator-wrapper">
+    	
+    	 <?php
+        if(count($data)>0)
+        {?>
+		     <div class="right-report">
+		      <h3>Overall Week Report</h3>
+		      <p class="title">Projects completed: <span><?php echo $noOfProjectCompleted;?></span></p>
+		      <p class="title">Projects late: <span><?php echo $lateProjects; ?></span></p>
+		      <div class="clr-spacer"></div>
+		      <!--<h3>Overall Average</h3>
+		      <div class="indicator-holder">
+		        <div class="indicator-bg">
+		        <?php
+		        	$ttl = round(($overAllPrjctsMarks/$overAllPrjctsWeight)*100,2);	        	 
+		        ?>
+		        <div class="indicator-bar" style="width:<?php echo $ttl;?>%"><?php echo $ttl;?>%</div></div>
+		          </div>
+		      </div> -->  
+    	<?php } ?>
+    	<div class="clr"></div>
     	
          <?php
         if(count($data)>0)
@@ -31,12 +49,12 @@
          	 <div class="indicator">       
 		       
 		          	<h3><?php echo trim(Sanitize::html($rec['Subject']['title']));?></h3>
-		            <p class="title">Overall Mark:</p>
+		            <!--<p class="title">Overall Mark:</p>
 		            <div class="indicator-container">
 		              <div class="indicator-bg">
 		                <div class="indicator-bar" style="width:<?php echo $rec['overTtl'];?>%"><?php echo $rec['overTtl'];?>%</div>
-		              </div><!-- end indicator-bg -->
-		            </div><!-- end indicator-holder -->
+		              </div>
+		            </div> -->
 		         
 		          <div class="index">
 
@@ -65,25 +83,7 @@
         }
         ?>	 
        
-        <?php
-        if(count($data)>0)
-        {?>
-		     <div class="right-report">
-		      <h3>Overall Week Report</h3>
-		      <p class="title">Projects completed: <span><?php echo $noOfProjectCompleted;?></span></p>
-		      <p class="title">Projects late: <span><?php echo $lateProjects; ?></span></p>
-		      <div class="clr-spacer"></div>
-		      <!--<h3>Overall Average</h3>
-		      <div class="indicator-holder">
-		        <div class="indicator-bg">
-		        <?php
-		        	$ttl = round(($overAllPrjctsMarks/$overAllPrjctsWeight)*100,2);	        	 
-		        ?>
-		        <div class="indicator-bar" style="width:<?php echo $ttl;?>%"><?php echo $ttl;?>%</div></div>
-		          </div>
-		      </div> -->  
-    	<?php } ?>
-    	<div class="clr"></div>
+       
         </div><!-- end indicator-wrapper -->
  	</div><!-- end activity -->
  </div>
