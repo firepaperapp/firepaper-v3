@@ -80,36 +80,6 @@
 					value: 30,
 					color:"#F7464A"
 				}
-				Doughnut.defaults = {
-		//Boolean - Whether we should show a stroke on each segment
-		segmentShowStroke : false,
-		
-		//String - The colour of each segment stroke
-		segmentStrokeColor : "#f4f4f4",
-		
-		//Number - The width of each segment stroke
-		segmentStrokeWidth : 0,
-		
-		//The percentage of the chart that we cut out of the middle.
-		percentageInnerCutout : 80,
-		
-		//Boolean - Whether we should animate the chart	
-		animation : true,
-		
-		//Number - Amount of animation steps
-		animationSteps : 100,
-		
-		//String - Animation easing effect
-		animationEasing : "easeIn",
-		
-		//Boolean - Whether we animate the rotation of the Doughnut
-		animateRotate : true,
-	
-		//Boolean - Whether we animate scaling the Doughnut from the centre
-		animateScale : false,
-		
-		//Function - Will fire on animation completion.
-		onAnimationComplete : null
 			
 			];
 
@@ -117,7 +87,7 @@
 		
 		Doughnut.defaults = {
 		//Boolean - Whether we should show a stroke on each segment
-		segmentShowStroke : false,
+		segmentShowStroke : true,
 		
 		//String - The colour of each segment stroke
 		segmentStrokeColor : "#f4f4f4",
@@ -126,7 +96,7 @@
 		segmentStrokeWidth : 0,
 		
 		//The percentage of the chart that we cut out of the middle.
-		percentageInnerCutout : 80,
+		percentageInnerCutout : 50,
 		
 		//Boolean - Whether we should animate the chart	
 		animation : true,
