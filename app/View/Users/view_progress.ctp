@@ -71,14 +71,15 @@
 		            </div>
 		            
 		            <!-- Graph -->
-		            <canvas id="canvas" background="#f4f4f4" height="250" width="250"></canvas>
+		            <canvas id="canvas" height="250" width="250"></canvas>
 		            
 		            <script>
 
 		var doughnutData = [
 				{
 					value: 30,
-					color:"#F7464A"
+					color:"#F7464A",
+					background:"#f4f4f4"
 				}/*
 ,
 				{
