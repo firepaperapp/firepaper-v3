@@ -30,7 +30,7 @@
                     stack: true
                 },
                 grid: { hoverable: true, 
-                       clickable: true, 
+                       clickable: false, 
                        tickColor: "#f9f9f9",
                        borderWidth: 0
                     },
