@@ -30,6 +30,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.mouse.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>common.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery-idleTimeout.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.knob.js"></script>
 <script type="text/javascript">
         
