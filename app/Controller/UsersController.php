@@ -123,7 +123,7 @@ class UsersController extends AppController{
 		
 	}
 	
-	function step1($user_type="", $trialpack = 0)
+	function step1($user_type = null, $trialpack = 0)
 	{ 
  		if(isUserLoggedIn($this->Session, "userid"))
 		{
@@ -140,15 +140,19 @@ class UsersController extends AppController{
 		}
 		if(isset($this->request->data['User']) && count($this->request->data['User'])>0)
 		{
-			$capCode = $this->Session->read('ver_code');
+			//$capCode = $this->Session->read('ver_code');
 			$isErr = $this->User->validateUserForm($this->request->data['User'],$capCode);
 	 		if($isErr==0)						
 			{
- 				//User has successfully completed the sign up step1 process
-				//proceed to signup step2, it will be a https page later
-				$userData['registerUserData'] = $this->request->data['User'];
-				$this->Session->write($userData);
-				$this->redirect("/signup/step2");
+				
+				$this->request->data['User']['password']= md5($this->request->data['User']['password']);			$this->request->data['User']['totalspace']=100*1024*1024;	
+				$this->request->data['User']['status']=1;
+				if($this->User->create()){
+					$this->User->save($this->request->data);
+					$this->Session->setFlash('Your account has been created.');	
+					$this->redirect("/users/login");
+					
+				}
  			}
  		 	$this->set('errMsg',$this->User->errMsg);
 		}
