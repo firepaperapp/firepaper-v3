@@ -37,17 +37,8 @@ if(isset($errMsg))
     <p>Password<span class="mandatory">*</span></p>
     <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,"id"=>"password",'maxlength'=>'50','value'=>'','type'=>'password',  "tabindex"=>6));?> 
     <br />
-    <p>Time Zone<span class="mandatory">*</span></p>
-       <?php echo $this->Form->input('timezone',array('type'=>'select','div'=>false,'label'=>false,'options'=>$timezones,'id'=>"DropDownTimezone",'value'=>$defaultTimeZone, "tabindex"=>8));?>
-	<br />
-	<p> Verification</p>
-	<br />
-	<p>
-		<img src="<?php echo FILES_PATH_URL."captcha/".$captcha_src;?>" alt="captcha" />
-	</p>
-	  <br /><br />
-	<p>I accept terms and conditions<span class="mandatory">*</span></p><br />
- 	<p style="text-align:left;"><input type="checkbox" name="data[User][terms]" value="" tabindex="10" id="terms"/></p>
+    
+	
   </div>
   
 
@@ -55,16 +46,15 @@ if(isset($errMsg))
     <p>Last name<span class="mandatory">*</span></p>
   <?php echo $this->Form->input('lastname',array('div'=>false,'label'=>false,"id"=>"lastname",'maxlength'=>'50', "tabindex"=>3));?> 
     <br />
-	    <div class="spacer-form"></div>
+	    <div class="spacer-form" style="height:76px;"></div>
 	    <div class="clr"></div>
-    	<div class="tip"><p>This is what you use to sign in</p></div>
+    	<div class="tip" style="border:none; margin:0 0 13px 0;"><p>This is what you use to sign in</p></div>
    		 <p>Re-type password<span class="mandatory">*</span></p>
    		  <?php echo $this->Form->input('cpassword',array('div'=>false,'label'=>false,"id"=>"cpassword",'maxlength'=>'50','type'=>'password','value'=>'', "tabindex"=>7));?> 
   		  <div class="clr-spacer-form"></div>
-   		  <div class="tip"><p>Important for your project dates etc</p></div>
-   		  <p>Enter text shown on left<span class="mandatory">*</span></p>
+   		  
+   		  
    
-   	<?php echo $this->Form->input('sSecurityCode',array('div'=>false,'label'=>false,"id"=>"sSecurityCode",'maxlength'=>'20', "tabindex"=>9));?> 
     </div>
      
      <div class="clr"></div>
