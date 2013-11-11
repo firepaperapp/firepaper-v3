@@ -46,17 +46,17 @@
             $this->err = 1;
         }
 
-        if (!isset($postArray['timezone']) || empty($postArray['timezone'])) {
+       /* if (!isset($postArray['timezone']) || empty($postArray['timezone'])) {
             $this->errMsg[] = ERR_TIMEZONE_EMPTY;
             $this->err = 1;
-        }
-       if (!isset($postArray['sSecurityCode']) || empty($postArray['sSecurityCode'])) {
+        }*/
+       /*if (!isset($postArray['sSecurityCode']) || empty($postArray['sSecurityCode'])) {
             $this->errMsg[] = ERR_CAPTCHA_EMPTY;
             $this->err = 1;
         } elseif (strtolower($postArray['sSecurityCode']) != strtolower($capCode)) {
             $this->errMsg[] = ERR_WRONG_CAPTCHA_CODE;
             $this->err = 1;
-        }
+        }*/
         if ($this->err == 0) {
             //we will check do user with same email already exist in the db.
             $users = $this->find('all',
