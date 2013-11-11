@@ -9,6 +9,7 @@
 <body  style="margin:0 auto;background:#688A00" >
 
 		<div class="h10 fl w300"></div>
+        <?php echo $this->Session->flash();?>
 			<?php
 			echo $content_for_layout ?>
 		<div class="h20 fl w300"></div>
