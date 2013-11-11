@@ -4,6 +4,7 @@
   <div class="logo">
 	  
   </div>
+  
 </div>
 <div class="validation-signup" id="validation-container" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
 <?php
@@ -14,7 +15,8 @@ if(isset($errMsg))
 ?>
 </div>
 <form action="<?php echo SITE_HTTP_URL;?>login" method="post" id="login">
-<div class="main-signin">  
+<div class="main-signin"> 
+<?php echo $this->Session->flash();?>
 <h3>Sign into your account</h3>
 <br />
 <input type="text" <?php if(!$this->request->data){?> onfocus="if(this.value =='Username' ) this.value=''" onblur="if(this.value=='') this.value='Username'"  value="<?php echo $userCookieval;?>" <?php }else if ($this->request->data['username']=='') {?> value="<?php echo 'Username'; } else { echo $this->request->data['username']; } ?>" id="username" name="data[username]">
