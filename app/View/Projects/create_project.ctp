@@ -9,7 +9,13 @@
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.fileupload-ui.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH ?>jquery-ui.min.js"></script> 
+
 <!-- File Upload Progress bar End -->
+<script type="text/javascript" src="<?php echo JS_PATH;?>fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="<?php echo JS_PATH;?>fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+
+
 <div class="index white page">
 <div class="validation-signup" id="validation-container" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
 <?php
@@ -38,9 +44,16 @@ $(document).ready(function(){
 				buttonImageOnly: true
 		});
 		
+		   $("#addStudent").fancybox({
+			ajax : {
+			type	: "POST"
+			}
+		});
+		
 });
 </script>
-				
+		  <a id="addStudent" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/addUser/">
+		Add Student</a>		
 	<h1>
 	<?php
 	
