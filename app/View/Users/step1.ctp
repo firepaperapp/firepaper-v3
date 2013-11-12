@@ -31,6 +31,9 @@ if(isset($errMsg))
     <p>Email<span class="mandatory">*</span></p>
    <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,"id"=>"email",'maxlength'=>'150', "tabindex"=>4));?> 
     <br />
+     <p>School name</p>
+   <?php echo $this->Form->input('school_name',array('div'=>false,'label'=>false,"id"=>"school_name",'maxlength'=>'150', "tabindex"=>4));?> 
+   <br />
     <p>Username<span class="mandatory">*</span></p>
     <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,"id"=>"username",'maxlength'=>'150', "tabindex"=>5));?> 
     <br />
@@ -46,7 +49,7 @@ if(isset($errMsg))
     <p>Last name<span class="mandatory">*</span></p>
   <?php echo $this->Form->input('lastname',array('div'=>false,'label'=>false,"id"=>"lastname",'maxlength'=>'50', "tabindex"=>3));?> 
     <br />
-	    <div class="spacer-form" style="height:76px;"></div>
+	    <div class="spacer-form" style="height:143px;"></div>
 	    <div class="clr"></div>
     	<div class="tip" style="border:none; margin:0 0 13px 0;"><p>This is what you use to sign in</p></div>
    		 <p>Re-type password<span class="mandatory">*</span></p>
