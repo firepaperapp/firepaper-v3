@@ -52,8 +52,7 @@ $(document).ready(function(){
 		
 });
 </script>
-		  <a id="addStudent" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/addUser/">
-		Add Student</a>		
+		
 	<h1>
 	<?php
 	
@@ -465,6 +464,8 @@ $(document).ready(function(){
 			<?php
 			}    
 		 	?>
+			  <a id="addStudent" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/addUser/">
+		Add Student</a>		
 		 
   
   	<div class="clr-spacer-height"></div>
