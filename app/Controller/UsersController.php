@@ -148,9 +148,22 @@ class UsersController extends AppController{
 				$this->request->data['User']['password']= md5($this->request->data['User']['password']);			$this->request->data['User']['totalspace']=100*1024*1024;	
 				$this->request->data['User']['status']=1;
 				if($this->User->create()){
-					$this->User->save($this->request->data);
-					$this->Session->setFlash('Your account has been created.');	
-					$this->redirect("/users/login");
+					if($this->User->save($this->request->data)){
+						$id = $this->User->getInsertID();
+						$this->request->data['User']['id'] = $id;
+						$userInfo = $this->User->findByid($id);
+						//print_r($userInfo);exit;
+						$this->loginSessionSet($userInfo['User']);
+						$this->redirect("/users/login");
+						//$this->redirect(array('controller' => 'users', 'action' => 'dashboard'));
+					 //$this->Auth->login($this->request->data);
+					}
+					else
+					{
+						$this->Session->setFlash('Your account has been created.');	
+					}
+					
+					//$this->redirect("/users/login");
 					
 				}
  			}

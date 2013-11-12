@@ -301,13 +301,26 @@ class AppController extends Controller {
 	function loginSessionSet($loginUser)
 	{	
 	 	$this->Session->write("user_type",$loginUser['user_type_id']);
+		if($loginUser['sitetitle']){
 	 	$this->Session->write("sitetitle",$loginUser['sitetitle']);
+		}
 	 	$this->Session->write("userid",$loginUser['id']);
 		$this->Session->write("firstname",$loginUser['firstname']);
 		$this->Session->write("lastname",$loginUser['lastname']);
 		$this->Session->write("email",$loginUser['email']);
-		$this->Session->write("profilepic",$loginUser['profilepic']); 
-		$this->Session->write("cansignup",$loginUser['cansignup']); 
+		if($loginUser['profilepic']){
+		$this->Session->write("profilepic",$loginUser['profilepic']);
+		}
+		if(!empty($loginUser['cansignup'])){
+			$cansignup = $loginUser['cansignup'];
+		}else{
+			$cansignup = '55';
+		}
+		 
+		
+			$this->Session->write("cansignup", $cansignup);
+		
+		 
 		$this->Session->write("username",$loginUser['username']); 
 		$this->Session->write("adminsIDStr", isset($loginUser['adminsIDStr'])?$loginUser['adminsIDStr']:""); 
 	 	$this->Session->write("admin_id",$loginUser['admin_id']); 
