@@ -450,7 +450,7 @@ $(document).ready(function(){
 		<?php }?>
         </form>
         <div class="clr-spacer-height"></div>
-            <?php
+          <p>  <?php
 		    if(isset($data['Project']['published']) && $data['Project']['published']==1)
 		    {?>
 		    	<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(1);">Send project</a>
@@ -458,15 +458,15 @@ $(document).ready(function(){
 		    }
 			else 
 			{?>
-			<p>	<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(0);">Save in drafts</a> 
+				<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(0);">Save in drafts</a> 
 				<a href="javascript:void(0);" class="submit" onclick="saveProjFormH(1);">Send project</a>	
-			</p>
+			
 			<?php
 			}    
 		 	?>
 			  <a id="addStudent" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/addUser/">
 		Add Student</a>		
-		 
+		 </p>
   
   	<div class="clr-spacer-height"></div>
   	</div>	
