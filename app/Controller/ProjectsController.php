@@ -1722,28 +1722,28 @@ class ProjectsController extends AppController {
         $joins = "";
         $this->set("showdelLink", '');
         $this->set("draft", $draft);
-        if ($this->Session->read('user_type') == 1 || $this->Session->read('user_type') == 7 || $this->Session->read('user_type') == 3) {
-            $admin_id = $this->getAdminId();
-            $filters = "Project.admin_id= " . $admin_id . " AND ";
-            $this->set("showdelLink", 'Y');
-        }
-        if ($this->Session->read('user_type') == 2) {
-            $filters = "Project.leader_id=" . $this->Session->read('userid') . " AND ";
-        }
-
-        if ($this->Session->read('user_type') == 4 || $this->Session->read('user_type') == 5) {
-            $joins = array(
-                array(
-                    "type" => "inner",
-                    "table" => "project_students",
-                    "alias" => "projectStudent",
-                    "conditions" => "Project.id = projectStudent.project_id AND projectStudent.user_id=" . $this->Session->read('userid')
-            ));
-        }
-        if (!isNull($draft))
-            $filters .= "  (Project.published=0) ";
-        else
-            $filters .= "  (Project.published=2) ";
+			if ($this->Session->read('user_type') == 1 || $this->Session->read('user_type') == 7 || $this->Session->read('user_type') == 3) {
+				$admin_id = $this->getAdminId();
+				$filters = "Project.admin_id= " . $admin_id . " AND ";
+				$this->set("showdelLink", 'Y');
+			}
+			if ($this->Session->read('user_type') == 2) {
+				$filters = "Project.leader_id=" . $this->Session->read('userid') . " AND ";
+			}
+	
+			if ($this->Session->read('user_type') == 4 || $this->Session->read('user_type') == 5) {
+				$joins = array(
+					array(
+						"type" => "inner",
+						"table" => "project_students",
+						"alias" => "projectStudent",
+						"conditions" => "Project.id = projectStudent.project_id AND projectStudent.user_id=" . $this->Session->read('userid')
+				));
+			}
+			if (!isNull($draft))
+				$filters .= "  (Project.published=0) ";
+			else
+				$filters .= "  (Project.published=2) ";
 
         $projectChars = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "all");
         $selectedChar = "all";
@@ -1777,6 +1777,7 @@ class ProjectsController extends AppController {
 
             exit;
         }
+		
         ################## End Delete a Project ############################
         ################## Start Setting Search Parameters ############################
 
@@ -1785,7 +1786,7 @@ class ProjectsController extends AppController {
             $selectedChar = $this->request->params['form']['title'];
         }
         ################## END Setting Search Parameters ############################   
-
+		if($joins<>""){
         $data = $this->Project->find('all', array(
             "conditions" => $filters,
             "fields" => "Project.id, Project.title, Project.admin_id",
@@ -1794,10 +1795,23 @@ class ProjectsController extends AppController {
             "group" => "Project.id"
                 )
         );
+		}
+		else
+		{
+			$data = $this->Project->find('all', array(
+            "conditions" => $filters,
+            "fields" => "Project.id, Project.title, Project.admin_id",
+            "order" => "Project.title",
+            "group" => "Project.id"
+                )
+        );
+			
+		}
 
         $goList = array();
         //we will make an array with a-z corresponding to their projects
         $i = 1;
+		if($data)
         foreach ($data as $rec) {
             $firstChar = substr($rec['Project']['title'], 0, 1);
             if (in_array(strtolower($firstChar), $projectChars)) {
@@ -1810,6 +1824,7 @@ class ProjectsController extends AppController {
             }
         }
         //die; 
+		
         $this->set("projectChars", $projectChars);
         $this->set("selectedChar", $selectedChar);
         $this->set('data', $goList);
