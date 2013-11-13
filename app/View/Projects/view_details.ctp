@@ -160,7 +160,7 @@
 					<!-- HTML END To add a Comment for user task Doc -->
 					
 					
-					<div class="width100Per" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
+					<div class="width100Per" style="display:none" id="viewTskComments_<?php echo $rec['prjTask']['id'];?>_box">	
 				 
 				</div>				
 				
