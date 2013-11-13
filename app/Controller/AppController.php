@@ -96,7 +96,7 @@ class AppController extends Controller {
 		*/
 		
 		//echo "<pre />";
-		//print_r($this->Session->read('Auth'));
+		print_r($this->Session->read('Auth'));
 		//if ($this->Session->read("userid")) {
    		$departments = array();
    		$dueInCount = 0;
