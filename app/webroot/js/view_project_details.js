@@ -2,7 +2,7 @@ $(document).ready(function() {
 		$('.viewTskComments').live("click", function()
 		{	 
 		
-		alert("dddd");
+		
 			var myId = $(this).attr('id');
 			if($('#'+myId+"_box").css('display') == "none")
 			{
