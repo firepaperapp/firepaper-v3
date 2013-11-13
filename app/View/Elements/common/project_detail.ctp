@@ -25,12 +25,19 @@
 			<?php
 			
 			
-			
+						$counter=0;
                         $percentage_completed = 0;
                         if(count($tasks) > 0 )
                         {
+						//pr($tasks);
                             foreach($tasks as $list)
                             {
+							
+						
+							if($list["docs"]["complete_title"]<>"")
+							{
+								$counter++;
+							}
 								if(!isset($list['projectTask']))
 								{
 									$list['projectTask']=$list["prjTask"];
@@ -39,6 +46,10 @@
                               $percentage_completed += $list['projectTask']['weight'];
                             }
                          }
+						$val=$counter/count($tasks);
+						
+						$val=$val*100;
+						
 						// echo $howMuchCompleted;
 						
 			//if($isOwner == 0 && isset($howMuchCompleted))
@@ -47,7 +58,7 @@
 			*/
 			?>
 				<div class="completed-bubble" style="right: 122px;
-    top: 171px;"><span><?php echo $percentage_completed; // $howMuchCompleted;?>%</span> Completed</div>
+    top: 171px;"><span><?php echo $val; //$percentage_completed; // $howMuchCompleted;?>%</span> Completed</div>
 			<?php //}?>
 			<?php
 if(is_file(USER_IMAGES_URL.'100X100/'.$prjDetails['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$prjDetails['User']['profilepic']))
