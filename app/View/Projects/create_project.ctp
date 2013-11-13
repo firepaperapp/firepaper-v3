@@ -58,18 +58,23 @@ $(document).ready(function(){
 	
 	if($main_project_id==0)
 	{
+		echo "Create a";
 		echo '<style type="text/css">.dropTaskFileHere{display:none!important}</style>';
+	}
+	else
+	{
+			echo "Update";
 	}	
  	if($project_id!=0)
 	{
 		 
-		echo "Update";
+		//echo "Update";
 		$mode = "edit";
 	}
 	else
 	{
 		echo '<style type="text/css">.dropTaskFileHere{display:none!important}</style>';
-		echo "Create a";
+	//	echo "Create a";
 		$mode = "add";
 	}
 	?> Project</h1>
