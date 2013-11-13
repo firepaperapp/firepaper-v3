@@ -11,7 +11,7 @@ class Project extends AppModel {
 	  
 	   function getTasks($project_id, $userId, $getMarksAlso = 0)
 	   {
-	   	 	$stQuery = "SELECT DISTINCT prjTask.project_id, prjTask.title, prjTask.file_name, prjTask.weight, prjTask.id, fileType.icon,prjTask.refer_file_id,	prjTask.created,   		
+	   	 	$stQuery = "SELECT DISTINCT prjTask.project_id, prjTask.title, prjTask.file_name, prjTask.weight, prjTask.id, fileType.icon,prjTask.refer_file_id,	prjTask.created,  docs.title as complete_title, 		
 	   		 
 	   		(SELECT COUNT(id) FROM project_task_extra_docs WHERE project_task_extra_docs.task_id = prjTask.id)  as extraDocs,
 	   		(SELECT COUNT(id) FROM project_comments WHERE project_comments.task_id = prjTask.id
@@ -37,7 +37,7 @@ class Project extends AppModel {
 	   			$stQuery.=" LEFT JOIN project_student_task_marks as projectStudentTaskMark ON projectStudentTaskMark.task_id = prjTask.id and user_id = ".$userId." and projectStudentTaskMark.marked=1";	
 	   		}
 	   			
-	   			$stQuery.="
+	   			$stQuery.=" left join project_student_task_docs as docs on docs.task_id=prjTask.id
 	   					LEFT JOIN file_types as fileType ON fileType.id = prjTask.file_type_id
 	   					WHERE prjTask.project_id = ".$project_id." GROUP BY prjTask.id ORDER BY prjTask.id DESC";
 
