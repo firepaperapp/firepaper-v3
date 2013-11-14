@@ -146,13 +146,24 @@ class Project extends AppModel {
 	 	 		"table"=>"users",
 	 	 		"alias"=>"User",
 	 	 			"conditions"=>"User.id = Project.leader_id"
-	 	 		)  	
-	 	 	), 	 		 	 	
+	 	 		) ,
+			
+				
+	 	 	), 
+			"group"=>"Project.id",		 	 	
 	 	 	"limit"=>"10"
 	 	 	);
 	 	 	return $currentProjects;
 	  }
 	  
+	  
+	   function getProjectCompleted($project_id)
+	  {
+	  
+	  	$stQuery=" select count(distinct tasks.id) as total,count(distinct docs.task_id) as task_count from projects left join project_tasks as tasks on tasks.project_id=projects.id left join project_student_task_docs as docs on docs.project_id=projects.id and tasks.id=docs.task_id  where projects.id=".$project_id." limit 1";
+	  	$data = $this->query($stQuery);
+	   		return $data;
+	  }
 	  
 }
 ?>
