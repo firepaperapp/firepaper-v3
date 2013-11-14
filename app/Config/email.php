@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * This is email configuration file.
  *
@@ -65,7 +65,7 @@ class EmailConfig {
 	);
 
 	public $fast = array(
-		'from' => 'you@localhost',
+		'from' => 'info@firepaperapp.com',
 		'sender' => null,
 		'to' => null,
 		'cc' => null,
