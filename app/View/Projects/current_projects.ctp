@@ -24,8 +24,19 @@ $(document).ready(function(){
 				$b = "blue";
 				$currDate = date("Y-m-d");
 				$tom = date("Y-m-d", strtotime("+1 DAY"));$i=1;
+				
+			
 				foreach ($data as $rec)
-				{	
+				{		
+				
+					$result=$this->requestAction("/Dashboard/getComplete_list/".$rec["Project"]["id"]);
+					
+					$total_tasks=$result[0][0]["total"];
+					$completed=$result[0][0]["task_count"];
+					
+					$per_complete=(($completed/$total_tasks)*100);
+					
+					
 					$date = date("Y-m-d", strtotime($rec['Project']['duedate']));
 					if($preDate != $date)
 					{
@@ -73,10 +84,10 @@ $(document).ready(function(){
 <!-- Progress bar -->
 <?php //echo "<pre>"; print_r($rec);die;?>
 	<div class="progressbg">
-		<div class="progressBar" style="width:<?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
+		<div class="progressBar" style="width:<?php echo  $per_complete// $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
 	</div>
 	<div class="completed-bubble">
-		<span><?php echo $rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
+		<span><?php echo $per_complete //$rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
 		<?php
 			if($owner == 1)
 				echo "Weight";
