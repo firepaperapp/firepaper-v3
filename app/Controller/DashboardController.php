@@ -71,6 +71,12 @@ class DashboardController  extends AppController{
 	 * @returns NULL
 	 */
 
+	function getComplete_list($project_id)
+	{
+		$data=$this->Project->getProjectCompleted($project_id);
+		return $data;
+	}
+
 	function index(){ 
 		
 		//echo "i am here in Index - dashboard"; exit;
