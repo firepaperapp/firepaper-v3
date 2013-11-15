@@ -7,6 +7,10 @@
 <script type="text/javascript" src="<?php echo JS_PATH; ?>plupload/plupload.full.js"></script>
 
 <?php
+
+$userdata=$userdata2;
+
+
 if(is_file(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$userdata['User']['profilepic']))
 {
 	$userimage = USER_IMAGES_PATH.'100X100/'.$userdata['User']['profilepic'];
@@ -104,7 +108,11 @@ else
 					    });
 					});
 					</script>
-                    <?php } ?> 
+                    <?php }
+					
+					
+					
+					 ?> 
                 </div>
                 <div class="info">
                          <div id="successcontainer" class="success" style="display:none;"></div>
