@@ -591,6 +591,7 @@ class UsersController extends AppController{
     		$this->Session->destroy();
     		$this->redirect("/login");
 		}
+		session_destroy();
 		if(defined("HTTP_HOST"))
 		
 			$this->redirect('http://www.'.HTTP_HOST);	
@@ -631,11 +632,15 @@ class UsersController extends AppController{
 			$this->set('createdbyarr',$createdbyarr);
  			//check that logged in  user is creator of the id passed from url
 	 		$createdby = $createdbyarr['User']['created_by'];
+			
+			
+			
  			$IdArr = explode(',', $this->Session->read('adminsIDStr'));
  			for($i=0;$i<count($IdArr);$i++)
 			{
 				if($createdby==$IdArr[$i])
 				{
+					
 					$this->set('showlinks','Y');
 					break;
 				}
@@ -644,6 +649,10 @@ class UsersController extends AppController{
 					$this->set('showlinks','N');
 				}
 			}			
+			
+			
+			
+			
 	 		$loggeduserid =$this->Session->read('userid');
 			if($this->Session->read('user_type')==1 || $this->Session->read('user_type')==7 )
 			{
@@ -655,7 +664,7 @@ class UsersController extends AppController{
 														)
 										  );
  			$this->set('userid',$id);
-			if(!empty($createdusers))
+			/*if(!empty($createdusers))
 			{
 				foreach($createdusers as $value)
 				{
@@ -674,7 +683,13 @@ class UsersController extends AppController{
 			{ 
 				$this->set('showedit','N');
 				
-			}
+			}*/
+			
+			if($this->Session->read('userid')==$createdbyarr['User']['id'])
+					$this->set('showedit','Y');
+			else	
+				$this->set('showedit','N');
+			
 			$userid =$id;
 			
 		}
@@ -709,7 +724,7 @@ class UsersController extends AppController{
 				)
 		 	));
 		}		 
-		$this->set('userdata',$userdata);	
+		$this->set('userdata2',$userdata);	
 		$this->set('groups',$groups);	
  		$this->layout = "default_front_inner";
 	}
