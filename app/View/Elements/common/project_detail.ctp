@@ -29,8 +29,9 @@
                         $percentage_completed = 0;
                         if(count($tasks) > 0 )
                         {
-						//pr($tasks);
-                            foreach($tasks as $list)
+						
+                 
+						    foreach($tasks as $list)
                             {
 							
 						
@@ -53,13 +54,23 @@
 						// echo $howMuchCompleted;
 						
 			//if($isOwner == 0 && isset($howMuchCompleted))
-			/*if($isOwner == 0)
+	/*	if($isOwner == 0)
 			{
-			*/
+				*/
+			if($data["Project"]["admin_id"]<>$this->Session->read("userid")){
+			
+			if(strstr($val,"."))
+			{
+				$val= number_format($val, 1, '.', '');
+			}
+			
 			?>
 				<div class="completed-bubble" style="right: 122px;
     top: 171px;"><span><?php echo $val; //$percentage_completed; // $howMuchCompleted;?>%</span> Completed</div>
-			<?php //}?>
+			<?php
+			
+			}
+			 //}?>
 			<?php
 if(is_file(USER_IMAGES_URL.'100X100/'.$prjDetails['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$prjDetails['User']['profilepic']))
 {
