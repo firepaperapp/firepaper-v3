@@ -61,7 +61,7 @@
 		<li><a href="<?php echo SITE_HTTP_URL."users/mystudents";?>" alt="Students" ><span>Students</span> <i class="students-icon">👥</i></a></li>
 	<?php } ?> 
 	<h4>Projects</h4>
-	<?php if(in_array($this->Session->read('user_type'), array(4,5))) { ?>
+	<?php if(in_array($this->Session->read('user_type'), array(3,4,5))) { ?>
 		<li><a href="<?php echo SITE_HTTP_URL."users/viewProgress"?>" alt="My Progress" ><span>My Progress</span> <i class="progress-icon">📈</i></a></li>
 	<?php } 
 		 if($usertype==1) { ?>
