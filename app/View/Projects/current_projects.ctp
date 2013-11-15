@@ -25,7 +25,7 @@ $(document).ready(function(){
 				$currDate = date("Y-m-d");
 				$tom = date("Y-m-d", strtotime("+1 DAY"));$i=1;
 				
-			
+		
 				foreach ($data as $rec)
 				{		
 				
@@ -82,19 +82,29 @@ $(document).ready(function(){
 	
 <!-- End bubble -->
 <!-- Progress bar -->
-<?php //echo "<pre>"; print_r($rec);die;?>
+<?php //echo "<pre>"; print_r($rec);die;
+	
+	if($rec["Project"]["admin_id"]<>$this->Session->read("userid"))
+	{
+	
+?>
 	<div class="progressbg">
 		<div class="progressBar" style="width:<?php echo  $per_complete// $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
 	</div>
 	<div class="completed-bubble">
 		<span><?php echo $per_complete //$rec[0]['completed']>0?$rec[0]['completed']:0;?>%</span>
 		<?php
+		
+	
 			if($owner == 1)
 				echo "Weight";
 				else 
 				echo "Completed";
 		?>
 	</div>
+	<?php
+	}
+	?>
 <!-- End Progress bar -->
 
 		<div class="project"><span class="<?php echo $b;?>"><?php echo $i;?></span>
