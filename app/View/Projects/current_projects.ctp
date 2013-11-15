@@ -87,6 +87,11 @@ $(document).ready(function(){
 	if($rec["Project"]["admin_id"]<>$this->Session->read("userid"))
 	{
 	
+	if(strstr($per_complete,"."))
+			{
+				$per_complete= number_format($per_complete, 1, '.', '');
+			}
+	
 ?>
 	<div class="progressbg">
 		<div class="progressBar" style="width:<?php echo  $per_complete// $rec[0]['completed']>0?$rec[0]['completed']:0;?>%;"></div>
