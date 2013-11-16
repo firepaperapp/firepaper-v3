@@ -3281,9 +3281,6 @@ p.field-title {
     margin-bottom: 16px;
 }
 
-.col-right .tip p {
-    color: #87C5C5;
-}
 
 .col-right .clr-spacer-form {
     height: 22px;
@@ -4119,10 +4116,6 @@ p.marginT10:after {
     margin-right: 12px;
 }
 
-.coleducator-left p, .col-right p {
-    font-style: italic;
-    margin-bottom: 8px;
-}
 
 .coleducator-left .input {
     height: 25px;
