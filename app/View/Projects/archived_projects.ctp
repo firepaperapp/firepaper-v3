@@ -8,7 +8,7 @@
     });
    
 </script>
-	 <div class="index white">
+	 <div class="index page white">
 	 	<!-- search Section start here -->
 	 	 <h3><?php
 	 		if(!isNull($draft))
@@ -24,11 +24,11 @@
 		<!-- search Section tart here -->
 		<!-- Inner Content List start -->
 		
-        	<div class="project-wrapper"> 
+        	
 				<div class="listingContent" id="content_archievedProjects">
 					
 				</div>
-			</div>
+			
 		</div>
 		<!-- Inner Content List end -->
 	
