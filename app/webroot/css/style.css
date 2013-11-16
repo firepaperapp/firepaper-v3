@@ -1792,8 +1792,11 @@ ul.list-activity li span {
 }
 .mark-icons {
 	font-family:'entypo';
-	font-size: 26px;
-	color: #c9c9c9;
+	font-size: 31px;
+	float: left;
+	margin-right: 10px;
+	color: #84d861;
+	line-height: 19px;
 }
 /* Project */
 
