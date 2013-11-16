@@ -1798,6 +1798,9 @@ ul.list-activity li span {
 	color: #84d861;
 	line-height: 19px;
 }
+.submitWithoutDoc {
+	margin-top: 12px;
+}
 /* Project */
 
 
