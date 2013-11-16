@@ -23,8 +23,8 @@
 		 </h3>   
 		<!-- search Section tart here -->
 		<!-- Inner Content List start -->
-		<div class="page-wrapper">
-        	<div class="page"> 
+		<div class="index white">
+        	<div class="project-wrapper"> 
 				<div class="listingContent" id="content_archievedProjects">
 					
 				</div>
