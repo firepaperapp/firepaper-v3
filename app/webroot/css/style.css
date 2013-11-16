@@ -851,12 +851,10 @@ button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	background: url(../images/nav-rpt.jpg) repeat-x; 
 }
 .header-signup { 
-	height:134px; 
-	width:495px; 
+	width:600px; 
 	margin:0 auto; 
 }
 .header-signin { 
-	height:134px; 
 	width:280px; 
 	margin:0 auto; 
 }
@@ -869,13 +867,7 @@ button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	position: absolute;
 	top:16px;
 }
-.header-signup h1, .header-signin h1 { 
-	color:#333333; 
-	font-weight:normal; 
-	padding-top:42px; 
-	margin-left:10px; 
-	text-shadow:0 1px white; 
-}
+
 .header h1 span, .header-signup h1 span, .header-signin h1 span { 
 	font-weight:bold;
 }
