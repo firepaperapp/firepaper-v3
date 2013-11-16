@@ -36,7 +36,7 @@ define('EMAIL_HOST','localhost');
 define('EMAIL_SMTP_AUTH','false');
 define('EMAIL_USERNAME','');
 define('EMAIL_PASSWORD','');
-define("ADMIN_NAME","uBundle");
+define("ADMIN_NAME","Firepaperapp");
 global $cardTypes, $defaultTimeZone, $videoArray, $filesArray;;
 $serviceLevels = array(1=>"Individual Account",2=>"Company");
 $phoneTypes = array(1=>"Mobile",2=>"Work Phone",3=>"Home Phone");
