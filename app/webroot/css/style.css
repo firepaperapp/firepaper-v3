@@ -639,11 +639,7 @@ select {
 	width: 100%; 
 	background: url(../images/nav-rpt.jpg) repeat-x; 
 }
-.header-signup { 
-	height:134px; 
-	width:495px; 
-	margin:0 auto; 
-}
+
 .header-signin { 
 	height:134px; 
 	width:280px; 
