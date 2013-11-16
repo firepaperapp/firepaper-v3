@@ -65,8 +65,7 @@ class HomeController extends AppController{
 		$userTypes = $this->UserType->find('list',
 			array(
 			"fields"=>"UserType.id, UserType.title",
-			"conditions"=>"UserType.cansignup = 1"));
-	 
+			"conditions" => array("UserType.cansignup = 1", "UserType.title <>" => 'Administrator')));
 		$this->set("userTypes", $userTypes); 
 	}
    
