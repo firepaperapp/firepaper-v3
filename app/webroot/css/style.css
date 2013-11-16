@@ -4109,11 +4109,8 @@ p.marginT10:after {
 
 
 .coleducator-left .input {
-    height: 25px;
-    width: 208px;
-    margin-bottom: 5px;
-    padding: 1px;
-    font-size: 13px;
+    width: 250px;
+    margin-bottom: 15px;
     color: #666;
 }
 

@@ -61,6 +61,6 @@ echo $this->Form->create('User', array('action'=>'verifyme/'.$user_data["User"][
      
      <div class="clr"></div>
    
-     <input name="" type="submit" value="VerifyMe" class="submit"/>
+     <input name="" type="submit" value="Verify Me" class="submit"/>
 </div>
 </form>
