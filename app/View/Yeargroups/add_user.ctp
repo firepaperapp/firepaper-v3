@@ -127,7 +127,7 @@ $(document).ready(function(){
 </script>
 
 <!--<div class="header-signup">-->
-  <h1>Invite Students</h1>
+  <h3>Invite Students</h3>
 <!--</div>-->
 
 <div class="validation-signup" id="validation-container_ad" style="display:none;"></div>
