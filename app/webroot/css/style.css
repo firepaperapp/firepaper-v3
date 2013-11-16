@@ -4149,7 +4149,10 @@ p.marginT10:after {
 .invite-box {
 	border: 1px solid #f4f4f4;
 	font-size: 12px;
-	padding: 8px 12px;
+	display: inline-block;
+	padding: 14px 18px;
+	width: 100%;
+	box-sizing: border-box;
 	margin-bottom: 20px;
 	margin-top: 15px;
 }
