@@ -839,7 +839,7 @@ button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	width:220px;
 }
 .main-signup {
-	width:500px; 
+	width:600px; 
 }
 .header { 
 	height: 52px; 
@@ -3218,18 +3218,18 @@ p.field-title {
 }
 
 .main-signup .url input {
-    height: 30px;
+    
     float: left;
-    width: 220px;
+    width: 264px;
     margin-right: 4px;
     text-align: right;
-    padding-right: 4px;
+  
     color: #666;
 }
 
 .col-left {
     float: left;
-    width: 220px;
+    width: 320px;
 }
 
 .col-left p, .col-right p {
@@ -3238,11 +3238,8 @@ p.field-title {
 }
 
 .col-left input {
-    height: 22px;
-    width: 208px;
+    width: 264px;
     margin-bottom: 18px;
-    padding: 4px;
-    font-size: 14px;
     color: #666;
 }
 
@@ -3264,11 +3261,9 @@ p.field-title {
 }
 
 .col-right input {
-    height: 22px;
-    width: 208px;
+
+    width: 264px;
     margin-bottom: 18px;
-    padding: 4px;
-    font-size: 14px;
     color: #666;
     margin-left: 16px;
 }
