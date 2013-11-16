@@ -163,24 +163,19 @@ $(document).ready(function(){
  ?>
            	 	<div class='no-projects widget'>
            	 	<h2>Welcome to Firepaperapp!</h2>
-           	 	<h3>First things first, create your class structures and student accounts</h3>
+           	 	<h3>First things first, invite your students</h3>
            	 	
-           	 	<p>These will be your mailing list groups, this will help when distributing your projects.</p>
            	 	
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Start creating groups</a>
            	 	<div class="clr-spacer"></div>
            	 	<h3>Next thing is to create your project!</h3>
-           	 	<p>All active project will be displayed here on your dashboard.</p>
+           	 	
            	 	<br />
            	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your project</a>
            	 	<div class="clr-spacer"></div> 
-           	 	
-           	 	
-           	 	<h3>Looks like you don't have any projects.</h3>
-           	 	<p>You have your own file storage area, keep everything in one area.</p>
-           	 	<br />
-           	 	<a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" class="submit" alt="View File area">View File area</a>
+           	 	<!--
+           	 	<a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" class="submit" alt="View File area">View File area</a>-->
            	 	
            	 	<div class="clr"></div>
             	 	<?php 
