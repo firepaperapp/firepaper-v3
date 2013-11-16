@@ -127,7 +127,7 @@ $(document).ready(function(){
 </script>
 
 <!--<div class="header-signup">-->
-  <h1 style="margin:10px">Add New Student</h1>
+  <h1>Invite Students</h1>
 <!--</div>-->
 
 <div class="validation-signup" id="validation-container_ad" style="display:none;"></div>
@@ -143,7 +143,7 @@ $(document).ready(function(){
 
 <?php echo $this->Form->create('User', array('type' => 'post','id'=>'educat')); ?>
 
-<div class="main-signup" id="maincontentdiv" style="margin-bottom:10px;">
+<div id="maincontentdiv" style="margin-bottom:10px;">
 
 	<div class="coleducator-left"> 
 
@@ -172,7 +172,7 @@ $(document).ready(function(){
 <?php echo $this->Form->create('User', array('type' => 'post','id'=>'ad_invite')); ?>
 <div id="bottomform" style="display:none">
 	<div id="label">
-		<h2>Student You are inviting</h2>
+		<h2><strong>Students You are inviting:</strong></h2>
 	</div>
 	
 	<div id="invite_show" class="clear">
@@ -180,7 +180,7 @@ $(document).ready(function(){
 	</div>
 	
 	
-	<input name="" type="submit" value="I have Done Invite Them" class="submit"/>
+	<input name="" type="submit" value="I am done inviting students" class="submit"/>
 	
 	
 </div>
