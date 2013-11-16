@@ -839,7 +839,7 @@ button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	width:220px;
 }
 .main-signup {
-	width:600px; 
+	width:572px; 
 }
 .header { 
 	height: 52px; 
@@ -3229,7 +3229,7 @@ p.field-title {
 
 .col-left {
     float: left;
-    width: 320px;
+    width: 290px;
 }
 
 .col-left p, .col-right p {
@@ -3253,7 +3253,7 @@ p.field-title {
 
 .col-right {
     float: left;
-    width: 220px;
+    width: 280px;
 }
 
 .col-right p {
@@ -3275,10 +3275,8 @@ p.field-title {
 }
 
 .col-right .tip {
-    background: url(../images/tip.gif) no-repeat;
-    width: 224px;
     height: 23px;
-    padding-top: 8px;
+    padding: 10px 14px;
     margin-left: 8px;
     margin-bottom: 16px;
 }

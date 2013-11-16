@@ -51,7 +51,7 @@ if(isset($errMsg))
     <br />
 	    <div class="spacer-form" style="height:143px;"></div>
 	    <div class="clr"></div>
-    	<div class="tip" style="border:none; margin:0 0 13px 0;"><p>This is what you use to sign in</p></div>
+    	<div class="tip"><p>This is what you use to sign in</p></div>
    		 <p>Re-type password<span class="mandatory">*</span></p>
    		  <?php echo $this->Form->input('cpassword',array('div'=>false,'label'=>false,"id"=>"cpassword",'maxlength'=>'50','type'=>'password','value'=>'', "tabindex"=>7));?> 
   		  <div class="clr-spacer-form"></div>
