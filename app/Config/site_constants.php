@@ -17,7 +17,7 @@ define("SITE_BASE_PATH", "/var/www/firepaperapp.com/dev/");
 
 // for localhost only
 //define("SITE_HTTP_URL", "http://localhost/firepaperapp/");
-define("SITE_HTTP_URL", "https://".$_SERVER['HTTP_HOST']."/dev/");
+define("SITE_HTTP_URL", "http://".$_SERVER['HTTP_HOST']."/dev/");
 define("IMAGES_PATH", SITE_HTTP_URL."app/webroot/images/");
 define("CSS_PATH", SITE_HTTP_URL."app/webroot/css/");
 define("JS_PATH", SITE_HTTP_URL."app/webroot/js/");
