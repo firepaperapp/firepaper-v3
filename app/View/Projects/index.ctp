@@ -14,7 +14,7 @@
 			?>
 	 		<?php echo $this->requestAction("/projects/getLatestProjects/".$dept_id); ?>	
 	 	 </div><!-- end left -->        
-	   <div class="right">
+	   <!--<div class="right">
 	     		<?php echo $this->requestAction("/projects/archived");?>     
-	 	</div><!-- end right -->
+	 	</div> -->
 	</div>
