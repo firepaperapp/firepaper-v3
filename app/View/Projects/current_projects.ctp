@@ -166,7 +166,7 @@ $(document).ready(function(){
            	 	<br />
            	 	<h3>First things first, invite your students</h3>
            	 	
-           	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Start creating groups</a>
+           	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Get started</a>
            	 	<div class="clr-spacer"></div>
            	 	<h3>Next thing is to create your project!</h3>
            	 	
