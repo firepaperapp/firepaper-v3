@@ -49,7 +49,7 @@ if(isset($errMsg))
     <p>Last name<span class="mandatory">*</span></p>
   <?php echo $this->Form->input('lastname',array('div'=>false,'label'=>false,"id"=>"lastname",'maxlength'=>'50', "tabindex"=>3));?> 
     <br />
-	    <div class="spacer-form" style="height:143px;"></div>
+	    <div class="spacer-form" style="height:187px;"></div>
 	    <div class="clr"></div>
     	<div class="tip">This is what you use to sign in</div>
    		 <p>Re-type password<span class="mandatory">*</span></p>
