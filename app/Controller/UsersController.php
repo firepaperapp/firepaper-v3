@@ -141,33 +141,39 @@ class UsersController extends AppController{
 		if(isset($this->request->data['User']) && count($this->request->data['User'])>0)
 		{
 			//$capCode = $this->Session->read('ver_code');
-			$isErr = $this->User->validateUserForm($this->request->data['User'],$capCode);
-	 		if($isErr==0)						
-			{
-				
-				$this->request->data['User']['password']= md5($this->request->data['User']['password']);			$this->request->data['User']['totalspace']=100*1024*1024;	
-				$this->request->data['User']['status']=1;
-				if($this->User->create()){
-					if($this->User->save($this->request->data)){
-						$id = $this->User->getInsertID();
-						$this->request->data['User']['id'] = $id;
-						$userInfo = $this->User->findByid($id);
-						//print_r($userInfo);exit;
-						$this->loginSessionSet($userInfo['User']);
-						$this->redirect("/users/login");
-						//$this->redirect(array('controller' => 'users', 'action' => 'dashboard'));
-					 //$this->Auth->login($this->request->data);
-					}
-					else
-					{
-						$this->Session->setFlash('Your account has been created.');	
-					}
+			if($this->request->data['User']['user_type_id'] == 3){
+				$isErr = $this->User->validateUserForm($this->request->data['User'],$capCode);
+				if($isErr==0)						
+				{
 					
-					//$this->redirect("/users/login");
-					
+					$this->request->data['User']['password']= md5($this->request->data['User']['password']);			$this->request->data['User']['totalspace']=100*1024*1024;	
+					$this->request->data['User']['status']=1;
+					if($this->User->create()){
+						if($this->User->save($this->request->data)){
+							$id = $this->User->getInsertID();
+							$this->request->data['User']['id'] = $id;
+							$userInfo = $this->User->findByid($id);
+							$this->loginSessionSet($userInfo['User']);
+							$this->redirect("/users/login");
+							//$this->redirect(array('controller' => 'users', 'action' => 'dashboard'));
+						 //$this->Auth->login($this->request->data);
+						}
+						else
+						{
+							$this->Session->setFlash('Your account has been created.');	
+						}
+						
+						//$this->redirect("/users/login");
+						
+					}
+				}else{
+					$this->set('errMsg',$this->User->errMsg);
 				}
- 			}
- 		 	$this->set('errMsg',$this->User->errMsg);
+			}else{ 
+				$this->redirect("/users/step1/3");
+			}
+			
+ 		 	
 		}
   		global $defaultTimeZone;
 		$timezones = $this->State->getTimeZones();
@@ -374,7 +380,6 @@ class UsersController extends AppController{
 					/*
                  	After successful login, user will be redirected to live calls page
                  	*/
-				//	print_r($_SESSION); exit;
 					$this->Session->setFlash(ACCOUNT_VALIDATED);
 					$this->redirect(SITE_HTTP_URL."dashboard");
 			}
