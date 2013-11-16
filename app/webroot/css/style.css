@@ -1491,7 +1491,7 @@ ul.list-activity li span {
 	background:#fff;
 	margin-left: 0px; 
 	margin-right: 0px;
-	margin-top: 18px;
+	margin-top: 28px;
  }
 .project-drop-area-wrapper a img {
 	position: absolute;
@@ -1518,7 +1518,7 @@ ul.list-activity li span {
 }
 .project-drop-area { 
 	position: relative;
-	padding:20px 25px 35px 25px; 
+	padding:8px 10px 23px 15px; 
 	background:#fcfcfc; 
 	border:1px dashed #abaaaa !important; 
 	color:#444; 
