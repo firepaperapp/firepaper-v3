@@ -79,7 +79,7 @@ if(count($taskDocs)>0)
 $url = isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:"";
 if($canChnage == 1 )//&& (false !==  strpos($url , 'projects/viewDetails/')))
 {?>
-<div style="border-style:solid !important;" class="dropFileHere marginT10 project-drop-area" id="drag_<?php echo $task_id;?>">
+<div class="dropFileHere marginT10 project-drop-area" id="drag_<?php echo $task_id;?>">
  	<!--<p>Drag a  new version here <span>--- or ---</span> 
  	 <a id="uploadfile_<?php echo $task_id;?>" name="data[userFile][uploadFile]" class="edit upload-link">Upload it</a> -->
  	<table id="filesDrag<?php echo $task_id;?>"></table>  
@@ -97,7 +97,7 @@ if($canChnage == 1 )//&& (false !==  strpos($url , 'projects/viewDetails/')))
 
 </div>
 
-<p class="marginT10">Or&nbsp;<a class="edit submitWithoutDoc" id="withoutdoctask_<?php echo $task_id;?>">Submit without document</a></p>		
+<p class="marginT10"><a class="edit submitWithoutDoc" id="withoutdoctask_<?php echo $task_id;?>">Complete this task</a></p>		
 <?php
 }?>
 <div class="clr">&nbsp;</div>
