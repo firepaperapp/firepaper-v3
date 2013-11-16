@@ -170,7 +170,7 @@ $(document).ready(function(){
            	 	<div class="clr-spacer"></div>
            	 	<h3>Next thing is to create your project!</h3>
            	 	
-           	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create your project</a>
+           	 	<a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" class="submit" alt="Create your first project">Create a project</a>
            	 	<div class="clr-spacer"></div> 
            	 	<!--
            	 	<a href="<?php echo SITE_HTTP_URL."files/getFiles"?>" class="submit" alt="View File area">View File area</a>-->
