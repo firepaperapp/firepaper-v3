@@ -31,7 +31,7 @@ $(document).ready(function()
 	  <div class="files-container">
 	    <div class="file-col1-wrapper">
 	      <div class="files-box-wrapper">
-	        <div class="files-box">
+	        
 	          <p class="title-files">Today <span><? print(Date("dS F Y")); ?></span></p>
 	          <?php
 	          if(isset($projects[0]))
@@ -62,7 +62,7 @@ $(document).ready(function()
 	          	echo "No projects submitted today.";
 			  }?>
 	          <div class="clr"></div>
-	        </div><!-- end files-box -->
+	        
 	      </div><!-- end files-box-wrapper -->
 	      <div class="files-box-wrapper">
 	        <div class="files-box">
