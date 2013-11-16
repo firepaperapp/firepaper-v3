@@ -143,7 +143,7 @@ $(document).ready(function(){
 
 <?php echo $this->Form->create('User', array('type' => 'post','id'=>'educat')); ?>
 
-<div id="maincontentdiv" style="margin-bottom:10px;">
+<div id="maincontentdiv" style="margin-bottom:10px; width:350px;">
 
 	<div class="coleducator-left"> 
 
