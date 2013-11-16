@@ -97,7 +97,7 @@ if($canChnage == 1 )//&& (false !==  strpos($url , 'projects/viewDetails/')))
 
 </div>
 
-<p class="marginT10"><a class="edit submitWithoutDoc submit" id="withoutdoctask_<?php echo $task_id;?>">Complete this task</a></p>		
+<p class="marginT10"><a class="submitWithoutDoc submit" id="withoutdoctask_<?php echo $task_id;?>">Complete this task</a></p>		
 <?php
 }?>
 <div class="clr">&nbsp;</div>
