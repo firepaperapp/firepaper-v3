@@ -162,7 +162,8 @@ $(document).ready(function(){
 			//echo "<div class='no-projects widget'><h2>".NO_RECENT_PROJECTS_FOUND;
  ?>
            	 	<div class='no-projects widget'>
-           	 	<h2>Welcome to Firepaperapp!</h2>
+           	 	<h2 style="color:#eb713c;">Welcome to Firepaperapp!</h2>
+           	 	<br />
            	 	<h3>First things first, invite your students</h3>
            	 	
            	 	
