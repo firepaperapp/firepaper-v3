@@ -5,7 +5,7 @@
 //$url = isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:"";
 if($canChnage == 1)//  && (false !==  strpos($url , 'projects/viewDetails/')))
 {?>
-<div class="version-documents projectTasks projectTasksHolder marginT10" id="mytick_<?php echo $task_id;?>_box" style="width: 300px;">	
+<div class="version-documents projectTasks projectTasksHolder marginT10" id="mytick_<?php echo $task_id;?>_box" style="width: 300px; margin-left:0px !important;">	
 	<form name="studSubmitTaskDocDrop<?php echo $view;?>_<?php echo $task_id;?>" id="studSubmitTaskDocDrop<?php echo $view;?>_<?php echo $task_id;?>" action="" method="post" onsubmit="return studentUploadDocTick<?php echo $view;?>(<?php echo $task_id;?>);">
 	  	<!-- end col-left -->
 		<div class="col-middle">
