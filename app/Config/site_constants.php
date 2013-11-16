@@ -23,7 +23,7 @@ define("CSS_PATH", SITE_HTTP_URL."app/webroot/css/");
 define("JS_PATH", SITE_HTTP_URL."app/webroot/js/");
 define("FILES_PATH", SITE_BASE_PATH."app/webroot/files/");
 define("FILES_PATH_URL", SITE_HTTP_URL."app/webroot/files/");
-define("SITE_NAME", "uBundle");
+define("SITE_NAME", "Firepaperapp");
 
 define('EMAIL_CONTENT_TYPE','text/html; charset=utf-8');
 define('EMAIL_FROM_ADDRESS',"info@firepaperapp.com");
