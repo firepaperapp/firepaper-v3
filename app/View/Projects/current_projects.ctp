@@ -183,7 +183,7 @@ $(document).ready(function(){
  				echo "</div>";
  			}
  			?> 
- 			<a href="<?php echo SITE_HTTP_URL?>projects/viewAllProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
+ 			<a href="<?php echo SITE_HTTP_URL?>projects/archivedProjects/<?php echo $dept_id?>" class="view-all-projects">View archived projects</a>
  			
 <!-- end Project bars --->
 		
