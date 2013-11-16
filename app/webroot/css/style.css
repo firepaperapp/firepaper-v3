@@ -839,7 +839,7 @@ button, .submit, .submit-grey, .sign-in, .logout, .action-button {
 	width:220px;
 }
 .main-signup {
-	width:572px; 
+	width:547px; 
 }
 .header { 
 	height: 52px; 
@@ -3229,7 +3229,7 @@ p.field-title {
 
 .col-left {
     float: left;
-    width: 290px;
+    width: 267px;
 }
 
 .col-left p, .col-right p {
@@ -3275,10 +3275,9 @@ p.field-title {
 }
 
 .col-right .tip {
-    height: 23px;
     padding: 10px 14px;
-    margin-left: 8px;
-    margin-bottom: 16px;
+    margin-left: 15px;
+    margin-bottom: 18px;
 }
 
 
