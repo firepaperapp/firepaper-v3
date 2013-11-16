@@ -17,7 +17,7 @@ define("SITE_BASE_PATH", "/var/www/firepaperapp.com/dev/");
 
 // for localhost only
 //define("SITE_HTTP_URL", "http://localhost/fireappwc/");
-define("SITE_HTTP_URL", "http://".$_SERVER['HTTP_HOST']."/dev/");
+define("SITE_HTTP_URL", "https://".$_SERVER['HTTP_HOST']."/dev/");
 define("IMAGES_PATH", SITE_HTTP_URL."app/webroot/images/");
 define("CSS_PATH", SITE_HTTP_URL."app/webroot/css/");
 define("JS_PATH", SITE_HTTP_URL."app/webroot/js/");
@@ -26,10 +26,10 @@ define("FILES_PATH_URL", SITE_HTTP_URL."app/webroot/files/");
 define("SITE_NAME", "uBundle");
 
 define('EMAIL_CONTENT_TYPE','text/html; charset=utf-8');
-define('EMAIL_FROM_ADDRESS',"nsberrow@gmail.com");
-define('EMAIL_ADMIN',"nsberrow@gmail.com");
-define('EMAIL_SUPPORT',"nsberrow@gmail.com");
-define('EMAIL_TO_ADDRESS',"nsberrow@gmail.com"); // for contact us form
+define('EMAIL_FROM_ADDRESS',"info@firepaperapp.com");
+define('EMAIL_ADMIN',"info@firepaperapp.com");
+define('EMAIL_SUPPORT',"info@firepaperapp.com");
+define('EMAIL_TO_ADDRESS',"info@firepaperapp.com"); // for contact us form
 define('EMAIL_FROM_NAME','Firepaperapp');
 define('EMAIL_METHOD','smtp');
 define('EMAIL_HOST','localhost');
