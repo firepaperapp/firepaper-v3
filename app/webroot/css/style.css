@@ -3309,6 +3309,9 @@ p.field-title {
 
 .validation-signup .errMsg {
     color: #f25e4f;
+    padding: 8px 12px;
+    width: 260px;
+    font-size: 13px;
     border: 1px solid #f19f97;
     background: #fef9f8;
     border-radius: 3px;
