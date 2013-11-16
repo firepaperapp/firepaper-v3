@@ -4146,7 +4146,13 @@ p.marginT10:after {
     float: left;
     width: 80%;
 }
-
+.invite-box {
+	border: 1px solid #f4f4f4;
+	font-size: 12px;
+	padding: 8px 12px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
 
 
 .whiteboard-comment {
