@@ -172,7 +172,6 @@ class UsersController extends AppController{
 			}else{ 
 				$this->redirect("/users/step1/3");
 			}
-			
  		 	
 		}
   		global $defaultTimeZone;
