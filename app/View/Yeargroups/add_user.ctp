@@ -36,7 +36,7 @@ $(document).ready(function(){
 		  var last_name=$('#lastname').val();
 		  var email=$('#email').val();
 			$('#bottomform').show();
-			$('#invite_show').prepend("<input type='hidden' name='data[User_table][firstname][]' value='"+first_name+"'><input type='hidden' name='data[User_table][lastname][]' value='"+last_name+"'><input type='hidden' name='data[User_table][email][]' value='"+email+"'><div class='clear main-signup' style='margin-top:5px'><div class='left' style='width:50%'>"+first_name+" &nbsp;"+last_name+"</div>		<div class='left' style='width:50%'>"+email+"</div></div>			").slideDown("500");	
+			$('#invite_show').prepend("<input type='hidden' name='data[User_table][firstname][]' value='"+first_name+"'><input type='hidden' name='data[User_table][lastname][]' value='"+last_name+"'><input type='hidden' name='data[User_table][email][]' value='"+email+"'><div class='clear' style='margin-top:5px'><div class='left' style='width:50%'>"+first_name+" &nbsp;"+last_name+"</div>		<div class='left' style='width:50%'>"+email+"</div></div>			").slideDown("500");	
 			
 			$('#loaderbox_adduser').hide();
 		
