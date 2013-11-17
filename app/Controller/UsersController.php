@@ -2,6 +2,7 @@
 App::uses('Sanitize', 'Utility');
 class UsersController extends AppController{
 
+
 	var $name = 'Users';
 	var $uses = array('User','State','Package','Country','Payment','Department','coadminGaurdian','projComments','Project','classgroupStudent', 'projectStudent','UserType');
 	var $layout = "default";
@@ -43,7 +44,7 @@ class UsersController extends AppController{
 		$this->Captcha =  new CaptchaComponent(new ComponentCollection()); //creating an object instance
 		$this->Captcha->controller = &$this; //assign this conroller(CaptchaController) object to its captcha object's controller property.
 		$this->set('captcha_src', $captcha_src=$this->Captcha->create()); //create a capthca and assign to a variable
-		
+	die("dddd");	
 		
 	}
 	
