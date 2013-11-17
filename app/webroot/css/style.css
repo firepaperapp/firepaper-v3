@@ -1959,7 +1959,7 @@ p.contact a:hover {
 	width: 100%;
 }
 #files-upload-form {
-	
+	z-index: 1000;
 }
 .files-container {
     margin-bottom: 10px;
@@ -3884,6 +3884,10 @@ a.r, input.r, button.r, .boxy a, .wbs_tag_addbutton {
 .dept-box { 
 	display: inline-block;
 	width: 100%;
+}
+.dept-box h4 {
+	margin-bottom: 5px;
+	margin-top: 5px;
 }
 .btn-holder a {
 	line-height: 40px;
