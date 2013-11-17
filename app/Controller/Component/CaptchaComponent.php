@@ -114,7 +114,7 @@ class CaptchaComponent extends Component
 					continue;
 				}
 			}
-
+die("ddd");
 			$img=imagecreatetruecolor($width, $height);
 			imagealphablending($img, true);
 			$white=imagecolorallocate($img, 255, 255, 255);
@@ -292,8 +292,7 @@ class CaptchaComponent extends Component
 		$this->controller->Session->write('oldcaptcha',$C_file);
 
 		fclose($fh);
-	echo FILES_PATH.'captcha/'.$C_file;
-	die();
+
 		return $C_file;	
 	}
 
