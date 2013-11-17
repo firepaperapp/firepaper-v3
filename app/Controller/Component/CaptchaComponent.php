@@ -286,8 +286,10 @@ class CaptchaComponent extends Component
 
 		
 		clearstatcache();
+		echo FILES_PATH.'captcha/'.$C_file;
+		die();
 		$fh = fopen(FILES_PATH.'captcha/'.$C_file,"w+"); 
-die("111");		chmod(FILES_PATH.'captcha/'.$C_file,0777);
+		chmod(FILES_PATH.'captcha/'.$C_file,0777);
 		@fwrite($fh,$image);
 		$this->controller->Session->write('oldcaptcha',$C_file);
 
