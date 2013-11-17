@@ -283,8 +283,7 @@ class CaptchaComponent extends Component
 				unlink(FILES_PATH.'captcha/'.$oldcaptcha);
 			}
 		}
-echo $this->controller->Session->check('oldcaptcha');
-		die("aaaa");
+
 		
 		clearstatcache();
 		$fh = fopen(FILES_PATH.'captcha/'.$C_file,"w+"); 
