@@ -73,7 +73,7 @@
 }
 
 .plupload_scroll .plupload_filelist {
-	height: 185px;
+	height: 85px;
 	background: #F5F5F5;
 	overflow-y: scroll;
 }
@@ -196,5 +196,5 @@ li.plupload_droptext {
 	vertical-align: middle;
 	border: 0;
 	font-size: 14px;
-	line-height: 165px;
+	line-height: 65px;
 }
