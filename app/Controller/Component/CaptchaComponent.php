@@ -114,7 +114,7 @@ class CaptchaComponent extends Component
 					continue;
 				}
 			}
-die("ddd");
+
 			$img=imagecreatetruecolor($width, $height);
 			imagealphablending($img, true);
 			$white=imagecolorallocate($img, 255, 255, 255);
@@ -270,7 +270,7 @@ die("ddd");
 			imagepng($img2);
 		}
 		$image = ob_get_clean();
-				
+			die("dddffg");	
 		$filename_prefix=md5($this->genPass().$this->RandPass()); 
 		$C_file= $filename_prefix.'.jpg';
 		
