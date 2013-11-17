@@ -42,8 +42,9 @@ class UsersController extends AppController{
     {
 		App::import("Component","Captcha"); //including captcha class
 		$this->Captcha =  new CaptchaComponent(new ComponentCollection()); //creating an object instance
-		die("dddd");
+		
 		$this->Captcha->controller = &$this; //assign this conroller(CaptchaController) object to its captcha object's controller property.
+		die("new");
 		$this->set('captcha_src', $captcha_src=$this->Captcha->create()); //create a capthca and assign to a variable
 
 			
