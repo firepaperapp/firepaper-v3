@@ -273,7 +273,8 @@ class CaptchaComponent extends Component
 				
 		$filename_prefix=md5($this->genPass().$this->RandPass()); 
 		$C_file= $filename_prefix.'.jpg';
-		
+		echo $this->Session->read('oldcaptcha');
+		die();
 		if($this->controller->Session->check('oldcaptcha'))	{
 			$oldcaptcha=$this->controller->Session->read('oldcaptcha');
 		}
@@ -284,13 +285,13 @@ class CaptchaComponent extends Component
 				unlink(FILES_PATH.'captcha/'.$oldcaptcha);
 			}
 		}
-echo FILES_PATH.'captcha/'.$C_file;
+
 		clearstatcache();
 		$fh = fopen(FILES_PATH.'captcha/'.$C_file,"w+"); 
 		chmod(FILES_PATH.'captcha/'.$C_file,0777);
 		@fwrite($fh,$image);
 		$this->controller->Session->write('oldcaptcha',$C_file);
-die("fkjdjds");
+
 		fclose($fh);
 
 		return $C_file;	
