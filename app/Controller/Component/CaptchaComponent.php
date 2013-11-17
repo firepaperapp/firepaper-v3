@@ -273,7 +273,7 @@ class CaptchaComponent extends Component
 				
 		$filename_prefix=md5($this->genPass().$this->RandPass()); 
 		$C_file= $filename_prefix.'.jpg';
-		echo $this->Session->read('oldcaptcha');
+		echo $this->controller->Session->read('oldcaptcha');
 		die();
 		if($this->controller->Session->check('oldcaptcha'))	{
 			$oldcaptcha=$this->controller->Session->read('oldcaptcha');
