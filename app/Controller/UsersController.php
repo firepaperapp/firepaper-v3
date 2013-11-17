@@ -125,7 +125,8 @@ class UsersController extends AppController{
 	
 	function step1($user_type = null, $trialpack = 0)
 	{ 
- 		if(isUserLoggedIn($this->Session, "userid"))
+	
+	die("dddd");	if(isUserLoggedIn($this->Session, "userid"))
 		{
 			if($this->Session->read("user_type")==6)
 			{
