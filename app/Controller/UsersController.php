@@ -176,7 +176,7 @@ class UsersController extends AppController{
  		 	
 		}
   		global $defaultTimeZone;
-		die("dddd");	
+	
 		$timezones = $this->State->getTimeZones();
  		$this->set("timezones",$timezones);
  		$this->set("trialpack",$trialpack);
