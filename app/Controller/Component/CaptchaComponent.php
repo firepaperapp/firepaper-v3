@@ -60,7 +60,7 @@ class CaptchaComponent extends Component
 		# JPEG quality of CAPTCHA image (bigger is better quality, but larger file size)
 		$jpeg_quality = 90;
 
-		echo $fontsdir_absolute= SITE_BASE_PATH.'app/webroot/'.$fontsdir;
+		$fontsdir_absolute= SITE_BASE_PATH.'app/webroot/'.$fontsdir;
 
 		if ($handle = opendir($fontsdir_absolute)) {
 			while (false !== ($file = readdir($handle))) { 
@@ -71,7 +71,7 @@ class CaptchaComponent extends Component
 			closedir($handle);
 		}	
 
-		pr($fonts);die;
+		//pr($fonts);die;
 	
 		$alphabet_length=strlen($alphabet);
 		
@@ -292,7 +292,8 @@ class CaptchaComponent extends Component
 		$this->controller->Session->write('oldcaptcha',$C_file);
 
 		fclose($fh);
-
+	echo FILES_PATH.'captcha/'.$C_file;
+	die();
 		return $C_file;	
 	}
 
