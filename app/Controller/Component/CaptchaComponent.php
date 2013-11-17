@@ -290,7 +290,7 @@ class CaptchaComponent extends Component
 		$fh = fopen(FILES_PATH.'captcha/'.$C_file,"w+"); 
 		chmod(FILES_PATH.'captcha/'.$C_file,0777);
 		@fwrite($fh,$image);
-		die("dddd");
+		
 		$this->controller->Session->write('oldcaptcha',$C_file);
 
 		fclose($fh);
