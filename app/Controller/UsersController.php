@@ -126,7 +126,7 @@ class UsersController extends AppController{
 	function step1($user_type = null, $trialpack = 0)
 	{ 
 	
-	die("dddd");	if(isUserLoggedIn($this->Session, "userid"))
+	if(isUserLoggedIn($this->Session, "userid"))
 		{
 			if($this->Session->read("user_type")==6)
 			{
@@ -176,6 +176,7 @@ class UsersController extends AppController{
  		 	
 		}
   		global $defaultTimeZone;
+		die("dddd");	
 		$timezones = $this->State->getTimeZones();
  		$this->set("timezones",$timezones);
  		$this->set("trialpack",$trialpack);
