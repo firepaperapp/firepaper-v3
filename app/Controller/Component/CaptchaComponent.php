@@ -19,7 +19,7 @@ class CaptchaComponent extends Component
 	}
 
 	function create()	{
-die("new111");
+
 		$alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"; # do not change without changing font files!
 
 		# symbols used to draw CAPTCHA
@@ -60,7 +60,7 @@ die("new111");
 		# JPEG quality of CAPTCHA image (bigger is better quality, but larger file size)
 		$jpeg_quality = 90;
 
-		$fontsdir_absolute= SITE_BASE_PATH.'app/webroot/'.$fontsdir;
+		echo $fontsdir_absolute= SITE_BASE_PATH.'app/webroot/'.$fontsdir;
 
 		if ($handle = opendir($fontsdir_absolute)) {
 			while (false !== ($file = readdir($handle))) { 
@@ -71,7 +71,7 @@ die("new111");
 			closedir($handle);
 		}	
 
-		//pr($fonts);die;
+		pr($fonts);die;
 	
 		$alphabet_length=strlen($alphabet);
 		
