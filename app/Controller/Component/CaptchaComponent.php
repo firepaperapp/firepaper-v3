@@ -19,7 +19,7 @@ class CaptchaComponent extends Component
 	}
 
 	function create()	{
-
+die("new111");
 		$alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"; # do not change without changing font files!
 
 		# symbols used to draw CAPTCHA
