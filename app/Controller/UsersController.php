@@ -44,7 +44,7 @@ class UsersController extends AppController{
 		$this->Captcha =  new CaptchaComponent(new ComponentCollection()); //creating an object instance
 		$this->Captcha->controller = &$this; //assign this conroller(CaptchaController) object to its captcha object's controller property.
 		$this->set('captcha_src', $captcha_src=$this->Captcha->create()); //create a capthca and assign to a variable
-	die("dddd");	
+
 		
 	}
 	
@@ -183,6 +183,7 @@ class UsersController extends AppController{
  		$this->set("trialpack",$trialpack);
  		$this->set("user_type",$user_type);
 		$this->set("defaultTimeZone",$defaultTimeZone);
+			die("dddd");	
 		$this->create_captcha();
 	}
 	/**
