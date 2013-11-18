@@ -70,7 +70,7 @@ class FilesController  extends AppController{
 							)
 					)
 				);
-		echo "<pre>";
+		echo "<pre>".$cur_id.' ';
 		print_r($spaceDetail);
 		die;
 		if(($spaceDetail['User']['usedspace'] > $spaceDetail['User']['totalspace']) &&  $spaceDetail['Package']['unlimited']!=1){
