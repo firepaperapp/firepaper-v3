@@ -51,7 +51,6 @@ class FilesController  extends AppController{
 		if($this->Session->read("admin_id") != 0){
 			$cur_id = $this->Session->read("admin_id");
 		}else{
-			die('212');
 			$cur_id = $this->Session->read("userid");
 		}
 
@@ -72,9 +71,6 @@ class FilesController  extends AppController{
 							)
 					)
 				);
-		echo "<pre>".$cur_id.' ';
-		print_r($spaceDetail);
-		die;
 		if(($spaceDetail['User']['usedspace'] > $spaceDetail['User']['totalspace']) &&  $spaceDetail['Package']['unlimited']!=1){
 			$this->set("space_full",'yes');
 		}else{
