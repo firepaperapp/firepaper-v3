@@ -54,7 +54,8 @@ class FilesController  extends AppController{
 			$cur_id = $this->Session->read("userid");
 		}
 
-	    //die;	
+		$this->set("space_full",'yes');
+		//die;	
 	    $this->set("id", $id);
    		$this->render("index");
 	}	
