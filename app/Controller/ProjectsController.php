@@ -1083,7 +1083,14 @@ class ProjectsController extends AppController {
         //		$filters ="( User.user_type_id = 5 OR User.user_type_id = 4) AND (User.status = 1 ) ";
         $dataGot = $this->User->find('all', array(
             "conditions" => $filters . " AND ( User.firstname like '" . add_Slashes($tag) . "%' OR User.firstname like '" . add_Slashes($tag) . "%' )",
-            "fields" => "User.id, User.firstname, User.lastname"
+            "fields" => "User.id, User.firstname, User.lastname",
+			"joins" => array(
+			array(
+                    "type" => "inner",
+                    "table" => "invites",
+                    "alias" => "invites",
+                    "conditions" => "invites.student_id =User.id AND invites.teacher_id=" . $this->Session->read('userid')
+            )),
         ));
         $i = 0;
         if (count($dataGot) > 0) {
