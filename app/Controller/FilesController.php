@@ -48,6 +48,35 @@ class FilesController  extends AppController{
 
 	function getFiles($id=0)
 	{ 
+		if($this->Session->read("admin_id") != 0){
+			$cur_id = $this->Session->read("admin_id");
+		}else{
+			$cur_id = $this->Session->read("userid");
+		}
+
+		$spaceDetail = $this->User->find(
+					"first",
+						array(
+							"conditions"=>"User.id = ".$cur_id, 
+							"fields"=>"totalspace, usedspace, Package.unlimited",
+							"joins"=>array(
+										array(
+											"type"=>"inner",
+											"table"=>"packages",
+											"alias"=>"Package",
+											"conditions"=>array(
+												"Package.id = User.package_id"
+											)
+									),
+							)
+					)
+				);
+		if(($spaceDetail['User']['usedspace'] > $spaceDetail['User']['totalspace']) &&  $spaceDetail['Package']['unlimited']!=1){
+			$this->set("space_full",'yes');
+		}else{
+			$this->set("space_full",'no');
+		}
+		unset($spaceDetail);
 	    //die;	
 	    $this->set("id", $id);
    		$this->render("index");
