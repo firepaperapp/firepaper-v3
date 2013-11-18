@@ -7,28 +7,10 @@
 <style type="text/css">@import url(<?php echo JS_PATH; ?>plupload/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>plupload/plupload.full.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>plupload/jquery.plupload.queue/jquery.plupload.queue.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.blockUI.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
 	showFiles();
-	$('#upload_file').click(function(){
-		if($('#space_used').val() == 'yes'){
-			$.blockUI({ message: $('.main_pop'),
-						css: { 
-							cursor:'default !important'
-				        }
-				});
-		}
-	});
-
-	$('.cancel').click(function(){
-		$.unblockUI();
-	});
-	$('.upgrade').click(function(){
-		$.unblockUI();
-	});
 });
 
 function showFiles() {
@@ -36,84 +18,82 @@ function showFiles() {
 }
 
 function showUploader() {
-	if($('#space_used').val() == 'no'){
-		if ($("#files-upload-form").css("display") == "none") {
-			$("#files-upload-form").css("display", "");
+	if ($("#files-upload-form").css("display") == "none") {
+		$("#files-upload-form").css("display", "");
 
-			$("#files-upload-form").css("position", "absolute");
-			$("#files-upload-form").css("width", "100%");
-			
-			function attachCallbacks(uploader) {
-				uploader.bind('BeforeUpload', function(up) {
-					up.settings.multipart_params.category_id = <?php echo (int) $id;?>
-				});
+		$("#files-upload-form").css("position", "absolute");
+		$("#files-upload-form").css("width", "100%");
+		
+		function attachCallbacks(uploader) {
+			uploader.bind('BeforeUpload', function(up) {
+				up.settings.multipart_params.category_id = <?php echo (int) $id;?>
+			});
 
-				uploader.bind('Error', function(up, err, result) {
-					try {
-						var data = $.parseJSON(result.response);
-						
-						if (data.error) {
-							alert(data.error);
-						} else {
-							alert(result.response);
-						}
-					} catch(e) {
-						alert(result.response);
-					}
-				});
-				
-				uploader.bind('FileUploaded', function(up, file, result) {
-					try {
-						var data = $.parseJSON(result.response);
-						
-						if (data.success) {
-							// do nothing, see Upload Complete
-						} else if (data.error) {
-							// display the error message
-							alert(data.error)
-						} else {
-							alert(result.response);
-						}
-					} catch(e) {
-						alert(result.response);
-					}
-				});
-							
-				uploader.bind('UploadComplete', function(up, file) {
-					$("#files-upload-form").css("display", "none");
-					showFiles();
-				});
-			}
-			
-			$("#uploader").pluploadQueue({
-				runtimes : 'html5,html4',
-				url : '<?php echo SITE_HTTP_URL;?>files/uploadFile',
-				multipart: true,
-				multipart_params: { 'category_id': <?php echo (int) $id;?>, 'simpleupload' : 1 },
-				file_data_name: 'uploadfile',
-				init: attachCallbacks
-			});
-			
-			$("#files-upload-form").submit(function(e) {
-				var uploader = $("#uploader").pluploadQueue();
-				
-				if (uploader.files.length > 0) {
-					uploader.bind('StateChanged', function() {
-						if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
-							$("#files-upload-form").submit();
-						}
-					});
-					
-					uploader.start();
-				} else {
-					alert("You must queue at least one file.");
-				}
-		 
-				return false;
-			});
-		} else {
-			$("#files-upload-form").css("display", "none");
-		}
+	 		uploader.bind('Error', function(up, err, result) {
+	 			try {
+		 			var data = $.parseJSON(result.response);
+		 			
+		 			if (data.error) {
+			        	alert(data.error);
+			        } else {
+			        	alert(result.response);
+			        }
+		        } catch(e) {
+		        	alert(result.response);
+		        }
+		    });
+		    
+		    uploader.bind('FileUploaded', function(up, file, result) {
+		    	try {
+			    	var data = $.parseJSON(result.response);
+			    	
+			    	if (data.success) {
+			    		// do nothing, see Upload Complete
+			        } else if (data.error) {
+			        	// display the error message
+			        	alert(data.error)
+			        } else {
+			        	alert(result.response);
+			        }
+			    } catch(e) {
+		        	alert(result.response);
+		        }
+		    });
+					    
+		    uploader.bind('UploadComplete', function(up, file) {
+		    	$("#files-upload-form").css("display", "none");
+		    	showFiles();
+		    });
+	 	}
+	 	
+	    $("#uploader").pluploadQueue({
+	        runtimes : 'html5,html4',
+	        url : '<?php echo SITE_HTTP_URL;?>files/uploadFile',
+	        multipart: true,
+	        multipart_params: { 'category_id': <?php echo (int) $id;?>, 'simpleupload' : 1 },
+	        file_data_name: 'uploadfile',
+	        init: attachCallbacks
+	    });
+	 	
+	    $("#files-upload-form").submit(function(e) {
+	        var uploader = $("#uploader").pluploadQueue();
+	 		
+	        if (uploader.files.length > 0) {
+	        	uploader.bind('StateChanged', function() {
+	                if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
+	                    $("#files-upload-form").submit();
+	                }
+	            });
+			    
+	            uploader.start();
+	        } else {
+	            alert("You must queue at least one file.");
+	        }
+	 
+	        return false;
+	    });
+	} else {
+		$("#files-upload-form").css("display", "none");
 	}
 }
 </script>
@@ -121,22 +101,16 @@ function showUploader() {
 <div class="white files index">
 	<div class="btn-container">
 			<div class="btn-holder">
-			<input type="button" value="Upload Files" class="submit" onclick="showUploader()" id="upload_file">
-			<input type="hidden" value="<?php if($space_full == 'yes'){echo 'yes';}else{ echo 'no';} ?>" id="space_used">
+			<input type="button" value="Upload Files" class="submit" onclick="showUploader()">
 			</div>
 			<div id="files-categories-box" class="files-categories-box">
 				<h4>Filters:</h4>
 				<ul><li><a href="#" onclick="window.location.reload(true);" alt="All">All</a></li><?php echo $this->requestAction("/files/getMyCategories"); ?></ul>
 			</div>
 			<div class="file-upload-area">
-				<form id="files-upload-form" style="display: none">
-					<div id="uploader"></div>
-			   </form>
-			</div>
-			<div class="upgrade_space">
-				<form id="upgrade_space" style="display: none">
-					<div id="uploader"></div>
-			   </form>
+			<form id="files-upload-form" style="display: none">
+				<div id="uploader"></div>
+		   </form>
 			</div>
 	</div>	
 			<table id="files">
@@ -145,7 +119,5 @@ function showUploader() {
 			<div id="content_files">
 			</div>
 </div> <! -- End white -->
-<div class="main_pop" style="display:none">
-	<br/>Please add more space to your account.<br/><br/>
-	<a class="btn-upgrade cancel" href="https://gum.co/QXnr" >Add more space</a>&nbsp;&nbsp;&nbsp;<a class="btn-upgrade cancel">Cancel</a><br/><br/>
-</div>
+
+
