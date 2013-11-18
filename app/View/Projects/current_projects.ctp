@@ -164,9 +164,13 @@ $(document).ready(function(){
            	 	<div class='no-projects widget'>
            	 	<h2 style="color:#eb713c;">Welcome to Firepaperapp!</h2>
            	 	<br />
-           	 	<h3>First things first, invite your students</h3>
+           	 	<h3>First things first, create a department and then a subject</h3>
            	 	
-           	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start creating groups">Start inviting</a>
+           	 	<a href="<?php echo SITE_HTTP_URL."departments";?>" class="submit" alt="Start creating groups">Create a department & subject</a>
+           	 	<div class="clr-spacer"></div>
+           	 	<h3>Then invite your students</h3>
+           	 	
+           	 	<a href="<?php echo SITE_HTTP_URL."yeargroups/viewgroups";?>" class="submit" alt="Start inviting">Start inviting</a>
            	 	<div class="clr-spacer"></div>
            	 	<h3>Next thing is to create your project!</h3>
            	 	
