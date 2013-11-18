@@ -349,7 +349,17 @@ function createTaskEmpty()
 }
 function saveProjFormH(status)
 {
-	if($('#tasksCount').val() == 0)
+	if($('#projectTitle').val() == 0){
+		alert('Please enter a project title.');
+	}else if($('#projectDesc').val() == 0){
+		alert('Please enter project description.');
+	}else if($('#duedate').val() == 0){
+		alert('Please select a due date.');
+	}else if($('#subject_id').val() == 0){
+		alert('Please select a subject.');
+	}else if($('#leader_id').val() == 0){
+		alert('Please select an owner.');
+	}else if($('#tasksCount').val() == 0)
 	{
 		alert("Please create any task.");	
 	}
@@ -360,9 +370,7 @@ function saveProjFormH(status)
 	else if( $('#comment_project').length!=0 &&  $.trim($('#comment_project').val()) == "")
 	{
 		alert("Please enter the changes that you have made.");
-	}
-	else
-	{
+	}else{
         $("#customstatus").val(status);
 		$.ajax({
             type: "POST",
