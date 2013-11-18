@@ -4275,3 +4275,22 @@ p.marginT10:after {
 	}
 
 }
+
+.btn-upgrade, .btn-cancel{
+	cursor: pointer;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
+	box-shadow: 0 2px 3px 0 rgba(170,170,170,0.1);
+	height: 32px;
+	line-height: 32px;
+	padding: 0 15px;
+	border: 1px solid #cbcbcb;
+	color: #bfbfbf;
+	font-weight: normal;
+	margin-right: 5px;
+	font-size: 14px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	cursor:pointer;
+}
