@@ -56,7 +56,7 @@ class FilesController  extends AppController{
 
 		$this->set("space_full",'yes');
 		//die;	
-	    $this->set("id", $id);
+		$this->set("id", $id);
    		$this->render("index");
 	}	
 
