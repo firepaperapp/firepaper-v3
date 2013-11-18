@@ -857,7 +857,7 @@ class FilesController  extends AppController{
 						}
 					}
 					if(!file_exists($uploads_strt_dir.$uploads_dir))
-					{  
+					{ echo $uploads_strt_dir.$uploads_dir; 
 						mkdir($uploads_strt_dir.$uploads_dir);
 					}
 					
