@@ -49,10 +49,12 @@ class FilesController  extends AppController{
 	function getFiles($id=0)
 	{ 
 		if($this->Session->read("admin_id") != 0){
+			die('212');
 			$cur_id = $this->Session->read("admin_id");
 		}else{
 			$cur_id = $this->Session->read("userid");
 		}
+
 		$spaceDetail = $this->User->find(
 					"first",
 						array(
