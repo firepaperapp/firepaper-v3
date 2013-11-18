@@ -71,7 +71,9 @@ class FilesController  extends AppController{
 							)
 					)
 				);
-		if(($spaceDetail['User']['usedspace'] > $spaceDetail['User']['totalspace']) &&  $spaceDetail['Package']['unlimited']!=1){
+		if(($spaceDetail['User']['usedspace'] > 
+			$spaceDetail['User']['totalspace'])
+			&&  $spaceDetail['Package']['unlimited']!=1){
 			$this->set("space_full",'yes');
 		}else{
 			$this->set("space_full",'no');
