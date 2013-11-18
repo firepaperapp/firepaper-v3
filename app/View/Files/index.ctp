@@ -13,22 +13,6 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	showFiles();
-	$('#upload_file').click(function(){
-		if($('#space_used').val() == 'yes'){
-			$.blockUI({ message: $('.main_pop'),
-						css: { 
-							cursor:'default !important'
-				        }
-				});
-		}
-	});
-
-	$('.cancel').click(function(){
-		$.unblockUI();
-	});
-	$('.upgrade').click(function(){
-		$.unblockUI();
-	});
 });
 
 function showFiles() {
@@ -37,6 +21,11 @@ function showFiles() {
 
 function showUploader() {
 	if($('#space_used').val() == 'no'){
+		$.blockUI({ message: $('.main_pop')});
+		$(document).click(function(){
+			$.unblockUI();
+		});
+	}else{
 		if ($("#files-upload-form").css("display") == "none") {
 			$("#files-upload-form").css("display", "");
 
@@ -121,7 +110,7 @@ function showUploader() {
 <div class="white files index">
 	<div class="btn-container">
 			<div class="btn-holder">
-			<input type="button" value="Upload Files" class="submit" onclick="showUploader()" id="upload_file">
+			<input type="button" value="Upload Files" class="submit" onclick="showUploader()">
 			<input type="hidden" value="<?php if($space_full == 'yes'){echo 'yes';}else{ echo 'no';} ?>" id="space_used">
 			</div>
 			<div id="files-categories-box" class="files-categories-box">
@@ -145,7 +134,5 @@ function showUploader() {
 			<div id="content_files">
 			</div>
 </div> <! -- End white -->
-<div class="main_pop" style="display:none">
-	<br/>Please add more space to your account.<br/><br/>
-	<a class="btn-upgrade cancel" href="https://gum.co/QXnr" >Add more space</a>&nbsp;&nbsp;&nbsp;<a class="btn-upgrade cancel">Cancel</a><br/><br/>
-</div>
+<div class="main_pop" style="display:none">aassasadasdasd</div>
+
