@@ -22,7 +22,7 @@
 		<a id="various2" class="submit" href="<?php echo SITE_HTTP_URL?>dashboard/addEditDepartment">Create a Department</a>
 		</div>
 		<div id="files-categories-box" class="files-categories-box">
-			<h4>Tip:<italic> After you create a department, add a subject</italic></h4>
+			<h4>Tip: After you create a department, add a subject</h4>
 		</div>
 	</div>
 		<!-- search Section tart here -->
