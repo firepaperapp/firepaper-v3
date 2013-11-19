@@ -1162,7 +1162,7 @@ class YeargroupsController  extends AppController{
 		$i=0;
 		foreach($this->request->data["User_table"]["firstname"] as $field=>$value)
 		{
-		pr($this->User->find("all"));
+	
 			$check=$this->User->find("all",array('conditions' => array("email"=>$this->request->data["User_table"]["email"][$i])));
 			$userdata=array();
 			if(!$check)
@@ -1207,13 +1207,18 @@ class YeargroupsController  extends AppController{
 						$this->request->data['Invite']["student_id"]= $check[0]["User"]["id"];
 						$this->request->data['Invite']["email"]=$this->request->data["User_table"]["email"][$i];
 						$this->Invite->create();
-						$this->Invite->Save($this->request->data);			
+						$this->Invite->Save($this->request->data);
+						
+						$this->request->data['User']["id"]=$check[0]["User"]["id"];
+						$this->request->data['User']["unique_key"]=uniqid(md5(rand()), true);
+						$this->User->Save($this->request->data);
+									
 						
 							$userdata['firstname']=$this->request->data['User_table']['firstname'][$i];
 							$userdata['lastname']=$this->request->data['User_table']['lastname'][$i];
 							$userdata['email']=$this->request->data['User_table']['email'][$i];
 							$userdata['user_type_id'] = 4	;		
-							$this->emailAfterAddInvite($userdata,$check[0]["User"]["unique_key"]);
+							$this->emailAfterAddInvite($userdata,$this->request->data['User']["unique_key"]);
 							$i++;	
 				}
 				
