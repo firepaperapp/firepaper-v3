@@ -1246,7 +1246,7 @@ class FilesController  extends AppController{
 		echo $fileWithPath;
 		print_r($obj);
 		print "</pre>";
-		die;
+		//die;
 		if(!is_Array($fileWithPath))
 		{
 			$size = $obj->get_object_filesize($buket, "files/".$fileWithPath);				 
