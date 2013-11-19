@@ -1250,8 +1250,8 @@ class YeargroupsController  extends AppController{
 		$this->Email->fromName = ADMIN_NAME;
 	    $this->Email->from = EMAIL_FROM_ADDRESS;
 	  
-		$verified=SITE_HTTP_URL."users/verifyme/".$unique."/". $data['email'];
-    $sMessage ="Dear ".$sUserFullName.","."<br/><br/>
+		echo $verified=SITE_HTTP_URL."users/verifyme/".$unique."/". $data['email'];
+   echo $sMessage ="Dear ".$sUserFullName.","."<br/><br/>
 
 		Your account has been created for ".SITE_HTTP_URL." successfully by ".$this->Session->read('firstname')." ".$this->Session->read('lastname')."<br/><br/>
 		Please use the URL below to Verify Your your account:<br/>
@@ -1260,7 +1260,7 @@ class YeargroupsController  extends AppController{
 		Thanks & Regards,<br/>
 		Website Support <br/>
 		".SITE_NAME." <br/>";
-		
+		die();
         $this->Email->text_body = $sMessage;
         $this->Email->subject = SITE_NAME.' - Account Created';
         $result = $this->Email->sendEmail();
