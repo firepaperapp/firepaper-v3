@@ -899,10 +899,7 @@ class FilesController  extends AppController{
 						
 						//move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
 						move_uploaded_file($this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
-						$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
-						echo $uploads_dir."/".$filename;
-						pr($return);
-						echo "dddd";	 
+							 
 						
 						$old = umask(0);
 						@chmod("$uploads_dir/$filename", 0755);
@@ -916,7 +913,6 @@ class FilesController  extends AppController{
 							//We will upload the object into amazon
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
-							
 							//We will delete the local file
 							// @unlink($uploads_strt_dir.$uploads_dir);
 						}
@@ -1069,7 +1065,6 @@ class FilesController  extends AppController{
 							//We will upload the object into amazon
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
-						
 							//We will delete the local file
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
@@ -1247,10 +1242,9 @@ class FilesController  extends AppController{
 	 	App::import('Vendor', 's3', array('file' => 's3'.DS.'sdk.class.php')); 
 		$buket = MAIN_BUCKET;
 		$obj = new AmazonS3(AMAZON_S3_KEY, AMAZON_S3_SECURITY_KEY);
-		print "<pre>";
-		echo $fileWithPath."----".$buket;
-		print_r($obj);
-		print "</pre>";
+		//print "<pre>";
+		//print_R($obj);
+		//print "</pre>";
 		//die;
 		if(!is_Array($fileWithPath))
 		{
