@@ -1,7 +1,7 @@
 <script src="<?php echo JS_PATH?>jquery.validate.js" type="text/javascript"></script>
 <script src="<?php echo JS_PATH?>login.js" type="text/javascript"></script>
 <div class="header-signin">
-  <<div class="logo">
+  <div class="logo">
 	  
   </div>
 </div>
