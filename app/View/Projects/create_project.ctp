@@ -120,7 +120,9 @@ $(document).ready(function(){
 
 				?>
 				</select>	
-				<a href="" class="edit" alt="Add a subject">Go to the department area</a>
+				<?php
+				echo "<a href=href='".SITE_HTTP_URL."/departments' class='edit' alt='Add a subject' target='_blank'>Create a department and subject</a>";
+	            ?>
 	             <?php
 	 			if(count($subjects) == 0 && ($this->Session->read("user_type") == 1 || $this->Session->read("user_type") == 7 ))
 	 			{
