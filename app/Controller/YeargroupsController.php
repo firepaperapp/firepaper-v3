@@ -1250,7 +1250,7 @@ class YeargroupsController  extends AppController{
 		$this->Email->fromName = ADMIN_NAME;
 	    $this->Email->from = EMAIL_FROM_ADDRESS;
 	  
-		$verified=SITE_HTTP_URL."users/verifyme".$unique."/". $data['email'];
+		$verified=SITE_HTTP_URL."users/verifyme/".$unique."/". $data['email'];
     $sMessage ="Dear ".$sUserFullName.","."<br/><br/>
 
 		Your account has been created for ".SITE_HTTP_URL." successfully by ".$this->Session->read('firstname')." ".$this->Session->read('lastname')."<br/><br/>
