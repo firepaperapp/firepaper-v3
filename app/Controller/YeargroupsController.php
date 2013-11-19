@@ -1189,8 +1189,9 @@ class YeargroupsController  extends AppController{
 				$userdata['firstname']=$this->request->data['User_table']['firstname'][$i];
 				$userdata['lastname']=$this->request->data['User_table']['lastname'][$i];
 				$userdata['email']=$this->request->data['User_table']['email'][$i];
-				$userdata['user_type_id'] = 4	;		
-				$this->emailAfterAddInvite($userdata,$this->request->data['User']["unique_key"]);				
+				$userdata['user_type_id'] = 4	;	
+			echo	$this->request->data['User']["unique_key"];	
+			die();	$this->emailAfterAddInvite($userdata,$this->request->data['User']["unique_key"]);				
 				
 				
 				$i++;
