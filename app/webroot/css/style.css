@@ -37,7 +37,9 @@
 	font-weight: normal;
 	font-style: normal;	
 }
-
+.cake-error {
+	display: none;
+}
 body { 
 	font-size:12px; 
 	color:#55606e; 
