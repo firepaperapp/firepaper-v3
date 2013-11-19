@@ -1162,7 +1162,7 @@ class YeargroupsController  extends AppController{
 		$i=0;
 		foreach($this->request->data["User_table"]["firstname"] as $field=>$value)
 		{
-		
+		pr($this->User->find("all"));
 			$check=$this->User->find("all",array('conditions' => array("email"=>$this->request->data["User_table"]["email"][$i])));
 			$userdata=array();
 			if(!$check)
@@ -1190,8 +1190,7 @@ class YeargroupsController  extends AppController{
 				$userdata['lastname']=$this->request->data['User_table']['lastname'][$i];
 				$userdata['email']=$this->request->data['User_table']['email'][$i];
 				$userdata['user_type_id'] = 4	;	
-			echo	$this->request->data['User']["unique_key"];	
-			die();	$this->emailAfterAddInvite($userdata,$this->request->data['User']["unique_key"]);				
+				$this->emailAfterAddInvite($userdata,$this->request->data['User']["unique_key"]);				
 				
 				
 				$i++;
