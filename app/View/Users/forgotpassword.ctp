@@ -29,7 +29,7 @@ if(isset($errMsg))
 <h3>Forgot Password</h3>
 <br />
  	<p>Email address</p>
-    <?php echo $this->Form-input('email',array('div'=>false,'label'=>false,"id"=>"email",'maxlength'=>'150'));?> 
+    <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,"id"=>"email",'maxlength'=>'150'));?> 
     <div class="clr"></div>
     <input name="" type="submit" value="Submit" class="sign-in"/> or <a href="<?php echo SITE_HTTP_URL;?>login">Login</a>
     
