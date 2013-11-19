@@ -1242,10 +1242,11 @@ class FilesController  extends AppController{
 	 	App::import('Vendor', 's3', array('file' => 's3'.DS.'sdk.class.php')); 
 		$buket = MAIN_BUCKET;
 		$obj = new AmazonS3(AMAZON_S3_KEY, AMAZON_S3_SECURITY_KEY);
-		//print "<pre>";
-		//print_R($obj);
-		//print "</pre>";
-		//die;
+		print "<pre>";
+		echo $fileWithPath;
+		print_r($obj);
+		print "</pre>";
+		die;
 		if(!is_Array($fileWithPath))
 		{
 			$size = $obj->get_object_filesize($buket, "files/".$fileWithPath);				 
