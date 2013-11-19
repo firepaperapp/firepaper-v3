@@ -186,18 +186,18 @@ else
 							Delete Account</a></p>
 
 							<?php if($createdbyarr['User']['status']==1) {?>
-							<p id="suspend" ><a class='edit' style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $createdbyarr['User']['id'];?>,'S');" >Suspend Account</a></p>
+							<!-- <p id="suspend" ><a class='edit' style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $createdbyarr['User']['id'];?>,'S');" >Suspend Account</a></p> -->
 
 							<?php } if($createdbyarr['User']['status']==2) {?>
 
-							<p id="suspend"><a class='edit' style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $createdbyarr['User']['id'];?>,'A');" >Activate Account</a></p>
+							<!-- <p id="suspend"><a class='edit' style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $createdbyarr['User']['id'];?>,'A');" >Activate Account</a></p> -->
 						<?	} 
 						}
 					?>
 					<?php
 					if($userdata['User']['user_type_id'] == 4 || $userdata['User']['user_type_id'] == 5)
 					{?>
-						<p class="width100per"><a class='edit' href="<?php echo SITE_HTTP_URL?>users/viewProgress/<?php echo $userdata['User']['id'];?>">View Progress Report</a></p>
+						<!-- <p class="width100per"><a class='edit' href="<?php echo SITE_HTTP_URL?>users/viewProgress/<?php echo $userdata['User']['id'];?>">View Progress Report</a></p> -->
 					<?php
 					}
 					?>

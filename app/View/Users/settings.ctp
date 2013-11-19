@@ -255,19 +255,21 @@ else
 <div class="rule"></div>
 <h3>Other</h3>
 		<?php if($userdata['User']['status']==1) {?>
-		<p id="suspend" ><a class="edit" style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $userdata['User']['id'];?>,'S');" >Suspend Account</a></p>
+		<p id="suspend" ><a class="edit" style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $userdata['User']['id'];?>,'S');" ><!-- Suspend Account --></a></p>
 
 		<?php } if($userdata['User']['status']==2) {?>
 
-		<p id="suspend"><a  class="edit" style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $userdata['User']['id'];?>,'A');" >Activate Account</a></p>
+		<p id="suspend"><a  class="edit" style="cursor:pointer;" onclick="suspendActivateAccount(<?php echo $userdata['User']['id'];?>,'A');" ><!-- Activate Account --></a></p>
 	<?php 	} ?>
 
-<p><em>Your account will be held for 3 months before it auto deletes</em></p><br />
+<!-- <p><em>Your account will be held for 3 months before it auto deletes</em></p><br /> -->
 
-	<p style="cursor:pointer;">
+	<!--
+<p style="cursor:pointer;">
 		<a class="edit" id="deluser" href="<?php echo SITE_HTTP_URL?>users/deleteAccount/0/setting">Delete Account</a>
 		<em>This cannot be undone</em>
 	</p>
+-->
 </div>
 </div>
 <div id="backgroundPopup"></div>
