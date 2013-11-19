@@ -446,7 +446,7 @@ $(document).ready(function(){
         	
 	          <div class="add file-details-project">   
 	          		
-	          		<p>Note: Please enter the changes that you made.</p>
+	          		<p><strong>Note:</strong> Please enter the changes that you made.</p>
 	          		<?php echo $this->Form->textarea('projComments.comment_project',array("id"=>"comment_project",'class'=>'text-field-comment'));?>
 	          </div>
 	       
