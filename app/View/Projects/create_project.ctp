@@ -14,8 +14,6 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <link rel="stylesheet" href="<?php echo JS_PATH;?>fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
-
-
 <div class="index white page">
 <div class="validation-signup" id="validation-container" style="<?php if(!isset($errMsg)){ echo 'display:none;';} ?>">
 <?php
@@ -122,6 +120,7 @@ $(document).ready(function(){
 
 				?>
 				</select>	
+				<a href="" class="edit" alt="Add a subject">Go to the department area</a>
 	             <?php
 	 			if(count($subjects) == 0 && ($this->Session->read("user_type") == 1 || $this->Session->read("user_type") == 7 ))
 	 			{
@@ -401,7 +400,7 @@ $(document).ready(function(){
 							</div>-->
 							<div class="clr-spacer"></div>
 							<div class="add-people">
-								 <p><strong>Note:</strong> Enter the students you want to add this project</p>
+								 <p><strong>Note:</strong> Start typing your students name and hit enter</p>
 								<select id="otherUsers" name="otherUsers"></select>
 							</div>
 							
@@ -470,7 +469,7 @@ $(document).ready(function(){
 			}    
 		 	?>
 			  <a id="addStudent" class="submit" href="<?php echo SITE_HTTP_URL?>yeargroups/addUser/">
-		Add Student</a>		
+		Invite a new student</a>		
 		 </p>
   
   	<div class="clr-spacer-height"></div>
