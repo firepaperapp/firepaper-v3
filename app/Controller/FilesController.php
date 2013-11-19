@@ -1243,7 +1243,7 @@ class FilesController  extends AppController{
 		$buket = MAIN_BUCKET;
 		$obj = new AmazonS3(AMAZON_S3_KEY, AMAZON_S3_SECURITY_KEY);
 		print "<pre>";
-		echo $fileWithPath;
+		echo $fileWithPath."----".$buket;
 		print_r($obj);
 		print "</pre>";
 		//die;
