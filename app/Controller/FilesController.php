@@ -913,6 +913,7 @@ class FilesController  extends AppController{
 							//We will upload the object into amazon
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+							print_r($return);
 							//We will delete the local file
 							// @unlink($uploads_strt_dir.$uploads_dir);
 						}
@@ -1065,6 +1066,7 @@ class FilesController  extends AppController{
 							//We will upload the object into amazon
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+						print_r($return);
 							//We will delete the local file
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
