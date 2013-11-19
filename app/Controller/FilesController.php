@@ -900,6 +900,8 @@ class FilesController  extends AppController{
 						//move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
 						move_uploaded_file($this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
 						$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+						echo $uploads_dir."/".$filename;
+						pr($return);
 						echo "dddd";	 
 						
 						$old = umask(0);
