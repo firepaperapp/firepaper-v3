@@ -899,7 +899,8 @@ class FilesController  extends AppController{
 						
 						//move_uploaded_file($this->request->params['form']['data']['tmp_name'][$_moduleName]['uploadfile'], $uploads_strt_dir.$uploads_dir."/".$filename);
 						move_uploaded_file($this->request->params['form']['uploadfile']['tmp_name'], $uploads_strt_dir.$uploads_dir."/".$filename);
-							 
+						$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
+						echo "dddd";	 
 						
 						$old = umask(0);
 						@chmod("$uploads_dir/$filename", 0755);
@@ -913,7 +914,7 @@ class FilesController  extends AppController{
 							//We will upload the object into amazon
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
-							print_r($return);
+							
 							//We will delete the local file
 							// @unlink($uploads_strt_dir.$uploads_dir);
 						}
@@ -1066,7 +1067,7 @@ class FilesController  extends AppController{
 							//We will upload the object into amazon
 							 $return = true;
 							$return = $this->moveFileToAmazon($uploads_dir."/".$filename);
-						print_r($return);
+						
 							//We will delete the local file
 							//@unlink($uploads_strt_dir.$uploads_dir);
 						}
