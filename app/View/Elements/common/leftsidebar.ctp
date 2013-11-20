@@ -127,8 +127,11 @@
 	         <div class="clr"></div>
 	         <span class="text">Order before you run out, process time can take a few hours</span>
 	         </div>
-	         
-	        
+	        <?php 
+
+echo $this->requestAction("/files/activityFilesProjectsDropbox");?>	        
+
+
 	         <div class="user-functions">
              <a href="<?php echo SITE_HTTP_URL?>users/settings/" class="settings">Settings</a>
              <a href="<?php echo SITE_HTTP_URL?>logout">Logout</a>
