@@ -36,17 +36,17 @@ $(document).ready(function() {
 	
 	});
 </script>
-<div class="col2 widget" style="display:none;">
+<div class="col2 widget" style="display:block;">
 
 <ul class="tabs">
  	<?php  	
 	$url = isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:"";
 	?>	
-	<li id="files"><a href="#tab2"></a></li>
+	<li id="files"><a href="#tab2">Get Files</a></li>
 	<?php if(false !==  strpos($url , 'files/getFiles')) {?>
-	<li id="projects"><a href="#tab3"></a></li>
+	<li id="projects"><a href="#tab3">Projects</a></li>
 	<?php }elseif(false !==  strpos($url , 'projects/viewDetails') || false !==  strpos($url , 'projects/addEditProject')) {?>
-	<li id="files"><a href="#tab1"></a></li>
+	<li id="files"><a href="#tab1">Files</a></li>
 	 <?php } ?>
   </ul>
   <div class="clr"></div>
