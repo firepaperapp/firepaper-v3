@@ -3674,7 +3674,7 @@ ul.tabs {
 	list-style: none; 
 	position: relative; 
 	z-index:25; 
-	display: none; 
+	display: block; 
 }
 ul.tabs li { 
 	float: left; 
