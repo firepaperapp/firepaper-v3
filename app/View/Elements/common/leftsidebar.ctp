@@ -91,10 +91,11 @@
 <!--
 		<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><i>⚠</i></a></li>
 -->
+		<li>
 			<?php
            		 //echo $this->requestAction("/files/getMyCategories");
            		 echo $used;
-			?>
+			?></li>
 </ul>
 	
 			<?php if ($used >= 90) { ?>
