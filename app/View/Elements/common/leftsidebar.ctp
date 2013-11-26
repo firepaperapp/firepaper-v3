@@ -67,7 +67,7 @@
         <li><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>
         
     <?php  }  if(in_array($usertype, array(1,2,3,7))) {	 ?>
-        <li><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" ><span>Create Project</span> <i>✎</i></a></li>
+        <li><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" style="color:#fca55f;"><span>Create Project</span> <i>✎</i></a></li>
         <li><a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i>✎</i></a></li>
 	<?php }?>
         
