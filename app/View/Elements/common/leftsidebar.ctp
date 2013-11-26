@@ -96,7 +96,7 @@
 			?>
 </ul>
 
-			<?php if ($used >= 70) { ?>
+			<?php /* if ($used >= 70) { */ ?>
 	         <div class="space-warning">
 	         <span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
 	         <?php
@@ -130,7 +130,7 @@
 	         <span class="text">Order before you run out, process time can take a few hours</span>
 	         </div>
 	        <?php 
-				}
+				/* } */
 /* echo $this->requestAction("/files/activityFilesProjectsDropbox"); */?>	        
 
 
