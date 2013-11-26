@@ -27,8 +27,7 @@
 	*/
 ?>
 
-
-<section class="nav">
+<div id="sidr" class="nav">
 <a href="<?php echo SITE_HTTP_URL."users/viewProfile/".$userId; ?>" alt="Profile" >
 <img class="profile-image" height="50" width="50" src="<?php if (isset($userimage)) { echo $userimage; }?>" class="profile"/>
 </a>
@@ -96,6 +95,8 @@
            		 //echo $this->requestAction("/files/getMyCategories");
 			?>
 </ul>
+
+			<?php if ($used >= 80) { ?>
 	         <div class="space-warning">
 	         <span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
 	         <?php
@@ -122,6 +123,7 @@
             </div><!-- end indicator-holder -->
 		<?php
 			} 
+			}
 			?>
 	         <a href="https://gum.co/QXnr" class="upgrade-btn">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 	         <div class="clr"></div>
@@ -137,7 +139,8 @@ echo $this->requestAction("/files/activityFilesProjectsDropbox");?>
              <a href="<?php echo SITE_HTTP_URL?>logout">Logout</a>
           </div>
          </div><!-- end nav -->
-  
-</section>
+
+</div>
+
 
 
