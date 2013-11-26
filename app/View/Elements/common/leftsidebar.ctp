@@ -91,27 +91,27 @@
 <!--
 		<li><a href="<?php echo SITE_HTTP_URL."projects"?>" alt="Due in" ><span>Due in</span><i>⚠</i></a></li>
 -->
-		<li>
+		
 			<?php
            		 //echo $this->requestAction("/files/getMyCategories");
-           		 echo $used;
-			?></li>
+           		
+			?>
 </ul>
 	
-			<?php if ($used >= 90) { ?>
-	         <div class="space-warning">
-	         <span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
+			
+	         
 	         <?php
 			
 			//print_r($userdata); exit;
 
 			//if($userdata['Package']['unlimited'] == 0)
-			if(1)
-			{?>
+			?>
 			
-            <div class="indicator-holder">
-              <div class="indicator-bg">
-				<?php
+            
+<?php
+	
+		if(1)
+			{
 				$used = 0;
 				if(!isNull($userdata['User']['totalspace']))
 				{
@@ -119,10 +119,15 @@
 					{
 						$used = round(($userdata['User']['usedspace']/$userdata['User']['totalspace'])*100,2);
 					}
-				}?>
-                <div class="indicator-bar" style="width:<?php echo $used;?>%"><?php //echo $used;?></div>
-              </div><!-- end indicator-bg -->
-            </div><!-- end indicator-holder -->
+				} 
+				if ($used >= 90) { ?>
+				<div class="space-warning">
+				<span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
+					<div class="indicator-holder">
+						<div class="indicator-bg">
+							<div class="indicator-bar" style="width:<?php echo $used;?>%"><?php //echo $used;?></div>
+						</div><!-- end indicator-bg -->
+					</div><!-- end indicator-holder -->
 		<?php
 			} 
 			
@@ -131,8 +136,9 @@
 	         <div class="clr"></div>
 	         <span class="text">Order before you run out, process time can take a few hours</span>
 	         </div>
-	        <?php 
+	  <?php 
 				}
+			
 /* echo $this->requestAction("/files/activityFilesProjectsDropbox"); */?>	        
 
 
