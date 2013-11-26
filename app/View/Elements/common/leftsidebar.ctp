@@ -128,17 +128,14 @@
 							<div class="indicator-bar" style="width:<?php echo $used;?>%"><?php //echo $used;?></div>
 						</div><!-- end indicator-bg -->
 					</div><!-- end indicator-holder -->
-		<?php
-			} 
-			
-			?>
+		
 	         <a href="https://gum.co/QXnr" class="upgrade-btn">Add more space</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 	         <div class="clr"></div>
 	         <span class="text">Order before you run out, process time can take a few hours</span>
 	         </div>
 	  <?php 
 				}
-			
+			} 
 /* echo $this->requestAction("/files/activityFilesProjectsDropbox"); */?>	        
 
 
