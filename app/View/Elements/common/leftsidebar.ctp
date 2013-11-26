@@ -120,7 +120,7 @@
 						$used = round(($userdata['User']['usedspace']/$userdata['User']['totalspace'])*100,2);
 					}
 				} 
-				if ($used >= 80) { ?>
+				if ($used >= 90) { ?>
 				<div class="space-warning">
 				<span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
 					<div class="indicator-holder">
