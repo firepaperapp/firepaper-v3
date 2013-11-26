@@ -93,7 +93,7 @@
 -->
 			<?php
            		 //echo $this->requestAction("/files/getMyCategories");
-           		 echo "<li>$used</li>;
+           		 echo '<li>$used</li>';
 			?>
 </ul>
 	
