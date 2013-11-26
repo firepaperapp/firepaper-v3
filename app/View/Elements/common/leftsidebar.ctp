@@ -96,7 +96,7 @@
 			?>
 </ul>
 
-			<?php if ($used <= 90) { ?>
+			<?php if ($used <= 70) { ?>
 	         <div class="space-warning">
 	         <span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
 	         <?php
