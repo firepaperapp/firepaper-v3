@@ -93,9 +93,10 @@
 -->
 			<?php
            		 //echo $this->requestAction("/files/getMyCategories");
+           		 echo "<li>$used</li>;
 			?>
 </ul>
-
+	
 			<?php if ($used >= 90) { ?>
 	         <div class="space-warning">
 	         <span class="title">Amount of space left: <?php //echo $userdata['User']['totalspace'] - $userdata['User']['usedspace'] ;?></span> <br>
