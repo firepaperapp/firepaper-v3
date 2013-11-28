@@ -81,7 +81,9 @@ class ProjectsController extends AppController {
             $currentProjects = $this->projectStudent->find("all", $this->Project->getLatestProjectsForUser($filters));
 //			$count_files = scandir(FILES_PATH."files/".$this->Session->read("userid"));
         }
+
 		echo '<pre>';
+		print_r($_SERVER);
 		print_r($currentProjects);
 		die;
         $this->set("owner", $owner);
