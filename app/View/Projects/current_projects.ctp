@@ -126,8 +126,7 @@ $(document).ready(function(){
 		
 		<div class="project-content">
 		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
-		<span class="flat-tasks-icon"><span>&#xf075;</span>
-<?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
+		<span class="flat-tasks-icon"><span>&#xf075;</span><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
 		</div>
 		</div><!-- end project-content -->
 		<div class="project-owner">
