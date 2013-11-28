@@ -119,13 +119,13 @@ $(document).ready(function(){
 		
 		<h3>Details</h3>
 
-			<p><?php $f_count = count(scandir(SITE_BASE_PATH.'/app/webroot/files/files/'.$rec['Project']['created_by'])) - 2; echo Sanitize::html($rec['Project']['description']);?>
+			<p><?php echo Sanitize::html($rec['Project']['description']);?>
 			<!--<span class="started-details">- <?php 
 			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
 			</p>
 		
 		<div class="project-content">
-		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo ' = '.$rec['Project']['created_by'].' = '.$f_count.' - '; echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
+		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon"><span>&#xf075;</span><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
 		</div>
 		</div><!-- end project-content -->
