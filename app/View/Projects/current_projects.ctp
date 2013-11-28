@@ -119,16 +119,16 @@ $(document).ready(function(){
 		
 		<h3>Details</h3>
 
-			<p><?php echo Sanitize::html($rec['Project']['description']);?>
+			<p><?php $f_count = count(scandir($_SERVER['HTTP_HOST']."/dev/files/files/".$rec['Project']['created_by'])) - 2; echo Sanitize::html($rec['Project']['description']);?>
 			<!--<span class="started-details">- <?php 
 			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
 			</p>
 		
 		<div class="project-content">
-		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
+		<span class="flat-files-icon"><span>&#xf15b;</span><?php echo $f_count.' - '.$rec[0]['noOfFiles']>0?$rec[0]['noOfFiles']:0;?> Files</span> 
 		<span class="flat-tasks-icon"><span>&#xf075;</span><?php echo $rec[0]['noOfComments']>0?$rec[0]['noOfComments']:0;?> Comments</span>
 		</div>
-		</div><!-- aend project-content -->
+		</div><!-- end project-content -->
 		<div class="project-owner">
 		<?php //echo "<pre>"; print_r($rec['User']);die;
 	      if(is_file(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']) && file_exists(USER_IMAGES_URL.'100X100/'.$rec['User']['profilepic']))
