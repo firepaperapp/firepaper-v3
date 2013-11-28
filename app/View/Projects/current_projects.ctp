@@ -119,7 +119,7 @@ $(document).ready(function(){
 		
 		<h3>Details</h3>
 
-			<p><?php echo "<pre>"; print_r(scandir('http://firepaperapp.com/dev/app/webroot/files/files/354/')); die; $f_count = count(scandir($_SERVER['HTTP_HOST']."/dev/files/files/".$rec['Project']['created_by'])) - 2; echo Sanitize::html($rec['Project']['description']);?>
+			<p><?php echo "<pre>"; print_r(opendir('http://firepaperapp.com/dev/app/webroot/files/files/354/')); die; $f_count = count(opendir($_SERVER['HTTP_HOST']."/dev/files/files/".$rec['Project']['created_by'])) - 2; echo Sanitize::html($rec['Project']['description']);?>
 			<!--<span class="started-details">- <?php 
 			echo $this->Time->timeAgoInWords(strtotime($rec['Project']['created']));?></span>-->
 			</p>
