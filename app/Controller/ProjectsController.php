@@ -79,7 +79,11 @@ class ProjectsController extends AppController {
             $filters .= "projectStudent.user_id = " . $userId . " AND ";
             $this->projectStudent->unbindModel(array("belongsTo" => array("Project")));
             $currentProjects = $this->projectStudent->find("all", $this->Project->getLatestProjectsForUser($filters));
+//			$count_files = scandir(FILES_PATH."files/".$this->Session->read("userid"));
         }
+		echo '<pre>';
+		print_r($currentProjects);
+		die;
         $this->set("owner", $owner);
         $this->set("data", $currentProjects);
         $this->render("current_projects");
