@@ -66,8 +66,8 @@
 		 if($usertype==1) { ?>
         <li><a href="<?php echo SITE_HTTP_URL."users/coadmins";?>" alt="Co-Admins" ><span>Co-Admins</span> <i class="students-icon">👥</i></a></li>
         
-    <?php  }  if(in_array($usertype, array(1,2,3,7))) {	 ?>
-        <li><a href="<?php echo SITE_HTTP_URL."projects/addEditProject"?>" alt="Create project" style="color:#fca55f;"><span>Create Project</span> <i>✎</i></a></li>
+    <?php  }  if(in_array($usertype, array(1,2,3,7))) {	$create_project_url = SITE_HTTP_URL."projects/addEditProject"; ?>
+        <li><a href="#" onclick="javascript: window.open('<?php echo $create_project_url; ?>','name', 'height=550, width=650, resizable=yes, scrollbars=yes'); return false;" alt="Create project" style="color:#fca55f;" target="_blank"><span>Create Project</span> <i>✎</i></a></li>
         <li><a href="<?php echo SITE_HTTP_URL."projects/markProjectsList"?>" alt="Marking" ><span>Marking</span> <i>✎</i></a></li>
 	<?php }?>
         
