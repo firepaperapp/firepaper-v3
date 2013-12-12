@@ -11,7 +11,7 @@ if($this->Session->check('Message.flash'))
 	<div class="essage errorServer" style="width:400px;margin:0 auto;margin-bottom:10px;">
 		<div class="success" style="margin-left:20px;">
 			<?php
-				$this->Session->flash(); // this line displays our flash messages
+			echo	$this->Session->flash(); // this line displays our flash messages
 			?>
 		</div>
 	</div>
