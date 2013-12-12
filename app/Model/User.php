@@ -471,7 +471,10 @@
       
         if ($this->err == 0) {
             //we will check do user with same email already exist in the db.
-            $result = $this->find("User.email = '".add_Slashes($postArray['email'])."'", "id, email, username, firstname, lastname");
+            $result = $this->find("first",array("conditions"=>array("User.email = '".add_Slashes($postArray['email'])."'")));
+//pr($result);
+//die();
+		#	, "id, email, username, firstname, lastname"
             if (count($result) > 0 && isset($result['User']['id'])) {
                     $this->err = 0;
                     return $result;
