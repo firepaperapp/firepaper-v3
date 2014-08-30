@@ -569,3 +569,248 @@ Stack Trace:
 #3 /Applications/MAMP/htdocs/firepaper-v1/lib/Cake/Core/App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-08-29 12:11:20 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'shamone\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /firepaper/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3231): Model->setSource('departments')
+#5 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3048): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/firepaper/app/Controller/AppController.php(202): Model->query('SELECT * FROM m...')
+#7 /Applications/MAMP/htdocs/firepaper/app/Controller/HomeController.php(33): AppController->beforeFilter()
+#8 [internal function]: HomeController->beforeFilter(Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/firepaper/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/firepaper/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#12 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#13 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-08-29 13:44:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'shamone\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /firepaper/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3231): Model->setSource('departments')
+#5 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3048): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/firepaper/app/Controller/AppController.php(202): Model->query('SELECT * FROM m...')
+#7 /Applications/MAMP/htdocs/firepaper/app/Controller/HomeController.php(33): AppController->beforeFilter()
+#8 [internal function]: HomeController->beforeFilter(Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/firepaper/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/firepaper/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#12 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#13 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-08-29 20:40:45 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'shamone\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /firepaper/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3231): Model->setSource('departments')
+#5 /Applications/MAMP/htdocs/firepaper/lib/Cake/Model/Model.php(3048): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/firepaper/app/Controller/AppController.php(202): Model->query('SELECT * FROM m...')
+#7 /Applications/MAMP/htdocs/firepaper/app/Controller/HomeController.php(33): AppController->beforeFilter()
+#8 [internal function]: HomeController->beforeFilter(Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/firepaper/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/firepaper/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#12 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#13 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-08-29 20:43:43 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 20:44:07 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 20:44:07 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/images/buttons.jpg?url=images%2Fbuttons.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 20:44:12 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 20:45:47 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:02:19 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:02:41 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:02:47 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:03:12 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:03:33 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:03:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:04:34 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:04:37 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:05:54 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:06:18 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-29 21:06:21 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /firepaper/app/webroot/js/graph.js?url=js%2Fgraph.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/firepaper/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/firepaper/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
